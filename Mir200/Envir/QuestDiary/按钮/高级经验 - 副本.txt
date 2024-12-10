@@ -1,0 +1,1090 @@
+[@高级经验]
+{
+
+#IF
+CHECKLEVELEX > 66
+#ACT
+goto @等级突破
+BREAK
+
+#IF
+CHECKLEVELEX > 64
+#ACT
+goto @神火升级
+BREAK
+
+#IF
+#ACT
+MOV N1 0
+MOV N5 0
+
+
+#IF
+CHECKLEVELEX > 59
+#ACT
+close
+#SAY
+\    
+\                        <【经验使者】/FCOLOR=253>\  
+<-------------------------------------------------------------/AUTOCOLOR=91>\ 
+
+<60级后使用(武神、魔神、道神)首饰炼制经验，需消耗一定数量元宝！/FCOLOR=250>\
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<一键炼制模式，炼制前请将重要物品存仓，避免不必要损失！/SCOLOR=70> \
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<提示：/FCOLOR=249><炼制首饰每件需要2000元宝，获得1500万经验值！/FCOLOR=255>\  \
+
+<>      <炼制武神首饰/@精魄1>      <炼制魔神首饰/@精魄2>      <炼制道神首饰/@精魄3> \
+
+
+#elseACT
+close
+#elsesay
+\    
+\                        <【经验使者】/FCOLOR=253>\  
+<-------------------------------------------------------------/AUTOCOLOR=91>\ 
+<使用武神级首饰炼制经验，提升武者修为，帮助武者突破等级限制…/FCOLOR=250>\
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<复古设置，使用首饰炼制经验可快速提升等级，每颗获得1000万经验。/FCOLOR=70>\ 
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<提示：/FCOLOR=249><一键炼制模式，炼制前请将重要物品存仓！/FCOLOR=255>\  \
+
+<>      <炼制武神首饰/@武神1>      <炼制魔神首饰/@魔神1>      <炼制道神首饰/@道神1> \
+
+
+
+
+
+
+
+[@神火升级]
+#IF
+#ACT
+close
+#SAY
+世间毁誉，世人冷眼，与我何干                   <兑换神火令/@神火令>\
+我自淡然一笑；以吾本性，快意恩仇 \
+以吾本心，遨游世间，我命由我不由天 \
+
+<当你的等级达到65级后，需要使用“神火令”才能继续提升等级！/AUTOCOLOR=249>\
+<要求：/AUTOCOLOR=249><炼制神火令获得2.5亿经验值，使用金币+神火令获得6亿经验值!/AUTOCOLOR=242>   \
+<提示：/AUTOCOLOR=249><神火令需要使用神阶首饰兑换，每件首饰兑换1个神火令！ /AUTOCOLOR=253>\  \
+<当前你的等级为『/SCOLOR=250><$LEVEL><』级/SCOLOR=250>    <免费炼制神火令|253#需要:神火令*1个/@免费神火令>    <金币炼制神火令|253#需要:神火令*1+688金币!/@金币神火令>\ \
+
+
+[@等级突破]
+#IF
+#ACT
+close
+#SAY
+世间毁誉，世人冷眼，与我何干                   <兑换神火令/@神火令>\
+我自淡然一笑；以吾本性，快意恩仇 \
+以吾本心，遨游世间，我命由我不由天 \
+历千劫万难，纵使魂飞魄散，我灵识依在。\
+战百世轮回，纵使六道无常，我依然永生。\
+<当你的等级达到67级，我可助你突破生命桎梏，飞升到68级！/AUTOCOLOR=249>\
+<要求：/AUTOCOLOR=249><需要神火令*18 + 金币*28888 + 女娲补天神石*88/AUTOCOLOR=242>   \
+<提示：/AUTOCOLOR=249><突破68级获得陆地仙人称号，增加3点暴击+100点生命上限！ /AUTOCOLOR=253>\ 
+<当前你的等级为『/SCOLOR=250><$LEVEL><』级/SCOLOR=250>       <→→/SCOLOR=250>      <点击突破68级/@Ksts01x>   \
+
+[@神火令]
+#if
+#ACT
+close
+#SAY
+<说明：/SCOLOR=253><神火令集天地之精华，蕴藏着恐怖的能量，使用神阶首饰兑换！/SCOLOR=249>\
+<--------------------------------------------------------------/AUTOCOLOR=91>\ \
+　 <一键兑换模式，请把重要装备储仓!每件首饰可兑换一个神火令/SCOLOR=249>\ \
+
+<兑换神火令：/SCOLOR=250><神阶战首饰兑换/@神火令战>  <神阶法首饰兑换/@神火令法>  <神阶道首饰兑换/@神火令道>　 \
+
+<--------------------------------------------------------------/AUTOCOLOR=91>\ \
+
+　                                                   <返回上页/@高级经验>  \
+
+[@金币神火令]
+#IF
+CHECKLEVELEX > 66
+#ACT
+MESSAGEBOX 您的等级已达到67级！
+BREAK
+
+#IF
+checkitem 神火令 1
+CHECKGOLD 688
+#Act
+take 金币 688
+take 神火令 1
+CHANGEEXP + 600000000
+SENDMSG 0 系统ぐ：恭喜玩家「%s」使用金币炼制神火令，获得经验值6亿。
+break
+
+[@免费神火令]
+#IF
+CHECKLEVELEX > 66
+#ACT
+MESSAGEBOX 您的等级已达到67级！
+BREAK
+
+#IF
+checkitem 神火令 1
+#ACT
+take 神火令 1
+CHANGEEXP + 250000000
+SENDMSG 0 系统ぐ：恭喜玩家「%s」免费炼制神火令，获得经验值2.5亿。
+break
+
+[@Ksts01x]
+#IF
+CHECK [2] 1
+#ACT
+MESSAGEBOX 你已经是世间的至强→「陆地仙人」！！！
+BREAK
+
+#IF
+CHECK [2] 0
+CHECKLEVELEX = 67
+CheckItem 神火令 18
+CheckItem 女娲补天神石 88
+CHECKGOLD 28888
+#Act
+SET [2] 1
+take 金币 28888
+Take 神火令 18
+Take 女娲补天神石 88
+CONFERTITLE 陆地仙人
+CHANGELEVEL + 1
+SENDMOVEMSG 0 253 255 150 1 ≮系统公告≯：恭喜玩家[<$USERNAME>]成功突破生命桎梏，成为世间的至强的「陆地仙人」.
+SENDMOVEMSG 0 249 251 350 1 ≮系统公告≯：恭喜玩家[<$USERNAME>]成功突破生命桎梏，成为世间的至强的「陆地仙人」.
+Break
+#ElseAct
+MESSAGEBOX [突破失败]:\　\　　　　　　请查看你的材料是否充足!
+Break
+
+
+[@点卷1]
+#IF
+CHECKLEVELEX > 64
+#ACT
+MESSAGEBOX 您的等级已达到65级！
+BREAK
+
+
+;------------------------------------------
+#IF
+checkitem 武神头盔 1
+CHECKGAMEDIAMOND > 27
+#ACT
+GAMEDIAMOND - 28
+take 武神头盔 1
+CHANGEEXP + 15000000
+INC N1 1
+GOTO @点卷1
+break
+;------------------------------------------
+#IF
+checkitem 武神项链 1
+CHECKGAMEDIAMOND > 27
+#ACT
+GAMEDIAMOND - 28
+take 武神项链 1
+CHANGEEXP + 15000000
+INC N1 1
+GOTO @点卷1
+break
+;------------------------------------------
+#IF
+checkitem 武神手镯 1
+CHECKGAMEDIAMOND > 27
+#ACT
+GAMEDIAMOND - 28
+take 武神手镯 1
+CHANGEEXP + 15000000
+INC N1 1
+GOTO @点卷1
+break
+;------------------------------------------
+#IF
+checkitem 武神戒指 1
+CHECKGAMEDIAMOND > 27
+#ACT
+GAMEDIAMOND - 28
+take 武神戒指 1
+CHANGEEXP + 15000000
+INC N1 1
+GOTO @点卷1
+break
+;------------------------------------------
+#IF
+checkitem 武神靴子 1
+CHECKGAMEDIAMOND > 27
+#ACT
+GAMEDIAMOND - 28
+take 武神靴子 1
+CHANGEEXP + 15000000
+INC N1 1
+GOTO @点卷1
+break
+;------------------------------------------
+#IF
+checkitem 武神腰带 1
+CHECKGAMEDIAMOND > 27
+#ACT
+GAMEDIAMOND - 28
+take 武神腰带 1
+CHANGEEXP + 15000000
+INC N1 1
+GOTO @点卷1
+break
+;------------------------------------------
+
+#IF
+large N1 0
+#ACT
+MUL N5 N1 15000000
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」炼制武神首饰<$STR(N1)>件，共获得经验值<$STR(N5)>。
+MOV N1 0
+MOV N5 0
+break
+#ELSEACT
+SENDMSG 6 点卷或者装备不足！
+break
+
+
+[@点卷2]
+#IF
+CHECKLEVELEX > 66
+#ACT
+MESSAGEBOX 您的等级已达到67级！
+BREAK
+
+
+;------------------------------------------
+#IF
+checkitem 魔神头盔 1
+CHECKGAMEDIAMOND > 27
+#ACT
+GAMEDIAMOND - 28
+take 魔神头盔 1
+CHANGEEXP + 15000000
+INC N1 1
+GOTO @点卷2
+break
+;------------------------------------------
+#IF
+checkitem 魔神项链 1
+CHECKGAMEDIAMOND > 27
+#ACT
+GAMEDIAMOND - 28
+take 魔神项链 1
+CHANGEEXP + 15000000
+INC N1 1
+GOTO @点卷2
+break
+;------------------------------------------
+#IF
+checkitem 魔神手镯 1
+CHECKGAMEDIAMOND > 27
+#ACT
+GAMEDIAMOND - 28
+take 魔神手镯 1
+CHANGEEXP + 15000000
+INC N1 1
+GOTO @点卷2
+break
+;------------------------------------------
+#IF
+checkitem 魔神戒指 1
+CHECKGAMEDIAMOND > 27
+#ACT
+GAMEDIAMOND - 28
+take 魔神戒指 1
+CHANGEEXP + 15000000
+INC N1 1
+GOTO @点卷2
+break
+;------------------------------------------
+#IF
+checkitem 魔神靴子 1
+CHECKGAMEDIAMOND > 27
+#ACT
+GAMEDIAMOND - 28
+take 魔神靴子 1
+CHANGEEXP + 15000000
+INC N1 1
+GOTO @点卷2
+break
+;------------------------------------------
+#IF
+checkitem 魔神腰带 1
+CHECKGAMEDIAMOND > 27
+#ACT
+GAMEDIAMOND - 28
+take 魔神腰带 1
+CHANGEEXP + 15000000
+INC N1 1
+GOTO @点卷2
+break
+;------------------------------------------
+
+#IF
+large N1 0
+#ACT
+MUL N5 N1 15000000
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」炼制魔神首饰<$STR(N1)>件，共获得经验值<$STR(N5)>。
+MOV N1 0
+MOV N5 0
+break
+#ELSEACT
+SENDMSG 6 点卷或者装备不足！
+break
+
+
+[@点卷3]
+#IF
+CHECKLEVELEX > 64
+#ACT
+MESSAGEBOX 您的等级已达到满级65级！
+BREAK
+
+
+;------------------------------------------
+#IF
+checkitem 道神头盔 1
+CHECKGAMEDIAMOND > 27
+#ACT
+GAMEDIAMOND - 28
+take 道神头盔 1
+CHANGEEXP + 15000000
+INC N1 1
+GOTO @点卷3
+break
+;------------------------------------------
+#IF
+checkitem 道神项链 1
+CHECKGAMEDIAMOND > 27
+#ACT
+GAMEDIAMOND - 28
+take 道神项链 1
+CHANGEEXP + 15000000
+INC N1 1
+GOTO @点卷3
+break
+;------------------------------------------
+#IF
+checkitem 道神手镯 1
+CHECKGAMEDIAMOND > 27
+#ACT
+GAMEDIAMOND - 28
+take 道神手镯 1
+CHANGEEXP + 15000000
+INC N1 1
+GOTO @点卷3
+break
+;------------------------------------------
+#IF
+checkitem 道神戒指 1
+CHECKGAMEDIAMOND > 27
+#ACT
+GAMEDIAMOND - 28
+take 道神戒指 1
+CHANGEEXP + 15000000
+INC N1 1
+GOTO @点卷3
+break
+;------------------------------------------
+#IF
+checkitem 道神靴子 1
+CHECKGAMEDIAMOND > 27
+#ACT
+GAMEDIAMOND - 28
+take 道神靴子 1
+CHANGEEXP + 15000000
+INC N1 1
+GOTO @点卷3
+break
+;------------------------------------------
+#IF
+checkitem 道神腰带 1
+CHECKGAMEDIAMOND > 27
+#ACT
+GAMEDIAMOND - 28
+take 道神腰带 1
+CHANGEEXP + 15000000
+INC N1 1
+GOTO @点卷3
+break
+;------------------------------------------
+
+
+#IF
+large N1 0
+#ACT
+MUL N5 N1 15000000
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」炼制道神首饰<$STR(N1)>件，共获得经验值<$STR(N5)>。
+MOV N1 0
+MOV N5 0
+break
+#ELSEACT
+SENDMSG 6 点卷或者装备不足！
+break
+
+
+
+
+
+
+[@精魄1]
+#IF
+CHECKLEVELEX > 64
+#ACT
+MESSAGEBOX [失败]：\\您等级已达到65级，无法继续使用元宝炼制！
+BREAK
+
+
+;------------------------------------------
+#IF
+checkitem 武神头盔 1
+CHECKGAMEGOLD > 1999
+#ACT
+GAMEGOLD - 2000
+take 武神头盔 1
+CHANGEEXP + 15000000
+INC N1 1
+GOTO @精魄1
+break
+;------------------------------------------
+#IF
+checkitem 武神项链 1
+CHECKGAMEGOLD > 1999
+#ACT
+GAMEGOLD - 2000
+take 武神项链 1
+CHANGEEXP + 15000000
+INC N1 1
+GOTO @精魄1
+break
+;------------------------------------------
+#IF
+checkitem 武神手镯 1
+CHECKGAMEGOLD > 1999
+#ACT
+GAMEGOLD - 2000
+take 武神手镯 1
+CHANGEEXP + 15000000
+INC N1 1
+GOTO @精魄1
+break
+;------------------------------------------
+#IF
+checkitem 武神戒指 1
+CHECKGAMEGOLD > 1999
+#ACT
+GAMEGOLD - 2000
+take 武神戒指 1
+CHANGEEXP + 15000000
+INC N1 1
+GOTO @精魄1
+break
+;------------------------------------------
+#IF
+checkitem 武神靴子 1
+CHECKGAMEGOLD > 1999
+#ACT
+GAMEGOLD - 2000
+take 武神靴子 1
+CHANGEEXP + 15000000
+INC N1 1
+GOTO @精魄1
+break
+;------------------------------------------
+#IF
+checkitem 武神腰带 1
+CHECKGAMEGOLD > 1999
+#ACT
+GAMEGOLD - 2000
+take 武神腰带 1
+CHANGEEXP + 15000000
+INC N1 1
+GOTO @精魄1
+break
+;------------------------------------------
+
+
+#IF
+large N1 0
+#ACT
+MUL N5 N1 15000000
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」炼制武神首饰<$STR(N1)>件，共获得经验值<$STR(N5)>。
+MOV N1 0
+MOV N5 0
+break
+#ELSEACT
+SENDMSG 6 元宝或者装备不足！
+break
+
+
+[@精魄2]
+#IF
+CHECKLEVELEX > 64
+#ACT
+MESSAGEBOX [失败]：\\您等级已达到65级，无法继续使用元宝炼制！
+BREAK
+
+
+;------------------------------------------
+#IF
+checkitem 魔神头盔 1
+CHECKGAMEGOLD > 1999
+#ACT
+GAMEGOLD - 2000
+take 魔神头盔 1
+CHANGEEXP + 15000000
+INC N1 1
+GOTO @精魄2
+break
+;------------------------------------------
+#IF
+checkitem 魔神项链 1
+CHECKGAMEGOLD > 1999
+#ACT
+GAMEGOLD - 2000
+take 魔神项链 1
+CHANGEEXP + 15000000
+INC N1 1
+GOTO @精魄2
+break
+;------------------------------------------
+#IF
+checkitem 魔神手镯 1
+CHECKGAMEGOLD > 1999
+#ACT
+GAMEGOLD - 2000
+take 魔神手镯 1
+CHANGEEXP + 15000000
+INC N1 1
+GOTO @精魄2
+break
+;------------------------------------------
+#IF
+checkitem 魔神戒指 1
+CHECKGAMEGOLD > 1999
+#ACT
+GAMEGOLD - 2000
+take 魔神戒指 1
+CHANGEEXP + 15000000
+INC N1 1
+GOTO @精魄2
+break
+;------------------------------------------
+#IF
+checkitem 魔神靴子 1
+CHECKGAMEGOLD > 1999
+#ACT
+GAMEGOLD - 2000
+take 魔神靴子 1
+CHANGEEXP + 15000000
+INC N1 1
+GOTO @精魄2
+break
+;------------------------------------------
+#IF
+checkitem 魔神腰带 1
+CHECKGAMEGOLD > 1999
+#ACT
+GAMEGOLD - 2000
+take 魔神腰带 1
+CHANGEEXP + 15000000
+INC N1 1
+GOTO @精魄2
+break
+;------------------------------------------
+
+
+#IF
+large N1 0
+#ACT
+MUL N5 N1 15000000
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」炼制魔神首饰<$STR(N1)>件，共获得经验值<$STR(N5)>。
+MOV N1 0
+MOV N5 0
+break
+#ELSEACT
+SENDMSG 6 元宝或者装备不足！
+break
+
+
+[@精魄3]
+#IF
+CHECKLEVELEX > 64
+#ACT
+MESSAGEBOX [失败]：\\您等级已达到65级，无法继续使用元宝炼制！
+BREAK
+
+
+;------------------------------------------
+#IF
+checkitem 道神头盔 1
+CHECKGAMEGOLD > 1999
+#ACT
+GAMEGOLD - 2000
+take 道神头盔 1
+CHANGEEXP + 15000000
+INC N1 1
+GOTO @精魄3
+break
+;------------------------------------------
+#IF
+checkitem 道神项链 1
+CHECKGAMEGOLD > 1999
+#ACT
+GAMEGOLD - 2000
+take 道神项链 1
+CHANGEEXP + 15000000
+INC N1 1
+GOTO @精魄3
+break
+;------------------------------------------
+#IF
+checkitem 道神手镯 1
+CHECKGAMEGOLD > 1999
+#ACT
+GAMEGOLD - 2000
+take 道神手镯 1
+CHANGEEXP + 15000000
+INC N1 1
+GOTO @精魄3
+break
+;------------------------------------------
+#IF
+checkitem 道神戒指 1
+CHECKGAMEGOLD > 1999
+#ACT
+GAMEGOLD - 2000
+take 道神戒指 1
+CHANGEEXP + 15000000
+INC N1 1
+GOTO @精魄3
+break
+;------------------------------------------
+#IF
+checkitem 道神靴子 1
+CHECKGAMEGOLD > 1999
+#ACT
+GAMEGOLD - 2000
+take 道神靴子 1
+CHANGEEXP + 15000000
+INC N1 1
+GOTO @精魄3
+break
+;------------------------------------------
+#IF
+checkitem 道神腰带 1
+CHECKGAMEGOLD > 1999
+#ACT
+GAMEGOLD - 2000
+take 道神腰带 1
+CHANGEEXP + 15000000
+INC N1 1
+GOTO @精魄3
+break
+;------------------------------------------
+
+
+#IF
+large N1 0
+#ACT
+MUL N5 N1 15000000
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」炼制道神首饰<$STR(N1)>件，共获得经验值<$STR(N5)>。
+MOV N1 0
+MOV N5 0
+break
+#ELSEACT
+SENDMSG 6 元宝或者装备不足！
+break
+
+
+
+
+[@武神1]
+#IF
+CHECKLEVELEX > 59
+#ACT
+MESSAGEBOX [失败]：\\您等级已达到60级，无法继续免费炼制！
+BREAK
+
+
+;------------------------------------------
+#IF
+checkitem 武神头盔 1
+#ACT
+take 武神头盔 1
+CHANGEEXP + 10000000
+INC N1 1
+GOTO @武神1
+break
+;------------------------------------------
+#IF
+checkitem 武神项链 1
+#ACT
+take 武神项链 1
+CHANGEEXP + 10000000
+INC N1 1
+GOTO @武神1
+break
+;------------------------------------------
+#IF
+checkitem 武神手镯 1
+#ACT
+take 武神手镯 1
+CHANGEEXP + 10000000
+INC N1 1
+GOTO @武神1
+break
+;------------------------------------------
+#IF
+checkitem 武神戒指 1
+#ACT
+take 武神戒指 1
+CHANGEEXP + 10000000
+INC N1 1
+GOTO @武神1
+break
+;------------------------------------------
+#IF
+checkitem 武神靴子 1
+#ACT
+take 武神靴子 1
+CHANGEEXP + 10000000
+INC N1 1
+GOTO @武神1
+break
+;------------------------------------------
+#IF
+checkitem 武神腰带 1
+#ACT
+take 武神腰带 1
+CHANGEEXP + 10000000
+INC N1 1
+GOTO @武神1
+break
+;------------------------------------------
+#IF
+large N1 0
+#ACT
+MUL N5 N1 10000000
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」炼制武神首饰<$STR(N1)>件，共获得经验值<$STR(N5)>。
+MOV N1 0
+MOV N5 0
+break
+#ELSEACT
+SENDMSG 6 您的背包没有对应的首饰！
+break
+
+
+[@魔神1]
+#IF
+CHECKLEVELEX > 59
+#ACT
+MESSAGEBOX [失败]：\\您等级已达到60级，无法继续免费炼制！
+BREAK
+
+
+
+;------------------------------------------
+#IF
+checkitem 魔神头盔 1
+#ACT
+take 魔神头盔 1
+CHANGEEXP + 10000000
+INC N1 1
+GOTO @魔神1
+break
+;------------------------------------------
+#IF
+checkitem 魔神项链 1
+#ACT
+take 魔神项链 1
+CHANGEEXP + 10000000
+INC N1 1
+GOTO @魔神1
+break
+;------------------------------------------
+#IF
+checkitem 魔神手镯 1
+#ACT
+take 魔神手镯 1
+CHANGEEXP + 10000000
+INC N1 1
+GOTO @魔神1
+break
+;------------------------------------------
+#IF
+checkitem 魔神戒指 1
+#ACT
+take 魔神戒指 1
+CHANGEEXP + 10000000
+INC N1 1
+GOTO @魔神1
+break
+;------------------------------------------
+#IF
+checkitem 魔神靴子 1
+#ACT
+take 魔神靴子 1
+CHANGEEXP + 10000000
+INC N1 1
+GOTO @魔神1
+break
+;------------------------------------------
+#IF
+checkitem 魔神腰带 1
+#ACT
+take 魔神腰带 1
+CHANGEEXP + 10000000
+INC N1 1
+GOTO @魔神1
+break
+;------------------------------------------
+#IF
+large N1 0
+#ACT
+MUL N5 N1 10000000
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」炼制魔神首饰<$STR(N1)>件，共获得经验值<$STR(N5)>。
+MOV N1 0
+MOV N5 0
+break
+#ELSEACT
+SENDMSG 6 您的背包没有对应的首饰！
+break
+
+
+[@道神1]
+#IF
+CHECKLEVELEX > 59
+#ACT
+MESSAGEBOX [失败]：\\您等级已达到60级，无法继续免费炼制！
+BREAK
+
+
+;------------------------------------------
+#IF
+checkitem 道神头盔 1
+#ACT
+take 道神头盔 1
+CHANGEEXP + 10000000
+INC N1 1
+GOTO @道神1
+break
+;------------------------------------------
+#IF
+checkitem 道神项链 1
+#ACT
+take 道神项链 1
+CHANGEEXP + 10000000
+INC N1 1
+GOTO @道神1
+break
+;------------------------------------------
+#IF
+checkitem 道神手镯 1
+#ACT
+take 道神手镯 1
+CHANGEEXP + 10000000
+INC N1 1
+GOTO @道神1
+break
+;------------------------------------------
+#IF
+checkitem 道神戒指 1
+#ACT
+take 道神戒指 1
+CHANGEEXP + 10000000
+INC N1 1
+GOTO @道神1
+break
+;------------------------------------------
+#IF
+checkitem 道神靴子 1
+#ACT
+take 道神靴子 1
+CHANGEEXP + 10000000
+INC N1 1
+GOTO @道神1
+break
+;------------------------------------------
+#IF
+checkitem 道神腰带 1
+#ACT
+take 道神腰带 1
+CHANGEEXP + 10000000
+INC N1 1
+GOTO @道神1
+break
+;------------------------------------------
+#IF
+large N1 0
+#ACT
+MUL N5 N1 10000000
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」炼制道神首饰<$STR(N1)>件，共获得经验值<$STR(N5)>。
+MOV N1 0
+MOV N5 0
+break
+#ELSEACT
+SENDMSG 6 您的背包没有对应的首饰！
+break
+
+
+
+[@神火令战]
+#IF
+checkitem 无双·战盔 1
+#ACT
+take 无双·战盔 1
+GIVE 神火令 1
+SENDMSG 0 〖<$USERNAME>〗使用1件神阶首饰成功兑换1个神火令。
+BREAK
+
+#IF
+checkitem 无双·战靴 1
+#ACT
+take 无双·战靴 1
+GIVE 神火令 1
+SENDMSG 0 〖<$USERNAME>〗使用1件神阶首饰成功兑换1个神火令。
+BREAK
+
+#IF
+checkitem 无双·战带 1
+#ACT
+take 无双·战带 1
+GIVE 神火令 1
+SENDMSG 0 〖<$USERNAME>〗使用1件神阶首饰成功兑换1个神火令。
+BREAK
+
+#IF
+checkitem 无双·战链 1
+#ACT
+take 无双·战链 1
+GIVE 神火令 1
+SENDMSG 0 〖<$USERNAME>〗使用1件神阶首饰成功兑换1个神火令。
+BREAK
+
+#IF
+checkitem 无双·战镯 1
+#ACT
+take 无双·战镯 1
+GIVE 神火令 1
+SENDMSG 0 〖<$USERNAME>〗使用1件神阶首饰成功兑换1个神火令。
+BREAK
+
+#IF
+checkitem 无双·战戒 1
+#ACT
+take 无双·战戒 1
+GIVE 神火令 1
+SENDMSG 0 〖<$USERNAME>〗使用1件神阶首饰成功兑换1个神火令。
+BREAK
+
+[@神火令法]
+#IF
+checkitem 无双·魔盔 1
+#ACT
+take 无双·魔盔 1
+GIVE 神火令 1
+SENDMSG 0 〖<$USERNAME>〗使用1件神阶首饰成功兑换1个神火令。
+BREAK
+
+#IF
+checkitem 无双·魔靴 1
+#ACT
+take 无双·魔靴 1
+GIVE 神火令 1
+SENDMSG 0 〖<$USERNAME>〗使用1件神阶首饰成功兑换1个神火令。
+BREAK
+
+#IF
+checkitem 无双·魔带 1
+#ACT
+take 无双·魔带 1
+GIVE 神火令 1
+SENDMSG 0 〖<$USERNAME>〗使用1件神阶首饰成功兑换1个神火令。
+BREAK
+
+#IF
+checkitem 无双·魔链 1
+#ACT
+take 无双·魔链 1
+GIVE 神火令 1
+SENDMSG 0 〖<$USERNAME>〗使用1件神阶首饰成功兑换1个神火令。
+BREAK
+
+#IF
+checkitem 无双·魔镯 1
+#ACT
+take 无双·魔镯 1
+GIVE 神火令 1
+SENDMSG 0 〖<$USERNAME>〗使用1件神阶首饰成功兑换1个神火令。
+BREAK
+
+#IF
+checkitem 无双·魔戒 1
+#ACT
+take 无双·魔戒 1
+GIVE 神火令 1
+SENDMSG 0 〖<$USERNAME>〗使用1件神阶首饰成功兑换1个神火令。
+BREAK
+
+[@神火令道]
+#IF
+checkitem 无双·道盔 1
+#ACT
+take 无双·道盔 1
+GIVE 神火令 1
+SENDMSG 0 〖<$USERNAME>〗使用1件神阶首饰成功兑换1个神火令。
+BREAK
+
+#IF
+checkitem 无双·道靴 1
+#ACT
+take 无双·道靴 1
+GIVE 神火令 1
+SENDMSG 0 〖<$USERNAME>〗使用1件神阶首饰成功兑换1个神火令。
+BREAK
+
+#IF
+checkitem 无双·道带 1
+#ACT
+take 无双·道带 1
+GIVE 神火令 1
+SENDMSG 0 〖<$USERNAME>〗使用1件神阶首饰成功兑换1个神火令。
+BREAK
+
+#IF
+checkitem 无双·道链 1
+#ACT
+take 无双·道链 1
+GIVE 神火令 1
+SENDMSG 0 〖<$USERNAME>〗使用1件神阶首饰成功兑换1个神火令。
+BREAK
+
+#IF
+checkitem 无双·道镯 1
+#ACT
+take 无双·道镯 1
+GIVE 神火令 1
+SENDMSG 0 〖<$USERNAME>〗使用1件神阶首饰成功兑换1个神火令。
+BREAK
+
+#IF
+checkitem 无双·道戒 1
+#ACT
+take 无双·道戒 1
+GIVE 神火令 1
+SENDMSG 0 〖<$USERNAME>〗使用1件神阶首饰成功兑换1个神火令。
+BREAK
+
+
+
+}
+
+

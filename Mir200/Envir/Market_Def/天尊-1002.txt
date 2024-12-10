@@ -1,0 +1,43 @@
+[@main]
+哎，岁月如梭，已经好久都没人来虎卫堂看我了！\
+虎卫堂每1小时刷新一次！50级可诱惑天之卫士！\ 
+如果还没有刷新，您可以花200元宝刷新一次，每次两只！\ \
+<好的我要刷宝宝/@jinrua>\ \
+<已经50级我要去诱惑天之卫士/@55>\ \
+<算了太贵了/@exit>\
+
+
+
+
+[@jinrua]
+#IF
+checkmonmap 1002 10
+#ACT
+MESSAGEBOX \当前地图宝宝太多，请先诱惑再刷？
+break
+
+#IF
+CHECKGAMEGOLD > 199
+#ACT
+GAMEGOLD - 200
+Param1 1002
+Param2 15
+Param3 12
+MonGen 虎卫 2 1
+messagebox \\恭喜您刷新宝宝成功！
+#ELSEACT
+MESSAGEBOX \朋友！你没有200元宝啊！凑什么热闹？
+BREAK
+
+
+
+
+[@55]
+#IF
+CHECKLEVELEX > 49
+#ACT
+mapmove TZSD 44 37
+#ELSEACT
+MESSAGEBOX \朋友！你没有50级啊！凑什么热闹？
+BREAK
+

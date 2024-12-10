@@ -1,0 +1,1094 @@
+
+[@锻造极品]
+{
+
+
+
+
+#IF
+#ACT
+
+
+CHANGECUSTOMITEMTEXTCOLOR <$STR(N$锻造极品位置)> 103
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 1 0 22
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 1 1 15
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 1 2 1
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 1 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$锻造极品位置)> 1 = 0
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 2 0 19
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 2 1 16
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 2 2 2
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 2 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$锻造极品位置)> 2 = 0
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 0 246
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 1 17
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 2 3
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$锻造极品位置)> 3 = 0
+SetUpgradeItem 6
+UpDateBoxItem 6
+SENDUPGRADEITEM
+
+
+#IF
+EQUAL S$属性类型A 攻击
+checkjob warrior
+#ACT
+GOTO @锻造极品战士
+BREAK
+
+#IF
+EQUAL S$属性类型A 魔法
+checkjob wizard
+#ACT
+GOTO @锻造极品法师
+BREAK
+
+#IF
+EQUAL S$属性类型A 道术
+checkjob taoist
+#ACT
+GOTO @锻造极品道士
+BREAK
+
+
+
+
+#IF
+EQUAL S$属性类型A 攻击
+#ACT
+GOTO @锻造极品战士
+BREAK
+
+#IF
+EQUAL S$属性类型A 魔法
+#ACT
+GOTO @锻造极品法师
+BREAK
+
+#IF
+EQUAL S$属性类型A 道术
+#ACT
+GOTO @锻造极品道士
+BREAK
+
+
+
+
+[@锻造极品战士]
+
+
+
+
+
+
+#IF
+#ACT
+; ESPGetItemFieldValue <$STR(N$锻造极品位置)> NAME <$STR(S$身上装备名字)>
+mov S$身上装备名字 <$USEITEMNAME[<$STR(N$锻造极品位置)>]> 
+
+
+
+
+#IF
+CheckTextlist ..\QuestDiary\极品拾取鉴定\战士装备.txt <$STR(S$身上装备名字)>
+CheckItemAddValue <$STR(N$锻造极品位置)> 0 > 4
+#ACT
+GetStringPos ..\QuestDiary\极品拾取鉴定\战士装备.txt <$STR(S$身上装备名字)>
+INC N0 1
+GetListString ..\QuestDiary\极品拾取鉴定\战士装备.txt <$STR(N0)> S$属性类型 S$鉴定上限
+
+
+
+
+#IF
+CheckTextlist ..\QuestDiary\极品拾取鉴定\战士装备.txt <$STR(S$身上装备名字)>
+CheckItemAddValue <$STR(N$锻造极品位置)> 2 > 2
+#ACT
+GetStringPos ..\QuestDiary\极品拾取鉴定\战士装备.txt <$STR(S$身上装备名字)>
+INC N0 1
+GetListString ..\QuestDiary\极品拾取鉴定\战士装备.txt <$STR(N0)> S$属性类型 S$鉴定上限
+
+
+
+
+
+
+
+
+
+
+
+#or
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造防御位置)> > <$STR(S$鉴定上限A)>
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造防御位置)> = <$STR(S$鉴定上限A)>
+#ACT
+CHANGEITEMADDVALUE <$STR(N$锻造极品位置)> <$STR(N$锻造防御位置)> = <$STR(S$鉴定上限A)>
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 0 246
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 1 17
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 2 3
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$锻造极品位置)> 3 = <$STR(S$鉴定上限A)>
+SetUpgradeItem 6
+UpDateBoxItem 6
+SENDUPGRADEITEM
+
+
+#or
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造魔御位置)> > <$STR(S$鉴定上限A)>
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造魔御位置)> = <$STR(S$鉴定上限A)>
+#ACT
+CHANGEITEMADDVALUE <$STR(N$锻造极品位置)> <$STR(N$锻造魔御位置)> = <$STR(S$鉴定上限A)>
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 0 246
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 1 17
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 2 3
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$锻造极品位置)> 3 = <$STR(S$鉴定上限A)>
+SetUpgradeItem 6
+UpDateBoxItem 6
+SENDUPGRADEITEM
+
+#or
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造攻击位置)> > <$STR(S$鉴定上限A)>
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造攻击位置)> = <$STR(S$鉴定上限A)>
+#ACT
+CHANGEITEMADDVALUE <$STR(N$锻造极品位置)> <$STR(N$锻造攻击位置)> = <$STR(S$鉴定上限A)>
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 0 246
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 1 17
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 2 3
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$锻造极品位置)> 3 = <$STR(S$鉴定上限A)>
+SetUpgradeItem 6
+UpDateBoxItem 6
+SENDUPGRADEITEM
+
+#or
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造魔法位置)> > <$STR(S$鉴定上限A)>
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造魔法位置)> = <$STR(S$鉴定上限A)>
+#ACT
+CHANGEITEMADDVALUE <$STR(N$锻造极品位置)> <$STR(N$锻造魔法位置)> = <$STR(S$鉴定上限A)>
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 0 246
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 1 17
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 2 3
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$锻造极品位置)> 3 = <$STR(S$鉴定上限A)>
+SetUpgradeItem 6
+UpDateBoxItem 6
+SENDUPGRADEITEM
+
+#or
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造道术位置)> > <$STR(S$鉴定上限A)>
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造道术位置)> = <$STR(S$鉴定上限A)>
+#ACT
+CHANGEITEMADDVALUE <$STR(N$锻造极品位置)> <$STR(N$锻造道术位置)> = <$STR(S$鉴定上限A)>
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 0 246
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 1 17
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 2 3
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$锻造极品位置)> 3 = <$STR(S$鉴定上限A)>
+SetUpgradeItem 6
+UpDateBoxItem 6
+SENDUPGRADEITEM
+
+
+
+
+#IF
+#ACT
+MOV N$给予属性 0
+MOV N$检查属性1  3
+MOV N$检查属性2  4
+MOV N$检查属性3  5
+MOV N$检查属性4  6
+MOV N$检查属性5  7
+MOV N$检查属性6  8
+MOV N$检查属性7  9
+MOV N$检查属性8  10
+MOV N$检查属性9  11
+MOV N$检查属性10 12
+MOV N$检查属性11 13
+MOV N$检查属性12 14
+MOV N$检查属性13 15
+INC N$检查属性1  <$STR(N$给予点数)>
+INC N$检查属性2  <$STR(N$给予点数)>
+INC N$检查属性3  <$STR(N$给予点数)>
+INC N$检查属性4  <$STR(N$给予点数)>
+INC N$检查属性5  <$STR(N$给予点数)>
+INC N$检查属性6  <$STR(N$给予点数)>
+INC N$检查属性7  <$STR(N$给予点数)>
+INC N$检查属性8  <$STR(N$给予点数)>
+INC N$检查属性9  <$STR(N$给予点数)>
+INC N$检查属性10 <$STR(N$给予点数)>
+INC N$检查属性11 <$STR(N$给予点数)>
+INC N$检查属性12 <$STR(N$给予点数)>
+INC N$检查属性13 <$STR(N$给予点数)>
+
+
+
+;SENDMSG 5 你当前装备位置：<$STR(N$属性位置)>：检查属性<$STR(N$检查属性1)>,鉴定上限<$STR(S$鉴定上限)>
+
+
+
+
+
+
+
+
+
+#IF
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造攻击位置)> = <$STR(N$检查属性1)> 
+EQUAL S$属性类型 攻击
+#ACT
+MOV N$给予属性 1
+
+
+
+#IF
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造攻击位置)> = <$STR(N$检查属性2)>
+EQUAL S$属性类型 攻击
+#ACT
+MOV N$给予属性 2
+
+
+#IF
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造攻击位置)> = <$STR(N$检查属性3)>
+EQUAL S$属性类型 攻击
+#ACT
+MOV N$给予属性 3
+
+
+#IF
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造攻击位置)> = <$STR(N$检查属性4)>
+EQUAL S$属性类型 攻击
+#ACT
+MOV N$给予属性 4
+
+
+#IF
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造攻击位置)> = <$STR(N$检查属性5)>
+EQUAL S$属性类型 攻击
+#ACT
+MOV N$给予属性 5
+
+
+#IF
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造攻击位置)> = <$STR(N$检查属性6)>
+EQUAL S$属性类型 攻击
+#ACT
+MOV N$给予属性 6
+
+
+
+#IF
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造攻击位置)> = <$STR(N$检查属性7)>
+EQUAL S$属性类型 攻击
+#ACT
+MOV N$给予属性 7
+
+#IF
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造攻击位置)> = <$STR(N$检查属性8)>
+EQUAL S$属性类型 攻击
+#ACT
+MOV N$给予属性 8
+
+#IF
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造攻击位置)> = <$STR(N$检查属性9)>
+EQUAL S$属性类型 攻击
+#ACT
+MOV N$给予属性 9
+
+
+#IF
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造攻击位置)> = <$STR(N$检查属性10)>
+EQUAL S$属性类型 攻击
+#ACT
+MOV N$给予属性 10
+
+#IF
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造攻击位置)> = <$STR(N$检查属性11)>
+EQUAL S$属性类型 攻击
+#ACT
+MOV N$给予属性 11
+
+#IF
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造攻击位置)> = <$STR(N$检查属性12)>
+EQUAL S$属性类型 攻击
+#ACT
+MOV N$给予属性 12
+
+#IF
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造攻击位置)> = <$STR(N$检查属性13)>
+EQUAL S$属性类型 攻击
+#ACT
+MOV N$给予属性 13
+
+
+
+
+
+
+#IF
+CHECKNEWITEMVALUE <$STR(N$锻造极品位置)> 0 = 0 
+CHECKNEWITEMVALUE <$STR(N$锻造极品位置)> 1 = 0 
+CHECKNEWITEMVALUE <$STR(N$锻造极品位置)> 2 = 0 
+CHECKNEWITEMVALUE <$STR(N$锻造极品位置)> 3 = 0 
+CHECKNEWITEMVALUE <$STR(N$锻造极品位置)> 4 = 0 
+CHECKNEWITEMVALUE <$STR(N$锻造极品位置)> 5 = 0 
+CHECKNEWITEMVALUE <$STR(N$锻造极品位置)> 6 = 0 
+CHECKNEWITEMVALUE <$STR(N$锻造极品位置)> 7 = 0 
+CHECKNEWITEMVALUE <$STR(N$锻造极品位置)> 8 = 0 
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造攻击位置)> = <$STR(S$鉴定上限A)>
+#ACT
+GetRandomText ..\QuestDiary\极品拾取鉴定\随机元素.txt S$随机元素
+movr N$随机属性 1 6
+MOV N$鉴定上限A <$STR(N$随机属性)>
+INC N$鉴定上限A 1
+MOVR N$元素上限 1 <$STR(N$鉴定上限A)>
+SetNewItemValue <$STR(N$锻造极品位置)> <$Str(S$随机元素)> = <$STR(N$元素上限)>
+
+
+
+#IF
+EQUAL S$属性类型 攻击
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造攻击位置)> > <$STR(S$鉴定上限A)>
+#ACT
+CHANGEITEMADDVALUE <$STR(N$锻造极品位置)> <$STR(N$属性位置)> = <$STR(S$鉴定上限A)>
+CHANGEITEMUPGRADECOUNT <$STR(N$锻造极品位置)> = <$STR(N$给予属性)>
+CHANGECUSTOMITEMTEXT <$STR(N$锻造极品位置)> [极品觉醒]
+CHANGECUSTOMITEMTEXTCOLOR <$STR(N$锻造极品位置)> 103
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 1 0 22
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 1 1 15
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 1 2 1
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 1 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$锻造极品位置)> 1 = <$STR(N$给予属性)>
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 2 0 19
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 2 1 16
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 2 2 2
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 2 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$锻造极品位置)> 2 = <$STR(N$给予属性)>
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 0 246
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 1 17
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 2 3
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$锻造极品位置)> 3 = <$STR(S$鉴定上限A)>
+SetUpgradeItem 6
+UpDateBoxItem 6
+SENDUPGRADEITEM
+
+
+break
+
+
+
+
+
+
+#IF
+EQUAL S$属性类型 攻击
+LARGE N$给予属性 0
+#ACT
+CHANGEITEMUPGRADECOUNT <$STR(N$锻造极品位置)> = <$STR(N$给予属性)>
+CHANGECUSTOMITEMTEXT <$STR(N$锻造极品位置)> [极品觉醒]
+CHANGECUSTOMITEMTEXTCOLOR <$STR(N$锻造极品位置)> 103
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 1 0 22
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 1 1 15
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 1 2 1
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 1 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$锻造极品位置)> 1 = <$STR(N$给予属性)>
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 2 0 19
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 2 1 16
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 2 2 2
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 2 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$锻造极品位置)> 2 = <$STR(N$给予属性)>
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 0 246
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 1 17
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 2 3
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$锻造极品位置)> 3 = <$STR(S$鉴定上限A)>
+SetUpgradeItem 6
+UpDateBoxItem 6
+SENDUPGRADEITEM
+
+
+break
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@锻造极品法师]
+
+
+
+
+#IF
+CheckTextlist ..\QuestDiary\极品拾取鉴定\法师装备.txt <$STR(S$身上装备名字)>
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造魔法位置)> > 4
+#ACT
+GetStringPos ..\QuestDiary\极品拾取鉴定\法师装备.txt <$STR(S$身上装备名字)>
+INC N0 1
+GetListString ..\QuestDiary\极品拾取鉴定\法师装备.txt <$STR(N0)> S$属性类型 S$鉴定上限
+
+
+
+
+
+#IF
+CheckTextlist ..\QuestDiary\极品拾取鉴定\法师装备.txt <$STR(S$身上装备名字)>
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造魔法位置)> > 2
+#ACT
+GetStringPos ..\QuestDiary\极品拾取鉴定\法师装备.txt <$STR(S$身上装备名字)>
+INC N0 1
+GetListString ..\QuestDiary\极品拾取鉴定\法师装备.txt <$STR(N0)> S$属性类型 S$鉴定上限
+
+
+
+
+
+
+
+#or
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造防御位置)> > <$STR(S$鉴定上限A)>
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造防御位置)> = <$STR(S$鉴定上限A)>
+#ACT
+CHANGEITEMADDVALUE <$STR(N$锻造极品位置)> <$STR(N$锻造防御位置)> = <$STR(S$鉴定上限A)>
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 0 246
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 1 17
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 2 3
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$锻造极品位置)> 3 = <$STR(S$鉴定上限A)>
+SetUpgradeItem 6
+UpDateBoxItem 6
+SENDUPGRADEITEM
+
+#or
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造魔御位置)> > <$STR(S$鉴定上限A)>
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造魔御位置)> = <$STR(S$鉴定上限A)>
+#ACT
+CHANGEITEMADDVALUE <$STR(N$锻造极品位置)> <$STR(N$锻造魔御位置)> = <$STR(S$鉴定上限A)>
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 0 246
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 1 17
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 2 3
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$锻造极品位置)> 3 = <$STR(S$鉴定上限A)>
+SetUpgradeItem 6
+UpDateBoxItem 6
+SENDUPGRADEITEM
+
+#or
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造攻击位置)> > <$STR(S$鉴定上限A)>
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造攻击位置)> = <$STR(S$鉴定上限A)>
+#ACT
+CHANGEITEMADDVALUE <$STR(N$锻造极品位置)> <$STR(N$锻造攻击位置)> = <$STR(S$鉴定上限A)>
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 0 246
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 1 17
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 2 3
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$锻造极品位置)> 3 = <$STR(S$鉴定上限A)>
+SetUpgradeItem 6
+UpDateBoxItem 6
+SENDUPGRADEITEM
+
+#or
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造魔法位置)> > <$STR(S$鉴定上限A)>
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造魔法位置)> = <$STR(S$鉴定上限A)>
+#ACT
+CHANGEITEMADDVALUE <$STR(N$锻造极品位置)> <$STR(N$锻造魔法位置)> = <$STR(S$鉴定上限A)>
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 0 246
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 1 17
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 2 3
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$锻造极品位置)> 3 = <$STR(S$鉴定上限A)>
+SetUpgradeItem 6
+UpDateBoxItem 6
+SENDUPGRADEITEM
+
+#or
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造道术位置)> > <$STR(S$鉴定上限A)>
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造道术位置)> = <$STR(S$鉴定上限A)>
+#ACT
+CHANGEITEMADDVALUE <$STR(N$锻造极品位置)> <$STR(N$锻造道术位置)> = <$STR(S$鉴定上限A)>
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 0 246
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 1 17
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 2 3
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$锻造极品位置)> 3 = <$STR(S$鉴定上限A)>
+SetUpgradeItem 6
+UpDateBoxItem 6
+SENDUPGRADEITEM
+
+
+
+#IF
+#ACT
+MOV N$给予属性 0
+MOV N$检查属性1  3
+MOV N$检查属性2  4
+MOV N$检查属性3  5
+MOV N$检查属性4  6
+MOV N$检查属性5  7
+MOV N$检查属性6  8
+MOV N$检查属性7  9
+MOV N$检查属性8  10
+MOV N$检查属性9  11
+MOV N$检查属性10 12
+MOV N$检查属性11 13
+MOV N$检查属性12 14
+MOV N$检查属性13 15
+INC N$检查属性1  <$STR(N$给予点数)>
+INC N$检查属性2  <$STR(N$给予点数)>
+INC N$检查属性3  <$STR(N$给予点数)>
+INC N$检查属性4  <$STR(N$给予点数)>
+INC N$检查属性5  <$STR(N$给予点数)>
+INC N$检查属性6  <$STR(N$给予点数)>
+INC N$检查属性7  <$STR(N$给予点数)>
+INC N$检查属性8  <$STR(N$给予点数)>
+INC N$检查属性9  <$STR(N$给予点数)>
+INC N$检查属性10 <$STR(N$给予点数)>
+INC N$检查属性11 <$STR(N$给予点数)>
+INC N$检查属性12 <$STR(N$给予点数)>
+INC N$检查属性13 <$STR(N$给予点数)>
+
+
+
+
+
+
+
+#IF
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造魔法位置)> = <$STR(N$检查属性1)> 
+EQUAL S$属性类型 魔法
+#ACT
+MOV N$给予属性 1
+
+
+
+#IF
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造魔法位置)> = <$STR(N$检查属性2)>
+EQUAL S$属性类型 魔法
+#ACT
+MOV N$给予属性 2
+
+
+#IF
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造魔法位置)> = <$STR(N$检查属性3)>
+EQUAL S$属性类型 魔法
+#ACT
+MOV N$给予属性 3
+
+
+#IF
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造魔法位置)> = <$STR(N$检查属性4)>
+EQUAL S$属性类型 魔法
+#ACT
+MOV N$给予属性 4
+
+
+#IF
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造魔法位置)> = <$STR(N$检查属性5)>
+EQUAL S$属性类型 魔法
+#ACT
+MOV N$给予属性 5
+
+
+#IF
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造魔法位置)> = <$STR(N$检查属性6)>
+EQUAL S$属性类型 魔法
+#ACT
+MOV N$给予属性 6
+
+
+
+#IF
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造魔法位置)> = <$STR(N$检查属性7)>
+EQUAL S$属性类型 魔法
+#ACT
+MOV N$给予属性 7
+
+#IF
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造魔法位置)> = <$STR(N$检查属性8)>
+EQUAL S$属性类型 魔法
+#ACT
+MOV N$给予属性 8
+
+#IF
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造魔法位置)> = <$STR(N$检查属性9)>
+EQUAL S$属性类型 魔法
+#ACT
+MOV N$给予属性 9
+
+
+#IF
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造魔法位置)> = <$STR(N$检查属性10)>
+EQUAL S$属性类型 魔法
+#ACT
+MOV N$给予属性 10
+
+#IF
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造魔法位置)> = <$STR(N$检查属性11)>
+EQUAL S$属性类型 魔法
+#ACT
+MOV N$给予属性 11
+
+#IF
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造魔法位置)> = <$STR(N$检查属性12)>
+EQUAL S$属性类型 魔法
+#ACT
+MOV N$给予属性 12
+
+#IF
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造魔法位置)> = <$STR(N$检查属性13)>
+EQUAL S$属性类型 魔法
+#ACT
+MOV N$给予属性 13
+
+
+
+
+
+#IF
+CHECKNEWITEMVALUE <$STR(N$锻造极品位置)> 0 = 0 
+CHECKNEWITEMVALUE <$STR(N$锻造极品位置)> 1 = 0 
+CHECKNEWITEMVALUE <$STR(N$锻造极品位置)> 2 = 0 
+CHECKNEWITEMVALUE <$STR(N$锻造极品位置)> 3 = 0 
+CHECKNEWITEMVALUE <$STR(N$锻造极品位置)> 4 = 0 
+CHECKNEWITEMVALUE <$STR(N$锻造极品位置)> 5 = 0 
+CHECKNEWITEMVALUE <$STR(N$锻造极品位置)> 6 = 0 
+CHECKNEWITEMVALUE <$STR(N$锻造极品位置)> 7 = 0 
+CHECKNEWITEMVALUE <$STR(N$锻造极品位置)> 8 = 0 
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造魔法位置)> = <$STR(S$鉴定上限A)>
+#ACT
+GetRandomText ..\QuestDiary\极品拾取鉴定\随机元素.txt S$随机元素
+movr N$随机属性 1 6
+MOV N$鉴定上限A <$STR(N$随机属性)>
+INC N$鉴定上限A 1
+MOVR N$元素上限 1 <$STR(N$鉴定上限A)>
+SetNewItemValue <$STR(N$锻造极品位置)> <$Str(S$随机元素)> = <$STR(N$元素上限)>
+
+
+
+
+
+
+
+#IF
+#ACT
+;SENDMSG 5 你当前装备位置：<$STR(N$属性位置)>：检查属性<$STR(N$给予属性)>
+
+
+#IF
+EQUAL S$属性类型 魔法
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造魔法位置)> > <$STR(S$鉴定上限A)>
+#ACT
+CHANGEITEMADDVALUE <$STR(N$锻造极品位置)> <$STR(N$锻造魔法位置)> = <$STR(S$鉴定上限A)>
+CHANGEITEMUPGRADECOUNT <$STR(N$锻造极品位置)> = <$STR(N$给予属性)>
+CHANGECUSTOMITEMTEXT <$STR(N$锻造极品位置)> [极品觉醒]
+CHANGECUSTOMITEMTEXTCOLOR <$STR(N$锻造极品位置)> 103
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 1 0 22
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 1 1 15
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 1 2 1
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 1 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$锻造极品位置)> 1 = <$STR(N$给予属性)>
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 2 0 19
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 2 1 16
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 2 2 2
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 2 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$锻造极品位置)> 2 = <$STR(N$给予属性)>
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 0 246
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 1 17
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 2 3
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$锻造极品位置)> 3 = <$STR(S$鉴定上限A)>
+SetUpgradeItem 6
+UpDateBoxItem 6
+SENDUPGRADEITEM
+
+
+break
+
+
+
+#IF
+EQUAL S$属性类型 魔法
+LARGE N$给予属性 0
+#ACT
+CHANGEITEMUPGRADECOUNT <$STR(N$锻造极品位置)> = <$STR(N$给予属性)>
+CHANGECUSTOMITEMTEXT <$STR(N$锻造极品位置)> [极品觉醒]
+CHANGECUSTOMITEMTEXTCOLOR <$STR(N$锻造极品位置)> 103
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 1 0 22
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 1 1 15
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 1 2 1
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 1 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$锻造极品位置)> 1 = <$STR(N$给予属性)>
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 2 0 19
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 2 1 16
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 2 2 2
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 2 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$锻造极品位置)> 2 = <$STR(N$给予属性)>
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 0 246
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 1 17
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 2 3
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$锻造极品位置)> 3 = <$STR(S$鉴定上限A)>
+SetUpgradeItem 6
+UpDateBoxItem 6
+SENDUPGRADEITEM
+
+
+break
+
+
+
+
+
+
+
+
+
+
+[@锻造极品道士]
+
+
+
+
+
+
+
+#IF
+CheckTextlist ..\QuestDiary\极品拾取鉴定\道士装备.txt <$STR(S$身上装备名字)>
+CheckItemAddValue <$STR(N$锻造极品位置)> 2 > 4
+#ACT
+GetStringPos ..\QuestDiary\极品拾取鉴定\道士装备.txt <$STR(S$身上装备名字)>
+INC N0 1
+GetListString ..\QuestDiary\极品拾取鉴定\道士装备.txt <$STR(N0)> S$属性类型 S$鉴定上限
+
+
+
+
+#IF
+CheckTextlist ..\QuestDiary\极品拾取鉴定\道士装备.txt <$STR(S$身上装备名字)>
+CheckItemAddValue <$STR(N$锻造极品位置)> 4 > 2
+#ACT
+GetStringPos ..\QuestDiary\极品拾取鉴定\道士装备.txt <$STR(S$身上装备名字)>
+INC N0 1
+GetListString ..\QuestDiary\极品拾取鉴定\道士装备.txt <$STR(N0)> S$属性类型 S$鉴定上限
+
+
+
+
+
+
+
+
+#or
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造防御位置)> > <$STR(S$鉴定上限A)>
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造防御位置)> = <$STR(S$鉴定上限A)>
+#ACT
+CHANGEITEMADDVALUE <$STR(N$锻造极品位置)> <$STR(N$锻造防御位置)> = <$STR(S$鉴定上限A)>
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 0 246
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 1 17
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 2 3
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$锻造极品位置)> 3 = <$STR(S$鉴定上限A)>
+SetUpgradeItem 6
+UpDateBoxItem 6
+SENDUPGRADEITEM
+
+#or
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造魔御位置)> > <$STR(S$鉴定上限A)>
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造魔御位置)> = <$STR(S$鉴定上限A)>
+#ACT
+CHANGEITEMADDVALUE <$STR(N$锻造极品位置)> <$STR(N$锻造魔御位置)> = <$STR(S$鉴定上限A)>
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 0 246
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 1 17
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 2 3
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$锻造极品位置)> 3 = <$STR(S$鉴定上限A)>
+SetUpgradeItem 6
+UpDateBoxItem 6
+SENDUPGRADEITEM
+
+#or
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造攻击位置)> > <$STR(S$鉴定上限A)>
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造攻击位置)> = <$STR(S$鉴定上限A)>
+#ACT
+CHANGEITEMADDVALUE <$STR(N$锻造极品位置)> <$STR(N$锻造攻击位置)> = <$STR(S$鉴定上限A)>
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 0 246
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 1 17
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 2 3
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$锻造极品位置)> 3 = <$STR(S$鉴定上限A)>
+SetUpgradeItem 6
+UpDateBoxItem 6
+SENDUPGRADEITEM
+
+#or
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造魔法位置)> > <$STR(S$鉴定上限A)>
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造魔法位置)> = <$STR(S$鉴定上限A)>
+#ACT
+CHANGEITEMADDVALUE <$STR(N$锻造极品位置)> <$STR(N$锻造魔法位置)> = <$STR(S$鉴定上限A)>
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 0 246
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 1 17
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 2 3
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$锻造极品位置)> 3 = <$STR(S$鉴定上限A)>
+SetUpgradeItem 6
+UpDateBoxItem 6
+SENDUPGRADEITEM
+
+#or
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造道术位置)> > <$STR(S$鉴定上限A)>
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造道术位置)> = <$STR(S$鉴定上限A)>
+#ACT
+CHANGEITEMADDVALUE <$STR(N$锻造极品位置)> <$STR(N$锻造道术位置)> = <$STR(S$鉴定上限A)>
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 0 246
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 1 17
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 2 3
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$锻造极品位置)> 3 = <$STR(S$鉴定上限A)>
+SetUpgradeItem 6
+UpDateBoxItem 6
+SENDUPGRADEITEM
+
+
+
+
+
+
+#IF
+#ACT
+MOV N$给予属性 0
+MOV N$检查属性1  3
+MOV N$检查属性2  4
+MOV N$检查属性3  5
+MOV N$检查属性4  6
+MOV N$检查属性5  7
+MOV N$检查属性6  8
+MOV N$检查属性7  9
+MOV N$检查属性8  10
+MOV N$检查属性9  11
+MOV N$检查属性10 12
+MOV N$检查属性11 13
+MOV N$检查属性12 14
+MOV N$检查属性13 15
+INC N$检查属性1  <$STR(N$给予点数)>
+INC N$检查属性2  <$STR(N$给予点数)>
+INC N$检查属性3  <$STR(N$给予点数)>
+INC N$检查属性4  <$STR(N$给予点数)>
+INC N$检查属性5  <$STR(N$给予点数)>
+INC N$检查属性6  <$STR(N$给予点数)>
+INC N$检查属性7  <$STR(N$给予点数)>
+INC N$检查属性8  <$STR(N$给予点数)>
+INC N$检查属性9  <$STR(N$给予点数)>
+INC N$检查属性10 <$STR(N$给予点数)>
+INC N$检查属性11 <$STR(N$给予点数)>
+INC N$检查属性12 <$STR(N$给予点数)>
+INC N$检查属性13 <$STR(N$给予点数)>
+;SENDMSG 5 你当前装备位置：<$STR(N$属性位置)>：检查属性<$STR(N$检查属性1)>,鉴定上限<$STR(S$鉴定上限)>
+
+
+
+
+
+
+
+
+
+#IF
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造道术位置)> = <$STR(N$检查属性1)> 
+EQUAL S$属性类型 道术
+#ACT
+MOV N$给予属性 1
+
+
+
+#IF
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造道术位置)> = <$STR(N$检查属性2)>
+EQUAL S$属性类型 道术
+#ACT
+MOV N$给予属性 2
+
+
+#IF
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造道术位置)> = <$STR(N$检查属性3)>
+EQUAL S$属性类型 道术
+#ACT
+MOV N$给予属性 3
+
+
+#IF
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造道术位置)> = <$STR(N$检查属性4)>
+EQUAL S$属性类型 道术
+#ACT
+MOV N$给予属性 4
+
+
+#IF
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造道术位置)> = <$STR(N$检查属性5)>
+EQUAL S$属性类型 道术
+#ACT
+MOV N$给予属性 5
+
+
+#IF
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造道术位置)> = <$STR(N$检查属性6)>
+EQUAL S$属性类型 道术
+#ACT
+MOV N$给予属性 6
+
+
+
+#IF
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造道术位置)> = <$STR(N$检查属性7)>
+EQUAL S$属性类型 道术
+#ACT
+MOV N$给予属性 7
+
+#IF
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造道术位置)> = <$STR(N$检查属性8)>
+EQUAL S$属性类型 道术
+#ACT
+MOV N$给予属性 8
+
+#IF
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造道术位置)> = <$STR(N$检查属性9)>
+EQUAL S$属性类型 道术
+#ACT
+MOV N$给予属性 9
+
+
+#IF
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造道术位置)> = <$STR(N$检查属性10)>
+EQUAL S$属性类型 道术
+#ACT
+MOV N$给予属性 10
+
+#IF
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造道术位置)> = <$STR(N$检查属性11)>
+EQUAL S$属性类型 道术
+#ACT
+MOV N$给予属性 11
+
+#IF
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造道术位置)> = <$STR(N$检查属性12)>
+EQUAL S$属性类型 道术
+#ACT
+MOV N$给予属性 12
+
+#IF
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造道术位置)> = <$STR(N$检查属性13)>
+EQUAL S$属性类型 道术
+#ACT
+MOV N$给予属性 13
+
+
+
+#IF
+CHECKNEWITEMVALUE <$STR(N$锻造极品位置)> 0 = 0 
+CHECKNEWITEMVALUE <$STR(N$锻造极品位置)> 1 = 0 
+CHECKNEWITEMVALUE <$STR(N$锻造极品位置)> 2 = 0 
+CHECKNEWITEMVALUE <$STR(N$锻造极品位置)> 3 = 0 
+CHECKNEWITEMVALUE <$STR(N$锻造极品位置)> 4 = 0 
+CHECKNEWITEMVALUE <$STR(N$锻造极品位置)> 5 = 0 
+CHECKNEWITEMVALUE <$STR(N$锻造极品位置)> 6 = 0 
+CHECKNEWITEMVALUE <$STR(N$锻造极品位置)> 7 = 0 
+CHECKNEWITEMVALUE <$STR(N$锻造极品位置)> 8 = 0 
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造道术位置)> = <$STR(S$鉴定上限A)>
+#ACT
+GetRandomText ..\QuestDiary\极品拾取鉴定\随机元素.txt S$随机元素
+movr N$随机属性 1 6
+MOV N$鉴定上限A <$STR(N$随机属性)>
+INC N$鉴定上限A 1
+MOVR N$元素上限 1 <$STR(N$鉴定上限A)>
+SetNewItemValue <$STR(N$锻造极品位置)> <$Str(S$随机元素)> = <$STR(N$元素上限)>
+
+
+
+
+
+
+
+#IF
+EQUAL S$属性类型 道术
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造道术位置)> > <$STR(S$鉴定上限A)>
+#ACT
+CHANGEITEMADDVALUE <$STR(N$锻造极品位置)> <$STR(N$锻造道术位置)> = <$STR(S$鉴定上限A)>
+CHANGEITEMUPGRADECOUNT <$STR(N$锻造极品位置)> = <$STR(N$给予属性)>
+CHANGECUSTOMITEMTEXT <$STR(N$锻造极品位置)> [极品觉醒]
+CHANGECUSTOMITEMTEXTCOLOR <$STR(N$锻造极品位置)> 103
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 1 0 22
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 1 1 15
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 1 2 1
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 1 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$锻造极品位置)> 1 = <$STR(N$给予属性A)>
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 2 0 19
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 2 1 16
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 2 2 2
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 2 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$锻造极品位置)> 2 = <$STR(N$给予属性A)>
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 0 246
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 1 17
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 2 3
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$锻造极品位置)> 3 = <$STR(S$鉴定上限A)>
+SetUpgradeItem 6
+UpDateBoxItem 6
+SENDUPGRADEITEM
+break
+
+
+
+#IF
+EQUAL S$属性类型 道术
+LARGE N$给予属性 0
+#ACT
+CHANGEITEMUPGRADECOUNT <$STR(N$锻造极品位置)> = <$STR(N$给予属性)>
+CHANGECUSTOMITEMTEXT <$STR(N$锻造极品位置)> [极品觉醒]
+CHANGECUSTOMITEMTEXTCOLOR <$STR(N$锻造极品位置)> 103
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 1 0 22
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 1 1 15
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 1 2 1
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 1 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$锻造极品位置)> 1 = <$STR(N$给予属性)>
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 2 0 19
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 2 1 16
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 2 2 2
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 2 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$锻造极品位置)> 2 = <$STR(N$给予属性)>
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 0 246
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 1 17
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 2 3
+CHANGECUSTOMITEMABIL <$STR(N$锻造极品位置)> 3 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$锻造极品位置)> 3 = <$STR(S$鉴定上限A)>
+SetUpgradeItem 6
+UpDateBoxItem 6
+SENDUPGRADEITEM
+
+
+
+break
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

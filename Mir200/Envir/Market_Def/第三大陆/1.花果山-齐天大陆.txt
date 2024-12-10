@@ -1,0 +1,59 @@
+[@main]
+#IF
+#ACT
+close
+#say
+; <               ★    花    ★    果    ★   山/AUTOCOLOR=253,249,251,252>    　   \
+; <花果山，山中有一洞，名唤水帘洞，洞内有石锅石灶、石碗石盆、石床/scolor=161>    　   \
+; <石凳，中间一块石碣上，镌着“花果山福地，水帘洞洞天/scolor=161>    　 \ 
+; <-------------------------------------------------------------/AUTOCOLOR=255,249,250,254>    　   \
+; <><主要怪物:/FCOLOR=250><赤尻马猴、通臂猿猴、美猴王系列怪物/FCOLOR=161>\
+; <><地图爆率:/FCOLOR=251><武神、轩辕系列/FCOLOR=22>\
+; <><进入条件:/FCOLOR=249><65级/FCOLOR=254>\ \
+; \                  <进入花果山地图|250#进入条件：^-^250#1.人物等级达到65级/@进入花果山>             \ 
+
+
+<Img|width=530|height=250|reset=1|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|scale9l=10>
+<Layout|x=501.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=530.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=18.0|y=18.0|tipsx=10|tipsy=80|color=253,249,251,252|size=16|text=★    花    ★    果    ★   山>
+<Text|a=0|x=18.0|y=47.0|tipsx=10|tipsy=80|color=161|size=16|text=花果山，山中有一洞，名唤水帘洞，洞内有石锅石灶、石碗石盆、石床>
+<Text|a=0|x=18.0|y=71.0|tipsx=10|tipsy=80|color=161|size=16|text=石凳，中间一块石碣上，镌着“花果山福地，水帘洞洞天>
+<Text|a=0|x=18.0|y=91.0|tipsx=10|tipsy=80|color=255,249,250,254|size=16|text=------------------------------------------------------------->
+<Text|a=0|x=18.0|y=111.0|tipsx=10|tipsy=80|color=250|size=16|text=主要怪物:>
+<Text|a=0|x=117.0|y=111.0|tipsx=10|tipsy=80|color=161|size=16|text=赤尻马猴、通臂猿猴、美猴王系列怪物>
+<Text|a=0|x=18.0|y=131.0|tipsx=10|tipsy=80|color=251|size=16|text=地图爆率:>
+<Text|a=0|x=117.0|y=131.0|tipsx=10|tipsy=80|color=22|size=16|text=武神、轩辕系列>
+<Text|a=0|x=18.0|y=151.0|tipsx=10|tipsy=80|color=249|size=16|text=进入条件:>
+<Text|a=0|x=117.0|y=151.0|tipsx=10|tipsy=80|color=254|size=16|text=65级>
+<Text|a=0|x=18.0|y=211.0|tipsx=10|tipsy=80|color=251|size=16|text=进入花果山地图|link=@进入花果山>
+
+
+
+
+[@进入花果山]
+
+;#IF
+;CHECKRENEWLEVEL < 12
+;#ACT
+;messagebox 对不起，你当前觉醒等级没有四层觉醒，无法进入该地图
+;break
+
+#IF
+CHECKLEVELEX < 65
+#ACT
+messagebox 对不起，您的等级不足65级，无法进入该地图！
+break
+
+
+
+
+#IF
+#ACT
+map 花果山
+SENDMSG 0 玩家{『<$USERNAME>』|250:0}闯入{『<$MapTitle>』|70:0}去打顶级装备了！
+
+
+
+
+

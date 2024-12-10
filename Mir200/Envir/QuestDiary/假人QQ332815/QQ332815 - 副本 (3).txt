@@ -1,0 +1,2448 @@
+[@QQ332815]
+{
+
+     
+#IF
+#ACT
+goto @332815111
+BREAK
+
+
+
+
+[@QQ332815111]
+
+#IF
+;检测是否是假人
+ISDUMMY
+#ACT
+GetRandomText ..\QuestDiary\假人QQ332815\假人配置.txt S10
+SETDUMMYCONFIGFILENAME ..\QuestDiary\假人QQ332815\<$STR(S10)>.txt
+LOADDUMMYCONFIG
+
+#IF
+isdummy
+#ACT
+ChangeAttatckMode 6
+DELAYGOTO 5000 @新人打怪
+;SetSndaItemBox 1 2 8888 4 5 6 7 8 6666 9 10
+take 布衣(男) 1
+take 乌木剑 1
+give 乌木剑 1
+give 布衣(男) 1
+TAKEON 乌木剑 1
+TAKEON 布衣(男) 0
+SENDMSG 0 (*)尊敬的玩家『<$USERNAME>』来到『<$SERVERNAME>』，从此玛法大陆又多了一位守护神……
+ChangeHumAbility 2 + 10 99999999
+ChangeHumAbility 1 + 10 99999999
+ChangeHumAbility 3 + 10 99999999
+ChangeHumAbility 4 + 10 99999999
+ChangeHumAbility 5 + 20 99999999
+ChangeHumAbility 6 + 20  99999999
+ChangeHumAbility 7 + 20 99999999
+ChangeHumAbility 8 + 20 99999999
+ChangeHumAbility 9 + 20 99999999
+ChangeHumAbility 10 + 20 99999999
+
+[@新人打怪]
+
+
+#IF
+checkmonmap XSLJ 150
+#ACT
+give 回城卷 1
+mapmove XSLJ 
+DummyStart
+#ELSEACT
+MonGenEx XSLJ 34 40 鹿 50 50 0 255
+MonGenEx XSLJ 34 40 多钩猫 50 25 0 255
+MonGenEx XSLJ 34 40 钉耙猫 50 25 0 255
+MonGenEx XSLJ 34 40 稻草人 50 50 0 255
+MonGenEx XSLJ 34 40 半兽人 50 50 0 255
+mapmove XSLJ 
+DummyStart
+break
+
+
+
+
+[@假人28级]
+#IF
+ISDUMMY
+#ACT
+MOVR P8 322 339
+MOVR P7 323 339
+mapmove 3 <$STR(P8)> <$STR(P7)> 3
+DELAYGOTO 2000 @假人智能
+DELAYGOTO 8000 @假人泡点
+
+
+
+
+[@假人智能]
+#IF
+random 2
+ISDUMMY
+#ACT
+Goto @假人动作
+MOVR N$@豆腐干地方代付 50000 200000
+DELAYGOTO <$STR(N$@豆腐干地方代付)> @假人智能
+
+
+
+
+
+[@假人泡点]
+#if
+#ACT
+DELAYGOTO 10000 @假人工作
+;QQ礼包
+
+#IF
+CHECKLEVELEX < 53
+#ACT 
+SETONTIMER 2 1
+messagebox 恭喜您在线经验已经成功开启！
+Sendmsg 0 玩家：「<$Username>」开启【免费泡点】，升级嗷嗷快你还在等什么？
+
+
+
+
+[@假人工作]
+#IF
+random 1
+ISDUMMY
+#ACT
+Goto @假人打怪
+MOVR N$@豆腐干地方代付 30000 100000
+DELAYGOTO <$STR(N$@豆腐干地方代付)> @假人工作
+#ELSEACT
+Goto @假人动作
+MOVR N$@豆腐干地方代付 50000 300000
+DELAYGOTO <$STR(N$@豆腐干地方代付)> @假人工作
+
+
+
+
+[@假人动作]
+#IF
+ISDUMMY
+ISONMAP 3
+#ACT
+MOVR P8 322 339
+MOVR P7 323 339
+GotoNow <$STR(P8)> <$STR(P7)> 
+#ELSEACT
+MOVR P8 322 339
+MOVR P7 323 339
+mapmove 3 <$STR(P8)> <$STR(P7)>
+DUMMYSTOP
+BREAK
+
+
+[@假人打怪]
+
+#IF
+CHECKUNDERWAR 沙巴克
+#ACT
+MESSAGEBOX 城战期间，暂未开放此地图！
+break
+
+
+#OR
+checkjob wizard
+checkjob warrior
+#act
+break
+
+
+
+
+#IF
+ISDUMMY
+CHECKMAPDUMMYPLAYCOUNT xrdb < 10
+#ACT
+mapmove xrdb 62 168
+GuildNoticeMsg 255 249 (*)【%s】进入了%m。
+DummyStart
+Break
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@76575fdfdgdf67349966]
+
+#if
+equal <$CURRTEMSTDMODE> 5
+#act
+mov <$str(N$总属性)> <$MAXSC>
+mov <$str(s$身上装备)> <$WEAPON>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 1
+#if
+equal <$CURRTEMSTDMODE> 5
+large <$str(N$总属性)> <$MAXSC>
+#act
+mov <$str(N$总属性)> <$MAXSC>
+AutoTakeOnItem <$str(s$身上装备)> 1
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 6
+#act
+mov <$str(N$总属性)> <$MAXSC>
+mov <$str(s$身上装备)> <$WEAPON>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 1
+#if
+equal <$CURRTEMSTDMODE> 6
+large <$str(N$总属性)> <$MAXSC>
+#act
+mov <$str(N$总属性)> <$MAXSC>
+AutoTakeOnItem <$str(s$身上装备)> 1
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 10
+#act
+mov <$str(N$总属性)> <$MAXSC>
+mov <$str(s$身上装备)> <$DRESS>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 0
+#if
+equal <$CURRTEMSTDMODE> 10
+large <$str(N$总属性)> <$MAXSC>
+#act
+mov <$str(N$总属性)> <$MAXSC>
+AutoTakeOnItem <$str(s$身上装备)> 0
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 11
+#act
+mov <$str(N$总属性)> <$MAXSC>
+mov <$str(s$身上装备)> <$DRESS>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 0
+#if
+equal <$CURRTEMSTDMODE> 11
+large <$str(N$总属性)> <$MAXSC>
+#act
+mov <$str(N$总属性)> <$MAXSC>
+AutoTakeOnItem <$str(s$身上装备)> 0
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 15
+#act
+mov <$str(N$总属性)> <$MAXSC>
+mov <$str(s$身上装备)> <$HELMET>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 4
+#if
+equal <$CURRTEMSTDMODE> 15
+large <$str(N$总属性)> <$MAXSC>
+#act
+mov <$str(N$总属性)> <$MAXSC>
+AutoTakeOnItem <$str(s$身上装备)> 4
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 30
+#act
+mov <$str(N$总属性)> <$MAXSC>
+mov <$str(s$身上装备)> <$RIGHTHAND>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 2
+#if
+equal <$CURRTEMSTDMODE> 30
+large <$str(N$总属性)> <$MAXSC>
+#act
+mov <$str(N$总属性)> <$MAXSC>
+AutoTakeOnItem <$str(s$身上装备)> 2
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 19
+#act
+mov <$str(N$总属性)> <$MAXSC>
+mov <$str(s$身上装备)> <$NECKLACE>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 3
+#if
+equal <$CURRTEMSTDMODE> 19
+large <$str(N$总属性)> <$MAXSC>
+#act
+mov <$str(N$总属性)> <$MAXSC>
+AutoTakeOnItem <$str(s$身上装备)> 3
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 20
+#act
+mov <$str(N$总属性)> <$MAXSC>
+mov <$str(s$身上装备)> <$NECKLACE>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 3
+#if
+equal <$CURRTEMSTDMODE> 20
+large <$str(N$总属性)> <$MAXSC>
+#act
+mov <$str(N$总属性)> <$MAXSC>
+AutoTakeOnItem <$str(s$身上装备)> 3
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 21
+#act
+mov <$str(N$总属性)> <$MAXSC>
+mov <$str(s$身上装备)> <$NECKLACE>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 3
+#if
+equal <$CURRTEMSTDMODE> 21
+large <$str(N$总属性)> <$MAXSC>
+#act
+mov <$str(N$总属性)> <$MAXSC>
+AutoTakeOnItem <$str(s$身上装备)> 3
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 24
+#act
+mov <$str(N$总属性)> <$MAXSC>
+mov <$str(s$身上装备)> <$ARMRING_R>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 6
+#if
+equal <$CURRTEMSTDMODE> 24
+large <$str(N$总属性)> <$MAXSC>
+#act
+mov <$str(N$总属性)> <$MAXSC>
+AutoTakeOnItem <$str(s$身上装备)> 6
+
+#if
+equal <$CURRTEMSTDMODE> 24
+#act
+mov <$str(N$总属性)> <$MAXSC>
+mov <$str(s$身上装备)> <$ARMRING_L>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 5
+#if
+equal <$CURRTEMSTDMODE> 24
+large <$str(N$总属性)> <$MAXSC>
+#act
+mov <$str(N$总属性)> <$MAXSC>
+AutoTakeOnItem <$str(s$身上装备)> 5
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 26
+#act
+mov <$str(N$总属性)> <$MAXSC>
+mov <$str(s$身上装备)> <$ARMRING_R>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 6
+#if
+equal <$CURRTEMSTDMODE> 26
+large <$str(N$总属性)> <$MAXSC>
+#act
+mov <$str(N$总属性)> <$MAXSC>
+AutoTakeOnItem <$str(s$身上装备)> 6
+
+#if
+equal <$CURRTEMSTDMODE> 26
+#act
+mov <$str(N$总属性)> <$MAXSC>
+mov <$str(s$身上装备)> <$ARMRING_L>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 5
+#if
+equal <$CURRTEMSTDMODE> 26
+large <$str(N$总属性)> <$MAXSC>
+#act
+mov <$str(N$总属性)> <$MAXSC>
+AutoTakeOnItem <$str(s$身上装备)> 5
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 22
+#act
+mov <$str(N$总属性)> <$MAXSC>
+mov <$str(s$身上装备)> <$RING_L>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 7
+#if
+equal <$CURRTEMSTDMODE> 22
+large <$str(N$总属性)> <$MAXSC>
+#act
+mov <$str(N$总属性)> <$MAXSC>
+AutoTakeOnItem <$str(s$身上装备)> 7
+
+#if
+equal <$CURRTEMSTDMODE> 22
+#act
+mov <$str(N$总属性)> <$MAXSC>
+mov <$str(s$身上装备)> <$RING_R>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 8
+#if
+equal <$CURRTEMSTDMODE> 22
+large <$str(N$总属性)> <$MAXSC>
+#act
+mov <$str(N$总属性)> <$MAXSC>
+AutoTakeOnItem <$str(s$身上装备)> 8
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 23
+#act
+mov <$str(N$总属性)> <$MAXSC>
+mov <$str(s$身上装备)> <$RING_L>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 7
+#if
+equal <$CURRTEMSTDMODE> 23
+large <$str(N$总属性)> <$MAXSC>
+#act
+mov <$str(N$总属性)> <$MAXSC>
+AutoTakeOnItem <$str(s$身上装备)> 7
+
+#if
+equal <$CURRTEMSTDMODE> 23
+#act
+mov <$str(N$总属性)> <$MAXSC>
+mov <$str(s$身上装备)> <$RING_R>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 8
+#if
+equal <$CURRTEMSTDMODE> 23
+large <$str(N$总属性)> <$MAXSC>
+#act
+mov <$str(N$总属性)> <$MAXSC>
+AutoTakeOnItem <$str(s$身上装备)> 8
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 25
+#act
+mov <$str(N$总属性)> <$MAXSC>
+mov <$str(s$身上装备)> <$BUJUK>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 9
+#if
+equal <$CURRTEMSTDMODE> 25
+large <$str(N$总属性)> <$MAXSC>
+#act
+mov <$str(N$总属性)> <$MAXSC>
+AutoTakeOnItem <$str(s$身上装备)> 9
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 51
+#act
+mov <$str(N$总属性)> <$MAXSC>
+mov <$str(s$身上装备)> <$BUJUK>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 9
+#if
+equal <$CURRTEMSTDMODE> 51
+large <$str(N$总属性)> <$MAXSC>
+#act
+mov <$str(N$总属性)> <$MAXSC>
+AutoTakeOnItem <$str(s$身上装备)> 9
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 54
+#act
+mov <$str(N$总属性)> <$MAXSC>
+mov <$str(s$身上装备)> <$BELT>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 10
+#if
+equal <$CURRTEMSTDMODE> 54
+large <$str(N$总属性)> <$MAXSC>
+#act
+mov <$str(N$总属性)> <$MAXSC>
+AutoTakeOnItem <$str(s$身上装备)> 10
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 64
+#act
+mov <$str(N$总属性)> <$MAXSC>
+mov <$str(s$身上装备)> <$BELT>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 10
+#if
+equal <$CURRTEMSTDMODE> 64
+large <$str(N$总属性)> <$MAXSC>
+#act
+mov <$str(N$总属性)> <$MAXSC>
+AutoTakeOnItem <$str(s$身上装备)> 10
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 52
+#act
+mov <$str(N$总属性)> <$MAXSC>
+mov <$str(s$身上装备)> <$BOOTS>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 11
+#if
+equal <$CURRTEMSTDMODE> 52
+large <$str(N$总属性)> <$MAXSC>
+#act
+mov <$str(N$总属性)> <$MAXSC>
+AutoTakeOnItem <$str(s$身上装备)> 11
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 62
+#act
+mov <$str(N$总属性)> <$MAXSC>
+mov <$str(s$身上装备)> <$BOOTS>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 11
+#if
+equal <$CURRTEMSTDMODE> 62
+large <$str(N$总属性)> <$MAXSC>
+#act
+mov <$str(N$总属性)> <$MAXSC>
+AutoTakeOnItem <$str(s$身上装备)> 11
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 53
+#act
+mov <$str(N$总属性)> <$MAXSC>
+mov <$str(s$身上装备)> <$CHARM>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 12
+#if
+equal <$CURRTEMSTDMODE> 53
+large <$str(N$总属性)> <$MAXSC>
+#act
+mov <$str(N$总属性)> <$MAXSC>
+AutoTakeOnItem <$str(s$身上装备)> 12
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 63
+#act
+mov <$str(N$总属性)> <$MAXSC>
+mov <$str(s$身上装备)> <$CHARM>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 12
+#if
+equal <$CURRTEMSTDMODE> 63
+large <$str(N$总属性)> <$MAXSC>
+#act
+mov <$str(N$总属性)> <$MAXSC>
+AutoTakeOnItem <$str(s$身上装备)> 12
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 16
+#act
+mov <$str(N$总属性)> <$MAXSC>
+mov <$str(s$身上装备)> <$HAT>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 13
+#if
+equal <$CURRTEMSTDMODE> 16
+large <$str(N$总属性)> <$MAXSC>
+#act
+mov <$str(N$总属性)> <$MAXSC>
+AutoTakeOnItem <$str(s$身上装备)> 13
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 65
+#act
+mov <$str(N$总属性)> <$MAXSC>
+mov <$str(s$身上装备)> <$DRUM>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 14
+#if
+equal <$CURRTEMSTDMODE> 65
+large <$str(N$总属性)> <$MAXSC>
+#act
+mov <$str(N$总属性)> <$MAXSC>
+AutoTakeOnItem <$str(s$身上装备)> 14
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 28
+#act
+mov <$str(N$总属性)> <$MAXSC>
+mov <$str(s$身上装备)> <$HORSE>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 15
+#if
+equal <$CURRTEMSTDMODE> 28
+large <$str(N$总属性)> <$MAXSC>
+#act
+mov <$str(N$总属性)> <$MAXSC>
+AutoTakeOnItem <$str(s$身上装备)> 15
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 48
+#act
+mov <$str(N$总属性)> <$MAXSC>
+mov <$str(s$身上装备)> <$SHIELD>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 16
+#if
+equal <$CURRTEMSTDMODE> 48
+large <$str(N$总属性)> <$MAXSC>
+#act
+mov <$str(N$总属性)> <$MAXSC>
+AutoTakeOnItem <$str(s$身上装备)> 16
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 66
+#act
+mov <$str(N$总属性)> <$MAXSC>
+mov <$str(s$身上装备)> <$SDRESS>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 17
+#if
+equal <$CURRTEMSTDMODE> 66
+large <$str(N$总属性)> <$MAXSC>
+#act
+mov <$str(N$总属性)> <$MAXSC>
+AutoTakeOnItem <$str(s$身上装备)> 17
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 67
+#act
+mov <$str(N$总属性)> <$MAXSC>
+mov <$str(s$身上装备)> <$SDRESS>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 17
+#if
+equal <$CURRTEMSTDMODE> 67
+large <$str(N$总属性)> <$MAXSC>
+#act
+mov <$str(N$总属性)> <$MAXSC>
+AutoTakeOnItem <$str(s$身上装备)> 17
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 68
+#act
+mov <$str(N$总属性)> <$MAXSC>
+mov <$str(s$身上装备)> <$SWEAPON>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 18
+#if
+equal <$CURRTEMSTDMODE> 68
+large <$str(N$总属性)> <$MAXSC>
+#act
+mov <$str(N$总属性)> <$MAXSC>
+AutoTakeOnItem <$str(s$身上装备)> 18
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 100
+#act
+mov <$str(N$总属性)> <$MAXSC>
+mov <$str(s$身上装备)> <$SWEAPON>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 31
+#if
+equal <$CURRTEMSTDMODE> 100
+large <$str(N$总属性)> <$MAXSC>
+#act
+mov <$str(N$总属性)> <$MAXSC>
+AutoTakeOnItem <$str(s$身上装备)> 31
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 101
+#act
+mov <$str(N$总属性)> <$MAXSC>
+mov <$str(s$身上装备)> <$SWEAPON>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 32
+#if
+equal <$CURRTEMSTDMODE> 101
+large <$str(N$总属性)> <$MAXSC>
+#act
+mov <$str(N$总属性)> <$MAXSC>
+AutoTakeOnItem <$str(s$身上装备)> 32
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 102
+#act
+mov <$str(N$总属性)> <$MAXSC>
+mov <$str(s$身上装备)> <$SWEAPON>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 33
+#if
+equal <$CURRTEMSTDMODE> 102
+large <$str(N$总属性)> <$MAXSC>
+#act
+mov <$str(N$总属性)> <$MAXSC>
+AutoTakeOnItem <$str(s$身上装备)> 33
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 103
+#act
+mov <$str(N$总属性)> <$MAXSC>
+mov <$str(s$身上装备)> <$SWEAPON>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 34
+#if
+equal <$CURRTEMSTDMODE> 103
+large <$str(N$总属性)> <$MAXSC>
+#act
+mov <$str(N$总属性)> <$MAXSC>
+AutoTakeOnItem <$str(s$身上装备)> 34
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 104
+#act
+mov <$str(N$总属性)> <$MAXSC>
+mov <$str(s$身上装备)> <$SWEAPON>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 35
+#if
+equal <$CURRTEMSTDMODE> 104
+large <$str(N$总属性)> <$MAXSC>
+#act
+mov <$str(N$总属性)> <$MAXSC>
+AutoTakeOnItem <$str(s$身上装备)> 35
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 105
+#act
+mov <$str(N$总属性)> <$MAXSC>
+mov <$str(s$身上装备)> <$SWEAPON>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 36
+#if
+equal <$CURRTEMSTDMODE> 105
+large <$str(N$总属性)> <$MAXSC>
+#act
+mov <$str(N$总属性)> <$MAXSC>
+AutoTakeOnItem <$str(s$身上装备)> 36
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 106
+#act
+mov <$str(N$总属性)> <$MAXSC>
+mov <$str(s$身上装备)> <$SWEAPON>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 37
+#if
+equal <$CURRTEMSTDMODE> 106
+large <$str(N$总属性)> <$MAXSC>
+#act
+mov <$str(N$总属性)> <$MAXSC>
+AutoTakeOnItem <$str(s$身上装备)> 37
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 107
+#act
+mov <$str(N$总属性)> <$MAXSC>
+mov <$str(s$身上装备)> <$SWEAPON>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 38
+#if
+equal <$CURRTEMSTDMODE> 107
+large <$str(N$总属性)> <$MAXSC>
+#act
+mov <$str(N$总属性)> <$MAXSC>
+AutoTakeOnItem <$str(s$身上装备)> 38
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 108
+#act
+mov <$str(N$总属性)> <$MAXSC>
+mov <$str(s$身上装备)> <$SWEAPON>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 39
+#if
+equal <$CURRTEMSTDMODE> 108
+large <$str(N$总属性)> <$MAXSC>
+#act
+mov <$str(N$总属性)> <$MAXSC>
+AutoTakeOnItem <$str(s$身上装备)> 39
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 109
+#act
+mov <$str(N$总属性)> <$MAXSC>
+mov <$str(s$身上装备)> <$SWEAPON>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 40
+#if
+equal <$CURRTEMSTDMODE> 109
+large <$str(N$总属性)> <$MAXSC>
+#act
+mov <$str(N$总属性)> <$MAXSC>
+AutoTakeOnItem <$str(s$身上装备)> 40
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 110
+#act
+mov <$str(N$总属性)> <$MAXSC>
+mov <$str(s$身上装备)> <$SWEAPON>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 41
+#if
+equal <$CURRTEMSTDMODE> 110
+large <$str(N$总属性)> <$MAXSC>
+#act
+mov <$str(N$总属性)> <$MAXSC>
+AutoTakeOnItem <$str(s$身上装备)> 41
+BREAK
+
+
+
+
+
+
+
+
+
+
+[@76575fdfdgdfdfdf67349966]
+
+#if
+equal <$CURRTEMSTDMODE> 5
+#act
+mov <$str(N$总属性)> <$MAXMC>
+mov <$str(s$身上装备)> <$WEAPON>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 1
+#if
+equal <$CURRTEMSTDMODE> 5
+large <$str(N$总属性)> <$MAXMC>
+#act
+mov <$str(N$总属性)> <$MAXMC>
+AutoTakeOnItem <$str(s$身上装备)> 1
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 6
+#act
+mov <$str(N$总属性)> <$MAXMC>
+mov <$str(s$身上装备)> <$WEAPON>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 1
+#if
+equal <$CURRTEMSTDMODE> 6
+large <$str(N$总属性)> <$MAXMC>
+#act
+mov <$str(N$总属性)> <$MAXMC>
+AutoTakeOnItem <$str(s$身上装备)> 1
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 10
+#act
+mov <$str(N$总属性)> <$MAXMC>
+mov <$str(s$身上装备)> <$DRESS>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 0
+#if
+equal <$CURRTEMSTDMODE> 10
+large <$str(N$总属性)> <$MAXMC>
+#act
+mov <$str(N$总属性)> <$MAXMC>
+AutoTakeOnItem <$str(s$身上装备)> 0
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 11
+#act
+mov <$str(N$总属性)> <$MAXMC>
+mov <$str(s$身上装备)> <$DRESS>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 0
+#if
+equal <$CURRTEMSTDMODE> 11
+large <$str(N$总属性)> <$MAXMC>
+#act
+mov <$str(N$总属性)> <$MAXMC>
+AutoTakeOnItem <$str(s$身上装备)> 0
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 15
+#act
+mov <$str(N$总属性)> <$MAXMC>
+mov <$str(s$身上装备)> <$HELMET>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 4
+#if
+equal <$CURRTEMSTDMODE> 15
+large <$str(N$总属性)> <$MAXMC>
+#act
+mov <$str(N$总属性)> <$MAXMC>
+AutoTakeOnItem <$str(s$身上装备)> 4
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 30
+#act
+mov <$str(N$总属性)> <$MAXMC>
+mov <$str(s$身上装备)> <$RIGHTHAND>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 2
+#if
+equal <$CURRTEMSTDMODE> 30
+large <$str(N$总属性)> <$MAXMC>
+#act
+mov <$str(N$总属性)> <$MAXMC>
+AutoTakeOnItem <$str(s$身上装备)> 2
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 19
+#act
+mov <$str(N$总属性)> <$MAXMC>
+mov <$str(s$身上装备)> <$NECKLACE>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 3
+#if
+equal <$CURRTEMSTDMODE> 19
+large <$str(N$总属性)> <$MAXMC>
+#act
+mov <$str(N$总属性)> <$MAXMC>
+AutoTakeOnItem <$str(s$身上装备)> 3
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 20
+#act
+mov <$str(N$总属性)> <$MAXMC>
+mov <$str(s$身上装备)> <$NECKLACE>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 3
+#if
+equal <$CURRTEMSTDMODE> 20
+large <$str(N$总属性)> <$MAXMC>
+#act
+mov <$str(N$总属性)> <$MAXMC>
+AutoTakeOnItem <$str(s$身上装备)> 3
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 21
+#act
+mov <$str(N$总属性)> <$MAXMC>
+mov <$str(s$身上装备)> <$NECKLACE>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 3
+#if
+equal <$CURRTEMSTDMODE> 21
+large <$str(N$总属性)> <$MAXMC>
+#act
+mov <$str(N$总属性)> <$MAXMC>
+AutoTakeOnItem <$str(s$身上装备)> 3
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 24
+#act
+mov <$str(N$总属性)> <$MAXMC>
+mov <$str(s$身上装备)> <$ARMRING_R>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 6
+#if
+equal <$CURRTEMSTDMODE> 24
+large <$str(N$总属性)> <$MAXMC>
+#act
+mov <$str(N$总属性)> <$MAXMC>
+AutoTakeOnItem <$str(s$身上装备)> 6
+
+#if
+equal <$CURRTEMSTDMODE> 24
+#act
+mov <$str(N$总属性)> <$MAXMC>
+mov <$str(s$身上装备)> <$ARMRING_L>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 5
+#if
+equal <$CURRTEMSTDMODE> 24
+large <$str(N$总属性)> <$MAXMC>
+#act
+mov <$str(N$总属性)> <$MAXMC>
+AutoTakeOnItem <$str(s$身上装备)> 5
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 26
+#act
+mov <$str(N$总属性)> <$MAXMC>
+mov <$str(s$身上装备)> <$ARMRING_R>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 6
+#if
+equal <$CURRTEMSTDMODE> 26
+large <$str(N$总属性)> <$MAXMC>
+#act
+mov <$str(N$总属性)> <$MAXMC>
+AutoTakeOnItem <$str(s$身上装备)> 6
+
+#if
+equal <$CURRTEMSTDMODE> 26
+#act
+mov <$str(N$总属性)> <$MAXMC>
+mov <$str(s$身上装备)> <$ARMRING_L>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 5
+#if
+equal <$CURRTEMSTDMODE> 26
+large <$str(N$总属性)> <$MAXMC>
+#act
+mov <$str(N$总属性)> <$MAXMC>
+AutoTakeOnItem <$str(s$身上装备)> 5
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 22
+#act
+mov <$str(N$总属性)> <$MAXMC>
+mov <$str(s$身上装备)> <$RING_L>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 7
+#if
+equal <$CURRTEMSTDMODE> 22
+large <$str(N$总属性)> <$MAXMC>
+#act
+mov <$str(N$总属性)> <$MAXMC>
+AutoTakeOnItem <$str(s$身上装备)> 7
+
+#if
+equal <$CURRTEMSTDMODE> 22
+#act
+mov <$str(N$总属性)> <$MAXMC>
+mov <$str(s$身上装备)> <$RING_R>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 8
+#if
+equal <$CURRTEMSTDMODE> 22
+large <$str(N$总属性)> <$MAXMC>
+#act
+mov <$str(N$总属性)> <$MAXMC>
+AutoTakeOnItem <$str(s$身上装备)> 8
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 23
+#act
+mov <$str(N$总属性)> <$MAXMC>
+mov <$str(s$身上装备)> <$RING_L>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 7
+#if
+equal <$CURRTEMSTDMODE> 23
+large <$str(N$总属性)> <$MAXMC>
+#act
+mov <$str(N$总属性)> <$MAXMC>
+AutoTakeOnItem <$str(s$身上装备)> 7
+
+#if
+equal <$CURRTEMSTDMODE> 23
+#act
+mov <$str(N$总属性)> <$MAXMC>
+mov <$str(s$身上装备)> <$RING_R>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 8
+#if
+equal <$CURRTEMSTDMODE> 23
+large <$str(N$总属性)> <$MAXMC>
+#act
+mov <$str(N$总属性)> <$MAXMC>
+AutoTakeOnItem <$str(s$身上装备)> 8
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 25
+#act
+mov <$str(N$总属性)> <$MAXMC>
+mov <$str(s$身上装备)> <$BUJUK>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 9
+#if
+equal <$CURRTEMSTDMODE> 25
+large <$str(N$总属性)> <$MAXMC>
+#act
+mov <$str(N$总属性)> <$MAXMC>
+AutoTakeOnItem <$str(s$身上装备)> 9
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 51
+#act
+mov <$str(N$总属性)> <$MAXMC>
+mov <$str(s$身上装备)> <$BUJUK>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 9
+#if
+equal <$CURRTEMSTDMODE> 51
+large <$str(N$总属性)> <$MAXMC>
+#act
+mov <$str(N$总属性)> <$MAXMC>
+AutoTakeOnItem <$str(s$身上装备)> 9
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 54
+#act
+mov <$str(N$总属性)> <$MAXMC>
+mov <$str(s$身上装备)> <$BELT>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 10
+#if
+equal <$CURRTEMSTDMODE> 54
+large <$str(N$总属性)> <$MAXMC>
+#act
+mov <$str(N$总属性)> <$MAXMC>
+AutoTakeOnItem <$str(s$身上装备)> 10
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 64
+#act
+mov <$str(N$总属性)> <$MAXMC>
+mov <$str(s$身上装备)> <$BELT>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 10
+#if
+equal <$CURRTEMSTDMODE> 64
+large <$str(N$总属性)> <$MAXMC>
+#act
+mov <$str(N$总属性)> <$MAXMC>
+AutoTakeOnItem <$str(s$身上装备)> 10
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 52
+#act
+mov <$str(N$总属性)> <$MAXMC>
+mov <$str(s$身上装备)> <$BOOTS>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 11
+#if
+equal <$CURRTEMSTDMODE> 52
+large <$str(N$总属性)> <$MAXMC>
+#act
+mov <$str(N$总属性)> <$MAXMC>
+AutoTakeOnItem <$str(s$身上装备)> 11
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 62
+#act
+mov <$str(N$总属性)> <$MAXMC>
+mov <$str(s$身上装备)> <$BOOTS>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 11
+#if
+equal <$CURRTEMSTDMODE> 62
+large <$str(N$总属性)> <$MAXMC>
+#act
+mov <$str(N$总属性)> <$MAXMC>
+AutoTakeOnItem <$str(s$身上装备)> 11
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 53
+#act
+mov <$str(N$总属性)> <$MAXMC>
+mov <$str(s$身上装备)> <$CHARM>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 12
+#if
+equal <$CURRTEMSTDMODE> 53
+large <$str(N$总属性)> <$MAXMC>
+#act
+mov <$str(N$总属性)> <$MAXMC>
+AutoTakeOnItem <$str(s$身上装备)> 12
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 63
+#act
+mov <$str(N$总属性)> <$MAXMC>
+mov <$str(s$身上装备)> <$CHARM>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 12
+#if
+equal <$CURRTEMSTDMODE> 63
+large <$str(N$总属性)> <$MAXMC>
+#act
+mov <$str(N$总属性)> <$MAXMC>
+AutoTakeOnItem <$str(s$身上装备)> 12
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 16
+#act
+mov <$str(N$总属性)> <$MAXMC>
+mov <$str(s$身上装备)> <$HAT>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 13
+#if
+equal <$CURRTEMSTDMODE> 16
+large <$str(N$总属性)> <$MAXMC>
+#act
+mov <$str(N$总属性)> <$MAXMC>
+AutoTakeOnItem <$str(s$身上装备)> 13
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 65
+#act
+mov <$str(N$总属性)> <$MAXMC>
+mov <$str(s$身上装备)> <$DRUM>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 14
+#if
+equal <$CURRTEMSTDMODE> 65
+large <$str(N$总属性)> <$MAXMC>
+#act
+mov <$str(N$总属性)> <$MAXMC>
+AutoTakeOnItem <$str(s$身上装备)> 14
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 28
+#act
+mov <$str(N$总属性)> <$MAXMC>
+mov <$str(s$身上装备)> <$HORSE>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 15
+#if
+equal <$CURRTEMSTDMODE> 28
+large <$str(N$总属性)> <$MAXMC>
+#act
+mov <$str(N$总属性)> <$MAXMC>
+AutoTakeOnItem <$str(s$身上装备)> 15
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 48
+#act
+mov <$str(N$总属性)> <$MAXMC>
+mov <$str(s$身上装备)> <$SHIELD>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 16
+#if
+equal <$CURRTEMSTDMODE> 48
+large <$str(N$总属性)> <$MAXMC>
+#act
+mov <$str(N$总属性)> <$MAXMC>
+AutoTakeOnItem <$str(s$身上装备)> 16
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 66
+#act
+mov <$str(N$总属性)> <$MAXMC>
+mov <$str(s$身上装备)> <$SDRESS>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 17
+#if
+equal <$CURRTEMSTDMODE> 66
+large <$str(N$总属性)> <$MAXMC>
+#act
+mov <$str(N$总属性)> <$MAXMC>
+AutoTakeOnItem <$str(s$身上装备)> 17
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 67
+#act
+mov <$str(N$总属性)> <$MAXMC>
+mov <$str(s$身上装备)> <$SDRESS>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 17
+#if
+equal <$CURRTEMSTDMODE> 67
+large <$str(N$总属性)> <$MAXMC>
+#act
+mov <$str(N$总属性)> <$MAXMC>
+AutoTakeOnItem <$str(s$身上装备)> 17
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 68
+#act
+mov <$str(N$总属性)> <$MAXMC>
+mov <$str(s$身上装备)> <$SWEAPON>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 18
+#if
+equal <$CURRTEMSTDMODE> 68
+large <$str(N$总属性)> <$MAXMC>
+#act
+mov <$str(N$总属性)> <$MAXMC>
+AutoTakeOnItem <$str(s$身上装备)> 18
+BREAK
+
+
+#if
+equal <$CURRTEMSTDMODE> 100
+#act
+mov <$str(N$总属性)> <$MAXMC>
+mov <$str(s$身上装备)> <$SWEAPON>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 31
+#if
+equal <$CURRTEMSTDMODE> 100
+large <$str(N$总属性)> <$MAXMC>
+#act
+mov <$str(N$总属性)> <$MAXMC>
+AutoTakeOnItem <$str(s$身上装备)> 31
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 101
+#act
+mov <$str(N$总属性)> <$MAXMC>
+mov <$str(s$身上装备)> <$SWEAPON>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 32
+#if
+equal <$CURRTEMSTDMODE> 101
+large <$str(N$总属性)> <$MAXMC>
+#act
+mov <$str(N$总属性)> <$MAXMC>
+AutoTakeOnItem <$str(s$身上装备)> 32
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 102
+#act
+mov <$str(N$总属性)> <$MAXMC>
+mov <$str(s$身上装备)> <$SWEAPON>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 33
+#if
+equal <$CURRTEMSTDMODE> 102
+large <$str(N$总属性)> <$MAXMC>
+#act
+mov <$str(N$总属性)> <$MAXMC>
+AutoTakeOnItem <$str(s$身上装备)> 33
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 103
+#act
+mov <$str(N$总属性)> <$MAXMC>
+mov <$str(s$身上装备)> <$SWEAPON>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 34
+#if
+equal <$CURRTEMSTDMODE> 103
+large <$str(N$总属性)> <$MAXMC>
+#act
+mov <$str(N$总属性)> <$MAXMC>
+AutoTakeOnItem <$str(s$身上装备)> 34
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 104
+#act
+mov <$str(N$总属性)> <$MAXMC>
+mov <$str(s$身上装备)> <$SWEAPON>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 35
+#if
+equal <$CURRTEMSTDMODE> 104
+large <$str(N$总属性)> <$MAXMC>
+#act
+mov <$str(N$总属性)> <$MAXMC>
+AutoTakeOnItem <$str(s$身上装备)> 35
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 105
+#act
+mov <$str(N$总属性)> <$MAXMC>
+mov <$str(s$身上装备)> <$SWEAPON>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 36
+#if
+equal <$CURRTEMSTDMODE> 105
+large <$str(N$总属性)> <$MAXMC>
+#act
+mov <$str(N$总属性)> <$MAXMC>
+AutoTakeOnItem <$str(s$身上装备)> 36
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 106
+#act
+mov <$str(N$总属性)> <$MAXMC>
+mov <$str(s$身上装备)> <$SWEAPON>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 37
+#if
+equal <$CURRTEMSTDMODE> 106
+large <$str(N$总属性)> <$MAXMC>
+#act
+mov <$str(N$总属性)> <$MAXMC>
+AutoTakeOnItem <$str(s$身上装备)> 37
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 107
+#act
+mov <$str(N$总属性)> <$MAXMC>
+mov <$str(s$身上装备)> <$SWEAPON>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 38
+#if
+equal <$CURRTEMSTDMODE> 107
+large <$str(N$总属性)> <$MAXMC>
+#act
+mov <$str(N$总属性)> <$MAXMC>
+AutoTakeOnItem <$str(s$身上装备)> 38
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 108
+#act
+mov <$str(N$总属性)> <$MAXMC>
+mov <$str(s$身上装备)> <$SWEAPON>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 39
+#if
+equal <$CURRTEMSTDMODE> 108
+large <$str(N$总属性)> <$MAXMC>
+#act
+mov <$str(N$总属性)> <$MAXMC>
+AutoTakeOnItem <$str(s$身上装备)> 39
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 109
+#act
+mov <$str(N$总属性)> <$MAXMC>
+mov <$str(s$身上装备)> <$SWEAPON>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 40
+#if
+equal <$CURRTEMSTDMODE> 109
+large <$str(N$总属性)> <$MAXMC>
+#act
+mov <$str(N$总属性)> <$MAXMC>
+AutoTakeOnItem <$str(s$身上装备)> 40
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 110
+#act
+mov <$str(N$总属性)> <$MAXMC>
+mov <$str(s$身上装备)> <$SWEAPON>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 41
+#if
+equal <$CURRTEMSTDMODE> 110
+large <$str(N$总属性)> <$MAXMC>
+#act
+mov <$str(N$总属性)> <$MAXMC>
+AutoTakeOnItem <$str(s$身上装备)> 41
+BREAK
+
+
+
+
+[@332815111]
+
+#IF
+ISDUMMY
+;战士
+checkjob warrior
+#ACT
+goto @76575fdfdffdgdfdfdf67349966
+
+
+
+#IF
+ISDUMMY
+;法师
+checkjob wizard
+#ACT
+goto @76575fdfdgdfdfdf67349966
+
+
+#IF
+ISDUMMY
+;道士
+checkjob taoist
+#ACT
+goto @76575fdfdgdf67349966
+
+
+
+[@41]
+#if
+NOT CHECKUSEITEM 41
+#Act
+AutoTakeOnItem <$CURRTEMNAME> 41
+Break
+
+#if
+large N2 <$STR(N0)>
+#act
+MOV S$原始装备 <$SHIELD>
+AutoTakeOnItem <$CURRTEMNAME> 41
+take <$STR(S$原始装备)> 1
+Break
+#elseact
+take <$CURRTEMNAME> 1
+Break
+
+
+
+
+
+[@40]
+#if
+NOT CHECKUSEITEM 40
+#Act
+AutoTakeOnItem <$CURRTEMNAME> 0
+Break
+
+#if
+large N2 <$STR(N0)>
+#act
+MOV S$原始装备 <$SHIELD>
+AutoTakeOnItem <$CURRTEMNAME> 40
+take <$STR(S$原始装备)> 1
+Break
+#elseact
+take <$CURRTEMNAME> 1
+Break
+
+
+
+
+
+
+[@39]
+#if
+NOT CHECKUSEITEM 39
+#Act
+AutoTakeOnItem <$CURRTEMNAME> 39
+Break
+
+#if
+large N2 <$STR(N0)>
+#act
+MOV S$原始装备 <$SHIELD>
+AutoTakeOnItem <$CURRTEMNAME> 39
+take <$STR(S$原始装备)> 1
+Break
+#elseact
+take <$CURRTEMNAME> 1
+Break
+
+
+
+
+
+
+
+[@38]
+#if
+NOT CHECKUSEITEM 38
+#Act
+AutoTakeOnItem <$CURRTEMNAME> 38
+Break
+
+#if
+large N2 <$STR(N0)>
+#act
+MOV S$原始装备 <$SHIELD>
+AutoTakeOnItem <$CURRTEMNAME> 38
+take <$STR(S$原始装备)> 1
+Break
+#elseact
+take <$CURRTEMNAME> 1
+Break
+
+
+
+
+
+
+[@37]
+#if
+NOT CHECKUSEITEM 37
+#Act
+AutoTakeOnItem <$CURRTEMNAME> 37
+Break
+
+#if
+large N2 <$STR(N0)>
+#act
+MOV S$原始装备 <$SHIELD>
+AutoTakeOnItem <$CURRTEMNAME> 37
+take <$STR(S$原始装备)> 1
+Break
+#elseact
+take <$CURRTEMNAME> 1
+Break
+
+
+
+
+
+
+[@36]
+#if
+NOT CHECKUSEITEM 36
+#Act
+AutoTakeOnItem <$CURRTEMNAME> 36
+Break
+
+#if
+large N2 <$STR(N0)>
+#act
+MOV S$原始装备 <$SHIELD>
+AutoTakeOnItem <$CURRTEMNAME> 36
+take <$STR(S$原始装备)> 1
+Break
+#elseact
+take <$CURRTEMNAME> 1
+Break
+
+
+
+
+
+
+[@35]
+#if
+NOT CHECKUSEITEM 35
+#Act
+AutoTakeOnItem <$CURRTEMNAME> 35
+Break
+
+#if
+large N2 <$STR(N0)>
+#act
+MOV S$原始装备 <$SHIELD>
+AutoTakeOnItem <$CURRTEMNAME> 35
+take <$STR(S$原始装备)> 1
+Break
+#elseact
+take <$CURRTEMNAME> 1
+Break
+
+
+
+
+
+
+
+[@34]
+#if
+NOT CHECKUSEITEM 34
+#Act
+AutoTakeOnItem <$CURRTEMNAME> 34
+Break
+
+#if
+large N2 <$STR(N0)>
+#act
+MOV S$原始装备 <$SHIELD>
+AutoTakeOnItem <$CURRTEMNAME> 34
+take <$STR(S$原始装备)> 1
+Break
+#elseact
+take <$CURRTEMNAME> 1
+Break
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@33]
+#if
+NOT CHECKUSEITEM 33
+#Act
+AutoTakeOnItem <$CURRTEMNAME> 33
+Break
+
+#if
+large N2 <$STR(N0)>
+#act
+MOV S$原始装备 <$SHIELD>
+AutoTakeOnItem <$CURRTEMNAME> 33
+take <$STR(S$原始装备)> 1
+Break
+#elseact
+take <$CURRTEMNAME> 1
+Break
+
+
+
+
+
+
+
+[@32]
+#if
+NOT CHECKUSEITEM 32
+#Act
+AutoTakeOnItem <$CURRTEMNAME> 32
+Break
+
+#if
+large N2 <$STR(N0)>
+#act
+MOV S$原始装备 <$SHIELD>
+AutoTakeOnItem <$CURRTEMNAME> 32
+take <$STR(S$原始装备)> 1
+Break
+#elseact
+take <$CURRTEMNAME> 1
+Break
+
+
+
+
+
+
+
+[@31]
+#if
+NOT CHECKUSEITEM 31
+#Act
+AutoTakeOnItem <$CURRTEMNAME> 31
+Break
+
+#if
+large N2 <$STR(N0)>
+#act
+MOV S$原始装备 <$SHIELD>
+AutoTakeOnItem <$CURRTEMNAME> 31
+take <$STR(S$原始装备)> 1
+Break
+#elseact
+take <$CURRTEMNAME> 1
+Break
+
+
+
+
+
+
+
+[@30]
+#if
+NOT CHECKUSEITEM 30
+#Act
+AutoTakeOnItem <$CURRTEMNAME> 30
+Break
+
+#if
+large N2 <$STR(N0)>
+#act
+MOV S$原始装备 <$SHIELD>
+AutoTakeOnItem <$CURRTEMNAME> 30
+take <$STR(S$原始装备)> 1
+Break
+#elseact
+take <$CURRTEMNAME> 1
+Break
+
+
+
+
+
+
+
+
+
+[@76575fdfdffdgdfdfdf67349966]
+
+#if
+equal <$CURRTEMSTDMODE> 5
+#act
+mov <$str(N$总属性)> <$MAXDC>
+mov <$str(s$身上装备)> <$WEAPON>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 1
+#if
+equal <$CURRTEMSTDMODE> 5
+large <$str(N$总属性)> <$MAXDC>
+#act
+mov <$str(N$总属性)> <$MAXDC>
+AutoTakeOnItem <$str(s$身上装备)> 1
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 6
+#act
+mov <$str(N$总属性)> <$MAXDC>
+mov <$str(s$身上装备)> <$WEAPON>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 1
+#if
+equal <$CURRTEMSTDMODE> 6
+large <$str(N$总属性)> <$MAXDC>
+#act
+mov <$str(N$总属性)> <$MAXDC>
+AutoTakeOnItem <$str(s$身上装备)> 1
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 10
+#act
+mov <$str(N$总属性)> <$MAXDC>
+mov <$str(s$身上装备)> <$DRESS>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 0
+#if
+equal <$CURRTEMSTDMODE> 10
+large <$str(N$总属性)> <$MAXDC>
+#act
+mov <$str(N$总属性)> <$MAXDC>
+AutoTakeOnItem <$str(s$身上装备)> 0
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 11
+#act
+mov <$str(N$总属性)> <$MAXDC>
+mov <$str(s$身上装备)> <$DRESS>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 0
+#if
+equal <$CURRTEMSTDMODE> 11
+large <$str(N$总属性)> <$MAXDC>
+#act
+mov <$str(N$总属性)> <$MAXDC>
+AutoTakeOnItem <$str(s$身上装备)> 0
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 15
+#act
+mov <$str(N$总属性)> <$MAXDC>
+mov <$str(s$身上装备)> <$HELMET>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 4
+#if
+equal <$CURRTEMSTDMODE> 15
+large <$str(N$总属性)> <$MAXDC>
+#act
+mov <$str(N$总属性)> <$MAXDC>
+AutoTakeOnItem <$str(s$身上装备)> 4
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 30
+#act
+mov <$str(N$总属性)> <$MAXDC>
+mov <$str(s$身上装备)> <$RIGHTHAND>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 2
+#if
+equal <$CURRTEMSTDMODE> 30
+large <$str(N$总属性)> <$MAXDC>
+#act
+mov <$str(N$总属性)> <$MAXDC>
+AutoTakeOnItem <$str(s$身上装备)> 2
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 19
+#act
+mov <$str(N$总属性)> <$MAXDC>
+mov <$str(s$身上装备)> <$NECKLACE>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 3
+#if
+equal <$CURRTEMSTDMODE> 19
+large <$str(N$总属性)> <$MAXDC>
+#act
+mov <$str(N$总属性)> <$MAXDC>
+AutoTakeOnItem <$str(s$身上装备)> 3
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 20
+#act
+mov <$str(N$总属性)> <$MAXDC>
+mov <$str(s$身上装备)> <$NECKLACE>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 3
+#if
+equal <$CURRTEMSTDMODE> 20
+large <$str(N$总属性)> <$MAXDC>
+#act
+mov <$str(N$总属性)> <$MAXDC>
+AutoTakeOnItem <$str(s$身上装备)> 3
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 21
+#act
+mov <$str(N$总属性)> <$MAXDC>
+mov <$str(s$身上装备)> <$NECKLACE>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 3
+#if
+equal <$CURRTEMSTDMODE> 21
+large <$str(N$总属性)> <$MAXDC>
+#act
+mov <$str(N$总属性)> <$MAXDC>
+AutoTakeOnItem <$str(s$身上装备)> 3
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 24
+#act
+mov <$str(N$总属性)> <$MAXDC>
+mov <$str(s$身上装备)> <$ARMRING_R>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 6
+#if
+equal <$CURRTEMSTDMODE> 24
+large <$str(N$总属性)> <$MAXDC>
+#act
+mov <$str(N$总属性)> <$MAXDC>
+AutoTakeOnItem <$str(s$身上装备)> 6
+
+#if
+equal <$CURRTEMSTDMODE> 24
+#act
+mov <$str(N$总属性)> <$MAXDC>
+mov <$str(s$身上装备)> <$ARMRING_L>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 5
+#if
+equal <$CURRTEMSTDMODE> 24
+large <$str(N$总属性)> <$MAXDC>
+#act
+mov <$str(N$总属性)> <$MAXDC>
+AutoTakeOnItem <$str(s$身上装备)> 5
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 26
+#act
+mov <$str(N$总属性)> <$MAXDC>
+mov <$str(s$身上装备)> <$ARMRING_R>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 6
+#if
+equal <$CURRTEMSTDMODE> 26
+large <$str(N$总属性)> <$MAXDC>
+#act
+mov <$str(N$总属性)> <$MAXDC>
+AutoTakeOnItem <$str(s$身上装备)> 6
+
+#if
+equal <$CURRTEMSTDMODE> 26
+#act
+mov <$str(N$总属性)> <$MAXDC>
+mov <$str(s$身上装备)> <$ARMRING_L>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 5
+#if
+equal <$CURRTEMSTDMODE> 26
+large <$str(N$总属性)> <$MAXDC>
+#act
+mov <$str(N$总属性)> <$MAXDC>
+AutoTakeOnItem <$str(s$身上装备)> 5
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 22
+#act
+mov <$str(N$总属性)> <$MAXDC>
+mov <$str(s$身上装备)> <$RING_L>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 7
+#if
+equal <$CURRTEMSTDMODE> 22
+large <$str(N$总属性)> <$MAXDC>
+#act
+mov <$str(N$总属性)> <$MAXDC>
+AutoTakeOnItem <$str(s$身上装备)> 7
+
+#if
+equal <$CURRTEMSTDMODE> 22
+#act
+mov <$str(N$总属性)> <$MAXDC>
+mov <$str(s$身上装备)> <$RING_R>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 8
+#if
+equal <$CURRTEMSTDMODE> 22
+large <$str(N$总属性)> <$MAXDC>
+#act
+mov <$str(N$总属性)> <$MAXDC>
+AutoTakeOnItem <$str(s$身上装备)> 8
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 23
+#act
+mov <$str(N$总属性)> <$MAXDC>
+mov <$str(s$身上装备)> <$RING_L>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 7
+#if
+equal <$CURRTEMSTDMODE> 23
+large <$str(N$总属性)> <$MAXDC>
+#act
+mov <$str(N$总属性)> <$MAXDC>
+AutoTakeOnItem <$str(s$身上装备)> 7
+
+#if
+equal <$CURRTEMSTDMODE> 23
+#act
+mov <$str(N$总属性)> <$MAXDC>
+mov <$str(s$身上装备)> <$RING_R>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 8
+#if
+equal <$CURRTEMSTDMODE> 23
+large <$str(N$总属性)> <$MAXDC>
+#act
+mov <$str(N$总属性)> <$MAXDC>
+AutoTakeOnItem <$str(s$身上装备)> 8
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 25
+#act
+mov <$str(N$总属性)> <$MAXDC>
+mov <$str(s$身上装备)> <$BUJUK>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 9
+#if
+equal <$CURRTEMSTDMODE> 25
+large <$str(N$总属性)> <$MAXDC>
+#act
+mov <$str(N$总属性)> <$MAXDC>
+AutoTakeOnItem <$str(s$身上装备)> 9
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 51
+#act
+mov <$str(N$总属性)> <$MAXDC>
+mov <$str(s$身上装备)> <$BUJUK>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 9
+#if
+equal <$CURRTEMSTDMODE> 51
+large <$str(N$总属性)> <$MAXDC>
+#act
+mov <$str(N$总属性)> <$MAXDC>
+AutoTakeOnItem <$str(s$身上装备)> 9
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 54
+#act
+mov <$str(N$总属性)> <$MAXDC>
+mov <$str(s$身上装备)> <$BELT>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 10
+#if
+equal <$CURRTEMSTDMODE> 54
+large <$str(N$总属性)> <$MAXDC>
+#act
+mov <$str(N$总属性)> <$MAXDC>
+AutoTakeOnItem <$str(s$身上装备)> 10
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 64
+#act
+mov <$str(N$总属性)> <$MAXDC>
+mov <$str(s$身上装备)> <$BELT>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 10
+#if
+equal <$CURRTEMSTDMODE> 64
+large <$str(N$总属性)> <$MAXDC>
+#act
+mov <$str(N$总属性)> <$MAXDC>
+AutoTakeOnItem <$str(s$身上装备)> 10
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 52
+#act
+mov <$str(N$总属性)> <$MAXDC>
+mov <$str(s$身上装备)> <$BOOTS>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 11
+#if
+equal <$CURRTEMSTDMODE> 52
+large <$str(N$总属性)> <$MAXDC>
+#act
+mov <$str(N$总属性)> <$MAXDC>
+AutoTakeOnItem <$str(s$身上装备)> 11
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 62
+#act
+mov <$str(N$总属性)> <$MAXDC>
+mov <$str(s$身上装备)> <$BOOTS>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 11
+#if
+equal <$CURRTEMSTDMODE> 62
+large <$str(N$总属性)> <$MAXDC>
+#act
+mov <$str(N$总属性)> <$MAXDC>
+AutoTakeOnItem <$str(s$身上装备)> 11
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 53
+#act
+mov <$str(N$总属性)> <$MAXDC>
+mov <$str(s$身上装备)> <$CHARM>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 12
+#if
+equal <$CURRTEMSTDMODE> 53
+large <$str(N$总属性)> <$MAXDC>
+#act
+mov <$str(N$总属性)> <$MAXDC>
+AutoTakeOnItem <$str(s$身上装备)> 12
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 63
+#act
+mov <$str(N$总属性)> <$MAXDC>
+mov <$str(s$身上装备)> <$CHARM>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 12
+#if
+equal <$CURRTEMSTDMODE> 63
+large <$str(N$总属性)> <$MAXDC>
+#act
+mov <$str(N$总属性)> <$MAXDC>
+AutoTakeOnItem <$str(s$身上装备)> 12
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 16
+#act
+mov <$str(N$总属性)> <$MAXDC>
+mov <$str(s$身上装备)> <$HAT>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 13
+#if
+equal <$CURRTEMSTDMODE> 16
+large <$str(N$总属性)> <$MAXDC>
+#act
+mov <$str(N$总属性)> <$MAXDC>
+AutoTakeOnItem <$str(s$身上装备)> 13
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 65
+#act
+mov <$str(N$总属性)> <$MAXDC>
+mov <$str(s$身上装备)> <$DRUM>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 14
+#if
+equal <$CURRTEMSTDMODE> 65
+large <$str(N$总属性)> <$MAXDC>
+#act
+mov <$str(N$总属性)> <$MAXDC>
+AutoTakeOnItem <$str(s$身上装备)> 14
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 28
+#act
+mov <$str(N$总属性)> <$MAXDC>
+mov <$str(s$身上装备)> <$HORSE>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 15
+#if
+equal <$CURRTEMSTDMODE> 28
+large <$str(N$总属性)> <$MAXDC>
+#act
+mov <$str(N$总属性)> <$MAXDC>
+AutoTakeOnItem <$str(s$身上装备)> 15
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 48
+#act
+mov <$str(N$总属性)> <$MAXDC>
+mov <$str(s$身上装备)> <$SHIELD>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 16
+#if
+equal <$CURRTEMSTDMODE> 48
+large <$str(N$总属性)> <$MAXDC>
+#act
+mov <$str(N$总属性)> <$MAXDC>
+AutoTakeOnItem <$str(s$身上装备)> 16
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 66
+#act
+mov <$str(N$总属性)> <$MAXDC>
+mov <$str(s$身上装备)> <$SDRESS>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 17
+#if
+equal <$CURRTEMSTDMODE> 66
+large <$str(N$总属性)> <$MAXDC>
+#act
+mov <$str(N$总属性)> <$MAXDC>
+AutoTakeOnItem <$str(s$身上装备)> 17
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 67
+#act
+mov <$str(N$总属性)> <$MAXDC>
+mov <$str(s$身上装备)> <$SDRESS>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 17
+#if
+equal <$CURRTEMSTDMODE> 67
+large <$str(N$总属性)> <$MAXDC>
+#act
+mov <$str(N$总属性)> <$MAXDC>
+AutoTakeOnItem <$str(s$身上装备)> 17
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 68
+#act
+mov <$str(N$总属性)> <$MAXDC>
+mov <$str(s$身上装备)> <$SWEAPON>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 18
+#if
+equal <$CURRTEMSTDMODE> 68
+large <$str(N$总属性)> <$MAXDC>
+#act
+mov <$str(N$总属性)> <$MAXDC>
+AutoTakeOnItem <$str(s$身上装备)> 18
+BREAK
+
+
+#if
+equal <$CURRTEMSTDMODE> 100
+#act
+mov <$str(N$总属性)> <$MAXDC>
+mov <$str(s$身上装备)> <$SWEAPON>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 31
+#if
+equal <$CURRTEMSTDMODE> 100
+large <$str(N$总属性)> <$MAXDC>
+#act
+mov <$str(N$总属性)> <$MAXDC>
+AutoTakeOnItem <$str(s$身上装备)> 31
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 101
+#act
+mov <$str(N$总属性)> <$MAXDC>
+mov <$str(s$身上装备)> <$SWEAPON>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 32
+#if
+equal <$CURRTEMSTDMODE> 101
+large <$str(N$总属性)> <$MAXDC>
+#act
+mov <$str(N$总属性)> <$MAXDC>
+AutoTakeOnItem <$str(s$身上装备)> 32
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 102
+#act
+mov <$str(N$总属性)> <$MAXDC>
+mov <$str(s$身上装备)> <$SWEAPON>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 33
+#if
+equal <$CURRTEMSTDMODE> 102
+large <$str(N$总属性)> <$MAXDC>
+#act
+mov <$str(N$总属性)> <$MAXDC>
+AutoTakeOnItem <$str(s$身上装备)> 33
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 103
+#act
+mov <$str(N$总属性)> <$MAXDC>
+mov <$str(s$身上装备)> <$SWEAPON>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 34
+#if
+equal <$CURRTEMSTDMODE> 103
+large <$str(N$总属性)> <$MAXDC>
+#act
+mov <$str(N$总属性)> <$MAXDC>
+AutoTakeOnItem <$str(s$身上装备)> 34
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 104
+#act
+mov <$str(N$总属性)> <$MAXDC>
+mov <$str(s$身上装备)> <$SWEAPON>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 35
+#if
+equal <$CURRTEMSTDMODE> 104
+large <$str(N$总属性)> <$MAXDC>
+#act
+mov <$str(N$总属性)> <$MAXDC>
+AutoTakeOnItem <$str(s$身上装备)> 35
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 105
+#act
+mov <$str(N$总属性)> <$MAXDC>
+mov <$str(s$身上装备)> <$SWEAPON>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 36
+#if
+equal <$CURRTEMSTDMODE> 105
+large <$str(N$总属性)> <$MAXDC>
+#act
+mov <$str(N$总属性)> <$MAXDC>
+AutoTakeOnItem <$str(s$身上装备)> 36
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 106
+#act
+mov <$str(N$总属性)> <$MAXDC>
+mov <$str(s$身上装备)> <$SWEAPON>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 37
+#if
+equal <$CURRTEMSTDMODE> 106
+large <$str(N$总属性)> <$MAXDC>
+#act
+mov <$str(N$总属性)> <$MAXDC>
+AutoTakeOnItem <$str(s$身上装备)> 37
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 107
+#act
+mov <$str(N$总属性)> <$MAXDC>
+mov <$str(s$身上装备)> <$SWEAPON>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 38
+#if
+equal <$CURRTEMSTDMODE> 107
+large <$str(N$总属性)> <$MAXDC>
+#act
+mov <$str(N$总属性)> <$MAXDC>
+AutoTakeOnItem <$str(s$身上装备)> 38
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 108
+#act
+mov <$str(N$总属性)> <$MAXDC>
+mov <$str(s$身上装备)> <$SWEAPON>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 39
+#if
+equal <$CURRTEMSTDMODE> 108
+large <$str(N$总属性)> <$MAXDC>
+#act
+mov <$str(N$总属性)> <$MAXDC>
+AutoTakeOnItem <$str(s$身上装备)> 39
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 109
+#act
+mov <$str(N$总属性)> <$MAXDC>
+mov <$str(s$身上装备)> <$SWEAPON>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 40
+#if
+equal <$CURRTEMSTDMODE> 109
+large <$str(N$总属性)> <$MAXDC>
+#act
+mov <$str(N$总属性)> <$MAXDC>
+AutoTakeOnItem <$str(s$身上装备)> 40
+BREAK
+
+#if
+equal <$CURRTEMSTDMODE> 110
+#act
+mov <$str(N$总属性)> <$MAXDC>
+mov <$str(s$身上装备)> <$SWEAPON>
+mov <$str(s$捡取装备)> <$CURRTEMNAME>
+AutoTakeOnItem <$str(s$捡取装备)> 41
+#if
+equal <$CURRTEMSTDMODE> 110
+large <$str(N$总属性)> <$MAXDC>
+#act
+mov <$str(N$总属性)> <$MAXDC>
+AutoTakeOnItem <$str(s$身上装备)> 41
+BREAK
+
+
+
+
+}

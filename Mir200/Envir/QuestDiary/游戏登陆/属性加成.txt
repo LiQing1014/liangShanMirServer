@@ -1,0 +1,1657 @@
+[@属性设置]
+{
+
+
+#IF 
+#ACT 
+Mov	N$记录生命	<$Hp>
+Mov	N$记录蓝量	<$Mp>
+MOV N$人物血量百分比 0
+MOV N$人物蓝量百分比 0
+MOV N$人物攻击百分比 0
+MOV N$人物魔法百分比 0
+MOV N$人物道术百分比 0
+MOV N$人物防御百分比 0
+MOV N$人物魔御百分比 0
+MOV N$人物攻击增加 0
+MOV N$人物魔法增加 0
+MOV N$人物道术增加 0
+MOV N$人物防御增加 0
+MOV N$人物魔御增加 0
+MOV N$人物血量增加 0
+MOV N$人物蓝量增加 0
+MOV N$人物攻击 0
+MOV N$人物魔法 0
+MOV N$人物道术 0
+MOV N$人物防御 0
+MOV N$人物魔御 0
+MOV N$人物血量 0
+MOV N$人物蓝量 0
+MOV N$人物攻速 0
+MOV N$人物移速 0
+MOV N$宝宝强化天赋 0
+MOV N$宝宝强化天赋百分比A 0
+MOV N$鉴定神力值百分比A 0
+MOV N$鉴定生命值百分比A 0
+MOV N$鉴定神力值 0
+MOV N$鉴定生命值 0
+mov N$装备倍攻 100
+MOV N$回血数值 0
+MOV N$鞭尸几率 0
+mov N$怪物切割百分比 0
+mov N$怪物切割值 0
+mov N$怪物切割 0
+MOV N$冰冻机率 0
+MOV N$冰冻时间 0
+MOV N$绿毒时间 0
+MOV N$绿毒掉血 0
+MOV N$绿毒机率 0
+MOV N$人物吸血 0
+MOV N$怪物切割值 0
+MOV N$怪物切割值百分比A 0
+MOV N$伤害吸收 0
+MOV N$每次吸收 0
+MOV N$每秒恢复 0
+
+
+
+
+
+
+
+
+ChangeHumAbility 1 = 0 1
+ChangeHumAbility 2 = 0 1
+ChangeHumAbility 3 = 0 1
+ChangeHumAbility 4 = 0 1
+ChangeHumAbility 5 = 0 1
+ChangeHumAbility 6 = 0 1
+ChangeHumAbility 7 = 0 1
+ChangeHumAbility 8 = 0 1
+ChangeHumAbility 9 = 0 1
+ChangeHumAbility 10 = 0 1
+ChangeHumAbility 11 = 0 1
+ChangeHumAbility 12 = 0 1
+GETHUMCUSTOMITEMVALUE -1 9 N$宝宝强化天赋 N$宝宝强化天赋百分比A
+
+
+
+#if
+LARGE U165 15
+#act
+MOV U165 15
+
+#if
+LARGE U166 15
+#act
+MOV U166 15
+
+
+#if
+LARGE U167 15
+#act
+MOV U167 15
+
+#if
+LARGE U168 15
+#act
+MOV U168 15
+
+
+#if
+LARGE U165 0
+#act
+MOV N$朱雀怪物切割 <$STR(U165)>
+MUL N$朱雀怪物切割 50
+INC N$怪物切割 <$STR(N$朱雀怪物切割)>
+MOV N$去掉旧的 <$STR(U165)>
+DEC N$去掉旧的 1
+DEPRIVETITLE 朱雀神兽Lv<$STR(N$去掉旧的)>
+CONFERTITLE 朱雀神兽Lv<$STR(U165)>
+
+
+
+
+#if
+LARGE U166 0
+#act
+MOV N$玄武倍攻 <$STR(U166)>
+MUL N$玄武倍攻 1
+INC N$装备倍攻 <$STR(N$玄武倍攻)>
+MOV N$去掉旧的 <$STR(U166)>
+DEC N$去掉旧的 1
+DEPRIVETITLE 玄武神兽Lv<$STR(N$去掉旧的)>
+CONFERTITLE 玄武神兽Lv<$STR(U166)>
+
+
+#if
+LARGE U167 0
+#act
+MOV N$青龙倍数 <$STR(U167)>
+MUL N$青龙倍数 1
+inc N$人物血量百分比 <$STR(N$青龙倍数)>
+inc N$人物蓝量百分比 <$STR(N$青龙倍数)>
+
+MOV N$去掉旧的 <$STR(U167)>
+DEC N$去掉旧的 1
+DEPRIVETITLE 青龙神兽Lv<$STR(N$去掉旧的)>
+CONFERTITLE 青龙神兽Lv<$STR(U167)>
+
+
+#if
+LARGE U168 0
+#act
+MOV N$去掉旧的 <$STR(U168)>
+DEC N$去掉旧的 1
+DEPRIVETITLE 白虎神兽Lv<$STR(N$去掉旧的)>
+CONFERTITLE 白虎神兽Lv<$STR(U168)>
+
+
+
+
+#if
+#act
+GETHUMCUSTOMITEMVALUE -1 11 N$伤害吸收值 N$伤害吸收百分比A
+INC N$伤害吸收 <$STR(N$伤害吸收值)>
+GETHUMCUSTOMITEMVALUE -1 12 N$每次吸收值 N$每次吸收百分比A
+INC N$每次吸收 <$STR(N$每次吸收百分比A)>
+GETHUMCUSTOMITEMVALUE -1 13 N$每秒恢复值 N$每秒恢复百分比A
+INC N$每秒恢复 <$STR(N$每秒恢复值)>
+
+
+
+GETHUMCUSTOMITEMVALUE -1 10 N$怪物切割值 N$怪物切割值百分比A
+INC N$怪物切割 <$STR(N$怪物切割值)>
+INC N$怪物切割百分比 <$STR(N$怪物切割值百分比A)>
+
+
+GETHUMCUSTOMITEMVALUE -1 15 N$鉴定神力值 N$鉴定神力值百分比A
+GETHUMCUSTOMITEMVALUE -1 16 N$鉴定生命值 N$鉴定生命值百分比A
+INC N$装备倍攻 <$STR(N$鉴定神力值)>
+inc N$人物血量百分比 <$STR(N$鉴定生命值)>
+inc N$人物蓝量百分比 <$STR(N$鉴定生命值)>
+
+
+
+
+
+
+
+
+
+#IF
+LARGE U131 99
+EQUAL <$USERNAME> <$STR(A100)>
+#ACT
+INC N$装备倍攻 38
+INC N$人物血量百分比 38
+INC N$人物蓝量百分比 38
+INC N$怪物切割 1000
+
+
+#IF
+LARGE U131 99
+EQUAL <$USERNAME> <$STR(A101)>
+#ACT
+INC N$装备倍攻 35
+INC N$人物血量百分比 35
+INC N$人物蓝量百分比 35
+INC N$怪物切割 900
+
+
+#IF
+LARGE U131 99
+EQUAL <$USERNAME> <$STR(A102)>
+#ACT
+INC N$装备倍攻 32
+INC N$人物血量百分比 32
+INC N$人物蓝量百分比 32
+INC N$怪物切割 800
+
+
+#IF
+LARGE U131 99
+EQUAL <$USERNAME> <$STR(A103)>
+#ACT
+INC N$装备倍攻 28
+INC N$人物血量百分比 28
+INC N$人物蓝量百分比 28
+INC N$怪物切割 700
+
+#IF
+LARGE U131 99
+EQUAL <$USERNAME> <$STR(A104)>
+#ACT
+INC N$装备倍攻 25
+INC N$人物血量百分比 25
+INC N$人物蓝量百分比 25
+INC N$怪物切割 600
+
+
+#IF
+LARGE U131 99
+EQUAL <$USERNAME> <$STR(A105)>
+#ACT
+INC N$装备倍攻 22
+INC N$人物血量百分比 22
+INC N$人物蓝量百分比 22
+INC N$怪物切割 500
+
+
+#IF
+LARGE U131 99
+EQUAL <$USERNAME> <$STR(A106)>
+#ACT
+INC N$装备倍攻 19
+INC N$人物血量百分比 19
+INC N$人物蓝量百分比 19
+INC N$怪物切割 400
+
+
+#IF
+LARGE U131 99
+EQUAL <$USERNAME> <$STR(A107)>
+#ACT
+INC N$装备倍攻 15
+INC N$人物血量百分比 15
+INC N$人物蓝量百分比 15
+INC N$怪物切割 300
+
+
+
+#IF
+LARGE U131 99
+EQUAL <$USERNAME> <$STR(A108)>
+#ACT
+INC N$装备倍攻 10
+INC N$人物血量百分比 10
+INC N$人物蓝量百分比 10
+INC N$怪物切割 200
+
+
+#IF
+LARGE U131 99
+EQUAL <$USERNAME> <$STR(A109)>
+#ACT
+INC N$装备倍攻 5
+INC N$人物血量百分比 5
+INC N$人物蓝量百分比 5
+INC N$怪物切割 100
+
+
+
+#IF
+Checkrenewlevel = 0
+#ACT
+MOV T20 沃玛教主[BOSS]
+MOV T21 洗髓境妖兽
+
+
+#IF
+Checkrenewlevel = 1
+#ACT
+MOV T20 龙角猪王[BOSS]
+MOV T21 辟谷境妖兽
+
+
+#IF
+Checkrenewlevel = 2
+#ACT
+MOV T20 祖玛教主[BOSS]
+MOV T21 融合境妖兽
+
+
+#IF
+Checkrenewlevel = 3
+#ACT
+MOV T20 赤月恶魔[BOSS]
+MOV T21 练气境妖兽
+
+
+#IF
+Checkrenewlevel = 4
+#ACT
+MOV T20 虹魔教主[BOSS]
+MOV T21 筑基境妖兽
+
+#IF
+Checkrenewlevel = 5
+#ACT
+MOV T20 黄泉教主[BOSS]
+MOV T21 金丹境妖兽
+
+
+
+#IF
+Checkrenewlevel = 6
+#ACT
+MOV T20 弩马法王[BOSS]
+MOV T21 元婴境妖兽
+
+
+#IF
+Checkrenewlevel = 7
+#ACT
+MOV T20 牛魔王[BOSS]
+MOV T21 出窍境妖兽
+
+
+#IF
+Checkrenewlevel = 8
+#ACT
+MOV T20 魔龙教主[BOSS]
+MOV T21 分神境妖兽
+
+
+#IF
+Checkrenewlevel = 9
+#ACT
+MOV T20 魔龙教主[BOSS]
+MOV T21 合体境妖兽
+
+
+#IF
+Checkrenewlevel = 10
+#ACT
+MOV T20 青铜摸鱼[BOSS]
+MOV T21 渡劫境妖兽
+
+#IF
+Checkrenewlevel = 11
+#ACT
+MOV T20 白银摸鱼[BOSS]
+MOV T21 大乘境妖兽
+
+
+#IF
+Checkrenewlevel = 12
+#ACT
+MOV T20 黄金摸鱼[BOSS]
+MOV T21 散仙境妖兽
+
+
+#IF
+Checkrenewlevel = 13
+#ACT
+MOV T20 铂金摸鱼[BOSS]
+MOV T21 地仙境妖兽
+
+
+#IF
+Checkrenewlevel = 14
+#ACT
+MOV T20 钻石摸鱼[BOSS]
+MOV T21 人仙境妖兽
+
+
+#IF
+Checkrenewlevel = 15
+#ACT
+MOV T20 星耀摸鱼[BOSS]
+MOV T21 金仙境妖兽
+
+
+
+#IF
+Checkrenewlevel = 16
+#ACT
+MOV T20 王者摸鱼[BOSS]
+MOV T21 玄仙境妖兽
+
+
+#IF
+Checkrenewlevel = 17
+#ACT
+MOV T20 王者摸鱼[BOSS]
+MOV T21 仙君境妖兽
+
+
+#IF
+Checkrenewlevel = 18
+#ACT
+MOV T20 荣耀摸鱼[BOSS]
+MOV T21 仙帝境妖兽
+
+
+#IF
+Checkrenewlevel = 19
+#ACT
+MOV T20 荣耀摸鱼[BOSS]
+MOV T21 仙尊境妖兽
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#IF
+CHECKITEMW 人阶·酉鸡
+#ACT
+MOV N$冰冻机率 20
+MOV N$冰冻时间 2
+
+#IF
+CHECKITEMW 灵阶·酉鸡
+#ACT
+MOV N$冰冻机率 15
+MOV N$冰冻时间 2
+
+#IF
+CHECKITEMW 地阶·酉鸡
+#ACT
+MOV N$冰冻机率 12
+MOV N$冰冻时间 2
+
+#IF
+CHECKITEMW 天阶·酉鸡
+#ACT
+MOV N$冰冻机率 9
+MOV N$冰冻时间 2
+
+#IF
+CHECKITEMW 神级·酉鸡
+#ACT
+MOV N$冰冻机率 6
+MOV N$冰冻时间 3
+
+#IF
+CHECKITEMW 圣级·酉鸡
+#ACT
+MOV N$冰冻机率 3
+MOV N$冰冻时间 3
+
+
+#IF
+CHECKITEMW 人阶·未羊
+#ACT
+MOV N$绿毒时间 3
+MOV N$绿毒掉血 10
+MOV N$绿毒机率 10
+
+#IF
+CHECKITEMW 灵阶·未羊
+#ACT
+MOV N$绿毒时间 5
+MOV N$绿毒掉血 20
+MOV N$绿毒机率 8
+
+#IF
+CHECKITEMW 地阶·未羊
+#ACT
+MOV N$绿毒时间 10
+MOV N$绿毒掉血 30
+MOV N$绿毒机率 7
+
+#IF
+CHECKITEMW 天阶·未羊
+#ACT
+MOV N$绿毒时间 15
+MOV N$绿毒掉血 50
+MOV N$绿毒机率 6
+
+#IF
+CHECKITEMW 神级·未羊
+#ACT
+MOV N$绿毒时间 20
+MOV N$绿毒掉血 100
+MOV N$绿毒机率 4
+
+#IF
+CHECKITEMW 圣级·未羊
+#ACT
+MOV N$绿毒时间 30
+MOV N$绿毒掉血 200
+MOV N$绿毒机率 2
+
+
+
+
+
+
+
+
+
+
+#IF
+CHECKITEMW 人阶·卯兔
+#ACT
+INC N$怪物切割百分比 5
+
+#IF
+CHECKITEMW 灵阶·卯兔
+#ACT
+INC N$怪物切割百分比 10
+
+#IF
+CHECKITEMW 地阶·卯兔
+#ACT
+INC N$怪物切割百分比 15
+
+#IF
+CHECKITEMW 天阶·卯兔
+#ACT
+INC N$怪物切割百分比 20
+
+#IF
+CHECKITEMW 神级·卯兔
+#ACT
+INC N$怪物切割百分比 30
+
+#IF
+CHECKITEMW 圣级·卯兔
+#ACT
+INC N$怪物切割百分比 50
+
+
+#IF
+CHECKITEMW 人阶·巳蛇
+#ACT
+INC N$怪物切割 50
+
+#IF
+CHECKITEMW 灵阶·巳蛇
+#ACT
+INC N$怪物切割 100
+
+#IF
+CHECKITEMW 地阶·巳蛇
+#ACT
+INC N$怪物切割 150
+
+#IF
+CHECKITEMW 天阶·巳蛇
+#ACT
+INC N$怪物切割 200
+
+#IF
+CHECKITEMW 神级·巳蛇
+#ACT
+INC N$怪物切割 300
+
+#IF
+CHECKITEMW 圣级·巳蛇
+#ACT
+INC N$怪物切割 500
+
+
+
+#if
+check [307] 1
+#act
+INC N$怪物切割 100
+
+#if
+check [168] 1
+#act
+INC N$怪物切割 100
+
+
+#IF
+CheckItemAddValue 1 3 = 13 
+#act
+INC N$装备倍攻 20
+
+
+#IF
+CheckItemAddValue 1 3 = 12
+#act
+INC N$装备倍攻 10
+
+#IF
+CheckItemAddValue 1 3 = 11
+#act
+INC N$装备倍攻 5
+
+
+
+#IF
+CHECKITEMW 人阶·辰龙
+#ACT
+INC N$装备倍攻 2
+
+
+#IF
+CHECKITEMW 灵阶·辰龙
+#ACT
+INC N$装备倍攻 4
+
+#IF
+CHECKITEMW 地阶·辰龙
+#ACT
+INC N$装备倍攻 7
+
+#IF
+CHECKITEMW 天阶·辰龙
+#ACT
+INC N$装备倍攻 10
+
+#IF
+CHECKITEMW 神级·辰龙
+#ACT
+INC N$装备倍攻 15
+
+#IF
+CHECKITEMW 圣级·辰龙
+#ACT
+INC N$装备倍攻 20
+
+#IF
+CHECKITEMW 人阶·午马
+#ACT
+inc N$人物血量百分比 2
+inc N$人物蓝量百分比 2
+
+#IF
+CHECKITEMW 灵阶·午马
+#ACT
+inc N$人物血量百分比 4
+inc N$人物蓝量百分比 4
+
+#IF
+CHECKITEMW 地阶·午马
+#ACT
+inc N$人物血量百分比 7
+inc N$人物蓝量百分比 7
+
+#IF
+CHECKITEMW 天阶·午马
+#ACT
+inc N$人物血量百分比 12
+inc N$人物蓝量百分比 12
+
+#IF
+CHECKITEMW 神级·午马
+#ACT
+inc N$人物血量百分比 15
+inc N$人物蓝量百分比 15
+
+#IF
+CHECKITEMW 圣级·午马
+#ACT
+inc N$人物血量百分比 20
+inc N$人物蓝量百分比 20
+
+
+
+
+
+
+#IF
+CHECKTITLE 恶魔之力Lv21
+#ACT
+INC N$装备倍攻 33
+
+#IF
+CHECKTITLE 恶魔之力Lv22
+#ACT
+INC N$装备倍攻 36
+
+#IF
+CHECKTITLE 恶魔之力Lv23
+#ACT
+INC N$装备倍攻 39
+
+#IF
+CHECKTITLE 恶魔之力Lv24
+#ACT
+INC N$装备倍攻 42
+
+#IF
+CHECKTITLE 恶魔之力Lv25
+#ACT
+INC N$装备倍攻 45
+
+#IF
+CHECKTITLE 恶魔之力Lv26
+#ACT
+INC N$装备倍攻 48
+
+#IF
+CHECKTITLE 恶魔之力Lv27
+#ACT
+INC N$装备倍攻 51
+
+#IF
+CHECKTITLE 恶魔之力Lv28
+#ACT
+INC N$装备倍攻 54
+
+#IF
+CHECKTITLE 恶魔之力Lv29
+#ACT
+INC N$装备倍攻 57
+
+#IF
+CHECKTITLE 恶魔之力Lv30
+#ACT
+INC N$装备倍攻 60
+
+
+#IF
+CHECKTITLE 帝国◇领袖
+#ACT
+INC N$装备倍攻 2
+
+#IF
+checkitemw 至尊血玉
+checkitemw 至尊神笠
+checkitemw 至尊宝石
+#ACT
+INC N$装备倍攻 2
+
+
+
+
+
+
+
+
+
+
+#IF
+CHECKTITLE 天命之体Lv1
+#ACT
+INC N$装备倍攻 1
+INC N$人物血量百分比 1
+INC N$人物蓝量百分比 1
+
+
+#IF
+CHECKTITLE 天命之体Lv2
+#ACT
+INC N$装备倍攻 2
+INC N$人物血量百分比 2
+INC N$人物蓝量百分比 2
+
+
+
+#IF
+CHECKTITLE 天命之体Lv3
+#ACT
+INC N$装备倍攻 3
+INC N$人物血量百分比 3
+INC N$人物蓝量百分比 3
+
+
+
+#IF
+CHECKTITLE 天命之体Lv4
+#ACT
+INC N$装备倍攻 4
+INC N$人物血量百分比 4
+INC N$人物蓝量百分比 4
+
+
+
+#IF
+CHECKTITLE 天命之体Lv5
+#ACT
+INC N$装备倍攻 5
+INC N$人物血量百分比 5
+INC N$人物蓝量百分比 5
+
+
+
+#IF
+CHECKTITLE 天命之体Lv6
+#ACT
+INC N$装备倍攻 6
+INC N$人物血量百分比 6
+INC N$人物蓝量百分比 6
+
+
+
+#IF
+CHECKTITLE 天命之体Lv7
+#ACT
+INC N$装备倍攻 7
+INC N$人物血量百分比 7
+INC N$人物蓝量百分比 7
+
+
+
+#IF
+CHECKTITLE 天命之体Lv8
+#ACT
+INC N$装备倍攻 8
+INC N$人物血量百分比 8
+INC N$人物蓝量百分比 8
+
+
+
+#IF
+CHECKTITLE 天命之体Lv9
+#ACT
+INC N$装备倍攻 9
+INC N$人物血量百分比 9
+INC N$人物蓝量百分比 9
+
+
+
+#IF
+CHECKTITLE 天命之体Lv10
+#ACT
+INC N$装备倍攻 10
+INC N$人物血量百分比 10
+INC N$人物蓝量百分比 10
+
+
+
+#IF
+CHECKTITLE 天命之体Lv11
+#ACT
+INC N$装备倍攻 11
+INC N$人物血量百分比 11
+INC N$人物蓝量百分比 11
+
+
+
+#IF
+CHECKTITLE 天命之体Lv12
+#ACT
+INC N$装备倍攻 12
+INC N$人物血量百分比 12
+INC N$人物蓝量百分比 12
+
+
+
+#IF
+CHECKTITLE 天命之体Lv13
+#ACT
+INC N$装备倍攻 13
+INC N$人物血量百分比 13
+INC N$人物蓝量百分比 13
+
+
+
+#IF
+CHECKTITLE 天命之体Lv14
+#ACT
+INC N$装备倍攻 14
+INC N$人物血量百分比 14
+INC N$人物蓝量百分比 14
+
+
+
+#IF
+CHECKTITLE 天命之体Lv15
+#ACT
+INC N$装备倍攻 15
+INC N$人物血量百分比 15
+INC N$人物蓝量百分比 15
+
+
+
+#IF
+CHECKTITLE 天命之体Lv16
+#ACT
+INC N$装备倍攻 16
+INC N$人物血量百分比 16
+INC N$人物蓝量百分比 16
+
+
+
+#IF
+CHECKTITLE 天命之体Lv17
+#ACT
+INC N$装备倍攻 17
+INC N$人物血量百分比 17
+INC N$人物蓝量百分比 17
+
+
+
+#IF
+CHECKTITLE 天命之体Lv18
+#ACT
+INC N$装备倍攻 18
+INC N$人物血量百分比 18
+INC N$人物蓝量百分比 18
+
+
+
+#IF
+CHECKTITLE 天命之体Lv19
+#ACT
+INC N$装备倍攻 19
+INC N$人物血量百分比 19
+INC N$人物蓝量百分比 19
+
+
+
+#IF
+CHECKTITLE 天命之体Lv20
+#ACT
+INC N$装备倍攻 20
+INC N$人物血量百分比 20
+INC N$人物蓝量百分比 20
+
+
+
+#IF
+CHECKTITLE 天命之体Lv21
+#ACT
+INC N$装备倍攻 21
+INC N$人物血量百分比 21
+INC N$人物蓝量百分比 21
+
+
+
+#IF
+CHECKTITLE 天命之体Lv22
+#ACT
+INC N$装备倍攻 22
+INC N$人物血量百分比 22
+INC N$人物蓝量百分比 22
+
+
+
+#IF
+CHECKTITLE 天命之体Lv23
+#ACT
+INC N$装备倍攻 23
+INC N$人物血量百分比 23
+INC N$人物蓝量百分比 23
+
+
+
+#IF
+CHECKTITLE 天命之体Lv24
+#ACT
+INC N$装备倍攻 24
+INC N$人物血量百分比 24
+INC N$人物蓝量百分比 24
+
+
+
+#IF
+CHECKTITLE 天命之体Lv25
+#ACT
+INC N$装备倍攻 25
+INC N$人物血量百分比 25
+INC N$人物蓝量百分比 25
+
+
+
+#IF
+CHECKTITLE 天命之体Lv26
+#ACT
+INC N$装备倍攻 26
+INC N$人物血量百分比 26
+INC N$人物蓝量百分比 26
+
+
+
+#IF
+CHECKTITLE 天命之体Lv27
+#ACT
+INC N$装备倍攻 27
+INC N$人物血量百分比 27
+INC N$人物蓝量百分比 27
+
+
+#IF
+CHECKTITLE 天命之体Lv28
+#ACT
+INC N$装备倍攻 28
+INC N$人物血量百分比 28
+INC N$人物蓝量百分比 28
+
+
+#IF
+CHECKTITLE 天命之体Lv29
+#ACT
+INC N$装备倍攻 29
+INC N$人物血量百分比 29
+INC N$人物蓝量百分比 29
+
+
+#IF
+CHECKTITLE 天命之体Lv30
+#ACT
+INC N$装备倍攻 30
+INC N$人物血量百分比 30
+INC N$人物蓝量百分比 30
+
+
+
+
+
+
+
+
+
+
+
+
+
+#IF
+CHECKTITLE 荒古圣体Lv1
+#ACT 
+INC N$人物吸血 1
+
+
+
+#IF
+CHECKTITLE 荒古圣体Lv2
+#ACT 
+INC N$人物吸血 2
+
+
+
+#IF
+CHECKTITLE 荒古圣体Lv3
+#ACT 
+INC N$人物吸血 3
+
+
+
+#IF
+CHECKTITLE 荒古圣体Lv4
+#ACT 
+INC N$人物吸血 4
+
+
+
+#IF
+CHECKTITLE 荒古圣体Lv5
+#ACT 
+INC N$人物吸血 5
+
+
+
+#IF
+CHECKTITLE 荒古圣体Lv6
+#ACT 
+INC N$人物吸血 6
+
+
+
+#IF
+CHECKTITLE 荒古圣体Lv7
+#ACT 
+INC N$人物吸血 7
+
+
+
+#IF
+CHECKTITLE 荒古圣体Lv8
+#ACT 
+INC N$人物吸血 8
+
+
+
+#IF
+CHECKTITLE 荒古圣体Lv9
+#ACT 
+INC N$人物吸血 9
+
+
+
+#IF
+CHECKTITLE 荒古圣体Lv10
+#ACT 
+INC N$人物吸血 10
+
+
+
+#IF
+CHECKTITLE 荒古圣体Lv11
+#ACT 
+INC N$人物吸血 11
+
+
+
+#IF
+CHECKTITLE 荒古圣体Lv12
+#ACT 
+INC N$人物吸血 12
+
+
+
+#IF
+CHECKTITLE 荒古圣体Lv13
+#ACT 
+INC N$人物吸血 13
+
+
+
+#IF
+CHECKTITLE 荒古圣体Lv14
+#ACT 
+INC N$人物吸血 14
+
+
+
+#IF
+CHECKTITLE 荒古圣体Lv15
+#ACT 
+INC N$人物吸血 15
+
+
+
+#IF
+CHECKTITLE 荒古圣体Lv16
+#ACT 
+INC N$人物吸血 16
+
+#IF
+CHECKTITLE 荒古圣体Lv17
+#ACT 
+INC N$人物吸血 17
+
+#IF
+CHECKTITLE 荒古圣体Lv18
+#ACT 
+INC N$人物吸血 18
+
+#IF
+CHECKTITLE 荒古圣体Lv19
+#ACT 
+INC N$人物吸血 19
+
+#IF
+CHECKTITLE 荒古圣体Lv20
+#ACT 
+INC N$人物吸血 20
+
+#IF
+CHECKTITLE 荒古圣体Lv21
+#ACT 
+INC N$人物吸血 21
+
+#IF
+CHECKTITLE 荒古圣体Lv22
+#ACT 
+INC N$人物吸血 22
+
+#IF
+CHECKTITLE 荒古圣体Lv23
+#ACT 
+INC N$人物吸血 23
+
+#IF
+CHECKTITLE 荒古圣体Lv24
+#ACT 
+INC N$人物吸血 24
+
+#IF
+CHECKTITLE 荒古圣体Lv25
+#ACT 
+INC N$人物吸血 25
+
+#IF
+CHECKTITLE 荒古圣体Lv26
+#ACT 
+INC N$人物吸血 26
+
+#IF
+CHECKTITLE 荒古圣体Lv27
+#ACT 
+INC N$人物吸血 27
+
+#IF
+CHECKTITLE 荒古圣体Lv28
+#ACT 
+INC N$人物吸血 28
+
+#IF
+CHECKTITLE 荒古圣体Lv29
+#ACT 
+INC N$人物吸血 29
+
+#IF
+CHECKTITLE 荒古圣体Lv30
+#ACT 
+INC N$人物吸血 30
+
+
+
+
+
+
+;----------------回血------------------------
+
+#IF
+checkitemw 人阶·丑牛
+#ACT
+INC N$回血数值 30
+
+#IF
+checkitemw 灵阶·丑牛
+#ACT
+INC N$回血数值 60
+
+#IF
+checkitemw 地阶·丑牛
+#ACT
+INC N$回血数值 90
+
+#IF
+checkitemw 天阶·丑牛
+#ACT
+INC N$回血数值 120
+
+#IF
+checkitemw 神级·丑牛
+#ACT
+INC N$回血数值 150
+
+#IF
+checkitemw 圣级·丑牛
+#ACT
+INC N$回血数值 180
+
+
+
+#IF
+checkitemw 魔血石Lv.1
+#ACT
+INC N$回血数值 10
+
+#IF
+checkitemw 魔血石Lv.2
+#ACT
+INC N$回血数值 20
+
+#IF
+checkitemw 魔血石Lv.3
+#ACT
+INC N$回血数值 30
+
+
+#IF
+checkitemw 魔血石Lv.4
+#ACT
+INC N$回血数值 50
+
+
+#IF
+checkitemw 魔血石Lv.5
+#ACT
+INC N$回血数值 70
+
+
+#IF
+checkitemw 魔血石Lv.6
+#ACT
+INC N$回血数值 90
+
+
+#IF
+checkitemw 魔血石Lv.7
+#ACT
+INC N$回血数值 110
+
+
+#IF
+checkitemw 魔血石Lv.8
+#ACT
+INC N$回血数值 130
+
+
+#IF
+checkitemw 魔血石Lv.9
+#ACT
+INC N$回血数值 150
+
+
+#IF
+checkitemw 魔血石.Max
+#ACT
+INC N$回血数值 180
+
+
+#IF
+checkitemw 沃玛血石
+#ACT
+INC N$回血数值 210
+
+
+#IF
+checkitemw 祖玛血石
+#ACT
+INC N$回血数值 240
+
+
+#IF
+checkitemw 赤月血石
+#ACT
+INC N$回血数值 270
+
+
+#IF
+checkitemw 黄金血石
+#ACT
+INC N$回血数值 300
+
+
+#IF
+checkitemw 魔龙血石
+#ACT
+INC N$回血数值 350
+
+
+#IF
+checkitemw 武神血石
+#ACT
+INC N$回血数值 400
+
+
+#IF
+checkitemw 轩辕血石
+#ACT
+INC N$回血数值 450
+
+
+#IF
+checkitemw 圣·轩辕血石
+#ACT
+INC N$回血数值 500
+
+
+#IF
+checkitemw 神·轩辕血石
+#ACT
+INC N$回血数值 550
+
+
+#IF
+checkitemw 蓝月复古·血石
+#ACT
+INC N$回血数值 600
+
+;-------摸鱼排行----------
+
+#IF
+EQUAL <$USERNAME> <$STR(A60)>
+CHECKTITLE 摸鱼第一·祖师
+#ACT
+inc N$人物血量百分比 20
+inc N$人物蓝量百分比 20
+INC N$装备倍攻 20
+INC N$怪物切割 500
+
+#IF
+EQUAL <$USERNAME> <$STR(A61)>
+CHECKTITLE 摸鱼第二·宗师
+#ACT
+inc N$人物血量百分比 18
+inc N$人物蓝量百分比 18
+INC N$装备倍攻 18
+INC N$怪物切割 450
+
+#IF
+EQUAL <$USERNAME> <$STR(A62)>
+CHECKTITLE 摸鱼第三·大神
+#ACT
+inc N$人物血量百分比 16
+inc N$人物蓝量百分比 16
+INC N$装备倍攻 16
+INC N$怪物切割 400
+
+
+#IF
+EQUAL <$USERNAME> <$STR(A63)>
+CHECKTITLE 摸鱼第四·长老
+#ACT
+inc N$人物血量百分比 14
+inc N$人物蓝量百分比 14
+INC N$装备倍攻 14
+INC N$怪物切割 350
+
+#IF
+EQUAL <$USERNAME> <$STR(A64)>
+CHECKTITLE 摸鱼第五·大师
+#ACT
+inc N$人物血量百分比 12
+inc N$人物蓝量百分比 12
+INC N$装备倍攻 12
+INC N$怪物切割 300
+
+#IF
+EQUAL <$USERNAME> <$STR(A65)>
+CHECKTITLE 摸鱼第六·鼻祖
+#ACT
+inc N$人物血量百分比 10
+inc N$人物蓝量百分比 10
+INC N$装备倍攻 10
+INC N$怪物切割 250
+
+#IF
+EQUAL <$USERNAME> <$STR(A66)>
+CHECKTITLE 摸鱼第七·真人
+#ACT
+inc N$人物血量百分比 8
+inc N$人物蓝量百分比 8
+INC N$装备倍攻 8
+INC N$怪物切割 200
+
+
+#IF
+EQUAL <$USERNAME> <$STR(A67)>
+CHECKTITLE 摸鱼第八·高手
+#ACT
+inc N$人物血量百分比 6
+inc N$人物蓝量百分比 6
+INC N$装备倍攻 6
+INC N$怪物切割 150
+
+#IF
+EQUAL <$USERNAME> <$STR(A68)>
+CHECKTITLE 摸鱼第九·牛人
+#ACT
+inc N$人物血量百分比 4
+inc N$人物蓝量百分比 4
+INC N$装备倍攻 4
+INC N$怪物切割 100
+
+
+#IF
+EQUAL <$USERNAME> <$STR(A69)>
+CHECKTITLE 摸鱼第十·专家
+#ACT
+inc N$人物血量百分比 2
+inc N$人物蓝量百分比 2
+INC N$装备倍攻 2
+INC N$怪物切割 50
+
+#IF
+LARGE U8 999
+SMALL U8 <$STR(G69)>
+#ACT
+inc N$人物血量百分比 1
+inc N$人物蓝量百分比 1
+INC N$装备倍攻 1
+INC N$怪物切割 30
+
+
+;-------狂暴之力----------
+#if
+check [168] 1
+#ACT
+
+
+
+
+;----------------骰王----------------
+
+
+#IF
+#act
+DEPRIVETITLE ①①①骰王
+DEPRIVETITLE ②②②骰王
+DEPRIVETITLE ③③③骰王
+DEPRIVETITLE ④④④骰王
+DEPRIVETITLE ⑤⑤⑤骰王
+DEPRIVETITLE ⑥⑥⑥骰王
+
+
+#IF
+equal A41 <$USERNAME>                        
+#ACT
+CONFERTITLE ①①①骰王
+inc N$人物血量百分比 4
+inc N$人物蓝量百分比 4
+inc N$人物攻击百分比 2
+INC N$怪物切割 150
+#IF
+equal A42 <$USERNAME>                        
+#ACT
+CONFERTITLE ②②②骰王
+inc N$人物血量百分比 4
+inc N$人物蓝量百分比 4
+inc N$人物攻击百分比 2
+INC N$怪物切割 150
+
+#IF
+equal A43 <$USERNAME>                        
+#ACT
+CONFERTITLE ③③③骰王
+inc N$人物血量百分比 4
+inc N$人物蓝量百分比 4
+inc N$人物攻击百分比 2
+INC N$怪物切割 150
+
+#IF
+equal A44 <$USERNAME>                        
+#ACT
+CONFERTITLE ④④④骰王
+inc N$人物血量百分比 4
+inc N$人物蓝量百分比 4
+inc N$人物攻击百分比 2
+INC N$怪物切割 150
+
+#IF
+equal A45 <$USERNAME>                        
+#ACT
+CONFERTITLE ⑤⑤⑤骰王
+inc N$人物血量百分比 4
+inc N$人物蓝量百分比 4
+inc N$人物攻击百分比 2
+INC N$怪物切割 150
+
+
+#IF
+equal A51 <$USERNAME>                 
+#ACT
+CONFERTITLE ⑥⑥⑥骰王
+inc N$人物血量百分比 6
+inc N$人物蓝量百分比 6
+inc N$人物攻击百分比 3
+INC N$怪物切割 300
+
+
+
+
+
+
+#IF
+#ACT 
+CalcPer <$MAXHP>  N$人物血量百分比 N$人物血量增加
+CalcPer <$MAXMP>  N$人物蓝量百分比 N$人物蓝量增加
+CalcPer <$MAXDC>  N$人物攻击百分比 N$人物攻击增加
+CalcPer <$MAXMC>  N$人物攻击百分比 N$人物魔法增加
+CalcPer <$MAXSC>  N$人物攻击百分比 N$人物道术增加
+CalcPer <$MAXAC>  N$人物防御百分比 N$人物防御增加
+CalcPer <$MAXMAC> N$人物魔御百分比 N$人物魔御增加
+
+
+
+
+#IF
+#ACT
+INC N$人物攻击 <$STR(N$人物攻击增加)>
+INC N$人物魔法 <$STR(N$人物魔法增加)>
+INC N$人物道术 <$STR(N$人物道术增加)>
+INC N$人物防御 <$STR(N$人物防御增加)>
+INC N$人物魔御 <$STR(N$人物魔御增加)>
+INC N$人物血量 <$STR(N$人物血量增加)>
+INC N$人物蓝量 <$STR(N$人物蓝量增加)>
+
+
+
+
+#OR
+LARGE N$人物攻击 0
+LARGE N$人物魔法 0
+LARGE N$人物道术 0
+#ACT
+ChangeHumAbility 6 = <$STR(N$人物攻击)>  65535
+ChangeHumAbility 8 = <$STR(N$人物魔法)>  65535
+ChangeHumAbility 10 = <$STR(N$人物道术)> 65535
+
+#IF
+LARGE N$人物防御 0
+#ACT
+ChangeHumAbility 2 = <$STR(N$人物防御)> 65535
+ChangeHumAbility 4 = <$STR(N$人物魔御)> 65535
+
+#IF
+LARGE N$人物血量 0
+#ACT
+ChangeHumAbility 11 = <$STR(N$人物血量)> 65535
+ChangeHumAbility 12 = <$STR(N$人物蓝量)> 65535
+
+
+
+#IF
+LARGE N$怪物切割百分比 0
+#ACT
+CalcPer <$STR(N$怪物切割)> <$STR(N$怪物切割百分比)> N$百分比切割增加
+INC N$怪物切割 <$STR(N$百分比切割增加)>
+
+
+#if
+#act
+HumanHp	=	<$Str(N$记录生命)>
+HumanMp	=	<$Str(N$记录蓝量)>
+INC N$装备倍攻 <$Str(N$转身倍攻)>
+;CHANGESPEED 1 <$Str(N$人物移速)> <$Str(U85)>
+;CHANGESPEED 2 <$Str(N$人物攻速)> <$Str(U86)>
+;CHANGESPEED 3 <$Str(N$人物攻速)> <$Str(U86)>
+
+
+
+
+
+
+
+
+
+#IF
+NOT EQUAL S$人物倍攻标记 <$STR(N$装备倍攻)>
+#ACT
+MOV S$人物倍攻标记 <$STR(N$装备倍攻)>
+POWERRATE <$STR(N$装备倍攻)> 60000
+
+
+
+#IF
+LARGE N$人物吸血 0 
+NOT EQUAL S$人物吸血标记 <$STR(N$人物吸血)>
+#ACT
+MOV S$人物吸血标记 <$STR(N$人物吸血)>
+SENDMSG 6 您当前的吸血率:<$STR(N$人物吸血)>%
+SendCenterMsg 249 0 您当前的吸血率:<$STR(N$人物吸血)>% 0 5
+
+
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,219 @@
+[@main]
+#IF
+#ACT
+OPENMERCHANTBIGDLG 3 402 1 0 1 1 1
+#SAY
+<--------------------------------------------------------------/AUTOCOLOR=91>\
+<神秘山谷/FCOLOR=254>   <Hot~/FCOLOR=249>                  <危险区域、进入还需谨慎噢！/AUTOCOLOR=254,251,168,191,250,70,245,249,253>\
+<--------------------------------------------------------------/AUTOCOLOR=91>\
+<1.其实我就是一个收破烂的，你们不要的元宝道具我都可以回收！/FCOLOR=156>\
+<2.但是我不能直接给你们元宝，只能给你回收成相应的“神秘值！/FCOLOR=155>\
+<3.神秘值目前在我这里可以使用，更多神秘值功能等待继续开发！/FCOLOR=145>\
+<4.回收神秘值之前请将您有用的道具转存到仓库，以免回收错误！/FCOLOR=147>\
+<--------------------------------------------------------------/AUTOCOLOR=91>\
+<回收价格：/FCOLOR=151> \
+<修复神水=16点 攻击神水= 8点 魔力神水=8点 道力神水=8点/FCOLOR=92>\
+<求婚戒指=30点 沃玛号角= 8点 个性发型=8点 反璞归真=8点/FCOLOR=93>\
+<双倍经验勋章=16点 玛雅传送卡=40点/FCOLOR=89> <九珠连环炮=50点/FCOLOR=250> <玄紫=32点/FCOLOR=89>\
+<三倍经验勋章=32点 幻十传送卡=28点 随机传送石= 8点 玄绿=32点/FCOLOR=103>\
+<三倍经验宝典=50点 红名清洗卡=16点 祝福油(包)= 8点 玄褐=32点/FCOLOR=95>\
+<--------------------------------------------------------------/AUTOCOLOR=91>\
+<5.进入条件：/FCOLOR=145><50点神秘值 每分钟扣取2点神秘值/FCOLOR=250>\
+<6.地图爆率：此地图掉落/FCOLOR=147><强化赤月、玛雅屠龙、玛雅赤月/FCOLOR=250><等终极装备！/FCOLOR=147>\
+<7.您当前帐户拥有神秘值：/AUTOCOLOR=239>{<$STR(U5)>/AUTOCOLOR=229}<点/AUTOCOLOR=229>\
+<--------------------------------------------------------------/AUTOCOLOR=91>\
+<√神秘山谷/@神秘山谷>          <一键回收神秘值√/@回收神秘值>        <关闭对话×/@exit>\
+
+
+[@神秘山谷]
+#IF
+Large U5 50
+#ACT
+DEC U5 50
+MAP SMSG1
+SetOnTimer 8 60
+SendMsg 1 {信息ぐ|151:0:1}：玩家「{%s|227:0:1}」花费50点神秘值进入了{《神秘山谷》|223:0:1}地图！
+#ELSEACT
+MESSAGEBOX [神秘值不足]：\\进入《神秘山谷》需要支付50点神秘值的费用！\\进入地图后每分钟还需另外扣取2点神秘值费用！
+BREAK
+
+[@回收神秘值]
+#if
+checkitem 修复神水 1
+#ACT
+take 修复神水 1
+INC U5 16
+SENDMSG 6 〖提示〗回收[修复神水]成功，神秘值增加：16点！
+goto @回收神秘值
+break
+
+#if
+checkitem 攻击神水 1
+#ACT
+take 攻击神水 1
+INC U5 8
+SENDMSG 6 〖提示〗回收[攻击神水]成功，神秘值增加：8点！
+goto @回收神秘值
+break
+
+#if
+checkitem 魔力神水 1
+#ACT
+take 魔力神水 1
+INC U5 8
+SENDMSG 6 〖提示〗回收[魔力神水]成功，神秘值增加：8点！
+goto @回收神秘值
+break
+
+#if
+checkitem 道力神水 1
+#ACT
+take 道力神水 1
+INC U5 8
+SENDMSG 6 〖提示〗回收[道力神水]成功，神秘值增加：8点！
+goto @回收神秘值
+break
+
+#if
+checkitem 求婚戒指 1
+#ACT
+take 求婚戒指 1
+INC U5 30
+SENDMSG 6 〖提示〗回收[求婚戒指]成功，神秘值增加：30点！
+goto @回收神秘值
+break
+
+#if
+checkitem 沃玛号角 1
+#ACT
+take 沃玛号角 1
+INC U5 8
+SENDMSG 6 〖提示〗回收[沃玛号角]成功，神秘值增加：8点！
+goto @回收神秘值
+break
+
+#if
+checkitem 个性发型 1
+#ACT
+take 个性发型 1
+INC U5 8
+SENDMSG 6 〖提示〗回收[个性发型]成功，神秘值增加：8点！
+goto @回收神秘值
+break
+
+#if
+checkitem 反璞归真 1
+#ACT
+take 反璞归真 1
+INC U5 8
+SENDMSG 6 〖提示〗回收[返璞归真]成功，神秘值增加：8点！
+goto @回收神秘值
+break
+
+#if
+checkitem 双倍经验勋章 1
+#ACT
+take 双倍经验勋章 1
+INC U5 16
+SENDMSG 6 〖提示〗回收[双倍经验勋章]成功，神秘值增加：16点！
+goto @回收神秘值
+break
+
+#if
+checkitem 三倍经验勋章 1
+#ACT
+take 三倍经验勋章 1
+INC U5 32
+SENDMSG 6 〖提示〗回收[三倍经验勋章]成功，神秘值增加：32点！
+goto @回收神秘值
+break
+
+#if
+checkitem 三倍经验宝典 1
+#ACT
+take 三倍经验宝典 1
+INC U5 50
+SENDMSG 6 〖提示〗回收[三倍经验宝典]成功，神秘值增加：50点！
+goto @回收神秘值
+break
+
+#if
+checkitem 玛雅传送卡 1
+#ACT
+take 玛雅传送卡 1
+INC U5 40
+SENDMSG 6 〖提示〗回收[玛雅传送卡]成功，神秘值增加：40点！
+goto @回收神秘值
+break
+
+#if
+checkitem 幻十传送卡 1
+#ACT
+take 幻十传送卡 1
+INC U5 28
+SENDMSG 6 〖提示〗回收[幻十传送卡]成功，神秘值增加：28点！
+goto @回收神秘值
+break
+
+#if
+checkitem 红名清洗卡 1
+#ACT
+take 红名清洗卡 1
+INC U5 16
+SENDMSG 6 〖提示〗回收[红名清洗卡]成功，神秘值增加：16点！
+goto @回收神秘值
+break
+
+#if
+checkitem 九珠连环炮 1
+#ACT
+take 九珠连环炮 1
+INC U5 50
+SENDMSG 6 〖提示〗回收[九珠连环炮]成功，神秘值增加：50点！
+goto @回收神秘值
+break
+
+#if
+checkitem 随机传送石 1
+#ACT
+take 随机传送石 1
+INC U5 8
+SENDMSG 6 〖提示〗回收[随机传送石]成功，神秘值增加：8点！
+goto @回收神秘值
+break
+
+#if
+checkitem 祝福油(包) 1
+#ACT
+take 祝福油(包) 1
+INC U5 8
+SENDMSG 6 〖提示〗回收[祝福油(包)]成功，神秘值增加：8点！
+goto @回收神秘值
+break
+
+#if
+checkitem 玄紫 1
+#ACT
+take 玄紫 1
+INC U5 32
+SENDMSG 6 〖提示〗回收[玄紫]成功，神秘值增加：32点！
+goto @回收神秘值
+break
+
+#if
+checkitem 玄绿 1
+#ACT
+take 玄绿 1
+INC U5 32
+SENDMSG 6 〖提示〗回收[玄绿]成功，神秘值增加：32点！
+goto @回收神秘值
+break
+
+#if
+checkitem 玄褐 1
+#ACT
+take 玄褐 1
+INC U5 32
+SENDMSG 6 〖提示〗回收[玄褐]成功，神秘值增加：32点！
+goto @回收神秘值
+break

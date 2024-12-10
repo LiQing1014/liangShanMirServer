@@ -1,0 +1,24 @@
+(@storage @getback )
+[@综合游戏服务]
+{
+#if
+Isonmap	wxbd
+#act
+Messagebox	当前地图禁用此功能！
+break
+
+#if
+#act
+ReturnBoxItem 7
+OpenMerChantBigDlg	34	21	1	4	0	-30	1	369	13
+#say
+<>\
+<><快捷：/fcolor=243>\
+<>      <随身仓库服务:/@storage><Imgex:<$Str(N$通区_素材)>:110:111:110:2:-3/@storage>
+
+
+
+
+
+
+}

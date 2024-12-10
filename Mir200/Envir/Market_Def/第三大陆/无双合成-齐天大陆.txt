@@ -1,0 +1,3731 @@
+[@main]
+
+
+#IF
+CHECKLEVELEX < 70
+#ACT
+messagebox 少年郎，你的等级不足70级，实力不足，请先好好努力!
+break
+
+
+
+
+#IF
+#ACT
+MOV N$一级合成武器数量 1
+MOV S$一级合成武器材料 轮回竹叶
+MOV N$一级合成武器材料 88
+MOV N$一级合成武器大米 3888
+
+
+MOV N$一级合成衣服数量 1
+MOV S$一级合成衣服材料 轮回竹叶
+MOV N$一级合成衣服材料 88
+MOV N$一级合成衣服大米 3888
+
+MOV N$一级合成首饰数量 1
+MOV S$一级合成首饰材料 轮回竹叶
+MOV N$一级合成首饰材料 58
+MOV N$一级合成首饰大米 1888
+
+
+
+#IF
+#ACT
+close
+OPENMERCHANTBIGDLG 1 567 1 4 0 0 1 633 0
+#say
+; \
+
+; \  \    \ 
+; \  \    \ 
+; \  \    \ 
+; \<----------------------------------------------大米锻造----------------------------------------------/SCOLOR=253>  \ \
+; \<> <战士锻造：/SCOLOR=250><无双·神剑|249#锻造条件：^-^250#1.王者武器随意*<$STR(N$一级合成武器数量)>把^-^253#2.大米*<$STR(N$一级合成武器大米)>/@大米锻造无双·神剑>
+; <>   <无双·战甲|249#锻造条件：^-^250#1.王者衣服随意*<$STR(N$一级合成衣服数量)>件^-^253#2.大米*<$STR(N$一级合成衣服大米)>/@大米锻造无双·战甲>
+; <>   <无双·战衣|249#锻造条件：^-^250#1.王者衣服随意*<$STR(N$一级合成衣服数量)>件^-^253#2.大米*<$STR(N$一级合成衣服大米)>/@大米锻造无双·战衣>
+; <>   <无双·战盔|249#锻造条件：^-^250#1.王者首饰随意*1件^-^253#2.大米*<$STR(N$一级合成首饰大米)>/@大米锻造无双·战盔>
+; <>   <无双·战链|249#锻造条件：^-^250#1.王者首饰随意*1件^-^253#2.大米*<$STR(N$一级合成首饰大米)>/@大米锻造无双·战链>
+; <>   <无双·战镯|249#锻造条件：^-^250#1.王者首饰随意*1件^-^253#2.大米*<$STR(N$一级合成首饰大米)>/@大米锻造无双·战镯> 
+; <>   <无双·战戒|249#锻造条件：^-^250#1.王者首饰随意*1件^-^253#2.大米*<$STR(N$一级合成首饰大米)>/@大米锻造无双·战戒>\ \
+; <>           <无双·战带|249#锻造条件：^-^250#1.王者首饰随意*1件^-^253#2.大米*<$STR(N$一级合成首饰大米)>/@大米锻造无双·战带>
+; <>   <无双·战靴|249#锻造条件：^-^250#1.王者首饰随意*1件^-^253#2.大米*<$STR(N$一级合成首饰大米)>/@大米锻造无双·战靴> \ \
+
+; \<> <法师锻造：/SCOLOR=250><无双·魔杖|249#锻造条件：^-^250#1.王者武器随意*<$STR(N$一级合成武器数量)>把^-^253#2.大米*<$STR(N$一级合成武器大米)>/@大米锻造无双·魔杖>
+; <>   <无双·魔袍|249#锻造条件：^-^250#1.王者衣服随意*<$STR(N$一级合成衣服数量)>件^-^253#2.大米*<$STR(N$一级合成衣服大米)>/@大米锻造无双·魔袍>
+; <>   <无双·魔衣|249#锻造条件：^-^250#1.王者衣服随意*<$STR(N$一级合成衣服数量)>件^-^253#2.大米*<$STR(N$一级合成衣服大米)>/@大米锻造无双·魔衣>
+; <>   <无双·魔盔|249#锻造条件：^-^250#1.王者首饰随意*1件^-^253#2.大米*<$STR(N$一级合成首饰大米)>/@大米锻造无双·魔盔>
+; <>   <无双·魔链|249#锻造条件：^-^250#1.王者首饰随意*1件^-^253#2.大米*<$STR(N$一级合成首饰大米)>/@大米锻造无双·魔链>
+; <>   <无双·魔镯|249#锻造条件：^-^250#1.王者首饰随意*1件^-^253#2.大米*<$STR(N$一级合成首饰大米)>/@大米锻造无双·魔镯> 
+; <>   <无双·魔戒|249#锻造条件：^-^250#1.王者首饰随意*1件^-^253#2.大米*<$STR(N$一级合成首饰大米)>/@大米锻造无双·魔戒>\ \
+; <>           <无双·魔带|249#锻造条件：^-^250#1.王者首饰随意*1件^-^253#2.大米*<$STR(N$一级合成首饰大米)>/@大米锻造无双·魔带>
+; <>   <无双·魔靴|249#锻造条件：^-^250#1.王者首饰随意*1件^-^253#2.大米*<$STR(N$一级合成首饰大米)>/@大米锻造无双·魔靴> \ \
+
+; \<> <道士锻造：/SCOLOR=250><无双·道扇|249#锻造条件：^-^250#1.王者武器随意*<$STR(N$一级合成武器数量)>把^-^253#2.大米*<$STR(N$一级合成武器大米)>/@大米锻造无双·道扇>
+; <>   <无双·道袍|249#锻造条件：^-^250#1.王者衣服随意*<$STR(N$一级合成衣服数量)>件^-^253#2.大米*<$STR(N$一级合成衣服大米)>/@大米锻造无双·道袍>
+; <>   <无双·道衣|249#锻造条件：^-^250#1.王者衣服随意*<$STR(N$一级合成衣服数量)>件^-^253#2.大米*<$STR(N$一级合成衣服大米)>/@大米锻造无双·道衣>
+; <>   <无双·道盔|249#锻造条件：^-^250#1.王者首饰随意*1件^-^253#2.大米*<$STR(N$一级合成首饰大米)>/@大米锻造无双·道盔>
+; <>   <无双·道链|249#锻造条件：^-^250#1.王者首饰随意*1件^-^253#2.大米*<$STR(N$一级合成首饰大米)>/@大米锻造无双·道链>
+; <>   <无双·道镯|249#锻造条件：^-^250#1.王者首饰随意*1件^-^253#2.大米*<$STR(N$一级合成首饰大米)>/@大米锻造无双·道镯> 
+; <>   <无双·道戒|249#锻造条件：^-^250#1.王者首饰随意*1件^-^253#2.大米*<$STR(N$一级合成首饰大米)>/@大米锻造无双·道戒>\ \
+; <>           <无双·道带|249#锻造条件：^-^250#1.王者首饰随意*1件^-^253#2.大米*<$STR(N$一级合成首饰大米)>/@大米锻造无双·道带>
+; <>   <无双·道靴|249#锻造条件：^-^250#1.王者首饰随意*1件^-^253#2.大米*<$STR(N$一级合成首饰大米)>/@大米锻造无双·道靴> \ \  \
+
+
+
+; <>                            <注意：/AUTOCOLOR=249><合成的所有装备都有几率杀怪直接爆出来/AUTOCOLOR=161>  \
+
+
+<Img|x=0.0|y=0.0|width=700|height=320|show=4|scale9l=10|scale9r=10|scale9t=10|move=0|loadDelay=1|scale9b=10|img=public_win32/bg_npc_01.png|esc=1|reset=1>
+<Layout|x=667.0|y=-18.0|width=80|height=80|link=@exit>
+<Button|x=695.0|y=1.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|x=297.0|y=51.0|color=251|size=16|text=大米锻造>
+<Text|x=18.0|y=88.0|color=250|size=16|text=战士锻造：>
+<Text|x=105.0|y=88.0|size=16|color=251|text=无双·神剑|link=@大米锻造无双·神剑>
+<Text|x=224.0|y=88.0|size=16|color=251|text=无双·战甲|link=@大米锻造无双·战甲>
+<Text|x=338.0|y=88.0|size=16|color=251|text=无双·战衣|link=@大米锻造无双·战衣>
+<Text|x=460.0|y=88.0|size=16|color=251|text=无双·战盔|link=@大米锻造无双·战盔>
+<Text|x=578.0|y=88.0|size=16|color=251|text=无双·战链|link=@大米锻造无双·战链>
+<Text|x=105.0|y=118.0|size=16|color=251|text=无双·战镯|link=@大米锻造无双·战镯>
+<Text|x=224.0|y=118.0|size=16|color=251|text=无双·战戒|link=@大米锻造无双·战戒>
+<Text|x=338.0|y=118.0|size=16|color=251|text=无双·战带|link=@大米锻造无双·战带>
+<Text|x=460.0|y=118.0|size=16|color=251|text=无双·战靴|link=@大米锻造无双·战靴>
+<Text|x=18.0|y=149.0|color=250|size=16|text=法师锻造：>
+<Text|x=105.0|y=149.0|size=16|color=251|text=无双·魔杖|link=@大米锻造无双·魔杖>
+<Text|x=224.0|y=149.0|size=16|color=251|text=无双·魔袍|link=@大米锻造无双·魔袍>
+<Text|x=338.0|y=149.0|size=16|color=251|text=无双·魔衣|link=@大米锻造无双·魔衣>
+<Text|x=460.0|y=149.0|size=16|color=251|text=无双·魔盔|link=@大米锻造无双·魔盔>
+<Text|x=578.0|y=149.0|size=16|color=251|text=无双·魔链|link=@大米锻造无双·魔链>
+<Text|x=105.0|y=179.0|size=16|color=251|text=无双·魔镯|link=@大米锻造无双·魔镯>
+<Text|x=224.0|y=179.0|size=16|color=251|text=无双·魔戒|link=@大米锻造无双·魔戒>
+<Text|x=338.0|y=179.0|size=16|color=251|text=无双·魔带|link=@大米锻造无双·魔带>
+<Text|x=460.0|y=179.0|size=16|color=251|text=无双·魔靴|link=@大米锻造无双·魔靴>
+<Text|x=18.0|y=210.0|color=250|size=16|text=道士锻造：>
+<Text|x=105.0|y=210.0|size=16|color=251|text=无双·道扇|link=@大米锻造无双·道扇>
+<Text|x=224.0|y=210.0|size=16|color=251|text=无双·道袍|link=@大米锻造无双·道袍>
+<Text|x=338.0|y=210.0|size=16|color=251|text=无双·道衣|link=@大米锻造无双·道衣>
+<Text|x=460.0|y=210.0|size=16|color=251|text=无双·道盔|link=@大米锻造无双·道盔>
+<Text|x=578.0|y=210.0|size=16|color=251|text=无双·道链|link=@大米锻造无双·道链>
+<Text|x=105.0|y=240.0|size=16|color=251|text=无双·道镯|link=@大米锻造无双·道镯>
+<Text|x=224.0|y=240.0|size=16|color=251|text=无双·道戒|link=@大米锻造无双·道戒>
+<Text|x=338.0|y=240.0|size=16|color=251|text=无双·道带|link=@大米锻造无双·道带>
+<Text|x=460.0|y=240.0|size=16|color=251|text=无双·道靴|link=@大米锻造无双·道靴>
+<RText|x=159.0|y=279.0|color=255|size=18|text=<注意：/FCOLOR=249><合成的所有装备都有几率杀怪直接爆出/FCOLOR=254>>
+
+
+[@大米锻造无双·战靴]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$一级合成首饰大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$一级合成首饰大米)>点，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 王者·战盔 N1
+getbagitemcount 王者·战链 N2
+getbagitemcount 王者·战镯 N3
+getbagitemcount 王者·战戒 N4
+getbagitemcount 王者·战带 N5
+getbagitemcount 王者·战靴 N6
+getbagitemcount 王者·魔盔 N7
+getbagitemcount 王者·魔链 N8
+getbagitemcount 王者·魔镯 N9
+getbagitemcount 王者·魔戒 N10
+getbagitemcount 王者·魔带 N11
+getbagitemcount 王者·魔靴 N12
+getbagitemcount 王者·道盔 N13
+getbagitemcount 王者·道链 N14
+getbagitemcount 王者·道镯 N15
+getbagitemcount 王者·道戒 N16
+getbagitemcount 王者·道带 N17
+getbagitemcount 王者·道靴 N18
+MOV N$一级首饰数量 0
+INC N$一级首饰数量 <$STR(N1)>
+INC N$一级首饰数量 <$STR(N2)>
+INC N$一级首饰数量 <$STR(N3)>
+INC N$一级首饰数量 <$STR(N4)>
+INC N$一级首饰数量 <$STR(N5)>
+INC N$一级首饰数量 <$STR(N6)>
+INC N$一级首饰数量 <$STR(N7)>
+INC N$一级首饰数量 <$STR(N8)>
+INC N$一级首饰数量 <$STR(N9)>
+INC N$一级首饰数量 <$STR(N10)>
+INC N$一级首饰数量 <$STR(N11)>
+INC N$一级首饰数量 <$STR(N12)>
+INC N$一级首饰数量 <$STR(N13)>
+INC N$一级首饰数量 <$STR(N14)>
+INC N$一级首饰数量 <$STR(N15)>
+INC N$一级首饰数量 <$STR(N16)>
+INC N$一级首饰数量 <$STR(N17)>
+INC N$一级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$一级首饰数量 <$STR(N$一级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成首饰数量)>件【王者系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$一级合成首饰大米)>
+TakeBagItem |王者·战盔|王者·战链|王者·战镯|王者·战戒|王者·战带|王者·战靴|王者·魔盔|王者·魔链|王者·魔镯|王者·魔戒|王者·魔带|王者·魔靴|王者·道盔|王者·道链|王者·道镯|王者·道戒|王者·道带|王者·道靴|| <$STR(N$一级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 无双·战靴 1
+MESSAGEBOX 恭喜您，成功锻造：无双·战靴*1
+BREAK
+
+
+
+
+[@大米锻造无双·战带]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$一级合成首饰大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$一级合成首饰大米)>点，无法锻造！
+BREAK
+
+
+
+
+#IF
+#ACT
+getbagitemcount 王者·战盔 N1
+getbagitemcount 王者·战链 N2
+getbagitemcount 王者·战镯 N3
+getbagitemcount 王者·战戒 N4
+getbagitemcount 王者·战带 N5
+getbagitemcount 王者·战靴 N6
+getbagitemcount 王者·魔盔 N7
+getbagitemcount 王者·魔链 N8
+getbagitemcount 王者·魔镯 N9
+getbagitemcount 王者·魔戒 N10
+getbagitemcount 王者·魔带 N11
+getbagitemcount 王者·魔靴 N12
+getbagitemcount 王者·道盔 N13
+getbagitemcount 王者·道链 N14
+getbagitemcount 王者·道镯 N15
+getbagitemcount 王者·道戒 N16
+getbagitemcount 王者·道带 N17
+getbagitemcount 王者·道靴 N18
+MOV N$一级首饰数量 0
+INC N$一级首饰数量 <$STR(N1)>
+INC N$一级首饰数量 <$STR(N2)>
+INC N$一级首饰数量 <$STR(N3)>
+INC N$一级首饰数量 <$STR(N4)>
+INC N$一级首饰数量 <$STR(N5)>
+INC N$一级首饰数量 <$STR(N6)>
+INC N$一级首饰数量 <$STR(N7)>
+INC N$一级首饰数量 <$STR(N8)>
+INC N$一级首饰数量 <$STR(N9)>
+INC N$一级首饰数量 <$STR(N10)>
+INC N$一级首饰数量 <$STR(N11)>
+INC N$一级首饰数量 <$STR(N12)>
+INC N$一级首饰数量 <$STR(N13)>
+INC N$一级首饰数量 <$STR(N14)>
+INC N$一级首饰数量 <$STR(N15)>
+INC N$一级首饰数量 <$STR(N16)>
+INC N$一级首饰数量 <$STR(N17)>
+INC N$一级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$一级首饰数量 <$STR(N$一级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成首饰数量)>件【王者系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$一级合成首饰大米)>
+TakeBagItem |王者·战盔|王者·战链|王者·战镯|王者·战戒|王者·战带|王者·战靴|王者·魔盔|王者·魔链|王者·魔镯|王者·魔戒|王者·魔带|王者·魔靴|王者·道盔|王者·道链|王者·道镯|王者·道戒|王者·道带|王者·道靴|| <$STR(N$一级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 无双·战带 1
+MESSAGEBOX 恭喜您，成功锻造：无双·战带*1
+BREAK
+
+
+
+
+[@大米锻造无双·战戒]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$一级合成首饰大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$一级合成首饰大米)>点，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 王者·战盔 N1
+getbagitemcount 王者·战链 N2
+getbagitemcount 王者·战镯 N3
+getbagitemcount 王者·战戒 N4
+getbagitemcount 王者·战带 N5
+getbagitemcount 王者·战靴 N6
+getbagitemcount 王者·魔盔 N7
+getbagitemcount 王者·魔链 N8
+getbagitemcount 王者·魔镯 N9
+getbagitemcount 王者·魔戒 N10
+getbagitemcount 王者·魔带 N11
+getbagitemcount 王者·魔靴 N12
+getbagitemcount 王者·道盔 N13
+getbagitemcount 王者·道链 N14
+getbagitemcount 王者·道镯 N15
+getbagitemcount 王者·道戒 N16
+getbagitemcount 王者·道带 N17
+getbagitemcount 王者·道靴 N18
+MOV N$一级首饰数量 0
+INC N$一级首饰数量 <$STR(N1)>
+INC N$一级首饰数量 <$STR(N2)>
+INC N$一级首饰数量 <$STR(N3)>
+INC N$一级首饰数量 <$STR(N4)>
+INC N$一级首饰数量 <$STR(N5)>
+INC N$一级首饰数量 <$STR(N6)>
+INC N$一级首饰数量 <$STR(N7)>
+INC N$一级首饰数量 <$STR(N8)>
+INC N$一级首饰数量 <$STR(N9)>
+INC N$一级首饰数量 <$STR(N10)>
+INC N$一级首饰数量 <$STR(N11)>
+INC N$一级首饰数量 <$STR(N12)>
+INC N$一级首饰数量 <$STR(N13)>
+INC N$一级首饰数量 <$STR(N14)>
+INC N$一级首饰数量 <$STR(N15)>
+INC N$一级首饰数量 <$STR(N16)>
+INC N$一级首饰数量 <$STR(N17)>
+INC N$一级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$一级首饰数量 <$STR(N$一级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成首饰数量)>件【王者系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$一级合成首饰大米)>
+TakeBagItem |王者·战盔|王者·战链|王者·战镯|王者·战戒|王者·战带|王者·战靴|王者·魔盔|王者·魔链|王者·魔镯|王者·魔戒|王者·魔带|王者·魔靴|王者·道盔|王者·道链|王者·道镯|王者·道戒|王者·道带|王者·道靴|| <$STR(N$一级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 无双·战戒 1
+MESSAGEBOX 恭喜您，成功锻造：无双·战戒*1
+BREAK
+
+
+
+
+
+[@大米锻造无双·战镯]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$一级合成首饰大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$一级合成首饰大米)>点，无法锻造！
+BREAK
+
+#IF
+#ACT
+getbagitemcount 王者·战盔 N1
+getbagitemcount 王者·战链 N2
+getbagitemcount 王者·战镯 N3
+getbagitemcount 王者·战戒 N4
+getbagitemcount 王者·战带 N5
+getbagitemcount 王者·战靴 N6
+getbagitemcount 王者·魔盔 N7
+getbagitemcount 王者·魔链 N8
+getbagitemcount 王者·魔镯 N9
+getbagitemcount 王者·魔戒 N10
+getbagitemcount 王者·魔带 N11
+getbagitemcount 王者·魔靴 N12
+getbagitemcount 王者·道盔 N13
+getbagitemcount 王者·道链 N14
+getbagitemcount 王者·道镯 N15
+getbagitemcount 王者·道戒 N16
+getbagitemcount 王者·道带 N17
+getbagitemcount 王者·道靴 N18
+MOV N$一级首饰数量 0
+INC N$一级首饰数量 <$STR(N1)>
+INC N$一级首饰数量 <$STR(N2)>
+INC N$一级首饰数量 <$STR(N3)>
+INC N$一级首饰数量 <$STR(N4)>
+INC N$一级首饰数量 <$STR(N5)>
+INC N$一级首饰数量 <$STR(N6)>
+INC N$一级首饰数量 <$STR(N7)>
+INC N$一级首饰数量 <$STR(N8)>
+INC N$一级首饰数量 <$STR(N9)>
+INC N$一级首饰数量 <$STR(N10)>
+INC N$一级首饰数量 <$STR(N11)>
+INC N$一级首饰数量 <$STR(N12)>
+INC N$一级首饰数量 <$STR(N13)>
+INC N$一级首饰数量 <$STR(N14)>
+INC N$一级首饰数量 <$STR(N15)>
+INC N$一级首饰数量 <$STR(N16)>
+INC N$一级首饰数量 <$STR(N17)>
+INC N$一级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$一级首饰数量 <$STR(N$一级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成首饰数量)>件【王者系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$一级合成首饰大米)>
+TakeBagItem |王者·战盔|王者·战链|王者·战镯|王者·战戒|王者·战带|王者·战靴|王者·魔盔|王者·魔链|王者·魔镯|王者·魔戒|王者·魔带|王者·魔靴|王者·道盔|王者·道链|王者·道镯|王者·道戒|王者·道带|王者·道靴|| <$STR(N$一级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 无双·战镯 1
+MESSAGEBOX 恭喜您，成功锻造：无双·战镯*1
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@大米锻造无双·战链]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$一级合成首饰大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$一级合成首饰大米)>点，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 王者·战盔 N1
+getbagitemcount 王者·战链 N2
+getbagitemcount 王者·战镯 N3
+getbagitemcount 王者·战戒 N4
+getbagitemcount 王者·战带 N5
+getbagitemcount 王者·战靴 N6
+getbagitemcount 王者·魔盔 N7
+getbagitemcount 王者·魔链 N8
+getbagitemcount 王者·魔镯 N9
+getbagitemcount 王者·魔戒 N10
+getbagitemcount 王者·魔带 N11
+getbagitemcount 王者·魔靴 N12
+getbagitemcount 王者·道盔 N13
+getbagitemcount 王者·道链 N14
+getbagitemcount 王者·道镯 N15
+getbagitemcount 王者·道戒 N16
+getbagitemcount 王者·道带 N17
+getbagitemcount 王者·道靴 N18
+MOV N$一级首饰数量 0
+INC N$一级首饰数量 <$STR(N1)>
+INC N$一级首饰数量 <$STR(N2)>
+INC N$一级首饰数量 <$STR(N3)>
+INC N$一级首饰数量 <$STR(N4)>
+INC N$一级首饰数量 <$STR(N5)>
+INC N$一级首饰数量 <$STR(N6)>
+INC N$一级首饰数量 <$STR(N7)>
+INC N$一级首饰数量 <$STR(N8)>
+INC N$一级首饰数量 <$STR(N9)>
+INC N$一级首饰数量 <$STR(N10)>
+INC N$一级首饰数量 <$STR(N11)>
+INC N$一级首饰数量 <$STR(N12)>
+INC N$一级首饰数量 <$STR(N13)>
+INC N$一级首饰数量 <$STR(N14)>
+INC N$一级首饰数量 <$STR(N15)>
+INC N$一级首饰数量 <$STR(N16)>
+INC N$一级首饰数量 <$STR(N17)>
+INC N$一级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$一级首饰数量 <$STR(N$一级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成首饰数量)>件【王者系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$一级合成首饰大米)>
+TakeBagItem |王者·战盔|王者·战链|王者·战镯|王者·战戒|王者·战带|王者·战靴|王者·魔盔|王者·魔链|王者·魔镯|王者·魔戒|王者·魔带|王者·魔靴|王者·道盔|王者·道链|王者·道镯|王者·道戒|王者·道带|王者·道靴|| <$STR(N$一级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 无双·战链 1
+MESSAGEBOX 恭喜您，成功锻造：无双·战链*1
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@大米锻造无双·战盔]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$一级合成首饰大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$一级合成首饰大米)>点，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 王者·战盔 N1
+getbagitemcount 王者·战链 N2
+getbagitemcount 王者·战镯 N3
+getbagitemcount 王者·战戒 N4
+getbagitemcount 王者·战带 N5
+getbagitemcount 王者·战靴 N6
+getbagitemcount 王者·魔盔 N7
+getbagitemcount 王者·魔链 N8
+getbagitemcount 王者·魔镯 N9
+getbagitemcount 王者·魔戒 N10
+getbagitemcount 王者·魔带 N11
+getbagitemcount 王者·魔靴 N12
+getbagitemcount 王者·道盔 N13
+getbagitemcount 王者·道链 N14
+getbagitemcount 王者·道镯 N15
+getbagitemcount 王者·道戒 N16
+getbagitemcount 王者·道带 N17
+getbagitemcount 王者·道靴 N18
+MOV N$一级首饰数量 0
+INC N$一级首饰数量 <$STR(N1)>
+INC N$一级首饰数量 <$STR(N2)>
+INC N$一级首饰数量 <$STR(N3)>
+INC N$一级首饰数量 <$STR(N4)>
+INC N$一级首饰数量 <$STR(N5)>
+INC N$一级首饰数量 <$STR(N6)>
+INC N$一级首饰数量 <$STR(N7)>
+INC N$一级首饰数量 <$STR(N8)>
+INC N$一级首饰数量 <$STR(N9)>
+INC N$一级首饰数量 <$STR(N10)>
+INC N$一级首饰数量 <$STR(N11)>
+INC N$一级首饰数量 <$STR(N12)>
+INC N$一级首饰数量 <$STR(N13)>
+INC N$一级首饰数量 <$STR(N14)>
+INC N$一级首饰数量 <$STR(N15)>
+INC N$一级首饰数量 <$STR(N16)>
+INC N$一级首饰数量 <$STR(N17)>
+INC N$一级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$一级首饰数量 <$STR(N$一级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成首饰数量)>件【王者系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$一级合成首饰大米)>
+TakeBagItem |王者·战盔|王者·战链|王者·战镯|王者·战戒|王者·战带|王者·战靴|王者·魔盔|王者·魔链|王者·魔镯|王者·魔戒|王者·魔带|王者·魔靴|王者·道盔|王者·道链|王者·道镯|王者·道戒|王者·道带|王者·道靴|| <$STR(N$一级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 无双·战盔 1
+MESSAGEBOX 恭喜您，成功锻造：无双·战盔*1
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@大米锻造无双·战衣]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$一级合成衣服大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$一级合成衣服大米)>点，无法锻造！
+BREAK
+
+
+
+#IF
+#ACT
+getbagitemcount 王者·战甲 N1
+getbagitemcount 王者·战衣 N2
+getbagitemcount 王者·魔袍 N3
+getbagitemcount 王者·魔衣 N4
+getbagitemcount 王者·道袍 N5
+getbagitemcount 王者·道衣 N6
+MOV N$一级衣服数量 0
+INC N$一级衣服数量 <$STR(N1)>
+INC N$一级衣服数量 <$STR(N2)>
+INC N$一级衣服数量 <$STR(N3)>
+INC N$一级衣服数量 <$STR(N4)>
+INC N$一级衣服数量 <$STR(N5)>
+INC N$一级衣服数量 <$STR(N6)>
+
+
+
+
+
+
+#IF
+SMALL N$一级衣服数量 <$STR(N$一级合成衣服数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成衣服数量)>件【王者系列】的衣服，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$一级合成衣服大米)>
+TakeBagItem |王者·战甲|王者·战衣|王者·魔袍|王者·魔衣|王者·道袍|王者·道衣|| <$STR(N$一级合成衣服数量)> 0 0 0 0 N55 0
+GIVE 无双·战衣 1
+MESSAGEBOX 恭喜您，成功锻造：无双·战衣*1
+BREAK
+
+
+
+
+
+
+
+[@大米锻造无双·战甲]
+
+
+#IF
+CHECKGAMEPOINT < <$STR(N$一级合成衣服大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$一级合成衣服大米)>点，无法锻造！
+BREAK
+
+#IF
+#ACT
+getbagitemcount 王者·战甲 N1
+getbagitemcount 王者·战衣 N2
+getbagitemcount 王者·魔袍 N3
+getbagitemcount 王者·魔衣 N4
+getbagitemcount 王者·道袍 N5
+getbagitemcount 王者·道衣 N6
+MOV N$一级衣服数量 0
+INC N$一级衣服数量 <$STR(N1)>
+INC N$一级衣服数量 <$STR(N2)>
+INC N$一级衣服数量 <$STR(N3)>
+INC N$一级衣服数量 <$STR(N4)>
+INC N$一级衣服数量 <$STR(N5)>
+INC N$一级衣服数量 <$STR(N6)>
+
+
+
+
+
+
+#IF
+SMALL N$一级衣服数量 <$STR(N$一级合成衣服数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成衣服数量)>件【王者系列】的衣服，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$一级合成衣服大米)>
+TakeBagItem |王者·战甲|王者·战衣|王者·魔袍|王者·魔衣|王者·道袍|王者·道衣|| <$STR(N$一级合成衣服数量)> 0 0 0 0 N55 0
+GIVE 无双·战甲 1
+MESSAGEBOX 恭喜您，成功锻造：无双·战甲*1
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@大米锻造无双·神剑]
+
+
+#IF
+CHECKGAMEPOINT < <$STR(N$一级合成武器大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$一级合成武器大米)>点，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 王者·神剑 N1
+getbagitemcount 王者·魔杖 N2
+getbagitemcount 王者·道扇 N3
+MOV N$一级武器数量 0
+INC N$一级武器数量 <$STR(N1)>
+INC N$一级武器数量 <$STR(N2)>
+INC N$一级武器数量 <$STR(N3)>
+
+
+
+
+
+#IF
+SMALL N$一级武器数量 <$STR(N$一级合成武器数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成武器数量)>把【王者系列】的武器，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$一级合成武器大米)>
+TakeBagItem |王者·神剑|王者·魔杖|王者·道扇|| <$STR(N$一级合成武器数量)> 0 0 0 0 N55 0
+GIVE 无双·神剑 1
+MESSAGEBOX 恭喜您，成功锻造：无双·神剑*1
+BREAK
+
+
+
+
+[@大米锻造无双·魔靴]
+
+
+#IF
+CHECKGAMEPOINT < <$STR(N$一级合成首饰大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$一级合成首饰大米)>点，无法锻造！
+BREAK
+
+
+
+#IF
+#ACT
+getbagitemcount 王者·战盔 N1
+getbagitemcount 王者·战链 N2
+getbagitemcount 王者·战镯 N3
+getbagitemcount 王者·战戒 N4
+getbagitemcount 王者·战带 N5
+getbagitemcount 王者·战靴 N6
+getbagitemcount 王者·魔盔 N7
+getbagitemcount 王者·魔链 N8
+getbagitemcount 王者·魔镯 N9
+getbagitemcount 王者·魔戒 N10
+getbagitemcount 王者·魔带 N11
+getbagitemcount 王者·魔靴 N12
+getbagitemcount 王者·道盔 N13
+getbagitemcount 王者·道链 N14
+getbagitemcount 王者·道镯 N15
+getbagitemcount 王者·道戒 N16
+getbagitemcount 王者·道带 N17
+getbagitemcount 王者·道靴 N18
+MOV N$一级首饰数量 0
+INC N$一级首饰数量 <$STR(N1)>
+INC N$一级首饰数量 <$STR(N2)>
+INC N$一级首饰数量 <$STR(N3)>
+INC N$一级首饰数量 <$STR(N4)>
+INC N$一级首饰数量 <$STR(N5)>
+INC N$一级首饰数量 <$STR(N6)>
+INC N$一级首饰数量 <$STR(N7)>
+INC N$一级首饰数量 <$STR(N8)>
+INC N$一级首饰数量 <$STR(N9)>
+INC N$一级首饰数量 <$STR(N10)>
+INC N$一级首饰数量 <$STR(N11)>
+INC N$一级首饰数量 <$STR(N12)>
+INC N$一级首饰数量 <$STR(N13)>
+INC N$一级首饰数量 <$STR(N14)>
+INC N$一级首饰数量 <$STR(N15)>
+INC N$一级首饰数量 <$STR(N16)>
+INC N$一级首饰数量 <$STR(N17)>
+INC N$一级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$一级首饰数量 <$STR(N$一级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成首饰数量)>件【王者系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$一级合成首饰大米)>
+TakeBagItem |王者·战盔|王者·战链|王者·战镯|王者·战戒|王者·战带|王者·战靴|王者·魔盔|王者·魔链|王者·魔镯|王者·魔戒|王者·魔带|王者·魔靴|王者·道盔|王者·道链|王者·道镯|王者·道戒|王者·道带|王者·道靴|| <$STR(N$一级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 无双·魔靴 1
+MESSAGEBOX 恭喜您，成功锻造：无双·魔靴*1
+BREAK
+
+
+
+
+[@大米锻造无双·魔带]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$一级合成首饰大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$一级合成首饰大米)>点，无法锻造！
+BREAK
+
+#IF
+#ACT
+getbagitemcount 王者·战盔 N1
+getbagitemcount 王者·战链 N2
+getbagitemcount 王者·战镯 N3
+getbagitemcount 王者·战戒 N4
+getbagitemcount 王者·战带 N5
+getbagitemcount 王者·战靴 N6
+getbagitemcount 王者·魔盔 N7
+getbagitemcount 王者·魔链 N8
+getbagitemcount 王者·魔镯 N9
+getbagitemcount 王者·魔戒 N10
+getbagitemcount 王者·魔带 N11
+getbagitemcount 王者·魔靴 N12
+getbagitemcount 王者·道盔 N13
+getbagitemcount 王者·道链 N14
+getbagitemcount 王者·道镯 N15
+getbagitemcount 王者·道戒 N16
+getbagitemcount 王者·道带 N17
+getbagitemcount 王者·道靴 N18
+MOV N$一级首饰数量 0
+INC N$一级首饰数量 <$STR(N1)>
+INC N$一级首饰数量 <$STR(N2)>
+INC N$一级首饰数量 <$STR(N3)>
+INC N$一级首饰数量 <$STR(N4)>
+INC N$一级首饰数量 <$STR(N5)>
+INC N$一级首饰数量 <$STR(N6)>
+INC N$一级首饰数量 <$STR(N7)>
+INC N$一级首饰数量 <$STR(N8)>
+INC N$一级首饰数量 <$STR(N9)>
+INC N$一级首饰数量 <$STR(N10)>
+INC N$一级首饰数量 <$STR(N11)>
+INC N$一级首饰数量 <$STR(N12)>
+INC N$一级首饰数量 <$STR(N13)>
+INC N$一级首饰数量 <$STR(N14)>
+INC N$一级首饰数量 <$STR(N15)>
+INC N$一级首饰数量 <$STR(N16)>
+INC N$一级首饰数量 <$STR(N17)>
+INC N$一级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$一级首饰数量 <$STR(N$一级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成首饰数量)>件【王者系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$一级合成首饰大米)>
+TakeBagItem |王者·战盔|王者·战链|王者·战镯|王者·战戒|王者·战带|王者·战靴|王者·魔盔|王者·魔链|王者·魔镯|王者·魔戒|王者·魔带|王者·魔靴|王者·道盔|王者·道链|王者·道镯|王者·道戒|王者·道带|王者·道靴|| <$STR(N$一级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 无双·魔带 1
+MESSAGEBOX 恭喜您，成功锻造：无双·魔带*1
+BREAK
+
+
+
+
+[@大米锻造无双·魔戒]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$一级合成首饰大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$一级合成首饰大米)>点，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 王者·战盔 N1
+getbagitemcount 王者·战链 N2
+getbagitemcount 王者·战镯 N3
+getbagitemcount 王者·战戒 N4
+getbagitemcount 王者·战带 N5
+getbagitemcount 王者·战靴 N6
+getbagitemcount 王者·魔盔 N7
+getbagitemcount 王者·魔链 N8
+getbagitemcount 王者·魔镯 N9
+getbagitemcount 王者·魔戒 N10
+getbagitemcount 王者·魔带 N11
+getbagitemcount 王者·魔靴 N12
+getbagitemcount 王者·道盔 N13
+getbagitemcount 王者·道链 N14
+getbagitemcount 王者·道镯 N15
+getbagitemcount 王者·道戒 N16
+getbagitemcount 王者·道带 N17
+getbagitemcount 王者·道靴 N18
+MOV N$一级首饰数量 0
+INC N$一级首饰数量 <$STR(N1)>
+INC N$一级首饰数量 <$STR(N2)>
+INC N$一级首饰数量 <$STR(N3)>
+INC N$一级首饰数量 <$STR(N4)>
+INC N$一级首饰数量 <$STR(N5)>
+INC N$一级首饰数量 <$STR(N6)>
+INC N$一级首饰数量 <$STR(N7)>
+INC N$一级首饰数量 <$STR(N8)>
+INC N$一级首饰数量 <$STR(N9)>
+INC N$一级首饰数量 <$STR(N10)>
+INC N$一级首饰数量 <$STR(N11)>
+INC N$一级首饰数量 <$STR(N12)>
+INC N$一级首饰数量 <$STR(N13)>
+INC N$一级首饰数量 <$STR(N14)>
+INC N$一级首饰数量 <$STR(N15)>
+INC N$一级首饰数量 <$STR(N16)>
+INC N$一级首饰数量 <$STR(N17)>
+INC N$一级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$一级首饰数量 <$STR(N$一级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成首饰数量)>件【王者系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$一级合成首饰大米)>
+TakeBagItem |王者·战盔|王者·战链|王者·战镯|王者·战戒|王者·战带|王者·战靴|王者·魔盔|王者·魔链|王者·魔镯|王者·魔戒|王者·魔带|王者·魔靴|王者·道盔|王者·道链|王者·道镯|王者·道戒|王者·道带|王者·道靴|| <$STR(N$一级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 无双·魔戒 1
+MESSAGEBOX 恭喜您，成功锻造：无双·魔戒*1
+BREAK
+
+
+
+
+
+[@大米锻造无双·魔镯]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$一级合成首饰大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$一级合成首饰大米)>点，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 王者·战盔 N1
+getbagitemcount 王者·战链 N2
+getbagitemcount 王者·战镯 N3
+getbagitemcount 王者·战戒 N4
+getbagitemcount 王者·战带 N5
+getbagitemcount 王者·战靴 N6
+getbagitemcount 王者·魔盔 N7
+getbagitemcount 王者·魔链 N8
+getbagitemcount 王者·魔镯 N9
+getbagitemcount 王者·魔戒 N10
+getbagitemcount 王者·魔带 N11
+getbagitemcount 王者·魔靴 N12
+getbagitemcount 王者·道盔 N13
+getbagitemcount 王者·道链 N14
+getbagitemcount 王者·道镯 N15
+getbagitemcount 王者·道戒 N16
+getbagitemcount 王者·道带 N17
+getbagitemcount 王者·道靴 N18
+MOV N$一级首饰数量 0
+INC N$一级首饰数量 <$STR(N1)>
+INC N$一级首饰数量 <$STR(N2)>
+INC N$一级首饰数量 <$STR(N3)>
+INC N$一级首饰数量 <$STR(N4)>
+INC N$一级首饰数量 <$STR(N5)>
+INC N$一级首饰数量 <$STR(N6)>
+INC N$一级首饰数量 <$STR(N7)>
+INC N$一级首饰数量 <$STR(N8)>
+INC N$一级首饰数量 <$STR(N9)>
+INC N$一级首饰数量 <$STR(N10)>
+INC N$一级首饰数量 <$STR(N11)>
+INC N$一级首饰数量 <$STR(N12)>
+INC N$一级首饰数量 <$STR(N13)>
+INC N$一级首饰数量 <$STR(N14)>
+INC N$一级首饰数量 <$STR(N15)>
+INC N$一级首饰数量 <$STR(N16)>
+INC N$一级首饰数量 <$STR(N17)>
+INC N$一级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$一级首饰数量 <$STR(N$一级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成首饰数量)>件【王者系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$一级合成首饰大米)>
+TakeBagItem |王者·战盔|王者·战链|王者·战镯|王者·战戒|王者·战带|王者·战靴|王者·魔盔|王者·魔链|王者·魔镯|王者·魔戒|王者·魔带|王者·魔靴|王者·道盔|王者·道链|王者·道镯|王者·道戒|王者·道带|王者·道靴|| <$STR(N$一级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 无双·魔镯 1
+MESSAGEBOX 恭喜您，成功锻造：无双·魔镯*1
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@大米锻造无双·魔链]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$一级合成首饰大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$一级合成首饰大米)>点，无法锻造！
+BREAK
+
+
+
+#IF
+#ACT
+getbagitemcount 王者·战盔 N1
+getbagitemcount 王者·战链 N2
+getbagitemcount 王者·战镯 N3
+getbagitemcount 王者·战戒 N4
+getbagitemcount 王者·战带 N5
+getbagitemcount 王者·战靴 N6
+getbagitemcount 王者·魔盔 N7
+getbagitemcount 王者·魔链 N8
+getbagitemcount 王者·魔镯 N9
+getbagitemcount 王者·魔戒 N10
+getbagitemcount 王者·魔带 N11
+getbagitemcount 王者·魔靴 N12
+getbagitemcount 王者·道盔 N13
+getbagitemcount 王者·道链 N14
+getbagitemcount 王者·道镯 N15
+getbagitemcount 王者·道戒 N16
+getbagitemcount 王者·道带 N17
+getbagitemcount 王者·道靴 N18
+MOV N$一级首饰数量 0
+INC N$一级首饰数量 <$STR(N1)>
+INC N$一级首饰数量 <$STR(N2)>
+INC N$一级首饰数量 <$STR(N3)>
+INC N$一级首饰数量 <$STR(N4)>
+INC N$一级首饰数量 <$STR(N5)>
+INC N$一级首饰数量 <$STR(N6)>
+INC N$一级首饰数量 <$STR(N7)>
+INC N$一级首饰数量 <$STR(N8)>
+INC N$一级首饰数量 <$STR(N9)>
+INC N$一级首饰数量 <$STR(N10)>
+INC N$一级首饰数量 <$STR(N11)>
+INC N$一级首饰数量 <$STR(N12)>
+INC N$一级首饰数量 <$STR(N13)>
+INC N$一级首饰数量 <$STR(N14)>
+INC N$一级首饰数量 <$STR(N15)>
+INC N$一级首饰数量 <$STR(N16)>
+INC N$一级首饰数量 <$STR(N17)>
+INC N$一级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$一级首饰数量 <$STR(N$一级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成首饰数量)>件【王者系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$一级合成首饰大米)>
+TakeBagItem |王者·战盔|王者·战链|王者·战镯|王者·战戒|王者·战带|王者·战靴|王者·魔盔|王者·魔链|王者·魔镯|王者·魔戒|王者·魔带|王者·魔靴|王者·道盔|王者·道链|王者·道镯|王者·道戒|王者·道带|王者·道靴|| <$STR(N$一级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 无双·魔链 1
+MESSAGEBOX 恭喜您，成功锻造：无双·魔链*1
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@大米锻造无双·魔盔]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$一级合成首饰大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$一级合成首饰大米)>点，无法锻造！
+BREAK
+
+
+
+#IF
+#ACT
+getbagitemcount 王者·战盔 N1
+getbagitemcount 王者·战链 N2
+getbagitemcount 王者·战镯 N3
+getbagitemcount 王者·战戒 N4
+getbagitemcount 王者·战带 N5
+getbagitemcount 王者·战靴 N6
+getbagitemcount 王者·魔盔 N7
+getbagitemcount 王者·魔链 N8
+getbagitemcount 王者·魔镯 N9
+getbagitemcount 王者·魔戒 N10
+getbagitemcount 王者·魔带 N11
+getbagitemcount 王者·魔靴 N12
+getbagitemcount 王者·道盔 N13
+getbagitemcount 王者·道链 N14
+getbagitemcount 王者·道镯 N15
+getbagitemcount 王者·道戒 N16
+getbagitemcount 王者·道带 N17
+getbagitemcount 王者·道靴 N18
+MOV N$一级首饰数量 0
+INC N$一级首饰数量 <$STR(N1)>
+INC N$一级首饰数量 <$STR(N2)>
+INC N$一级首饰数量 <$STR(N3)>
+INC N$一级首饰数量 <$STR(N4)>
+INC N$一级首饰数量 <$STR(N5)>
+INC N$一级首饰数量 <$STR(N6)>
+INC N$一级首饰数量 <$STR(N7)>
+INC N$一级首饰数量 <$STR(N8)>
+INC N$一级首饰数量 <$STR(N9)>
+INC N$一级首饰数量 <$STR(N10)>
+INC N$一级首饰数量 <$STR(N11)>
+INC N$一级首饰数量 <$STR(N12)>
+INC N$一级首饰数量 <$STR(N13)>
+INC N$一级首饰数量 <$STR(N14)>
+INC N$一级首饰数量 <$STR(N15)>
+INC N$一级首饰数量 <$STR(N16)>
+INC N$一级首饰数量 <$STR(N17)>
+INC N$一级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$一级首饰数量 <$STR(N$一级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成首饰数量)>件【王者系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$一级合成首饰大米)>
+TakeBagItem |王者·战盔|王者·战链|王者·战镯|王者·战戒|王者·战带|王者·战靴|王者·魔盔|王者·魔链|王者·魔镯|王者·魔戒|王者·魔带|王者·魔靴|王者·道盔|王者·道链|王者·道镯|王者·道戒|王者·道带|王者·道靴|| <$STR(N$一级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 无双·魔盔 1
+MESSAGEBOX 恭喜您，成功锻造：无双·魔盔*1
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@大米锻造无双·魔衣]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$一级合成衣服大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$一级合成衣服大米)>点，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 王者·战甲 N1
+getbagitemcount 王者·战衣 N2
+getbagitemcount 王者·魔袍 N3
+getbagitemcount 王者·魔衣 N4
+getbagitemcount 王者·道袍 N5
+getbagitemcount 王者·道衣 N6
+MOV N$一级衣服数量 0
+INC N$一级衣服数量 <$STR(N1)>
+INC N$一级衣服数量 <$STR(N2)>
+INC N$一级衣服数量 <$STR(N3)>
+INC N$一级衣服数量 <$STR(N4)>
+INC N$一级衣服数量 <$STR(N5)>
+INC N$一级衣服数量 <$STR(N6)>
+
+
+
+
+
+
+#IF
+SMALL N$一级衣服数量 <$STR(N$一级合成衣服数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成衣服数量)>件【王者系列】的衣服，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$一级合成衣服大米)>
+TakeBagItem |王者·战甲|王者·战衣|王者·魔袍|王者·魔衣|王者·道袍|王者·道衣|| <$STR(N$一级合成衣服数量)> 0 0 0 0 N55 0
+GIVE 无双·魔衣 1
+MESSAGEBOX 恭喜您，成功锻造：无双·魔衣*1
+BREAK
+
+
+
+
+
+
+
+[@大米锻造无双·魔袍]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$一级合成衣服大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$一级合成衣服大米)>点，无法锻造！
+BREAK
+
+
+
+#IF
+#ACT
+getbagitemcount 王者·战甲 N1
+getbagitemcount 王者·战衣 N2
+getbagitemcount 王者·魔袍 N3
+getbagitemcount 王者·魔衣 N4
+getbagitemcount 王者·道袍 N5
+getbagitemcount 王者·道衣 N6
+MOV N$一级衣服数量 0
+INC N$一级衣服数量 <$STR(N1)>
+INC N$一级衣服数量 <$STR(N2)>
+INC N$一级衣服数量 <$STR(N3)>
+INC N$一级衣服数量 <$STR(N4)>
+INC N$一级衣服数量 <$STR(N5)>
+INC N$一级衣服数量 <$STR(N6)>
+
+
+
+
+
+
+#IF
+SMALL N$一级衣服数量 <$STR(N$一级合成衣服数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成衣服数量)>件【王者系列】的衣服，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$一级合成衣服大米)>
+TakeBagItem |王者·战甲|王者·战衣|王者·魔袍|王者·魔衣|王者·道袍|王者·道衣|| <$STR(N$一级合成衣服数量)> 0 0 0 0 N55 0
+GIVE 无双·魔袍 1
+MESSAGEBOX 恭喜您，成功锻造：无双·魔袍*1
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@大米锻造无双·魔杖]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$一级合成武器大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$一级合成武器大米)>点，无法锻造！
+BREAK
+
+
+
+#IF
+#ACT
+getbagitemcount 王者·神剑 N1
+getbagitemcount 王者·魔杖 N2
+getbagitemcount 王者·道扇 N3
+MOV N$一级武器数量 0
+INC N$一级武器数量 <$STR(N1)>
+INC N$一级武器数量 <$STR(N2)>
+INC N$一级武器数量 <$STR(N3)>
+
+
+
+
+
+#IF
+SMALL N$一级武器数量 <$STR(N$一级合成武器数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成武器数量)>把【王者系列】的武器，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$一级合成武器大米)>
+TakeBagItem |王者·神剑|王者·魔杖|王者·道扇|| <$STR(N$一级合成武器数量)> 0 0 0 0 N55 0
+GIVE 无双·魔杖 1
+MESSAGEBOX 恭喜您，成功锻造：无双·魔杖*1
+BREAK
+
+
+
+
+
+[@大米锻造无双·道靴]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$一级合成首饰大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$一级合成首饰大米)>点，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 王者·战盔 N1
+getbagitemcount 王者·战链 N2
+getbagitemcount 王者·战镯 N3
+getbagitemcount 王者·战戒 N4
+getbagitemcount 王者·战带 N5
+getbagitemcount 王者·战靴 N6
+getbagitemcount 王者·魔盔 N7
+getbagitemcount 王者·魔链 N8
+getbagitemcount 王者·魔镯 N9
+getbagitemcount 王者·魔戒 N10
+getbagitemcount 王者·魔带 N11
+getbagitemcount 王者·魔靴 N12
+getbagitemcount 王者·道盔 N13
+getbagitemcount 王者·道链 N14
+getbagitemcount 王者·道镯 N15
+getbagitemcount 王者·道戒 N16
+getbagitemcount 王者·道带 N17
+getbagitemcount 王者·道靴 N18
+MOV N$一级首饰数量 0
+INC N$一级首饰数量 <$STR(N1)>
+INC N$一级首饰数量 <$STR(N2)>
+INC N$一级首饰数量 <$STR(N3)>
+INC N$一级首饰数量 <$STR(N4)>
+INC N$一级首饰数量 <$STR(N5)>
+INC N$一级首饰数量 <$STR(N6)>
+INC N$一级首饰数量 <$STR(N7)>
+INC N$一级首饰数量 <$STR(N8)>
+INC N$一级首饰数量 <$STR(N9)>
+INC N$一级首饰数量 <$STR(N10)>
+INC N$一级首饰数量 <$STR(N11)>
+INC N$一级首饰数量 <$STR(N12)>
+INC N$一级首饰数量 <$STR(N13)>
+INC N$一级首饰数量 <$STR(N14)>
+INC N$一级首饰数量 <$STR(N15)>
+INC N$一级首饰数量 <$STR(N16)>
+INC N$一级首饰数量 <$STR(N17)>
+INC N$一级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$一级首饰数量 <$STR(N$一级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成首饰数量)>件【王者系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$一级合成首饰大米)>
+TakeBagItem |王者·战盔|王者·战链|王者·战镯|王者·战戒|王者·战带|王者·战靴|王者·魔盔|王者·魔链|王者·魔镯|王者·魔戒|王者·魔带|王者·魔靴|王者·道盔|王者·道链|王者·道镯|王者·道戒|王者·道带|王者·道靴|| <$STR(N$一级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 无双·道靴 1
+MESSAGEBOX 恭喜您，成功锻造：无双·道靴*1
+BREAK
+
+
+
+
+[@大米锻造无双·道带]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$一级合成首饰大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$一级合成首饰大米)>点，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 王者·战盔 N1
+getbagitemcount 王者·战链 N2
+getbagitemcount 王者·战镯 N3
+getbagitemcount 王者·战戒 N4
+getbagitemcount 王者·战带 N5
+getbagitemcount 王者·战靴 N6
+getbagitemcount 王者·魔盔 N7
+getbagitemcount 王者·魔链 N8
+getbagitemcount 王者·魔镯 N9
+getbagitemcount 王者·魔戒 N10
+getbagitemcount 王者·魔带 N11
+getbagitemcount 王者·魔靴 N12
+getbagitemcount 王者·道盔 N13
+getbagitemcount 王者·道链 N14
+getbagitemcount 王者·道镯 N15
+getbagitemcount 王者·道戒 N16
+getbagitemcount 王者·道带 N17
+getbagitemcount 王者·道靴 N18
+MOV N$一级首饰数量 0
+INC N$一级首饰数量 <$STR(N1)>
+INC N$一级首饰数量 <$STR(N2)>
+INC N$一级首饰数量 <$STR(N3)>
+INC N$一级首饰数量 <$STR(N4)>
+INC N$一级首饰数量 <$STR(N5)>
+INC N$一级首饰数量 <$STR(N6)>
+INC N$一级首饰数量 <$STR(N7)>
+INC N$一级首饰数量 <$STR(N8)>
+INC N$一级首饰数量 <$STR(N9)>
+INC N$一级首饰数量 <$STR(N10)>
+INC N$一级首饰数量 <$STR(N11)>
+INC N$一级首饰数量 <$STR(N12)>
+INC N$一级首饰数量 <$STR(N13)>
+INC N$一级首饰数量 <$STR(N14)>
+INC N$一级首饰数量 <$STR(N15)>
+INC N$一级首饰数量 <$STR(N16)>
+INC N$一级首饰数量 <$STR(N17)>
+INC N$一级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$一级首饰数量 <$STR(N$一级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成首饰数量)>件【王者系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$一级合成首饰大米)>
+TakeBagItem |王者·战盔|王者·战链|王者·战镯|王者·战戒|王者·战带|王者·战靴|王者·魔盔|王者·魔链|王者·魔镯|王者·魔戒|王者·魔带|王者·魔靴|王者·道盔|王者·道链|王者·道镯|王者·道戒|王者·道带|王者·道靴|| <$STR(N$一级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 无双·道带 1
+MESSAGEBOX 恭喜您，成功锻造：无双·道带*1
+BREAK
+
+
+
+
+[@大米锻造无双·道戒]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$一级合成首饰大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$一级合成首饰大米)>点，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 王者·战盔 N1
+getbagitemcount 王者·战链 N2
+getbagitemcount 王者·战镯 N3
+getbagitemcount 王者·战戒 N4
+getbagitemcount 王者·战带 N5
+getbagitemcount 王者·战靴 N6
+getbagitemcount 王者·魔盔 N7
+getbagitemcount 王者·魔链 N8
+getbagitemcount 王者·魔镯 N9
+getbagitemcount 王者·魔戒 N10
+getbagitemcount 王者·魔带 N11
+getbagitemcount 王者·魔靴 N12
+getbagitemcount 王者·道盔 N13
+getbagitemcount 王者·道链 N14
+getbagitemcount 王者·道镯 N15
+getbagitemcount 王者·道戒 N16
+getbagitemcount 王者·道带 N17
+getbagitemcount 王者·道靴 N18
+MOV N$一级首饰数量 0
+INC N$一级首饰数量 <$STR(N1)>
+INC N$一级首饰数量 <$STR(N2)>
+INC N$一级首饰数量 <$STR(N3)>
+INC N$一级首饰数量 <$STR(N4)>
+INC N$一级首饰数量 <$STR(N5)>
+INC N$一级首饰数量 <$STR(N6)>
+INC N$一级首饰数量 <$STR(N7)>
+INC N$一级首饰数量 <$STR(N8)>
+INC N$一级首饰数量 <$STR(N9)>
+INC N$一级首饰数量 <$STR(N10)>
+INC N$一级首饰数量 <$STR(N11)>
+INC N$一级首饰数量 <$STR(N12)>
+INC N$一级首饰数量 <$STR(N13)>
+INC N$一级首饰数量 <$STR(N14)>
+INC N$一级首饰数量 <$STR(N15)>
+INC N$一级首饰数量 <$STR(N16)>
+INC N$一级首饰数量 <$STR(N17)>
+INC N$一级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$一级首饰数量 <$STR(N$一级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成首饰数量)>件【王者系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$一级合成首饰大米)>
+TakeBagItem |王者·战盔|王者·战链|王者·战镯|王者·战戒|王者·战带|王者·战靴|王者·魔盔|王者·魔链|王者·魔镯|王者·魔戒|王者·魔带|王者·魔靴|王者·道盔|王者·道链|王者·道镯|王者·道戒|王者·道带|王者·道靴|| <$STR(N$一级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 无双·道戒 1
+MESSAGEBOX 恭喜您，成功锻造：无双·道戒*1
+BREAK
+
+
+
+
+
+[@大米锻造无双·道镯]
+
+
+#IF
+CHECKGAMEPOINT < <$STR(N$一级合成首饰大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$一级合成首饰大米)>点，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 王者·战盔 N1
+getbagitemcount 王者·战链 N2
+getbagitemcount 王者·战镯 N3
+getbagitemcount 王者·战戒 N4
+getbagitemcount 王者·战带 N5
+getbagitemcount 王者·战靴 N6
+getbagitemcount 王者·魔盔 N7
+getbagitemcount 王者·魔链 N8
+getbagitemcount 王者·魔镯 N9
+getbagitemcount 王者·魔戒 N10
+getbagitemcount 王者·魔带 N11
+getbagitemcount 王者·魔靴 N12
+getbagitemcount 王者·道盔 N13
+getbagitemcount 王者·道链 N14
+getbagitemcount 王者·道镯 N15
+getbagitemcount 王者·道戒 N16
+getbagitemcount 王者·道带 N17
+getbagitemcount 王者·道靴 N18
+MOV N$一级首饰数量 0
+INC N$一级首饰数量 <$STR(N1)>
+INC N$一级首饰数量 <$STR(N2)>
+INC N$一级首饰数量 <$STR(N3)>
+INC N$一级首饰数量 <$STR(N4)>
+INC N$一级首饰数量 <$STR(N5)>
+INC N$一级首饰数量 <$STR(N6)>
+INC N$一级首饰数量 <$STR(N7)>
+INC N$一级首饰数量 <$STR(N8)>
+INC N$一级首饰数量 <$STR(N9)>
+INC N$一级首饰数量 <$STR(N10)>
+INC N$一级首饰数量 <$STR(N11)>
+INC N$一级首饰数量 <$STR(N12)>
+INC N$一级首饰数量 <$STR(N13)>
+INC N$一级首饰数量 <$STR(N14)>
+INC N$一级首饰数量 <$STR(N15)>
+INC N$一级首饰数量 <$STR(N16)>
+INC N$一级首饰数量 <$STR(N17)>
+INC N$一级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$一级首饰数量 <$STR(N$一级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成首饰数量)>件【王者系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$一级合成首饰大米)>
+TakeBagItem |王者·战盔|王者·战链|王者·战镯|王者·战戒|王者·战带|王者·战靴|王者·魔盔|王者·魔链|王者·魔镯|王者·魔戒|王者·魔带|王者·魔靴|王者·道盔|王者·道链|王者·道镯|王者·道戒|王者·道带|王者·道靴|| <$STR(N$一级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 无双·道镯 1
+MESSAGEBOX 恭喜您，成功锻造：无双·道镯*1
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@大米锻造无双·道链]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$一级合成首饰大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$一级合成首饰大米)>点，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 王者·战盔 N1
+getbagitemcount 王者·战链 N2
+getbagitemcount 王者·战镯 N3
+getbagitemcount 王者·战戒 N4
+getbagitemcount 王者·战带 N5
+getbagitemcount 王者·战靴 N6
+getbagitemcount 王者·魔盔 N7
+getbagitemcount 王者·魔链 N8
+getbagitemcount 王者·魔镯 N9
+getbagitemcount 王者·魔戒 N10
+getbagitemcount 王者·魔带 N11
+getbagitemcount 王者·魔靴 N12
+getbagitemcount 王者·道盔 N13
+getbagitemcount 王者·道链 N14
+getbagitemcount 王者·道镯 N15
+getbagitemcount 王者·道戒 N16
+getbagitemcount 王者·道带 N17
+getbagitemcount 王者·道靴 N18
+MOV N$一级首饰数量 0
+INC N$一级首饰数量 <$STR(N1)>
+INC N$一级首饰数量 <$STR(N2)>
+INC N$一级首饰数量 <$STR(N3)>
+INC N$一级首饰数量 <$STR(N4)>
+INC N$一级首饰数量 <$STR(N5)>
+INC N$一级首饰数量 <$STR(N6)>
+INC N$一级首饰数量 <$STR(N7)>
+INC N$一级首饰数量 <$STR(N8)>
+INC N$一级首饰数量 <$STR(N9)>
+INC N$一级首饰数量 <$STR(N10)>
+INC N$一级首饰数量 <$STR(N11)>
+INC N$一级首饰数量 <$STR(N12)>
+INC N$一级首饰数量 <$STR(N13)>
+INC N$一级首饰数量 <$STR(N14)>
+INC N$一级首饰数量 <$STR(N15)>
+INC N$一级首饰数量 <$STR(N16)>
+INC N$一级首饰数量 <$STR(N17)>
+INC N$一级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$一级首饰数量 <$STR(N$一级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成首饰数量)>件【王者系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$一级合成首饰大米)>
+TakeBagItem |王者·战盔|王者·战链|王者·战镯|王者·战戒|王者·战带|王者·战靴|王者·魔盔|王者·魔链|王者·魔镯|王者·魔戒|王者·魔带|王者·魔靴|王者·道盔|王者·道链|王者·道镯|王者·道戒|王者·道带|王者·道靴|| <$STR(N$一级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 无双·道链 1
+MESSAGEBOX 恭喜您，成功锻造：无双·道链*1
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@大米锻造无双·道盔]
+
+
+#IF
+CHECKGAMEPOINT < <$STR(N$一级合成首饰大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$一级合成首饰大米)>点，无法锻造！
+BREAK
+
+#IF
+#ACT
+getbagitemcount 王者·战盔 N1
+getbagitemcount 王者·战链 N2
+getbagitemcount 王者·战镯 N3
+getbagitemcount 王者·战戒 N4
+getbagitemcount 王者·战带 N5
+getbagitemcount 王者·战靴 N6
+getbagitemcount 王者·魔盔 N7
+getbagitemcount 王者·魔链 N8
+getbagitemcount 王者·魔镯 N9
+getbagitemcount 王者·魔戒 N10
+getbagitemcount 王者·魔带 N11
+getbagitemcount 王者·魔靴 N12
+getbagitemcount 王者·道盔 N13
+getbagitemcount 王者·道链 N14
+getbagitemcount 王者·道镯 N15
+getbagitemcount 王者·道戒 N16
+getbagitemcount 王者·道带 N17
+getbagitemcount 王者·道靴 N18
+MOV N$一级首饰数量 0
+INC N$一级首饰数量 <$STR(N1)>
+INC N$一级首饰数量 <$STR(N2)>
+INC N$一级首饰数量 <$STR(N3)>
+INC N$一级首饰数量 <$STR(N4)>
+INC N$一级首饰数量 <$STR(N5)>
+INC N$一级首饰数量 <$STR(N6)>
+INC N$一级首饰数量 <$STR(N7)>
+INC N$一级首饰数量 <$STR(N8)>
+INC N$一级首饰数量 <$STR(N9)>
+INC N$一级首饰数量 <$STR(N10)>
+INC N$一级首饰数量 <$STR(N11)>
+INC N$一级首饰数量 <$STR(N12)>
+INC N$一级首饰数量 <$STR(N13)>
+INC N$一级首饰数量 <$STR(N14)>
+INC N$一级首饰数量 <$STR(N15)>
+INC N$一级首饰数量 <$STR(N16)>
+INC N$一级首饰数量 <$STR(N17)>
+INC N$一级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$一级首饰数量 <$STR(N$一级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成首饰数量)>件【王者系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$一级合成首饰大米)>
+TakeBagItem |王者·战盔|王者·战链|王者·战镯|王者·战戒|王者·战带|王者·战靴|王者·魔盔|王者·魔链|王者·魔镯|王者·魔戒|王者·魔带|王者·魔靴|王者·道盔|王者·道链|王者·道镯|王者·道戒|王者·道带|王者·道靴|| <$STR(N$一级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 无双·道盔 1
+MESSAGEBOX 恭喜您，成功锻造：无双·道盔*1
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@大米锻造无双·道衣]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$一级合成衣服大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$一级合成衣服大米)>点，无法锻造！
+BREAK
+
+#IF
+#ACT
+getbagitemcount 王者·战甲 N1
+getbagitemcount 王者·战衣 N2
+getbagitemcount 王者·魔袍 N3
+getbagitemcount 王者·魔衣 N4
+getbagitemcount 王者·道袍 N5
+getbagitemcount 王者·道衣 N6
+MOV N$一级衣服数量 0
+INC N$一级衣服数量 <$STR(N1)>
+INC N$一级衣服数量 <$STR(N2)>
+INC N$一级衣服数量 <$STR(N3)>
+INC N$一级衣服数量 <$STR(N4)>
+INC N$一级衣服数量 <$STR(N5)>
+INC N$一级衣服数量 <$STR(N6)>
+
+
+
+
+
+
+#IF
+SMALL N$一级衣服数量 <$STR(N$一级合成衣服数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成衣服数量)>件【王者系列】的衣服，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$一级合成衣服大米)>
+TakeBagItem |王者·战甲|王者·战衣|王者·魔袍|王者·魔衣|王者·道袍|王者·道衣|| <$STR(N$一级合成衣服数量)> 0 0 0 0 N55 0
+GIVE 无双·道衣 1
+MESSAGEBOX 恭喜您，成功锻造：无双·道衣*1
+BREAK
+
+
+
+
+
+
+
+[@大米锻造无双·道袍]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$一级合成衣服大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$一级合成衣服大米)>点，无法锻造！
+BREAK
+
+
+
+#IF
+#ACT
+getbagitemcount 王者·战甲 N1
+getbagitemcount 王者·战衣 N2
+getbagitemcount 王者·魔袍 N3
+getbagitemcount 王者·魔衣 N4
+getbagitemcount 王者·道袍 N5
+getbagitemcount 王者·道衣 N6
+MOV N$一级衣服数量 0
+INC N$一级衣服数量 <$STR(N1)>
+INC N$一级衣服数量 <$STR(N2)>
+INC N$一级衣服数量 <$STR(N3)>
+INC N$一级衣服数量 <$STR(N4)>
+INC N$一级衣服数量 <$STR(N5)>
+INC N$一级衣服数量 <$STR(N6)>
+
+
+
+
+
+
+#IF
+SMALL N$一级衣服数量 <$STR(N$一级合成衣服数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成衣服数量)>件【王者系列】的衣服，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$一级合成衣服大米)>
+TakeBagItem |王者·战甲|王者·战衣|王者·魔袍|王者·魔衣|王者·道袍|王者·道衣|| <$STR(N$一级合成衣服数量)> 0 0 0 0 N55 0
+GIVE 无双·道袍 1
+MESSAGEBOX 恭喜您，成功锻造：无双·道袍*1
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@大米锻造无双·道扇]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$一级合成武器大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$一级合成武器大米)>点，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 王者·神剑 N1
+getbagitemcount 王者·魔杖 N2
+getbagitemcount 王者·道扇 N3
+MOV N$一级武器数量 0
+INC N$一级武器数量 <$STR(N1)>
+INC N$一级武器数量 <$STR(N2)>
+INC N$一级武器数量 <$STR(N3)>
+
+
+
+
+
+#IF
+SMALL N$一级武器数量 <$STR(N$一级合成武器数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成武器数量)>把【王者系列】的武器，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$一级合成武器大米)>
+TakeBagItem |王者·神剑|王者·魔杖|王者·道扇|| <$STR(N$一级合成武器数量)> 0 0 0 0 N55 0
+GIVE 无双·道扇 1
+MESSAGEBOX 恭喜您，成功锻造：无双·道扇*1
+BREAK
+
+
+
+
+
+
+
+
+
+[@材料锻造无双·战靴]
+
+#IF
+NOT CHECKITEM <$STR(S$一级合成首饰材料)> <$STR(N$一级合成首饰材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$一级合成首饰材料)>】不够<$STR(N$一级合成首饰材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 王者·战盔 N1
+getbagitemcount 王者·战链 N2
+getbagitemcount 王者·战镯 N3
+getbagitemcount 王者·战戒 N4
+getbagitemcount 王者·战带 N5
+getbagitemcount 王者·战靴 N6
+getbagitemcount 王者·魔盔 N7
+getbagitemcount 王者·魔链 N8
+getbagitemcount 王者·魔镯 N9
+getbagitemcount 王者·魔戒 N10
+getbagitemcount 王者·魔带 N11
+getbagitemcount 王者·魔靴 N12
+getbagitemcount 王者·道盔 N13
+getbagitemcount 王者·道链 N14
+getbagitemcount 王者·道镯 N15
+getbagitemcount 王者·道戒 N16
+getbagitemcount 王者·道带 N17
+getbagitemcount 王者·道靴 N18
+MOV N$一级首饰数量 0
+INC N$一级首饰数量 <$STR(N1)>
+INC N$一级首饰数量 <$STR(N2)>
+INC N$一级首饰数量 <$STR(N3)>
+INC N$一级首饰数量 <$STR(N4)>
+INC N$一级首饰数量 <$STR(N5)>
+INC N$一级首饰数量 <$STR(N6)>
+INC N$一级首饰数量 <$STR(N7)>
+INC N$一级首饰数量 <$STR(N8)>
+INC N$一级首饰数量 <$STR(N9)>
+INC N$一级首饰数量 <$STR(N10)>
+INC N$一级首饰数量 <$STR(N11)>
+INC N$一级首饰数量 <$STR(N12)>
+INC N$一级首饰数量 <$STR(N13)>
+INC N$一级首饰数量 <$STR(N14)>
+INC N$一级首饰数量 <$STR(N15)>
+INC N$一级首饰数量 <$STR(N16)>
+INC N$一级首饰数量 <$STR(N17)>
+INC N$一级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$一级首饰数量 <$STR(N$一级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成首饰数量)>件【王者系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$一级合成首饰材料)> <$STR(N$一级合成首饰材料)>
+TakeBagItem |王者·战盔|王者·战链|王者·战镯|王者·战戒|王者·战带|王者·战靴|王者·魔盔|王者·魔链|王者·魔镯|王者·魔戒|王者·魔带|王者·魔靴|王者·道盔|王者·道链|王者·道镯|王者·道戒|王者·道带|王者·道靴|| <$STR(N$一级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 无双·战靴 1
+MESSAGEBOX 恭喜您，成功锻造：无双·战靴*1
+BREAK
+
+
+
+
+[@材料锻造无双·战带]
+
+#IF
+NOT CHECKITEM <$STR(S$一级合成首饰材料)> <$STR(N$一级合成首饰材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$一级合成首饰材料)>】不够<$STR(N$一级合成首饰材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 王者·战盔 N1
+getbagitemcount 王者·战链 N2
+getbagitemcount 王者·战镯 N3
+getbagitemcount 王者·战戒 N4
+getbagitemcount 王者·战带 N5
+getbagitemcount 王者·战靴 N6
+getbagitemcount 王者·魔盔 N7
+getbagitemcount 王者·魔链 N8
+getbagitemcount 王者·魔镯 N9
+getbagitemcount 王者·魔戒 N10
+getbagitemcount 王者·魔带 N11
+getbagitemcount 王者·魔靴 N12
+getbagitemcount 王者·道盔 N13
+getbagitemcount 王者·道链 N14
+getbagitemcount 王者·道镯 N15
+getbagitemcount 王者·道戒 N16
+getbagitemcount 王者·道带 N17
+getbagitemcount 王者·道靴 N18
+MOV N$一级首饰数量 0
+INC N$一级首饰数量 <$STR(N1)>
+INC N$一级首饰数量 <$STR(N2)>
+INC N$一级首饰数量 <$STR(N3)>
+INC N$一级首饰数量 <$STR(N4)>
+INC N$一级首饰数量 <$STR(N5)>
+INC N$一级首饰数量 <$STR(N6)>
+INC N$一级首饰数量 <$STR(N7)>
+INC N$一级首饰数量 <$STR(N8)>
+INC N$一级首饰数量 <$STR(N9)>
+INC N$一级首饰数量 <$STR(N10)>
+INC N$一级首饰数量 <$STR(N11)>
+INC N$一级首饰数量 <$STR(N12)>
+INC N$一级首饰数量 <$STR(N13)>
+INC N$一级首饰数量 <$STR(N14)>
+INC N$一级首饰数量 <$STR(N15)>
+INC N$一级首饰数量 <$STR(N16)>
+INC N$一级首饰数量 <$STR(N17)>
+INC N$一级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$一级首饰数量 <$STR(N$一级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成首饰数量)>件【王者系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$一级合成首饰材料)> <$STR(N$一级合成首饰材料)>
+TakeBagItem |王者·战盔|王者·战链|王者·战镯|王者·战戒|王者·战带|王者·战靴|王者·魔盔|王者·魔链|王者·魔镯|王者·魔戒|王者·魔带|王者·魔靴|王者·道盔|王者·道链|王者·道镯|王者·道戒|王者·道带|王者·道靴|| <$STR(N$一级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 无双·战带 1
+MESSAGEBOX 恭喜您，成功锻造：无双·战带*1
+BREAK
+
+
+
+
+[@材料锻造无双·战戒]
+
+#IF
+NOT CHECKITEM <$STR(S$一级合成首饰材料)> <$STR(N$一级合成首饰材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$一级合成首饰材料)>】不够<$STR(N$一级合成首饰材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 王者·战盔 N1
+getbagitemcount 王者·战链 N2
+getbagitemcount 王者·战镯 N3
+getbagitemcount 王者·战戒 N4
+getbagitemcount 王者·战带 N5
+getbagitemcount 王者·战靴 N6
+getbagitemcount 王者·魔盔 N7
+getbagitemcount 王者·魔链 N8
+getbagitemcount 王者·魔镯 N9
+getbagitemcount 王者·魔戒 N10
+getbagitemcount 王者·魔带 N11
+getbagitemcount 王者·魔靴 N12
+getbagitemcount 王者·道盔 N13
+getbagitemcount 王者·道链 N14
+getbagitemcount 王者·道镯 N15
+getbagitemcount 王者·道戒 N16
+getbagitemcount 王者·道带 N17
+getbagitemcount 王者·道靴 N18
+MOV N$一级首饰数量 0
+INC N$一级首饰数量 <$STR(N1)>
+INC N$一级首饰数量 <$STR(N2)>
+INC N$一级首饰数量 <$STR(N3)>
+INC N$一级首饰数量 <$STR(N4)>
+INC N$一级首饰数量 <$STR(N5)>
+INC N$一级首饰数量 <$STR(N6)>
+INC N$一级首饰数量 <$STR(N7)>
+INC N$一级首饰数量 <$STR(N8)>
+INC N$一级首饰数量 <$STR(N9)>
+INC N$一级首饰数量 <$STR(N10)>
+INC N$一级首饰数量 <$STR(N11)>
+INC N$一级首饰数量 <$STR(N12)>
+INC N$一级首饰数量 <$STR(N13)>
+INC N$一级首饰数量 <$STR(N14)>
+INC N$一级首饰数量 <$STR(N15)>
+INC N$一级首饰数量 <$STR(N16)>
+INC N$一级首饰数量 <$STR(N17)>
+INC N$一级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$一级首饰数量 <$STR(N$一级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成首饰数量)>件【王者系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$一级合成首饰材料)> <$STR(N$一级合成首饰材料)>
+TakeBagItem |王者·战盔|王者·战链|王者·战镯|王者·战戒|王者·战带|王者·战靴|王者·魔盔|王者·魔链|王者·魔镯|王者·魔戒|王者·魔带|王者·魔靴|王者·道盔|王者·道链|王者·道镯|王者·道戒|王者·道带|王者·道靴|| <$STR(N$一级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 无双·战戒 1
+MESSAGEBOX 恭喜您，成功锻造：无双·战戒*1
+BREAK
+
+
+
+
+
+[@材料锻造无双·战镯]
+
+#IF
+NOT CHECKITEM <$STR(S$一级合成首饰材料)> <$STR(N$一级合成首饰材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$一级合成首饰材料)>】不够<$STR(N$一级合成首饰材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 王者·战盔 N1
+getbagitemcount 王者·战链 N2
+getbagitemcount 王者·战镯 N3
+getbagitemcount 王者·战戒 N4
+getbagitemcount 王者·战带 N5
+getbagitemcount 王者·战靴 N6
+getbagitemcount 王者·魔盔 N7
+getbagitemcount 王者·魔链 N8
+getbagitemcount 王者·魔镯 N9
+getbagitemcount 王者·魔戒 N10
+getbagitemcount 王者·魔带 N11
+getbagitemcount 王者·魔靴 N12
+getbagitemcount 王者·道盔 N13
+getbagitemcount 王者·道链 N14
+getbagitemcount 王者·道镯 N15
+getbagitemcount 王者·道戒 N16
+getbagitemcount 王者·道带 N17
+getbagitemcount 王者·道靴 N18
+MOV N$一级首饰数量 0
+INC N$一级首饰数量 <$STR(N1)>
+INC N$一级首饰数量 <$STR(N2)>
+INC N$一级首饰数量 <$STR(N3)>
+INC N$一级首饰数量 <$STR(N4)>
+INC N$一级首饰数量 <$STR(N5)>
+INC N$一级首饰数量 <$STR(N6)>
+INC N$一级首饰数量 <$STR(N7)>
+INC N$一级首饰数量 <$STR(N8)>
+INC N$一级首饰数量 <$STR(N9)>
+INC N$一级首饰数量 <$STR(N10)>
+INC N$一级首饰数量 <$STR(N11)>
+INC N$一级首饰数量 <$STR(N12)>
+INC N$一级首饰数量 <$STR(N13)>
+INC N$一级首饰数量 <$STR(N14)>
+INC N$一级首饰数量 <$STR(N15)>
+INC N$一级首饰数量 <$STR(N16)>
+INC N$一级首饰数量 <$STR(N17)>
+INC N$一级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$一级首饰数量 <$STR(N$一级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成首饰数量)>件【王者系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$一级合成首饰材料)> <$STR(N$一级合成首饰材料)>
+TakeBagItem |王者·战盔|王者·战链|王者·战镯|王者·战戒|王者·战带|王者·战靴|王者·魔盔|王者·魔链|王者·魔镯|王者·魔戒|王者·魔带|王者·魔靴|王者·道盔|王者·道链|王者·道镯|王者·道戒|王者·道带|王者·道靴|| <$STR(N$一级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 无双·战镯 1
+MESSAGEBOX 恭喜您，成功锻造：无双·战镯*1
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@材料锻造无双·战链]
+
+#IF
+NOT CHECKITEM <$STR(S$一级合成首饰材料)> <$STR(N$一级合成首饰材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$一级合成首饰材料)>】不够<$STR(N$一级合成首饰材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 王者·战盔 N1
+getbagitemcount 王者·战链 N2
+getbagitemcount 王者·战镯 N3
+getbagitemcount 王者·战戒 N4
+getbagitemcount 王者·战带 N5
+getbagitemcount 王者·战靴 N6
+getbagitemcount 王者·魔盔 N7
+getbagitemcount 王者·魔链 N8
+getbagitemcount 王者·魔镯 N9
+getbagitemcount 王者·魔戒 N10
+getbagitemcount 王者·魔带 N11
+getbagitemcount 王者·魔靴 N12
+getbagitemcount 王者·道盔 N13
+getbagitemcount 王者·道链 N14
+getbagitemcount 王者·道镯 N15
+getbagitemcount 王者·道戒 N16
+getbagitemcount 王者·道带 N17
+getbagitemcount 王者·道靴 N18
+MOV N$一级首饰数量 0
+INC N$一级首饰数量 <$STR(N1)>
+INC N$一级首饰数量 <$STR(N2)>
+INC N$一级首饰数量 <$STR(N3)>
+INC N$一级首饰数量 <$STR(N4)>
+INC N$一级首饰数量 <$STR(N5)>
+INC N$一级首饰数量 <$STR(N6)>
+INC N$一级首饰数量 <$STR(N7)>
+INC N$一级首饰数量 <$STR(N8)>
+INC N$一级首饰数量 <$STR(N9)>
+INC N$一级首饰数量 <$STR(N10)>
+INC N$一级首饰数量 <$STR(N11)>
+INC N$一级首饰数量 <$STR(N12)>
+INC N$一级首饰数量 <$STR(N13)>
+INC N$一级首饰数量 <$STR(N14)>
+INC N$一级首饰数量 <$STR(N15)>
+INC N$一级首饰数量 <$STR(N16)>
+INC N$一级首饰数量 <$STR(N17)>
+INC N$一级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$一级首饰数量 <$STR(N$一级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成首饰数量)>件【王者系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$一级合成首饰材料)> <$STR(N$一级合成首饰材料)>
+TakeBagItem |王者·战盔|王者·战链|王者·战镯|王者·战戒|王者·战带|王者·战靴|王者·魔盔|王者·魔链|王者·魔镯|王者·魔戒|王者·魔带|王者·魔靴|王者·道盔|王者·道链|王者·道镯|王者·道戒|王者·道带|王者·道靴|| <$STR(N$一级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 无双·战链 1
+MESSAGEBOX 恭喜您，成功锻造：无双·战链*1
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@材料锻造无双·战盔]
+
+#IF
+NOT CHECKITEM <$STR(S$一级合成首饰材料)> <$STR(N$一级合成首饰材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$一级合成首饰材料)>】不够<$STR(N$一级合成首饰材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 王者·战盔 N1
+getbagitemcount 王者·战链 N2
+getbagitemcount 王者·战镯 N3
+getbagitemcount 王者·战戒 N4
+getbagitemcount 王者·战带 N5
+getbagitemcount 王者·战靴 N6
+getbagitemcount 王者·魔盔 N7
+getbagitemcount 王者·魔链 N8
+getbagitemcount 王者·魔镯 N9
+getbagitemcount 王者·魔戒 N10
+getbagitemcount 王者·魔带 N11
+getbagitemcount 王者·魔靴 N12
+getbagitemcount 王者·道盔 N13
+getbagitemcount 王者·道链 N14
+getbagitemcount 王者·道镯 N15
+getbagitemcount 王者·道戒 N16
+getbagitemcount 王者·道带 N17
+getbagitemcount 王者·道靴 N18
+MOV N$一级首饰数量 0
+INC N$一级首饰数量 <$STR(N1)>
+INC N$一级首饰数量 <$STR(N2)>
+INC N$一级首饰数量 <$STR(N3)>
+INC N$一级首饰数量 <$STR(N4)>
+INC N$一级首饰数量 <$STR(N5)>
+INC N$一级首饰数量 <$STR(N6)>
+INC N$一级首饰数量 <$STR(N7)>
+INC N$一级首饰数量 <$STR(N8)>
+INC N$一级首饰数量 <$STR(N9)>
+INC N$一级首饰数量 <$STR(N10)>
+INC N$一级首饰数量 <$STR(N11)>
+INC N$一级首饰数量 <$STR(N12)>
+INC N$一级首饰数量 <$STR(N13)>
+INC N$一级首饰数量 <$STR(N14)>
+INC N$一级首饰数量 <$STR(N15)>
+INC N$一级首饰数量 <$STR(N16)>
+INC N$一级首饰数量 <$STR(N17)>
+INC N$一级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$一级首饰数量 <$STR(N$一级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成首饰数量)>件【王者系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$一级合成首饰材料)> <$STR(N$一级合成首饰材料)>
+TakeBagItem |王者·战盔|王者·战链|王者·战镯|王者·战戒|王者·战带|王者·战靴|王者·魔盔|王者·魔链|王者·魔镯|王者·魔戒|王者·魔带|王者·魔靴|王者·道盔|王者·道链|王者·道镯|王者·道戒|王者·道带|王者·道靴|| <$STR(N$一级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 无双·战盔 1
+MESSAGEBOX 恭喜您，成功锻造：无双·战盔*1
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@材料锻造无双·战衣]
+
+#IF
+NOT CHECKITEM <$STR(S$一级合成衣服材料)> <$STR(N$一级合成衣服材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$一级合成衣服材料)>】不够<$STR(N$一级合成衣服材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 王者·战甲 N1
+getbagitemcount 王者·战衣 N2
+getbagitemcount 王者·魔袍 N3
+getbagitemcount 王者·魔衣 N4
+getbagitemcount 王者·道袍 N5
+getbagitemcount 王者·道衣 N6
+MOV N$一级衣服数量 0
+INC N$一级衣服数量 <$STR(N1)>
+INC N$一级衣服数量 <$STR(N2)>
+INC N$一级衣服数量 <$STR(N3)>
+INC N$一级衣服数量 <$STR(N4)>
+INC N$一级衣服数量 <$STR(N5)>
+INC N$一级衣服数量 <$STR(N6)>
+
+
+
+
+
+
+#IF
+SMALL N$一级衣服数量 <$STR(N$一级合成衣服数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成衣服数量)>件【王者系列】的衣服，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$一级合成衣服材料)> <$STR(N$一级合成衣服材料)>
+TakeBagItem |王者·战甲|王者·战衣|王者·魔袍|王者·魔衣|王者·道袍|王者·道衣|| <$STR(N$一级合成衣服数量)> 0 0 0 0 N55 0
+GIVE 无双·战衣 1
+MESSAGEBOX 恭喜您，成功锻造：无双·战衣*1
+BREAK
+
+
+
+
+
+
+
+[@材料锻造无双·战甲]
+
+#IF
+NOT CHECKITEM <$STR(S$一级合成衣服材料)> <$STR(N$一级合成衣服材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$一级合成衣服材料)>】不够<$STR(N$一级合成衣服材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 王者·战甲 N1
+getbagitemcount 王者·战衣 N2
+getbagitemcount 王者·魔袍 N3
+getbagitemcount 王者·魔衣 N4
+getbagitemcount 王者·道袍 N5
+getbagitemcount 王者·道衣 N6
+MOV N$一级衣服数量 0
+INC N$一级衣服数量 <$STR(N1)>
+INC N$一级衣服数量 <$STR(N2)>
+INC N$一级衣服数量 <$STR(N3)>
+INC N$一级衣服数量 <$STR(N4)>
+INC N$一级衣服数量 <$STR(N5)>
+INC N$一级衣服数量 <$STR(N6)>
+
+
+
+
+
+
+#IF
+SMALL N$一级衣服数量 <$STR(N$一级合成衣服数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成衣服数量)>件【王者系列】的衣服，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$一级合成衣服材料)> <$STR(N$一级合成衣服材料)>
+TakeBagItem |王者·战甲|王者·战衣|王者·魔袍|王者·魔衣|王者·道袍|王者·道衣|| <$STR(N$一级合成衣服数量)> 0 0 0 0 N55 0
+GIVE 无双·战甲 1
+MESSAGEBOX 恭喜您，成功锻造：无双·战甲*1
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@材料锻造无双·神剑]
+
+#IF
+NOT CHECKITEM <$STR(S$一级合成武器材料)> <$STR(N$一级合成武器材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$一级合成武器材料)>】不够<$STR(N$一级合成武器材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 王者·神剑 N1
+getbagitemcount 王者·魔杖 N2
+getbagitemcount 王者·道扇 N3
+MOV N$一级武器数量 0
+INC N$一级武器数量 <$STR(N1)>
+INC N$一级武器数量 <$STR(N2)>
+INC N$一级武器数量 <$STR(N3)>
+
+
+
+
+
+#IF
+SMALL N$一级武器数量 <$STR(N$一级合成武器数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成武器数量)>把【王者系列】的武器，无法打造！
+BREAK
+
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$一级合成武器材料)> <$STR(N$一级合成武器材料)>
+TakeBagItem |王者·神剑|王者·魔杖|王者·道扇|| <$STR(N$一级合成武器数量)> 0 0 0 0 N55 0
+GIVE 无双·神剑 1
+MESSAGEBOX 恭喜您，成功锻造：无双·神剑*1
+BREAK
+
+
+
+
+[@材料锻造无双·魔靴]
+
+#IF
+NOT CHECKITEM <$STR(S$一级合成首饰材料)> <$STR(N$一级合成首饰材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$一级合成首饰材料)>】不够<$STR(N$一级合成首饰材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 王者·战盔 N1
+getbagitemcount 王者·战链 N2
+getbagitemcount 王者·战镯 N3
+getbagitemcount 王者·战戒 N4
+getbagitemcount 王者·战带 N5
+getbagitemcount 王者·战靴 N6
+getbagitemcount 王者·魔盔 N7
+getbagitemcount 王者·魔链 N8
+getbagitemcount 王者·魔镯 N9
+getbagitemcount 王者·魔戒 N10
+getbagitemcount 王者·魔带 N11
+getbagitemcount 王者·魔靴 N12
+getbagitemcount 王者·道盔 N13
+getbagitemcount 王者·道链 N14
+getbagitemcount 王者·道镯 N15
+getbagitemcount 王者·道戒 N16
+getbagitemcount 王者·道带 N17
+getbagitemcount 王者·道靴 N18
+MOV N$一级首饰数量 0
+INC N$一级首饰数量 <$STR(N1)>
+INC N$一级首饰数量 <$STR(N2)>
+INC N$一级首饰数量 <$STR(N3)>
+INC N$一级首饰数量 <$STR(N4)>
+INC N$一级首饰数量 <$STR(N5)>
+INC N$一级首饰数量 <$STR(N6)>
+INC N$一级首饰数量 <$STR(N7)>
+INC N$一级首饰数量 <$STR(N8)>
+INC N$一级首饰数量 <$STR(N9)>
+INC N$一级首饰数量 <$STR(N10)>
+INC N$一级首饰数量 <$STR(N11)>
+INC N$一级首饰数量 <$STR(N12)>
+INC N$一级首饰数量 <$STR(N13)>
+INC N$一级首饰数量 <$STR(N14)>
+INC N$一级首饰数量 <$STR(N15)>
+INC N$一级首饰数量 <$STR(N16)>
+INC N$一级首饰数量 <$STR(N17)>
+INC N$一级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$一级首饰数量 <$STR(N$一级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成首饰数量)>件【王者系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$一级合成首饰材料)> <$STR(N$一级合成首饰材料)>
+TakeBagItem |王者·战盔|王者·战链|王者·战镯|王者·战戒|王者·战带|王者·战靴|王者·魔盔|王者·魔链|王者·魔镯|王者·魔戒|王者·魔带|王者·魔靴|王者·道盔|王者·道链|王者·道镯|王者·道戒|王者·道带|王者·道靴|| <$STR(N$一级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 无双·魔靴 1
+MESSAGEBOX 恭喜您，成功锻造：无双·魔靴*1
+BREAK
+
+
+
+
+[@材料锻造无双·魔带]
+
+#IF
+NOT CHECKITEM <$STR(S$一级合成首饰材料)> <$STR(N$一级合成首饰材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$一级合成首饰材料)>】不够<$STR(N$一级合成首饰材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 王者·战盔 N1
+getbagitemcount 王者·战链 N2
+getbagitemcount 王者·战镯 N3
+getbagitemcount 王者·战戒 N4
+getbagitemcount 王者·战带 N5
+getbagitemcount 王者·战靴 N6
+getbagitemcount 王者·魔盔 N7
+getbagitemcount 王者·魔链 N8
+getbagitemcount 王者·魔镯 N9
+getbagitemcount 王者·魔戒 N10
+getbagitemcount 王者·魔带 N11
+getbagitemcount 王者·魔靴 N12
+getbagitemcount 王者·道盔 N13
+getbagitemcount 王者·道链 N14
+getbagitemcount 王者·道镯 N15
+getbagitemcount 王者·道戒 N16
+getbagitemcount 王者·道带 N17
+getbagitemcount 王者·道靴 N18
+MOV N$一级首饰数量 0
+INC N$一级首饰数量 <$STR(N1)>
+INC N$一级首饰数量 <$STR(N2)>
+INC N$一级首饰数量 <$STR(N3)>
+INC N$一级首饰数量 <$STR(N4)>
+INC N$一级首饰数量 <$STR(N5)>
+INC N$一级首饰数量 <$STR(N6)>
+INC N$一级首饰数量 <$STR(N7)>
+INC N$一级首饰数量 <$STR(N8)>
+INC N$一级首饰数量 <$STR(N9)>
+INC N$一级首饰数量 <$STR(N10)>
+INC N$一级首饰数量 <$STR(N11)>
+INC N$一级首饰数量 <$STR(N12)>
+INC N$一级首饰数量 <$STR(N13)>
+INC N$一级首饰数量 <$STR(N14)>
+INC N$一级首饰数量 <$STR(N15)>
+INC N$一级首饰数量 <$STR(N16)>
+INC N$一级首饰数量 <$STR(N17)>
+INC N$一级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$一级首饰数量 <$STR(N$一级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成首饰数量)>件【王者系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$一级合成首饰材料)> <$STR(N$一级合成首饰材料)>
+TakeBagItem |王者·战盔|王者·战链|王者·战镯|王者·战戒|王者·战带|王者·战靴|王者·魔盔|王者·魔链|王者·魔镯|王者·魔戒|王者·魔带|王者·魔靴|王者·道盔|王者·道链|王者·道镯|王者·道戒|王者·道带|王者·道靴|| <$STR(N$一级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 无双·魔带 1
+MESSAGEBOX 恭喜您，成功锻造：无双·魔带*1
+BREAK
+
+
+
+
+[@材料锻造无双·魔戒]
+
+#IF
+NOT CHECKITEM <$STR(S$一级合成首饰材料)> <$STR(N$一级合成首饰材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$一级合成首饰材料)>】不够<$STR(N$一级合成首饰材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 王者·战盔 N1
+getbagitemcount 王者·战链 N2
+getbagitemcount 王者·战镯 N3
+getbagitemcount 王者·战戒 N4
+getbagitemcount 王者·战带 N5
+getbagitemcount 王者·战靴 N6
+getbagitemcount 王者·魔盔 N7
+getbagitemcount 王者·魔链 N8
+getbagitemcount 王者·魔镯 N9
+getbagitemcount 王者·魔戒 N10
+getbagitemcount 王者·魔带 N11
+getbagitemcount 王者·魔靴 N12
+getbagitemcount 王者·道盔 N13
+getbagitemcount 王者·道链 N14
+getbagitemcount 王者·道镯 N15
+getbagitemcount 王者·道戒 N16
+getbagitemcount 王者·道带 N17
+getbagitemcount 王者·道靴 N18
+MOV N$一级首饰数量 0
+INC N$一级首饰数量 <$STR(N1)>
+INC N$一级首饰数量 <$STR(N2)>
+INC N$一级首饰数量 <$STR(N3)>
+INC N$一级首饰数量 <$STR(N4)>
+INC N$一级首饰数量 <$STR(N5)>
+INC N$一级首饰数量 <$STR(N6)>
+INC N$一级首饰数量 <$STR(N7)>
+INC N$一级首饰数量 <$STR(N8)>
+INC N$一级首饰数量 <$STR(N9)>
+INC N$一级首饰数量 <$STR(N10)>
+INC N$一级首饰数量 <$STR(N11)>
+INC N$一级首饰数量 <$STR(N12)>
+INC N$一级首饰数量 <$STR(N13)>
+INC N$一级首饰数量 <$STR(N14)>
+INC N$一级首饰数量 <$STR(N15)>
+INC N$一级首饰数量 <$STR(N16)>
+INC N$一级首饰数量 <$STR(N17)>
+INC N$一级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$一级首饰数量 <$STR(N$一级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成首饰数量)>件【王者系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$一级合成首饰材料)> <$STR(N$一级合成首饰材料)>
+TakeBagItem |王者·战盔|王者·战链|王者·战镯|王者·战戒|王者·战带|王者·战靴|王者·魔盔|王者·魔链|王者·魔镯|王者·魔戒|王者·魔带|王者·魔靴|王者·道盔|王者·道链|王者·道镯|王者·道戒|王者·道带|王者·道靴|| <$STR(N$一级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 无双·魔戒 1
+MESSAGEBOX 恭喜您，成功锻造：无双·魔戒*1
+BREAK
+
+
+
+
+
+[@材料锻造无双·魔镯]
+
+#IF
+NOT CHECKITEM <$STR(S$一级合成首饰材料)> <$STR(N$一级合成首饰材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$一级合成首饰材料)>】不够<$STR(N$一级合成首饰材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 王者·战盔 N1
+getbagitemcount 王者·战链 N2
+getbagitemcount 王者·战镯 N3
+getbagitemcount 王者·战戒 N4
+getbagitemcount 王者·战带 N5
+getbagitemcount 王者·战靴 N6
+getbagitemcount 王者·魔盔 N7
+getbagitemcount 王者·魔链 N8
+getbagitemcount 王者·魔镯 N9
+getbagitemcount 王者·魔戒 N10
+getbagitemcount 王者·魔带 N11
+getbagitemcount 王者·魔靴 N12
+getbagitemcount 王者·道盔 N13
+getbagitemcount 王者·道链 N14
+getbagitemcount 王者·道镯 N15
+getbagitemcount 王者·道戒 N16
+getbagitemcount 王者·道带 N17
+getbagitemcount 王者·道靴 N18
+MOV N$一级首饰数量 0
+INC N$一级首饰数量 <$STR(N1)>
+INC N$一级首饰数量 <$STR(N2)>
+INC N$一级首饰数量 <$STR(N3)>
+INC N$一级首饰数量 <$STR(N4)>
+INC N$一级首饰数量 <$STR(N5)>
+INC N$一级首饰数量 <$STR(N6)>
+INC N$一级首饰数量 <$STR(N7)>
+INC N$一级首饰数量 <$STR(N8)>
+INC N$一级首饰数量 <$STR(N9)>
+INC N$一级首饰数量 <$STR(N10)>
+INC N$一级首饰数量 <$STR(N11)>
+INC N$一级首饰数量 <$STR(N12)>
+INC N$一级首饰数量 <$STR(N13)>
+INC N$一级首饰数量 <$STR(N14)>
+INC N$一级首饰数量 <$STR(N15)>
+INC N$一级首饰数量 <$STR(N16)>
+INC N$一级首饰数量 <$STR(N17)>
+INC N$一级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$一级首饰数量 <$STR(N$一级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成首饰数量)>件【王者系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$一级合成首饰材料)> <$STR(N$一级合成首饰材料)>
+TakeBagItem |王者·战盔|王者·战链|王者·战镯|王者·战戒|王者·战带|王者·战靴|王者·魔盔|王者·魔链|王者·魔镯|王者·魔戒|王者·魔带|王者·魔靴|王者·道盔|王者·道链|王者·道镯|王者·道戒|王者·道带|王者·道靴|| <$STR(N$一级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 无双·魔镯 1
+MESSAGEBOX 恭喜您，成功锻造：无双·魔镯*1
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@材料锻造无双·魔链]
+
+#IF
+NOT CHECKITEM <$STR(S$一级合成首饰材料)> <$STR(N$一级合成首饰材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$一级合成首饰材料)>】不够<$STR(N$一级合成首饰材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 王者·战盔 N1
+getbagitemcount 王者·战链 N2
+getbagitemcount 王者·战镯 N3
+getbagitemcount 王者·战戒 N4
+getbagitemcount 王者·战带 N5
+getbagitemcount 王者·战靴 N6
+getbagitemcount 王者·魔盔 N7
+getbagitemcount 王者·魔链 N8
+getbagitemcount 王者·魔镯 N9
+getbagitemcount 王者·魔戒 N10
+getbagitemcount 王者·魔带 N11
+getbagitemcount 王者·魔靴 N12
+getbagitemcount 王者·道盔 N13
+getbagitemcount 王者·道链 N14
+getbagitemcount 王者·道镯 N15
+getbagitemcount 王者·道戒 N16
+getbagitemcount 王者·道带 N17
+getbagitemcount 王者·道靴 N18
+MOV N$一级首饰数量 0
+INC N$一级首饰数量 <$STR(N1)>
+INC N$一级首饰数量 <$STR(N2)>
+INC N$一级首饰数量 <$STR(N3)>
+INC N$一级首饰数量 <$STR(N4)>
+INC N$一级首饰数量 <$STR(N5)>
+INC N$一级首饰数量 <$STR(N6)>
+INC N$一级首饰数量 <$STR(N7)>
+INC N$一级首饰数量 <$STR(N8)>
+INC N$一级首饰数量 <$STR(N9)>
+INC N$一级首饰数量 <$STR(N10)>
+INC N$一级首饰数量 <$STR(N11)>
+INC N$一级首饰数量 <$STR(N12)>
+INC N$一级首饰数量 <$STR(N13)>
+INC N$一级首饰数量 <$STR(N14)>
+INC N$一级首饰数量 <$STR(N15)>
+INC N$一级首饰数量 <$STR(N16)>
+INC N$一级首饰数量 <$STR(N17)>
+INC N$一级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$一级首饰数量 <$STR(N$一级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成首饰数量)>件【王者系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$一级合成首饰材料)> <$STR(N$一级合成首饰材料)>
+TakeBagItem |王者·战盔|王者·战链|王者·战镯|王者·战戒|王者·战带|王者·战靴|王者·魔盔|王者·魔链|王者·魔镯|王者·魔戒|王者·魔带|王者·魔靴|王者·道盔|王者·道链|王者·道镯|王者·道戒|王者·道带|王者·道靴|| <$STR(N$一级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 无双·魔链 1
+MESSAGEBOX 恭喜您，成功锻造：无双·魔链*1
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@材料锻造无双·魔盔]
+
+#IF
+NOT CHECKITEM <$STR(S$一级合成首饰材料)> <$STR(N$一级合成首饰材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$一级合成首饰材料)>】不够<$STR(N$一级合成首饰材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 王者·战盔 N1
+getbagitemcount 王者·战链 N2
+getbagitemcount 王者·战镯 N3
+getbagitemcount 王者·战戒 N4
+getbagitemcount 王者·战带 N5
+getbagitemcount 王者·战靴 N6
+getbagitemcount 王者·魔盔 N7
+getbagitemcount 王者·魔链 N8
+getbagitemcount 王者·魔镯 N9
+getbagitemcount 王者·魔戒 N10
+getbagitemcount 王者·魔带 N11
+getbagitemcount 王者·魔靴 N12
+getbagitemcount 王者·道盔 N13
+getbagitemcount 王者·道链 N14
+getbagitemcount 王者·道镯 N15
+getbagitemcount 王者·道戒 N16
+getbagitemcount 王者·道带 N17
+getbagitemcount 王者·道靴 N18
+MOV N$一级首饰数量 0
+INC N$一级首饰数量 <$STR(N1)>
+INC N$一级首饰数量 <$STR(N2)>
+INC N$一级首饰数量 <$STR(N3)>
+INC N$一级首饰数量 <$STR(N4)>
+INC N$一级首饰数量 <$STR(N5)>
+INC N$一级首饰数量 <$STR(N6)>
+INC N$一级首饰数量 <$STR(N7)>
+INC N$一级首饰数量 <$STR(N8)>
+INC N$一级首饰数量 <$STR(N9)>
+INC N$一级首饰数量 <$STR(N10)>
+INC N$一级首饰数量 <$STR(N11)>
+INC N$一级首饰数量 <$STR(N12)>
+INC N$一级首饰数量 <$STR(N13)>
+INC N$一级首饰数量 <$STR(N14)>
+INC N$一级首饰数量 <$STR(N15)>
+INC N$一级首饰数量 <$STR(N16)>
+INC N$一级首饰数量 <$STR(N17)>
+INC N$一级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$一级首饰数量 <$STR(N$一级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成首饰数量)>件【王者系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$一级合成首饰材料)> <$STR(N$一级合成首饰材料)>
+TakeBagItem |王者·战盔|王者·战链|王者·战镯|王者·战戒|王者·战带|王者·战靴|王者·魔盔|王者·魔链|王者·魔镯|王者·魔戒|王者·魔带|王者·魔靴|王者·道盔|王者·道链|王者·道镯|王者·道戒|王者·道带|王者·道靴|| <$STR(N$一级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 无双·魔盔 1
+MESSAGEBOX 恭喜您，成功锻造：无双·魔盔*1
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@材料锻造无双·魔衣]
+
+#IF
+NOT CHECKITEM <$STR(S$一级合成衣服材料)> <$STR(N$一级合成衣服材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$一级合成衣服材料)>】不够<$STR(N$一级合成衣服材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 王者·战甲 N1
+getbagitemcount 王者·战衣 N2
+getbagitemcount 王者·魔袍 N3
+getbagitemcount 王者·魔衣 N4
+getbagitemcount 王者·道袍 N5
+getbagitemcount 王者·道衣 N6
+MOV N$一级衣服数量 0
+INC N$一级衣服数量 <$STR(N1)>
+INC N$一级衣服数量 <$STR(N2)>
+INC N$一级衣服数量 <$STR(N3)>
+INC N$一级衣服数量 <$STR(N4)>
+INC N$一级衣服数量 <$STR(N5)>
+INC N$一级衣服数量 <$STR(N6)>
+
+
+
+
+
+
+#IF
+SMALL N$一级衣服数量 <$STR(N$一级合成衣服数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成衣服数量)>件【王者系列】的衣服，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$一级合成衣服材料)> <$STR(N$一级合成衣服材料)>
+TakeBagItem |王者·战甲|王者·战衣|王者·魔袍|王者·魔衣|王者·道袍|王者·道衣|| <$STR(N$一级合成衣服数量)> 0 0 0 0 N55 0
+GIVE 无双·魔衣 1
+MESSAGEBOX 恭喜您，成功锻造：无双·魔衣*1
+BREAK
+
+
+
+
+
+
+
+[@材料锻造无双·魔袍]
+
+#IF
+NOT CHECKITEM <$STR(S$一级合成衣服材料)> <$STR(N$一级合成衣服材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$一级合成衣服材料)>】不够<$STR(N$一级合成衣服材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 王者·战甲 N1
+getbagitemcount 王者·战衣 N2
+getbagitemcount 王者·魔袍 N3
+getbagitemcount 王者·魔衣 N4
+getbagitemcount 王者·道袍 N5
+getbagitemcount 王者·道衣 N6
+MOV N$一级衣服数量 0
+INC N$一级衣服数量 <$STR(N1)>
+INC N$一级衣服数量 <$STR(N2)>
+INC N$一级衣服数量 <$STR(N3)>
+INC N$一级衣服数量 <$STR(N4)>
+INC N$一级衣服数量 <$STR(N5)>
+INC N$一级衣服数量 <$STR(N6)>
+
+
+
+
+
+
+#IF
+SMALL N$一级衣服数量 <$STR(N$一级合成衣服数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成衣服数量)>件【王者系列】的衣服，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$一级合成衣服材料)> <$STR(N$一级合成衣服材料)>
+TakeBagItem |王者·战甲|王者·战衣|王者·魔袍|王者·魔衣|王者·道袍|王者·道衣|| <$STR(N$一级合成衣服数量)> 0 0 0 0 N55 0
+GIVE 无双·魔袍 1
+MESSAGEBOX 恭喜您，成功锻造：无双·魔袍*1
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@材料锻造无双·魔杖]
+
+#IF
+NOT CHECKITEM <$STR(S$一级合成武器材料)> <$STR(N$一级合成武器材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$一级合成武器材料)>】不够<$STR(N$一级合成武器材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 王者·神剑 N1
+getbagitemcount 王者·魔杖 N2
+getbagitemcount 王者·道扇 N3
+MOV N$一级武器数量 0
+INC N$一级武器数量 <$STR(N1)>
+INC N$一级武器数量 <$STR(N2)>
+INC N$一级武器数量 <$STR(N3)>
+
+
+
+
+
+#IF
+SMALL N$一级武器数量 <$STR(N$一级合成武器数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成武器数量)>把【王者系列】的武器，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$一级合成武器材料)> <$STR(N$一级合成武器材料)>
+TakeBagItem |王者·神剑|王者·魔杖|王者·道扇|| <$STR(N$一级合成武器数量)> 0 0 0 0 N55 0
+GIVE 无双·魔杖 1
+MESSAGEBOX 恭喜您，成功锻造：无双·魔杖*1
+BREAK
+
+
+
+
+
+[@材料锻造无双·道靴]
+
+#IF
+NOT CHECKITEM <$STR(S$一级合成首饰材料)> <$STR(N$一级合成首饰材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$一级合成首饰材料)>】不够<$STR(N$一级合成首饰材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 王者·战盔 N1
+getbagitemcount 王者·战链 N2
+getbagitemcount 王者·战镯 N3
+getbagitemcount 王者·战戒 N4
+getbagitemcount 王者·战带 N5
+getbagitemcount 王者·战靴 N6
+getbagitemcount 王者·魔盔 N7
+getbagitemcount 王者·魔链 N8
+getbagitemcount 王者·魔镯 N9
+getbagitemcount 王者·魔戒 N10
+getbagitemcount 王者·魔带 N11
+getbagitemcount 王者·魔靴 N12
+getbagitemcount 王者·道盔 N13
+getbagitemcount 王者·道链 N14
+getbagitemcount 王者·道镯 N15
+getbagitemcount 王者·道戒 N16
+getbagitemcount 王者·道带 N17
+getbagitemcount 王者·道靴 N18
+MOV N$一级首饰数量 0
+INC N$一级首饰数量 <$STR(N1)>
+INC N$一级首饰数量 <$STR(N2)>
+INC N$一级首饰数量 <$STR(N3)>
+INC N$一级首饰数量 <$STR(N4)>
+INC N$一级首饰数量 <$STR(N5)>
+INC N$一级首饰数量 <$STR(N6)>
+INC N$一级首饰数量 <$STR(N7)>
+INC N$一级首饰数量 <$STR(N8)>
+INC N$一级首饰数量 <$STR(N9)>
+INC N$一级首饰数量 <$STR(N10)>
+INC N$一级首饰数量 <$STR(N11)>
+INC N$一级首饰数量 <$STR(N12)>
+INC N$一级首饰数量 <$STR(N13)>
+INC N$一级首饰数量 <$STR(N14)>
+INC N$一级首饰数量 <$STR(N15)>
+INC N$一级首饰数量 <$STR(N16)>
+INC N$一级首饰数量 <$STR(N17)>
+INC N$一级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$一级首饰数量 <$STR(N$一级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成首饰数量)>件【王者系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$一级合成首饰材料)> <$STR(N$一级合成首饰材料)>
+TakeBagItem |王者·战盔|王者·战链|王者·战镯|王者·战戒|王者·战带|王者·战靴|王者·魔盔|王者·魔链|王者·魔镯|王者·魔戒|王者·魔带|王者·魔靴|王者·道盔|王者·道链|王者·道镯|王者·道戒|王者·道带|王者·道靴|| <$STR(N$一级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 无双·道靴 1
+MESSAGEBOX 恭喜您，成功锻造：无双·道靴*1
+BREAK
+
+
+
+
+[@材料锻造无双·道带]
+
+#IF
+NOT CHECKITEM <$STR(S$一级合成首饰材料)> <$STR(N$一级合成首饰材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$一级合成首饰材料)>】不够<$STR(N$一级合成首饰材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 王者·战盔 N1
+getbagitemcount 王者·战链 N2
+getbagitemcount 王者·战镯 N3
+getbagitemcount 王者·战戒 N4
+getbagitemcount 王者·战带 N5
+getbagitemcount 王者·战靴 N6
+getbagitemcount 王者·魔盔 N7
+getbagitemcount 王者·魔链 N8
+getbagitemcount 王者·魔镯 N9
+getbagitemcount 王者·魔戒 N10
+getbagitemcount 王者·魔带 N11
+getbagitemcount 王者·魔靴 N12
+getbagitemcount 王者·道盔 N13
+getbagitemcount 王者·道链 N14
+getbagitemcount 王者·道镯 N15
+getbagitemcount 王者·道戒 N16
+getbagitemcount 王者·道带 N17
+getbagitemcount 王者·道靴 N18
+MOV N$一级首饰数量 0
+INC N$一级首饰数量 <$STR(N1)>
+INC N$一级首饰数量 <$STR(N2)>
+INC N$一级首饰数量 <$STR(N3)>
+INC N$一级首饰数量 <$STR(N4)>
+INC N$一级首饰数量 <$STR(N5)>
+INC N$一级首饰数量 <$STR(N6)>
+INC N$一级首饰数量 <$STR(N7)>
+INC N$一级首饰数量 <$STR(N8)>
+INC N$一级首饰数量 <$STR(N9)>
+INC N$一级首饰数量 <$STR(N10)>
+INC N$一级首饰数量 <$STR(N11)>
+INC N$一级首饰数量 <$STR(N12)>
+INC N$一级首饰数量 <$STR(N13)>
+INC N$一级首饰数量 <$STR(N14)>
+INC N$一级首饰数量 <$STR(N15)>
+INC N$一级首饰数量 <$STR(N16)>
+INC N$一级首饰数量 <$STR(N17)>
+INC N$一级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$一级首饰数量 <$STR(N$一级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成首饰数量)>件【王者系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$一级合成首饰材料)> <$STR(N$一级合成首饰材料)>
+TakeBagItem |王者·战盔|王者·战链|王者·战镯|王者·战戒|王者·战带|王者·战靴|王者·魔盔|王者·魔链|王者·魔镯|王者·魔戒|王者·魔带|王者·魔靴|王者·道盔|王者·道链|王者·道镯|王者·道戒|王者·道带|王者·道靴|| <$STR(N$一级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 无双·道带 1
+MESSAGEBOX 恭喜您，成功锻造：无双·道带*1
+BREAK
+
+
+
+
+[@材料锻造无双·道戒]
+
+#IF
+NOT CHECKITEM <$STR(S$一级合成首饰材料)> <$STR(N$一级合成首饰材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$一级合成首饰材料)>】不够<$STR(N$一级合成首饰材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 王者·战盔 N1
+getbagitemcount 王者·战链 N2
+getbagitemcount 王者·战镯 N3
+getbagitemcount 王者·战戒 N4
+getbagitemcount 王者·战带 N5
+getbagitemcount 王者·战靴 N6
+getbagitemcount 王者·魔盔 N7
+getbagitemcount 王者·魔链 N8
+getbagitemcount 王者·魔镯 N9
+getbagitemcount 王者·魔戒 N10
+getbagitemcount 王者·魔带 N11
+getbagitemcount 王者·魔靴 N12
+getbagitemcount 王者·道盔 N13
+getbagitemcount 王者·道链 N14
+getbagitemcount 王者·道镯 N15
+getbagitemcount 王者·道戒 N16
+getbagitemcount 王者·道带 N17
+getbagitemcount 王者·道靴 N18
+MOV N$一级首饰数量 0
+INC N$一级首饰数量 <$STR(N1)>
+INC N$一级首饰数量 <$STR(N2)>
+INC N$一级首饰数量 <$STR(N3)>
+INC N$一级首饰数量 <$STR(N4)>
+INC N$一级首饰数量 <$STR(N5)>
+INC N$一级首饰数量 <$STR(N6)>
+INC N$一级首饰数量 <$STR(N7)>
+INC N$一级首饰数量 <$STR(N8)>
+INC N$一级首饰数量 <$STR(N9)>
+INC N$一级首饰数量 <$STR(N10)>
+INC N$一级首饰数量 <$STR(N11)>
+INC N$一级首饰数量 <$STR(N12)>
+INC N$一级首饰数量 <$STR(N13)>
+INC N$一级首饰数量 <$STR(N14)>
+INC N$一级首饰数量 <$STR(N15)>
+INC N$一级首饰数量 <$STR(N16)>
+INC N$一级首饰数量 <$STR(N17)>
+INC N$一级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$一级首饰数量 <$STR(N$一级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成首饰数量)>件【王者系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$一级合成首饰材料)> <$STR(N$一级合成首饰材料)>
+TakeBagItem |王者·战盔|王者·战链|王者·战镯|王者·战戒|王者·战带|王者·战靴|王者·魔盔|王者·魔链|王者·魔镯|王者·魔戒|王者·魔带|王者·魔靴|王者·道盔|王者·道链|王者·道镯|王者·道戒|王者·道带|王者·道靴|| <$STR(N$一级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 无双·道戒 1
+MESSAGEBOX 恭喜您，成功锻造：无双·道戒*1
+BREAK
+
+
+
+
+
+[@材料锻造无双·道镯]
+
+#IF
+NOT CHECKITEM <$STR(S$一级合成首饰材料)> <$STR(N$一级合成首饰材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$一级合成首饰材料)>】不够<$STR(N$一级合成首饰材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 王者·战盔 N1
+getbagitemcount 王者·战链 N2
+getbagitemcount 王者·战镯 N3
+getbagitemcount 王者·战戒 N4
+getbagitemcount 王者·战带 N5
+getbagitemcount 王者·战靴 N6
+getbagitemcount 王者·魔盔 N7
+getbagitemcount 王者·魔链 N8
+getbagitemcount 王者·魔镯 N9
+getbagitemcount 王者·魔戒 N10
+getbagitemcount 王者·魔带 N11
+getbagitemcount 王者·魔靴 N12
+getbagitemcount 王者·道盔 N13
+getbagitemcount 王者·道链 N14
+getbagitemcount 王者·道镯 N15
+getbagitemcount 王者·道戒 N16
+getbagitemcount 王者·道带 N17
+getbagitemcount 王者·道靴 N18
+MOV N$一级首饰数量 0
+INC N$一级首饰数量 <$STR(N1)>
+INC N$一级首饰数量 <$STR(N2)>
+INC N$一级首饰数量 <$STR(N3)>
+INC N$一级首饰数量 <$STR(N4)>
+INC N$一级首饰数量 <$STR(N5)>
+INC N$一级首饰数量 <$STR(N6)>
+INC N$一级首饰数量 <$STR(N7)>
+INC N$一级首饰数量 <$STR(N8)>
+INC N$一级首饰数量 <$STR(N9)>
+INC N$一级首饰数量 <$STR(N10)>
+INC N$一级首饰数量 <$STR(N11)>
+INC N$一级首饰数量 <$STR(N12)>
+INC N$一级首饰数量 <$STR(N13)>
+INC N$一级首饰数量 <$STR(N14)>
+INC N$一级首饰数量 <$STR(N15)>
+INC N$一级首饰数量 <$STR(N16)>
+INC N$一级首饰数量 <$STR(N17)>
+INC N$一级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$一级首饰数量 <$STR(N$一级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成首饰数量)>件【王者系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$一级合成首饰材料)> <$STR(N$一级合成首饰材料)>
+TakeBagItem |王者·战盔|王者·战链|王者·战镯|王者·战戒|王者·战带|王者·战靴|王者·魔盔|王者·魔链|王者·魔镯|王者·魔戒|王者·魔带|王者·魔靴|王者·道盔|王者·道链|王者·道镯|王者·道戒|王者·道带|王者·道靴|| <$STR(N$一级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 无双·道镯 1
+MESSAGEBOX 恭喜您，成功锻造：无双·道镯*1
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@材料锻造无双·道链]
+
+#IF
+NOT CHECKITEM <$STR(S$一级合成首饰材料)> <$STR(N$一级合成首饰材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$一级合成首饰材料)>】不够<$STR(N$一级合成首饰材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 王者·战盔 N1
+getbagitemcount 王者·战链 N2
+getbagitemcount 王者·战镯 N3
+getbagitemcount 王者·战戒 N4
+getbagitemcount 王者·战带 N5
+getbagitemcount 王者·战靴 N6
+getbagitemcount 王者·魔盔 N7
+getbagitemcount 王者·魔链 N8
+getbagitemcount 王者·魔镯 N9
+getbagitemcount 王者·魔戒 N10
+getbagitemcount 王者·魔带 N11
+getbagitemcount 王者·魔靴 N12
+getbagitemcount 王者·道盔 N13
+getbagitemcount 王者·道链 N14
+getbagitemcount 王者·道镯 N15
+getbagitemcount 王者·道戒 N16
+getbagitemcount 王者·道带 N17
+getbagitemcount 王者·道靴 N18
+MOV N$一级首饰数量 0
+INC N$一级首饰数量 <$STR(N1)>
+INC N$一级首饰数量 <$STR(N2)>
+INC N$一级首饰数量 <$STR(N3)>
+INC N$一级首饰数量 <$STR(N4)>
+INC N$一级首饰数量 <$STR(N5)>
+INC N$一级首饰数量 <$STR(N6)>
+INC N$一级首饰数量 <$STR(N7)>
+INC N$一级首饰数量 <$STR(N8)>
+INC N$一级首饰数量 <$STR(N9)>
+INC N$一级首饰数量 <$STR(N10)>
+INC N$一级首饰数量 <$STR(N11)>
+INC N$一级首饰数量 <$STR(N12)>
+INC N$一级首饰数量 <$STR(N13)>
+INC N$一级首饰数量 <$STR(N14)>
+INC N$一级首饰数量 <$STR(N15)>
+INC N$一级首饰数量 <$STR(N16)>
+INC N$一级首饰数量 <$STR(N17)>
+INC N$一级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$一级首饰数量 <$STR(N$一级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成首饰数量)>件【王者系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$一级合成首饰材料)> <$STR(N$一级合成首饰材料)>
+TakeBagItem |王者·战盔|王者·战链|王者·战镯|王者·战戒|王者·战带|王者·战靴|王者·魔盔|王者·魔链|王者·魔镯|王者·魔戒|王者·魔带|王者·魔靴|王者·道盔|王者·道链|王者·道镯|王者·道戒|王者·道带|王者·道靴|| <$STR(N$一级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 无双·道链 1
+MESSAGEBOX 恭喜您，成功锻造：无双·道链*1
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@材料锻造无双·道盔]
+
+#IF
+NOT CHECKITEM <$STR(S$一级合成首饰材料)> <$STR(N$一级合成首饰材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$一级合成首饰材料)>】不够<$STR(N$一级合成首饰材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 王者·战盔 N1
+getbagitemcount 王者·战链 N2
+getbagitemcount 王者·战镯 N3
+getbagitemcount 王者·战戒 N4
+getbagitemcount 王者·战带 N5
+getbagitemcount 王者·战靴 N6
+getbagitemcount 王者·魔盔 N7
+getbagitemcount 王者·魔链 N8
+getbagitemcount 王者·魔镯 N9
+getbagitemcount 王者·魔戒 N10
+getbagitemcount 王者·魔带 N11
+getbagitemcount 王者·魔靴 N12
+getbagitemcount 王者·道盔 N13
+getbagitemcount 王者·道链 N14
+getbagitemcount 王者·道镯 N15
+getbagitemcount 王者·道戒 N16
+getbagitemcount 王者·道带 N17
+getbagitemcount 王者·道靴 N18
+MOV N$一级首饰数量 0
+INC N$一级首饰数量 <$STR(N1)>
+INC N$一级首饰数量 <$STR(N2)>
+INC N$一级首饰数量 <$STR(N3)>
+INC N$一级首饰数量 <$STR(N4)>
+INC N$一级首饰数量 <$STR(N5)>
+INC N$一级首饰数量 <$STR(N6)>
+INC N$一级首饰数量 <$STR(N7)>
+INC N$一级首饰数量 <$STR(N8)>
+INC N$一级首饰数量 <$STR(N9)>
+INC N$一级首饰数量 <$STR(N10)>
+INC N$一级首饰数量 <$STR(N11)>
+INC N$一级首饰数量 <$STR(N12)>
+INC N$一级首饰数量 <$STR(N13)>
+INC N$一级首饰数量 <$STR(N14)>
+INC N$一级首饰数量 <$STR(N15)>
+INC N$一级首饰数量 <$STR(N16)>
+INC N$一级首饰数量 <$STR(N17)>
+INC N$一级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$一级首饰数量 <$STR(N$一级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成首饰数量)>件【王者系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$一级合成首饰材料)> <$STR(N$一级合成首饰材料)>
+TakeBagItem |王者·战盔|王者·战链|王者·战镯|王者·战戒|王者·战带|王者·战靴|王者·魔盔|王者·魔链|王者·魔镯|王者·魔戒|王者·魔带|王者·魔靴|王者·道盔|王者·道链|王者·道镯|王者·道戒|王者·道带|王者·道靴|| <$STR(N$一级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 无双·道盔 1
+MESSAGEBOX 恭喜您，成功锻造：无双·道盔*1
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@材料锻造无双·道衣]
+
+#IF
+NOT CHECKITEM <$STR(S$一级合成衣服材料)> <$STR(N$一级合成衣服材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$一级合成衣服材料)>】不够<$STR(N$一级合成衣服材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 王者·战甲 N1
+getbagitemcount 王者·战衣 N2
+getbagitemcount 王者·魔袍 N3
+getbagitemcount 王者·魔衣 N4
+getbagitemcount 王者·道袍 N5
+getbagitemcount 王者·道衣 N6
+MOV N$一级衣服数量 0
+INC N$一级衣服数量 <$STR(N1)>
+INC N$一级衣服数量 <$STR(N2)>
+INC N$一级衣服数量 <$STR(N3)>
+INC N$一级衣服数量 <$STR(N4)>
+INC N$一级衣服数量 <$STR(N5)>
+INC N$一级衣服数量 <$STR(N6)>
+
+
+
+
+
+
+#IF
+SMALL N$一级衣服数量 <$STR(N$一级合成衣服数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成衣服数量)>件【王者系列】的衣服，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$一级合成衣服材料)> <$STR(N$一级合成衣服材料)>
+TakeBagItem |王者·战甲|王者·战衣|王者·魔袍|王者·魔衣|王者·道袍|王者·道衣|| <$STR(N$一级合成衣服数量)> 0 0 0 0 N55 0
+GIVE 无双·道衣 1
+MESSAGEBOX 恭喜您，成功锻造：无双·道衣*1
+BREAK
+
+
+
+
+
+
+
+[@材料锻造无双·道袍]
+
+#IF
+NOT CHECKITEM <$STR(S$一级合成衣服材料)> <$STR(N$一级合成衣服材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$一级合成衣服材料)>】不够<$STR(N$一级合成衣服材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 王者·战甲 N1
+getbagitemcount 王者·战衣 N2
+getbagitemcount 王者·魔袍 N3
+getbagitemcount 王者·魔衣 N4
+getbagitemcount 王者·道袍 N5
+getbagitemcount 王者·道衣 N6
+MOV N$一级衣服数量 0
+INC N$一级衣服数量 <$STR(N1)>
+INC N$一级衣服数量 <$STR(N2)>
+INC N$一级衣服数量 <$STR(N3)>
+INC N$一级衣服数量 <$STR(N4)>
+INC N$一级衣服数量 <$STR(N5)>
+INC N$一级衣服数量 <$STR(N6)>
+
+
+
+
+
+
+#IF
+SMALL N$一级衣服数量 <$STR(N$一级合成衣服数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成衣服数量)>件【王者系列】的衣服，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$一级合成衣服材料)> <$STR(N$一级合成衣服材料)>
+TakeBagItem |王者·战甲|王者·战衣|王者·魔袍|王者·魔衣|王者·道袍|王者·道衣|| <$STR(N$一级合成衣服数量)> 0 0 0 0 N55 0
+GIVE 无双·道袍 1
+MESSAGEBOX 恭喜您，成功锻造：无双·道袍*1
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@材料锻造无双·道扇]
+
+#IF
+NOT CHECKITEM <$STR(S$一级合成武器材料)> <$STR(N$一级合成武器材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$一级合成武器材料)>】不够<$STR(N$一级合成武器材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 王者·神剑 N1
+getbagitemcount 王者·魔杖 N2
+getbagitemcount 王者·道扇 N3
+MOV N$一级武器数量 0
+INC N$一级武器数量 <$STR(N1)>
+INC N$一级武器数量 <$STR(N2)>
+INC N$一级武器数量 <$STR(N3)>
+
+
+
+
+
+#IF
+SMALL N$一级武器数量 <$STR(N$一级合成武器数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$一级合成武器数量)>把【王者系列】的武器，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$一级合成武器材料)> <$STR(N$一级合成武器材料)>
+TakeBagItem |王者·神剑|王者·魔杖|王者·道扇|| <$STR(N$一级合成武器数量)> 0 0 0 0 N55 0
+GIVE 无双·道扇 1
+MESSAGEBOX 恭喜您，成功锻造：无双·道扇*1
+BREAK
+
+
+

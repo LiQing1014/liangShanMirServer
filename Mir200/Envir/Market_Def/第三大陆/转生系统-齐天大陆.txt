@@ -1,0 +1,306 @@
+[@main]
+
+#IF
+Checkrenewlevel < 20
+#ACT
+MESSAGEBOX 请您20转以后在来找我！！
+BREAK
+
+
+#IF
+Checkrenewlevel = 20
+#ACT
+MOV S$免费条件  {天命宝盘*10/FCOLOR=251}+元宝*500W
+MOV S$免费条件1 天命宝盘
+MOV N$免费条件1 10
+MOV N$免费元宝2 5000000
+MOV S$收费条件 大米*888
+MOV N$收费条件 888
+MOV N$材料颜色 251
+MOV N$转身属性点 140
+
+#IF
+Checkrenewlevel = 21
+#ACT
+MOV S$免费条件  {天命宝盘*10/FCOLOR=251}+元宝*500W
+MOV S$免费条件1 天命宝盘
+MOV N$免费条件1 10
+MOV N$免费元宝2 5000000
+MOV S$收费条件 大米*888
+MOV N$收费条件 888
+MOV N$材料颜色 251
+MOV N$转身属性点 150
+
+#IF
+Checkrenewlevel = 22
+#ACT
+MOV S$免费条件  {天命宝盘*10/FCOLOR=251}+元宝*500W
+MOV S$免费条件1 天命宝盘
+MOV N$免费条件1 10
+MOV N$免费元宝2 5000000
+MOV S$收费条件 大米*888
+MOV N$收费条件 888
+MOV N$材料颜色 251
+MOV N$转身属性点 160
+
+#IF
+Checkrenewlevel = 23
+#ACT
+MOV S$免费条件  {天命宝盘*10/FCOLOR=251}+元宝*500W
+MOV S$免费条件1 天命宝盘
+MOV N$免费条件1 10
+MOV N$免费元宝2 5000000
+MOV S$收费条件 大米*888
+MOV N$收费条件 888
+MOV N$材料颜色 251
+MOV N$转身属性点 170
+
+#IF
+Checkrenewlevel = 24
+#ACT
+MOV S$免费条件  {天命宝盘*10/FCOLOR=251}+元宝*500W
+MOV S$免费条件1 天命宝盘
+MOV N$免费条件1 10
+MOV N$免费元宝2 5000000
+MOV S$收费条件 大米*888
+MOV N$收费条件 888
+MOV N$材料颜色 251
+MOV N$转身属性点 180
+
+#IF
+Checkrenewlevel = 25
+#ACT
+MOV S$免费条件  {天命宝盘*10/FCOLOR=251}+元宝*500W
+MOV S$免费条件1 天命宝盘
+MOV N$免费条件1 10
+MOV N$免费元宝2 5000000
+MOV S$收费条件 大米*888
+MOV N$收费条件 888
+MOV N$材料颜色 251
+MOV N$转身属性点 190
+
+#IF
+Checkrenewlevel = 26
+#ACT
+MOV S$免费条件  {天命宝盘*10/FCOLOR=251}+元宝*500W
+MOV S$免费条件1 天命宝盘
+MOV N$免费条件1 10
+MOV N$免费元宝2 5000000
+MOV S$收费条件 大米*888
+MOV N$收费条件 888
+MOV N$材料颜色 251
+MOV N$转身属性点 200
+
+#IF
+Checkrenewlevel = 27
+#ACT
+MOV S$免费条件  {天命宝盘*10/FCOLOR=251}+元宝*500W
+MOV S$免费条件1 天命宝盘
+MOV N$免费条件1 10
+MOV N$免费元宝2 5000000
+MOV S$收费条件 大米*888
+MOV N$收费条件 888
+MOV N$材料颜色 251
+MOV N$转身属性点 210
+
+#IF
+Checkrenewlevel = 28
+#ACT
+MOV S$免费条件  {天命宝盘*10/FCOLOR=251}+元宝*500W
+MOV S$免费条件1 天命宝盘
+MOV N$免费条件1 10
+MOV N$免费元宝2 5000000
+MOV S$收费条件 大米*888
+MOV N$收费条件 888
+MOV N$材料颜色 251
+MOV N$转身属性点 220
+
+#IF
+Checkrenewlevel = 29
+#ACT
+MOV S$免费条件  {天命宝盘*10/FCOLOR=251}+元宝*500W
+MOV S$免费条件1 天命宝盘
+MOV N$免费条件1 10
+MOV N$免费元宝2 5000000
+MOV S$收费条件 大米*888
+MOV N$收费条件 888
+MOV N$材料颜色 251
+MOV N$转身属性点 250
+
+
+
+
+
+#IF
+Checkrenewlevel > 29
+#ACT
+MOV S$击杀怪物 已完成转生任务
+MOV N$击杀怪物 0
+MOV S$击杀怪物1 已完成转生任务
+MOV N$击杀怪物1 0
+MOV S$转身大米数量 已完成转生任务
+MOV N$转身大米数量 0
+MOV N$击杀怪物5 0
+MOV N$击杀怪物6 0
+MOV N$转身属性点 0
+
+
+MOV S$免费条件  <已完成转生任务
+MOV S$免费条件1 已完成转生任务
+MOV N$免费条件1 0
+MOV N$免费元宝2 0
+MOV S$收费条件 已完成转生任务
+MOV N$收费条件 已完成转生任务
+MOV N$材料颜色 253
+
+
+
+
+
+
+
+#IF
+#ACT
+close
+#SAY
+; \<><很久很久以前：世界本是一块大陆，在大陆的中心有一颗世界之树/FCOLOR=161>  \  
+; \<><树上结有三样物品，它们分别是：/FCOLOR=161><天命宝盘/FCOLOR=251>，<轮回竹叶/FCOLOR=250>，<命运莲花/FCOLOR=253>  \  
+; \<><传闻得此三宝可有机缘问鼎最高的道之域境的极限转生。/FCOLOR=161>  \  
+; \<-------------------------------------------------------------/FCOLOR=249>  \ 
+; <><您当前：/FCOLOR=161>{<$RELEVEL>转/FCOLOR=254}\ \ 
+; <><问鼎极限要求:/FCOLOR=161><$STR(S$免费条件)>/FCOLOR=255>   \  \
+
+
+; \             <我要突破极限转生|250#提升条件：^-^<$str(N$材料颜色)>#1.<$str(S$免费条件1)>*<$str(n$免费条件1)>^-^161#2.元宝*<$str(N$免费元宝2)>/@突破转生>              <大米突破②|250#提升要求：^-^254#<$str(s$收费条件)>/@大米突破转生>             \ 
+
+
+
+<Img|width=620|height=300|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|reset=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=24.0|y=21.0|tipsx=10|tipsy=80|color=161|size=16|text=很久很久以前：世界本是一块大陆，在大陆的中心有一颗世界之树>
+<Text|a=0|x=24.0|y=61.0|tipsx=10|tipsy=80|color=161|size=16|text=树上结有三样物品，它们分别是：>
+<Text|a=0|x=265.0|y=61.0|tipsx=10|tipsy=80|color=251|size=16|text=天命宝盘>
+<Text|a=0|x=329.0|y=61.0|tipsx=10|tipsy=80|color=255|size=16|text=，>
+<Text|a=0|x=348.0|y=61.0|tipsx=10|tipsy=80|color=250|size=16|text=轮回竹叶>
+<Text|a=0|x=409.0|y=61.0|tipsx=10|tipsy=80|color=255|size=16|text=，>
+<Text|a=0|x=427.0|y=61.0|tipsx=10|tipsy=80|color=253|size=16|text=命运莲花>
+<Text|a=0|x=24.0|y=101.0|tipsx=10|tipsy=80|color=161|size=16|text=传闻得此三宝可有机缘问鼎最高的道之域境的极限转生。>
+<Text|a=0|x=24.0|y=141.0|tipsx=10|tipsy=80|color=249|size=16|text=------------------------------------------------------------->
+<Text|a=0|x=24.0|y=161.0|tipsx=10|tipsy=80|color=161|size=16|text=您当前：>
+<Text|a=0|x=24.0|y=201.0|tipsx=10|tipsy=80|color=161|size=16|text=问鼎极限要求:>
+<Text|x=95.0|y=161.0|color=253|size=16|text=<$RELEVEL>转>
+<RText|x=141.0|y=201.0|color=255|size=16|text=<$STR(S$免费条件)>>
+<Text|x=76.0|y=248.0|color=255|size=16|text=我要突破极限转生|link=@突破转生>
+<Text|x=314.0|y=248.0|color=255|size=16|text=大米突破②|link=@大米突破转生>
+
+; <Text|a=0|x=175|y=260|tipsx=10|tipsy=80|color=255|size=16|text=<$STR(S$免费条件)>/FCOLOR=255>
+; <Text|a=0|x=32|y=320|tipsx=10|tipsy=80|color=255|size=16|text=#1.<$str(S$免费条件1)>*<$str(n$免费条件1)>^-^161#2.元宝*<$str(N$免费元宝2)>/@突破转生>              >
+; <Text|a=0|x=978|y=320|tipsx=10|tipsy=80|color=255|size=16|text=/@大米突破转生>
+
+
+
+
+; <Img|width=620|height=250|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|reset=1>
+; <Layout|x=597|y=3|width=80|height=80|link=@exit>
+; <Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+; <Text|a=0|x=26.0|y=34.0|tipsx=10|tipsy=80|color=254|size=16|text=转生：>
+; <Text|a=0|x=92.0|y=34.0|tipsx=10|tipsy=80|color=70|size=16|text=可以让角色获得新生,实现实力的飞跃和蜕变>
+; <Text|a=0|x=472.0|y=34.0|tipsx=10|tipsy=80|color=161|size=16|text=您当前：<$RELEVEL>转>
+; <Text|a=0|x=26.0|y=74.0|tipsx=10|tipsy=80|color=161|size=16|text=当前要求①：>
+; <Text|a=0|x=120.0|y=74.0|tipsx=10|tipsy=80|color=254|size=16|text=击杀<$STR(N$击杀怪物)>只<$STR(T20)>>
+; <Text|a=0|x=340.0|y=74.0|tipsx=10|tipsy=80|color=250|size=16|text=当前已经击杀：<$STR(U80)>只>
+; <Text|a=0|x=26.0|y=114.0|tipsx=10|tipsy=80|color=161|size=16|text=当前要求②：>
+; <Text|a=0|x=120.0|y=114.0|tipsx=10|tipsy=80|color=254|size=16|text=击杀<$STR(N$击杀怪物1)>只<$STR(T21)>>
+; <Text|a=0|x=340.0|y=114.0|tipsx=10|tipsy=80|color=250|size=16|text=当前已经击杀：<$STR(U81)>只>
+; <Text|a=0|x=26.0|y=154.0|tipsx=10|tipsy=80|color=255|size=16|text=下阶转生奖励自由属性：>
+; <RText|a=0|x=210.0|y=154.0|tipsx=10|tipsy=80|color=255|size=16|text=<<$STR(N$转身属性点)>点/FCOLOR=249>>
+; <Text|a=0|x=26.0|y=194.0|tips={当前转生条件：/FCOLOR=243}^{1：击杀[<$STR(N$击杀怪物)>]只<$STR(T20)>，已击杀<$STR(U80)>只}^{2：击杀[<$STR(N$击杀怪物1)>]只<$STR(T21)>，已击杀<$STR(U81)>只/FCOLOR=250}|tipsx=84|tipsy=105|color=251|size=16|text=我要转生|link=@进行转生>
+; <Text|a=0|x=144.0|y=194.0|tips={当前转生条件：/FCOLOR=243}^{1：击杀[<$STR(N$击杀怪物5)>]只<$STR(T20)>，已击杀<$STR(U80)>只}^{2：击杀[<$STR(N$击杀怪物6)>]只<$STR(T21)>，已击杀<$STR(U81)>只/FCOLOR=250}^{3:<$STR(S$转身大米数量)>}|tipsx=84|tipsy=105|color=251|size=16|text=快速转生|link=@大米转生>
+; <Button|x=438.0|y=191.0|color=250|size=16|nimg=public/1900000612.png|text=属性点分配|link=@打开面板>
+
+
+[@大米突破转生]
+
+#IF
+Checkrenewlevel > 29
+#ACT
+MESSAGEBOX 非常抱歉：\　\你已经30转圆满了！
+BREAK
+
+
+#IF
+CHECKGAMEPOINT < <$STR(N$收费条件)>
+#ACT
+MESSAGEBOX 对不起，您账户上的大米不够<$str(n$收费条件)>个
+BREAK
+
+
+
+
+
+
+#IF
+#act
+GAMEPOINT - <$STR(N$收费条件)>
+RENEWLEVEL 1 0 0
+MOV U80 0
+MOV U81 0
+#CALL [\游戏登陆\属性加成.txt] @属性设置
+#CALL [\游戏登陆\封号系统.txt] @封号分类
+#CALL [\游戏登陆\怪物爆率.txt] @怪物爆率
+MESSAGEBOX 恭喜您，成功完成<$RELEVEL>转！！
+GOTO @MAIN
+GuildNoticeMsg 249 0  {[转生]|254:0:1}： 恭喜玩家，{%s|250:0:1} 完成了 {[「<$RELEVEL>次转生」]|151:0:1}！
+BREAK
+
+
+
+
+
+[@突破转生]
+
+#IF
+Checkrenewlevel > 29
+#ACT
+MESSAGEBOX 非常抱歉：\　\你已经30转圆满了！
+BREAK
+
+
+#IF
+NOT CHECKITEM <$STR(S$免费条件1)> <$STR(N$免费条件1)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$免费条件1)>不够<$STR(N$免费条件1)>个，无法极限转生！
+BREAK
+
+#IF
+CHECKGAMEGOLD < <$STR(N$免费元宝2)>
+#ACT
+MESSAGEBOX 对不起，您账户上的元宝不够<$str(n$免费元宝2)>个，无法极限转生！
+break
+
+
+
+
+
+#IF
+#act
+TAKE <$STR(S$免费条件1)> <$str(n$免费条件1)>
+GAMEGOLD - <$STR(N$免费元宝2)>
+RENEWLEVEL 1 0 0
+MOV U80 0
+MOV U81 0
+#CALL [\游戏登陆\属性加成.txt] @属性设置
+#CALL [\游戏登陆\封号系统.txt] @封号分类
+#CALL [\游戏登陆\怪物爆率.txt] @怪物爆率
+MESSAGEBOX 恭喜您，成功完成<$RELEVEL>转！！
+GOTO @MAIN
+GuildNoticeMsg 249 0  {[转生]|254:0:1}： 恭喜玩家，{%s|250:0:1} 完成了 {[「<$RELEVEL>次转生」]|151:0:1}！
+BREAK
+
+
+
+
+
+
+

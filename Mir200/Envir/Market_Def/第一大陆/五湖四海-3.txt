@@ -1,0 +1,50 @@
+[@main]
+
+#IF
+#ACT
+#SAY
+; <><┌┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┬┈┈┈┈┈┐/SCOLOR=254><>\
+; <><︳/SCOLOR=254>  <五湖四海/SCOLOR=19><:安全区域·怪物聚集·适合挂机·安全/SCOLOR=161> <︳/SCOLOR=254> <精品原创/SCOLOR=19> <︳/SCOLOR=254><>\
+; <><├┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┬┈┈┈┈┈┤/SCOLOR=254><>\
+; <><︳/SCOLOR=254>  <BOSS地图/SCOLOR=161><:各种精英、BOSS系列怪物应有尽有...../SCOLOR=70><├┈┈┈┈┈┤/SCOLOR=254><>\
+; <><├┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┤/SCOLOR=254> <进入地图|249#进入条件：^-^250#充值达到500点^-^250#此地图很大，是安全区，可以放心挂机/@进入地图A> <︳/SCOLOR=254><>\
+; <><︳/SCOLOR=254>  <地图爆率/SCOLOR=161><:高级装备、高级特殊、货币材料..../SCOLOR=154>   <├┈┈┈┈┈┤/SCOLOR=254><>\
+; <><├┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┤/SCOLOR=254> <进入地图|249#进入条件：^-^250#充值达到500点^-^250#此地图很大，是安全区，可以放心挂机/@进入地图A> <︳/SCOLOR=254><>\
+; <><︳/SCOLOR=254>  <进入条件/SCOLOR=161><:充值达到500点★级怪物必爆大量大米-宝石/SCOLOR=250><>\
+; <><└┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┴┈┈┈┈┈┘/SCOLOR=254><>\
+; <
+
+<Img|width=620|height=300|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|reset=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=49.0|y=37.0|tipsx=10|tipsy=80|color=19|size=16|text=五湖四海>
+<Text|a=0|x=137.0|y=37.0|tipsx=10|tipsy=80|color=161|size=16|text=:安全区域·怪物聚集·适合挂机·安全>
+<Text|a=0|x=497.0|y=37.0|tipsx=10|tipsy=80|color=19|size=16|text=精品原创>
+<Text|a=0|x=49.0|y=77.0|tipsx=10|tipsy=80|color=161|size=16|text=BOSS地图>
+<Text|a=0|x=137.0|y=77.0|tipsx=10|tipsy=80|color=70|size=16|text=:各种精英、BOSS系列怪物应有尽有.....>
+<Text|a=0|x=498.0|y=97.0|tipsx=10|tipsy=80|color=251|size=16|text=进入地图|link=@进入地图A>
+<Text|a=0|x=49.0|y=117.0|tipsx=10|tipsy=80|color=161|size=16|text=地图爆率>
+<Text|a=0|x=137.0|y=117.0|tipsx=10|tipsy=80|color=154|size=16|text=:高级装备、高级特殊、货币材料....>
+<Text|a=0|x=498.0|y=137.0|tipsx=10|tipsy=80|color=251|size=16|text=进入地图|link=@进入地图A>
+<Text|a=0|x=49.0|y=157.0|tipsx=10|tipsy=80|color=161|size=16|text=进入条件>
+<Text|a=0|x=137.0|y=157.0|tipsx=10|tipsy=80|color=250|size=16|text=:充值达到500点★级怪物必爆大量大米-宝石>
+
+
+[@进入地图A]
+
+#if
+CHECKGAMEGIRD > 499
+#act
+#ELSEACT
+messagebox 对不起，充值点不足500点，无法进入！
+BREAK
+
+
+
+#IF
+#ACT
+Map 五湖四海
+SENDMSG 0 {[地图公告]:|151:0:1}江湖少侠「{<$USERNAME>|250:0:1}」成功进入地图:{「<$MapTitle>」|151:0:1}打宝
+break
+
+

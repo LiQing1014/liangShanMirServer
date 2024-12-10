@@ -1,0 +1,76 @@
+[@main]
+#if
+#act
+#say
+　 　　 <激情使者/SCOLOR=154><Img:1399:10:-95:-6>   \
+　 　　 <白居易/SCOLOR=19> <尊敬的游戏玩家,您好/SCOLOR=151>    <〖这里杀人奖励20元宝〗/SCOLOR=87>\
+<--------------------------------------------------------------/AUTOCOLOR=91>\
+<1、给我 10元宝我就可以为你发布一条  全服叫阵！ /SCOLOR=91>    \	
+<2、给我 50元宝我就可以为你发布一条行会支援令！/SCOLOR=92>     <返回盟重√/@盟重>\
+<3、给我100元宝我就可以为你发布一条全服激情令！/SCOLOR=93>     <关    闭×/@EXIT>\
+<4、您当前帐户拥有的元宝数量为：/SCOLOR=95>{<$GAMEGOLD>个/AUTOCOLOR=229}\
+<--------------------------------------------------------------/AUTOCOLOR=91>\
+<√发布个人叫阵/@叫阵>       <√发布行会支援令/@行会>       <√发布全服激情令/@全服>\    
+
+
+[@叫阵]
+#IF
+checkgamegold > 9
+#ACT
+gamegold - 10
+SENDMSG 0 我【<$USERNAME>】拳打南山敬老院,脚踢北海幼儿园,一米以下全放倒。我站在激情PK场一跺脚:“有不服气的给我站出来!",连个敢喘气的都没有。哎~~~，英雄都死光了吗？
+goto @main
+#ELSEACT
+MESSAGEBOX 你没有50元宝支付发布全服叫阵的费用！
+BREAK
+                          
+
+
+[@行会]
+#IF
+NOT HAVEGUILD
+#ACT
+MESSAGEBOX 可笑......\\你都没有加入任何行会，你找谁支援你啊？
+BREAK
+#IF
+HAVEGUILD
+checkgamegold > 49
+#ACT
+gamegold - 50
+MOV A97 <$USERNAME>
+MOV A98 <$GUILDNAME>
+Gmexecute 开始提问 @行会支援
+SENDMSG 7 行会支援令已发布，请等待你的援军！
+SENDMSG 7 行会支援令已发布，请等待你的援军！
+SENDMSG 7 行会支援令已发布，请等待你的援军！
+#ELSEACT
+MESSAGEBOX 你没有50元宝支付发布行会支援令的费用！
+BREAK
+
+[@全服]
+#IF
+Equal G97 1
+#ACT
+MESSAGEBOX 30分钟内[<$STR(A97)>]已经发布过全服激情令！\\全服激情令非常扰民、请在30分钟后再发布......
+BREAK
+#IF
+Equal G97 0
+checkgamegold > 99
+#ACT
+gamegold - 100
+MOV A97 <$USERNAME>
+MOV G97 1
+Gmexecute 开始提问 @全服激情
+SENDMSG 7 提示：全服激情令已发布，请等待激情的降临！
+SENDMSG 7 提示：全服激情令已发布，请等待激情的降临！
+SENDMSG 7 提示：全服激情令已发布，请等待激情的降临！
+#ELSEACT
+MESSAGEBOX 全服激情令非常扰民、没有100元宝不给发布！
+BREAK
+
+
+[@盟重]
+#IF
+#ACT
+mapmove 3 330 330 
+BREAK

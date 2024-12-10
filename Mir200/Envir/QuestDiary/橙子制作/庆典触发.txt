@@ -1,0 +1,88 @@
+[@«Ïµ‰]
+{
+
+#if
+Large N68 2
+#ACT
+SendCenterMsg 245 150  [<$USERNAME>]‘⁄[%M:%x:%y]»º∑≈¡À<«Ïµ‰µ∞∏‚>£¨µ±«∞¡¨–¯»º∑≈µ⁄£∫<$STR(N68)>¥Œ£° 1 5
+#if
+#ACT
+INC N68 1
+MOV N69 1
+Delaycall 2000 @«Ïµ‰1
+GMEXECUTE SHOWEFFECT 84
+SENDMSG 0 [%s]‘⁄[%M:%x:%y]»º∑≈¡À<«Ïµ‰µ∞∏‚>!
+break
+
+[@«Ïµ‰1]
+#if
+Equal N69 1
+#act
+MOV N69 2
+GMEXECUTE SHOWEFFECT 79
+GMEXECUTE SHOWEFFECT 80
+GMEXECUTE SHOWEFFECT 81
+Delaycall 2000 @«Ïµ‰2
+break
+[@«Ïµ‰2]
+#if
+Equal N69 2
+#act
+MOV N69 3
+GMEXECUTE SHOWEFFECT 80
+GMEXECUTE SHOWEFFECT 81
+GMEXECUTE SHOWEFFECT 82
+Delaycall 2000 @«Ïµ‰3
+break
+[@«Ïµ‰3]
+#if
+Equal N69 3
+#act
+MOV N69 4
+GMEXECUTE SHOWEFFECT 80
+GMEXECUTE SHOWEFFECT 81
+GMEXECUTE SHOWEFFECT 82
+GMEXECUTE SHOWEFFECT 83
+Delaycall 2000 @«Ïµ‰4
+break
+[@«Ïµ‰4]
+#if
+Equal N69 4
+#act
+MOV N69 5
+GMEXECUTE SHOWEFFECT 81
+GMEXECUTE SHOWEFFECT 82
+GMEXECUTE SHOWEFFECT 83
+Delaycall 2000 @«Ïµ‰5
+break
+
+[@«Ïµ‰5]
+#if
+Equal N69 5
+#act
+MOV N69 6
+GMEXECUTE SHOWEFFECT 81
+GMEXECUTE SHOWEFFECT 83
+GMEXECUTE SHOWEFFECT 84
+Delaycall 2000 @«Ïµ‰6
+break
+[@«Ïµ‰6]
+#if
+Equal N69 6
+#act
+MOV N69 7
+GMEXECUTE SHOWEFFECT 80
+GMEXECUTE SHOWEFFECT 84
+Delaycall 2000 @«Ïµ‰7
+break
+[@«Ïµ‰7]
+#if
+Equal N69 7
+#act
+MOV N69 0
+GMEXECUTE SHOWEFFECT 84
+CLEARDELAYGOTO 0
+SENDMSG 0 [%s]‘⁄[%M:%x:%y]»º∑≈<«Ïµ‰µ∞∏‚>!°°∏’∏’∑≈ÕÍ¡À£¨ø…œßƒ≥–©»À√ªø¥µΩ∞°£∫) £°
+break
+
+}

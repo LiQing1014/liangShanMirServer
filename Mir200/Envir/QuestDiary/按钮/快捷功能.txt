@@ -1,0 +1,3212 @@
+[@服务功能]
+{
+#IF
+#ACT
+close
+#SAY
+<                 【1.76帝国复古快捷服务系统】/SCOLOR=253>\
+<━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━/SCOLOR=58>\ \
+　         <★★/SCOLOR=250><激活龙卫|250#超强打怪辅助，纱绢或赞助会员直接赠送!/@激活龙卫><★★/SCOLOR=250>          <★★/SCOLOR=249><魂珠合成|250#增加暴击属性，优先合成!!/@魂珠合成><★★/SCOLOR=249> \ \
+
+　   <★★/SCOLOR=250><勋章合成|253#增加防御属性!/@勋章合成><★★/SCOLOR=250>　 <★★/SCOLOR=250><功勋称号|253#增加血量，优先提升!!/@功勋称号><★★/SCOLOR=250>　 <★★/SCOLOR=250><经验使者|253#吃货升级，速度飞快!!/@吃货升级><★★/SCOLOR=250>    \ \
+
+　            <★★★★/SCOLOR=252><更多新功能陆续开放中/@功能123><★★★★/SCOLOR=252> \
+<━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━/SCOLOR=58>\
+
+
+[@吃货升级]
+#if
+#ACT
+#CALL [按钮\高级经验.txt] @高级经验
+break
+
+[@魂珠合成]
+#IF
+#ACT
+GetUserItemName 14 10
+
+#IF
+EQUAL S10
+#act
+messagebox 需要佩戴好“魂珠”方能激活此界面!!\说明：魂珠如果掉落可在商铺购买初级魂珠!!
+break
+
+
+#IF
+EQUAL S10 太初魂珠 
+#ACT
+MOV N45 170
+OPENMERCHANTBIGDLG 1  191 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:205:1:-4:14><IMG:200:1:-10:19/@勋章合成><IMG:202:1:-14:19/@功勋称号>\ \
+
+<ItemShow:588:0:76:76>   <ItemShow:589:0:231:76>\  \ \ \ \ 
+<>          \  \ 
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \ 
+<>       <魂珠说明：/SCOLOR=249><使用魂珠碎片升级提升，各地图小怪爆出碎片!/SCOLOR=222>   \  \ 
+<>            <需要魂珠碎片：/SCOLOR=89>     {<$STR(N45)>/SCOLOR=87}\  \
+<>            <拥有魂珠碎片：/SCOLOR=89>     {<$STR(U46)>/SCOLOR=89}\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@提升>\ 
+<>                                                       <购买碎片/@魂珠碎片>\
+<PlayImg:2:0:10:80:-107:-395:0><PlayImg:2:10:10:80:-298:-395:0>
+          
+
+
+#IF
+EQUAL S10 两仪魂珠 
+#ACT
+MOV N45 320
+OPENMERCHANTBIGDLG 1  191 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:205:1:-4:14><IMG:200:1:-10:19/@勋章合成><IMG:202:1:-14:19/@功勋称号>\ \
+
+<ItemShow:589:0:76:76>   <ItemShow:590:0:231:76>\  \ \ \ \ 
+<>          \  \ 
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \ 
+<>       <魂珠说明：/SCOLOR=249><使用魂珠碎片升级提升，各地图小怪爆出碎片!/SCOLOR=222>   \  \ 
+<>            <需要魂珠碎片：/SCOLOR=89>     {<$STR(N45)>/SCOLOR=87}\  \
+<>            <拥有魂珠碎片：/SCOLOR=89>     {<$STR(U46)>/SCOLOR=89}\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@提升1>\ 
+<>                                                       <购买碎片/@魂珠碎片>\
+<PlayImg:2:0:10:80:-107:-395:0><PlayImg:2:10:10:80:-298:-395:0>
+
+
+#IF
+EQUAL S10 三清魂珠
+#ACT
+MOV N45 520
+OPENMERCHANTBIGDLG 1  191 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:205:1:-4:14><IMG:200:1:-10:19/@勋章合成><IMG:202:1:-14:19/@功勋称号>\ \
+
+<ItemShow:590:0:76:76>   <ItemShow:591:0:231:76>\  \ \ \ \ 
+<>          \  \ 
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \ 
+<>       <魂珠说明：/SCOLOR=249><使用魂珠碎片升级提升，各地图小怪爆出碎片!/SCOLOR=222>   \  \ 
+<>            <需要魂珠碎片：/SCOLOR=89>     {<$STR(N45)>/SCOLOR=87}\  \
+<>            <拥有魂珠碎片：/SCOLOR=89>     {<$STR(U46)>/SCOLOR=89}\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@提升2>\ 
+<>                                                       <购买碎片/@魂珠碎片>\
+<PlayImg:2:0:10:80:-107:-395:0><PlayImg:2:10:10:80:-298:-395:0>
+
+
+#IF
+EQUAL S10 四象魂珠
+#ACT
+MOV N45 1080
+OPENMERCHANTBIGDLG 1  191 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:205:1:-4:14><IMG:200:1:-10:19/@勋章合成><IMG:202:1:-14:19/@功勋称号>\ \
+
+<ItemShow:591:0:76:76>   <ItemShow:592:0:231:76>\  \ \ \ \ 
+<>          \  \ 
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \ 
+<>       <魂珠说明：/SCOLOR=249><使用魂珠碎片升级提升，各地图小怪爆出碎片!/SCOLOR=222>   \  \ 
+<>            <需要魂珠碎片：/SCOLOR=89>     {<$STR(N45)>/SCOLOR=87}\  \
+<>            <拥有魂珠碎片：/SCOLOR=89>     {<$STR(U46)>/SCOLOR=89}\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@提升3>\ 
+<>                                                       <购买碎片/@魂珠碎片>\
+<PlayImg:2:0:10:80:-107:-395:0><PlayImg:2:10:10:80:-298:-395:0>
+
+#IF
+EQUAL S10 五行魂珠
+#ACT
+MOV N45 1760
+OPENMERCHANTBIGDLG 1  191 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:205:1:-4:14><IMG:200:1:-10:19/@勋章合成><IMG:202:1:-14:19/@功勋称号>\ \
+
+<ItemShow:592:0:76:76>   <ItemShow:593:0:231:76>\  \ \ \ \ 
+<>          \  \ 
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \ 
+<>       <魂珠说明：/SCOLOR=249><使用魂珠碎片升级提升，各地图小怪爆出碎片!/SCOLOR=222>   \  \ 
+<>            <需要魂珠碎片：/SCOLOR=89>     {<$STR(N45)>/SCOLOR=87}\  \
+<>            <拥有魂珠碎片：/SCOLOR=89>     {<$STR(U46)>/SCOLOR=89}\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@提升4>\ 
+<>                                                       <购买碎片/@魂珠碎片>\
+<PlayImg:2:0:10:80:-107:-395:0><PlayImg:2:10:10:80:-298:-395:0>
+
+
+#IF
+EQUAL S10 六合魂珠
+#ACT
+MOV N45 2680
+OPENMERCHANTBIGDLG 1  191 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:205:1:-4:14><IMG:200:1:-10:19/@勋章合成><IMG:202:1:-14:19/@功勋称号>\ \
+
+<ItemShow:593:0:76:76>   <ItemShow:594:0:231:76>\  \ \ \ \ 
+<>          \  \ 
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \ 
+<>       <魂珠说明：/SCOLOR=249><使用魂珠碎片升级提升，各地图小怪爆出碎片!/SCOLOR=222>   \  \ 
+<>            <需要魂珠碎片：/SCOLOR=89>     {<$STR(N45)>/SCOLOR=87}\  \
+<>            <拥有魂珠碎片：/SCOLOR=89>     {<$STR(U46)>/SCOLOR=89}\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@提升5>\ 
+<>                                                       <购买碎片/@魂珠碎片>\
+<PlayImg:2:0:10:80:-107:-395:0><PlayImg:2:10:10:80:-298:-395:0>
+
+
+#IF
+EQUAL S10 七星魂珠
+#ACT
+MOV N45 3280
+OPENMERCHANTBIGDLG 1  191 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:205:1:-4:14><IMG:200:1:-10:19/@勋章合成><IMG:202:1:-14:19/@功勋称号>\ \
+
+<ItemShow:594:0:76:76>   <ItemShow:595:0:231:76>\  \ \ \ \ 
+<>          \  \ 
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \ 
+<>       <魂珠说明：/SCOLOR=249><使用魂珠碎片升级提升，各地图小怪爆出碎片!/SCOLOR=222>   \  \ 
+<>            <需要魂珠碎片：/SCOLOR=89>     {<$STR(N45)>/SCOLOR=87}\  \
+<>            <拥有魂珠碎片：/SCOLOR=89>     {<$STR(U46)>/SCOLOR=89}\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@提升6>\ 
+<>                                                       <购买碎片/@魂珠碎片>\
+<PlayImg:2:0:10:80:-107:-395:0><PlayImg:2:10:10:80:-298:-395:0>
+
+
+#IF
+EQUAL S10 八卦魂珠
+#ACT
+MOV N45 4250
+OPENMERCHANTBIGDLG 1  191 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:205:1:-4:14><IMG:200:1:-10:19/@勋章合成><IMG:202:1:-14:19/@功勋称号>\ \
+
+<ItemShow:595:0:76:76>   <ItemShow:596:0:231:76>\  \ \ \ \ 
+<>          \  \ 
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \ 
+<>       <魂珠说明：/SCOLOR=249><使用魂珠碎片升级提升，各地图小怪爆出碎片!/SCOLOR=222>   \  \ 
+<>            <需要魂珠碎片：/SCOLOR=89>     {<$STR(N45)>/SCOLOR=87}\  \
+<>            <拥有魂珠碎片：/SCOLOR=89>     {<$STR(U46)>/SCOLOR=89}\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@提升7>\ 
+<>                                                       <购买碎片/@魂珠碎片>\
+<PlayImg:2:0:10:80:-107:-395:0><PlayImg:2:10:10:80:-298:-395:0>
+
+
+
+#IF
+EQUAL S10 九宫魂珠
+#ACT
+MOV N45 5690
+OPENMERCHANTBIGDLG 1  191 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:205:1:-4:14><IMG:200:1:-10:19/@勋章合成><IMG:202:1:-14:19/@功勋称号>\ \
+
+<ItemShow:596:0:76:76>   <ItemShow:597:0:231:76>\  \ \ \ \ 
+<>          \  \ 
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \ 
+<>       <魂珠说明：/SCOLOR=249><使用魂珠碎片升级提升，各地图小怪爆出碎片!/SCOLOR=222>   \  \ 
+<>            <需要魂珠碎片：/SCOLOR=89>     {<$STR(N45)>/SCOLOR=87}\  \
+<>            <拥有魂珠碎片：/SCOLOR=89>     {<$STR(U46)>/SCOLOR=89}\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@提升8>\ 
+<>                                                       <购买碎片/@魂珠碎片>\
+<PlayImg:2:0:10:80:-107:-395:0><PlayImg:2:10:10:80:-298:-395:0>
+
+
+#IF
+EQUAL S10 十方魂珠
+#ACT
+OPENMERCHANTBIGDLG 1  191 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:205:1:-4:14><IMG:200:1:-10:19/@勋章合成><IMG:202:1:-14:19/@功勋称号>\ \
+
+<ItemShow:597:0:76:76>   <ItemShow:598:0:231:76>\  \ \ \   \  \  \
+<>\  \  \  \   \  
+<>             <进阶条件：/SCOLOR=249><十方魂珠+600点卷/SCOLOR=89>\  \
+<>             <进阶说明：/SCOLOR=249><次终极魂珠，杀人越货必备!/SCOLOR=89>\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@提升9>\ 
+<>                                                       <购买碎片/@魂珠碎片>\
+<PlayImg:2:0:10:80:-107:-395:0><PlayImg:2:10:10:80:-298:-395:0>
+
+
+#IF
+EQUAL S10 圣·十方魂珠
+#ACT
+OPENMERCHANTBIGDLG 1  191 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:205:1:-4:14><IMG:200:1:-10:19/@勋章合成><IMG:202:1:-14:19/@功勋称号>\ \
+
+<ItemShow:598:0:76:76>   <ItemShow:599:0:231:76>\  \ \ \   \  \  \
+<>\  \  \  \   \  
+<>             <进阶条件：/SCOLOR=249><圣·十方魂珠+1200点卷/SCOLOR=89>\  \
+<>             <进阶说明：/SCOLOR=249><终极魂珠，杀人越货必备!/SCOLOR=89>\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@提升10>\ 
+<>                                                       <购买碎片/@魂珠碎片>\
+<PlayImg:2:0:10:80:-107:-395:0><PlayImg:2:10:10:80:-298:-395:0>
+
+
+#IF
+EQUAL S10 神·十方魂珠
+#ACT
+OPENMERCHANTBIGDLG 1  191 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:205:1:-4:14><IMG:200:1:-10:19/@勋章合成><IMG:202:1:-14:19/@功勋称号>\ \
+
+<ItemShow:599:0:76:76>   \  \ \ \   \  \  \
+<>\  \  \  \   \    \ 
+<>             <您的魂珠已经提升到顶级：神·十方魂珠/SCOLOR=89>\  \  \  \  \
+<PlayImg:2:0:10:80:-107:-395:0>
+
+
+[@功勋点]
+#if
+#ACT
+close
+#SAY
+　\  \  \
+　<5点功勋卷*1/@购买10点> <1000元宝/SCOLOR=250>            <25点功勋卷*1/@购买50点> <5000元宝/SCOLOR=250>\
+
+
+　\  \  \
+<温馨提示：/SCOLOR=249><中高级地图小怪爆出魂珠碎片和勋章碎片/SCOLOR=255>   <返回首页/@功勋称号>  \
+
+
+[@魂珠碎片]
+#if
+#ACT
+close
+#SAY
+　\ 
+　<魂珠碎片(中)*1|70#魂珠碎片(中)^250#　^250#[双击]增加碎片 +93/@购买1> <428元宝/SCOLOR=250>          <勋章碎片(中)*1|70#勋章碎片(中)^250#　^250#[双击]增加碎片 +175/@购买111> <428元宝/SCOLOR=250>\ \ 
+　<魂珠碎片(大)*1|70#魂珠碎片(大)^250#　^250#[双击]增加碎片 +279/@购买2> <1280元宝/SCOLOR=250>         <勋章碎片(大)*1|70#勋章碎片(大)^250#　^250#[双击]增加碎片 +525/@购买112> <1280元宝/SCOLOR=250>\ \ 
+　<魂珠碎片(特)*1|70#魂珠碎片(特)^250#　^250#[双击]增加碎片 +837/@购买3> <3800元宝/SCOLOR=250>         <勋章碎片(特)*1|70#勋章碎片(特)^250#　^250#[双击]增加碎片 +1575/@购买113> <3800元宝/SCOLOR=250>\
+
+
+　\  \
+<温馨提示：/SCOLOR=249><中高级地图小怪爆出魂珠碎片和勋章碎片/SCOLOR=255>   <返回首页/@魂珠合成>  \
+
+[@勋章碎片]
+#if
+#ACT
+close
+#SAY
+　\ 
+　<魂珠碎片(中)*1|70#魂珠碎片(中)^250#　^250#[双击]增加碎片 +93/@购买1> <428元宝/SCOLOR=250>          <勋章碎片(中)*1|70#勋章碎片(中)^250#　^250#[双击]增加碎片 +175/@购买111> <428元宝/SCOLOR=250>\ \ 
+　<魂珠碎片(大)*1|70#魂珠碎片(大)^250#　^250#[双击]增加碎片 +279/@购买2> <1280元宝/SCOLOR=250>         <勋章碎片(大)*1|70#勋章碎片(大)^250#　^250#[双击]增加碎片 +525/@购买112> <1280元宝/SCOLOR=250>\ \ 
+　<魂珠碎片(特)*1|70#魂珠碎片(特)^250#　^250#[双击]增加碎片 +837/@购买3> <3800元宝/SCOLOR=250>         <勋章碎片(特)*1|70#勋章碎片(特)^250#　^250#[双击]增加碎片 +1575/@购买113> <3800元宝/SCOLOR=250>\
+
+
+　\  \
+<温馨提示：/SCOLOR=249><中高级地图小怪爆出魂珠碎片和勋章碎片/SCOLOR=255>   <返回首页/@勋章合成>  \
+
+
+[@购买1]
+#IF
+CHECKGAMEGOLD > 427
+#ACT
+GAMEGOLD - 428
+give 魂珠碎片(中) 1
+SENDMSG 6 购买成功，获得魂珠碎片(中)
+BREAK
+#ELSEACT
+MESSAGEBOX [失败]:您的元宝不足!
+
+[@购买2]
+#IF
+CHECKGAMEGOLD > 1279
+#ACT
+GAMEGOLD - 1280
+give 魂珠碎片(大) 1
+SENDMSG 6 购买成功，获得魂珠碎片(大)
+BREAK
+#ELSEACT
+MESSAGEBOX [失败]:您的元宝不足!
+
+[@购买3]
+#IF
+CHECKGAMEGOLD > 3799
+#ACT
+GAMEGOLD - 3800
+give 魂珠碎片(特) 1
+SENDMSG 6 购买成功，获得魂珠碎片(特)
+BREAK
+#ELSEACT
+MESSAGEBOX [失败]:您的元宝不足!
+
+
+[@购买111]
+#IF
+CHECKGAMEGOLD > 427
+#ACT
+GAMEGOLD - 428
+give 勋章碎片(中) 1
+SENDMSG 6 购买成功，获得勋章碎片(中)
+BREAK
+#ELSEACT
+MESSAGEBOX [失败]:您的元宝不足!
+
+[@购买112]
+#IF
+CHECKGAMEGOLD > 1279
+#ACT
+GAMEGOLD - 1280
+give 勋章碎片(大) 1
+SENDMSG 6 购买成功，获得勋章碎片(大)
+BREAK
+#ELSEACT
+MESSAGEBOX [失败]:您的元宝不足!
+
+[@购买113]
+#IF
+CHECKGAMEGOLD > 3799
+#ACT
+GAMEGOLD - 3800
+give 勋章碎片(特) 1
+SENDMSG 6 购买成功，获得勋章碎片(特)
+BREAK
+#ELSEACT
+MESSAGEBOX [失败]:您的元宝不足!
+
+[@购买10点]
+#IF
+CHECKGAMEGOLD > 999
+#ACT
+GAMEGOLD - 1000
+give 5点功勋卷 1
+SENDMSG 6 购买成功，5点功勋卷
+BREAK
+#ELSEACT
+MESSAGEBOX [失败]:您的元宝不足!
+
+[@购买50点]
+#IF
+CHECKGAMEGOLD > 4999
+#ACT
+GAMEGOLD - 5000
+give 25点功勋卷 1
+SENDMSG 6 购买成功，25点功勋卷
+BREAK
+#ELSEACT
+MESSAGEBOX [失败]:您的元宝不足!
+
+
+
+[@勋章合成]
+#IF
+#ACT
+GetUserItemName 2 12
+
+#IF
+EQUAL S12
+#act
+messagebox 需要佩戴好“勋章”方能激活此NPC界面!!\说明：勋章如果掉落可在商铺购买初级勋章!!
+break
+
+
+#IF
+EQUAL S12 太初勋章
+#ACT
+MOV N47 170
+OPENMERCHANTBIGDLG 1  191 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+<IMG:201:1:-4:19/@魂珠合成><IMG:204:1:-8:14><IMG:202:1:-14:19/@功勋称号>\ \
+
+<ItemShow:600:0:76:76>   <ItemShow:601:0:231:76>\  \ \ \ \ 
+<>          \  \ 
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \ 
+<>       <勋章说明：/SCOLOR=249><使用勋章碎片升级提升，各地图小怪爆出碎片!/SCOLOR=222>   \  \ 
+<>            <需要勋章碎片：/SCOLOR=89>     {<$STR(N47)>/SCOLOR=87}\  \
+<>            <拥有勋章碎片：/SCOLOR=89>     {<$STR(U48)>/SCOLOR=89}\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@提升xz>\ 
+<>                                                       <购买碎片/@勋章碎片>\
+<PlayImg:2:0:10:80:-107:-395:0><PlayImg:2:10:10:80:-298:-395:0>
+
+
+
+#IF
+EQUAL S12 两仪勋章
+#ACT
+MOV N47 320
+OPENMERCHANTBIGDLG 1  191 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:204:1:-8:14><IMG:202:1:-14:19/@功勋称号>\ \
+
+<ItemShow:601:0:76:76>   <ItemShow:602:0:231:76>\  \ \ \ \ 
+<>          \  \ 
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \ 
+<>       <勋章说明：/SCOLOR=249><使用勋章碎片升级提升，各地图小怪爆出碎片!/SCOLOR=222>   \  \ 
+<>            <需要勋章碎片：/SCOLOR=89>     {<$STR(N47)>/SCOLOR=87}\  \
+<>            <拥有勋章碎片：/SCOLOR=89>     {<$STR(U48)>/SCOLOR=89}\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@提升xz1>\ 
+<>                                                       <购买碎片/@勋章碎片>\
+<PlayImg:2:0:10:80:-107:-395:0><PlayImg:2:10:10:80:-298:-395:0>
+
+
+#IF
+EQUAL S12 三清勋章
+#ACT
+MOV N47 520
+OPENMERCHANTBIGDLG 1  191 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:204:1:-8:14><IMG:202:1:-14:19/@功勋称号>\ \
+
+<ItemShow:602:0:76:76>   <ItemShow:603:0:231:76>\  \ \ \ \ 
+<>          \  \ 
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \ 
+<>       <勋章说明：/SCOLOR=249><使用勋章碎片升级提升，各地图小怪爆出碎片!/SCOLOR=222>   \  \ 
+<>            <需要勋章碎片：/SCOLOR=89>     {<$STR(N47)>/SCOLOR=87}\  \
+<>            <拥有勋章碎片：/SCOLOR=89>     {<$STR(U48)>/SCOLOR=89}\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@提升xz2>\ 
+<>                                                       <购买碎片/@勋章碎片>\
+<PlayImg:2:0:10:80:-107:-395:0><PlayImg:2:10:10:80:-298:-395:0>
+
+
+#IF
+EQUAL S12 四象勋章
+#ACT
+MOV N47 1080
+OPENMERCHANTBIGDLG 1  191 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:204:1:-8:14><IMG:202:1:-14:19/@功勋称号>\ \
+
+<ItemShow:603:0:76:76>   <ItemShow:604:0:231:76>\  \ \ \ \ 
+<>          \  \ 
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \ 
+<>       <勋章说明：/SCOLOR=249><使用勋章碎片升级提升，各地图小怪爆出碎片!/SCOLOR=222>   \  \ 
+<>            <需要勋章碎片：/SCOLOR=89>     {<$STR(N47)>/SCOLOR=87}\  \
+<>            <拥有勋章碎片：/SCOLOR=89>     {<$STR(U48)>/SCOLOR=89}\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@提升xz3>\ 
+<>                                                       <购买碎片/@勋章碎片>\
+<PlayImg:2:0:10:80:-107:-395:0><PlayImg:2:10:10:80:-298:-395:0>
+
+
+#IF
+EQUAL S12 五行勋章
+#ACT
+MOV N47 1860
+OPENMERCHANTBIGDLG 1  191 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:204:1:-8:14><IMG:202:1:-14:19/@功勋称号>\ \
+
+<ItemShow:604:0:76:76>   <ItemShow:605:0:231:76>\  \ \ \ \ 
+<>          \  \ 
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \ 
+<>       <勋章说明：/SCOLOR=249><使用勋章碎片升级提升，各地图小怪爆出碎片!/SCOLOR=222>   \  \ 
+<>            <需要勋章碎片：/SCOLOR=89>     {<$STR(N47)>/SCOLOR=87}\  \
+<>            <拥有勋章碎片：/SCOLOR=89>     {<$STR(U48)>/SCOLOR=89}\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@提升xz4>\ 
+<>                                                       <购买碎片/@勋章碎片>\
+<PlayImg:2:0:10:80:-107:-395:0><PlayImg:2:10:10:80:-298:-395:0>
+
+
+#IF
+EQUAL S12 六合勋章
+#ACT
+MOV N47 2980
+OPENMERCHANTBIGDLG 1  191 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:204:1:-8:14><IMG:202:1:-14:19/@功勋称号>\ \
+
+<ItemShow:605:0:76:76>   <ItemShow:606:0:231:76>\  \ \ \ \ 
+<>          \  \ 
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \ 
+<>       <勋章说明：/SCOLOR=249><使用勋章碎片升级提升，各地图小怪爆出碎片!/SCOLOR=222>   \  \ 
+<>            <需要勋章碎片：/SCOLOR=89>     {<$STR(N47)>/SCOLOR=87}\  \
+<>            <拥有勋章碎片：/SCOLOR=89>     {<$STR(U48)>/SCOLOR=89}\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@提升xz5>\ 
+<>                                                       <购买碎片/@勋章碎片>\
+<PlayImg:2:0:10:80:-107:-395:0><PlayImg:2:10:10:80:-298:-395:0>
+
+
+#IF
+EQUAL S12 七星勋章
+#ACT
+MOV N47 3708
+OPENMERCHANTBIGDLG 1  191 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:204:1:-8:14><IMG:202:1:-14:19/@功勋称号>\ \
+
+<ItemShow:606:0:76:76>   <ItemShow:607:0:231:76>\  \ \ \ \ 
+<>          \  \ 
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \ 
+<>       <勋章说明：/SCOLOR=249><使用勋章碎片升级提升，各地图小怪爆出碎片!/SCOLOR=222>   \  \ 
+<>            <需要勋章碎片：/SCOLOR=89>     {<$STR(N47)>/SCOLOR=87}\  \
+<>            <拥有勋章碎片：/SCOLOR=89>     {<$STR(U48)>/SCOLOR=89}\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@提升xz6>\ 
+<>                                                       <购买碎片/@勋章碎片>\
+<PlayImg:2:0:10:80:-107:-395:0><PlayImg:2:10:10:80:-298:-395:0>
+
+
+#IF
+EQUAL S12 八卦勋章
+#ACT
+MOV N47 4368
+OPENMERCHANTBIGDLG 1  191 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:204:1:-8:14><IMG:202:1:-14:19/@功勋称号>\ \
+
+<ItemShow:607:0:76:76>   <ItemShow:608:0:231:76>\  \ \ \ \ 
+<>          \  \ 
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \ 
+<>       <勋章说明：/SCOLOR=249><使用勋章碎片升级提升，各地图小怪爆出碎片!/SCOLOR=222>   \  \ 
+<>            <需要勋章碎片：/SCOLOR=89>     {<$STR(N47)>/SCOLOR=87}\  \
+<>            <拥有勋章碎片：/SCOLOR=89>     {<$STR(U48)>/SCOLOR=89}\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@提升xz7>\ 
+<>                                                       <购买碎片/@勋章碎片>\
+<PlayImg:2:0:10:80:-107:-395:0><PlayImg:2:10:10:80:-298:-395:0>
+
+
+#IF
+EQUAL S12 九宫勋章
+#ACT
+MOV N47 5288
+OPENMERCHANTBIGDLG 1  191 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:204:1:-8:14><IMG:202:1:-14:19/@功勋称号>\ \
+
+<ItemShow:608:0:76:76>   <ItemShow:609:0:231:76>\  \ \ \ \ 
+<>          \  \ 
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \ 
+<>       <勋章说明：/SCOLOR=249><使用勋章碎片升级提升，各地图小怪爆出碎片!/SCOLOR=222>   \  \ 
+<>            <需要勋章碎片：/SCOLOR=89>     {<$STR(N47)>/SCOLOR=87}\  \
+<>            <拥有勋章碎片：/SCOLOR=89>     {<$STR(U48)>/SCOLOR=89}\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@提升xz8>\ 
+<>                                                       <购买碎片/@勋章碎片>\
+<PlayImg:2:0:10:80:-107:-395:0><PlayImg:2:10:10:80:-298:-395:0>
+
+
+
+#IF
+EQUAL S12 十方勋章
+#ACT
+OPENMERCHANTBIGDLG 1  191 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:204:1:-8:14><IMG:202:1:-14:19/@功勋称号>\ \
+
+<ItemShow:609:0:76:76>   <ItemShow:610:0:231:76>\  \ \ \   \  \  \
+<>\  \  \  \   \  
+<>             <进阶条件：/SCOLOR=249><十方勋章+500点卷/SCOLOR=89>\  \
+<>             <进阶说明：/SCOLOR=249><次终极勋章，提升人物防御力和攻击力/SCOLOR=89>\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@提升xz9>\ 
+<>                                                       <购买碎片/@勋章碎片>\
+<PlayImg:2:0:10:80:-107:-395:0><PlayImg:2:10:10:80:-298:-395:0>
+
+
+#IF
+EQUAL S12 圣·十方勋章
+#ACT
+OPENMERCHANTBIGDLG 1  191 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:204:1:-8:14><IMG:202:1:-14:19/@功勋称号>\ \
+
+<ItemShow:610:0:76:76>   <ItemShow:611:0:231:76>\  \ \ \   \  \  \
+<>\  \  \  \   \  
+<>             <进阶条件：/SCOLOR=249><圣·十方勋章+800点卷/SCOLOR=89>\  \
+<>             <进阶说明：/SCOLOR=249><终极勋章，提升人物防御力和攻击力/SCOLOR=89>\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@提升xz10>\ 
+<>                                                       <购买碎片/@勋章碎片>\
+<PlayImg:2:0:10:80:-107:-395:0><PlayImg:2:10:10:80:-298:-395:0>
+
+
+#IF
+EQUAL S12 神·十方勋章
+#ACT
+OPENMERCHANTBIGDLG 1  191 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:204:1:-8:14><IMG:202:1:-14:19/@功勋称号>\ \
+
+<ItemShow:611:0:76:76>   \  \ \ \   \  \  \
+<>\  \  \  \   \    \ 
+<>             <您的魂珠已经提升到顶级：神·十方勋章/SCOLOR=89>\  \  \  \  \
+<PlayImg:2:0:10:80:-107:-395:0>
+
+
+
+[@提升]
+#IF
+CHECKBAGSIZE 2
+CHECKITEMW 太初魂珠 1
+LARGE U46 170
+#ACT
+DEC U46 170
+TAKEW 太初魂珠 1
+GIVE 两仪魂珠 1 
+AutoTakeOnItem 两仪魂珠 14
+messagebox \\恭喜您成功将“太初魂珠”升级成为：两仪魂珠
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功将“太初魂珠”升级成为：两仪魂珠
+GOTO @魂珠合成
+break
+#ELSEACT
+MESSAGEBOX 晋级失败:原因如下\\　　　　1.您的“背包空格”不足2格\\　　　　2.您的的“魂珠碎片”数量不足
+
+[@提升1]
+#IF
+CHECKBAGSIZE 2
+CHECKITEMW 两仪魂珠 1
+LARGE U46 320
+#ACT
+DEC U46 320
+TAKEW 两仪魂珠 1
+GIVE 三清魂珠 1
+AutoTakeOnItem 三清魂珠 14
+messagebox \\恭喜您成功将“两仪魂珠”升级成为：三清魂珠
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功将“两仪魂珠”升级成为：三清魂珠
+GOTO @魂珠合成
+break
+#ELSEACT
+MESSAGEBOX 晋级失败:原因如下\\　　　　1.您的“背包空格”不足2格\\　　　　2.您的的“魂珠碎片”数量不足
+
+[@提升2]
+#IF
+CHECKBAGSIZE 2
+CHECKITEMW 三清魂珠 1
+LARGE U46 520
+#ACT
+DEC U46 520
+TAKEW 三清魂珠 1
+GIVE 四象魂珠 1 
+AutoTakeOnItem 四象魂珠 14
+messagebox \\恭喜您成功将“三清魂珠”升级成为：四象魂珠
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功将“三清魂珠”升级成为：四象魂珠
+GOTO @魂珠合成
+break
+#ELSEACT
+MESSAGEBOX 晋级失败:原因如下\\　　　　1.您的“背包空格”不足2格\\　　　　2.您的的“魂珠碎片”数量不足
+
+[@提升3]
+#IF
+CHECKBAGSIZE 2
+CHECKITEMW 四象魂珠 1
+LARGE U46 1080
+#ACT
+DEC U46 1080
+TAKEW 四象魂珠 1
+GIVE 五行魂珠 1 
+AutoTakeOnItem 五行魂珠 14
+messagebox \\恭喜您成功将“四象魂珠”升级成为：五行魂珠
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功将“四象魂珠”升级成为：五行魂珠
+GOTO @魂珠合成
+break
+#ELSEACT
+MESSAGEBOX 晋级失败:原因如下\\　　　　1.您的“背包空格”不足2格\\　　　　2.您的的“魂珠碎片”数量不足
+
+[@提升4]
+#IF
+CHECKBAGSIZE 2
+CHECKITEMW 五行魂珠 1
+LARGE U46 1760
+#ACT
+DEC U46 1760
+TAKEW 五行魂珠 1
+GIVE 六合魂珠 1 
+AutoTakeOnItem 六合魂珠 14
+messagebox \\恭喜您成功将“五行魂珠”升级成为：六合魂珠
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功将“五行魂珠”升级成为：六合魂珠
+GOTO @魂珠合成
+break
+#ELSEACT
+MESSAGEBOX 晋级失败:原因如下\\　　　　1.您的“背包空格”不足2格\\　　　　2.您的的“魂珠碎片”数量不足
+
+[@提升5]
+#IF
+CHECKBAGSIZE 2
+CHECKITEMW 六合魂珠 1
+LARGE U46 2680
+#ACT
+DEC U46 2680
+TAKEW 六合魂珠 1
+GIVE 七星魂珠 1 
+AutoTakeOnItem 七星魂珠 14
+messagebox \\恭喜您成功将“六合魂珠”升级成为：七星魂珠
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功将“六合魂珠”升级成为：七星魂珠
+GOTO @魂珠合成
+break
+#ELSEACT
+MESSAGEBOX 晋级失败:原因如下\\　　　　1.您的“背包空格”不足2格\\　　　　2.您的的“魂珠碎片”数量不足
+
+[@提升6]
+#IF
+CHECKBAGSIZE 2
+CHECKITEMW 七星魂珠 1
+LARGE U46 3280
+#ACT
+DEC U46 3280
+TAKEW 七星魂珠 1
+GIVE 八卦魂珠 1 
+AutoTakeOnItem 八卦魂珠 14
+messagebox \\恭喜您成功将“七星魂珠”升级成为：八卦魂珠
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功将“七星魂珠”升级成为：八卦魂珠
+GOTO @魂珠合成
+break
+#ELSEACT
+MESSAGEBOX 晋级失败:原因如下\\　　　　1.您的“背包空格”不足2格\\　　　　2.您的的“魂珠碎片”数量不足
+
+
+[@提升7]
+#IF
+CHECKBAGSIZE 2
+CHECKITEMW 八卦魂珠 1
+LARGE U46 4250
+#ACT
+DEC U46 4250
+TAKEW 八卦魂珠 1
+GIVE 九宫魂珠 1
+AutoTakeOnItem 九宫魂珠 14
+messagebox \\恭喜您成功将“八卦魂珠”升级成为：九宫魂珠
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功将“八卦魂珠”升级成为：九宫魂珠
+GOTO @魂珠合成
+break
+#ELSEACT
+MESSAGEBOX 晋级失败:原因如下\\　　　　1.您的“背包空格”不足2格\\　　　　2.您的的“魂珠碎片”数量不足
+
+[@提升8]
+#IF
+CHECKBAGSIZE 2
+CHECKITEMW 九宫魂珠 1
+LARGE U46 5690
+#ACT
+DEC U46 5690
+TAKEW 九宫魂珠 1
+GIVE 十方魂珠 1 
+AutoTakeOnItem 十方魂珠 14
+messagebox \\恭喜您成功将“九宫魂珠”升级成为：十方魂珠
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功将“九宫魂珠”升级成为：十方魂珠
+GOTO @魂珠合成
+break
+#ELSEACT
+MESSAGEBOX 晋级失败:原因如下\\　　　　1.您的“背包空格”不足2格\\　　　　2.您的的“魂珠碎片”数量不足
+
+[@提升9]
+#IF
+CHECKBAGSIZE 2
+CHECKITEMW 十方魂珠 1
+CHECKGAMEDIAMOND > 599
+#ACT
+GAMEDIAMOND - 600
+TAKEW 十方魂珠 1
+GIVE 圣·十方魂珠 1 
+AutoTakeOnItem 圣·十方魂珠 14
+messagebox \\恭喜您成功将“十方魂珠”升级成为：圣·十方魂珠
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功将“十方魂珠”升级成为：圣·十方魂珠
+GOTO @魂珠合成
+break
+#ELSEACT
+MESSAGEBOX 晋级失败:原因如下\\　　　　1.您的“背包空格”不足2格\\　　　　2.您的的“点卷”数量不足
+
+
+[@提升10]
+#IF
+CHECKBAGSIZE 2
+CHECKITEMW 圣·十方魂珠 1
+CHECKGAMEDIAMOND > 1199
+#ACT
+GAMEDIAMOND - 1200
+TAKEW 圣·十方魂珠 1
+GIVE 神·十方魂珠 1 
+AutoTakeOnItem 神·十方魂珠 14
+messagebox \\恭喜您成功将“圣·十方魂珠”升级成为：神·十方魂珠
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功将“圣·十方魂珠”升级成为：神·十方魂珠
+GOTO @魂珠合成
+break
+#ELSEACT
+MESSAGEBOX 晋级失败:原因如下\\　　　　1.您的“背包空格”不足2格\\　　　　2.您的的“点卷”数量不足
+
+
+
+[@提升xz]
+#IF
+CHECKBAGSIZE 2
+CHECKITEMW 太初勋章 1
+LARGE U48 170
+#ACT
+DEC U48 170
+TAKEW 太初勋章 1
+GIVE 两仪勋章 1
+AutoTakeOnItem 两仪勋章 2
+messagebox \\恭喜您成功将“太初勋章”升级成为：两仪勋章
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功将“太初勋章”升级成为：两仪勋章
+GOTO @勋章合成
+break
+#ELSEACT
+MESSAGEBOX 晋级失败:原因如下\\　　　　1.您的“背包空格”不足2格\\　　　　2.您的的“勋章碎片”数量不足
+
+
+[@提升xz1]
+#IF
+CHECKBAGSIZE 2
+CHECKITEMW 两仪勋章 1
+LARGE U48 320
+#ACT
+DEC U48 320
+TAKEW 两仪勋章 1
+GIVE 三清勋章 1 
+AutoTakeOnItem 三清勋章 2
+messagebox \\恭喜您成功将“两仪勋章”升级成为：三清勋章
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功将“两仪勋章”升级成为：三清勋章
+GOTO @勋章合成
+break
+#ELSEACT
+MESSAGEBOX 晋级失败:原因如下\\　　　　1.您的“背包空格”不足2格\\　　　　2.您的的“勋章碎片”数量不足
+
+
+[@提升xz2]
+#IF
+CHECKBAGSIZE 2
+CHECKITEMW 三清勋章 1
+LARGE U48 520
+#ACT
+DEC U48 520
+TAKEW 三清勋章 1
+GIVE 四象勋章 1
+AutoTakeOnItem 四象勋章 2
+messagebox \\恭喜您成功将“三清勋章”升级成为：四象勋章
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功将“三清勋章”升级成为：四象勋章
+GOTO @勋章合成
+break
+#ELSEACT
+MESSAGEBOX 晋级失败:原因如下\\　　　　1.您的“背包空格”不足2格\\　　　　2.您的的“勋章碎片”数量不足
+
+[@提升xz3]
+#IF
+CHECKBAGSIZE 2
+CHECKITEMW 四象勋章 1
+LARGE U48 1080
+#ACT
+DEC U48 1080
+TAKEW 四象勋章 1
+GIVE 五行勋章 1
+AutoTakeOnItem 五行勋章 2
+messagebox \\恭喜您成功将“四象勋章”升级成为：五行勋章
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功将“四象勋章”升级成为：五行勋章
+GOTO @勋章合成
+break
+#ELSEACT
+MESSAGEBOX 晋级失败:原因如下\\　　　　1.您的“背包空格”不足2格\\　　　　2.您的的“勋章碎片”数量不足
+
+
+[@提升xz4]
+#IF
+CHECKBAGSIZE 2
+CHECKITEMW 五行勋章 1
+LARGE U48 1860
+#ACT
+DEC U48 1860
+TAKEW 五行勋章 1
+GIVE 六合勋章 1 
+AutoTakeOnItem 六合勋章 2
+messagebox \\恭喜您成功将“五行勋章”升级成为：六合勋章
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功将“五行勋章”升级成为：六合勋章
+GOTO @勋章合成
+break
+#ELSEACT
+MESSAGEBOX 晋级失败:原因如下\\　　　　1.您的“背包空格”不足2格\\　　　　2.您的的“勋章碎片”数量不足
+
+[@提升xz5]
+#IF
+CHECKBAGSIZE 2
+CHECKITEMW 六合勋章 1
+LARGE U48 2980
+#ACT
+DEC U48 2980
+TAKEW 六合勋章 1
+GIVE 七星勋章 1
+AutoTakeOnItem 七星勋章 2
+messagebox \\恭喜您成功将“六合勋章”升级成为：七星勋章
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功将“六合勋章”升级成为：七星勋章
+GOTO @勋章合成
+break
+#ELSEACT
+MESSAGEBOX 晋级失败:原因如下\\　　　　1.您的“背包空格”不足2格\\　　　　2.您的的“勋章碎片”数量不足
+
+[@提升xz6]
+#IF
+CHECKBAGSIZE 2
+CHECKITEMW 七星勋章 1
+LARGE U48 3708
+#ACT
+DEC U48 3708
+TAKEW 七星勋章 1
+GIVE 八卦勋章 1 
+AutoTakeOnItem 八卦勋章 2
+messagebox \\恭喜您成功将“七星勋章”升级成为：八卦勋章
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功将“七星勋章”升级成为：八卦勋章
+GOTO @勋章合成
+break
+#ELSEACT
+MESSAGEBOX 晋级失败:原因如下\\　　　　1.您的“背包空格”不足2格\\　　　　2.您的的“勋章碎片”数量不足
+
+[@提升xz7]
+#IF
+CHECKBAGSIZE 2
+CHECKITEMW 八卦勋章 1
+LARGE U48 4368
+#ACT
+DEC U48 4368
+TAKEW 八卦勋章 1
+GIVE 九宫勋章 1 
+AutoTakeOnItem 九宫勋章 2
+messagebox \\恭喜您成功将“八卦勋章”升级成为：九宫勋章
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功将“八卦勋章”升级成为：九宫勋章
+GOTO @勋章合成
+break
+#ELSEACT
+MESSAGEBOX 晋级失败:原因如下\\　　　　1.您的“背包空格”不足2格\\　　　　2.您的的“勋章碎片”数量不足
+
+
+[@提升xz8]
+#IF
+CHECKBAGSIZE 2
+CHECKITEMW 九宫勋章 1
+LARGE U48 5288
+#ACT
+DEC U48 5288
+TAKEW 九宫勋章 1
+GIVE 十方勋章 1 
+AutoTakeOnItem 十方勋章 2
+messagebox \\恭喜您成功将“九宫勋章”升级成为：十方勋章
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功将“九宫勋章”升级成为：十方勋章
+GOTO @勋章合成
+break
+#ELSEACT
+MESSAGEBOX 晋级失败:原因如下\\　　　　1.您的“背包空格”不足2格\\　　　　2.您的的“勋章碎片”数量不足
+
+
+[@提升xz9]
+#IF
+CHECKBAGSIZE 2
+CHECKITEMW 十方勋章 1
+CHECKGAMEDIAMOND > 499
+#ACT
+GAMEDIAMOND - 500
+TAKEW 十方勋章 1
+GIVE 圣·十方勋章 1
+AutoTakeOnItem 圣·十方勋章 2
+messagebox \\恭喜您成功将“十方勋章”升级成为：圣·十方勋章
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功将“十方勋章”升级成为：圣·十方勋章
+GOTO @勋章合成
+break
+#ELSEACT
+MESSAGEBOX 晋级失败:原因如下\\　　　　1.您的“背包空格”不足2格\\　　　　2.您的的“点卷”数量不足
+
+[@提升xz10]
+#IF
+CHECKBAGSIZE 2
+CHECKITEMW 圣·十方勋章 1
+CHECKGAMEDIAMOND > 799
+#ACT
+GAMEDIAMOND - 800
+TAKEW 圣·十方勋章 1
+GIVE 神·十方勋章 1 
+AutoTakeOnItem 神·十方勋章 2
+messagebox \\恭喜您成功将“圣·十方勋章”升级成为：神·十方勋章
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功将“圣·十方勋章”升级成为：神·十方勋章
+GOTO @勋章合成
+break
+#ELSEACT
+MESSAGEBOX 晋级失败:原因如下\\　　　　1.您的“背包空格”不足2格\\　　　　2.您的的“点卷”数量不足
+
+
+
+
+[@功勋称号]
+#if
+checkjob warrior
+#ACT
+GOTO @战士龙魂
+BREAK
+#IF
+checkjob taoist
+#ACT
+GOTO @道士龙魂
+BREAK
+#if
+checkjob wizard
+#ACT
+GOTO @法师龙魂
+BREAK
+
+
+[@战士龙魂]
+
+
+
+#IF
+Equal U11 0
+checkjob warrior
+#ACT
+MOV N49 5
+OPENMERCHANTBIGDLG 1  190 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:200:1:-10:19/@勋章合成><IMG:206:1:-14:14>\ \
+
+<> \  \ \ \ \  \   \
+
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \
+<>   <下阶功勋称号：/SCOLOR=251><【一阶战灵】/SCOLOR=250>\ \
+<>            <需要功勋点：/SCOLOR=89>       {<$STR(N49)>/SCOLOR=89}\  \
+<>            <拥有功勋点：/SCOLOR=89>       {<$CREDITPOINT>/SCOLOR=89}\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@开始提升z1>\
+<>                                                      <购买功勋点/@功勋点>\
+
+#IF
+Equal U11 1
+checkjob warrior
+#ACT
+MOV N49 12
+OPENMERCHANTBIGDLG 1  190 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:200:1:-10:19/@勋章合成><IMG:206:1:-14:14>\ \
+
+<> \  \ \ \ \  \   \
+
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \
+<>   <下阶功勋称号：/SCOLOR=251><【二阶战将】/SCOLOR=250>\ \
+<>            <需要功勋点：/SCOLOR=89>       {<$STR(N49)>/SCOLOR=89}\  \
+<>            <拥有功勋点：/SCOLOR=89>       {<$CREDITPOINT>/SCOLOR=89}\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@开始提升z2>\
+<>                                                      <购买功勋点/@功勋点>\
+
+#IF
+Equal U11 2
+checkjob warrior
+#ACT
+MOV N49 18
+OPENMERCHANTBIGDLG 1  190 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:200:1:-10:19/@勋章合成><IMG:206:1:-14:14>\ \
+
+<> \  \ \ \ \  \   \
+
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \
+<>   <下阶功勋称号：/SCOLOR=251><【三阶战狂】/SCOLOR=250>\ \
+<>            <需要功勋点：/SCOLOR=89>       {<$STR(N49)>/SCOLOR=89}\  \
+<>            <拥有功勋点：/SCOLOR=89>       {<$CREDITPOINT>/SCOLOR=89}\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@开始提升z3>\
+<>                                                      <购买功勋点/@功勋点>\
+
+#IF
+Equal U11 3
+checkjob warrior
+#ACT
+MOV N49 23
+OPENMERCHANTBIGDLG 1  190 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:200:1:-10:19/@勋章合成><IMG:206:1:-14:14>\ \
+
+<> \  \ \ \ \  \   \
+
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \
+<>   <下阶功勋称号：/SCOLOR=251><【四阶战王】/SCOLOR=250>\ \
+<>            <需要功勋点：/SCOLOR=89>       {<$STR(N49)>/SCOLOR=89}\  \
+<>            <拥有功勋点：/SCOLOR=89>       {<$CREDITPOINT>/SCOLOR=89}\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@开始提升z4>\
+<>                                                      <购买功勋点/@功勋点>\
+
+
+#IF
+Equal U11 4
+checkjob warrior
+#ACT
+MOV N49 28
+OPENMERCHANTBIGDLG 1  190 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:200:1:-10:19/@勋章合成><IMG:206:1:-14:14>\ \
+
+<> \  \ \ \ \  \   \
+
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \
+<>   <下阶功勋称号：/SCOLOR=251><【五阶战圣】/SCOLOR=250>\ \
+<>            <需要功勋点：/SCOLOR=89>       {<$STR(N49)>/SCOLOR=89}\  \
+<>            <拥有功勋点：/SCOLOR=89>       {<$CREDITPOINT>/SCOLOR=89}\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@开始提升z5>\
+<>                                                      <购买功勋点/@功勋点>\
+
+#IF
+Equal U11 5
+checkjob warrior
+#ACT
+MOV N49 39
+OPENMERCHANTBIGDLG 1  190 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:200:1:-10:19/@勋章合成><IMG:206:1:-14:14>\ \
+
+<> \  \ \ \ \  \   \
+
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \
+<>   <下阶功勋称号：/SCOLOR=251><【六阶天武战士】/SCOLOR=253>\ \
+<>            <需要功勋点：/SCOLOR=89>       {<$STR(N49)>/SCOLOR=89}\  \
+<>            <拥有功勋点：/SCOLOR=89>       {<$CREDITPOINT>/SCOLOR=89}\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@开始提升z6>\
+<>                                                      <购买功勋点/@功勋点>\
+
+#IF
+Equal U11 6
+checkjob warrior
+#ACT
+MOV N49 65
+OPENMERCHANTBIGDLG 1  190 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:200:1:-10:19/@勋章合成><IMG:206:1:-14:14>\ \
+
+<> \  \ \ \ \  \   \
+
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \
+<>   <下阶功勋称号：/SCOLOR=251><【七阶神武战灵】/SCOLOR=253>\ \
+<>            <需要功勋点：/SCOLOR=89>       {<$STR(N49)>/SCOLOR=89}\  \
+<>            <拥有功勋点：/SCOLOR=89>       {<$CREDITPOINT>/SCOLOR=89}\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@开始提升z7>\
+<>                                                      <购买功勋点/@功勋点>\
+
+
+#IF
+Equal U11 7
+checkjob warrior
+#ACT
+MOV N49 98
+OPENMERCHANTBIGDLG 1  190 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:200:1:-10:19/@勋章合成><IMG:206:1:-14:14>\ \
+
+<> \  \ \ \ \  \   \
+
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \
+<>   <下阶功勋称号：/SCOLOR=251><【八阶圣武战魂】/SCOLOR=253>\ \
+<>            <需要功勋点：/SCOLOR=89>       {<$STR(N49)>/SCOLOR=89}\  \
+<>            <拥有功勋点：/SCOLOR=89>       {<$CREDITPOINT>/SCOLOR=89}\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@开始提升z8>\
+<>                                                      <购买功勋点/@功勋点>\
+
+
+#IF
+Equal U11 8
+checkjob warrior
+#ACT
+MOV N49 136
+OPENMERCHANTBIGDLG 1  190 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:200:1:-10:19/@勋章合成><IMG:206:1:-14:14>\ \
+
+<> \  \ \ \ \  \   \
+
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \
+<>   <下阶功勋称号：/SCOLOR=251><【九阶洪武战将】/SCOLOR=253>\ \
+<>            <需要功勋点：/SCOLOR=89>       {<$STR(N49)>/SCOLOR=89}\  \
+<>            <拥有功勋点：/SCOLOR=89>       {<$CREDITPOINT>/SCOLOR=89}\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@开始提升z9>\
+<>                                                      <购买功勋点/@功勋点>\
+
+
+#IF
+Equal U11 9
+checkjob warrior
+#ACT
+MOV N49 186
+OPENMERCHANTBIGDLG 1  190 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:200:1:-10:19/@勋章合成><IMG:206:1:-14:14>\ \
+
+<> \  \ \ \ \  \   \
+
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \
+<>   <下阶功勋称号：/SCOLOR=251><【十阶雄武战圣】/SCOLOR=253>\ \
+<>            <需要功勋点：/SCOLOR=89>       {<$STR(N49)>/SCOLOR=89}\  \
+<>            <拥有功勋点：/SCOLOR=89>       {<$CREDITPOINT>/SCOLOR=89}\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@开始提升z10>\
+<>                                                      <购买功勋点/@功勋点>\
+
+
+#IF
+Equal U11 10
+checkjob warrior
+#ACT
+OPENMERCHANTBIGDLG 1  190 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:200:1:-10:19/@勋章合成><IMG:206:1:-14:14>\ \
+
+<> \  \ \ \ \  \   \
+
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \
+<>   <下阶功勋称号：/SCOLOR=251><【十一阶玄天武狂】/SCOLOR=253>\ \  \
+<>              <提升称号需要：/SCOLOR=89><等级58级+5W元宝/SCOLOR=250>\  \  \ 
+<>                              <开始提升/@开始提升z11> \
+
+
+
+
+
+#IF
+Equal U11 11
+checkjob warrior
+#ACT
+OPENMERCHANTBIGDLG 1  190 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:200:1:-10:19/@勋章合成><IMG:206:1:-14:14>\ \
+
+<> \  \ \ \ \  \   \
+
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \
+<>   <下阶功勋称号：/SCOLOR=251><【十二阶凌天武宗】/SCOLOR=253>\ \ \
+<>              <提升称号需要：/SCOLOR=89><等级59级+8W元宝/SCOLOR=250>\  \  \ 
+<>                              <开始提升/@开始提升z12> \
+
+
+
+#IF
+Equal U11 12
+checkjob warrior
+#ACT
+OPENMERCHANTBIGDLG 1  190 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:200:1:-10:19/@勋章合成><IMG:206:1:-14:14>\ \
+
+<> \  \ \ \ \  \   \
+
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \
+<>   <下阶功勋称号：/SCOLOR=251><【十三阶傲天武尊】/SCOLOR=253>\ \  \
+<>              <提升称号需要：/SCOLOR=89><等级60级+1000点卷/SCOLOR=250>\  \  \ 
+<>                              <开始提升/@开始提升z13> \
+
+
+
+#IF
+Equal U11 13
+checkjob warrior
+#ACT
+OPENMERCHANTBIGDLG 1  190 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:200:1:-10:19/@勋章合成><IMG:206:1:-14:14>\ \
+
+<> \  \ \ \ \  \   \
+
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \
+<>   <下阶功勋称号：/SCOLOR=251><圣·神威武圣/SCOLOR=249>\ \  \
+<>              <提升称号需要：/SCOLOR=89><等级61级+2000点卷/SCOLOR=250>\  \  \ 
+<>                              <开始提升/@开始提升z19> \
+
+
+
+#IF
+Equal U11 14
+checkjob warrior
+#ACT
+OPENMERCHANTBIGDLG 1  190 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:200:1:-10:19/@勋章合成><IMG:206:1:-14:14>\ \
+
+<> \  \ \ \ \  \   \
+
+<> \  \  \
+<>   <下阶功勋称号：/SCOLOR=251><神·至尊武神/SCOLOR=249>\ \
+<>              <神阶称号彻底唤醒封印力量，属性超级强大/SCOLOR=250>\  \
+<>              <神阶称号彻底唤醒封印力量，属性超级强大/SCOLOR=250>\  \ 
+<>                         <开始提升/@开始提升z20> <需：62级+点卷*3888/SCOLOR=253>\ 
+
+
+
+#IF
+Equal U11 15
+checkjob warrior
+#ACT
+OPENMERCHANTBIGDLG 1  190 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:200:1:-10:19/@勋章合成><IMG:206:1:-14:14>\ \
+
+<> \  \ \ \ \  \   \  \  \  \
+<>   \ \ \  \
+<>             <已提升到终极神武称号：/SCOLOR=251><【神·至尊武神】/SCOLOR=249>\  \
+
+
+
+
+[@法师龙魂]
+
+
+
+#IF
+Equal U11 0
+checkjob wizard
+#ACT
+MOV N49 5
+OPENMERCHANTBIGDLG 1  190 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:200:1:-10:19/@勋章合成><IMG:206:1:-14:14>\ \
+
+<> \  \ \ \ \  \   \
+
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \
+<>   <下阶功勋称号：/SCOLOR=251><【一阶法灵】/SCOLOR=250>\ \
+<>            <需要功勋点：/SCOLOR=89>       {<$STR(N49)>/SCOLOR=89}\  \
+<>            <拥有功勋点：/SCOLOR=89>       {<$CREDITPOINT>/SCOLOR=89}\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@开始提升f1>\
+<>                                                      <购买功勋点/@功勋点>\
+
+#IF
+Equal U11 1
+checkjob wizard
+#ACT
+MOV N49 12
+OPENMERCHANTBIGDLG 1  190 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:200:1:-10:19/@勋章合成><IMG:206:1:-14:14>\ \
+
+<> \  \ \ \ \  \   \
+
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \
+<>   <下阶功勋称号：/SCOLOR=251><【二阶法魂】/SCOLOR=250>\ \
+<>            <需要功勋点：/SCOLOR=89>       {<$STR(N49)>/SCOLOR=89}\  \
+<>            <拥有功勋点：/SCOLOR=89>       {<$CREDITPOINT>/SCOLOR=89}\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@开始提升f2>\
+<>                                                      <购买功勋点/@功勋点>\
+
+#IF
+Equal U11 2
+checkjob wizard
+#ACT
+MOV N49 18
+OPENMERCHANTBIGDLG 1  190 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:200:1:-10:19/@勋章合成><IMG:206:1:-14:14>\ \
+
+<> \  \ \ \ \  \   \
+
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \
+<>   <下阶功勋称号：/SCOLOR=251><【三阶法魄】/SCOLOR=250>\ \
+<>            <需要功勋点：/SCOLOR=89>       {<$STR(N49)>/SCOLOR=89}\  \
+<>            <拥有功勋点：/SCOLOR=89>       {<$CREDITPOINT>/SCOLOR=89}\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@开始提升f3>\
+<>                                                      <购买功勋点/@功勋点>\
+
+#IF
+Equal U11 3
+checkjob wizard
+#ACT
+MOV N49 23
+OPENMERCHANTBIGDLG 1  190 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:200:1:-10:19/@勋章合成><IMG:206:1:-14:14>\ \
+
+<> \  \ \ \ \  \   \
+
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \
+<>   <下阶功勋称号：/SCOLOR=251><【四阶法王】/SCOLOR=250>\ \
+<>            <需要功勋点：/SCOLOR=89>       {<$STR(N49)>/SCOLOR=89}\  \
+<>            <拥有功勋点：/SCOLOR=89>       {<$CREDITPOINT>/SCOLOR=89}\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@开始提升f4>\
+<>                                                      <购买功勋点/@功勋点>\
+
+
+#IF
+Equal U11 4
+checkjob wizard
+#ACT
+MOV N49 28
+OPENMERCHANTBIGDLG 1  190 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:200:1:-10:19/@勋章合成><IMG:206:1:-14:14>\ \
+
+<> \  \ \ \ \  \   \
+
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \
+<>   <下阶功勋称号：/SCOLOR=251><【五阶法神】/SCOLOR=250>\ \
+<>            <需要功勋点：/SCOLOR=89>       {<$STR(N49)>/SCOLOR=89}\  \
+<>            <拥有功勋点：/SCOLOR=89>       {<$CREDITPOINT>/SCOLOR=89}\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@开始提升f5>\
+<>                                                      <购买功勋点/@功勋点>\
+
+#IF
+Equal U11 5
+checkjob wizard
+#ACT
+MOV N49 39
+OPENMERCHANTBIGDLG 1  190 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:200:1:-10:19/@勋章合成><IMG:206:1:-14:14>\ \
+
+<> \  \ \ \ \  \   \
+
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \
+<>   <下阶功勋称号：/SCOLOR=251><【六阶天武法魄】/SCOLOR=253>\ \
+<>            <需要功勋点：/SCOLOR=89>       {<$STR(N49)>/SCOLOR=89}\  \
+<>            <拥有功勋点：/SCOLOR=89>       {<$CREDITPOINT>/SCOLOR=89}\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@开始提升f6>\
+<>                                                      <购买功勋点/@功勋点>\
+
+#IF
+Equal U11 6
+checkjob wizard
+#ACT
+MOV N49 65
+OPENMERCHANTBIGDLG 1  190 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:200:1:-10:19/@勋章合成><IMG:206:1:-14:14>\ \
+
+<> \  \ \ \ \  \   \
+
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \
+<>   <下阶功勋称号：/SCOLOR=251><【七阶神武法灵】/SCOLOR=253>\ \
+<>            <需要功勋点：/SCOLOR=89>       {<$STR(N49)>/SCOLOR=89}\  \
+<>            <拥有功勋点：/SCOLOR=89>       {<$CREDITPOINT>/SCOLOR=89}\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@开始提升f7>\
+<>                                                      <购买功勋点/@功勋点>\
+
+
+#IF
+Equal U11 7
+checkjob wizard
+#ACT
+MOV N49 98
+OPENMERCHANTBIGDLG 1  190 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:200:1:-10:19/@勋章合成><IMG:206:1:-14:14>\ \
+
+<> \  \ \ \ \  \   \
+
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \
+<>   <下阶功勋称号：/SCOLOR=251><【八阶圣武法魂】/SCOLOR=253>\ \
+<>            <需要功勋点：/SCOLOR=89>       {<$STR(N49)>/SCOLOR=89}\  \
+<>            <拥有功勋点：/SCOLOR=89>       {<$CREDITPOINT>/SCOLOR=89}\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@开始提升f8>\
+<>                                                      <购买功勋点/@功勋点>\
+
+
+#IF
+Equal U11 8
+checkjob wizard
+#ACT
+MOV N49 136
+OPENMERCHANTBIGDLG 1  190 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:200:1:-10:19/@勋章合成><IMG:206:1:-14:14>\ \
+
+<> \  \ \ \ \  \   \
+
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \
+<>   <下阶功勋称号：/SCOLOR=251><【九阶洪武法神】/SCOLOR=253>\ \
+<>            <需要功勋点：/SCOLOR=89>       {<$STR(N49)>/SCOLOR=89}\  \
+<>            <拥有功勋点：/SCOLOR=89>       {<$CREDITPOINT>/SCOLOR=89}\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@开始提升f9>\
+<>                                                      <购买功勋点/@功勋点>\
+
+
+#IF
+Equal U11 9
+checkjob wizard
+#ACT
+MOV N49 186
+OPENMERCHANTBIGDLG 1  190 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:200:1:-10:19/@勋章合成><IMG:206:1:-14:14>\ \
+
+<> \  \ \ \ \  \   \
+
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \
+<>   <下阶功勋称号：/SCOLOR=251><【十阶雄武法痴】/SCOLOR=253>\ \
+<>            <需要功勋点：/SCOLOR=89>       {<$STR(N49)>/SCOLOR=89}\  \
+<>            <拥有功勋点：/SCOLOR=89>       {<$CREDITPOINT>/SCOLOR=89}\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@开始提升f10>\
+<>                                                      <购买功勋点/@功勋点>\
+
+
+#IF
+Equal U11 10
+checkjob wizard
+#ACT
+OPENMERCHANTBIGDLG 1  190 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:200:1:-10:19/@勋章合成><IMG:206:1:-14:14>\ \
+
+<> \  \ \ \ \  \   \
+
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \
+<>   <下阶功勋称号：/SCOLOR=251><【十一阶驰天法王】/SCOLOR=253>\ \  \
+<>              <提升称号需要：/SCOLOR=89><等级58级+5W元宝/SCOLOR=250>\  \  \ 
+<>                              <开始提升/@开始提升f11> \ 
+
+
+
+
+#IF
+Equal U11 11
+checkjob wizard
+#ACT
+OPENMERCHANTBIGDLG 1  190 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:200:1:-10:19/@勋章合成><IMG:206:1:-14:14>\ \
+
+<> \  \ \ \ \  \   \
+
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \
+<>   <下阶功勋称号：/SCOLOR=251><【十二阶玄天法宗】/SCOLOR=253>\ \ \
+<>              <提升称号需要：/SCOLOR=89><等级59级+8W元宝/SCOLOR=250>\  \  \ 
+<>                              <开始提升/@开始提升f12> \ 
+
+
+#IF
+Equal U11 12
+checkjob wizard
+#ACT
+OPENMERCHANTBIGDLG 1  190 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:200:1:-10:19/@勋章合成><IMG:206:1:-14:14>\ \
+
+<> \  \ \ \ \  \   \
+
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \
+<>   <下阶功勋称号：/SCOLOR=251><【十三阶傲天法皇】/SCOLOR=253>\ \  \
+<>              <提升称号需要：/SCOLOR=89><等级60级+1000点卷/SCOLOR=250>\  \  \ 
+<>                              <开始提升/@开始提升f13> \ 
+
+
+#IF
+Equal U11 13
+checkjob wizard
+#ACT
+OPENMERCHANTBIGDLG 1  190 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:200:1:-10:19/@勋章合成><IMG:206:1:-14:14>\ \
+
+<> \  \ \ \ \  \   \
+
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \
+<>   <下阶功勋称号：/SCOLOR=251><圣·神威魔尊/SCOLOR=249>\ \  \
+<>              <提升称号需要：/SCOLOR=89><等级61级+2000点卷/SCOLOR=250>\  \  \ 
+<>                              <开始提升/@开始提升f19> \ 
+
+
+#IF
+Equal U11 14
+checkjob wizard
+#ACT
+OPENMERCHANTBIGDLG 1  190 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:200:1:-10:19/@勋章合成><IMG:206:1:-14:14>\ \
+
+<> \  \ \ \ \  \   \
+
+<> \  \  \
+<>   <下阶功勋称号：/SCOLOR=251><神·至尊幻魔/SCOLOR=249>\ \
+<>              <神阶称号彻底唤醒封印力量，属性超级强大/SCOLOR=250>\  \
+<>              <神阶称号彻底唤醒封印力量，属性超级强大/SCOLOR=250>\  \ 
+<>                         <开始提升/@开始提升f20> <需：62级+点卷*3888/SCOLOR=253>\ 
+
+
+
+#IF
+Equal U11 15
+checkjob wizard
+#ACT
+OPENMERCHANTBIGDLG 1  190 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:200:1:-10:19/@勋章合成><IMG:206:1:-14:14>\ \
+
+<> \  \ \ \ \  \   \  \  \  \
+<>   \ \ \  \
+<>             <已提升到终极神武称号：/SCOLOR=251><【神·至尊幻魔】/SCOLOR=249>\  \
+
+
+
+
+[@道士龙魂]
+
+
+
+#IF
+Equal U11 0
+checkjob taoist
+#ACT
+MOV N49 5
+OPENMERCHANTBIGDLG 1  190 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:200:1:-10:19/@勋章合成><IMG:206:1:-14:14>\ \
+
+<> \  \ \ \ \  \   \
+
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \
+<>   <下阶功勋称号：/SCOLOR=251><【一阶道灵】/SCOLOR=250>\ \
+<>            <需要功勋点：/SCOLOR=89>       {<$STR(N49)>/SCOLOR=89}\  \
+<>            <拥有功勋点：/SCOLOR=89>       {<$CREDITPOINT>/SCOLOR=89}\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@开始提升d1>\
+<>                                                      <购买功勋点/@功勋点>\
+
+#IF
+Equal U11 1
+checkjob taoist
+#ACT
+MOV N49 12
+OPENMERCHANTBIGDLG 1  190 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:200:1:-10:19/@勋章合成><IMG:206:1:-14:14>\ \
+
+<> \  \ \ \ \  \   \
+
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \
+<>   <下阶功勋称号：/SCOLOR=251><【二阶道魂】/SCOLOR=250>\ \
+<>            <需要功勋点：/SCOLOR=89>       {<$STR(N49)>/SCOLOR=89}\  \
+<>            <拥有功勋点：/SCOLOR=89>       {<$CREDITPOINT>/SCOLOR=89}\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@开始提升d2>\
+<>                                                      <购买功勋点/@功勋点>\
+
+#IF
+Equal U11 2
+checkjob taoist
+#ACT
+MOV N49 18
+OPENMERCHANTBIGDLG 1  190 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:200:1:-10:19/@勋章合成><IMG:206:1:-14:14>\ \
+
+<> \  \ \ \ \  \   \
+
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \
+<>   <下阶功勋称号：/SCOLOR=251><【三阶散人】/SCOLOR=250>\ \
+<>            <需要功勋点：/SCOLOR=89>       {<$STR(N49)>/SCOLOR=89}\  \
+<>            <拥有功勋点：/SCOLOR=89>       {<$CREDITPOINT>/SCOLOR=89}\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@开始提升d3>\
+<>                                                      <购买功勋点/@功勋点>\
+
+#IF
+Equal U11 3
+checkjob taoist
+#ACT
+MOV N49 23
+OPENMERCHANTBIGDLG 1  190 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:200:1:-10:19/@勋章合成><IMG:206:1:-14:14>\ \
+
+<> \  \ \ \ \  \   \
+
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \
+<>   <下阶功勋称号：/SCOLOR=251><【四阶道玄】/SCOLOR=250>\ \
+<>            <需要功勋点：/SCOLOR=89>       {<$STR(N49)>/SCOLOR=89}\  \
+<>            <拥有功勋点：/SCOLOR=89>       {<$CREDITPOINT>/SCOLOR=89}\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@开始提升d4>\
+<>                                                      <购买功勋点/@功勋点>\
+
+
+#IF
+Equal U11 4
+checkjob taoist
+#ACT
+MOV N49 28
+OPENMERCHANTBIGDLG 1  190 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:200:1:-10:19/@勋章合成><IMG:206:1:-14:14>\ \
+
+<> \  \ \ \ \  \   \
+
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \
+<>   <下阶功勋称号：/SCOLOR=251><【五阶道圣】/SCOLOR=250>\ \
+<>            <需要功勋点：/SCOLOR=89>       {<$STR(N49)>/SCOLOR=89}\  \
+<>            <拥有功勋点：/SCOLOR=89>       {<$CREDITPOINT>/SCOLOR=89}\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@开始提升d5>\
+<>                                                      <购买功勋点/@功勋点>\
+
+#IF
+Equal U11 5
+checkjob taoist
+#ACT
+MOV N49 39
+OPENMERCHANTBIGDLG 1  190 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:200:1:-10:19/@勋章合成><IMG:206:1:-14:14>\ \
+
+<> \  \ \ \ \  \   \
+
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \
+<>   <下阶功勋称号：/SCOLOR=251><【六阶天武散人】/SCOLOR=253>\ \
+<>            <需要功勋点：/SCOLOR=89>       {<$STR(N49)>/SCOLOR=89}\  \
+<>            <拥有功勋点：/SCOLOR=89>       {<$CREDITPOINT>/SCOLOR=89}\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@开始提升d6>\
+<>                                                      <购买功勋点/@功勋点>\
+
+#IF
+Equal U11 6
+checkjob taoist
+#ACT
+MOV N49 65
+OPENMERCHANTBIGDLG 1  190 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:200:1:-10:19/@勋章合成><IMG:206:1:-14:14>\ \
+
+<> \  \ \ \ \  \   \
+
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \
+<>   <下阶功勋称号：/SCOLOR=251><【七阶神武道灵】/SCOLOR=253>\ \
+<>            <需要功勋点：/SCOLOR=89>       {<$STR(N49)>/SCOLOR=89}\  \
+<>            <拥有功勋点：/SCOLOR=89>       {<$CREDITPOINT>/SCOLOR=89}\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@开始提升d7>\
+<>                                                      <购买功勋点/@功勋点>\
+
+
+#IF
+Equal U11 7
+checkjob taoist
+#ACT
+MOV N49 98
+OPENMERCHANTBIGDLG 1  190 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:200:1:-10:19/@勋章合成><IMG:206:1:-14:14>\ \
+
+<> \  \ \ \ \  \   \
+
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \
+<>   <下阶功勋称号：/SCOLOR=251><【八阶圣武道魂】/SCOLOR=253>\ \
+<>            <需要功勋点：/SCOLOR=89>       {<$STR(N49)>/SCOLOR=89}\  \
+<>            <拥有功勋点：/SCOLOR=89>       {<$CREDITPOINT>/SCOLOR=89}\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@开始提升d8>\
+<>                                                      <购买功勋点/@功勋点>\
+
+
+#IF
+Equal U11 8
+checkjob taoist
+#ACT
+MOV N49 136
+OPENMERCHANTBIGDLG 1  190 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:200:1:-10:19/@勋章合成><IMG:206:1:-14:14>\ \
+
+<> \  \ \ \ \  \   \
+
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \
+<>   <下阶功勋称号：/SCOLOR=251><【九阶洪武真人】/SCOLOR=253>\ \
+<>            <需要功勋点：/SCOLOR=89>       {<$STR(N49)>/SCOLOR=89}\  \
+<>            <拥有功勋点：/SCOLOR=89>       {<$CREDITPOINT>/SCOLOR=89}\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@开始提升d9>\
+<>                                                      <购买功勋点/@功勋点>\
+
+
+#IF
+Equal U11 9
+checkjob taoist
+#ACT
+MOV N49 186
+OPENMERCHANTBIGDLG 1  190 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:200:1:-10:19/@勋章合成><IMG:206:1:-14:14>\ \
+
+<> \  \ \ \ \  \   \
+
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \
+<>   <下阶功勋称号：/SCOLOR=251><【十阶雄武道玄】/SCOLOR=253>\ \
+<>            <需要功勋点：/SCOLOR=89>       {<$STR(N49)>/SCOLOR=89}\  \
+<>            <拥有功勋点：/SCOLOR=89>       {<$CREDITPOINT>/SCOLOR=89}\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@开始提升d10>\
+<>                                                      <购买功勋点/@功勋点>\
+
+
+#IF
+Equal U11 10
+checkjob taoist
+#ACT
+OPENMERCHANTBIGDLG 1  190 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:200:1:-10:19/@勋章合成><IMG:206:1:-14:14>\ \
+
+<> \  \ \ \ \  \   \
+
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \
+<>   <下阶功勋称号：/SCOLOR=251><【十一阶鸿天道宗】/SCOLOR=253>\ \  \
+<>              <提升称号需要：/SCOLOR=89><等级58级+5W元宝/SCOLOR=250>\  \  \ 
+<>                              <开始提升/@开始提升d11> \ 
+
+
+
+
+#IF
+Equal U11 11
+checkjob taoist
+#ACT
+OPENMERCHANTBIGDLG 1  190 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:200:1:-10:19/@勋章合成><IMG:206:1:-14:14>\ \
+
+<> \  \ \ \ \  \   \
+
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \
+<>   <下阶功勋称号：/SCOLOR=251><【十二阶玄天天师】/SCOLOR=253>\ \ \
+<>              <提升称号需要：/SCOLOR=89><等级59级+8W元宝/SCOLOR=250>\  \  \ 
+<>                              <开始提升/@开始提升d12> \ 
+
+
+#IF
+Equal U11 12
+checkjob taoist
+#ACT
+OPENMERCHANTBIGDLG 1  190 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:200:1:-10:19/@勋章合成><IMG:206:1:-14:14>\ \
+
+<> \  \ \ \ \  \   \
+
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \
+<>   <下阶功勋称号：/SCOLOR=251><【十三阶傲天道尊】/SCOLOR=253>\ \  \
+<>              <提升称号需要：/SCOLOR=89><等级60级+1000点卷/SCOLOR=250>\  \  \ 
+<>                              <开始提升/@开始提升d13> \ 
+
+
+#IF
+Equal U11 13
+checkjob taoist
+#ACT
+OPENMERCHANTBIGDLG 1  190 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:200:1:-10:19/@勋章合成><IMG:206:1:-14:14>\ \
+
+<> \  \ \ \ \  \   \
+
+
+<IMG:198:1:151:74> <IMG:198:1:46:106>\  \  \
+<>   <下阶功勋称号：/SCOLOR=251><圣·神威天尊/SCOLOR=249>\ \  \
+<>              <提升称号需要：/SCOLOR=89><等级61级+2000点卷/SCOLOR=250>\  \  \ 
+<>                              <开始提升/@开始提升d19> \ 
+
+
+#IF
+Equal U11 14
+checkjob taoist
+#ACT
+OPENMERCHANTBIGDLG 1  190 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:200:1:-10:19/@勋章合成><IMG:206:1:-14:14>\ \
+
+<> \  \ \ \ \  \   \
+
+<> \  \  \
+<>   <下阶功勋称号：/SCOLOR=251><神·至尊玄尊/SCOLOR=249>\ \
+<>              <神阶称号彻底唤醒封印力量，属性超级强大/SCOLOR=250>\  \
+<>              <神阶称号彻底唤醒封印力量，属性超级强大/SCOLOR=250>\  \ 
+<>                         <开始提升/@开始提升d20> <需：62级+点卷*3888/SCOLOR=253>\ 
+
+
+
+#IF
+Equal U11 15
+checkjob taoist
+#ACT
+OPENMERCHANTBIGDLG 1  190 1 0 0 0 0
+#SAY
+<IMG:131:1:366:-14/@exit>\
+
+<IMG:201:1:-4:19/@魂珠合成><IMG:200:1:-10:19/@勋章合成><IMG:206:1:-14:14>\ \
+
+<> \  \ \ \ \  \   \  \  \  \
+<>   \ \ \  \
+<>             <已提升到终极神武称号：/SCOLOR=251><【神·至尊玄尊】/SCOLOR=249>\  \
+
+
+
+
+[@开始提升d1]
+#IF
+Equal U11 0
+checkjob taoist
+CHECKCREDITPOINT > 4
+#ACT
+CREDITPOINT - 5
+MOV U11 1
+CONFERTITLE 一阶道灵
+messagebox \\恭喜您激活神武功勋称号成功获得称号：一阶道灵
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」提升神武功勋称号成功，获得称号：一阶道灵
+GOTO @道士龙魂
+#ELSEACT
+MESSAGEBOX \\晋升失败:原因如下\\　　　　1.您的“功勋点”数量不足，不能晋升\
+BREAK
+
+[@开始提升d2]
+#IF
+Equal U11 1
+checkjob taoist
+CHECKCREDITPOINT > 11
+#ACT
+CREDITPOINT - 12
+MOV U11 2
+DEPRIVETITLE 一阶道灵
+CONFERTITLE 二阶道魂
+messagebox \\恭喜您激活神武功勋称号成功获得称号：二阶道魂
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」提升神武功勋称号成功，获得称号：二阶道魂
+GOTO @道士龙魂
+#ELSEACT
+MESSAGEBOX \\晋升失败:原因如下\\　　　　1.您的“功勋点”数量不足，不能晋升\
+BREAK
+
+
+[@开始提升d3]
+#IF
+Equal U11 2
+checkjob taoist
+CHECKCREDITPOINT > 17
+#ACT
+CREDITPOINT - 18
+MOV U11 3
+DEPRIVETITLE 二阶道魂
+CONFERTITLE 三阶散人
+messagebox \\恭喜您激活神武功勋称号成功获得称号：三阶散人
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」提升神武功勋称号成功，获得称号：三阶散人
+GOTO @道士龙魂
+#ELSEACT
+MESSAGEBOX \\晋升失败:原因如下\\　　　　1.您的“功勋点”数量不足，不能晋升\
+BREAK
+
+
+[@开始提升d4]
+#IF
+Equal U11 3
+checkjob taoist
+CHECKCREDITPOINT > 22
+#ACT
+CREDITPOINT - 23
+MOV U11 4
+DEPRIVETITLE 三阶散人
+CONFERTITLE 四阶道玄
+messagebox \\恭喜您激活神武功勋称号成功获得称号：四阶道玄
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」提升神武功勋称号成功，获得称号：四阶道玄
+GOTO @道士龙魂
+#ELSEACT
+MESSAGEBOX \\晋升失败:原因如下\\　　　　1.您的“功勋点”数量不足，不能晋升\
+BREAK
+
+[@开始提升d5]
+#IF
+Equal U11 4
+checkjob taoist
+CHECKCREDITPOINT > 27
+#ACT
+CREDITPOINT - 28
+MOV U11 5
+DEPRIVETITLE 四阶道玄
+CONFERTITLE 五阶道圣
+messagebox \\恭喜您激活神武功勋称号成功获得称号：五阶道圣
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」提升神武功勋称号成功，获得称号：五阶道圣
+GOTO @道士龙魂
+#ELSEACT
+MESSAGEBOX \\晋升失败:原因如下\\　　　　1.您的“功勋点”数量不足，不能晋升\
+BREAK
+
+[@开始提升d6]
+#IF
+Equal U11 5
+checkjob taoist
+CHECKCREDITPOINT > 28
+#ACT
+CREDITPOINT - 39
+MOV U11 6
+DEPRIVETITLE 五阶道圣
+CONFERTITLE 六阶天武散人
+messagebox \\恭喜您激活神武功勋称号成功获得称号：六阶天武散人
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」提升神武功勋称号成功，获得称号：六阶天武散人
+GOTO @道士龙魂
+#ELSEACT
+MESSAGEBOX \\晋升失败:原因如下\\　　　　1.您的“功勋点”数量不足，不能晋升\
+BREAK
+
+
+[@开始提升d7]
+#IF
+Equal U11 6
+checkjob taoist
+CHECKCREDITPOINT > 64
+#ACT
+CREDITPOINT - 65
+MOV U11 7
+DEPRIVETITLE 六阶天武散人
+CONFERTITLE 七阶神武道灵
+messagebox \\恭喜您激活神武功勋称号成功获得称号：七阶神武道灵
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」提升神武功勋称号成功，获得称号：七阶神武道灵
+GOTO @道士龙魂
+#ELSEACT
+MESSAGEBOX \\晋升失败:原因如下\\　　　　1.您的“功勋点”数量不足，不能晋升\
+BREAK
+
+
+[@开始提升d8]
+#IF
+Equal U11 7
+checkjob taoist
+CHECKCREDITPOINT > 97
+#ACT
+CREDITPOINT - 98
+MOV U11 8
+DEPRIVETITLE 七阶神武道灵
+CONFERTITLE 八阶圣武道魂
+messagebox \\恭喜您激活神武功勋称号成功获得称号：八阶圣武道魂
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」提升神武功勋称号成功，获得称号：八阶圣武道魂
+GOTO @道士龙魂
+#ELSEACT
+MESSAGEBOX \\晋升失败:原因如下\\　　　　1.您的“功勋点”数量不足，不能晋升\
+BREAK
+
+
+[@开始提升d9]
+#IF
+Equal U11 8
+checkjob taoist
+CHECKCREDITPOINT > 135
+#ACT
+CREDITPOINT - 136
+MOV U11 9
+DEPRIVETITLE 八阶圣武道魂
+CONFERTITLE 九阶洪武真人
+messagebox \\恭喜您激活神武功勋称号成功获得称号：九阶洪武真人
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」提升神武功勋称号成功，获得称号：九阶洪武真人
+GOTO @道士龙魂
+#ELSEACT
+MESSAGEBOX \\晋升失败:原因如下\\　　　　1.您的“功勋点”数量不足，不能晋升\
+BREAK
+
+
+[@开始提升d10]
+#IF
+Equal U11 9
+checkjob taoist
+CHECKCREDITPOINT > 185
+#ACT
+CREDITPOINT - 186
+MOV U11 10
+DEPRIVETITLE 九阶洪武真人
+CONFERTITLE 十阶雄武道玄
+messagebox \\恭喜您激活神武功勋称号成功获得称号：十阶雄武道玄
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」提升神武功勋称号成功，获得称号：十阶雄武道玄
+GOTO @道士龙魂
+#ELSEACT
+MESSAGEBOX \\晋升失败:原因如下\\　　　　1.您的“功勋点”数量不足，不能晋升\
+BREAK
+
+[@开始提升d11]
+#IF
+Equal U11 10
+checkjob taoist
+CHECKLEVELEX > 57
+CheckGameGold > 49999
+#Act
+GameGold - 50000
+MOV U11 11
+DEPRIVETITLE 十阶雄武道玄
+CONFERTITLE 十一阶鸿天道宗
+messagebox \\恭喜您激活神武功勋称号成功获得称号：十一阶鸿天道宗
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」提升神武功勋称号成功，获得称号：十一阶鸿天道宗
+GOTO @道士龙魂
+#ELSEACT
+MESSAGEBOX 晋升失败:原因如下\\　　　　1.您的“元宝”数量不足！\\　　　　2.您的等级未达到58级！
+BREAK
+
+
+[@开始提升d12]
+#IF
+Equal U11 11
+checkjob taoist
+CHECKLEVELEX > 58
+CheckGameGold > 79999
+#Act
+GameGold - 80000
+MOV U11 12
+DEPRIVETITLE 十一阶鸿天道宗
+CONFERTITLE 十二阶玄天天师
+messagebox \\恭喜您激活神武功勋称号成功获得称号：十二阶玄天天师
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」提升神武功勋称号成功，获得称号：十二阶玄天天师
+GOTO @道士龙魂
+#ELSEACT
+MESSAGEBOX 晋升失败:原因如下\\　　　　1.您的“元宝”数量不足！\\　　　　2.您的等级未达到59级！
+BREAK
+
+
+[@开始提升d13]
+#IF
+Equal U11 12
+checkjob taoist
+CHECKLEVELEX > 59
+CHECKGAMEDIAMOND > 999
+#act
+GAMEDIAMOND - 1000
+MOV U11 13
+DEPRIVETITLE 十二阶玄天天师
+CONFERTITLE 十三阶傲天道尊
+messagebox \\恭喜您激活神武功勋称号成功获得称号：十三阶傲天道尊
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」提升神武功勋称号成功，获得称号：十三阶傲天道尊
+GOTO @道士龙魂
+#ELSEACT
+MESSAGEBOX 晋升失败:原因如下\\　　　　1.您的“点卷”数量不足！\\　　　　2.您的等级未达到60级！
+BREAK
+
+
+[@开始提升d19]
+#IF
+Equal U11 13
+checkjob taoist
+CHECKLEVELEX > 60
+CHECKGAMEDIAMOND > 1999
+#act
+GAMEDIAMOND - 2000
+MOV U11 14
+DEPRIVETITLE 十三阶傲天道尊
+CONFERTITLE 圣·神威天尊
+messagebox \\恭喜您激活神武功勋称号成功获得称号：圣·神威天尊
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」提升神武功勋称号成功，获得称号：圣·神威天尊
+GOTO @道士龙魂
+#ELSEACT
+MESSAGEBOX 晋升失败:原因如下\\　　　　1.您的“点卷”数量不足！\\　　　　2.您的等级未达到61级！
+BREAK
+
+[@开始提升d20]
+#IF
+Equal U11 14
+checkjob taoist
+CHECKLEVELEX > 61
+CHECKGAMEDIAMOND > 3887
+#act
+GAMEDIAMOND - 3888
+MOV U11 15
+DEPRIVETITLE 圣·神威天尊
+CONFERTITLE 神·至尊玄尊
+messagebox \\恭喜您激活神武功勋称号成功获得称号：神·至尊玄尊
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」提升神武功勋称号成功，获得称号：神·至尊玄尊
+GOTO @道士龙魂
+#ELSEACT
+MESSAGEBOX \\晋升失败:原因如下\\　　　　1.您的“点卷”数量不足！\\　　　　2.您的等级未达到62级！
+BREAK
+
+
+
+[@开始提升z1]
+#IF
+Equal U11 0
+checkjob warrior
+CHECKCREDITPOINT > 4
+#ACT
+CREDITPOINT - 5
+MOV U11 1
+CONFERTITLE 一阶战灵
+messagebox \\恭喜您激活神武功勋称号成功获得称号：一阶战灵
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」提升神武功勋称号成功，获得称号：一阶战灵
+GOTO @战士龙魂
+#ELSEACT
+MESSAGEBOX \\晋升失败:原因如下\\　　　　1.您的“功勋点”数量不足，不能晋升\
+BREAK
+
+[@开始提升z2]
+#IF
+Equal U11 1
+checkjob warrior
+CHECKCREDITPOINT > 11
+#ACT
+CREDITPOINT - 12
+MOV U11 2
+DEPRIVETITLE 一阶战灵
+CONFERTITLE 二阶战将
+messagebox \\恭喜您激活神武功勋称号成功获得称号：二阶战将
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」提升神武功勋称号成功，获得称号：二阶战将
+GOTO @战士龙魂
+#ELSEACT
+MESSAGEBOX \\晋升失败:原因如下\\　　　　1.您的“功勋点”数量不足，不能晋升\
+BREAK
+
+
+[@开始提升z3]
+#IF
+Equal U11 2
+checkjob warrior
+CHECKCREDITPOINT > 17
+#ACT
+CREDITPOINT - 18
+MOV U11 3
+DEPRIVETITLE 二阶战将
+CONFERTITLE 三阶战狂
+messagebox \\恭喜您激活神武功勋称号成功获得称号：三阶战狂
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」提升神武功勋称号成功，获得称号：三阶战狂
+GOTO @战士龙魂
+#ELSEACT
+MESSAGEBOX \\晋升失败:原因如下\\　　　　1.您的“功勋点”数量不足，不能晋升\
+BREAK
+
+
+[@开始提升z4]
+#IF
+Equal U11 3
+checkjob warrior
+CHECKCREDITPOINT > 22
+#ACT
+CREDITPOINT - 23
+MOV U11 4
+DEPRIVETITLE 三阶战狂
+CONFERTITLE 四阶战王
+messagebox \\恭喜您激活神武功勋称号成功获得称号：四阶战王
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」提升神武功勋称号成功，获得称号：四阶战王
+GOTO @战士龙魂
+#ELSEACT
+MESSAGEBOX \\晋升失败:原因如下\\　　　　1.您的“功勋点”数量不足，不能晋升\
+BREAK
+
+[@开始提升z5]
+#IF
+Equal U11 4
+checkjob warrior
+CHECKCREDITPOINT > 27
+#ACT
+CREDITPOINT - 28
+MOV U11 5
+DEPRIVETITLE 四阶战王
+CONFERTITLE 五阶战圣
+messagebox \\恭喜您激活神武功勋称号成功获得称号：五阶战圣
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」提升神武功勋称号成功，获得称号：五阶战圣
+GOTO @战士龙魂
+#ELSEACT
+MESSAGEBOX \\晋升失败:原因如下\\　　　　1.您的“功勋点”数量不足，不能晋升\
+BREAK
+
+[@开始提升z6]
+#IF
+Equal U11 5
+checkjob warrior
+CHECKCREDITPOINT > 38
+#ACT
+CREDITPOINT - 39
+MOV U11 6
+DEPRIVETITLE 五阶战圣
+CONFERTITLE 六阶天武战士
+messagebox \\恭喜您激活神武功勋称号成功获得称号：六阶天武战士
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」提升神武功勋称号成功，获得称号：六阶天武战士
+GOTO @战士龙魂
+#ELSEACT
+MESSAGEBOX \\晋升失败:原因如下\\　　　　1.您的“功勋点”数量不足，不能晋升\
+BREAK
+
+
+[@开始提升z7]
+#IF
+Equal U11 6
+checkjob warrior
+CHECKCREDITPOINT > 64
+#ACT
+CREDITPOINT - 65
+MOV U11 7
+DEPRIVETITLE 六阶天武战士
+CONFERTITLE 七阶神武战灵
+messagebox \\恭喜您激活神武功勋称号成功获得称号：七阶神武战灵
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」提升神武功勋称号成功，获得称号：七阶神武战灵
+GOTO @战士龙魂
+#ELSEACT
+MESSAGEBOX \\晋升失败:原因如下\\　　　　1.您的“功勋点”数量不足，不能晋升\
+BREAK
+
+
+[@开始提升z8]
+#IF
+Equal U11 7
+checkjob warrior
+CHECKCREDITPOINT > 97
+#ACT
+CREDITPOINT - 98
+MOV U11 8
+DEPRIVETITLE 七阶神武战灵
+CONFERTITLE 八阶圣武战魂
+messagebox \\恭喜您激活神武功勋称号成功获得称号：八阶圣武战魂
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」提升神武功勋称号成功，获得称号：八阶圣武战魂
+GOTO @战士龙魂
+#ELSEACT
+MESSAGEBOX \\晋升失败:原因如下\\　　　　1.您的“功勋点”数量不足，不能晋升\
+BREAK
+
+
+[@开始提升z9]
+#IF
+Equal U11 8
+checkjob warrior
+CHECKCREDITPOINT > 135
+#ACT
+CREDITPOINT - 136
+MOV U11 9
+DEPRIVETITLE 八阶圣武战魂
+CONFERTITLE 九阶洪武战将
+messagebox \\恭喜您激活神武功勋称号成功获得称号：九阶洪武战将
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」提升神武功勋称号成功，获得称号：九阶洪武战将
+GOTO @战士龙魂
+#ELSEACT
+MESSAGEBOX \\晋升失败:原因如下\\　　　　1.您的“功勋点”数量不足，不能晋升\
+BREAK
+
+
+[@开始提升z10]
+#IF
+Equal U11 9
+checkjob warrior
+CHECKCREDITPOINT > 185
+#ACT
+CREDITPOINT - 186
+MOV U11 10
+DEPRIVETITLE 九阶洪武战将
+CONFERTITLE 十阶雄武战圣
+messagebox \\恭喜您激活神武功勋称号成功获得称号：十阶雄武战圣
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」提升神武功勋称号成功，获得称号：十阶雄武战圣
+GOTO @战士龙魂
+#ELSEACT
+MESSAGEBOX \\晋升失败:原因如下\\　　　　1.您的“功勋点”数量不足，不能晋升\
+BREAK
+
+[@开始提升z11]
+#IF
+Equal U11 10
+checkjob warrior
+CHECKLEVELEX > 57
+CheckGameGold > 49999
+#Act
+GameGold - 50000
+MOV U11 11
+DEPRIVETITLE 十阶雄武战圣
+CONFERTITLE 十一阶玄天武狂
+messagebox \\恭喜您激活神武功勋称号成功获得称号：十一阶玄天武狂
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」提升神武功勋称号成功，获得称号：十一阶玄天武狂
+GOTO @战士龙魂
+#ELSEACT
+MESSAGEBOX 晋升失败:原因如下\\　　　　1.您的“元宝”数量不足！\\　　　　2.您的等级未达到58级！
+BREAK
+
+
+[@开始提升z12]
+#IF
+Equal U11 11
+checkjob warrior
+CHECKLEVELEX > 58
+CheckGameGold > 79999
+#Act
+GameGold - 80000
+MOV U11 12
+DEPRIVETITLE 十一阶玄天武狂
+CONFERTITLE 十二阶凌天武宗
+messagebox \\恭喜您激活神武功勋称号成功获得称号：十二阶凌天武宗
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」提升神武功勋称号成功，获得称号：十二阶凌天武宗
+GOTO @战士龙魂
+#ELSEACT
+MESSAGEBOX 晋升失败:原因如下\\　　　　1.您的“元宝”数量不足！\\　　　　2.您的等级未达到59级！
+BREAK
+
+
+[@开始提升z13]
+#IF
+Equal U11 12
+checkjob warrior
+CHECKLEVELEX > 59
+CHECKGAMEDIAMOND > 999
+#act
+GAMEDIAMOND - 1000
+MOV U11 13
+DEPRIVETITLE 十二阶凌天武宗
+CONFERTITLE 十三阶傲天武尊
+messagebox \\恭喜您激活神武功勋称号成功获得称号：十三阶傲天武尊
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」提升神武功勋称号成功，获得称号：十三阶傲天武尊
+GOTO @战士龙魂
+#ELSEACT
+MESSAGEBOX 晋升失败:原因如下\\　　　　1.您的“点卷”数量不足！\\　　　　2.您的等级未达到60级！
+BREAK
+
+
+[@开始提升z19]
+#IF
+Equal U11 13
+checkjob warrior
+CHECKLEVELEX > 60
+CHECKGAMEDIAMOND > 1999
+#act
+GAMEDIAMOND - 2000
+MOV U11 14
+DEPRIVETITLE 十三阶傲天武尊
+CONFERTITLE 圣·神威武圣
+messagebox \\恭喜您激活神武功勋称号成功获得称号：圣·神威武圣
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」提升神武功勋称号成功，获得称号：圣·神威武圣
+GOTO @战士龙魂
+#ELSEACT
+MESSAGEBOX 晋升失败:原因如下\\　　　　1.您的“点卷”数量不足！\\　　　　2.您的等级未达到61级！
+BREAK
+
+[@开始提升z20]
+#IF
+Equal U11 14
+checkjob warrior
+CHECKLEVELEX > 61
+CHECKGAMEDIAMOND > 3887
+#act
+GAMEDIAMOND - 3888
+MOV U11 15
+DEPRIVETITLE 圣·神威武圣
+CONFERTITLE 神·至尊武神
+messagebox \\恭喜您激活神武功勋称号成功获得称号：神·至尊武神
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」提升神武功勋称号成功，获得称号：神·至尊武神
+GOTO @战士龙魂
+#ELSEACT
+MESSAGEBOX \\晋升失败:原因如下\\　　　　1.您的“点卷”数量不足！\\　　　　2.您的等级未达到62级！
+BREAK
+
+
+[@开始提升f1]
+#IF
+Equal U11 0
+checkjob wizard
+CHECKCREDITPOINT > 4
+#ACT
+CREDITPOINT - 5
+MOV U11 1
+CONFERTITLE 一阶法灵
+messagebox \\恭喜您激活神武功勋称号成功获得称号：一阶法灵
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」提升神武功勋称号成功，获得称号：一阶法灵
+GOTO @法师龙魂
+#ELSEACT
+MESSAGEBOX \\晋升失败:原因如下\\　　　　1.您的“功勋点”数量不足，不能晋升\
+BREAK
+
+[@开始提升f2]
+#IF
+Equal U11 1
+checkjob wizard
+CHECKCREDITPOINT > 11
+#ACT
+CREDITPOINT - 12
+MOV U11 2
+DEPRIVETITLE 一阶法灵
+CONFERTITLE 二阶法魂
+messagebox \\恭喜您激活神武功勋称号成功获得称号：二阶法魂
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」提升神武功勋称号成功，获得称号：二阶法魂
+GOTO @法师龙魂
+#ELSEACT
+MESSAGEBOX \\晋升失败:原因如下\\　　　　1.您的“功勋点”数量不足，不能晋升\
+BREAK
+
+
+[@开始提升f3]
+#IF
+Equal U11 2
+checkjob wizard
+CHECKCREDITPOINT > 17
+#ACT
+CREDITPOINT - 18
+MOV U11 3
+DEPRIVETITLE 二阶法魂
+CONFERTITLE 三阶法魄
+messagebox \\恭喜您激活神武功勋称号成功获得称号：三阶法魄
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」提升神武功勋称号成功，获得称号：三阶法魄
+GOTO @法师龙魂
+#ELSEACT
+MESSAGEBOX \\晋升失败:原因如下\\　　　　1.您的“功勋点”数量不足，不能晋升\
+BREAK
+
+
+[@开始提升f4]
+#IF
+Equal U11 3
+checkjob wizard
+CHECKCREDITPOINT > 22
+#ACT
+CREDITPOINT - 23
+MOV U11 4
+DEPRIVETITLE 三阶法魄
+CONFERTITLE 四阶法王
+messagebox \\恭喜您激活神武功勋称号成功获得称号：四阶法王
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」提升神武功勋称号成功，获得称号：四阶法王
+GOTO @法师龙魂
+#ELSEACT
+MESSAGEBOX \\晋升失败:原因如下\\　　　　1.您的“功勋点”数量不足，不能晋升\
+BREAK
+
+[@开始提升f5]
+#IF
+Equal U11 4
+checkjob wizard
+CHECKCREDITPOINT > 27
+#ACT
+CREDITPOINT - 28
+MOV U11 5
+DEPRIVETITLE 四阶法王
+CONFERTITLE 五阶法神
+messagebox \\恭喜您激活神武功勋称号成功获得称号：五阶法神
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」提升神武功勋称号成功，获得称号：五阶法神
+GOTO @法师龙魂
+#ELSEACT
+MESSAGEBOX \\晋升失败:原因如下\\　　　　1.您的“功勋点”数量不足，不能晋升\
+BREAK
+
+[@开始提升f6]
+#IF
+Equal U11 5
+checkjob wizard
+CHECKCREDITPOINT > 38
+#ACT
+CREDITPOINT - 39
+MOV U11 6
+DEPRIVETITLE 五阶法神
+CONFERTITLE 六阶天武法魄
+messagebox \\恭喜您激活神武功勋称号成功获得称号：六阶天武法魄
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」提升神武功勋称号成功，获得称号：六阶天武法魄
+GOTO @法师龙魂
+#ELSEACT
+MESSAGEBOX \\晋升失败:原因如下\\　　　　1.您的“功勋点”数量不足，不能晋升\
+BREAK
+
+
+[@开始提升f7]
+#IF
+Equal U11 6
+checkjob wizard
+CHECKCREDITPOINT > 64
+#ACT
+CREDITPOINT - 65
+MOV U11 7
+DEPRIVETITLE 六阶天武法魄
+CONFERTITLE 七阶神武法灵
+messagebox \\恭喜您激活神武功勋称号成功获得称号：七阶神武法灵
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」提升神武功勋称号成功，获得称号：七阶神武法灵
+GOTO @法师龙魂
+#ELSEACT
+MESSAGEBOX \\晋升失败:原因如下\\　　　　1.您的“功勋点”数量不足，不能晋升\
+BREAK
+
+
+[@开始提升f8]
+#IF
+Equal U11 7
+checkjob wizard
+CHECKCREDITPOINT > 97
+#ACT
+CREDITPOINT - 98
+MOV U11 8
+DEPRIVETITLE 七阶神武法灵
+CONFERTITLE 八阶圣武法魂
+messagebox \\恭喜您激活神武功勋称号成功获得称号：八阶圣武法魂
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」提升神武功勋称号成功，获得称号：八阶圣武法魂
+GOTO @法师龙魂
+#ELSEACT
+MESSAGEBOX \\晋升失败:原因如下\\　　　　1.您的“功勋点”数量不足，不能晋升\
+BREAK
+
+
+[@开始提升f9]
+#IF
+Equal U11 8
+checkjob wizard
+CHECKCREDITPOINT > 135
+#ACT
+CREDITPOINT - 136
+MOV U11 9
+DEPRIVETITLE 八阶圣武法魂
+CONFERTITLE 九阶洪武法神
+messagebox \\恭喜您激活神武功勋称号成功获得称号：九阶洪武法神
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」提升神武功勋称号成功，获得称号：九阶洪武法神
+GOTO @法师龙魂
+#ELSEACT
+MESSAGEBOX \\晋升失败:原因如下\\　　　　1.您的“功勋点”数量不足，不能晋升\
+BREAK
+
+
+[@开始提升f10]
+#IF
+Equal U11 9
+checkjob wizard
+CHECKCREDITPOINT > 185
+#ACT
+CREDITPOINT - 186
+MOV U11 10
+DEPRIVETITLE 九阶洪武法神
+CONFERTITLE 十阶雄武法痴
+messagebox \\恭喜您激活神武功勋称号成功获得称号：十阶雄武法痴
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」提升神武功勋称号成功，获得称号：十阶雄武法痴
+GOTO @法师龙魂
+#ELSEACT
+MESSAGEBOX \\晋升失败:原因如下\\　　　　1.您的“功勋点”数量不足，不能晋升\
+BREAK
+
+[@开始提升f11]
+#IF
+Equal U11 10
+checkjob wizard
+CHECKLEVELEX > 57
+CheckGameGold > 49999
+#Act
+GameGold - 50000
+MOV U11 11
+DEPRIVETITLE 十阶雄武法痴
+CONFERTITLE 十一阶驰天法王
+messagebox \\恭喜您激活神武功勋称号成功获得称号：十一阶驰天法王
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」提升神武功勋称号成功，获得称号：十一阶驰天法王
+GOTO @法师龙魂
+#ELSEACT
+MESSAGEBOX 晋升失败:原因如下\\　　　　1.您的“元宝”数量不足！\\　　　　2.您的等级未达到58级！
+BREAK
+
+
+[@开始提升f12]
+#IF
+Equal U11 11
+checkjob wizard
+CHECKLEVELEX > 58
+CheckGameGold > 79999
+#Act
+GameGold - 80000
+MOV U11 12
+DEPRIVETITLE 十一阶驰天法王
+CONFERTITLE 十二阶玄天法宗
+messagebox \\恭喜您激活神武功勋称号成功获得称号：十二阶玄天法宗
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」提升神武功勋称号成功，获得称号：十二阶玄天法宗
+GOTO @法师龙魂
+#ELSEACT
+MESSAGEBOX 晋升失败:原因如下\\　　　　1.您的“元宝”数量不足！\\　　　　2.您的等级未达到59级！
+BREAK
+
+
+[@开始提升f13]
+#IF
+Equal U11 12
+checkjob wizard
+CHECKLEVELEX > 59
+CHECKGAMEDIAMOND > 999
+#act
+GAMEDIAMOND - 1000
+MOV U11 13
+DEPRIVETITLE 十二阶玄天法宗
+CONFERTITLE 十三阶傲天法皇
+messagebox \\恭喜您激活神武功勋称号成功获得称号：十三阶傲天法皇
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」提升神武功勋称号成功，获得称号：十三阶傲天法皇
+GOTO @法师龙魂
+#ELSEACT
+MESSAGEBOX 晋升失败:原因如下\\　　　　1.您的“点卷”数量不足！\\　　　　2.您的等级未达到60级！
+BREAK
+
+
+[@开始提升f19]
+#IF
+Equal U11 13
+checkjob wizard
+CHECKLEVELEX > 60
+CHECKGAMEDIAMOND > 1999
+#act
+GAMEDIAMOND - 2000
+MOV U11 14
+DEPRIVETITLE 十三阶傲天法皇
+CONFERTITLE 圣·神威魔尊
+messagebox \\恭喜您激活神武功勋称号成功获得称号：圣·神威魔尊
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」提升神武功勋称号成功，获得称号：圣·神威魔尊
+GOTO @法师龙魂
+#ELSEACT
+MESSAGEBOX 晋升失败:原因如下\\　　　　1.您的“点卷”数量不足！\\　　　　2.您的等级未达到61级！
+BREAK
+
+[@开始提升f20]
+#IF
+Equal U11 14
+checkjob wizard
+CHECKLEVELEX > 61
+CHECKGAMEDIAMOND > 3887
+#act
+GAMEDIAMOND - 3888
+MOV U11 15
+DEPRIVETITLE 圣·神威魔尊
+CONFERTITLE 神·至尊幻魔
+messagebox \\恭喜您激活神武功勋称号成功获得称号：神·至尊幻魔
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」提升神武功勋称号成功，获得称号：神·至尊幻魔
+GOTO @法师龙魂
+#ELSEACT
+MESSAGEBOX \\晋升失败:原因如下\\　　　　1.您的“点卷”数量不足！\\　　　　2.您的等级未达到62级！
+BREAK
+
+
+[@激活龙卫]
+#IF
+Equal U13 0
+#ACT
+OPENMERCHANTBIGDLG 1 8 0 0 0 0 0
+#say
+<ImgEx:1:5:5:6:392:-16/@EXIT>
+<【龙卫升级】/FCOLOR=70> <Hot/FCOLOR=249>    <龙卫不攻击人物，高阶龙卫附带特殊效果.../FCOLOR=254>\ \
+<>   <在上古时期，有少数人类强者通过特殊的秘术和一些强大异界生物/SCOLOR=255>\  
+<签订灵魂契约，签订契约的生物和人类强者生命相通，使灵魂更加强大/SCOLOR=255>\ 
+<而且这些生物本身战斗力非常恐怖，是最忠实的战斗伙伴……/SCOLOR=255>\
+<注意：/SCOLOR=249><龙卫协助玩家战斗，不攻击人物，打宝效率快两倍。/SCOLOR=250>\
+<--------------------------------------------------------------/AUTOCOLOR=91>\
+<>             <您当前龙卫：/SCOLOR=249><无/SCOLOR=147>       <进阶龙卫：/SCOLOR=249><小魔神/SCOLOR=253>\
+<> 　　　　　　  　　<激活一级龙卫/SCOLOR=94> <需要:/SCOLOR=249><3500元宝/SCOLOR=31>\　\　
+<> 　　　　　　　     <√·确定激活一级龙卫/@Cwts01x1>\　\
+<--------------------------------------------------------------/AUTOCOLOR=91>\
+　        <温馨提示：/SCOLOR=254><激活龙卫后，自动学习/SCOLOR=94><(召唤龙卫)><技能！/SCOLOR=94>\
+
+;====================================================================================================================================================
+
+#IF
+Equal U13 1
+#ACT
+OPENMERCHANTBIGDLG 1 8 0 0 0 0 0
+#say
+<ImgEx:1:5:5:6:392:-16/@EXIT>
+<【龙卫升级】/FCOLOR=70> <Hot/FCOLOR=249>    <龙卫不攻击人物，高阶龙卫附带特殊效果.../FCOLOR=254>\ \
+<>   <在上古时期，有少数人类强者通过特殊的秘术和一些强大异界生物/SCOLOR=255>\  
+<签订灵魂契约，签订契约的生物和人类强者生命相通，使灵魂更加强大/SCOLOR=255>\ 
+<而且这些生物本身战斗力非常恐怖，是最忠实的战斗伙伴……/SCOLOR=255>\
+<注意：/SCOLOR=249><龙卫协助玩家战斗，不攻击人物，打宝效率快两倍。/SCOLOR=250>\
+<--------------------------------------------------------------/AUTOCOLOR=91>\
+<>             <您当前龙卫：/SCOLOR=249><小魔神/SCOLOR=250>   <进阶龙卫：/SCOLOR=249><骷髅王/SCOLOR=253>\
+<> 　　　　　　   　<提升二级龙卫/SCOLOR=94> <需要:/SCOLOR=249><8000元宝/SCOLOR=31>\　\　
+<> 　　　　　　　     <√·确定提升二级龙卫/@Cwts02x1>\　\
+<--------------------------------------------------------------/AUTOCOLOR=91>\
+　        <温馨提示：/SCOLOR=254><激活龙卫后，自动学习/SCOLOR=94><(召唤龙卫)><技能！/SCOLOR=94>\
+
+;====================================================================================================================================================
+
+#IF
+Equal U13 2
+#ACT
+OPENMERCHANTBIGDLG 1 8 0 0 0 0 0
+#say
+<ImgEx:1:5:5:6:392:-16/@EXIT>
+<【龙卫升级】/FCOLOR=70> <Hot/FCOLOR=249>    <龙卫不攻击人物，高阶龙卫附带特殊效果.../FCOLOR=254>\ \
+<>   <在上古时期，有少数人类强者通过特殊的秘术和一些强大异界生物/SCOLOR=255>\  
+<签订灵魂契约，签订契约的生物和人类强者生命相通，使灵魂更加强大/SCOLOR=255>\ 
+<而且这些生物本身战斗力非常恐怖，是最忠实的战斗伙伴……/SCOLOR=255>\
+<注意：/SCOLOR=249><龙卫协助玩家战斗，不攻击人物，打宝效率快两倍。/SCOLOR=250>\
+<--------------------------------------------------------------/AUTOCOLOR=91>\
+<>            <您当前龙卫：/SCOLOR=249><骷髅王/SCOLOR=250>   <进阶龙卫：/SCOLOR=249><上古猎手/SCOLOR=253>\
+<> 　　　　　　    <提升二级龙卫/SCOLOR=94> <需要:/SCOLOR=249><15000元宝/SCOLOR=31>\　\　
+<> 　　　　　　　    <√·确定提升三级龙卫/@Cwts03x1>\　\ 
+
+<--------------------------------------------------------------/AUTOCOLOR=91>\
+　      <温馨提示：/SCOLOR=254><激活龙卫后，自动学习/SCOLOR=94><(召唤龙卫)><技能！/SCOLOR=94>\
+
+;====================================================================================================================================================
+
+#IF
+Equal U13 3
+#ACT
+OPENMERCHANTBIGDLG 1 8 0 0 0 0 0
+#say
+<ImgEx:1:5:5:6:392:-16/@EXIT>
+<【龙卫升级】/FCOLOR=70> <Hot/FCOLOR=249>    <龙卫不攻击人物，高阶龙卫附带特殊效果.../FCOLOR=254>\ \
+<>   <在上古时期，有少数人类强者通过特殊的秘术和一些强大异界生物/SCOLOR=255>\  
+<签订灵魂契约，签订契约的生物和人类强者生命相通，使灵魂更加强大/SCOLOR=255>\ 
+<而且这些生物本身战斗力非常恐怖，是最忠实的战斗伙伴……/SCOLOR=255>\
+<注意：/SCOLOR=249><龙卫协助玩家战斗，不攻击人物，打宝效率快两倍。/SCOLOR=250>\
+<--------------------------------------------------------------/AUTOCOLOR=91>\
+<>           <您当前龙卫：/SCOLOR=249><上古猎手/SCOLOR=250>   <进阶龙卫：/SCOLOR=249><麒麟圣兽/SCOLOR=253>\　
+<> 　　　　　　　  <提升四级龙卫/SCOLOR=94> <需要:/SCOLOR=249><488点卷/SCOLOR=31>\　\　
+<> 　　　　　　　   <√·确定提升四级龙卫/@Cwts04x11>\　\
+<--------------------------------------------------------------/AUTOCOLOR=91>\
+　   <温馨提示：/SCOLOR=254><麒麟圣兽攻击增加“红毒”效果，人物打怪更快！/SCOLOR=94>\
+
+;====================================================================================================================================================
+
+#IF
+Equal U13 4
+#ACT
+OPENMERCHANTBIGDLG 1 8 0 0 0 0 0
+#say
+<ImgEx:1:5:5:6:392:-16/@EXIT>
+<【龙卫升级】/FCOLOR=70> <Hot/FCOLOR=249>    <龙卫不攻击人物，高阶龙卫附带特殊效果.../FCOLOR=254>\ \
+<>   <在上古时期，有少数人类强者通过特殊的秘术和一些强大异界生物/SCOLOR=255>\  
+<签订灵魂契约，签订契约的生物和人类强者生命相通，使灵魂更加强大/SCOLOR=255>\ 
+<而且这些生物本身战斗力非常恐怖，是最忠实的战斗伙伴……/SCOLOR=255>\
+<注意：/SCOLOR=249><龙卫协助玩家战斗，不攻击人物，打宝效率快两倍。/SCOLOR=250>\
+<--------------------------------------------------------------/AUTOCOLOR=91>\
+<>           <您当前龙卫：/SCOLOR=249><麒麟圣兽/SCOLOR=250>   <进阶龙卫：/SCOLOR=249><天尊魔王/SCOLOR=253>\
+<> 　　　　　　　  <提升五级龙卫/SCOLOR=94> <需要:/SCOLOR=249><888点卷/SCOLOR=31>\　\　
+<> 　　　　　　　   <√·确定提升五级龙卫/@Cwts05x1>\　\
+<--------------------------------------------------------------/AUTOCOLOR=91>\
+　     <温馨提示：/SCOLOR=254><天尊魔王攻击将会附加“红毒+冰冻”效果！/SCOLOR=94>\
+
+;====================================================================================================================================================
+
+#IF
+Equal U13 5
+#ACT
+OPENMERCHANTBIGDLG 1 8 0 0 0 0 0
+#say
+<ImgEx:1:5:5:6:392:-16/@EXIT>
+<【龙卫升级】/FCOLOR=70> <Hot/FCOLOR=249>    <龙卫不攻击人物，高阶龙卫附带特殊效果.../FCOLOR=254>\ \
+<>   <在上古时期，有少数人类强者通过特殊的秘术和一些强大异界生物/SCOLOR=255>\  
+<签订灵魂契约，签订契约的生物和人类强者生命相通，使灵魂更加强大/SCOLOR=255>\ 
+<而且这些生物本身战斗力非常恐怖，是最忠实的战斗伙伴……/SCOLOR=255>\
+<注意：/SCOLOR=249><龙卫协助玩家战斗，不攻击人物，打宝效率快两倍。/SCOLOR=250>\
+<--------------------------------------------------------------/AUTOCOLOR=91>\
+<>            <您当前龙卫：/SCOLOR=249><天尊魔王/SCOLOR=250>    <进阶龙卫：/SCOLOR=249><创世王/SCOLOR=253>\
+<> 　　　　　   <提升终极龙卫/SCOLOR=94> <需:/SCOLOR=249><积分达到500点+1000点卷/SCOLOR=31>\　\　
+<> 　　　　　　　     <√·确定提升终极龙卫/@Cwts06x1>\　\
+<--------------------------------------------------------------/AUTOCOLOR=91>\
+　           <终极创世王攻击效果：/SCOLOR=253><群体+毒素+麻痹+冰冻/SCOLOR=250>\
+
+;====================================================================================================================================================
+
+#IF
+Equal U13 6
+#ACT
+OPENMERCHANTBIGDLG 1 8 0 0 0 0 0
+#say
+<ImgEx:1:5:5:6:392:-16/@EXIT>
+<【龙卫升级】/FCOLOR=70> <Hot/FCOLOR=249>    <龙卫不攻击人物，高阶龙卫附带特殊效果.../FCOLOR=254>\ \
+<>   <在上古时期，有少数人类强者通过特殊的秘术和一些强大异界生物/SCOLOR=255>\  
+<签订灵魂契约，签订契约的生物和人类强者生命相通，使灵魂更加强大/SCOLOR=255>\ 
+<而且这些生物本身战斗力非常恐怖，是最忠实的战斗伙伴……/SCOLOR=255>\
+<注意：/SCOLOR=249><龙卫协助玩家战斗，不攻击人物，打宝效率快两倍。/SCOLOR=250>\
+<--------------------------------------------------------------/AUTOCOLOR=91>\
+<>            <您当前龙卫：/SCOLOR=249><创世王/SCOLOR=250>    <进阶龙卫：/SCOLOR=249><圣·创世王/SCOLOR=253>\
+<> 　　　　　   <提升圣·创世王/SCOLOR=94> <需:/SCOLOR=249><88颗女娲补天神石/SCOLOR=31>\　\　
+<> 　　　　　　　     <√·确定提升终极龙卫/@Cwts07x>\　\
+<--------------------------------------------------------------/AUTOCOLOR=91>\
+　           <圣·创世王攻击效果：/SCOLOR=253><冰冻、麻痹几率提升20%/SCOLOR=250>\
+
+
+
+#IF
+Equal U13 7
+#ACT
+OPENMERCHANTBIGDLG 1 8 0 0 0 0 0
+#say
+<ImgEx:1:5:5:6:392:-16/@EXIT>
+<【龙卫升级】/FCOLOR=70> <Hot/FCOLOR=249>    <龙卫不攻击人物，高阶龙卫附带特殊效果.../FCOLOR=254>\ \
+<>   <在上古时期，有少数人类强者通过特殊的秘术和一些强大异界生物/SCOLOR=255>\  
+<签订灵魂契约，签订契约的生物和人类强者生命相通，使灵魂更加强大/SCOLOR=255>\ 
+<而且这些生物本身战斗力非常恐怖，是最忠实的战斗伙伴……/SCOLOR=255>\
+<注意：/SCOLOR=249><龙卫协助玩家战斗，不攻击人物，打宝效率快两倍。/SCOLOR=250>\
+<--------------------------------------------------------------/AUTOCOLOR=91>\
+<>            <您当前龙卫：/SCOLOR=249><圣·创世王/SCOLOR=250>    <进阶龙卫：/SCOLOR=249><神·创世王/SCOLOR=253>\
+<> 　　　　　   <提升神·创世王/SCOLOR=94> <需:/SCOLOR=249><188颗女娲补天神石/SCOLOR=31>\　\　
+<> 　　　　　　　     <√·确定提升终极龙卫/@Cwts08x>\　\
+<--------------------------------------------------------------/AUTOCOLOR=91>\
+　           <神·创世王攻击效果：/SCOLOR=253><冰冻、麻痹几率提升50%/SCOLOR=250>\
+
+
+
+#IF
+Equal U13 8
+#ACT
+OPENMERCHANTBIGDLG 1 8 0 0 0 0 0
+#say
+<ImgEx:1:5:5:6:392:-16/@EXIT>
+<【龙卫升级】/FCOLOR=70> <Hot/FCOLOR=249>    <龙卫不攻击人物，高阶龙卫附带特殊效果.../FCOLOR=254>\ \
+<>   <在上古时期，有少数人类强者通过特殊的秘术和一些强大异界生物/SCOLOR=255>\  
+<签订灵魂契约，签订契约的生物和人类强者生命相通，使灵魂更加强大/SCOLOR=255>\ 
+<而且这些生物本身战斗力非常恐怖，是最忠实的战斗伙伴……/SCOLOR=255>\
+<注意：/SCOLOR=249><龙卫协助玩家战斗，不攻击人物，打宝效率快两倍。/SCOLOR=250>\
+<--------------------------------------------------------------/AUTOCOLOR=91>\ 　\　
+
+<> 　　　　　　　<>   <您的龙卫已经进阶到最高级：/SCOLOR=89><神·创世王/SCOLOR=249>\ \　\
+
+　               <终极创世王攻击效果：/SCOLOR=253><群体+毒素+麻痹、冰冻几率+80%/SCOLOR=250>\
+
+
+
+
+
+[@Cwts01x1]
+#IF
+CheckGameGold > 3499
+#Act
+GameGold - 3500
+MOV U13 1
+ADDSKILL 召唤龙卫 3
+Goto @激活龙卫
+SENDMSG 1 恭喜玩家『<$USERNAME>』成功激活一级龙卫!
+Break
+#ElseAct
+MESSAGEBOX 提升失败:原因如下\　\　　　　1.你没有足够的元宝.
+Break
+
+[@Cwts02x1]
+#IF
+CheckGameGold > 7999
+#Act
+GameGold - 8000
+MOV U13 2
+Goto @激活龙卫
+SENDMSG 1 恭喜玩家『<$USERNAME>』成功把龙卫升级到『骷髅王』!
+Break
+#ElseAct
+MESSAGEBOX 提升失败:原因如下\　\　　　　1.你没有足够的元宝.
+Break
+
+
+[@Cwts03x1]
+#IF
+CheckGameGold > 14999
+#Act
+GameGold - 15000
+MOV U13 3
+Goto @激活龙卫
+SENDMSG 1 恭喜玩家『<$USERNAME>』成功把龙卫升级到『上古猎手』!
+Break
+#ElseAct
+MESSAGEBOX 提升失败:原因如下\　\　　　　1.你没有足够的元宝.
+Break
+
+
+[@Cwts04x11]
+#IF
+CHECKGAMEDIAMOND > 487
+#act
+GAMEDIAMOND - 488
+MOV U13 4
+Goto @激活龙卫
+SENDMSG 1 恭喜玩家『<$USERNAME>』成功把龙卫升级到『麒麟圣兽』!
+Break
+#ElseAct
+MESSAGEBOX 提升失败:原因如下\　\　　　　1.你没有足够的点卷.
+Break
+
+[@Cwts05x1]
+#IF
+CHECKGAMEDIAMOND > 887
+#act
+GAMEDIAMOND - 888
+MOV U13 5
+Goto @激活龙卫
+SENDMSG 1 恭喜玩家『<$USERNAME>』成功把龙卫升级到『天尊魔王』!
+Break
+#ElseAct
+MESSAGEBOX 提升失败:原因如下\　\　　　　1.你没有足够的点卷.
+Break
+
+[@Cwts06x1]
+#IF
+CHECKGAMEGIRD > 499
+CHECKGAMEDIAMOND > 999
+#act
+GAMEDIAMOND - 1000
+MOV U13 6
+Goto @激活龙卫
+SENDMSG 1 恭喜玩家『<$USERNAME>』成功把龙卫升级到终极『创世王』!
+Break
+#ElseAct
+MESSAGEBOX 晋升失败:原因如下\\　　　　1.您的“点卷”数量不足！\\　　　　2.您的充值积分不足500点！
+Break
+
+
+
+
+
+
+[@Cwts07x]
+#IF
+checkitem 女娲补天神石 88
+#act
+TAKE 女娲补天神石 88
+MOV U13 7
+Goto @召唤龙卫
+SENDMSG 1 恭喜玩家『<$USERNAME>』成功把龙卫升级到终极『圣·创世王』!
+Break
+#ElseAct
+MESSAGEBOX 晋升失败:原因如下\\　　　　1.女娲补天神石。不足！
+Break
+
+
+
+
+[@Cwts08x]
+#IF
+checkitem 女娲补天神石 188
+#act
+TAKE 女娲补天神石 188
+MOV U13 8
+Goto @召唤龙卫
+SENDMSG 1 恭喜玩家『<$USERNAME>』成功把龙卫升级到终极『神·创世王』!
+Break
+#ElseAct
+MESSAGEBOX 晋升失败:原因如下\\　　　　1.女娲补天神石。不足！
+Break
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

@@ -1,0 +1,1953 @@
+[@杀怪触发]
+{
+#IF
+CheckKillMonName 神鹰
+#ACT
+CREDITPOINT + 2
+SENDMSG 6 提示:声望增加2点.您当前的声望指数为:<$CREDITPOINT>点！
+BREAK
+#IF
+CheckKillMonName 猎鹰
+#ACT
+CREDITPOINT + 2
+SENDMSG 6 提示:声望增加2点.您当前的声望指数为:<$CREDITPOINT>点！
+BREAK
+#IF
+CheckKillMonName 角蝇
+#ACT
+GOTO @200血怪物
+BREAK
+#IF
+CheckKillMonName 角蝇8
+#ACT
+GOTO @200血怪物
+BREAK
+#IF
+CheckKillMonName 跳跳蜂
+#ACT
+GOTO @200血怪物
+BREAK
+#IF
+CheckKillMonName 跳跳蜂0
+#ACT
+GOTO @200血怪物
+BREAK
+#IF
+CheckKillMonName 跳跳蜂8
+#ACT
+GOTO @200血怪物
+BREAK
+#IF
+CheckKillMonName 黑色恶蛆
+#ACT
+GOTO @200血怪物
+BREAK
+#IF
+CheckKillMonName 黑色恶蛆0
+#ACT
+GOTO @200血怪物
+BREAK
+#IF
+CheckKillMonName 黑色恶蛆8
+#ACT
+GOTO @200血怪物
+BREAK
+#IF
+CheckKillMonName 钳虫
+#ACT
+GOTO @200血怪物
+BREAK
+#IF
+CheckKillMonName 钳虫0
+#ACT
+GOTO @200血怪物
+BREAK
+#IF
+CheckKillMonName 钳虫8
+#ACT
+GOTO @200血怪物
+BREAK
+#IF
+CheckKillMonName 蜈蚣
+#ACT
+GOTO @200血怪物
+BREAK
+#IF
+CheckKillMonName 蜈蚣0
+#ACT
+GOTO @200血怪物
+BREAK
+#IF
+CheckKillMonName 蜈蚣8
+#ACT
+GOTO @200血怪物
+BREAK
+#IF
+CheckKillMonName 巨型多角虫
+#ACT
+GOTO @200血怪物
+BREAK
+#IF
+CheckKillMonName 巨型多角虫1
+#ACT
+GOTO @200血怪物
+BREAK
+#IF
+CheckKillMonName 巨型多角虫2
+#ACT
+GOTO @200血怪物
+BREAK
+#IF
+CheckKillMonName 巨型蠕虫
+#ACT
+GOTO @200血怪物
+BREAK
+#IF
+CheckKillMonName 巨型蠕虫0
+#ACT
+GOTO @200血怪物
+BREAK
+#IF
+CheckKillMonName 巨型蠕虫8
+#ACT
+GOTO @200血怪物
+BREAK
+#IF
+CheckKillMonName 骷髅弓箭手
+#ACT
+GOTO @200血怪物
+BREAK
+#IF
+CheckKillMonName 骷髅弓箭手0
+#ACT
+GOTO @200血怪物
+BREAK
+#IF
+CheckKillMonName 骷髅弓箭手8
+#ACT
+GOTO @200血怪物
+BREAK
+#IF
+CheckKillMonName 楔蛾
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 楔蛾0
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 楔蛾8
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 蝎蛇
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 蝎蛇0
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 蝎蛇3
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 蝎蛇8
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 黑野猪
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 黑野猪0
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 黑野猪3
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 黑野猪8
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 红野猪
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 红野猪0
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 红野猪3
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 红野猪8
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 暗黑战士
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 暗黑战士0
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 沃玛勇士
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 沃玛勇士0
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 沃玛勇士8
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 沃玛战将
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 沃玛战将0
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 沃玛战将8
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 火焰沃玛
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 火焰沃玛0
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 火焰沃玛2
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 火焰沃玛8
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 大老鼠
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 大老鼠0
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 牛头魔
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 牛头魔0
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 牛魔战士
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 牛魔战士0
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 牛魔斗士
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 牛魔斗士0
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 牛魔法师
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 牛魔法师0
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 牛魔法师8
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 尸王
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 尸王1
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 尸王2
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 尸王3
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 骷髅精灵
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 骷髅精灵1
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 骷髅精灵2
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 骷髅精灵10
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 骷髅锤兵
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 骷髅锤兵0
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 骷髅锤兵8
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 骷髅刀斧手
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 骷髅刀斧手0
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 骷髅刀斧手8
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 骷髅长枪兵
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 骷髅长枪兵0
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 骷髅长枪兵8
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 天狼蜘蛛
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 天狼蜘蛛0
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 天狼蜘蛛3
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 天狼蜘蛛8
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 暴牙蜘蛛
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 暴牙蜘蛛0
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 暴牙蜘蛛8
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 鲁王宫火焰
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 鲁王宫战将
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 鲁王宫战士
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 鲁王宫勇士
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 鲁王宫卫士
+#ACT
+GOTO @500血怪物
+BREAK
+#IF
+CheckKillMonName 祖玛卫士
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 祖玛卫士0
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 祖玛卫士3
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 祖玛卫士00
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 祖玛卫士8
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 祖玛卫士80
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 祖玛卫士83
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 祖玛卫士88
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 祖玛雕像
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 祖玛雕像0
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 祖玛雕像3
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 祖玛雕像8
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 祖玛雕像83
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 祖玛雕像88
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 祖玛弓箭手
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 祖玛弓箭手0
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 祖玛弓箭手3
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 祖玛弓箭手8
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 祖玛弓箭手83
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 祖玛弓箭手88
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 沃玛卫士
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 沃玛卫士0
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 沃玛卫士1
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 沃玛卫士2
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 沃玛卫士8
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 白野猪
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 白野猪0
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 白野猪1
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 白野猪2
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 白野猪8
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 白野猪88
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 牛魔将军
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 牛魔将军0
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 牛魔将军8
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 牛魔将军88
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 牛魔祭司
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 牛魔祭司0
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 牛魔祭司8
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 牛魔祭司88
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 邪恶钳虫
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 邪恶钳虫1
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 邪恶钳虫2
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 邪恶钳虫8
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 月魔蜘蛛
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 月魔蜘蛛0
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 月魔蜘蛛8
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 钢牙蜘蛛
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 钢牙蜘蛛0
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 钢牙蜘蛛3
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 钢牙蜘蛛8
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 花吻蜘蛛
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 花吻蜘蛛0
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 花吻蜘蛛3
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 花吻蜘蛛8
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 黑锷蜘蛛
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 黑锷蜘蛛0
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 黑锷蜘蛛3
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 黑锷蜘蛛8
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 血僵尸
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 血僵尸0
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 血僵尸3
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 血僵尸8
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 血巨人
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 血巨人0
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 血巨人3
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 血巨人8
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 邪恶毒蛇
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 邪恶毒蛇1
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 邪恶毒蛇8
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 送财猫
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 炼狱红猪
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 炼狱黑猪
+#ACT
+GOTO @1000血怪物
+BREAK
+
+
+
+
+#IF
+CheckKillMonName 玛雅月魔
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 玛雅将军
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 玛雅弓箭手
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 玛雅僵尸
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 玛雅巨人
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 玛雅卫士
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 玛雅灭天魔
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 玛雅五毒魔
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 玛雅寒冰魔
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 玛雅法师
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 神秘蜘蛛
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 神秘卫士
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 神秘月魔
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 神秘雕像
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 神秘法师
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 神秘弓箭手
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 神秘僵尸
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 暗黑卫士
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 暗黑精灵
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 暗黑月魔
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 暗黑蜘蛛
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 暗黑僵尸
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 修真勇士
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 修真卫士
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 修真钳虫
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 修真毒蛇
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 修真多角虫
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 修真梅花鹿
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 修真稻草人
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 修真精灵
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 修真尸王
+#ACT
+GOTO @1000血怪物
+BREAK
+#IF
+CheckKillMonName 电僵王
+#ACT
+GOTO @2000血怪物
+BREAK
+#IF
+CheckKillMonName 电僵王8
+#ACT
+GOTO @2000血怪物
+BREAK
+#IF
+CheckKillMonName 邪恶巨人
+#ACT
+GOTO @2000血怪物
+BREAK
+#IF
+CheckKillMonName 邪恶巨人0
+#ACT
+GOTO @2000血怪物
+BREAK
+#IF
+CheckKillMonName 虹魔猪卫
+#ACT
+GOTO @2000血怪物
+BREAK
+#IF
+CheckKillMonName 虹魔猪卫0
+#ACT
+GOTO @2000血怪物
+BREAK
+#IF
+CheckKillMonName 虹魔猪卫8
+#ACT
+GOTO @2000血怪物
+BREAK
+#IF
+CheckKillMonName 虹魔蝎卫
+#ACT
+GOTO @2000血怪物
+BREAK
+#IF
+CheckKillMonName 虹魔蝎卫0
+#ACT
+GOTO @2000血怪物
+BREAK
+#IF
+CheckKillMonName 虹魔蝎卫8
+#ACT
+GOTO @2000血怪物
+BREAK
+#IF
+CheckKillMonName 经验狼
+#ACT
+GOTO @2000血怪物
+BREAK
+#IF
+CheckKillMonName 触龙神
+#ACT
+GOTO @2000血怪物
+BREAK
+#IF
+CheckKillMonName 触龙神8
+#ACT
+GOTO @2000血怪物
+BREAK
+#IF
+CheckKillMonName 炼狱白猪
+#ACT
+GOTO @2000血怪物
+BREAK
+#IF
+CheckKillMonName 炼狱力士
+#ACT
+GOTO @2000血怪物
+BREAK
+#IF
+CheckKillMonName 炼狱巨蛾
+#ACT
+GOTO @2000血怪物
+BREAK
+#IF
+CheckKillMonName 暗黑巨人
+#ACT
+GOTO @2000血怪物
+BREAK
+#IF
+CheckKillMonName 修真白野猪
+#ACT
+GOTO @2000血怪物
+BREAK
+#IF
+CheckKillMonName 暗黑蝎卫
+#ACT
+GOTO @2000血怪物
+BREAK
+#IF
+CheckKillMonName 七星沃玛教主
+#ACT
+GOTO @2000血怪物
+BREAK
+#IF
+CheckKillMonName 赌鬼
+#ACT
+GOTO @2000血怪物
+BREAK
+
+#IF
+CheckKillMonName 地藏王
+#ACT
+GAMEGLORY + 100
+SENDMSG 6 〖恭喜〗击杀怪物获得100点荣誉值。
+BREAK
+#IF
+CheckKillMonName 地藏王8
+#ACT
+GAMEGLORY + 100
+SENDMSG 6 〖恭喜〗击杀怪物获得100点荣誉值。
+BREAK
+#IF
+CheckKillMonName 地藏王88
+#ACT
+GAMEGLORY + 100
+SENDMSG 6 〖恭喜〗击杀怪物获得100点荣誉值。
+BREAK
+#IF
+CheckKillMonName 牛魔王
+#ACT
+GAMEGLORY + 100
+SENDMSG 6 〖恭喜〗击杀怪物获得100点荣誉值。
+BREAK
+#IF
+CheckKillMonName 牛魔王0
+#ACT
+GAMEGLORY + 100
+SENDMSG 6 〖恭喜〗击杀怪物获得100点荣誉值。
+BREAK
+#IF
+CheckKillMonName 牛魔王8
+#ACT
+GAMEGLORY + 100
+SENDMSG 6 〖恭喜〗击杀怪物获得100点荣誉值。
+BREAK
+#IF
+CheckKillMonName 牛魔王88
+#ACT
+GAMEGLORY + 100
+SENDMSG 6 〖恭喜〗击杀怪物获得100点荣誉值。
+BREAK
+#IF
+CheckKillMonName 暗之牛魔王
+#ACT
+GAMEGLORY + 100
+SENDMSG 6 〖恭喜〗击杀怪物获得100点荣誉值。
+BREAK
+#IF
+CheckKillMonName 暗之牛魔王8
+#ACT
+GAMEGLORY + 100
+SENDMSG 6 〖恭喜〗击杀怪物获得100点荣誉值。
+BREAK
+#IF
+CheckKillMonName 暗之牛魔王88
+#ACT
+GAMEGLORY + 100
+SENDMSG 6 〖恭喜〗击杀怪物获得100点荣誉值。
+BREAK
+#IF
+CheckKillMonName 双头金刚
+#ACT
+GAMEGLORY + 100
+SENDMSG 6 〖恭喜〗击杀怪物获得100点荣誉值。
+BREAK
+#IF
+CheckKillMonName 双头金刚8
+#ACT
+GAMEGLORY + 100
+SENDMSG 6 〖恭喜〗击杀怪物获得100点荣誉值。
+BREAK
+#IF
+CheckKillMonName 双头金刚88
+#ACT
+GAMEGLORY + 100
+SENDMSG 6 〖恭喜〗击杀怪物获得100点荣誉值。
+BREAK
+#IF
+CheckKillMonName 双头血魔
+#ACT
+GAMEGLORY + 100
+SENDMSG 6 〖恭喜〗击杀怪物获得100点荣誉值。
+BREAK
+#IF
+CheckKillMonName 双头血魔8
+#ACT
+GAMEGLORY + 100
+SENDMSG 6 〖恭喜〗击杀怪物获得100点荣誉值。
+BREAK
+#IF
+CheckKillMonName 双头血魔88
+#ACT
+GAMEGLORY + 100
+SENDMSG 6 〖恭喜〗击杀怪物获得100点荣誉值。
+BREAK
+#IF
+CheckKillMonName 重装使者
+#ACT
+GAMEGLORY + 100
+SENDMSG 6 〖恭喜〗击杀怪物获得100点荣誉值。
+BREAK
+#IF
+CheckKillMonName 重装使者8
+#ACT
+GAMEGLORY + 100
+SENDMSG 6 〖恭喜〗击杀怪物获得100点荣誉值。
+BREAK
+#IF
+CheckKillMonName 重装使者88
+#ACT
+GAMEGLORY + 100
+SENDMSG 6 〖恭喜〗击杀怪物获得100点荣誉值。
+BREAK
+#IF
+CheckKillMonName 沃玛教主
+#ACT
+GAMEGLORY + 100
+SENDMSG 6 〖恭喜〗击杀怪物获得100点荣誉值。
+BREAK
+#IF
+CheckKillMonName 黄泉教主
+#ACT
+GAMEGLORY + 100
+SENDMSG 6 〖恭喜〗击杀怪物获得100点荣誉值。
+BREAK
+#IF
+CheckKillMonName 黄泉教主0
+#ACT
+GAMEGLORY + 100
+SENDMSG 6 〖恭喜〗击杀怪物获得100点荣誉值。
+BREAK
+#IF
+CheckKillMonName 黄泉教主8
+#ACT
+GAMEGLORY + 100
+SENDMSG 6 〖恭喜〗击杀怪物获得100点荣誉值。
+BREAK
+#IF
+CheckKillMonName 黄泉教主88
+#ACT
+GAMEGLORY + 100
+SENDMSG 6 〖恭喜〗击杀怪物获得100点荣誉值。
+BREAK
+#IF
+CheckKillMonName 虹魔教主
+#ACT
+GAMEGLORY + 100
+SENDMSG 6 〖恭喜〗击杀怪物获得100点荣誉值。
+BREAK
+#IF
+CheckKillMonName 虹魔教主0
+#ACT
+GAMEGLORY + 100
+SENDMSG 6 〖恭喜〗击杀怪物获得100点荣誉值。
+BREAK
+#IF
+CheckKillMonName 虹魔教主8
+#ACT
+GAMEGLORY + 100
+SENDMSG 6 〖恭喜〗击杀怪物获得100点荣誉值。
+BREAK
+#IF
+CheckKillMonName 虹魔教主88
+#ACT
+GAMEGLORY + 100
+SENDMSG 6 〖恭喜〗击杀怪物获得100点荣誉值。
+BREAK
+#IF
+CheckKillMonName 祖玛教主
+#ACT
+GAMEGLORY + 100
+SENDMSG 6 〖恭喜〗击杀怪物获得100点荣誉值。
+BREAK
+#IF
+CheckKillMonName 千年树妖
+#ACT
+GAMEGLORY + 100
+SENDMSG 6 〖恭喜〗击杀怪物获得100点荣誉值。
+BREAK
+#IF
+CheckKillMonName 暗黑尸王
+#ACT
+GAMEGLORY + 100
+SENDMSG 6 〖恭喜〗击杀怪物获得100点荣誉值。
+BREAK
+#IF
+CheckKillMonName 暗之触龙神
+#ACT
+GAMEGLORY + 100
+SENDMSG 6 〖恭喜〗击杀怪物获得100点荣誉值。
+BREAK
+#IF
+CheckKillMonName 暗之触龙神8
+#ACT
+GAMEGLORY + 100
+SENDMSG 6 〖恭喜〗击杀怪物获得100点荣誉值。
+BREAK
+#IF
+CheckKillMonName 暗之赤月恶魔
+#ACT
+GAMEGLORY + 100
+SENDMSG 6 〖恭喜〗击杀怪物获得100点荣誉值。
+BREAK
+#IF
+CheckKillMonName 暗之虹魔教主
+#ACT
+GAMEGLORY + 100
+SENDMSG 6 〖恭喜〗击杀怪物获得100点荣誉值。
+BREAK
+#IF
+CheckKillMonName 暗之虹魔教主88
+#ACT
+GAMEGLORY + 100
+SENDMSG 6 〖恭喜〗击杀怪物获得100点荣誉值。
+BREAK
+#IF
+CheckKillMonName 暗之骷髅精灵
+#ACT
+GAMEGLORY + 100
+SENDMSG 6 〖恭喜〗击杀怪物获得100点荣誉值。
+BREAK
+#IF
+CheckKillMonName 暗之骷髅精灵88
+#ACT
+GAMEGLORY + 100
+SENDMSG 6 〖恭喜〗击杀怪物获得100点荣誉值。
+BREAK
+#IF
+CheckKillMonName 暗之双头金刚
+#ACT
+GAMEGLORY + 100
+SENDMSG 6 〖恭喜〗击杀怪物获得100点荣誉值。
+BREAK
+#IF
+CheckKillMonName 暗之双头金刚88
+#ACT
+GAMEGLORY + 100
+SENDMSG 6 〖恭喜〗击杀怪物获得100点荣誉值。
+BREAK
+#IF
+CheckKillMonName 暗之沃玛教主
+#ACT
+GAMEGLORY + 100
+SENDMSG 6 〖恭喜〗击杀怪物获得100点荣誉值。
+BREAK
+#IF
+CheckKillMonName 暗之沃玛教主88
+#ACT
+GAMEGLORY + 100
+SENDMSG 6 〖恭喜〗击杀怪物获得100点荣誉值。
+BREAK
+#IF
+CheckKillMonName 暗之黄泉教主
+#ACT
+GAMEGLORY + 100
+SENDMSG 6 〖恭喜〗击杀怪物获得100点荣誉值。
+BREAK
+#IF
+CheckKillMonName 暗之黄泉教主88
+#ACT
+GAMEGLORY + 100
+SENDMSG 6 〖恭喜〗击杀怪物获得100点荣誉值。
+BREAK
+#IF
+CheckKillMonName 暗之双头血魔
+#ACT
+GAMEGLORY + 100
+SENDMSG 6 〖恭喜〗击杀怪物获得100点荣誉值。
+BREAK
+#IF
+CheckKillMonName 暗之双头血魔88
+#ACT
+GAMEGLORY + 100
+SENDMSG 6 〖恭喜〗击杀怪物获得100点荣誉值。
+BREAK
+#IF
+CheckKillMonName 赌侠
+#ACT
+GAMEGLORY + 100
+SENDMSG 6 〖恭喜〗击杀怪物获得100点荣誉值。
+BREAK
+#IF
+CheckKillMonName 千年大淫魔
+#ACT
+GAMEGLORY + 200
+SENDMSG 6 〖恭喜〗击杀怪物获得200点荣誉值。
+BREAK
+#IF
+CheckKillMonName 圣龙
+#ACT
+GAMEGLORY + 200
+SENDMSG 6 〖恭喜〗击杀怪物获得200点荣誉值。
+BREAK
+#IF
+CheckKillMonName 玛雅恶魔
+#ACT
+GAMEGLORY + 200
+SENDMSG 6 〖恭喜〗击杀怪物获得200点荣誉值。
+BREAK
+#IF
+CheckKillMonName 地下城使者
+#ACT
+GAMEGLORY + 200
+SENDMSG 6 〖恭喜〗击杀怪物获得200点荣誉值。
+BREAK
+#IF
+CheckKillMonName 招财树
+#ACT
+GAMEGLORY + 200
+SENDMSG 6 〖恭喜〗击杀怪物获得200点荣誉值。
+BREAK
+#IF
+CheckKillMonName 玛雅金刚
+#ACT
+GAMEGLORY + 200
+SENDMSG 6 〖恭喜〗击杀怪物获得200点荣誉值。
+BREAK
+#IF
+CheckKillMonName 玛雅血魔
+#ACT
+GAMEGLORY + 200
+SENDMSG 6 〖恭喜〗击杀怪物获得200点荣誉值。
+BREAK
+#IF
+CheckKillMonName 玛雅牛魔王
+#ACT
+GAMEGLORY + 200
+SENDMSG 6 〖恭喜〗击杀怪物获得200点荣誉值。
+BREAK
+#IF
+CheckKillMonName 玛雅树妖
+#ACT
+GAMEGLORY + 200
+SENDMSG 6 〖恭喜〗击杀怪物获得200点荣誉值。
+BREAK
+#IF
+CheckKillMonName 妖魅之王
+#ACT
+GAMEGLORY + 200
+SENDMSG 6 〖恭喜〗击杀怪物获得200点荣誉值。
+BREAK
+#IF
+CheckKillMonName 神秘恶魔
+#ACT
+GAMEGLORY + 200
+SENDMSG 6 〖恭喜〗击杀怪物获得200点荣誉值。
+BREAK
+#IF
+CheckKillMonName 神秘重装使者
+#ACT
+GAMEGLORY + 200
+SENDMSG 6 〖恭喜〗击杀怪物获得200点荣誉值。
+BREAK
+#IF
+CheckKillMonName 神秘金刚
+#ACT
+GAMEGLORY + 200
+SENDMSG 6 〖恭喜〗击杀怪物获得200点荣誉值。
+BREAK
+#IF
+CheckKillMonName 神秘血魔
+#ACT
+GAMEGLORY + 200
+SENDMSG 6 〖恭喜〗击杀怪物获得200点荣誉值。
+BREAK
+#IF
+CheckKillMonName 神秘牛魔王
+#ACT
+GAMEGLORY + 200
+SENDMSG 6 〖恭喜〗击杀怪物获得200点荣誉值。
+BREAK
+#IF
+CheckKillMonName 神秘树妖
+#ACT
+GAMEGLORY + 200
+SENDMSG 6 〖恭喜〗击杀怪物获得200点荣誉值。
+BREAK
+#IF
+CheckKillMonName 神秘祖玛教主
+#ACT
+GAMEGLORY + 200
+SENDMSG 6 〖恭喜〗击杀怪物获得200点荣誉值。
+BREAK
+#IF
+CheckKillMonName 白虎之王
+#ACT
+GAMEGLORY + 200
+SENDMSG 6 〖恭喜〗击杀怪物获得200点荣誉值。
+BREAK
+#IF
+CheckKillMonName 暗黑神树
+#ACT
+GAMEGLORY + 200
+SENDMSG 6 〖恭喜〗击杀怪物获得200点荣誉值。
+BREAK
+#IF
+CheckKillMonName 暗黑重装使者
+#ACT
+GAMEGLORY + 200
+SENDMSG 6 〖恭喜〗击杀怪物获得200点荣誉值。
+BREAK
+#IF
+CheckKillMonName 暗黑牛魔王
+#ACT
+GAMEGLORY + 200
+SENDMSG 6 〖恭喜〗击杀怪物获得200点荣誉值。
+BREAK
+#IF
+CheckKillMonName 暗黑恶魔
+#ACT
+GAMEGLORY + 200
+SENDMSG 6 〖恭喜〗击杀怪物获得200点荣誉值。
+BREAK
+#IF
+CheckKillMonName 暗黑金刚
+#ACT
+GAMEGLORY + 200
+SENDMSG 6 〖恭喜〗击杀怪物获得200点荣誉值。
+BREAK
+#IF
+CheckKillMonName 暗黑血魔
+#ACT
+GAMEGLORY + 200
+SENDMSG 6 〖恭喜〗击杀怪物获得200点荣誉值。
+BREAK
+#IF
+CheckKillMonName 赌王
+#ACT
+GAMEGLORY + 200
+SENDMSG 6 〖恭喜〗击杀怪物获得200点荣誉值。
+BREAK
+#IF
+CheckKillMonName 赌圣
+#ACT
+GAMEGLORY + 200
+SENDMSG 6 〖恭喜〗击杀怪物获得200点荣誉值。
+BREAK
+#IF
+CheckKillMonName 赌神
+#ACT
+GAMEGLORY + 200
+SENDMSG 6 〖恭喜〗击杀怪物获得200点荣誉值。
+BREAK
+#IF
+CheckKillMonName 修真恶魔
+#ACT
+GAMEGLORY + 200
+SENDMSG 6 〖恭喜〗击杀怪物获得200点荣誉值。
+BREAK
+#IF
+CheckKillMonName 修真使者
+#ACT
+GAMEGLORY + 200
+SENDMSG 6 〖恭喜〗击杀怪物获得200点荣誉值。
+BREAK
+#IF
+CheckKillMonName 修真金刚
+#ACT
+GAMEGLORY + 200
+SENDMSG 6 〖恭喜〗击杀怪物获得200点荣誉值。
+BREAK
+#IF
+CheckKillMonName 修真血魔
+#ACT
+GAMEGLORY + 200
+SENDMSG 6 〖恭喜〗击杀怪物获得200点荣誉值。
+BREAK
+#IF
+CheckKillMonName 修真树妖
+#ACT
+GAMEGLORY + 200
+SENDMSG 6 〖恭喜〗击杀怪物获得200点荣誉值。
+BREAK
+#IF
+CheckKillMonName 暗之赤月恶魔
+#ACT
+GAMEGLORY + 200
+SENDMSG 6 〖恭喜〗击杀怪物获得200点荣誉值。
+BREAK
+
+
+
+#IF
+CheckKillMonName 乱世魔王
+#ACT
+GAMEGLORY + 500
+SENDMSG 6 〖恭喜〗击杀怪物获得500点荣誉值。
+BREAK
+#IF
+CheckKillMonName 万奴王
+#ACT
+GAMEGLORY + 500
+SENDMSG 6 〖恭喜〗击杀怪物获得500点荣誉值。
+BREAK
+#IF
+CheckKillMonName 众神之王
+#ACT
+GAMEGLORY + 500
+SENDMSG 6 〖恭喜〗击杀怪物获得500点荣誉值。
+BREAK
+#IF
+CheckKillMonName 富贵兽
+#ACT
+GAMEGLORY + 500
+SENDMSG 6 〖恭喜〗击杀怪物获得500点荣誉值。
+BREAK
+#IF
+CheckKillMonName 夺宝蛛王
+#ACT
+GAMEGLORY + 500
+SENDMSG 6 〖恭喜〗击杀怪物获得500点荣誉值。
+BREAK
+#IF
+CheckKillMonName 炼狱教主
+#ACT
+GAMEGLORY + 500
+SENDMSG 6 〖恭喜〗击杀怪物获得500点荣誉值。
+BREAK
+#IF
+CheckKillMonName 白虎统领
+#ACT
+GAMEGLORY + 500
+SENDMSG 6 〖恭喜〗击杀怪物获得500点荣誉值。
+BREAK
+#IF
+CheckKillMonName 祖玛统领
+#ACT
+GAMEGLORY + 500
+SENDMSG 6 〖恭喜〗击杀怪物获得500点荣誉值。
+BREAK
+#IF
+CheckKillMonName 赤月统领
+#ACT
+GAMEGLORY + 500
+SENDMSG 6 〖恭喜〗击杀怪物获得500点荣誉值。
+BREAK
+#IF
+CheckKillMonName 骷髅统领
+#ACT
+GAMEGLORY + 500
+SENDMSG 6 〖恭喜〗击杀怪物获得500点荣誉值。
+BREAK
+#IF
+CheckKillMonName 玛雅帝王
+#ACT
+GAMEGLORY + 500
+SENDMSG 6 〖恭喜〗击杀怪物获得500点荣誉值。
+BREAK
+#IF
+CheckKillMonName 玛雅神龙
+#ACT
+GAMEGLORY + 500
+SENDMSG 6 〖恭喜〗击杀怪物获得500点荣誉值。
+BREAK
+#IF
+CheckKillMonName 玛雅天尊
+#ACT
+GAMEGLORY + 500
+SENDMSG 6 〖恭喜〗击杀怪物获得500点荣誉值。
+BREAK
+#IF
+CheckKillMonName 玛雅法圣
+#ACT
+GAMEGLORY + 500
+SENDMSG 6 〖恭喜〗击杀怪物获得500点荣誉值。
+BREAK
+#IF
+CheckKillMonName 玛雅战神
+#ACT
+GAMEGLORY + 500
+SENDMSG 6 〖恭喜〗击杀怪物获得500点荣誉值。
+BREAK
+#IF
+CheckKillMonName 神秘盘古教主
+#ACT
+GAMEGLORY + 500
+SENDMSG 6 〖恭喜〗击杀怪物获得500点荣誉值。
+BREAK
+#IF
+CheckKillMonName 暗黑神龙
+#ACT
+GAMEGLORY + 500
+SENDMSG 6 〖恭喜〗击杀怪物获得500点荣誉值。
+BREAK
+#IF
+CheckKillMonName 暗黑帝王
+#ACT
+GAMEGLORY + 500
+SENDMSG 6 〖恭喜〗击杀怪物获得500点荣誉值。
+BREAK
+#IF
+CheckKillMonName 赌神庄主
+#ACT
+GAMEGLORY + 500
+SENDMSG 6 〖恭喜〗击杀怪物获得500点荣誉值。
+BREAK
+#IF
+CheckKillMonName 修真教主
+#ACT
+GAMEGLORY + 500
+SENDMSG 6 〖恭喜〗击杀怪物获得500点荣誉值。
+BREAK
+#IF
+CheckKillMonName 烟花教主
+#ACT
+GAMEGLORY + 500
+SENDMSG 6 〖恭喜〗击杀怪物获得500点荣誉值。
+BREAK
+
+[@200血怪物]
+#if
+random 20
+#ACT
+BREAK
+#if
+random 19
+#ACT
+GAMEGLORY + 2
+SENDMSG 6 〖恭喜〗击杀怪物获得2点荣誉值。
+BREAK
+#if
+random 18
+#ACT
+BREAK
+#if
+random 17
+#ACT
+BREAK
+#if
+random 16
+#ACT
+BREAK
+#if
+random 15
+#ACT
+BREAK
+#if
+random 14
+#ACT
+GAMEGLORY + 1
+SENDMSG 6 〖恭喜〗击杀怪物获得1点荣誉值。
+BREAK
+#if
+random 13
+#ACT
+BREAK
+#if
+random 12
+#ACT
+BREAK
+#if
+random 11
+#ACT
+BREAK
+#if
+random 10
+#ACT
+BREAK
+#if
+random 9
+#ACT
+BREAK
+#if
+random 8
+#ACT
+BREAK
+#if
+random 7
+#ACT
+BREAK
+#if
+random 6
+#ACT
+BREAK
+#if
+random 5
+#ACT
+BREAK
+#if
+random 4
+#ACT
+BREAK
+#if
+random 3
+#ACT
+BREAK
+#if
+random 2
+#ACT
+BREAK
+#if
+random 1
+#ACT
+BREAK
+
+[@500血怪物]
+#if
+random 20
+#ACT
+BREAK
+#if
+random 19
+#ACT
+GAMEGLORY + 5
+SENDMSG 6 〖恭喜〗击杀怪物获得5点荣誉值。
+BREAK
+#if
+random 18
+#ACT
+BREAK
+#if
+random 17
+#ACT
+BREAK
+#if
+random 16
+#ACT
+BREAK
+#if
+random 15
+#ACT
+BREAK
+#if
+random 14
+#ACT
+GAMEGLORY + 3
+SENDMSG 6 〖恭喜〗击杀怪物获得3点荣誉值。
+BREAK
+#if
+random 13
+#ACT
+BREAK
+#if
+random 12
+#ACT
+BREAK
+#if
+random 11
+#ACT
+GAMEGLORY + 2
+SENDMSG 6 〖恭喜〗击杀怪物获得2点荣誉值。
+BREAK
+#if
+random 10
+#ACT
+BREAK
+#if
+random 9
+#ACT
+BREAK
+#if
+random 8
+#ACT
+BREAK
+#if
+random 7
+#ACT
+BREAK
+#if
+random 6
+#ACT
+BREAK
+#if
+random 5
+#ACT
+BREAK
+#if
+random 4
+#ACT
+BREAK
+#if
+random 3
+#ACT
+BREAK
+#if
+random 2
+#ACT
+BREAK
+#if
+random 1
+#ACT
+BREAK
+
+[@1000血怪物]
+#if
+random 10
+#ACT
+GAMEGLORY + 50
+SENDMSG 6 〖恭喜〗击杀怪物获得50点荣誉值。
+BREAK
+#if
+random 9
+#ACT
+BREAK
+#if
+random 8
+#ACT
+GAMEGLORY + 20
+SENDMSG 6 〖恭喜〗击杀怪物获得20点荣誉值。
+BREAK
+#if
+random 7
+#ACT
+BREAK
+#if
+random 6
+#ACT
+GAMEGLORY + 10
+SENDMSG 6 〖恭喜〗击杀怪物获得10点荣誉值。
+BREAK
+#if
+random 5
+#ACT
+BREAK
+#if
+random 4
+#ACT
+BREAK
+#if
+random 3
+#ACT
+BREAK
+#if
+random 2
+#ACT
+BREAK
+#if
+random 1
+#ACT
+BREAK
+
+[@2000血怪物]
+#if
+random 6
+#ACT
+GAMEGLORY + 50
+SENDMSG 6 〖恭喜〗击杀怪物获得50点荣誉值。
+BREAK
+#if
+random 5
+#ACT
+BREAK
+#if
+random 4
+#ACT
+GAMEGLORY + 30
+SENDMSG 6 〖恭喜〗击杀怪物获得30点荣誉值。
+BREAK
+#if
+random 3
+#ACT
+BREAK
+#if
+random 2
+#ACT
+GAMEGLORY + 20
+SENDMSG 6 〖恭喜〗击杀怪物获得20点荣誉值。
+BREAK
+#if
+random 1
+#ACT
+BREAK
+}

@@ -1,0 +1,176 @@
+[@雷霆类回收c]
+{
+
+#IF
+checkitem 怒斩 1
+#ACT
+take 怒斩 1
+inc m39 1
+inc m37 500000
+goto @雷霆类回收c
+
+
+#IF
+checkitem 龙牙 1
+#ACT
+take 龙牙 1
+inc m39 1
+inc m37 500000
+goto @雷霆类回收c
+
+#IF
+checkitem 逍遥扇 1
+#ACT
+take 逍遥扇 1
+inc m39 1
+inc m37 500000
+goto @雷霆类回收c
+
+
+#IF
+checkitem 雷霆项链 1
+#ACT
+take 雷霆项链 1
+inc m39 1
+inc m37 500000
+goto @雷霆类回收c
+
+#IF
+checkitem 雷霆护腕 1
+#ACT
+take 雷霆护腕 1
+inc m39 1
+inc m37 500000
+goto @雷霆类回收c
+#IF
+checkitem 雷霆战戒 1
+#ACT
+take 雷霆战戒 1
+inc m39 1
+inc m37 500000
+goto @雷霆类回收c
+
+
+
+#IF
+checkitem 烈焰项链 1
+#ACT
+take 烈焰项链 1
+inc m39 1
+inc m37 500000
+goto @雷霆类回收c
+
+#IF
+checkitem 烈焰护腕 1
+#ACT
+take 烈焰护腕 1
+inc m39 1
+inc m37 500000
+goto @雷霆类回收c
+
+
+#IF
+checkitem 烈焰魔戒 1
+#ACT
+take 烈焰魔戒 1
+inc m39 1
+inc m37 500000
+goto @雷霆类回收c
+
+
+#IF
+checkitem 光芒项链 1
+#ACT
+take 光芒项链 1
+inc m39 1
+inc m37 500000
+goto @雷霆类回收c
+
+#IF
+checkitem 光芒护腕 1
+#ACT
+take 光芒护腕 1
+inc m39 1
+inc m37 500000
+goto @雷霆类回收c
+
+
+#IF
+checkitem 光芒道戒 1
+#ACT
+take 光芒道戒 1
+inc m39 1
+inc m37 500000
+goto @雷霆类回收c
+
+
+
+
+#IF
+checkitem 雷霆战靴 1
+#ACT
+take 雷霆战靴 1
+inc m39 1
+inc m37 500000
+goto @雷霆类回收c
+
+
+#IF
+checkitem 雷霆腰带 1
+#ACT
+take 雷霆腰带 1
+inc m39 1
+inc m37 500000
+goto @雷霆类回收c
+
+
+
+#IF
+checkitem 烈焰魔靴 1
+#ACT
+take 烈焰魔靴 1
+inc m39 1
+inc m37 500000
+goto @雷霆类回收c
+
+
+
+#IF
+checkitem 烈焰腰带 1
+#ACT
+take 烈焰腰带 1
+inc m39 1
+inc m37 500000
+goto @雷霆类回收c
+
+
+#IF
+checkitem 光芒道靴 1
+#ACT
+take 光芒道靴 1
+inc m39 1
+inc m37 500000
+goto @雷霆类回收c
+
+
+#IF
+checkitem 光芒腰带 1
+#ACT
+take 光芒腰带 1
+inc m39 1
+inc m37 500000
+goto @雷霆类回收c
+
+
+
+
+#IF
+LARGE M37 0
+#ACT
+CHANGEEXP + <$STR(M37)> 1
+;GuildNoticeMsg 255 141  [%s]回收了<$STR(M39)>个雷霆系列装备,获得经验<$STR(M37)>！
+MOV M37 0
+MOV M39 0
+BREAK
+#ELSEACT
+}

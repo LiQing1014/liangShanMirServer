@@ -1,0 +1,14 @@
+[@Main]
+#if
+Large N$通区_延迟 0
+#act
+SendCenterMsg 250	0 您的点击速度过快，请勿重复点击！	0	<$Str(N$通区_延迟)>
+SendCenterMsg 251	0 您的点击速度过快，请勿重复点击！	0	<$Str(N$通区_延迟)>
+SendCenterMsg 249	0 您的点击速度过快，请勿重复点击！	0	<$Str(N$通区_延迟)>
+#elseact
+MOV n$通区_延迟 3
+WDC @读取平台公告 操作=读取变量 键=公告地址	密钥=<$Str(S$平台_名称)>
+[@读取平台公告]
+#if
+#act
+OpenWebSite <$Str(S$公告地址)>

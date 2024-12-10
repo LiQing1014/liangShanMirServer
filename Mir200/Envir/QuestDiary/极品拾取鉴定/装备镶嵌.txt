@@ -1,0 +1,2039 @@
+[@装备镶嵌啊]
+
+{
+
+
+
+#IF
+CHECKRENEWLEVEL < 15
+#ACT
+messagebox 对不起，你当前的实力不足，请15转以后来
+break
+
+#IF
+CHECKLEVELEX < 60
+#ACT
+messagebox 对不起，你当前的实力不足，请60级以后来
+break
+
+
+
+
+
+
+
+
+#if
+check [124] 0
+#act
+mov S$回收124 <ImgEx:0:192:192:192:0:-2|249#宝石一键回收关/@回收开关124>
+
+#if
+check [124] 1
+#act
+mov S$回收124 <ImgEx:0:193:193:193:0:-2|250#宝石一键回收开/@回收开关124>
+
+
+#if
+check [125] 0
+#act
+mov S$回收125 <ImgEx:0:192:192:192:0:-2|249#宝石一键回收关/@回收开关125>
+
+#if
+check [125] 1
+#act
+mov S$回收125 <ImgEx:0:193:193:193:0:-2|250#宝石一键回收开/@回收开关125>
+
+
+
+
+#if
+check [126] 0
+#act
+mov S$回收126 <ImgEx:0:192:192:192:0:-2|249#宝石一键回收关/@回收开关126>
+
+#if
+check [126] 1
+#act
+mov S$回收126 <ImgEx:0:193:193:193:0:-2|250#宝石一键回收开/@回收开关126>
+
+
+
+
+#if
+check [127] 0
+#act
+mov S$回收127 <ImgEx:0:192:192:192:0:-2|249#宝石一键回收关/@回收开关127>
+
+#if
+check [127] 1
+#act
+mov S$回收127 <ImgEx:0:193:193:193:0:-2|250#宝石一键回收开/@回收开关127>
+
+
+
+#if
+check [128] 0
+#act
+mov S$回收128 <ImgEx:0:192:192:192:0:-2|249#宝石一键回收关/@回收开关128>
+
+#if
+check [128] 1
+#act
+mov S$回收128 <ImgEx:0:193:193:193:0:-2|250#宝石一键回收开/@回收开关128>
+
+
+#if
+check [129] 0
+#act
+mov S$回收129 <ImgEx:0:192:192:192:0:-2|249#宝石一键回收关/@回收开关129>
+
+#if
+check [129] 1
+#act
+mov S$回收129 <ImgEx:0:193:193:193:0:-2|250#宝石一键回收开/@回收开关129>
+
+
+#if
+check [130] 0
+#act
+mov S$回收130 <ImgEx:0:192:192:192:0:-2|249#宝石一键回收关/@回收开关130>
+
+#if
+check [130] 1
+#act
+mov S$回收130 <ImgEx:0:193:193:193:0:-2|250#宝石一键回收开/@回收开关130>
+
+
+
+
+
+#IF
+EQUAL N$第1个孔宝石IDX 0
+#ACT
+ReturnBoxItem 2
+MOV N$第1个孔宝石IDX 4525
+MOV N$第2个孔宝石IDX 4530
+MOV N$第3个孔宝石IDX 4535
+MOV S$拆除按钮1 <拆除>
+MOV S$拆除按钮2 <拆除>
+MOV S$拆除按钮3 <拆除>
+
+
+
+#IF
+#ACT
+
+
+getdbitemfieldvalue 一级力量	Idx	N$力量Idx1
+getdbitemfieldvalue 二级力量	Idx	N$力量Idx2
+getdbitemfieldvalue 三级力量	Idx	N$力量Idx3
+getdbitemfieldvalue 四级力量	Idx	N$力量Idx4
+getdbitemfieldvalue 五级力量	Idx	N$力量Idx5
+getdbitemfieldvalue 一级智力	Idx	N$智力Idx1
+getdbitemfieldvalue 二级智力	Idx	N$智力Idx2
+getdbitemfieldvalue 三级智力	Idx	N$智力Idx3
+getdbitemfieldvalue 四级智力	Idx	N$智力Idx4
+getdbitemfieldvalue 五级智力	Idx	N$智力Idx5
+getdbitemfieldvalue 一级精神	Idx	N$精神Idx1
+getdbitemfieldvalue 二级精神	Idx	N$精神Idx2
+getdbitemfieldvalue 三级精神	Idx	N$精神Idx3
+getdbitemfieldvalue 四级精神	Idx	N$精神Idx4
+getdbitemfieldvalue 五级精神	Idx	N$精神Idx5
+getdbitemfieldvalue 一级生命	Idx	N$生命Idx1
+getdbitemfieldvalue 二级生命	Idx	N$生命Idx2
+getdbitemfieldvalue 三级生命	Idx	N$生命Idx3
+getdbitemfieldvalue 四级生命	Idx	N$生命Idx4
+getdbitemfieldvalue 五级生命	Idx	N$生命Idx5
+getdbitemfieldvalue 一级暴击	Idx	N$暴击Idx1
+getdbitemfieldvalue 二级暴击	Idx	N$暴击Idx2
+getdbitemfieldvalue 三级暴击	Idx	N$暴击Idx3
+getdbitemfieldvalue 四级暴击	Idx	N$暴击Idx4
+getdbitemfieldvalue 五级暴击	Idx	N$暴击Idx5
+getdbitemfieldvalue 一级攻伤	Idx	N$攻伤Idx1
+getdbitemfieldvalue 二级攻伤	Idx	N$攻伤Idx2
+getdbitemfieldvalue 三级攻伤	Idx	N$攻伤Idx3
+getdbitemfieldvalue 四级攻伤	Idx	N$攻伤Idx4
+getdbitemfieldvalue 五级攻伤	Idx	N$攻伤Idx5
+getdbitemfieldvalue 一级吸收	Idx	N$吸收Idx1
+getdbitemfieldvalue 二级吸收	Idx	N$吸收Idx2
+getdbitemfieldvalue 三级吸收	Idx	N$吸收Idx3
+getdbitemfieldvalue 四级吸收	Idx	N$吸收Idx4
+getdbitemfieldvalue 五级吸收	Idx	N$吸收Idx5
+MOV	S$力量1	 <ItemShow:<$Str(N$力量Idx1)>:0:-15:-12:1/@合成一级力量>
+MOV	S$力量2	 <ItemShow:<$Str(N$力量Idx2)>:0:-15:-12:1/@合成二级力量>
+MOV	S$力量3	 <ItemShow:<$Str(N$力量Idx3)>:0:-15:-12:1/@合成三级力量>
+MOV	S$力量4	 <ItemShow:<$Str(N$力量Idx4)>:0:-15:-12:1/@合成四级力量>
+MOV	S$力量5	 <ItemShow:<$Str(N$力量Idx5)>:0:-15:-12:1/@合成五级力量>
+
+MOV	S$智力1	 <ItemShow:<$Str(N$智力Idx1)>:0:-15:-12:1/@合成一级智力>
+MOV	S$智力2	 <ItemShow:<$Str(N$智力Idx2)>:0:-15:-12:1/@合成二级智力>
+MOV	S$智力3	 <ItemShow:<$Str(N$智力Idx3)>:0:-15:-12:1/@合成三级智力>
+MOV	S$智力4	 <ItemShow:<$Str(N$智力Idx4)>:0:-15:-12:1/@合成四级智力>
+MOV	S$智力5	 <ItemShow:<$Str(N$智力Idx5)>:0:-15:-12:1/@合成五级智力>
+
+
+
+MOV	S$精神1	 <ItemShow:<$Str(N$精神Idx1)>:0:-15:-12:1/@合成一级精神>
+MOV	S$精神2	 <ItemShow:<$Str(N$精神Idx2)>:0:-15:-12:1/@合成二级精神>
+MOV	S$精神3	 <ItemShow:<$Str(N$精神Idx3)>:0:-15:-12:1/@合成三级精神>
+MOV	S$精神4	 <ItemShow:<$Str(N$精神Idx4)>:0:-15:-12:1/@合成四级精神>
+MOV	S$精神5	 <ItemShow:<$Str(N$精神Idx5)>:0:-15:-12:1/@合成五级精神>
+
+
+MOV	S$生命1	 <ItemShow:<$Str(N$生命Idx1)>:0:-15:-12:1/@合成一级生命>
+MOV	S$生命2	 <ItemShow:<$Str(N$生命Idx2)>:0:-15:-12:1/@合成二级生命>
+MOV	S$生命3	 <ItemShow:<$Str(N$生命Idx3)>:0:-15:-12:1/@合成三级生命>
+MOV	S$生命4	 <ItemShow:<$Str(N$生命Idx4)>:0:-15:-12:1/@合成四级生命>
+MOV	S$生命5	 <ItemShow:<$Str(N$生命Idx5)>:0:-15:-12:1/@合成五级生命>
+
+
+
+MOV	S$暴击1	 <ItemShow:<$Str(N$暴击Idx1)>:0:-15:-12:1/@合成一级暴击>
+MOV	S$暴击2	 <ItemShow:<$Str(N$暴击Idx2)>:0:-15:-12:1/@合成二级暴击>
+MOV	S$暴击3	 <ItemShow:<$Str(N$暴击Idx3)>:0:-15:-12:1/@合成三级暴击>
+MOV	S$暴击4	 <ItemShow:<$Str(N$暴击Idx4)>:0:-15:-12:1/@合成四级暴击>
+MOV	S$暴击5	 <ItemShow:<$Str(N$暴击Idx5)>:0:-15:-12:1/@合成五级暴击>
+
+
+MOV	S$攻伤1	 <ItemShow:<$Str(N$攻伤Idx1)>:0:-15:-12:1/@合成一级攻伤>
+MOV	S$攻伤2	 <ItemShow:<$Str(N$攻伤Idx2)>:0:-15:-12:1/@合成二级攻伤>
+MOV	S$攻伤3	 <ItemShow:<$Str(N$攻伤Idx3)>:0:-15:-12:1/@合成三级攻伤>
+MOV	S$攻伤4	 <ItemShow:<$Str(N$攻伤Idx4)>:0:-15:-12:1/@合成四级攻伤>
+MOV	S$攻伤5	 <ItemShow:<$Str(N$攻伤Idx5)>:0:-15:-12:1/@合成五级攻伤>
+
+MOV	S$吸收1	 <ItemShow:<$Str(N$吸收Idx1)>:0:-15:-12:1/@合成一级吸收>
+MOV	S$吸收2	 <ItemShow:<$Str(N$吸收Idx2)>:0:-15:-12:1/@合成二级吸收>
+MOV	S$吸收3	 <ItemShow:<$Str(N$吸收Idx3)>:0:-15:-12:1/@合成三级吸收>
+MOV	S$吸收4	 <ItemShow:<$Str(N$吸收Idx4)>:0:-15:-12:1/@合成四级吸收>
+MOV	S$吸收5	 <ItemShow:<$Str(N$吸收Idx5)>:0:-15:-12:1/@合成五级吸收>
+
+
+
+ReturnBoxItem 0
+ReturnBoxItem 1
+; close
+OPENMERCHANTBIGDLG 1 567 1 4 0 0 1 635 2
+#SAY 
+; <> <◆◆◆◆/FCOLOR=250>         <◆◆◆◆/FCOLOR=161>　             <◆◆◆◆/FCOLOR=231>　                            <◆◆◆◆/FCOLOR=249>　     \
+; <> <放入装备/FCOLOR=250>         <放入宝石/FCOLOR=161>　             <开孔放入/FCOLOR=231>　                            <拆除放入/FCOLOR=249>　     \
+; <> <↓↓↓↓/FCOLOR=250>         <↓↓↓↓/FCOLOR=161>　             <↓↓↓↓/FCOLOR=231>　                            <↓↓↓↓/FCOLOR=249>　     \
+; <ITEMBOX:0:0:117:6:-2:50:75:5,10,11,63,28,62,16,48,15,19,51,30,26,22,23,64,65,52,20,21,7,53:254#请放入需要镶嵌装备> 
+; <ITEMBOX:1:0:117:52:-2:55:78:46,42,45:254#请放入所需镶嵌宝石>　 　 　 　 　 
+; <ITEMBOX:3:0:117:54:-2:55:78:*:231#请放需要打孔的装备^-^161#赤月级别及以上装备^-^161#注意：^-^250#第一个孔需要：一把开孔的锤子*1^-^249#第二个孔需要：一把开孔的锤子*2^-^254#第三个孔需要：一把开孔的锤子*3> 　 　 　 
+; <ITEMBOX:2:0:117:178:12:45:45:5,10,11,63,28,62,16,48,15,19,51,30,26,22,64,65,52,20,21,7,53:254#请放入需要拆除宝石的装备^-^249#注意：你的背包至少需要留1个空格^-^161#拆除宝石后,装备上宝石的属性会消失^-^250#拆除的宝石会返回到你的背包>\
+; \ \
+; \ \ \
+; 　                             \
+; <>          <开始镶嵌|250#免费镶嵌宝石/@开始镶嵌>                       <开始打孔|231#请先放需要打孔的装备^-^161#注意：^-^250#第一个孔需要：一把开孔的锤子*1^-^249#第二个孔需要：一把开孔的锤子*2^-^254#第三个孔需要：一把开孔的锤子*3/@开始开孔>        \      
+; \                                                                      <>  
+; <>  <ItemShow:<$STR(N$第1个孔宝石IDX)>:0:2:-15:1> <ItemShow:<$STR(N$第2个孔宝石IDX)>:0:2:-15:1> <ItemShow:<$STR(N$第3个孔宝石IDX)>:0:2:-15:1>　          \
+; \ \                                                <> 
+; <>                        　<$STR(S$拆除按钮1)>　　<$STR(S$拆除按钮2)>　　<$STR(S$拆除按钮3)>\ 
+; \<力量宝石：/FCOLOR=249>   <$STR(S$力量1)> <$STR(S$力量2)> <$STR(S$力量3)> <$STR(S$力量4)> <$STR(S$力量5)><$STR(S$回收124)><←点击图标合成/FCOLOR=161>
+
+; \ \ \
+; \<智力宝石：/FCOLOR=249>   <$STR(S$智力1)> <$STR(S$智力2)> <$STR(S$智力3)> <$STR(S$智力4)> <$STR(S$智力5)><$STR(S$回收125)><←点击图标合成/FCOLOR=161>
+; \ \ \
+; \<精神宝石：/FCOLOR=249>   <$STR(S$精神1)> <$STR(S$精神2)> <$STR(S$精神3)> <$STR(S$精神4)> <$STR(S$精神5)><$STR(S$回收126)><←点击图标合成/FCOLOR=161>
+; \ \ \
+; \<生命宝石：/FCOLOR=249>   <$STR(S$生命1)> <$STR(S$生命2)> <$STR(S$生命3)> <$STR(S$生命4)> <$STR(S$生命5)><$STR(S$回收127)><←点击图标合成/FCOLOR=161>
+
+; \ \ \
+; \<暴击宝石：/FCOLOR=249>   <$STR(S$暴击1)> <$STR(S$暴击2)> <$STR(S$暴击3)> <$STR(S$暴击4)> <$STR(S$暴击5)><$STR(S$回收128)><←点击图标合成/FCOLOR=161>             <抽奖宝石|253#99大米抽一次^-^161#随机抽取1-3级宝石^-^250#1级宝石几率：90%^-^251#2级宝石几率：7%^-^253#3级宝石几率：3%^-^254#一把开孔的锤子几率：5%^-^249#注意：抽到不满意的宝石请自行消耗/@大米宝石抽奖>
+
+; \ \ \
+; \<攻伤宝石：/FCOLOR=249>   <$STR(S$攻伤1)> <$STR(S$攻伤2)> <$STR(S$攻伤3)> <$STR(S$攻伤4)> <$STR(S$攻伤5)><$STR(S$回收129)><←点击图标合成/FCOLOR=161>            <购买一把开孔的锤子|249#购买价格^250#200点大米*1个/@@InPutInteger88(注意：200点大米=一把开孔的锤子，请输入购买数量，1-100数值之间)>
+
+; \ \ \
+; \<吸收宝石：/FCOLOR=249>   <$STR(S$吸收1)> <$STR(S$吸收2)> <$STR(S$吸收3)> <$STR(S$吸收4)> <$STR(S$吸收5)><$STR(S$回收130)><←点击图标合成/FCOLOR=161>           <一键回收宝石|250#一级宝石：5000元宝^-^251#二级宝石：20000元宝^-^253#三级宝石：50000元宝^-^249#注意：请将保留的宝石先存放仓库，回收后概不负责/@一键回收宝石>                       
+
+
+
+<Img|width=700|height=600|move=0|img=public/bg_npc_04.jpg|reset=1|loadDelay=1|bg=1>
+<Layout|x=670.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=699.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32.0|y=15.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆◆>
+<Text|a=0|x=120.0|y=15.0|tipsx=10|tipsy=80|color=161|size=18|text=◆◆◆◆>
+<Text|a=0|x=208.0|y=15.0|tipsx=10|tipsy=80|color=231|size=18|text=◆◆◆◆>
+<Text|a=0|x=440.0|y=15.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+<Text|a=0|x=32.0|y=35.0|tipsx=10|tipsy=80|color=250|size=18|text=放入装备>
+<Text|a=0|x=120.0|y=35.0|tipsx=10|tipsy=80|color=161|size=18|text=放入宝石>
+<Text|a=0|x=208.0|y=35.0|tipsx=10|tipsy=80|color=231|size=18|text=开孔放入>
+<Text|a=0|x=440.0|y=35.0|tipsx=10|tipsy=80|color=249|size=18|text=拆除放入>
+<Text|a=0|x=32.0|y=55.0|tipsx=10|tipsy=80|color=250|size=18|text=↓↓↓↓>
+<Text|a=0|x=120.0|y=55.0|tipsx=10|tipsy=80|color=161|size=18|text=↓↓↓↓>
+<Text|a=0|x=208.0|y=55.0|tipsx=10|tipsy=80|color=231|size=18|text=↓↓↓↓>
+<Text|a=0|x=440.0|y=55.0|tipsx=10|tipsy=80|color=249|size=18|text=↓↓↓↓>
+<ITEMBOX|x=31.0|y=83.0|width=55|height=55|boxindex=0|stdmode=5,10,11,63,28,62,16,48,15,19,51,30,26,22,23,64,65,52,20,21,7,53|tipsx=1|tipsy=65|img=public/1900000651_3.png>
+<ITEMBOX|x=118.0|y=83.0|width=55|height=55|boxindex=1|stdmode=46,42,45|tipsx=1|tipsy=65|img=public/1900000651_3.png>
+<ITEMBOX|x=207.0|y=83.0|width=55|height=55|boxindex=3|stdmode=*|tipsx=1|tipsy=65|img=public/1900000651_3.png>
+<ITEMBOX|x=437.0|y=83.0|width=55|height=55|boxindex=2|stdmode=5,10,11,63,28,62,16,48,15,19,51,30,26,22,23,64,65,52,20,21,7,53|img=public/1900000651_3.png>
+<Text|a=0|x=69.0|y=155.0|tipsx=10|tipsy=80|color=251|size=18|text=开始镶嵌|link=@开始镶嵌>
+<Text|a=0|x=200.0|y=155.0|tipsx=10|tipsy=80|color=251|size=18|text=开始打孔|link=@开始开孔>
+<ItemShow|x=356.0|y=135.0|width=70|height=70|itemid=<$STR(N$第1个孔宝石IDX)>|itemcount=1|showtips=1|color=250|bgtype=1>
+<ItemShow|x=443.0|y=135.0|width=70|height=70|itemid=<$STR(N$第2个孔宝石IDX)>|itemcount=1|showtips=1|color=250|bgtype=1>
+<ItemShow|x=530.0|y=135.0|width=70|height=70|itemid=<$STR(N$第3个孔宝石IDX)>|itemcount=1|showtips=1|color=250|bgtype=1>
+<Text|x=21.0|y=249.0|color=255|size=18|text=力量宝石:>
+<ItemShow|x=108.0|y=233.0|width=70|height=70|itemid=<$STR(N$力量Idx1)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成一级力量>
+<ItemShow|x=157.0|y=233.0|width=70|height=70|itemid=<$STR(N$力量Idx2)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成二级力量>
+<ItemShow|x=206.0|y=233.0|width=70|height=70|itemid=<$STR(N$力量Idx3)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成三级力量>
+<ItemShow|x=255.0|y=233.0|width=70|height=70|itemid=<$STR(N$力量Idx4)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成四级力量>
+<ItemShow|x=305.0|y=233.0|width=70|height=70|itemid=<$STR(N$力量Idx5)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成五级力量>
+<CheckBox|x=376.0|y=251.0|nimg=public/1900000550.png|checkboxid=1|pimg=public/1900000551.png|default=1>
+<Text|x=411.0|y=254.0|color=255|size=18|text=点击图标合成>
+<Text|x=21.0|y=299.0|color=255|size=18|text=智力宝石:>
+<ItemShow|x=108.0|y=283.0|width=70|height=70|itemid=<$STR(N$智力Idx1)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成一级智力>
+<ItemShow|x=157.0|y=283.0|width=70|height=70|itemid=<$STR(N$智力Idx2)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成二级智力>
+<ItemShow|x=206.0|y=283.0|width=70|height=70|itemid=<$STR(N$智力Idx3)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成三级智力>
+<ItemShow|x=255.0|y=283.0|width=70|height=70|itemid=<$STR(N$智力Idx4)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成四级智力>
+<ItemShow|x=305.0|y=283.0|width=70|height=70|itemid=<$STR(N$智力Idx5)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成五级智力>
+<CheckBox|x=376.0|y=301.0|nimg=public/1900000550.png|checkboxid=1|pimg=public/1900000551.png|default=1>
+<Text|x=411.0|y=304.0|color=255|size=18|text=点击图标合成>
+<Text|x=21.0|y=349.0|color=255|size=18|text=精神宝石:>
+<ItemShow|x=108.0|y=333.0|width=70|height=70|itemid=<$STR(N$精神Idx1)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成一级精神>
+<ItemShow|x=157.0|y=333.0|width=70|height=70|itemid=<$STR(N$精神Idx2)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成二级精神>
+<ItemShow|x=206.0|y=333.0|width=70|height=70|itemid=<$STR(N$精神Idx3)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成三级精神>
+<ItemShow|x=255.0|y=333.0|width=70|height=70|itemid=<$STR(N$精神Idx4)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成四级精神>
+<ItemShow|x=305.0|y=333.0|width=70|height=70|itemid=<$STR(N$精神Idx5)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成五级精神>
+<CheckBox|x=376.0|y=351.0|nimg=public/1900000550.png|checkboxid=1|pimg=public/1900000551.png|default=1>
+<Text|x=411.0|y=354.0|color=255|size=18|text=点击图标合成>
+<Text|x=21.0|y=400.0|color=255|size=18|text=生命宝石:>
+<ItemShow|x=108.0|y=384.0|width=70|height=70|itemid=<$STR(N$生命Idx1)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成一级生命>
+<ItemShow|x=157.0|y=384.0|width=70|height=70|itemid=<$STR(N$生命Idx2)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成二级生命>
+<ItemShow|x=206.0|y=384.0|width=70|height=70|itemid=<$STR(N$生命Idx3)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成三级生命>
+<ItemShow|x=255.0|y=384.0|width=70|height=70|itemid=<$STR(N$生命Idx4)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成四级生命>
+<ItemShow|x=305.0|y=384.0|width=70|height=70|itemid=<$STR(N$生命Idx5)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成五级生命>
+<CheckBox|x=376.0|y=402.0|nimg=public/1900000550.png|checkboxid=1|pimg=public/1900000551.png|default=1>
+<Text|x=411.0|y=405.0|color=255|size=18|text=点击图标合成>
+<Text|x=21.0|y=451.0|color=255|size=18|text=暴击宝石:>
+<ItemShow|x=108.0|y=435.0|width=70|height=70|itemid=<$STR(N$暴击Idx1)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成一级暴击>
+<ItemShow|x=157.0|y=435.0|width=70|height=70|itemid=<$STR(N$暴击Idx2)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成二级暴击>
+<ItemShow|x=206.0|y=435.0|width=70|height=70|itemid=<$STR(N$暴击Idx3)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成三级暴击>
+<ItemShow|x=255.0|y=435.0|width=70|height=70|itemid=<$STR(N$暴击Idx4)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成四级暴击>
+<ItemShow|x=305.0|y=435.0|width=70|height=70|itemid=<$STR(N$暴击Idx5)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成五级暴击>
+<CheckBox|x=376.0|y=453.0|nimg=public/1900000550.png|checkboxid=1|pimg=public/1900000551.png|default=1>
+<Text|x=411.0|y=456.0|color=255|size=18|text=点击图标合成>
+<Text|x=21.0|y=501.0|color=255|size=18|text=攻伤宝石:>
+<ItemShow|x=108.0|y=485.0|width=70|height=70|itemid=<$STR(N$攻伤Idx1)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成一级攻伤>
+<ItemShow|x=157.0|y=485.0|width=70|height=70|itemid=<$STR(N$攻伤Idx2)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成二级攻伤>
+<ItemShow|x=206.0|y=485.0|width=70|height=70|itemid=<$STR(N$攻伤Idx3)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成三级攻伤>
+<ItemShow|x=255.0|y=485.0|width=70|height=70|itemid=<$STR(N$攻伤Idx4)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成四级攻伤>
+<ItemShow|x=305.0|y=485.0|width=70|height=70|itemid=<$STR(N$攻伤Idx5)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成五级攻伤>
+<CheckBox|x=376.0|y=503.0|nimg=public/1900000550.png|checkboxid=1|pimg=public/1900000551.png|default=1>
+<Text|x=411.0|y=506.0|color=255|size=18|text=点击图标合成>
+<Text|x=21.0|y=551.0|color=255|size=18|text=吸收宝石:>
+<ItemShow|x=108.0|y=535.0|width=70|height=70|itemid=<$STR(N$吸收Idx1)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成一级吸收>
+<ItemShow|x=157.0|y=535.0|width=70|height=70|itemid=<$STR(N$吸收Idx2)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成二级吸收>
+<ItemShow|x=206.0|y=535.0|width=70|height=70|itemid=<$STR(N$吸收Idx3)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成三级吸收>
+<ItemShow|x=255.0|y=535.0|width=70|height=70|itemid=<$STR(N$吸收Idx4)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成四级吸收>
+<ItemShow|x=305.0|y=535.0|width=70|height=70|itemid=<$STR(N$吸收Idx5)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成五级吸收>
+<CheckBox|x=376.0|y=553.0|nimg=public/1900000550.png|checkboxid=1|pimg=public/1900000551.png|default=1>
+<Text|x=411.0|y=556.0|color=255|size=18|text=点击图标合成>
+<Button|x=544.0|y=400.0|nimg=public/1900000612.png|color=250|size=18|text=抽奖宝石|link=@大米宝石抽奖>
+<Button|x=544.0|y=482.0|nimg=public/1900000612.png|color=250|size=18|text=购买锤子|link=@装备镶嵌啊#购买宝石=1>
+<Button|x=544.0|y=545.0|nimg=public/1900000612.png|color=250|size=18|text=一键回收|link=@一键回收宝石>
+<Button|x=654.0|y=398.0|color=255|size=18|nimg=public/1900001024.png>
+<Button|x=654.0|y=544.0|color=255|size=18|nimg=public/1900001024.png>
+<Text|x=544.0|y=456.0|color=251|size=18|text=200大米*1个>
+
+
+
+#if
+equal S$购买宝石 1
+#act
+mov S$购买宝石
+#say
+<Img|x=191.0|y=223.0|img=public/1900000650.png|esc=0>
+<Img|x=276.0|y=257.0|img=public/1900000668.png|esc=0>
+<Button|x=302.0|y=306.0|size=18|nimg=public/1900000612.png|submitInput=3|color=250|text=点击购买|link=@购买锤子>
+<Input|x=277.0|y=260.0|width=154|height=25|size=16|type=0|inputid=3|place=请输入购买数量|color=255>
+<Button|x=522.0|y=223.0|pimg=public/1900000511.png|size=18|color=255|nimg=public/1900000510.png|link=@装备镶嵌啊>
+
+
+; <Text|a=0|x=356.0|y=215.0|tipsx=10|tipsy=80|color=255|size=18|text=　<$STR(S$拆除按钮1)>　　<$STR(S$拆除按钮2)>　　<$STR(S$拆除按钮3)>>
+; <Text|a=0|x=32.0|y=271.0|tipsx=10|tipsy=80|color=249|size=18|text=力量宝石：>
+; <Text|a=0|x=142.0|y=271.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(S$力量1)> <$STR(S$力量2)> <$STR(S$力量3)> <$STR(S$力量4)> <$STR(S$力量5)><$STR(S$回收124)>>
+; <Text|a=0|x=1198.0|y=355.0|tipsx=10|tipsy=80|color=161|size=18|text=←点击图标合成>
+; <Text|a=0|x=32.0|y=351.0|tipsx=10|tipsy=80|color=249|size=18|text=智力宝石：>
+; <Text|a=0|x=142.0|y=351.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(S$智力1)> <$STR(S$智力2)> <$STR(S$智力3)> <$STR(S$智力4)> <$STR(S$智力5)><$STR(S$回收125)>>
+; <Text|a=0|x=1198.0|y=435.0|tipsx=10|tipsy=80|color=161|size=18|text=←点击图标合成>
+; <Text|a=0|x=32.0|y=431.0|tipsx=10|tipsy=80|color=249|size=18|text=精神宝石：>
+; <Text|a=0|x=142.0|y=431.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(S$精神1)> <$STR(S$精神2)> <$STR(S$精神3)> <$STR(S$精神4)> <$STR(S$精神5)><$STR(S$回收126)>>
+; <Text|a=0|x=1198.0|y=515.0|tipsx=10|tipsy=80|color=161|size=18|text=←点击图标合成>
+; <Text|a=0|x=32.0|y=511.0|tipsx=10|tipsy=80|color=249|size=18|text=生命宝石：>
+; <Text|a=0|x=142.0|y=511.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(S$生命1)> <$STR(S$生命2)> <$STR(S$生命3)> <$STR(S$生命4)> <$STR(S$生命5)><$STR(S$回收127)>>
+; <Text|a=0|x=1198.0|y=595.0|tipsx=10|tipsy=80|color=161|size=18|text=←点击图标合成>
+; <Text|a=0|x=32.0|y=675.0|tipsx=10|tipsy=80|color=249|size=18|text=暴击宝石：>
+; <Text|a=0|x=142.0|y=675.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(S$暴击1)> <$STR(S$暴击2)> <$STR(S$暴击3)> <$STR(S$暴击4)> <$STR(S$暴击5)><$STR(S$回收128)>>
+; <Text|a=0|x=1198.0|y=675.0|tipsx=10|tipsy=80|color=161|size=18|text=←点击图标合成>
+; <Text|a=0|x=1352.0|y=675.0|tipsx=10|tipsy=80|color=251|size=18|text=抽奖宝石|link=@大米宝石抽奖>
+; <Text|a=0|x=32.0|y=755.0|tipsx=10|tipsy=80|color=249|size=18|text=攻伤宝石：>
+; <Text|a=0|x=142.0|y=755.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(S$攻伤1)> <$STR(S$攻伤2)> <$STR(S$攻伤3)> <$STR(S$攻伤4)> <$STR(S$攻伤5)><$STR(S$回收129)>>
+; <Text|a=0|x=1198.0|y=755.0|tipsx=10|tipsy=80|color=161|size=18|text=←点击图标合成>
+; <Text|a=0|x=1352.0|y=755.0|tipsx=10|tipsy=80|color=251|size=18|text=购买一把开孔的锤子|link=@@InPutInteger88(注意：200点大米=一把开孔的锤子，请输入购买数量，1-100数值之间)>
+; <Text|a=0|x=32.0|y=835.0|tipsx=10|tipsy=80|color=249|size=18|text=吸收宝石：>
+; <Text|a=0|x=142.0|y=835.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(S$吸收1)> <$STR(S$吸收2)> <$STR(S$吸收3)> <$STR(S$吸收4)> <$STR(S$吸收5)><$STR(S$回收130)>>
+; <Text|a=0|x=1198.0|y=835.0|tipsx=10|tipsy=80|color=161|size=18|text=←点击图标合成>
+; <Text|a=0|x=1352.0|y=835.0|tipsx=10|tipsy=80|color=251|size=18|text=一键回收宝石|link=@一键回收宝石>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@购买锤子]
+
+
+#or
+EQUAL <$NPCINPUT(3)>
+EQUAL <$NPCINPUT(3)> 0
+large <$NPCINPUT(3)> 100
+#act
+; MOV <$NPCINPUT(3)> 0
+; goto @货币兑换
+messagebox \\请输入购买100内数字.不能为空或者0！
+BREAK
+
+
+#IF
+NOT CHECKBAGSIZE  <$NPCINPUT(3)>
+#ACT
+MESSAGEBOX [失败]:\　\　　　　　　您的“包袱位置”不足“<$NPCINPUT(3)>个”空位置！
+break
+
+
+
+#IF
+NOT CheckBagSize <$NPCINPUT(3)>
+#ACT
+MessageBox 对不起，您的背包必须有<$NPCINPUT(3)>个以上的空格才能购买
+BREAK
+
+
+#IF
+#ACT
+MOV S$给材料 一把开孔的锤子
+MOV N87 <$NPCINPUT(3)>
+MUL N87 200
+; MOV N86 <$NPCINPUT(3)>
+; MUL N86 1
+
+
+#IF
+CHECKGAMEPOINT < <$STR(N87)>
+#ACT
+messagebox \\对不起，您包袱里的大米不够<$STR(N87)>，无法购买！！
+BREAK
+
+
+
+
+#or
+CHECKGAMEPOINT > <$STR(N87)>
+CHECKGAMEPOINT = <$STR(N87)>
+#ACT
+GAMEPOINT - <$STR(N87)>
+GiveStateItem <$Str(S$给材料)> <$NPCINPUT(3)> 1 1 0 0 1 1 0 1
+MessageBox \\恭喜您，用<$STR(N87)>大米购买获得：(<$NPCINPUT(3)>)个<$Str(S$给材料)>
+goto @货币兑换
+break
+
+
+
+
+[@一键回收宝石]
+
+
+#IF
+check [124] 1
+#ACT
+TakeBagItem |一级力量| 30 5000 0 0 50000 N10 0
+TakeBagItem |二级力量| 20 20000 0 0 200000 N10 0
+TakeBagItem |三级力量| 10 50000 0 0 500000 N10 0
+
+#IF
+check [125] 1
+#ACT
+TakeBagItem 一级智力| 30 5000 0 0 50000 N10 0
+TakeBagItem 二级智力| 20 20000 0 0 200000 N10 0
+TakeBagItem 三级智力| 10 50000 0 0 500000 N10 0
+
+
+#IF
+check [126] 1
+#ACT
+TakeBagItem 一级精神| 30 5000 0 0 50000 N10 0
+TakeBagItem 二级精神| 20 20000 0 0 200000 N10 0
+TakeBagItem 三级精神| 10 50000 0 0 500000 N10 0
+
+#IF
+check [127] 1
+#ACT
+TakeBagItem 一级生命| 30 5000 0 0 50000 N10 0
+TakeBagItem 二级生命| 20 20000 0 0 200000 N10 0
+TakeBagItem 三级生命| 10 50000 0 0 500000 N10 0
+
+#IF
+check [128] 1
+#ACT
+TakeBagItem 一级暴击| 30 5000 0 0 50000 N10 0
+TakeBagItem 二级暴击| 20 20000 0 0 200000 N10 0
+TakeBagItem 三级暴击| 10 50000 0 0 500000 N10 0
+
+
+#IF
+check [129] 1
+#ACT
+TakeBagItem 一级攻伤| 30 5000 0 0 50000 N10 0
+TakeBagItem 二级攻伤| 20 20000 0 0 200000 N10 0
+TakeBagItem 三级攻伤| 10 50000 0 0 500000 N10 0
+
+
+
+#IF
+check [130] 1
+#ACT
+TakeBagItem 一级吸收| 30 5000 0 0 50000 N10 0
+TakeBagItem 二级吸收| 20 20000 0 0 200000 N10 0
+TakeBagItem 三级吸收| 10 50000 0 0 500000 N10 0
+
+
+
+
+
+[@回收开关124]
+#if
+check [124] 0
+#act
+set [124] 1
+goto @装备镶嵌啊
+#elseact
+set [124] 0
+goto @装备镶嵌啊
+
+
+[@回收开关125]
+#if
+check [125] 0
+#act
+set [125] 1
+goto @装备镶嵌啊
+#elseact
+set [125] 0
+goto @装备镶嵌啊
+
+
+[@回收开关126]
+#if
+check [126] 0
+#act
+set [126] 1
+goto @装备镶嵌啊
+#elseact
+set [126] 0
+goto @装备镶嵌啊
+
+[@回收开关127]
+#if
+check [127] 0
+#act
+set [127] 1
+goto @装备镶嵌啊
+#elseact
+set [127] 0
+goto @装备镶嵌啊
+
+
+[@回收开关128]
+#if
+check [128] 0
+#act
+set [128] 1
+goto @装备镶嵌啊
+#elseact
+set [128] 0
+goto @装备镶嵌啊
+
+[@回收开关129]
+#if
+check [129] 0
+#act
+set [129] 1
+goto @装备镶嵌啊
+#elseact
+set [129] 0
+goto @装备镶嵌啊
+
+[@回收开关130]
+#if
+check [130] 0
+#act
+set [130] 1
+goto @装备镶嵌啊
+#elseact
+set [130] 0
+goto @装备镶嵌啊
+
+
+
+
+
+
+
+
+
+
+[@大米宝石抽奖]
+
+#IF
+NOT CHECKBAGSIZE  6
+#ACT
+MESSAGEBOX [失败]:\　\　　　　　　您的“包袱位置”不足“6个”空位置！
+break
+
+#IF
+CHECKGAMEPOINT < 99
+#ACT
+MESSAGEBOX 对不起，您当前账户大米不足99点，请及时充值！
+BREAK
+
+#IF
+#ACT
+GAMEPOINT - 99
+GetRandomText ..\QuestDiary\全部通用限时\抽奖宝石.txt S$随机给宝石奖励
+GIVE <$Str(S$随机给宝石奖励)> 1
+SendCenterMsg 253 0 恭喜您，成功通过抽奖获得：<$Str(S$随机给宝石奖励)> 0 3
+BREAK
+
+
+[@合成一级力量]
+
+#IF
+#ACT
+MESSAGEBOX 一级的宝石无法合成，请去击杀野外大BOSS！！！
+BREAK
+
+
+
+
+[@合成二级力量]
+
+#IF
+NOT CHECKITEM 一级力量 5
+#ACT
+MESSAGEBOX 对不起，你背包里面的一级力量不够5个，无法合成！
+BREAK
+
+
+#IF
+#ACT
+TAKE 一级力量 5
+GIVE 二级力量 1
+SendCenterMsg 254 0 恭喜您：成功合成一个【二级力量】宝石 0 5
+BREAK
+
+
+[@合成三级力量]
+
+#IF
+NOT CHECKITEM 二级力量 4
+#ACT
+MESSAGEBOX 对不起，你背包里面的二级力量不够4个，无法合成！
+BREAK
+
+
+#IF
+#ACT
+TAKE 二级力量 4
+GIVE 三级力量 1
+SendCenterMsg 254 0 恭喜您：成功合成一个【三级力量】宝石 0 5
+BREAK
+
+
+
+[@合成四级力量]
+
+#IF
+NOT CHECKITEM 三级力量 3
+#ACT
+MESSAGEBOX 对不起，你背包里面的三级力量不够3个，无法合成！
+BREAK
+
+
+#IF
+#ACT
+TAKE 三级力量 3
+GIVE 四级力量 1
+SendCenterMsg 254 0 恭喜您：成功合成一个【四级力量】宝石 0 5
+BREAK
+
+
+[@合成五级力量]
+
+#IF
+NOT CHECKITEM 四级力量 3
+#ACT
+MESSAGEBOX 对不起，你背包里面的四级力量不够3个，无法合成！
+BREAK
+
+
+#IF
+#ACT
+TAKE 四级力量 3
+GIVE 五级力量 1
+SendCenterMsg 254 0 恭喜您：成功合成一个【五级力量】宝石 0 5
+BREAK
+
+
+
+
+
+
+[@合成一级智力]
+
+#IF
+#ACT
+MESSAGEBOX 一级的宝石无法合成，请去击杀野外大BOSS！！！
+BREAK
+
+
+[@合成二级智力]
+
+#IF
+NOT CHECKITEM 一级智力 5
+#ACT
+MESSAGEBOX 对不起，你背包里面的一级智力不够5个，无法合成！
+BREAK
+
+
+#IF
+#ACT
+TAKE 一级智力 5
+GIVE 二级智力 1
+SendCenterMsg 254 0 恭喜您：成功合成一个【二级智力】宝石 0 5
+BREAK
+
+
+[@合成三级智力]
+
+#IF
+NOT CHECKITEM 二级智力 4
+#ACT
+MESSAGEBOX 对不起，你背包里面的二级智力不够4个，无法合成！
+BREAK
+
+
+#IF
+#ACT
+TAKE 二级智力 4
+GIVE 三级智力 1
+SendCenterMsg 254 0 恭喜您：成功合成一个【三级智力】宝石 0 5
+BREAK
+
+
+
+[@合成四级智力]
+
+#IF
+NOT CHECKITEM 三级智力 3
+#ACT
+MESSAGEBOX 对不起，你背包里面的三级智力不够3个，无法合成！
+BREAK
+
+
+#IF
+#ACT
+TAKE 三级智力 3
+GIVE 四级智力 1
+SendCenterMsg 254 0 恭喜您：成功合成一个【四级智力】宝石 0 5
+BREAK
+
+
+[@合成五级智力]
+
+#IF
+NOT CHECKITEM 四级智力 3
+#ACT
+MESSAGEBOX 对不起，你背包里面的四级智力不够3个，无法合成！
+BREAK
+
+
+#IF
+#ACT
+TAKE 四级智力 3
+GIVE 五级智力 1
+SendCenterMsg 254 0 恭喜您：成功合成一个【五级智力】宝石 0 5
+BREAK
+
+
+
+
+
+[@合成一级精神]
+
+#IF
+#ACT
+MESSAGEBOX 一级的宝石无法合成，请去击杀野外大BOSS！！！
+BREAK
+
+
+[@合成二级精神]
+
+#IF
+NOT CHECKITEM 一级精神 5
+#ACT
+MESSAGEBOX 对不起，你背包里面的一级精神不够5个，无法合成！
+BREAK
+
+
+#IF
+#ACT
+TAKE 一级精神 5
+GIVE 二级精神 1
+SendCenterMsg 254 0 恭喜您：成功合成一个【二级精神】宝石 0 5
+BREAK
+
+
+[@合成三级精神]
+
+#IF
+NOT CHECKITEM 二级精神 4
+#ACT
+MESSAGEBOX 对不起，你背包里面的二级精神不够4个，无法合成！
+BREAK
+
+
+#IF
+#ACT
+TAKE 二级精神 4
+GIVE 三级精神 1
+SendCenterMsg 254 0 恭喜您：成功合成一个【三级精神】宝石 0 5
+BREAK
+
+
+
+[@合成四级精神]
+
+#IF
+NOT CHECKITEM 三级精神 3
+#ACT
+MESSAGEBOX 对不起，你背包里面的三级精神不够3个，无法合成！
+BREAK
+
+
+#IF
+#ACT
+TAKE 三级精神 3
+GIVE 四级精神 1
+SendCenterMsg 254 0 恭喜您：成功合成一个【四级精神】宝石 0 5
+BREAK
+
+
+[@合成五级精神]
+
+#IF
+NOT CHECKITEM 四级精神 3
+#ACT
+MESSAGEBOX 对不起，你背包里面的四级精神不够3个，无法合成！
+BREAK
+
+
+#IF
+#ACT
+TAKE 四级精神 3
+GIVE 五级精神 1
+SendCenterMsg 254 0 恭喜您：成功合成一个【五级精神】宝石 0 5
+BREAK
+
+
+
+
+
+[@合成一级生命]
+
+#IF
+#ACT
+MESSAGEBOX 一级的宝石无法合成，请去击杀野外大BOSS！！！
+BREAK
+
+[@合成二级生命]
+
+#IF
+NOT CHECKITEM 一级生命 5
+#ACT
+MESSAGEBOX 对不起，你背包里面的一级生命不够5个，无法合成！
+BREAK
+
+
+#IF
+#ACT
+TAKE 一级生命 5
+GIVE 二级生命 1
+SendCenterMsg 254 0 恭喜您：成功合成一个【二级生命】宝石 0 5
+BREAK
+
+
+[@合成三级生命]
+
+#IF
+NOT CHECKITEM 二级生命 4
+#ACT
+MESSAGEBOX 对不起，你背包里面的二级生命不够4个，无法合成！
+BREAK
+
+
+#IF
+#ACT
+TAKE 二级生命 4
+GIVE 三级生命 1
+SendCenterMsg 254 0 恭喜您：成功合成一个【三级生命】宝石 0 5
+BREAK
+
+
+
+[@合成四级生命]
+
+#IF
+NOT CHECKITEM 三级生命 3
+#ACT
+MESSAGEBOX 对不起，你背包里面的三级生命不够3个，无法合成！
+BREAK
+
+
+#IF
+#ACT
+TAKE 三级生命 3
+GIVE 四级生命 1
+SendCenterMsg 254 0 恭喜您：成功合成一个【四级生命】宝石 0 5
+BREAK
+
+
+[@合成五级生命]
+
+#IF
+NOT CHECKITEM 四级生命 3
+#ACT
+MESSAGEBOX 对不起，你背包里面的四级生命不够3个，无法合成！
+BREAK
+
+
+#IF
+#ACT
+TAKE 四级生命 3
+GIVE 五级生命 1
+SendCenterMsg 254 0 恭喜您：成功合成一个【五级生命】宝石 0 5
+BREAK
+
+
+[@合成一级暴击]
+
+#IF
+#ACT
+MESSAGEBOX 一级的宝石无法合成，请去击杀野外大BOSS！！！
+BREAK
+
+
+[@合成二级暴击]
+
+#IF
+NOT CHECKITEM 一级暴击 5
+#ACT
+MESSAGEBOX 对不起，你背包里面的一级暴击不够5个，无法合成！
+BREAK
+
+
+#IF
+#ACT
+TAKE 一级暴击 5
+GIVE 二级暴击 1
+SendCenterMsg 254 0 恭喜您：成功合成一个【二级暴击】宝石 0 5
+BREAK
+
+
+[@合成三级暴击]
+
+#IF
+NOT CHECKITEM 二级暴击 4
+#ACT
+MESSAGEBOX 对不起，你背包里面的二级暴击不够4个，无法合成！
+BREAK
+
+
+#IF
+#ACT
+TAKE 二级暴击 4
+GIVE 三级暴击 1
+SendCenterMsg 254 0 恭喜您：成功合成一个【三级暴击】宝石 0 5
+BREAK
+
+
+
+[@合成四级暴击]
+
+#IF
+NOT CHECKITEM 三级暴击 3
+#ACT
+MESSAGEBOX 对不起，你背包里面的三级暴击不够3个，无法合成！
+BREAK
+
+
+#IF
+#ACT
+TAKE 三级暴击 3
+GIVE 四级暴击 1
+SendCenterMsg 254 0 恭喜您：成功合成一个【四级暴击】宝石 0 5
+BREAK
+
+
+[@合成五级暴击]
+
+#IF
+NOT CHECKITEM 四级暴击 3
+#ACT
+MESSAGEBOX 对不起，你背包里面的四级暴击不够3个，无法合成！
+BREAK
+
+
+#IF
+#ACT
+TAKE 四级暴击 3
+GIVE 五级暴击 1
+SendCenterMsg 254 0 恭喜您：成功合成一个【五级暴击】宝石 0 5
+BREAK
+
+
+
+
+
+[@合成一级攻伤]
+
+#IF
+#ACT
+MESSAGEBOX 一级的宝石无法合成，请去击杀野外大BOSS！！！
+BREAK
+
+[@合成二级攻伤]
+
+#IF
+NOT CHECKITEM 一级攻伤 5
+#ACT
+MESSAGEBOX 对不起，你背包里面的一级攻伤不够5个，无法合成！
+BREAK
+
+
+#IF
+#ACT
+TAKE 一级攻伤 5
+GIVE 二级攻伤 1
+SendCenterMsg 254 0 恭喜您：成功合成一个【二级攻伤】宝石 0 5
+BREAK
+
+
+[@合成三级攻伤]
+
+#IF
+NOT CHECKITEM 二级攻伤 4
+#ACT
+MESSAGEBOX 对不起，你背包里面的二级攻伤不够4个，无法合成！
+BREAK
+
+
+#IF
+#ACT
+TAKE 二级攻伤 4
+GIVE 三级攻伤 1
+SendCenterMsg 254 0 恭喜您：成功合成一个【三级攻伤】宝石 0 5
+BREAK
+
+
+
+[@合成四级攻伤]
+
+#IF
+NOT CHECKITEM 三级攻伤 3
+#ACT
+MESSAGEBOX 对不起，你背包里面的三级攻伤不够3个，无法合成！
+BREAK
+
+
+#IF
+#ACT
+TAKE 三级攻伤 3
+GIVE 四级攻伤 1
+SendCenterMsg 254 0 恭喜您：成功合成一个【四级攻伤】宝石 0 5
+BREAK
+
+
+[@合成五级攻伤]
+
+#IF
+NOT CHECKITEM 四级攻伤 3
+#ACT
+MESSAGEBOX 对不起，你背包里面的四级攻伤不够3个，无法合成！
+BREAK
+
+
+#IF
+#ACT
+TAKE 四级攻伤 3
+GIVE 五级攻伤 1
+SendCenterMsg 254 0 恭喜您：成功合成一个【五级攻伤】宝石 0 5
+BREAK
+
+
+
+[@合成一级吸收]
+
+#IF
+#ACT
+MESSAGEBOX 一级的宝石无法合成，请去击杀野外大BOSS！！！
+BREAK
+
+[@合成二级吸收]
+
+#IF
+NOT CHECKITEM 一级吸收 5
+#ACT
+MESSAGEBOX 对不起，你背包里面的一级吸收不够5个，无法合成！
+BREAK
+
+
+#IF
+#ACT
+TAKE 一级吸收 5
+GIVE 二级吸收 1
+SendCenterMsg 254 0 恭喜您：成功合成一个【二级吸收】宝石 0 5
+BREAK
+
+
+[@合成三级吸收]
+
+#IF
+NOT CHECKITEM 二级吸收 4
+#ACT
+MESSAGEBOX 对不起，你背包里面的二级吸收不够4个，无法合成！
+BREAK
+
+
+#IF
+#ACT
+TAKE 二级吸收 4
+GIVE 三级吸收 1
+SendCenterMsg 254 0 恭喜您：成功合成一个【三级吸收】宝石 0 5
+BREAK
+
+
+
+[@合成四级吸收]
+
+#IF
+NOT CHECKITEM 三级吸收 3
+#ACT
+MESSAGEBOX 对不起，你背包里面的三级吸收不够3个，无法合成！
+BREAK
+
+
+#IF
+#ACT
+TAKE 三级吸收 3
+GIVE 四级吸收 1
+SendCenterMsg 254 0 恭喜您：成功合成一个【四级吸收】宝石 0 5
+BREAK
+
+
+[@合成五级吸收]
+
+#IF
+NOT CHECKITEM 四级吸收 3
+#ACT
+MESSAGEBOX 对不起，你背包里面的四级吸收不够3个，无法合成！
+BREAK
+
+
+#IF
+#ACT
+TAKE 四级吸收 3
+GIVE 五级吸收 1
+SendCenterMsg 254 0 恭喜您：成功合成一个【五级吸收】宝石 0 5
+BREAK
+
+
+
+
+
+
+
+[@ItemIntoBox3]
+#IF
+EQUAL <$BOXITEM[3].DRILL3> 1
+#ACT
+MESSAGEBOX 对不起，您的<$BOXITEM[3].NAME>已经开三个孔了，不能继续开孔了！
+ReturnBoxItem 3
+BREAK
+
+
+
+#if
+CHECKTEXTLIST ..\QuestDiary\极品拾取鉴定\打孔的装备.txt <$BOXITEM[3].NAME>
+#act
+#ELSEact
+ReturnBoxItem 3
+MessageBox 您放入的装备不支持打孔
+BREAK
+
+[@开始开孔]
+#act
+sendmsg 9 打孔
+mov n$装备开孔位置 0
+#if
+CHECKDRILLHOLECOUNT -1 = 0
+#act
+mov n$装备开孔位置 0
+#if
+CHECKDRILLHOLECOUNT -1 = 1
+#act
+mov n$装备开孔位置 1
+#if
+CHECKDRILLHOLECOUNT -1 = 2
+#act
+mov n$装备开孔位置 2
+#if
+CHECKDRILLHOLECOUNT -1 = 3
+#act
+mov n$装备开孔位置 3
+
+; #IF
+; EQUAL <$BOXITEM[3].DRILL3> 1
+; #ACT
+; MESSAGEBOX 对不起，您的<$BOXITEM[3].NAME>已经开三个孔了，不能继续开孔了！
+; ReturnBoxItem 3
+; BREAK
+
+#if
+CHECKDRILLHOLECOUNT -1 = 3
+#act
+MESSAGEBOX 对不起，您的<$BOXITEM[3].NAME>已经开三个孔了，不能继续开孔了！
+ReturnBoxItem 3
+BREAK
+
+
+#IF
+NOT CHECKITEM 一把开孔的锤子 1
+#ACT
+MESSAGEBOX 对不起，您背包里面【一把开孔的锤子】的数量不足，无法开孔！
+BREAK
+
+
+#IF
+EQUAL n$装备开孔位置 0
+#ACT
+take 一把开孔的锤子 1
+SetUpgradeItem 3
+DRILLHOLE -1 0 1
+SetUpgradeItem 3
+UpDateBoxItem 3
+MESSAGEBOX 恭喜您，成功将<$BOXITEM[3].NAME>开了第一个孔，可以镶嵌宝石了
+BREAK
+
+#IF
+NOT CHECKITEM 一把开孔的锤子 2
+#ACT
+MESSAGEBOX 对不起，您背包里面【一把开孔的锤子】的数量不足，无法开孔！
+BREAK
+
+
+#IF
+EQUAL n$装备开孔位置 1
+#ACT
+take 一把开孔的锤子 2
+SetUpgradeItem 3
+DRILLHOLE -1 1 1
+SetUpgradeItem 3
+UpDateBoxItem 3
+MESSAGEBOX 恭喜您，成功将<$BOXITEM[3].NAME>开了第二个孔，可以镶嵌宝石了
+BREAK
+
+
+
+#IF
+NOT CHECKITEM 一把开孔的锤子 3
+#ACT
+MESSAGEBOX 对不起，您背包里面【一把开孔的锤子】的数量不足，无法开孔！
+BREAK
+
+#IF
+EQUAL n$装备开孔位置 2
+#ACT
+take 一把开孔的锤子 3
+SetUpgradeItem 3
+DRILLHOLE -1 2 1
+SetUpgradeItem 3
+UpDateBoxItem 3
+MESSAGEBOX 恭喜您，成功将<$BOXITEM[3].NAME>开了第三个孔，可以镶嵌宝石了
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@拆除1]
+#IF
+CHECKBAGSIZE 1
+;CHECKGameDiamond > 1
+#ACT
+;GameDiamond - 2
+SetUpgradeItem 2
+GOTO @拆除1A
+break
+#ELSEACT
+MESSAGEBOX [拆除失败]：背包至少需要有1个空格。
+
+[@拆除1A]
+#IF
+CHECKSOCKETABLEITEM -1 0 N$拆除宝石序号1 S$拆除宝石名字1
+#ACT
+SOCKETABLEITEM * * * * -1 0 * * 0 *
+give <$STR(S$拆除宝石名字1)> 1
+SENDMSG 6 [镶嵌摘除]:您的装备(<$BOXITEM[2].NAME>)第1个孔的(<$STR(S$拆除宝石名字1)>)拆除成功,拆除后宝石属性消失.
+UpDateBoxItem 2
+MOV N$第1个孔宝石IDX 4525
+MOV S$拆除按钮1 <拆除>
+GOTO @装备镶嵌啊
+break
+
+[@拆除2]
+#IF
+CHECKBAGSIZE 1
+;CHECKGameDiamond > 1
+#ACT
+;GameDiamond - 2
+SetUpgradeItem 2
+GOTO @拆除2A
+break
+#ELSEACT
+MESSAGEBOX [拆除失败]：背包至少需要有1个空格。
+
+[@拆除2A]
+#IF
+CHECKSOCKETABLEITEM -1 1 N$拆除宝石序号2 S$拆除宝石名字2
+#ACT
+SOCKETABLEITEM * * * * -1 1 * * 0 *
+give <$STR(S$拆除宝石名字2)> 1
+SENDMSG 6 [镶嵌摘除]:您的装备(<$BOXITEM[2].NAME>)第2个孔的(<$STR(S$拆除宝石名字2)>)拆除成功,拆除后宝石属性消失.
+UpDateBoxItem 2
+MOV N$第2个孔宝石IDX 4530
+MOV S$拆除按钮2 <拆除>
+GOTO @装备镶嵌啊
+break
+
+[@拆除3]
+#IF
+;CHECKGameDiamond > 1
+#ACT
+;GameDiamond - 2
+SetUpgradeItem 2
+GOTO @拆除3A
+break
+#ELSEACT
+MESSAGEBOX [拆除失败]：背包至少需要有1个空格。
+
+[@拆除3A]
+#IF
+CHECKSOCKETABLEITEM -1 2 N$拆除宝石序号3 S$拆除宝石名字3
+#ACT
+SOCKETABLEITEM * * * * -1 2 * * 0 *
+give <$STR(S$拆除宝石名字3)> 1
+SENDMSG 6 [镶嵌摘除]:您的装备(<$BOXITEM[2].NAME>)第3个孔的(<$STR(S$拆除宝石名字3)>),拆除成功,拆除后宝石属性消失.
+UpDateBoxItem 2
+MOV N$第3个孔宝石IDX 4535
+MOV S$拆除按钮3 <拆除>
+GOTO @装备镶嵌啊
+break
+
+[@ItemOutBox2]
+#IF
+#ACT
+ReturnBoxItem 2
+MOV N$第1个孔宝石IDX 4525
+MOV N$第2个孔宝石IDX 4530
+MOV N$第3个孔宝石IDX 4535
+MOV S$拆除按钮1 <拆除>
+MOV S$拆除按钮2 <拆除>
+MOV S$拆除按钮3 <拆除>
+GOTO @装备镶嵌啊
+
+[@ItemIntoBox2]
+#act
+sendmsg 9 111
+
+
+<Button|x=351.0|y=196.0|nimg=public/1900000611.png|color=250|size=18|text=拆除>
+<Button|x=438.0|y=196.0|nimg=public/1900000611.png|color=250|size=18|text=拆除>
+<Button|x=525.0|y=196.0|nimg=public/1900000611.png|color=250|size=18|text=拆除>
+
+
+#IF
+LARGE <$BOXITEM[2].GINDEX1> 0
+#ACT
+MOV N$第1个孔宝石IDX <$BOXITEM[2].GINDEX1>
+DEC N$第1个孔宝石IDX 1
+MOV S$拆除按钮1 <拆除|243#点击拆除第1个孔的“<$BOXITEM[2].GNAME1>”/@拆除1>
+
+#IF
+LARGE <$BOXITEM[2].GINDEX2> 0
+#ACT
+MOV N$第2个孔宝石IDX <$BOXITEM[2].GINDEX2>
+DEC N$第2个孔宝石IDX 1
+MOV S$拆除按钮2 <拆除|243#点击拆除第2个孔的“<$BOXITEM[2].GNAME2>”/@拆除2>
+
+#IF
+LARGE <$BOXITEM[2].GINDEX3> 0
+#ACT
+MOV N$第3个孔宝石IDX <$BOXITEM[2].GINDEX3>
+DEC N$第3个孔宝石IDX 1
+MOV S$拆除按钮3 <拆除|243#点击拆除第3个孔的“<$BOXITEM[2].GNAME3>”/@拆除3>
+
+#IF
+#ACT
+GOTO @装备镶嵌啊
+
+
+
+
+
+
+
+
+;--------------------------------------------------------------------------------------------------------------------
+
+
+
+[@ItemIntoBox0]
+
+#IF
+CHECKSOCKETABLEITEM -1 0 N$宝石的序号1 S$宝石的名字1
+#ACT
+
+#IF
+CHECKSOCKETABLEITEM -1 1 N$宝石的序号2 S$宝石的名字2
+#ACT
+
+#IF
+CHECKSOCKETABLEITEM -1 2 N$宝石的序号3 S$宝石的名字3
+#ACT
+
+#IF
+CHECKSOCKETABLEITEM -1 3 N$宝石的序号4 S$宝石的名字4
+#ACT
+
+
+
+#if
+CHECKTEXTLIST ..\QuestDiary\极品拾取鉴定\打孔的装备.txt <$BOXITEM[0].NAME>
+#act
+#ELSEact
+ReturnBoxItem 0
+MessageBox 您放入的装备不支持镶嵌宝石
+BREAK
+
+#IF
+CHECKDRILLHOLECOUNT -1 = 0
+#ACT
+MESSAGEBOX 对不起，您的<$BOXITEM[0].NAME>还没有开第一个孔，请先开个孔在来！
+ReturnBoxItem 0
+BREAK
+
+
+
+[@ItemIntoBox1]
+
+
+#if
+CHECKTEXTLIST ..\QuestDiary\极品拾取鉴定\镶嵌的宝石.txt <$BOXITEM[1].NAME>
+#act
+#ELSEact
+ReturnBoxItem 1
+MessageBox 您放入的宝石不支持镶嵌，请检查是否正确
+BREAK
+
+
+#IF
+CHECKSOCKETABLEITEM -1 0 N$宝石的序号1 S$宝石的名字1
+#ACT
+
+#IF
+CHECKSOCKETABLEITEM -1 1 N$宝石的序号2 S$宝石的名字2
+#ACT
+
+#IF
+CHECKSOCKETABLEITEM -1 2 N$宝石的序号3 S$宝石的名字3
+#ACT
+
+#IF
+CHECKSOCKETABLEITEM -1 3 N$宝石的序号4 S$宝石的名字4
+#ACT
+
+
+
+#IF
+EQUAL <$BOXITEM[1].NAME> 一级力量
+#ACT
+MOV N$宝石序号 <$BOXITEM[1].INDEX>
+
+#IF
+EQUAL <$BOXITEM[1].NAME> 二级力量
+#ACT
+MOV N$宝石序号 <$BOXITEM[1].INDEX>
+
+#IF
+EQUAL <$BOXITEM[1].NAME> 三级力量
+#ACT
+MOV N$宝石序号 <$BOXITEM[1].INDEX>
+
+
+#IF
+EQUAL <$BOXITEM[1].NAME> 四级力量
+#ACT
+MOV N$宝石序号 <$BOXITEM[1].INDEX>
+
+#IF
+EQUAL <$BOXITEM[1].NAME> 五级力量
+#ACT
+MOV N$宝石序号 <$BOXITEM[1].INDEX>
+
+
+
+
+#IF
+EQUAL <$BOXITEM[1].NAME> 一级智力
+#ACT
+MOV N$宝石序号 <$BOXITEM[1].INDEX>
+
+#IF
+EQUAL <$BOXITEM[1].NAME> 二级智力
+#ACT
+MOV N$宝石序号 <$BOXITEM[1].INDEX>
+
+#IF
+EQUAL <$BOXITEM[1].NAME> 三级智力
+#ACT
+MOV N$宝石序号 <$BOXITEM[1].INDEX>
+
+
+#IF
+EQUAL <$BOXITEM[1].NAME> 四级智力
+#ACT
+MOV N$宝石序号 <$BOXITEM[1].INDEX>
+
+#IF
+EQUAL <$BOXITEM[1].NAME> 五级智力
+#ACT
+MOV N$宝石序号 <$BOXITEM[1].INDEX>
+
+
+
+#IF
+EQUAL <$BOXITEM[1].NAME> 一级精神
+#ACT
+MOV N$宝石序号 <$BOXITEM[1].INDEX>
+
+#IF
+EQUAL <$BOXITEM[1].NAME> 二级精神
+#ACT
+MOV N$宝石序号 <$BOXITEM[1].INDEX>
+
+#IF
+EQUAL <$BOXITEM[1].NAME> 三级精神
+#ACT
+MOV N$宝石序号 <$BOXITEM[1].INDEX>
+
+
+#IF
+EQUAL <$BOXITEM[1].NAME> 四级精神
+#ACT
+MOV N$宝石序号 <$BOXITEM[1].INDEX>
+
+#IF
+EQUAL <$BOXITEM[1].NAME> 五级精神
+#ACT
+MOV N$宝石序号 <$BOXITEM[1].INDEX>
+
+
+
+#IF
+EQUAL <$BOXITEM[1].NAME> 一级生命
+#ACT
+MOV N$宝石序号 <$BOXITEM[1].INDEX>
+
+#IF
+EQUAL <$BOXITEM[1].NAME> 二级生命
+#ACT
+MOV N$宝石序号 <$BOXITEM[1].INDEX>
+
+#IF
+EQUAL <$BOXITEM[1].NAME> 三级生命
+#ACT
+MOV N$宝石序号 <$BOXITEM[1].INDEX>
+
+
+#IF
+EQUAL <$BOXITEM[1].NAME> 四级生命
+#ACT
+MOV N$宝石序号 <$BOXITEM[1].INDEX>
+
+#IF
+EQUAL <$BOXITEM[1].NAME> 五级生命
+#ACT
+MOV N$宝石序号 <$BOXITEM[1].INDEX>
+
+
+
+#IF
+EQUAL <$BOXITEM[1].NAME> 一级暴击
+#ACT
+MOV N$宝石序号 <$BOXITEM[1].INDEX>
+
+#IF
+EQUAL <$BOXITEM[1].NAME> 二级暴击
+#ACT
+MOV N$宝石序号 <$BOXITEM[1].INDEX>
+
+#IF
+EQUAL <$BOXITEM[1].NAME> 三级暴击
+#ACT
+MOV N$宝石序号 <$BOXITEM[1].INDEX>
+
+
+#IF
+EQUAL <$BOXITEM[1].NAME> 四级暴击
+#ACT
+MOV N$宝石序号 <$BOXITEM[1].INDEX>
+
+#IF
+EQUAL <$BOXITEM[1].NAME> 五级暴击
+#ACT
+MOV N$宝石序号 <$BOXITEM[1].INDEX>
+
+
+#IF
+EQUAL <$BOXITEM[1].NAME> 一级攻伤
+#ACT
+MOV N$宝石序号 <$BOXITEM[1].INDEX>
+
+#IF
+EQUAL <$BOXITEM[1].NAME> 二级攻伤
+#ACT
+MOV N$宝石序号 <$BOXITEM[1].INDEX>
+
+#IF
+EQUAL <$BOXITEM[1].NAME> 三级攻伤
+#ACT
+MOV N$宝石序号 <$BOXITEM[1].INDEX>
+
+#IF
+EQUAL <$BOXITEM[1].NAME> 四级攻伤
+#ACT
+MOV N$宝石序号 <$BOXITEM[1].INDEX>
+
+#IF
+EQUAL <$BOXITEM[1].NAME> 五级攻伤
+#ACT
+MOV N$宝石序号 <$BOXITEM[1].INDEX>
+
+
+#IF
+EQUAL <$BOXITEM[1].NAME> 一级吸收
+#ACT
+MOV N$宝石序号 <$BOXITEM[1].INDEX>
+
+#IF
+EQUAL <$BOXITEM[1].NAME> 二级吸收
+#ACT
+MOV N$宝石序号 <$BOXITEM[1].INDEX>
+
+#IF
+EQUAL <$BOXITEM[1].NAME> 三级吸收
+#ACT
+MOV N$宝石序号 <$BOXITEM[1].INDEX>
+
+
+#IF
+EQUAL <$BOXITEM[1].NAME> 四级吸收
+#ACT
+MOV N$宝石序号 <$BOXITEM[1].INDEX>
+
+#IF
+EQUAL <$BOXITEM[1].NAME> 五级吸收
+#ACT
+MOV N$宝石序号 <$BOXITEM[1].INDEX>
+
+
+
+
+
+
+
+[@开始镶嵌]
+
+#IF
+CHECKDRILLHOLECOUNT = 0
+#ACT
+MESSAGEBOX 对不起，您的<$BOXITEM[0].NAME>还没有开孔，请先开孔在来！
+ReturnBoxItem 0
+BREAK
+
+
+
+
+#IF
+CHECKSOCKETABLEITEM -1 0 N$宝石的序号1 S$宝石的名字1
+#ACT
+
+#IF
+CHECKSOCKETABLEITEM -1 1 N$宝石的序号2 S$宝石的名字2
+#ACT
+
+#IF
+CHECKSOCKETABLEITEM -1 2 N$宝石的序号3 S$宝石的名字3
+#ACT
+
+#IF
+CHECKSOCKETABLEITEM -1 3 N$宝石的序号4 S$宝石的名字4
+#ACT
+
+#IF
+Equal <$BOXITEM[1].NAME>
+#ACT
+MESSAGEBOX \　\　\[操作失败]:　没有放入镶嵌宝石，无法镶嵌！
+#elseact
+GOTO @检测OK0
+
+[@检测OK0]
+#IF
+Equal <$BOXITEM[0].NAME>
+#ACT
+MESSAGEBOX \　\　\[操作失败]:　没有放入需镶嵌的装备，无法镶嵌！
+break
+#elseact
+GOTO @镶嵌第一个
+
+[@镶嵌第一个]
+#ACT
+; 关联OK框
+SetUpgradeItem 0
+#IF
+NOT CHECKSOCKETABLEITEM -1 0 <$STR(N$镶嵌序号)> <$STR(N$镶嵌名字)>
+#ACT
+GOTO @镶嵌第一个A
+#elseact
+GOTO @镶嵌第二个
+
+[@镶嵌第一个A]
+
+
+
+
+#IF
+NOT CHECKSOCKETABLEITEM -1 0 <$STR(N$镶嵌序号)> <$STR(N$镶嵌名字)>
+#ACT
+SENDMSG 7 [宝石镶嵌]:您的装备(<$BOXITEM[0].NAME>)第1个孔镶嵌(<$BOXITEM[1].NAME>)成功!
+DELBOXITEM 1 1
+; SOCKETABLEITEM * * * * -1 0 * * <$STR(N$宝石序号)> *
+SOCKETABLEITEM -1 0 <$STR(N$宝石序号)>
+SetUpgradeItem 1
+UpDateBoxItem 1
+SENDUPGRADEITEM
+break
+
+[@镶嵌第二个]
+
+
+#IF
+CHECKSOCKETABLEITEM -1 0 N$宝石的序号1 S$宝石的名字1
+#ACT
+
+#IF
+CHECKSOCKETABLEITEM -1 1 N$宝石的序号2 S$宝石的名字2
+#ACT
+
+#IF
+CHECKSOCKETABLEITEM -1 2 N$宝石的序号3 S$宝石的名字3
+#ACT
+
+#IF
+CHECKSOCKETABLEITEM -1 3 N$宝石的序号4 S$宝石的名字4
+#ACT
+
+
+
+
+#IF
+EQUAL <$BOXITEM[0].DRILL2> 0
+#ACT
+MESSAGEBOX 对不起，您的<$BOXITEM[0].NAME>还没有开第二个孔，请先开第二个孔在来！
+ReturnBoxItem 0
+BREAK
+
+
+
+#IF
+Checkcontainstext <$STR(S$宝石的名字1)> 暴击
+CheckContainsText <$BOXITEM[1].NAME> 暴击
+#ACT
+SENDMSG 6 [宝石镶嵌]:您的装备(<$BOXITEM[0].NAME>)已镶嵌了1颗相同宝石，一件装备不能镶嵌2个同类型元素属性的宝石！
+break
+
+#IF
+Checkcontainstext <$STR(S$宝石的名字2)> 暴击
+CheckContainsText <$BOXITEM[1].NAME> 暴击
+#ACT
+SENDMSG 6 [宝石镶嵌]:您的装备(<$BOXITEM[0].NAME>)已镶嵌了1颗相同宝石，一件装备不能镶嵌2个同类型元素属性的宝石！
+break
+
+#IF
+Checkcontainstext <$STR(S$宝石的名字3)> 暴击
+CheckContainsText <$BOXITEM[1].NAME> 暴击
+#ACT
+SENDMSG 6 [宝石镶嵌]:您的装备(<$BOXITEM[0].NAME>)已镶嵌了1颗相同宝石，一件装备不能镶嵌2个同类型元素属性的宝石！
+break
+
+#IF
+Checkcontainstext <$STR(S$宝石的名字4)> 暴击
+CheckContainsText <$BOXITEM[1].NAME> 暴击
+#ACT
+SENDMSG 6 [宝石镶嵌]:您的装备(<$BOXITEM[0].NAME>)已镶嵌了1颗相同宝石，一件装备不能镶嵌2个同类型元素属性的宝石！
+break
+
+
+
+
+
+#IF
+Checkcontainstext <$STR(S$宝石的名字1)> 攻伤
+CheckContainsText <$BOXITEM[1].NAME> 攻伤
+#ACT
+SENDMSG 6 [宝石镶嵌]:您的装备(<$BOXITEM[0].NAME>)已镶嵌了1颗相同宝石，一件装备不能镶嵌2个同类型元素属性的宝石！
+break
+
+#IF
+Checkcontainstext <$STR(S$宝石的名字2)> 攻伤
+CheckContainsText <$BOXITEM[1].NAME> 攻伤
+#ACT
+SENDMSG 6 [宝石镶嵌]:您的装备(<$BOXITEM[0].NAME>)已镶嵌了1颗相同宝石，一件装备不能镶嵌2个同类型元素属性的宝石！
+break
+
+#IF
+Checkcontainstext <$STR(S$宝石的名字3)> 攻伤
+CheckContainsText <$BOXITEM[1].NAME> 攻伤
+#ACT
+SENDMSG 6 [宝石镶嵌]:您的装备(<$BOXITEM[0].NAME>)已镶嵌了1颗相同宝石，一件装备不能镶嵌2个同类型元素属性的宝石！
+break
+
+#IF
+Checkcontainstext <$STR(S$宝石的名字4)> 攻伤
+CheckContainsText <$BOXITEM[1].NAME> 攻伤
+#ACT
+SENDMSG 6 [宝石镶嵌]:您的装备(<$BOXITEM[0].NAME>)已镶嵌了1颗相同宝石，一件装备不能镶嵌2个同类型元素属性的宝石！
+break
+
+
+#IF
+Checkcontainstext <$STR(S$宝石的名字1)> 吸收
+CheckContainsText <$BOXITEM[1].NAME> 吸收
+#ACT
+SENDMSG 6 [宝石镶嵌]:您的装备(<$BOXITEM[0].NAME>)已镶嵌了1颗相同宝石，一件装备不能镶嵌2个同类型元素属性的宝石！
+break
+
+#IF
+Checkcontainstext <$STR(S$宝石的名字2)> 吸收
+CheckContainsText <$BOXITEM[1].NAME> 吸收
+#ACT
+SENDMSG 6 [宝石镶嵌]:您的装备(<$BOXITEM[0].NAME>)已镶嵌了1颗相同宝石，一件装备不能镶嵌2个同类型元素属性的宝石！
+break
+
+#IF
+Checkcontainstext <$STR(S$宝石的名字3)> 吸收
+CheckContainsText <$BOXITEM[1].NAME> 吸收
+#ACT
+SENDMSG 6 [宝石镶嵌]:您的装备(<$BOXITEM[0].NAME>)已镶嵌了1颗相同宝石，一件装备不能镶嵌2个同类型元素属性的宝石！
+break
+
+#IF
+Checkcontainstext <$STR(S$宝石的名字4)> 吸收
+CheckContainsText <$BOXITEM[1].NAME> 吸收
+#ACT
+SENDMSG 6 [宝石镶嵌]:您的装备(<$BOXITEM[0].NAME>)已镶嵌了1颗相同宝石，一件装备不能镶嵌2个同类型元素属性的宝石！
+break
+
+
+
+
+
+
+#IF
+NOT CHECKSOCKETABLEITEM -1 1 <$STR(N$镶嵌序号)> <$STR(N$镶嵌名字)>
+#ACT
+GOTO @镶嵌第二个A
+#elseact
+GOTO @镶嵌第三个
+
+[@镶嵌第二个A]
+#IF
+NOT CHECKSOCKETABLEITEM -1 1 <$STR(N$镶嵌序号)> <$STR(N$镶嵌名字)>
+#ACT
+SENDMSG 7 [宝石镶嵌]:您的装备(<$BOXITEM[0].NAME>)第2个孔镶嵌(<$BOXITEM[1].NAME>)成功!
+DELBOXITEM 1 1
+; SOCKETABLEITEM * * * * -1 1 * * <$STR(N$宝石序号)> *
+SOCKETABLEITEM -1 1 <$STR(N$宝石序号)>
+SetUpgradeItem 1
+UpDateBoxItem 1
+SENDUPGRADEITEM
+break
+
+[@镶嵌第三个]
+
+#IF
+EQUAL <$BOXITEM[0].DRILL3> 0
+#ACT
+MESSAGEBOX 对不起，您的<$BOXITEM[0].NAME>还没有开第三个孔，请先开第三个孔在来！
+ReturnBoxItem 0
+BREAK
+
+
+
+
+
+#IF
+Checkcontainstext <$STR(S$宝石的名字1)> 暴击
+CheckContainsText <$BOXITEM[1].NAME> 暴击
+#ACT
+SENDMSG 6 [宝石镶嵌]:您的装备(<$BOXITEM[0].NAME>)已镶嵌了1颗相同宝石，一件装备不能镶嵌2个同类型元素属性的宝石！
+break
+
+#IF
+Checkcontainstext <$STR(S$宝石的名字2)> 暴击
+CheckContainsText <$BOXITEM[1].NAME> 暴击
+#ACT
+SENDMSG 6 [宝石镶嵌]:您的装备(<$BOXITEM[0].NAME>)已镶嵌了1颗相同宝石，一件装备不能镶嵌2个同类型元素属性的宝石！
+break
+
+#IF
+Checkcontainstext <$STR(S$宝石的名字3)> 暴击
+CheckContainsText <$BOXITEM[1].NAME> 暴击
+#ACT
+SENDMSG 6 [宝石镶嵌]:您的装备(<$BOXITEM[0].NAME>)已镶嵌了1颗相同宝石，一件装备不能镶嵌2个同类型元素属性的宝石！
+break
+
+#IF
+Checkcontainstext <$STR(S$宝石的名字4)> 暴击
+CheckContainsText <$BOXITEM[1].NAME> 暴击
+#ACT
+SENDMSG 6 [宝石镶嵌]:您的装备(<$BOXITEM[0].NAME>)已镶嵌了1颗相同宝石，一件装备不能镶嵌2个同类型元素属性的宝石！
+break
+
+
+
+
+
+#IF
+Checkcontainstext <$STR(S$宝石的名字1)> 攻伤
+CheckContainsText <$BOXITEM[1].NAME> 攻伤
+#ACT
+SENDMSG 6 [宝石镶嵌]:您的装备(<$BOXITEM[0].NAME>)已镶嵌了1颗相同宝石，一件装备不能镶嵌2个同类型元素属性的宝石！
+break
+
+#IF
+Checkcontainstext <$STR(S$宝石的名字2)> 攻伤
+CheckContainsText <$BOXITEM[1].NAME> 攻伤
+#ACT
+SENDMSG 6 [宝石镶嵌]:您的装备(<$BOXITEM[0].NAME>)已镶嵌了1颗相同宝石，一件装备不能镶嵌2个同类型元素属性的宝石！
+break
+
+#IF
+Checkcontainstext <$STR(S$宝石的名字3)> 攻伤
+CheckContainsText <$BOXITEM[1].NAME> 攻伤
+#ACT
+SENDMSG 6 [宝石镶嵌]:您的装备(<$BOXITEM[0].NAME>)已镶嵌了1颗相同宝石，一件装备不能镶嵌2个同类型元素属性的宝石！
+break
+
+#IF
+Checkcontainstext <$STR(S$宝石的名字4)> 攻伤
+CheckContainsText <$BOXITEM[1].NAME> 攻伤
+#ACT
+SENDMSG 6 [宝石镶嵌]:您的装备(<$BOXITEM[0].NAME>)已镶嵌了1颗相同宝石，一件装备不能镶嵌2个同类型元素属性的宝石！
+break
+
+
+#IF
+Checkcontainstext <$STR(S$宝石的名字1)> 吸收
+CheckContainsText <$BOXITEM[1].NAME> 吸收
+#ACT
+SENDMSG 6 [宝石镶嵌]:您的装备(<$BOXITEM[0].NAME>)已镶嵌了1颗相同宝石，一件装备不能镶嵌2个同类型元素属性的宝石！
+break
+
+#IF
+Checkcontainstext <$STR(S$宝石的名字2)> 吸收
+CheckContainsText <$BOXITEM[1].NAME> 吸收
+#ACT
+SENDMSG 6 [宝石镶嵌]:您的装备(<$BOXITEM[0].NAME>)已镶嵌了1颗相同宝石，一件装备不能镶嵌2个同类型元素属性的宝石！
+break
+
+#IF
+Checkcontainstext <$STR(S$宝石的名字3)> 吸收
+CheckContainsText <$BOXITEM[1].NAME> 吸收
+#ACT
+SENDMSG 6 [宝石镶嵌]:您的装备(<$BOXITEM[0].NAME>)已镶嵌了1颗相同宝石，一件装备不能镶嵌2个同类型元素属性的宝石！
+break
+
+#IF
+Checkcontainstext <$STR(S$宝石的名字4)> 吸收
+CheckContainsText <$BOXITEM[1].NAME> 吸收
+#ACT
+SENDMSG 6 [宝石镶嵌]:您的装备(<$BOXITEM[0].NAME>)已镶嵌了1颗相同宝石，一件装备不能镶嵌2个同类型元素属性的宝石！
+break
+
+
+
+
+#IF
+NOT CHECKSOCKETABLEITEM -1 2 <$STR(N$镶嵌序号)> <$STR(N$镶嵌名字)>
+#ACT
+GOTO @镶嵌第三个A
+#elseact
+MESSAGEBOX \　\　\[宝石镶嵌]:当前装备已镶嵌满了3个宝石，无法再次提升。
+break
+
+[@镶嵌第三个A]
+#IF
+NOT CHECKSOCKETABLEITEM -1 2 <$STR(N$镶嵌序号)> <$STR(N$镶嵌名字)>
+#ACT
+SENDMSG 7 [宝石镶嵌]:您的装备(<$BOXITEM[0].NAME>)第3个孔镶嵌(<$BOXITEM[1].NAME>)成功!
+DELBOXITEM 1 1
+; SOCKETABLEITEM * * * * -1 2 * * <$STR(N$宝石序号)> *
+SOCKETABLEITEM -1 2 <$STR(N$宝石序号)>
+SetUpgradeItem 1
+UpDateBoxItem 1
+SENDUPGRADEITEM
+break
+
+
+}

@@ -1,0 +1,339 @@
+[@回盟重]
+{
+#IF
+CheckPKPoint 2
+#ACT
+mapmove 3 333 333
+SendMsg 7 [提示]:您是[大红名].注意安全.
+break
+
+
+
+
+#IF
+CheckPKPoint 2
+#ACT
+mapmove 3 849 673
+#ELSEACT
+GOTO @回土城安全
+
+[@回土城安全]
+#IF
+RANDOM 53
+#ACT
+mapmove 3 322 338
+BREAK
+
+#IF
+RANDOM 52
+#ACT
+mapmove 3 324 338
+BREAK
+
+#IF
+RANDOM 51
+#ACT
+mapmove 3 326 338
+BREAK
+
+#IF
+RANDOM 50
+#ACT
+mapmove 3 328 338
+BREAK
+
+#IF
+RANDOM 49
+#ACT
+mapmove 3 330 338
+BREAK
+
+#IF
+RANDOM 48
+#ACT
+mapmove 3 332 338
+BREAK
+
+#IF
+RANDOM 47
+#ACT
+mapmove 3 334 338
+BREAK
+
+#IF
+RANDOM 46
+#ACT
+mapmove 3 322 336
+BREAK
+
+#IF
+RANDOM 45
+#ACT
+mapmove 3 324 336
+BREAK
+
+#IF
+RANDOM 44
+#ACT
+mapmove 3 326 336
+BREAK
+
+#IF
+RANDOM 43
+#ACT
+mapmove 3 328 336
+BREAK
+
+#IF
+RANDOM 42
+#ACT
+mapmove 3 330 336
+BREAK
+
+#IF
+RANDOM 41
+#ACT
+mapmove 3 332 336
+BREAK
+
+#IF
+RANDOM 40
+#ACT
+mapmove 3 334 336
+BREAK
+
+#IF
+RANDOM 39
+#ACT
+mapmove 3 322 334
+BREAK
+
+#IF
+RANDOM 38
+#ACT
+mapmove 3 324 334
+BREAK
+
+#IF
+RANDOM 37
+#ACT
+mapmove 3 326 334
+BREAK
+
+#IF
+RANDOM 36
+#ACT
+mapmove 3 328 334
+BREAK
+
+#IF
+RANDOM 35
+#ACT
+mapmove 3 330 334
+BREAK
+
+#IF
+RANDOM 34
+#ACT
+mapmove 3 332 334
+BREAK
+
+#IF
+RANDOM 33
+#ACT
+mapmove 3 334 334
+BREAK
+
+#IF
+RANDOM 32
+#ACT
+mapmove 3 336 334
+BREAK
+
+#IF
+RANDOM 31
+#ACT
+mapmove 3 338 334
+BREAK
+
+#IF
+RANDOM 30
+#ACT
+mapmove 3 322 332
+BREAK
+
+#IF
+RANDOM 29
+#ACT
+mapmove 3 324 332
+BREAK
+
+#IF
+RANDOM 28
+#ACT
+mapmove 3 326 332
+BREAK
+
+#IF
+RANDOM 27
+#ACT
+mapmove 3 328 332
+BREAK
+
+#IF
+RANDOM 26
+#ACT
+mapmove 3 330 332
+BREAK
+
+#IF
+RANDOM 25
+#ACT
+mapmove 3 334 332
+BREAK
+
+#IF
+RANDOM 24
+#ACT
+mapmove 3 336 332
+BREAK
+
+#IF
+RANDOM 23
+#ACT
+mapmove 3 338 332
+BREAK
+
+#IF
+RANDOM 22
+#ACT
+mapmove 3 328 330
+BREAK
+
+#IF
+RANDOM 21
+#ACT
+mapmove 3 330 330
+BREAK
+
+#IF
+RANDOM 20
+#ACT
+mapmove 3 332 330
+BREAK
+
+#IF
+RANDOM 19
+#ACT
+mapmove 3 334 330
+BREAK
+
+#IF
+RANDOM 18
+#ACT
+mapmove 3 336 330
+BREAK
+
+#IF
+RANDOM 17
+#ACT
+mapmove 3 338 330
+BREAK
+
+#IF
+RANDOM 16
+#ACT
+mapmove 3 330 328
+BREAK
+
+#IF
+RANDOM 15
+#ACT
+mapmove 3 332 328
+BREAK
+
+#IF
+RANDOM 14
+#ACT
+mapmove 3 334 328
+BREAK
+
+#IF
+RANDOM 13
+#ACT
+mapmove 3 336 328
+BREAK
+
+#IF
+RANDOM 12
+#ACT
+mapmove 3 338 328
+BREAK
+
+#IF
+RANDOM 11
+#ACT
+mapmove 3 330 326
+BREAK
+
+#IF
+RANDOM 10
+#ACT
+mapmove 3 332 326
+BREAK
+
+#IF
+RANDOM 9
+#ACT
+mapmove 3 334 326
+BREAK
+
+#IF
+RANDOM 8
+#ACT
+mapmove 3 336 326
+BREAK
+
+#IF
+RANDOM 7
+#ACT
+mapmove 3 328 324
+BREAK
+
+#IF
+RANDOM 6
+#ACT
+mapmove 3 330 324
+BREAK
+
+#IF
+RANDOM 5
+#ACT
+mapmove 3 332 324
+BREAK
+
+#IF
+RANDOM 4
+#ACT
+mapmove 3 334 324
+BREAK
+
+#IF
+RANDOM 3
+#ACT
+mapmove 3 328 322
+BREAK
+
+#IF
+RANDOM 2
+#ACT
+mapmove 3 330 322
+BREAK
+
+#IF
+RANDOM 1
+#ACT
+mapmove 3 332 322
+BREAK
+
+}

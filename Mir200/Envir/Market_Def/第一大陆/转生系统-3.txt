@@ -1,0 +1,321 @@
+[@main]
+#if
+equal <$SERVERIDX> 1881
+#act
+mov U80 1
+mov U81 1
+
+#IF
+Checkrenewlevel > 9
+#ACT
+MESSAGEBOX \　\你已经十转了，请前往更高的地方提升！
+BREAK
+
+#IF
+Checkrenewlevel = 0
+#ACT
+MOV T20 沃玛教主[BOSS]
+MOV T21 洗髓境妖兽
+MOV S$击杀怪物 <$STR(T20)>
+MOV N$击杀怪物 10
+MOV S$击杀怪物1 <$STR(T21)>
+MOV N$击杀怪物1 30
+MOV S$转身大米数量 10大米
+MOV N$转身大米数量 10
+MOV N$转身属性点 20
+MOV N$击杀怪物5 1
+MOV N$击杀怪物6 1
+
+#IF
+Checkrenewlevel = 1
+#ACT
+MOV T20 龙角猪王[BOSS]
+MOV T21 辟谷境妖兽
+MOV S$击杀怪物 <$STR(T20)>
+MOV N$击杀怪物 10
+MOV S$击杀怪物1 <$STR(T21)>
+MOV N$击杀怪物1 30
+MOV S$转身大米数量 30大米
+MOV N$转身大米数量 30
+MOV N$转身属性点 25
+MOV N$击杀怪物5 1
+MOV N$击杀怪物6 1
+
+
+#IF
+Checkrenewlevel = 2
+#ACT
+MOV T20 祖玛教主[BOSS]
+MOV T21 融合境妖兽
+MOV S$击杀怪物 <$STR(T20)>
+MOV N$击杀怪物 10
+MOV S$击杀怪物1 <$STR(T21)>
+MOV N$击杀怪物1 30
+MOV S$转身大米数量 50大米
+MOV N$转身大米数量 50
+MOV N$转身属性点 30
+MOV N$击杀怪物5 1
+MOV N$击杀怪物6 1
+
+#IF
+Checkrenewlevel = 3
+#ACT
+MOV T20 赤月恶魔[BOSS]
+MOV T21 练气境妖兽
+MOV S$击杀怪物 <$STR(T20)>
+MOV N$击杀怪物 10
+MOV S$击杀怪物1 <$STR(T21)>
+MOV N$击杀怪物1 30
+MOV S$转身大米数量 70大米
+MOV N$转身大米数量 70
+MOV N$转身属性点 35
+MOV N$击杀怪物5 1
+MOV N$击杀怪物6 1
+
+#IF
+Checkrenewlevel = 4
+#ACT
+MOV T20 虹魔教主[BOSS]
+MOV T21 筑基境妖兽
+MOV S$击杀怪物 <$STR(T20)>
+MOV N$击杀怪物 10
+MOV S$击杀怪物1 <$STR(T21)>
+MOV N$击杀怪物1 30
+MOV S$转身大米数量 100大米
+MOV N$转身大米数量 100
+MOV N$转身属性点 40
+MOV N$击杀怪物5 1
+MOV N$击杀怪物6 1
+
+#IF
+Checkrenewlevel = 5
+#ACT
+MOV T20 黄泉教主[BOSS]
+MOV T21 金丹境妖兽
+MOV S$击杀怪物 <$STR(T20)>
+MOV N$击杀怪物 10
+MOV S$击杀怪物1 <$STR(T21)>
+MOV N$击杀怪物1 30
+MOV S$转身大米数量 130大米
+MOV N$转身大米数量 130
+MOV N$转身属性点 45
+MOV N$击杀怪物5 1
+MOV N$击杀怪物6 1
+
+
+#IF
+Checkrenewlevel = 6
+#ACT
+MOV T20 弩马法王[BOSS]
+MOV T21 元婴境妖兽
+MOV S$击杀怪物 <$STR(T20)>
+MOV N$击杀怪物 10
+MOV S$击杀怪物1 <$STR(T21)>
+MOV N$击杀怪物1 30
+MOV S$转身大米数量 150大米
+MOV N$转身大米数量 150
+MOV N$转身属性点 50
+MOV N$击杀怪物5 1
+MOV N$击杀怪物6 1
+
+#IF
+Checkrenewlevel = 7
+#ACT
+MOV T20 牛魔王[BOSS]
+MOV T21 出窍境妖兽
+MOV S$击杀怪物 <$STR(T20)>
+MOV N$击杀怪物 10
+MOV S$击杀怪物1 <$STR(T21)>
+MOV N$击杀怪物1 30
+MOV S$转身大米数量 180大米
+MOV N$转身大米数量 180
+MOV N$转身属性点 55
+MOV N$击杀怪物5 1
+MOV N$击杀怪物6 1
+
+#IF
+Checkrenewlevel = 8
+#ACT
+MOV T20 魔龙教主[BOSS]
+MOV T21 分神境妖兽
+MOV S$击杀怪物 <$STR(T20)>
+MOV N$击杀怪物 10
+MOV S$击杀怪物1 <$STR(T21)>
+MOV N$击杀怪物1 30
+MOV S$转身大米数量 200大米
+MOV N$转身大米数量 200
+MOV N$转身属性点 60
+MOV N$击杀怪物5 1
+MOV N$击杀怪物6 1
+
+#IF
+Checkrenewlevel = 9
+#ACT
+MOV T20 魔龙教主[BOSS]
+MOV T21 合体境妖兽
+MOV S$击杀怪物 <$STR(T20)>
+MOV N$击杀怪物 10
+MOV S$击杀怪物1 <$STR(T21)>
+MOV N$击杀怪物1 30
+MOV S$转身大米数量 250大米
+MOV N$转身大米数量 250
+MOV N$击杀怪物5 1
+MOV N$击杀怪物6 1
+MOV N$转身属性点 65
+
+
+
+
+
+
+#IF
+Checkrenewlevel > 9
+#ACT
+MOV S$击杀怪物 已完成转生任务
+MOV N$击杀怪物 0
+MOV S$击杀怪物1 已完成转生任务
+MOV N$击杀怪物1 0
+MOV S$转身大米数量 已完成转生任务
+MOV N$转身大米数量 0
+MOV N$击杀怪物5 0
+MOV N$击杀怪物6 0
+MOV N$转身属性点 0
+
+#IF
+#ACT
+close
+#SAY
+; \ 
+; <><转生：/SCOLOR=254><可以让角色获得新生,实现实力的飞跃和蜕变/SCOLOR=70>  <您当前：/SCOLOR=161>{<$RELEVEL>转/SCOLOR=254}\ \
+; <><当前要求①：/SCOLOR=161>击杀{<$STR(N$击杀怪物)>只/SCOLOR=254}{<$STR(T20)>/SCOLOR=253}  当前已经击杀：{<$STR(U80)>只/SCOLOR=250}\ \
+
+; <><当前要求②：/SCOLOR=161>击杀{<$STR(N$击杀怪物1)>只/SCOLOR=254}{<$STR(T21)>/SCOLOR=250}  当前已经击杀：{<$STR(U81)>只/SCOLOR=250}\ \
+
+; <><下阶转生奖励自由属性：/SCOLOR=255> < <$STR(N$转身属性点)>点/SCOLOR=249>\ \  
+
+; <>                <我要转生|161#当前转生条件：^-^249#1：击杀[<$STR(N$击杀怪物)>]只<$STR(T20)>，已击杀<$STR(U80)>只^-^250#2：击杀[<$STR(N$击杀怪物1)>]只<$STR(T21)>，已击杀<$STR(U81)>只/@进行转生>
+; <>                <快速转生|161#当前转生条件：^-^249#1：击杀[<$STR(N$击杀怪物5)>]只<$STR(T20)>，已击杀<$STR(U80)>只^-^250#2：击杀[<$STR(N$击杀怪物6)>]只<$STR(T21)>，已击杀<$STR(U81)>只^-^253#3：<$STR(S$转身大米数量)>/@大米转生>\
+
+; <>                                                     \ \ \
+
+
+<Img|width=620|height=250|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|reset=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=26.0|y=34.0|tipsx=10|tipsy=80|color=254|size=16|text=转生：>
+<Text|a=0|x=92.0|y=34.0|tipsx=10|tipsy=80|color=70|size=16|text=可以让角色获得新生,实现实力的飞跃和蜕变>
+<Text|a=0|x=472.0|y=34.0|tipsx=10|tipsy=80|color=161|size=16|text=您当前：<$RELEVEL>转>
+<Text|a=0|x=26.0|y=74.0|tipsx=10|tipsy=80|color=161|size=16|text=当前要求①：>
+<Text|a=0|x=120.0|y=74.0|tipsx=10|tipsy=80|color=254|size=16|text=击杀<$STR(N$击杀怪物)>只<$STR(T20)>>
+<Text|a=0|x=340.0|y=74.0|tipsx=10|tipsy=80|color=250|size=16|text=当前已经击杀：<$STR(U80)>只>
+<Text|a=0|x=26.0|y=114.0|tipsx=10|tipsy=80|color=161|size=16|text=当前要求②：>
+<Text|a=0|x=120.0|y=114.0|tipsx=10|tipsy=80|color=254|size=16|text=击杀<$STR(N$击杀怪物1)>只<$STR(T21)>>
+<Text|a=0|x=340.0|y=114.0|tipsx=10|tipsy=80|color=250|size=16|text=当前已经击杀：<$STR(U81)>只>
+<Text|a=0|x=26.0|y=154.0|tipsx=10|tipsy=80|color=255|size=16|text=下阶转生奖励自由属性：>
+<RText|a=0|x=210.0|y=154.0|tipsx=10|tipsy=80|color=255|size=16|text=<<$STR(N$转身属性点)>点/FCOLOR=249>>
+<Text|a=0|x=26.0|y=194.0|tips={当前转生条件：/FCOLOR=243}^{1：击杀[<$STR(N$击杀怪物)>]只<$STR(T20)>，已击杀<$STR(U80)>只}^{2：击杀[<$STR(N$击杀怪物1)>]只<$STR(T21)>，已击杀<$STR(U81)>只/FCOLOR=250}|tipsx=84|tipsy=105|size=16|color=251|text=我要转生|link=@进行转生>
+<Text|a=0|x=144.0|y=194.0|tips={当前转生条件：/FCOLOR=243}^{1：击杀[<$STR(N$击杀怪物5)>]只<$STR(T20)>，已击杀<$STR(U80)>只}^{2：击杀[<$STR(N$击杀怪物6)>]只<$STR(T21)>，已击杀<$STR(U81)>只/FCOLOR=250}^{3:<$STR(S$转身大米数量)>}|tipsx=84|tipsy=105|size=16|color=251|text=快速转生|link=@大米转生>
+
+
+
+
+[@大米转生]
+
+#IF
+Checkrenewlevel > 9
+#ACT
+MESSAGEBOX 非常抱歉：\　\你已经十转了，请前往更高的地方提升！
+BREAK
+
+
+#IF
+SMALL U80 <$STR(N$击杀怪物5)>
+#ACT
+MESSAGEBOX 非常抱歉：\　\您当前没有击杀[<$STR(N$击杀怪物5)>]只<$STR(T20)>，请先前往击杀任务怪物
+BREAK
+
+
+#IF
+SMALL U81 <$STR(N$击杀怪物6)>
+#ACT
+MESSAGEBOX 非常抱歉：\　\您当前没有击杀[<$STR(N$击杀怪物6)>]只<$STR(T21)>，请先前往击杀任务怪物
+BREAK
+
+
+
+#IF
+CHECKGAMEPOINT < <$STR(N$转身大米数量)>
+#ACT
+MESSAGEBOX 非常抱歉：\　\您包袱里面的大米不足<$STR(N$转身大米数量)>点
+BREAK
+
+
+
+
+
+#IF
+#act
+GAMEPOINT - <$STR(N$转身大米数量)>
+RENEWLEVEL 1 0 <$STR(N$转身属性点)>
+MOV U80 0
+MOV U81 0
+#CALL [\游戏登陆\属性加成.txt] @属性设置
+#CALL [\游戏登陆\封号系统.txt] @封号分类
+#CALL [\游戏登陆\怪物爆率.txt] @怪物爆率
+MESSAGEBOX 恭喜您，成功完成<$RELEVEL>转！！
+GOTO @MAIN
+GuildNoticeMsg 249 0  {[转生]|254:0:1}： 恭喜玩家，{%s|250:0:1} 完成了 {[「<$RELEVEL>次转生」]|151:0:1}！
+BREAK
+
+
+
+
+[@进行转生]
+#act
+sendmsg 9 1111
+
+#IF
+Checkrenewlevel > 9
+#ACT
+MESSAGEBOX 非常抱歉：\　\你已经十转了，请前往更高的地方提升！
+BREAK
+
+
+#IF
+SMALL U80 <$STR(N$击杀怪物)>
+#ACT
+MESSAGEBOX 非常抱歉：\　\您当前没有击杀[<$STR(N$击杀怪物)>]只<$STR(T20)>，请先前往击杀任务怪物
+BREAK
+
+
+#IF
+SMALL U81 <$STR(N$击杀怪物1)>
+#ACT
+MESSAGEBOX 非常抱歉：\　\您当前没有击杀[<$STR(N$击杀怪物1)>]只<$STR(T21)>，请先前往击杀任务怪物
+BREAK
+
+
+
+
+
+
+
+#IF
+#act
+RENEWLEVEL 1 0 <$STR(N$转身属性点)>
+MOV U80 0
+MOV U81 0
+#CALL [\游戏登陆\属性加成.txt] @属性设置
+#CALL [\游戏登陆\封号系统.txt] @封号分类
+#CALL [\游戏登陆\怪物爆率.txt] @怪物爆率
+MESSAGEBOX 恭喜您，成功完成<$RELEVEL>转！！
+GOTO @MAIN
+GuildNoticeMsg 249 0  {[转生]|254:0:1}： 恭喜玩家，{%s|250:0:1} 完成了 {[「<$RELEVEL>次转生」]|151:0:1}！
+BREAK
+
+
+
+
+
+
+

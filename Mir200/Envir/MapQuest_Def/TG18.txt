@@ -1,0 +1,13 @@
+[@main]
+#if
+large N89 3
+#act
+INC N89 1
+sendmsg 6 天关：您已杀死【<$STR(N89)>】个怪物,杀死5个后自动传入下一层.
+mapmove TG19
+MOV N89 0
+sendmsg 5 天关：恭喜您进入天关19层.
+#elseact
+INC N89 1
+sendmsg 6 天关：您已杀死【<$STR(N89)>】个怪物,杀死5个后自动传入下一层.
+break

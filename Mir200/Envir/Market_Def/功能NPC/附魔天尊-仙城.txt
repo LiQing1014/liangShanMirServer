@@ -1,0 +1,641 @@
+[@main]
+附魔是一门非常高深的技艺，乃是上古时代天机门的强者所创……\
+如果你能找来<“女娲补天神石”/SCOLOR=249>这种材料？ 我可以免费帮你附魔剑甲！\
+<注意：/SCOLOR=249>圣、神的剑甲才能附魔，其他武器和衣服无法操作！ <购买晶石/@购买>\
+<>                                                     <合成晶石|使用赤炎石*4颗合成女娲补天神石*1颗/@合成1>\
+
+<>          <开始，圣武器附魔/@圣武器附魔>        <开始，圣衣服附魔/@圣衣服附魔>       \  \
+<>          <开始，神武器附魔/@神武器附魔>        <开始，神衣服附魔/@神衣服附魔>       \  \
+<提示：/SCOLOR=249><“女娲补天神石”非常稀有，所有红色BOSS都有几率爆出!/SCOLOR=253>\
+
+
+[@购买]
+附魔是一门非常高深的技艺，乃是上古时代天机门的强者所创……\
+如果你能找来<“女娲补天神石”/SCOLOR=249>这种材料？ 我可以免费帮你附魔剑甲！\
+<说明：/SCOLOR=249>“女娲补天神石”非常稀有，购买每颗需要<38大米/SCOLOR=70>！ \   \ \
+<>          <购买1颗神石|1颗神石*38大米/@购买1颗>        <购买5颗神石|5颗只需要180大米，批量购买更优惠哦！/@购买5颗>\  \
+<1.女娲补天神石所有红怪都能几率爆出，也可在市场收购玩家的!/SCOLOR=250>\
+<2.据说原始神殿里的BOSS，爆神石几率较高，请自行探索!/SCOLOR=250>    <返回/@main>\
+
+[@神武器附魔]
+附魔是一门非常高深的技艺，乃是上古时代天机门的强者所创……\
+如果你能找来<“女娲补天神石”/SCOLOR=249>这种材料？ 我可以免费帮你附魔剑甲！\
+<说明：/SCOLOR=250>武器附魔需要女娲补天神石，每次增加1点<“暴击”/SCOLOR=249>属性！ \   \
+
+<>        <神武器附魔+1|250#需要女娲补天神石*5颗/@神武器附魔1>     <神武器附魔+2|250#需要女娲补天神石*10颗/@神武器附魔2>     <神武器附魔+3|250#需要女娲补天神石*10颗/@神武器附魔3>\  \
+<>               <神武器附魔+4|250#需要女娲补天神石*15颗/@神武器附魔4>          <神武器附魔+5|250#需要女娲补天神石*30颗/@神武器附魔5> \  \
+<注意：/SCOLOR=249><只有圣和神的剑甲才可以附魔，请把需要附魔的装备带在身上！/SCOLOR=253>
+
+[@神衣服附魔]
+附魔是一门非常高深的技艺，乃是上古时代天机门的强者所创……\
+如果你能找来<“女娲补天神石”/SCOLOR=249>这种材料？ 我可以免费帮你附魔剑甲！\
+<说明：/SCOLOR=250>衣服附魔需要20颗女娲补天神石，每次增加1点<“体力和魔力”/SCOLOR=249>属性！ \   \
+
+<>        <神衣服附魔+1|250#需要女娲补天神石*2颗/@神衣服附魔1>     <神衣服附魔+2|250#需要女娲补天神石*4颗/@神衣服附魔2>     <神衣服附魔+3|250#需要女娲补天神石*4颗/@神衣服附魔3>\  \
+<>               <神衣服附魔+4|250#需要女娲补天神石*4颗/@神衣服附魔4>          <神衣服附魔+5|250#需要女娲补天神石*6颗/@神衣服附魔5> \  \
+<注意：/SCOLOR=249><只有圣和神的剑甲才可以附魔，请把需要附魔的装备带在身上！/SCOLOR=253>
+
+[@圣武器附魔]
+附魔是一门非常高深的技艺，乃是上古时代天机门的强者所创……\
+如果你能找来<“女娲补天神石”/SCOLOR=249>这种材料？ 我可以免费帮你附魔剑甲！\
+<说明：/SCOLOR=250>武器附魔需要女娲补天神石，每次增加1点<“暴击”/SCOLOR=249>属性！ \   \
+
+<>        <圣武器附魔+1|250#需要女娲补天神石*2颗/@武器附魔1>     <圣武器附魔+2|250#需要女娲补天神石*5颗/@武器附魔2>     <圣武器附魔+3|250#需要女娲补天神石*5颗/@武器附魔3>\  \
+<>               <圣武器附魔+4|250#需要女娲补天神石*7颗/@武器附魔4>          <圣武器附魔+5|250#需要女娲补天神石*20颗/@武器附魔5> \  \
+<注意：/SCOLOR=249><只有圣和神的剑甲才可以附魔，请把需要附魔的装备带在身上！/SCOLOR=253>
+
+[@圣衣服附魔]
+附魔是一门非常高深的技艺，乃是上古时代天机门的强者所创……\
+如果你能找来<“女娲补天神石”/SCOLOR=249>这种材料？ 我可以免费帮你附魔剑甲！\
+<说明：/SCOLOR=250>衣服附魔需要10颗女娲补天神石，每次增加1点<“体力和魔力”/SCOLOR=249>属性！ \   \
+
+<>        <圣衣服附魔+1|250#需要女娲补天神石*1颗/@衣服附魔1>     <圣衣服附魔+2|250#需要女娲补天神石*2颗/@衣服附魔2>     <圣衣服附魔+3|250#需要女娲补天神石*2颗/@衣服附魔3>\  \
+<>               <圣衣服附魔+4|250#需要女娲补天神石*2颗/@衣服附魔4>          <圣衣服附魔+5|250#需要女娲补天神石*3颗/@衣服附魔5> \  \
+<注意：/SCOLOR=249><只有圣和神的剑甲才可以附魔，请把需要附魔的装备带在身上！/SCOLOR=253>
+
+
+
+[@合成1]
+#IF
+checkitem 赤炎石 4
+#ACT
+take 赤炎石 4
+GIVE 女娲补天神石 1
+SENDMSG 6 恭喜您，用赤炎石*4颗成功兑换女娲补天神石*1颗!
+BREAK
+#ELSEACT
+MESSAGEBOX [兑换失败]:材料不足!
+
+[@购买1颗]
+#if
+CHECKGAMEPOINT > 37
+#ACT
+GAMEPOINT - 38
+give 女娲补天神石 1
+messagebox \\购买成功，获得1颗“女娲补天神石”!
+break
+#ELSEACT
+messagebox 对不起，您的大米不足，请检查后在来!
+break
+
+[@购买5颗]
+#if
+CHECKGAMEPOINT > 179
+#ACT
+GAMEPOINT - 180
+give 女娲补天神石 5
+messagebox \\购买成功，获得5颗“女娲补天神石”!
+break
+#ELSEACT
+messagebox 对不起，您的大米不足，请检查后在来!
+break
+
+
+[@衣服附魔1]
+#OR
+CHECKITEMW 王者·战甲 1
+CHECKITEMW 王者·战衣 1
+CHECKITEMW 王者·魔袍 1
+CHECKITEMW 王者·魔衣 1
+CHECKITEMW 王者·道袍 1
+CHECKITEMW 王者·道衣 1
+#ACT
+goto @衣服附魔11
+#ELSEACT
+MESSAGEBOX 您没有穿戴圣阶衣服！
+break
+
+[@衣服附魔11]
+#if
+CHECKUSEITEM 0
+CHECKNEWITEMVALUE 0 7 = 0
+CHECKITEM 女娲补天神石 1
+#ACT
+take 女娲补天神石 1
+SetNewItemValue 0 7 = 1
+SetNewItemValue 0 8 = 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功将衣服附魔+1！
+break
+#ELSEACT
+messagebox 您的女娲补天神石不足或衣服已经附魔+1!
+break
+
+[@衣服附魔2]
+#OR
+CHECKITEMW 王者·战甲 1
+CHECKITEMW 王者·战衣 1
+CHECKITEMW 王者·魔袍 1
+CHECKITEMW 王者·魔衣 1
+CHECKITEMW 王者·道袍 1
+CHECKITEMW 王者·道衣 1
+#ACT
+goto @衣服附魔22
+#ELSEACT
+MESSAGEBOX 您没有穿戴圣阶衣服！
+break
+
+[@衣服附魔22]
+#if
+CHECKUSEITEM 0
+CHECKNEWITEMVALUE 0 7 = 1
+CHECKITEM 女娲补天神石 2
+#ACT
+take 女娲补天神石 2
+SetNewItemValue 0 7 = 2
+SetNewItemValue 0 8 = 2
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功将衣服附魔+2！
+break
+#ELSEACT
+messagebox 您的女娲补天神石不足或衣服已经附魔+2!
+break
+
+[@衣服附魔3]
+#OR
+CHECKITEMW 王者·战甲 1
+CHECKITEMW 王者·战衣 1
+CHECKITEMW 王者·魔袍 1
+CHECKITEMW 王者·魔衣 1
+CHECKITEMW 王者·道袍 1
+CHECKITEMW 王者·道衣 1
+#ACT
+goto @衣服附魔33
+#ELSEACT
+MESSAGEBOX 您没有穿戴圣阶衣服！
+break
+
+[@衣服附魔33]
+#if
+CHECKUSEITEM 0
+CHECKNEWITEMVALUE 0 7 = 2
+CHECKITEM 女娲补天神石 2
+#ACT
+take 女娲补天神石 2
+SetNewItemValue 0 7 = 3
+SetNewItemValue 0 8 = 3
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功将衣服附魔+3！
+break
+#ELSEACT
+messagebox 您的女娲补天神石不足或衣服已经附魔+3!
+break
+
+[@衣服附魔4]
+#OR
+CHECKITEMW 王者·战甲 1
+CHECKITEMW 王者·战衣 1
+CHECKITEMW 王者·魔袍 1
+CHECKITEMW 王者·魔衣 1
+CHECKITEMW 王者·道袍 1
+CHECKITEMW 王者·道衣 1
+#ACT
+goto @衣服附魔44
+#ELSEACT
+MESSAGEBOX 您没有穿戴圣阶衣服！
+break
+
+[@衣服附魔44]
+#if
+CHECKUSEITEM 0
+CHECKNEWITEMVALUE 0 7 = 3
+CHECKITEM 女娲补天神石 2
+#ACT
+take 女娲补天神石 2
+SetNewItemValue 0 7 = 4
+SetNewItemValue 0 8 = 4
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功将衣服附魔+4！
+break
+#ELSEACT
+messagebox 您的女娲补天神石不足或衣服已经附魔+4!
+break
+
+[@衣服附魔5]
+#OR
+CHECKITEMW 王者·战甲 1
+CHECKITEMW 王者·战衣 1
+CHECKITEMW 王者·魔袍 1
+CHECKITEMW 王者·魔衣 1
+CHECKITEMW 王者·道袍 1
+CHECKITEMW 王者·道衣 1
+#ACT
+goto @衣服附魔55
+#ELSEACT
+MESSAGEBOX 您没有穿戴圣阶衣服！
+break
+
+[@衣服附魔55]
+#if
+CHECKUSEITEM 0
+CHECKNEWITEMVALUE 0 7 = 4
+CHECKITEM 女娲补天神石 3
+#ACT
+take 女娲补天神石 3
+SetNewItemValue 0 7 = 5
+SetNewItemValue 0 8 = 5
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功将衣服附魔+5！
+break
+#ELSEACT
+messagebox 您的女娲补天神石不足或衣服已经附魔+5!
+break
+
+[@武器附魔1]
+#OR
+CHECKITEMW 王者·神剑 1
+CHECKITEMW 王者·魔杖 1
+CHECKITEMW 王者·道扇 1
+#ACT
+goto @武器附魔11
+#ELSEACT
+MESSAGEBOX 您没有穿戴圣阶武器！
+break
+
+[@武器附魔11]
+#if
+CHECKUSEITEM 1
+CHECKNEWITEMVALUE 1 0 = 0
+CHECKITEM 女娲补天神石 2
+#ACT
+take 女娲补天神石 2
+SetNewItemValue 1 0 = 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功将武器附魔+1！
+break
+#ELSEACT
+messagebox 您的女娲补天神石不足或武器已经附魔+1!
+break
+
+[@武器附魔2]
+#OR
+CHECKITEMW 王者·神剑 1
+CHECKITEMW 王者·魔杖 1
+CHECKITEMW 王者·道扇 1
+#ACT
+goto @武器附魔22
+#ELSEACT
+MESSAGEBOX 您没有穿戴圣阶武器！
+break
+
+[@武器附魔22]
+#if
+CHECKUSEITEM 1
+CHECKNEWITEMVALUE 1 0 = 1
+CHECKITEM 女娲补天神石 5
+#ACT
+take 女娲补天神石 5
+SetNewItemValue 1 0 = 2
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功将武器附魔+2！
+break
+#ELSEACT
+messagebox 您的女娲补天神石不足或武器已经附魔+2!
+break
+
+[@武器附魔3]
+#OR
+CHECKITEMW 王者·神剑 1
+CHECKITEMW 王者·魔杖 1
+CHECKITEMW 王者·道扇 1
+#ACT
+goto @武器附魔33
+#ELSEACT
+MESSAGEBOX 您没有穿戴圣阶武器！
+break
+
+[@武器附魔33]
+#if
+CHECKUSEITEM 1
+CHECKNEWITEMVALUE 1 0 = 2
+CHECKITEM 女娲补天神石 5
+#ACT
+take 女娲补天神石 5
+SetNewItemValue 1 0 = 3
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功将武器附魔+3！
+break
+#ELSEACT
+messagebox 您的女娲补天神石不足或武器已经附魔+3!
+break
+
+[@武器附魔4]
+#OR
+CHECKITEMW 王者·神剑 1
+CHECKITEMW 王者·魔杖 1
+CHECKITEMW 王者·道扇 1
+#ACT
+goto @武器附魔44
+#ELSEACT
+MESSAGEBOX 您没有穿戴圣阶武器！
+break
+
+[@武器附魔44]
+#if
+CHECKUSEITEM 1
+CHECKNEWITEMVALUE 1 0 = 3
+CHECKITEM 女娲补天神石 7
+#ACT
+take 女娲补天神石 7
+SetNewItemValue 1 0 = 4
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功将武器附魔+4！
+break
+#ELSEACT
+messagebox 您的女娲补天神石不足或武器已经附魔+4!
+break
+
+[@武器附魔5]
+#OR
+CHECKITEMW 王者·神剑 1
+CHECKITEMW 王者·魔杖 1
+CHECKITEMW 王者·道扇 1
+#ACT
+goto @武器附魔55
+#ELSEACT
+MESSAGEBOX 您没有穿戴圣阶武器！
+break
+
+[@武器附魔55]
+#if
+CHECKUSEITEM 1
+CHECKNEWITEMVALUE 1 0 = 4
+CHECKITEM 女娲补天神石 20
+#ACT
+take 女娲补天神石 20
+SetNewItemValue 1 0 = 5
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功将武器附魔+5！
+break
+#ELSEACT
+messagebox 您的女娲补天神石不足或武器已经附魔+5!
+break
+
+
+
+
+
+[@神衣服附魔1]
+#OR
+CHECKITEMW 无双·战甲 1
+CHECKITEMW 无双·战衣 1
+CHECKITEMW 无双·魔袍 1
+CHECKITEMW 无双·魔衣 1
+CHECKITEMW 无双·道袍 1
+CHECKITEMW 无双·道衣 1
+#ACT
+goto @神衣服附魔11
+#ELSEACT
+MESSAGEBOX 您没有穿戴神阶衣服！
+break
+
+[@神衣服附魔11]
+#if
+CHECKUSEITEM 0
+CHECKNEWITEMVALUE 0 7 = 0
+CHECKITEM 女娲补天神石 2
+#ACT
+take 女娲补天神石 2
+SetNewItemValue 0 7 = 1
+SetNewItemValue 0 8 = 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功将衣服附魔+1！
+break
+#ELSEACT
+messagebox 您的女娲补天神石不足或衣服已经附魔+1!
+break
+
+[@神衣服附魔2]
+#OR
+CHECKITEMW 无双·战甲 1
+CHECKITEMW 无双·战衣 1
+CHECKITEMW 无双·魔袍 1
+CHECKITEMW 无双·魔衣 1
+CHECKITEMW 无双·道袍 1
+CHECKITEMW 无双·道衣 1
+#ACT
+goto @神衣服附魔22
+#ELSEACT
+MESSAGEBOX 您没有穿戴神阶衣服！
+break
+
+[@神衣服附魔22]
+#if
+CHECKUSEITEM 0
+CHECKNEWITEMVALUE 0 7 = 1
+CHECKITEM 女娲补天神石 4
+#ACT
+take 女娲补天神石 4
+SetNewItemValue 0 7 = 2
+SetNewItemValue 0 8 = 2
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功将衣服附魔+2！
+break
+#ELSEACT
+messagebox 您的女娲补天神石不足或衣服已经附魔+2!
+break
+
+[@神衣服附魔3]
+#OR
+CHECKITEMW 无双·战甲 1
+CHECKITEMW 无双·战衣 1
+CHECKITEMW 无双·魔袍 1
+CHECKITEMW 无双·魔衣 1
+CHECKITEMW 无双·道袍 1
+CHECKITEMW 无双·道衣 1
+#ACT
+goto @神衣服附魔33
+#ELSEACT
+MESSAGEBOX 您没有穿戴神阶衣服！
+break
+
+[@神衣服附魔33]
+#if
+CHECKUSEITEM 0
+CHECKNEWITEMVALUE 0 7 = 2
+CHECKITEM 女娲补天神石 4
+#ACT
+take 女娲补天神石 4
+SetNewItemValue 0 7 = 3
+SetNewItemValue 0 8 = 3
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功将衣服附魔+3！
+break
+#ELSEACT
+messagebox 您的女娲补天神石不足或衣服已经附魔+3!
+break
+
+[@神衣服附魔4]
+#OR
+CHECKITEMW 无双·战甲 1
+CHECKITEMW 无双·战衣 1
+CHECKITEMW 无双·魔袍 1
+CHECKITEMW 无双·魔衣 1
+CHECKITEMW 无双·道袍 1
+CHECKITEMW 无双·道衣 1
+#ACT
+goto @神衣服附魔44
+#ELSEACT
+MESSAGEBOX 您没有穿戴神阶衣服！
+break
+
+[@神衣服附魔44]
+#if
+CHECKUSEITEM 0
+CHECKNEWITEMVALUE 0 7 = 3
+CHECKITEM 女娲补天神石 4
+#ACT
+take 女娲补天神石 4
+SetNewItemValue 0 7 = 4
+SetNewItemValue 0 8 = 4
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功将衣服附魔+4！
+break
+#ELSEACT
+messagebox 您的女娲补天神石不足或衣服已经附魔+4!
+break
+
+[@神衣服附魔5]
+#OR
+CHECKITEMW 无双·战甲 1
+CHECKITEMW 无双·战衣 1
+CHECKITEMW 无双·魔袍 1
+CHECKITEMW 无双·魔衣 1
+CHECKITEMW 无双·道袍 1
+CHECKITEMW 无双·道衣 1
+#ACT
+goto @神衣服附魔55
+#ELSEACT
+MESSAGEBOX 您没有穿戴神阶衣服！
+break
+
+[@神衣服附魔55]
+#if
+CHECKUSEITEM 0
+CHECKNEWITEMVALUE 0 7 = 4
+CHECKITEM 女娲补天神石 6
+#ACT
+take 女娲补天神石 6
+SetNewItemValue 0 7 = 5
+SetNewItemValue 0 8 = 5
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功将衣服附魔+5！
+break
+#ELSEACT
+messagebox 您的女娲补天神石不足或衣服已经附魔+5!
+break
+
+
+[@神武器附魔1]
+#OR
+CHECKITEMW 无双·神剑 1
+CHECKITEMW 无双·魔杖 1
+CHECKITEMW 无双·道扇 1
+#ACT
+goto @神武器附魔11
+#ELSEACT
+MESSAGEBOX 您没有穿戴神阶武器！
+break
+
+[@神武器附魔11]
+#if
+CHECKUSEITEM 1
+CHECKNEWITEMVALUE 1 0 = 0
+CHECKITEM 女娲补天神石 5
+#ACT
+take 女娲补天神石 5
+SetNewItemValue 1 0 = 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功将武器附魔+1！
+break
+#ELSEACT
+messagebox 您的女娲补天神石不足或武器已经附魔+1!
+break
+
+[@神武器附魔2]
+#OR
+CHECKITEMW 无双·神剑 1
+CHECKITEMW 无双·魔杖 1
+CHECKITEMW 无双·道扇 1
+#ACT
+goto @神武器附魔22
+#ELSEACT
+MESSAGEBOX 您没有穿戴神阶武器！
+break
+
+[@神武器附魔22]
+#if
+CHECKUSEITEM 1
+CHECKNEWITEMVALUE 1 0 = 1
+CHECKITEM 女娲补天神石 10
+#ACT
+take 女娲补天神石 10
+SetNewItemValue 1 0 = 2
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功将武器附魔+2！
+break
+#ELSEACT
+messagebox 您的女娲补天神石不足或武器已经附魔+2!
+break
+
+[@神武器附魔3]
+#OR
+CHECKITEMW 无双·神剑 1
+CHECKITEMW 无双·魔杖 1
+CHECKITEMW 无双·道扇 1
+#ACT
+goto @神武器附魔33
+#ELSEACT
+MESSAGEBOX 您没有穿戴神阶武器！
+break
+
+[@神武器附魔33]
+#if
+CHECKUSEITEM 1
+CHECKNEWITEMVALUE 1 0 = 2
+CHECKITEM 女娲补天神石 10
+#ACT
+take 女娲补天神石 10
+SetNewItemValue 1 0 = 3
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功将武器附魔+3！
+break
+#ELSEACT
+messagebox 您的女娲补天神石不足或武器已经附魔+3!
+break
+
+[@神武器附魔4]
+#OR
+CHECKITEMW 无双·神剑 1
+CHECKITEMW 无双·魔杖 1
+CHECKITEMW 无双·道扇 1
+#ACT
+goto @神武器附魔44
+#ELSEACT
+MESSAGEBOX 您没有穿戴神阶武器！
+break
+
+[@神武器附魔44]
+#if
+CHECKUSEITEM 1
+CHECKNEWITEMVALUE 1 0 = 3
+CHECKITEM 女娲补天神石 15
+#ACT
+take 女娲补天神石 15
+SetNewItemValue 1 0 = 4
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功将武器附魔+4！
+break
+#ELSEACT
+messagebox 您的女娲补天神石不足或武器已经附魔+4!
+break
+
+[@神武器附魔5]
+#OR
+CHECKITEMW 无双·神剑 1
+CHECKITEMW 无双·魔杖 1
+CHECKITEMW 无双·道扇 1
+#ACT
+goto @神武器附魔55
+#ELSEACT
+MESSAGEBOX 您没有穿戴神阶武器！
+break
+
+[@神武器附魔55]
+#if
+CHECKUSEITEM 1
+CHECKNEWITEMVALUE 1 0 = 4
+CHECKITEM 女娲补天神石 30
+#ACT
+take 女娲补天神石 30
+SetNewItemValue 1 0 = 5
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功将武器附魔+5！
+break
+#ELSEACT
+messagebox 您的女娲补天神石不足或武器已经附魔+5!
+break
+
+
+
+

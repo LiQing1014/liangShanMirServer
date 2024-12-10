@@ -1,0 +1,64 @@
+[@赤月类衣服]
+{
+
+#IF
+checkitem 天魔神甲 1
+#ACT
+take 天魔神甲 1
+inc m39 1
+inc m37 50
+goto @赤月类衣服
+
+#IF
+checkitem 圣战宝甲 1
+#ACT
+take 圣战宝甲 1
+inc m39 1
+inc m37 50
+goto @赤月类衣服
+
+#IF
+checkitem 霓裳羽衣 1
+#ACT
+take 霓裳羽衣 1
+inc m39 1
+inc m37 50
+goto @赤月类衣服
+
+#IF
+checkitem 法神披风 1
+#ACT
+take 法神披风 1
+inc m39 1
+inc m37 50
+goto @赤月类衣服
+
+#IF
+checkitem 天尊道袍 1
+#ACT
+take 天尊道袍 1
+inc m39 1
+inc m37 50
+goto @赤月类衣服
+
+
+#IF
+checkitem 天师长袍 1
+#ACT
+take 天师长袍 1
+inc m39 1
+inc m37 50
+goto @赤月类衣服
+
+
+
+#IF
+LARGE M37 0
+#ACT
+GAMEGOLD + <$STR(M37)>
+;GuildNoticeMsg 255 141  【%s】回收了<$STR(M39)>个赤月类衣服装备,获得大量元宝！
+MOV M37 0
+MOV M39 0
+BREAK
+#ELSEACT
+}

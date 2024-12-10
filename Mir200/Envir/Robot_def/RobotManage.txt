@@ -1,0 +1,573 @@
+;---------------------------------------------------------------------------------------------------------定时器添加,删除版本原有沙巴克设置
+[@cqbb定时_每日计时]
+#if
+#act
+Calcvar Global cqbb_开区天数 + 1
+SaveVar Global cqbb_开区天数 ..\QuestDiary\!传奇宝贝脚本\变量记录\全局变量记录.ini
+
+[@cqbb定时_攻城喊话]
+#if
+CheckVar Global cqbb_开区天数 > 1
+#act
+SendCenterMsg 0 249 【注意】：所有行会于今天晚上20:00点准时攻沙巴克，请各大行会做好准备！~！ 1 30
+SendCenterMsg 0 249 【注意】：所有行会于今天晚上20:00点准时攻沙巴克，请各大行会做好准备！~！ 1 30
+SENDMSG 0 ┏≈☆★≈☆★≈☆★☆≈【攻城信息提示】≈☆★☆≈★☆≈★☆≈┓
+SENDMSG 0 ╔┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅╗
+SENDMSG 0 ┇ 所有行会已自动申请攻城！→请提早建会,否则参加不了集体攻城！┇ 
+SENDMSG 0 ┇ 所有行会已自动申请攻城！→每晚20点,自动开启全服大型攻城战！┇ 
+SENDMSG 0 ┇ 所有行会已自动申请攻城！→每个行会都可以攻城!无需提交头像！┇ 
+SENDMSG 0 ┇ 所有行会已自动申请攻城！→如果您的势力不行,建议找结盟好友！┇ 
+SENDMSG 0 ╚┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅╝
+SENDMSG 0 ┗≈☆★≈☆★≈☆★☆≈【攻城信息提示】≈☆★☆≈★☆≈★☆≈┛
+
+[@cqbb定时_攻城开始]
+#if
+CheckVar Global cqbb_开区天数 > 1
+#act
+AddAttackSabukAll 0
+SendCenterMsg 251 58 【注意】：所有行会已经添加攻城，请各大行会做好准备，攻城战即将开始！ 1 30
+SendCenterMsg 251 58 【注意】：所有行会已经添加攻城，请各大行会做好准备，攻城战即将开始！ 1 30
+SendCenterMsg 251 58 【注意】：所有行会已经添加攻城，请各大行会做好准备，攻城战即将开始！ 1 30
+SendCenterMsg 251 58 【注意】：所有行会已经添加攻城，请各大行会做好准备，攻城战即将开始！ 1 30
+SendCenterMsg 251 58 【注意】：所有行会已经添加攻城，请各大行会做好准备，攻城战即将开始！ 1 30
+SendCenterMsg 251 58 【注意】：所有行会已经添加攻城，请各大行会做好准备，攻城战即将开始！ 1 30
+SendCenterMsg 251 58 【注意】：所有行会已经添加攻城，请各大行会做好准备，攻城战即将开始！ 1 30
+SENDMSG 0 【注意】：所有行会已经添加攻城，请各大行会做好准备，攻城战即将开始！ 
+SENDMSG 0 【注意】：所有行会已经添加攻城，请各大行会做好准备，攻城战即将开始！ 
+SENDMSG 0 【注意】：所有行会已经添加攻城，请各大行会做好准备，攻城战即将开始！
+SENDMSG 0 【注意】：所有行会已经添加攻城，请各大行会做好准备，攻城战即将开始！ 
+SENDMSG 0 【注意】：所有行会已经添加攻城，请各大行会做好准备，攻城战即将开始！ 
+SENDMSG 0 【注意】：所有行会已经添加攻城，请各大行会做好准备，攻城战即将开始！
+
+
+[@cqbb定时_奖励开放]
+#if
+CheckVar Global cqbb_开区天数 > 1
+#act
+Calcvar Global cqbb_拿沙奖励状态 = 可领取
+Calcvar Global cqbb_拿沙领取角色 = 
+SaveVar Global cqbb_拿沙领取角色 ..\QuestDiary\!传奇宝贝脚本\变量记录\全局变量记录.ini
+SaveVar Global cqbb_拿沙奖励状态 ..\QuestDiary\!传奇宝贝脚本\变量记录\全局变量记录.ini
+SendCenterMsg 251 58 【注意】：沙巴克奖励已开放领取,请胜利方掌门人抓紧时间领取,过时作废！ 1 30
+SendCenterMsg 251 58 【注意】：沙巴克奖励已开放领取,请胜利方掌门人抓紧时间领取,过时作废！ 1 30
+SendCenterMsg 251 58 【注意】：沙巴克奖励已开放领取,请胜利方掌门人抓紧时间领取,过时作废！ 1 30
+SendCenterMsg 251 58 【注意】：沙巴克奖励已开放领取,请胜利方掌门人抓紧时间领取,过时作废！ 1 30
+SendCenterMsg 251 58 【注意】：沙巴克奖励已开放领取,请胜利方掌门人抓紧时间领取,过时作废！ 1 30
+SendCenterMsg 251 58 【注意】：沙巴克奖励已开放领取,请胜利方掌门人抓紧时间领取,过时作废！ 1 30
+SENDMSG 0 【注意】：沙巴克奖励已开放领取,请胜利方掌门人抓紧时间领取,过时作废！ 
+SENDMSG 0 【注意】：沙巴克奖励已开放领取,请胜利方掌门人抓紧时间领取,过时作废！ 
+SENDMSG 0 【注意】：沙巴克奖励已开放领取,请胜利方掌门人抓紧时间领取,过时作废！ 
+SENDMSG 0 【注意】：沙巴克奖励已开放领取,请胜利方掌门人抓紧时间领取,过时作废！ 
+SENDMSG 0 【注意】：沙巴克奖励已开放领取,请胜利方掌门人抓紧时间领取,过时作废！ 
+SENDMSG 0 【注意】：沙巴克奖励已开放领取,请胜利方掌门人抓紧时间领取,过时作废！ 
+SENDMSG 0 【注意】：沙巴克奖励已开放领取,请胜利方掌门人抓紧时间领取,过时作废！ 
+
+[@cqbb定时_奖励关闭]
+#if
+CheckVar Global cqbb_开区天数 > 1
+#act
+Calcvar Global cqbb_拿沙奖励状态 = 已关闭
+SaveVar Global cqbb_拿沙奖励状态 ..\QuestDiary\!传奇宝贝脚本\变量记录\全局变量记录.ini
+
+[@cqbb定时_假人登录]
+#if
+CheckContainsText <$SERVERNAME> 养老
+#act
+Break
+
+#if
+CheckVar Global cqbb_假人数量 < 55
+#act
+Calcvar Global cqbb_假人数量 + 1
+Movr N$jrxbx 8 15
+Movr N$jrzby 8 15
+DUMMYLOGON wxbd <$str(N$jrxbx)> <$STR(N$jrzby)> 1
+Break
+
+
+[@假人登录]
+
+#or
+equal A3 关
+CheckContainsTextList ..\..\..\..\37W包服功能\开启假人.txt 关
+CHECKCONTAINSTEXT <$SERVERNAME> 战区
+CHECKCONTAINSTEXT <$SERVERNAME> 测试
+CHECKCONTAINSTEXT <$SERVERNAME> 号区
+#ACT
+BREAK
+
+#IF
+CheckContainsTextList ..\..\..\..\37W包服功能\开启假人.txt 开
+CHECKDUMMYPLAYCOUNT < 30
+#ACT
+;随机坐标范围
+MOVR N$坐标左 10  19
+MOVR N$坐标右 10  19
+DUMMYLOGON wxbd <$STR(N$坐标左)> <$STR(N$坐标右)> 1
+BREAK
+
+
+;---------------------------------------------------------------------------------------------------------
+
+[@送财送宝]
+#IF
+CheckMapSameMonCount jqpd 送财送宝 = 0
+#ACT
+MonGenEx  jqpd  23  27 送财送宝 0 1 0 253
+Gmexecute 开始提问 @送财送宝
+SENDMSG 0 激情派对刷新了送财送宝,击杀它必爆大量元宝和大米，勇士们，冲，冲，冲，冲！！
+SENDMSG 0 激情派对刷新了送财送宝,击杀它必爆大量元宝和大米，勇士们，冲，冲，冲，冲！！
+SENDMSG 0 激情派对刷新了送财送宝,击杀它必爆大量元宝和大米，勇士们，冲，冲，冲，冲！！
+SENDMSG 0 激情派对刷新了送财送宝,击杀它必爆大量元宝和大米，勇士们，冲，冲，冲，冲！！
+SENDMSG 0 激情派对刷新了送财送宝,击杀它必爆大量元宝和大米，勇士们，冲，冲，冲，冲！！
+BREAK
+
+
+
+[@朱雀神兽]
+
+#IF
+CheckMapSameMonCount 朱雀神殿 朱雀神·圣兽 = 0
+#ACT
+MonGenEx 朱雀神殿       16     18     朱雀神·圣兽          10    1       0    70
+SENDMSG 0 朱雀神殿已经刷新圣兽，击杀必爆好东西，兄弟们，赶紧冲吧！
+SENDMSG 0 朱雀神殿已经刷新圣兽，击杀必爆好东西，兄弟们，赶紧冲吧！
+SENDMSG 0 朱雀神殿已经刷新圣兽，击杀必爆好东西，兄弟们，赶紧冲吧！
+Gmexecute 开始提问 @朱雀活动
+BREAK
+
+
+[@玄武神兽]
+
+#IF
+CheckMapSameMonCount 玄武神殿 玄武神·圣兽 = 0
+#ACT
+MonGenEx 玄武神殿       16     18     玄武神·圣兽          10    1       0    70
+SENDMSG 0 玄武神殿已经刷新圣兽，击杀必爆好东西，兄弟们，赶紧冲吧！
+SENDMSG 0 玄武神殿已经刷新圣兽，击杀必爆好东西，兄弟们，赶紧冲吧！
+SENDMSG 0 玄武神殿已经刷新圣兽，击杀必爆好东西，兄弟们，赶紧冲吧！
+Gmexecute 开始提问 @玄武活动
+BREAK
+
+
+
+[@青龙神兽]
+
+#IF
+CheckMapSameMonCount 青龙神殿 青龙神·圣兽 = 0
+#ACT
+MonGenEx 青龙神殿       16     18     青龙神·圣兽          10    1       0    70
+SENDMSG 0 青龙神殿已经刷新圣兽，击杀必爆好东西，兄弟们，赶紧冲吧！
+SENDMSG 0 青龙神殿已经刷新圣兽，击杀必爆好东西，兄弟们，赶紧冲吧！
+SENDMSG 0 青龙神殿已经刷新圣兽，击杀必爆好东西，兄弟们，赶紧冲吧！
+Gmexecute 开始提问 @青龙活动
+BREAK
+
+
+[@白虎神兽]
+
+#IF
+CheckMapSameMonCount 白虎神殿 白虎神·圣兽 = 0
+#ACT
+MonGenEx 白虎神殿       16     18     白虎神·圣兽          10    1       0    70
+SENDMSG 0 白虎神殿已经刷新圣兽，击杀必爆好东西，兄弟们，赶紧冲吧！
+SENDMSG 0 白虎神殿已经刷新圣兽，击杀必爆好东西，兄弟们，赶紧冲吧！
+SENDMSG 0 白虎神殿已经刷新圣兽，击杀必爆好东西，兄弟们，赶紧冲吧！
+Gmexecute 开始提问 @白虎活动
+BREAK
+
+
+
+
+
+[@激情派对计时]
+#IF
+LARGE G6 0
+#ACT
+DEC G6 1
+
+#OR
+EQUAL G6 3
+EQUAL G6 7
+EQUAL G6 10
+#ACT
+Gmexecute 开始提问 @激情派对正式开始
+
+#IF
+EQUAL G6 0
+#ACT
+goto @结束派对
+BREAK
+
+
+
+[@激情派对开启]
+#IF
+#ACT
+MOV G6 20
+MOV A6 已开启
+Gmexecute 开始提问 @激情派对正式开始
+BREAK
+
+
+
+
+
+
+
+[@结束派对]
+#IF
+#ACT
+MOV G6 0
+mov A6 未开启
+BREAK
+
+
+
+
+
+
+
+
+[@每日清理]
+#IF
+#ACT
+INC G449 1 
+Gmexecute 开始提问 @开始每日清除
+GMEXECUTE 开始提问 @BOSS之家回城
+CLEARNAMELIST ..\QuestDiary\全部通用限时\每日福利.txt
+CLEARNAMELIST ..\QuestDiary\全部通用限时\每日1级充值.txt 
+CLEARNAMELIST ..\QuestDiary\全部通用限时\每日2级充值.txt 
+CLEARNAMELIST ..\QuestDiary\全部通用限时\每日3级充值.txt 
+CLEARNAMELIST ..\QuestDiary\全部通用限时\每日充值.txt
+CLEARNAMELIST ..\QuestDiary\全部通用限时\每日充值排行.txt
+CLEARNAMELIST ..\QuestDiary\货币捐献\摸鱼排行\摸鱼排行.txt
+CLEARNAMELIST ..\QuestDiary\货币捐献\摸鱼排行\摸鱼捐献.txt
+
+CLEARNAMELIST ..\QuestDiary\货币捐献\大逃杀排行\大逃杀捐献.txt
+CLEARNAMELIST ..\QuestDiary\货币捐献\大逃杀排行\大逃杀排行.txt
+SortHumVarToListEx 大逃杀捐献 ..\QuestDiary\货币捐献\大逃杀排行\大逃杀捐献.txt 1 ..\QuestDiary\货币捐献\大逃杀排行\大逃杀排行.txt 1
+GetListString ..\QuestDiary\货币捐献\大逃杀排行\大逃杀排行.txt 0 A100 G100
+GetListString ..\QuestDiary\货币捐献\大逃杀排行\大逃杀排行.txt 1 A101 G101
+GetListString ..\QuestDiary\货币捐献\大逃杀排行\大逃杀排行.txt 2 A102 G102
+GetListString ..\QuestDiary\货币捐献\大逃杀排行\大逃杀排行.txt 3 A103 G103
+GetListString ..\QuestDiary\货币捐献\大逃杀排行\大逃杀排行.txt 4 A104 G104
+GetListString ..\QuestDiary\货币捐献\大逃杀排行\大逃杀排行.txt 5 A105 G105
+GetListString ..\QuestDiary\货币捐献\大逃杀排行\大逃杀排行.txt 6 A106 G106
+GetListString ..\QuestDiary\货币捐献\大逃杀排行\大逃杀排行.txt 7 A107 G107
+GetListString ..\QuestDiary\货币捐献\大逃杀排行\大逃杀排行.txt 8 A108 G108
+GetListString ..\QuestDiary\货币捐献\大逃杀排行\大逃杀排行.txt 9 A109 G109
+GetListString ..\QuestDiary\货币捐献\大逃杀排行\大逃杀排行.txt 10 A110 G110
+SortHumVarToListEx 摸鱼捐献 ..\QuestDiary\货币捐献\摸鱼排行\摸鱼捐献.txt 1 ..\QuestDiary\货币捐献\摸鱼排行\摸鱼排行.txt 1
+GetListString ..\QuestDiary\货币捐献\摸鱼排行\摸鱼排行.txt 0 A60 G60
+GetListString ..\QuestDiary\货币捐献\摸鱼排行\摸鱼排行.txt 1 A61 G61
+GetListString ..\QuestDiary\货币捐献\摸鱼排行\摸鱼排行.txt 2 A62 G62
+GetListString ..\QuestDiary\货币捐献\摸鱼排行\摸鱼排行.txt 3 A63 G63
+GetListString ..\QuestDiary\货币捐献\摸鱼排行\摸鱼排行.txt 4 A64 G64
+GetListString ..\QuestDiary\货币捐献\摸鱼排行\摸鱼排行.txt 5 A65 G65
+GetListString ..\QuestDiary\货币捐献\摸鱼排行\摸鱼排行.txt 6 A66 G66
+GetListString ..\QuestDiary\货币捐献\摸鱼排行\摸鱼排行.txt 7 A67 G67
+GetListString ..\QuestDiary\货币捐献\摸鱼排行\摸鱼排行.txt 8 A68 G68
+GetListString ..\QuestDiary\货币捐献\摸鱼排行\摸鱼排行.txt 9 A69 G69
+BREAK
+
+
+
+
+
+
+
+[@开始干掉]
+#IF
+#ACT
+GMEXECUTE 开始提问 @干掉宝宝
+
+
+[@武林争霸1]
+#IF
+#ACT
+MOV G111 1
+Gmexecute 开始提问 @进入比武
+SENDMSG 0 武林争霸活动已开启！19:20后将无法进入，请抓紧时间！
+SENDMSG 0 武林争霸活动已开启！19:20后将无法进入，请抓紧时间！
+SENDMSG 0 武林争霸活动已开启！19:20后将无法进入，请抓紧时间！
+
+
+[@武林争霸2]
+#IF
+#Act
+MOV G111 0
+SENDMSG 0 武林争霸活动大门已经关闭！敬请期待！武林盟主的诞生！
+SENDMSG 0 武林争霸活动大门已经关闭！敬请期待！武林盟主的诞生！
+SENDMSG 0 武林争霸活动大门已经关闭！敬请期待！武林盟主的诞生！
+
+
+
+[@发沙开启]
+#IF
+#ACT
+MOV G38 1
+GuildNoticeMsg 251 180 攻城经结束请新城主到皇宫领取攻沙奖励！新区暂无城主则奖励取消!
+GuildNoticeMsg 251 180 攻城经结束请新城主到皇宫领取攻沙奖励！新区暂无城主则奖励取消!
+GuildNoticeMsg 251 180 攻城经结束请新城主到皇宫领取攻沙奖励！新区暂无城主则奖励取消!
+GuildNoticeMsg 251 180 攻城经结束请新城主到皇宫领取攻沙奖励！新区暂无城主则奖励取消!
+break
+
+
+
+
+
+
+
+
+;──────────────温馨提示─────────────────
+[@凌晨提示]
+#IF
+random 1
+#act
+SENDMSG 1 ┏╮╱温馨提示^.^
+SENDMSG 1 ╰★╮亲爱的玩家，现在已经是凌晨了
+SENDMSG 1 ╱╰┛游戏虽然好玩，也别忘了是不是该休息了
+
+
+
+
+[@早上提示]
+#IF
+random 1
+#act
+SENDMSG 1 ┏╮╱温馨提示^.^
+SENDMSG 1 ╰★╮亲爱的玩家，现在已经是早上了
+SENDMSG 1 ╱╰┛游戏虽然好玩，可别忘了工作和学习的时间
+
+
+[@中午提示]
+#IF
+random 1
+#act
+SENDMSG 1 ┏╮╱温馨提示^.^
+SENDMSG 1 ╰★╮亲爱的玩家，现在已经是中午了
+SENDMSG 1 ╱╰┛游戏虽然好玩，可别忘了多陪陪你的朋友和家人
+
+
+[@晚上提示]
+#IF
+random 1
+#act
+SENDMSG 1 ┏╮╱温馨提示^.^
+SENDMSG 1 ╰★╮亲爱的玩家，现在已经是晚上了
+SENDMSG 1 ╱╰┛游戏虽然好玩，也别忘了陪朋友和家人吃顿晚饭
+
+
+
+
+[@法师宝宝]
+#IF
+CheckRangeMonCount 1002 15 12 10 < 3
+#ACT
+Param1 1002
+Param2 15
+Param3 12
+MonGen 半兽勇士 2 1
+MonGen 虎卫 1 1
+break
+
+
+[@终极BOSS]
+#If
+CheckMapSameMonCount sd5 天界之主 < 1
+#ACT
+MONGENEX sd5 78 24 天界之主 0 1 0 249
+BREAK
+
+
+[@刷元宝树]
+#IF
+CheckMapSameMonCount 3 财宝树 > 0
+#ACT
+SENDCENTERMSG 151 245 〖财宝树〗出现在[活动地图]，快去抢宝吧! 1 30 
+GMEXECUTE 开始提问 @询问是否打树
+#ELSEACT
+MONGENEX 3 354 337 财宝树 0 1 0 250
+SENDCENTERMSG 151 245 〖财宝树〗出现在[活动地图]，快去抢宝吧! 1 30
+GMEXECUTE 开始提问 @询问是否打树
+
+[@宝树王]
+#if
+EQUAL G180 1
+#act
+BREAK
+
+#IF
+EQUAL G180 0
+CheckMapSameMonCount  3  红包树妖 < 1
+#ACT
+mov G180 1
+Param1 3
+Param2 356
+Param3 338
+MonGen 红包树妖 1 1
+Gmexecute 开始提问 @进入宝树王
+GuildNoticeMsg 251 249 ╔━━━━━━━━━━━━━≡═≡━━━━━━━━━━━━━━╗
+GuildNoticeMsg 251 249 ┃╔━━━━╗　　　　　　　　　　　　　　　　　　　　　　　　┃
+GuildNoticeMsg 251 249 ┃┃红包树妖┃　　　　　　　　　　　　　　★活动已经开启·√★┃
+GuildNoticeMsg 251 249 ┃╚━━━━╝　　　　　　　　　　　　　　　　　　　　　　　　┃
+GuildNoticeMsg 251 249 ┃活动已开启，““红包树妖””携带大量红包出现在土城(356，345)┃
+GuildNoticeMsg 251 249 ┃活动已开启，““红包树妖””携带大量红包出现在土城(356，345)┃
+GuildNoticeMsg 251 249 ┃“宝树王”击杀后触发天降红包，掉落大量红包，所有人都可以捡取┃
+GuildNoticeMsg 251 249 ┃“宝树王”击杀后触发天降红包，掉落大量红包，所有人都可以捡取┃
+GuildNoticeMsg 251 249 ╚━━━━━━━━━━━━━≡═≡━━━━━━━━━━━━━━╝
+break
+
+
+[@宝树王1]
+#IF
+CheckMapSameMonCount  3  红包树妖 < 1
+#ACT
+Param1 3
+Param2 356
+Param3 338
+MonGen 红包树妖 1 1
+Gmexecute 开始提问 @进入宝树王
+GuildNoticeMsg 251 249 ╔━━━━━━━━━━━━━≡═≡━━━━━━━━━━━━━━╗
+GuildNoticeMsg 251 249 ┃╔━━━━╗　　　　　　　　　　　　　　　　　　　　　　　　┃
+GuildNoticeMsg 251 249 ┃┃红包树妖┃　　　　　　　　　　　　　　★活动已经开启·√★┃
+GuildNoticeMsg 251 249 ┃╚━━━━╝　　　　　　　　　　　　　　　　　　　　　　　　┃
+GuildNoticeMsg 251 249 ┃活动已开启，““红包树妖””携带大量红包出现在土城(356，345)┃
+GuildNoticeMsg 251 249 ┃活动已开启，““红包树妖””携带大量红包出现在土城(356，345)┃
+GuildNoticeMsg 251 249 ┃“宝树王”击杀后触发天降红包，掉落大量红包，所有人都可以捡取┃
+GuildNoticeMsg 251 249 ┃“宝树王”击杀后触发天降红包，掉落大量红包，所有人都可以捡取┃
+GuildNoticeMsg 251 249 ╚━━━━━━━━━━━━━≡═≡━━━━━━━━━━━━━━╝
+#ELSEACT
+Gmexecute 开始提问 @进入宝树王
+GuildNoticeMsg 251 249 ╔━━━━━━━━━━━━━≡═≡━━━━━━━━━━━━━━╗
+GuildNoticeMsg 251 249 ┃╔━━━━╗　　　　　　　　　　　　　　　　　　　　　　　　┃
+GuildNoticeMsg 251 249 ┃┃红包树妖┃　　　　　　　　　　　　　　★活动已经开启·√★┃
+GuildNoticeMsg 251 249 ┃╚━━━━╝　　　　　　　　　　　　　　　　　　　　　　　　┃
+GuildNoticeMsg 251 249 ┃活动已开启，““红包树妖””携带大量红包出现在土城(356，345)┃
+GuildNoticeMsg 251 249 ┃活动已开启，““红包树妖””携带大量红包出现在土城(356，345)┃
+GuildNoticeMsg 251 249 ┃“宝树王”击杀后触发天降红包，掉落大量红包，所有人都可以捡取┃
+GuildNoticeMsg 251 249 ┃“宝树王”击杀后触发天降红包，掉落大量红包，所有人都可以捡取┃
+GuildNoticeMsg 251 249 ╚━━━━━━━━━━━━━≡═≡━━━━━━━━━━━━━━╝
+break
+
+[@瑶池仙境]
+#IF
+#ACT
+Gmexecute 开始提问 @终极神兽活动
+SendCenterMsg 251 249 通知！大家请注意.≮神威狱≯狱之大门已经打开！ 1 20
+GuildNoticeMsg 251 249 通知！大家请注意.≮神威狱≯狱之大门已经打开！
+SendCenterMsg 251 249  ≮神威狱≯狱之大门已经打开.大家速度到从土城进入活动.名额有限. 1 20
+GuildNoticeMsg 251 249 ≮神威狱≯狱之大门已经打开.大家速度到从土城进入活动.名额有限.
+
+[@仙境10分钟提示]
+#IF
+#ACT
+SendCenterMsg 251 249 通知！大家请注意.≮神威狱≯之门将在10分钟后打开！ 1 20
+SendCenterMsg 251 249 通知！大家请注意.≮神威狱≯之门将在10分钟后打开！ 1 20
+SendCenterMsg 251 249  通知！大家请注意.≮神威狱≯之门将在10分钟后打开！
+SendCenterMsg 251 249  通知！大家请注意.≮神威狱≯之门将在10分钟后打开！
+SendCenterMsg 251 249  通知！大家请注意.≮神威狱≯之门将在10分钟后打开！
+
+[@仙境5分钟提示]
+#IF
+#ACT
+SendCenterMsg 251 249  活动预告：还有%d秒『全服罪恶之首-神威狱地图』大门即将开放~.  0 300
+SendCenterMsg 251 249  通知！大家请注意.≮神威狱≯之门将在5分钟后打开！
+SendCenterMsg 251 249  通知！大家请注意.≮神威狱≯之门将在5分钟后打开！
+SendCenterMsg 251 249  通知！大家请注意.≮神威狱≯之门将在5分钟后打开！
+SendCenterMsg 251 249  通知！大家请注意.≮神威狱≯之门将在5分钟后打开！
+Gmexecute 开始提问 @终极神兽活动
+CLEARMAPMON mt1 
+Param1 mt1
+Param2 34
+Param3 32
+MonGen 通臂猿猴[精英] 8 5
+MonGen 金池长老[精英] 8 5
+MonGen 石敢当[精英] 8 5
+MonGen 大公鸡[精英] 8 5
+MonGen 美猴王[BOSS] 8 2
+MonGen 黑风大王[BOSS] 8 2
+MonGen 黄风大圣[BOSS] 8 2
+MonGen 毗蓝婆[BOSS] 8 2
+MonGen 神狱之主 1 1
+break
+
+
+
+
+
+
+
+[@首次攻沙计算A]
+#IF
+#act
+INC G269 1
+mov G270 0
+break
+
+
+
+[@攻沙提示公告A]
+#if
+large G269 0
+#act
+SendCenterMsg 0 249 【注意】：所有行会于今天晚上8点准时攻沙巴克，请个大行会做好准备！~！ 1 30
+SendCenterMsg 0 249 【注意】：所有行会于今天晚上8点准时攻沙巴克，请个大行会做好准备！~！ 1 30
+SENDMSG 0 ┏≈☆★≈☆★≈☆★☆≈【攻城信息提示】≈☆★☆≈★☆≈★☆≈┓
+SENDMSG 0 ╔┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅╗
+SENDMSG 0 ┇ 所有行会已自动申请攻城！→请提早建会,否则参加不了集体攻城！┇ 
+SENDMSG 0 ┇ 所有行会已自动申请攻城！→每晚20点,自动开启全服大型攻城战！┇ 
+SENDMSG 0 ┇ 所有行会已自动申请攻城！→每个行会都可以攻城!无需提交头像！┇ 
+SENDMSG 0 ┇ 所有行会已自动申请攻城！→如果您的势力不行,建议找结盟好友！┇ 
+SENDMSG 0 ┇ 所有行会已自动申请攻城！→请所有行会做好准备,倒计时30分钟！┇ 
+SENDMSG 0 ╚┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅╝
+SENDMSG 0 ┗≈☆★≈☆★≈☆★☆≈【倒计时30分钟】≈☆★☆≈★☆≈★☆≈┛
+
+
+
+[@加载攻沙行会A]
+#if
+large G269 0
+#act
+AddAttackSabukAll 0
+SendCenterMsg 0 249 【注意】：所有行会已经添加攻城，请各大行会做好准备，攻城战即将开始！ 1 30
+SendCenterMsg 0 249 【注意】：所有行会已经添加攻城，请各大行会做好准备，攻城战即将开始！ 1 30
+SENDMSG 0 【注意】：所有行会已经添加攻城，请各大行会做好准备，攻城战即将开始！ 
+SENDMSG 0 【注意】：所有行会已经添加攻城，请各大行会做好准备，攻城战即将开始！ 
+SENDMSG 0 【注意】：所有行会已经添加攻城，请各大行会做好准备，攻城战即将开始！
+break
+
+
+[@沙巴克占领奖励A]
+#IF
+large G269 0
+#act
+mov G270 1
+SendCenterMsg 0 249 沙巴克老大请到沙城领奖NPC处领取拿沙奖励！ 1 20
+SendCenterMsg 0 249 沙巴克老大请到沙城领奖NPC处领取拿沙奖励！ 1 20
+SENDMSG 0 沙巴克老大请到沙城领奖NPC处领取拿沙奖励！
+SENDMSG 0 沙巴克老大请到沙城领奖NPC处领取拿沙奖励！
+break
+
+;------------------------------------------------------------------------------------------------------------------
+
+
+;----------------------------------------------------------------------------------------------------------------------
+[@攻沙提示A]
+#IF
+large G269 0
+#act
+SendCenterMsg 251 58 ================================================== 1 10
+SendCenterMsg 251 58 本区的攻沙将在今晚的20:00准时举行,激情即将来临 1 10
+SendCenterMsg 251 58 请务必在19:55之前创建行会,否则会导致攻沙无效 1 10
+SendCenterMsg 251 58 ================================================== 1 10
+
+
+
+
+
+
+
+
+

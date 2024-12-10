@@ -1,0 +1,80 @@
+[@每日签到]
+{
+
+; #OR
+; ISONMAP wxbd
+; ISONMAP wxyz
+; #ACT
+; MESSAGEBOX 当前地图无法使用此功能！
+; break
+
+#IF
+签到状态 <$STR(T22)>
+#ACT
+MOV N$今日签到状态N <$STR(S2)>
+GOTO @游戏签到界面
+
+
+
+[@游戏签到界面]
+#IF
+equal N$今日签到状态N 1
+#ACT
+MOV S$今日签到状态 <可签到/SCOLOR=250>
+#ELSEACT
+MOV S$今日签到状态 <已签到/SCOLOR=249>
+
+
+#IF
+#ACT
+OPENMERCHANTBIGDLG <$Str(N$补丁编号)> 50 1 4 4 -88 0 0 0
+#SAY
+<>                       \
+<>                       \
+<>                       \
+<Imgex:<$Str(N$补丁编号)>:2:1:2:546:-46/@Exit>\
+<>\
+<>                     <【签到介绍】：/SCOLOR=253>→ <完全0门槛，所有玩家均可参与，只需签到既可获得游戏充值/SCOLOR=150>\
+<>\
+<>                     　            → <请选择爱玩的版本签到，每个微信号每天可在任何版本签到一次/SCOLOR=150>\
+<>\
+<>                     　  <【提示】:> → <如果取关本服公众号将会清空会员数据信息/SCOLOR=21>\
+<>\
+<>                     　            → <每次签到获得50元充值(50个游戏币)/SCOLOR=150>\
+<>\
+<>                     　            → <签到点可兑换/SCOLOR=150><《37W.Com》/SCOLOR=250><旗下任意版本兑换充值/SCOLOR=150>\
+<>                    <---------------------------------------------------------------------------/SCOLOR=11>\
+<>                                      <今日签到状态/SCOLOR=254>：<$STR(S$今日签到状态)>   <[点此签到]/@游戏签到功能> \
+<>\
+<>           \
+<Imgex:<$Str(N$补丁编号)>:53:52:53:0:-240/@37W游戏充值>\
+<Imgex:<$Str(N$补丁编号)>:57:56:57:0:-212/@37W包服卡>\
+<Imgex:<$Str(N$补丁编号)>:59:58:59:0:-184/@37W转区服务>\
+<Imgex:<$Str(N$补丁编号)>:60:60:60:0:-156>\
+<Imgex:<$Str(N$补丁编号)>:63:62:63:0:-128/@37W联系客服>\
+
+
+[@游戏签到功能]
+#IF
+CheckContainsText <$SERVERNAME> 测试
+#ACT
+MESSAGEBOX 测试区禁止使用本功能。
+break
+
+
+
+#IF
+提交数据 3 申请签到 <$STR(T22)>
+#ACT
+INC U60 50
+MESSAGEBOX 恭喜你签到成功，获得了50个游戏币！
+AddTextListEx ..\QuestDiary\游戏币明细\<$USERNAME>.txt 249#增加类型：【签到领取】|【游戏币增加：+50】|【总游戏币为：<$STR(U60)>】|操作时间：<$YEAR>年<$MONTH>月<$DAY>日<$HOUR>点<$MINUTE>分<$SECOND>秒 0
+
+AddTextList ..\..\..\..\37W包服功能\每日签到领取记录.txt  【签到领取】|【微信ID：<$STR(T22)>】|【区服：<$SERVERNAME>】|【账号：<$USERID>】|【角色：<$USERNAME>】|【游戏币增加：+50】|【总游戏币为：<$STR(U60)>】|操作时间：<$YEAR>年<$MONTH>月<$DAY>日<$HOUR>点<$MINUTE>分<$SECOND>秒 0
+GOTO @每日签到
+#ELSEACT
+MESSAGEBOX <$STR(S1)>
+GOTO @每日签到
+
+
+}

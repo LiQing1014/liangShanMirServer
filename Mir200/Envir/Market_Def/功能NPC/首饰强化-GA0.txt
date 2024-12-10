@@ -1,0 +1,1877 @@
+()
+%100
+[@Main]
+#IF
+#Act
+close
+#Say
+轩辕以上装备可使用天之神铁强化，首饰可强化3点，武器可强化7点！\ 
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+1.<强化需要消耗/FCOLOR=250><“天之神铁”>，<通过BOSS爆出或分解轩辕装备获得。/FCOLOR=250>\  
+2.<轩辕需500元宝，圣阶需神铁*1+点卷*30，神级需神铁*2+点卷*120/FCOLOR=253>\
+<-------------------------------------------------------------/FCOLOR=35>\ 
+　<[升级武器]/@Main_01>   　<[升级衣服]/@Main_02>   　<[升级头盔]/@Main_03>   　<[升级项链]/@Main_04>\
+<-------------------------------------------------------------/FCOLOR=35>\ 
+　<[升级手镯]/@Main_05>   　<[升级戒指]/@Main_06>   　<[升级腰带]/@Main_07>   　<[升级靴子]/@Main_08>\
+<-------------------------------------------------------------/FCOLOR=35>\ 
+
+
+[@Main_01]
+#IF
+EQUAL <$WEAPON>
+#Act
+MessageBox 抱歉,您没有佩带武器!
+break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\装备升级.txt <$WEAPON>
+#ElseAct
+MessageBox 你佩带的<$WEAPON>无法升级!
+break
+
+#IF
+#Act
+close
+#Say
+\　\
+<轩辕需500元宝，圣阶需神铁*1+点卷*30，神级需神铁*2+点卷*120/FCOLOR=103>\ \
+攻击:<点击升级/@Ksqh01x> 强化武器1攻击  魔法:<点击升级/@Ksqh02x> 强化武器1魔法\　\
+
+道术:<点击升级/@Ksqh03x> 强化武器1道术  准确:<点击升级/@Ksqh04x> 强化武器1准确\　\ \
+
+
+<提示：/FCOLOR=249><武器最高可强化升级到7点属性！/FCOLOR=250>　　　        <返回菜单/@Main>
+
+[@Ksqh01x]
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\装备升级.txt <$WEAPON>
+#ElseAct
+MessageBox 只有轩辕及以上装备才可以升级!!
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\轩辕升级.txt <$WEAPON>
+CheckItemaddvaLue 1 0 < 7
+CheckGameGold > 499
+#Act
+GameGold - 500
+ChangeitemaddvaLue 1 0 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$WEAPON>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\圣阶升级.txt <$WEAPON>
+CHECKGAMEDIAMOND > 29
+CHECKITEM 天之神铁 1
+CheckItemaddvaLue 1 0 < 7
+#Act
+TAKE 天之神铁 1
+GAMEDIAMOND - 30
+ChangeitemaddvaLue 1 0 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$WEAPON>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\神阶升级.txt <$WEAPON>
+CHECKGAMEDIAMOND > 119
+CHECKITEM 天之神铁 2
+CheckItemaddvaLue 1 0 < 7
+#Act
+TAKE 天之神铁 2
+GAMEDIAMOND - 120
+ChangeitemaddvaLue 1 0 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$WEAPON>强化成功。
+Break
+#ElseAct
+MessageBox [失败]:您的材料或点卷不足或者已升7点。
+Close
+Break
+
+
+
+[@Ksqh02x]
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\装备升级.txt <$WEAPON>
+#ElseAct
+MessageBox 只有轩辕及以上装备才可以升级!!
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\轩辕升级.txt <$WEAPON>
+CheckItemaddvaLue 1 1 < 7
+CheckGameGold > 499
+#Act
+GameGold - 500
+ChangeitemaddvaLue 1 1 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$WEAPON>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\圣阶升级.txt <$WEAPON>
+CHECKGAMEDIAMOND > 29
+CHECKITEM 天之神铁 1
+CheckItemaddvaLue 1 1 < 7
+#Act
+TAKE 天之神铁 1
+GAMEDIAMOND - 30
+ChangeitemaddvaLue 1 1 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$WEAPON>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\神阶升级.txt <$WEAPON>
+CHECKGAMEDIAMOND > 119
+CHECKITEM 天之神铁 2
+CheckItemaddvaLue 1 1 < 7
+#Act
+TAKE 天之神铁 2
+GAMEDIAMOND - 120
+ChangeitemaddvaLue 1 1 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$WEAPON>强化成功。
+Break
+#ElseAct
+MessageBox [失败]:您的材料或点卷不足或者已升7点。
+Close
+Break
+
+
+[@Ksqh03x]
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\装备升级.txt <$WEAPON>
+#ElseAct
+MessageBox 只有轩辕及以上装备才可以升级!!
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\轩辕升级.txt <$WEAPON>
+CheckItemaddvaLue 1 2 < 7
+CheckGameGold > 499
+#Act
+GameGold - 500
+ChangeitemaddvaLue 1 2 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$WEAPON>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\圣阶升级.txt <$WEAPON>
+CHECKGAMEDIAMOND > 29
+CHECKITEM 天之神铁 1
+CheckItemaddvaLue 1 2 < 7
+#Act
+TAKE 天之神铁 1
+GAMEDIAMOND - 30
+ChangeitemaddvaLue 1 2 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$WEAPON>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\神阶升级.txt <$WEAPON>
+CHECKGAMEDIAMOND > 119
+CHECKITEM 天之神铁 2
+CheckItemaddvaLue 1 2 < 7
+#Act
+TAKE 天之神铁 2
+GAMEDIAMOND - 120
+ChangeitemaddvaLue 1 2 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$WEAPON>强化成功。
+Break
+#ElseAct
+MessageBox [失败]:您的材料或点卷不足或者已升7点。
+Close
+Break
+
+[@Ksqh04x]
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\装备升级.txt <$WEAPON>
+#ElseAct
+MessageBox 只有轩辕及以上装备才可以升级!!
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\轩辕升级.txt <$WEAPON>
+CheckItemaddvaLue 1 5 < 7
+CheckGameGold > 499
+#Act
+GameGold - 500
+ChangeitemaddvaLue 1 5 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$WEAPON>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\圣阶升级.txt <$WEAPON>
+CHECKGAMEDIAMOND > 29
+CHECKITEM 天之神铁 1
+CheckItemaddvaLue 1 5 < 7
+#Act
+TAKE 天之神铁 1
+GAMEDIAMOND - 30
+ChangeitemaddvaLue 1 5 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$WEAPON>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\神阶升级.txt <$WEAPON>
+CHECKGAMEDIAMOND > 119
+CHECKITEM 天之神铁 2
+CheckItemaddvaLue 1 5 < 7
+#Act
+TAKE 天之神铁 2
+GAMEDIAMOND - 120
+ChangeitemaddvaLue 1 5 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$WEAPON>强化成功。
+Break
+#ElseAct
+MessageBox [失败]:您的材料或点卷不足或者已升7点。
+Close
+Break
+
+[@Main_02]
+#IF
+EQUAL <$DRESS>
+#Act
+MessageBox 抱歉,您没有佩带衣服!
+break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\装备升级.txt <$DRESS>
+#ElseAct
+MessageBox 你佩带的<$DRESS>无法升级!
+break
+
+#IF
+#Act
+close
+#Say
+\ \
+<轩辕需500元宝，圣阶需神铁*1+点卷*30，神级需神铁*2+点卷*120/FCOLOR=103>\ \
+攻击:<点击升级/@Ksqh05x> 强化衣服1攻击  魔法:<点击升级/@Ksqh06x> 强化衣服1魔法\　\
+道术:<点击升级/@Ksqh07x> 强化衣服1道术  \　\  \
+<提示：/FCOLOR=249><衣服最高可强化升级到5点属性！/FCOLOR=250>　　　        <返回菜单/@Main>
+
+　　　　　　　　　　　　　　　　　　　　　　　　
+
+[@Ksqh05x]
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\装备升级.txt <$DRESS>
+#ElseAct
+MessageBox 只有轩辕及以上装备才可以升级!!
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\轩辕升级.txt <$DRESS>
+CheckItemaddvaLue 0 2 < 5
+CheckGameGold > 499
+#Act
+GameGold - 500
+ChangeitemaddvaLue 0 2 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$DRESS>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\圣阶升级.txt <$DRESS>
+CHECKGAMEDIAMOND > 29
+CHECKITEM 天之神铁 1
+CheckItemaddvaLue 0 2 < 5
+#Act
+TAKE 天之神铁 1
+GAMEDIAMOND - 30
+ChangeitemaddvaLue 0 2 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$DRESS>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\神阶升级.txt <$DRESS>
+CHECKGAMEDIAMOND > 119
+CHECKITEM 天之神铁 2
+CheckItemaddvaLue 0 2 < 5
+#Act
+TAKE 天之神铁 2
+GAMEDIAMOND - 120
+ChangeitemaddvaLue 0 2 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$DRESS>强化成功。
+Break
+#ElseAct
+MessageBox [失败]:您的材料或点卷不足或者已升5点。
+Close
+Break
+
+[@Ksqh06x]
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\装备升级.txt <$DRESS>
+#ElseAct
+MessageBox 只有轩辕及以上装备才可以升级!!
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\轩辕升级.txt <$DRESS>
+CheckItemaddvaLue 0 3 < 5
+CheckGameGold > 499
+#Act
+GameGold - 500
+ChangeitemaddvaLue 0 3 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$DRESS>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\圣阶升级.txt <$DRESS>
+CHECKGAMEDIAMOND > 29
+CHECKITEM 天之神铁 1
+CheckItemaddvaLue 0 3 < 5
+#Act
+TAKE 天之神铁 1
+GAMEDIAMOND - 30
+ChangeitemaddvaLue 0 3 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$DRESS>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\神阶升级.txt <$DRESS>
+CHECKGAMEDIAMOND > 119
+CHECKITEM 天之神铁 2
+CheckItemaddvaLue 0 3 < 5
+#Act
+TAKE 天之神铁 2
+GAMEDIAMOND - 120
+ChangeitemaddvaLue 0 3 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$DRESS>强化成功。
+Break
+#ElseAct
+MessageBox [失败]:您的材料或点卷不足或者已升5点。
+Close
+Break
+
+[@Ksqh07x]
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\装备升级.txt <$DRESS>
+#ElseAct
+MessageBox 只有轩辕及以上装备才可以升级!!
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\轩辕升级.txt <$DRESS>
+CheckItemaddvaLue 0 4 < 5
+CheckGameGold > 499
+#Act
+GameGold - 500
+ChangeitemaddvaLue 0 4 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$DRESS>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\圣阶升级.txt <$DRESS>
+CHECKGAMEDIAMOND > 29
+CHECKITEM 天之神铁 1
+CheckItemaddvaLue 0 4 < 5
+#Act
+TAKE 天之神铁 1
+GAMEDIAMOND - 30
+ChangeitemaddvaLue 0 4 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$DRESS>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\神阶升级.txt <$DRESS>
+CHECKGAMEDIAMOND > 119
+CHECKITEM 天之神铁 2
+CheckItemaddvaLue 0 4 < 5
+#Act
+TAKE 天之神铁 2
+GAMEDIAMOND - 120
+ChangeitemaddvaLue 0 4 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$DRESS>强化成功。
+Break
+#ElseAct
+MessageBox [失败]:您的材料或点卷不足或者已升5点。
+Close
+Break
+
+[@Ksqh08x]
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\装备升级.txt <$DRESS>
+#ElseAct
+MessageBox 只有轩辕及以上装备才可以升级!!
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\轩辕升级.txt <$DRESS>
+CheckItemaddvaLue 0 0 < 5
+CheckGameGold > 499
+#Act
+GameGold - 500
+ChangeitemaddvaLue 0 0 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$DRESS>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\圣阶升级.txt <$DRESS>
+CHECKGAMEDIAMOND > 29
+CHECKITEM 天之神铁 1
+CheckItemaddvaLue 0 0 < 5
+#Act
+TAKE 天之神铁 1
+GAMEDIAMOND - 30
+ChangeitemaddvaLue 0 0 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$DRESS>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\神阶升级.txt <$DRESS>
+CHECKGAMEDIAMOND > 119
+CHECKITEM 天之神铁 2
+CheckItemaddvaLue 0 0 < 5
+#Act
+TAKE 天之神铁 2
+GAMEDIAMOND - 120
+ChangeitemaddvaLue 0 0 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$DRESS>强化成功。
+Break
+#ElseAct
+MessageBox [失败]:您的材料或点卷不足或者已升5点。
+Close
+Break
+
+[@Ksqh09x]
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\装备升级.txt <$DRESS>
+#ElseAct
+MessageBox 只有轩辕及以上装备才可以升级!!
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\轩辕升级.txt <$DRESS>
+CheckItemaddvaLue 0 1 < 5
+CheckGameGold > 499
+#Act
+GameGold - 500
+ChangeitemaddvaLue 0 1 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$DRESS>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\圣阶升级.txt <$DRESS>
+CHECKGAMEDIAMOND > 29
+CHECKITEM 天之神铁 1
+CheckItemaddvaLue 0 1 < 5
+#Act
+TAKE 天之神铁 1
+GAMEDIAMOND - 30
+ChangeitemaddvaLue 0 1 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$DRESS>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\神阶升级.txt <$DRESS>
+CHECKGAMEDIAMOND > 119
+CHECKITEM 天之神铁 2
+CheckItemaddvaLue 0 1 < 5
+#Act
+TAKE 天之神铁 2
+GAMEDIAMOND - 120
+ChangeitemaddvaLue 0 1 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$DRESS>强化成功。
+Break
+#ElseAct
+MessageBox [失败]:您的材料或点卷不足或者已升5点。
+Close
+Break
+
+[@Main_03]
+#IF
+EQUAL <$HELMET>
+#Act
+MessageBox 抱歉,您没有佩带头盔!
+break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\装备升级.txt <$HELMET>
+#ElseAct
+MessageBox 你佩带的<$HELMET>无法升级!
+break
+
+#IF
+#Act
+close
+#Say
+\ \
+<轩辕需500元宝，圣阶需神铁*1+点卷*30，神级需神铁*2+点卷*120/FCOLOR=103>\ \
+攻击:<点击升级/@Ksqh10x> 强化头盔1攻击  魔法:<点击升级/@Ksqh11x> 强化头盔1魔法\　\
+道术:<点击升级/@Ksqh12x> 强化头盔1道术  \　\  \ 
+
+　　　　　　　　　　　　　　　　　　　　　　　　 <返回菜单/@Main>
+
+[@Ksqh10x]
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\装备升级.txt <$HELMET>
+#ElseAct
+MessageBox 只有轩辕及以上装备才可以升级!!
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\轩辕升级.txt <$HELMET>
+CheckItemaddvaLue 4 2 < 3
+CheckGameGold > 499
+#Act
+GameGold - 500
+ChangeitemaddvaLue 4 2 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$HELMET>强化成功。
+Break
+
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\圣阶升级.txt <$HELMET>
+CHECKGAMEDIAMOND > 29
+CHECKITEM 天之神铁 1
+CheckItemaddvaLue 4 2 < 3
+#Act
+TAKE 天之神铁 1
+GAMEDIAMOND - 30
+ChangeitemaddvaLue 4 2 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$HELMET>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\神阶升级.txt <$HELMET>
+CHECKGAMEDIAMOND > 119
+CHECKITEM 天之神铁 2
+CheckItemaddvaLue 4 2 < 3
+#Act
+TAKE 天之神铁 2
+GAMEDIAMOND - 120
+ChangeitemaddvaLue 4 2 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$HELMET>强化成功。
+Break
+#ElseAct
+MessageBox [失败]:您的材料或点卷不足或者已升3点。
+Close
+Break
+
+
+[@Ksqh11x]
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\装备升级.txt <$HELMET>
+#ElseAct
+MessageBox 只有轩辕及以上装备才可以升级!!
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\轩辕升级.txt <$HELMET>
+CheckItemaddvaLue 4 3 < 3
+CheckGameGold > 499
+#Act
+GameGold - 500
+ChangeitemaddvaLue 4 3 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$HELMET>强化成功。
+Break
+
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\圣阶升级.txt <$HELMET>
+CHECKGAMEDIAMOND > 29
+CHECKITEM 天之神铁 1
+CheckItemaddvaLue 4 3 < 3
+#Act
+TAKE 天之神铁 1
+GAMEDIAMOND - 30
+ChangeitemaddvaLue 4 3 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$HELMET>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\神阶升级.txt <$HELMET>
+CHECKGAMEDIAMOND > 119
+CHECKITEM 天之神铁 2
+CheckItemaddvaLue 4 3 < 3
+#Act
+TAKE 天之神铁 2
+GAMEDIAMOND - 120
+ChangeitemaddvaLue 4 3 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$HELMET>强化成功。
+Break
+#ElseAct
+MessageBox [失败]:您的材料或点卷不足或者已升3点。
+Close
+Break
+
+[@Ksqh12x]
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\装备升级.txt <$HELMET>
+#ElseAct
+MessageBox 只有轩辕及以上装备才可以升级!!
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\轩辕升级.txt <$HELMET>
+CheckItemaddvaLue 4 4 < 3
+CheckGameGold > 499
+#Act
+GameGold - 500
+ChangeitemaddvaLue 4 4 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$HELMET>强化成功。
+Break
+
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\圣阶升级.txt <$HELMET>
+CHECKGAMEDIAMOND > 29
+CHECKITEM 天之神铁 1
+CheckItemaddvaLue 4 4 < 3
+#Act
+TAKE 天之神铁 1
+GAMEDIAMOND - 30
+ChangeitemaddvaLue 4 4 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$HELMET>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\神阶升级.txt <$HELMET>
+CHECKGAMEDIAMOND > 119
+CHECKITEM 天之神铁 2
+CheckItemaddvaLue 4 4 < 3
+#Act
+TAKE 天之神铁 2
+GAMEDIAMOND - 120
+ChangeitemaddvaLue 4 4 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$HELMET>强化成功。
+Break
+#ElseAct
+MessageBox [失败]:您的材料或点卷不足或者已升3点。
+Close
+Break
+
+[@Ksqh13x]
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\装备升级.txt <$HELMET>
+#ElseAct
+MessageBox 只有轩辕及以上装备才可以升级!!
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\轩辕升级.txt <$HELMET>
+CheckItemaddvaLue 4 0 < 3
+CheckGameGold > 499
+#Act
+GameGold - 500
+ChangeitemaddvaLue 4 0 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$HELMET>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\圣阶升级.txt <$HELMET>
+CHECKGAMEDIAMOND > 29
+CHECKITEM 天之神铁 1
+CheckItemaddvaLue 4 0 < 3
+#Act
+TAKE 天之神铁 1
+GAMEDIAMOND - 30
+ChangeitemaddvaLue 4 0 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$HELMET>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\神阶升级.txt <$HELMET>
+CHECKGAMEDIAMOND > 119
+CHECKITEM 天之神铁 2
+CheckItemaddvaLue 4 0 < 3
+#Act
+TAKE 天之神铁 2
+GAMEDIAMOND - 120
+ChangeitemaddvaLue 4 0 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$HELMET>强化成功。
+Break
+#ElseAct
+MessageBox [失败]:您的材料或点卷不足或者已升3点。
+Close
+Break
+
+[@Ksqh14x]
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\装备升级.txt <$HELMET>
+#ElseAct
+MessageBox 只有轩辕及以上装备才可以升级!!
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\轩辕升级.txt <$HELMET>
+CheckItemaddvaLue 4 1 < 3
+CheckGameGold > 499
+#Act
+GameGold - 500
+ChangeitemaddvaLue 4 1 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$HELMET>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\圣阶升级.txt <$HELMET>
+CHECKGAMEDIAMOND > 29
+CHECKITEM 天之神铁 1
+CheckItemaddvaLue 4 1 < 3
+#Act
+TAKE 天之神铁 1
+GAMEDIAMOND - 30
+ChangeitemaddvaLue 4 1 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$HELMET>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\神阶升级.txt <$HELMET>
+CHECKGAMEDIAMOND > 119
+CHECKITEM 天之神铁 2
+CheckItemaddvaLue 4 1 < 3
+#Act
+TAKE 天之神铁 2
+GAMEDIAMOND - 120
+ChangeitemaddvaLue 4 1 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$HELMET>强化成功。
+Break
+#ElseAct
+MessageBox [失败]:您的材料或点卷不足或者已升3点。
+Close
+Break
+
+[@Main_04]
+#IF
+EQUAL <$NECKLACE>
+#Act
+MessageBox 抱歉,您没有佩带项链!
+break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\装备升级.txt <$NECKLACE>
+#ElseAct
+MessageBox 你佩带的<$NECKLACE>无法升级!
+break
+
+  
+#IF
+#Act
+close
+#Say
+\　\
+<轩辕需500元宝，圣阶需神铁*1+点卷*30，神级需神铁*2+点卷*120/FCOLOR=103>\ \
+攻击:<点击升级/@Ksqh15x> 强化项链1攻击  魔法:<点击升级/@Ksqh16x> 强化项链1魔法\　\
+道术:<点击升级/@Ksqh17x> 强化项链1道术 \　\ \
+
+　　　　　　　　　　　　　　　　　　　　　　　　 <返回菜单/@Main>
+
+[@Ksqh15x]
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\装备升级.txt <$NECKLACE>
+#ElseAct
+MessageBox 只有轩辕及以上装备才可以升级!!
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\轩辕升级.txt <$NECKLACE>
+CheckItemaddvaLue 3 2 < 3
+CheckGameGold > 499
+#Act
+GameGold - 500
+ChangeitemaddvaLue 3 2 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$NECKLACE>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\圣阶升级.txt <$NECKLACE>
+CHECKGAMEDIAMOND > 29
+CHECKITEM 天之神铁 1
+CheckItemaddvaLue 3 2 < 3
+#Act
+TAKE 天之神铁 1
+GAMEDIAMOND - 30
+ChangeitemaddvaLue 3 2 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$NECKLACE>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\神阶升级.txt <$NECKLACE>
+CHECKGAMEDIAMOND > 119
+CHECKITEM 天之神铁 2
+CheckItemaddvaLue 3 2 < 3
+#Act
+TAKE 天之神铁 2
+GAMEDIAMOND - 120
+ChangeitemaddvaLue 3 2 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$NECKLACE>强化成功。
+Break
+#ElseAct
+MessageBox [失败]:您的材料或点卷不足或者已升3点。
+Close
+Break
+
+[@Ksqh16x]
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\装备升级.txt <$NECKLACE>
+#ElseAct
+MessageBox 只有轩辕及以上装备才可以升级!!
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\轩辕升级.txt <$NECKLACE>
+CheckItemaddvaLue 3 3 < 3
+CheckGameGold > 499
+#Act
+GameGold - 500
+ChangeitemaddvaLue 3 3 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$NECKLACE>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\圣阶升级.txt <$NECKLACE>
+CHECKGAMEDIAMOND > 29
+CHECKITEM 天之神铁 1
+CheckItemaddvaLue 3 3 < 3
+#Act
+TAKE 天之神铁 1
+GAMEDIAMOND - 30
+ChangeitemaddvaLue 3 3 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$NECKLACE>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\神阶升级.txt <$NECKLACE>
+CHECKGAMEDIAMOND > 119
+CHECKITEM 天之神铁 2
+CheckItemaddvaLue 3 3 < 3
+#Act
+TAKE 天之神铁 2
+GAMEDIAMOND - 120
+ChangeitemaddvaLue 3 3 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$NECKLACE>强化成功。
+Break
+#ElseAct
+MessageBox [失败]:您的材料或点卷不足或者已升3点。
+Close
+Break
+
+[@Ksqh17x]
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\装备升级.txt <$NECKLACE>
+#ElseAct
+MessageBox 只有轩辕及以上装备才可以升级!!
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\轩辕升级.txt <$NECKLACE>
+CheckItemaddvaLue 3 4 < 3
+CheckGameGold > 499
+#Act
+GameGold - 500
+ChangeitemaddvaLue 3 4 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$NECKLACE>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\圣阶升级.txt <$NECKLACE>
+CHECKGAMEDIAMOND > 29
+CHECKITEM 天之神铁 1
+CheckItemaddvaLue 3 4 < 3
+#Act
+TAKE 天之神铁 1
+GAMEDIAMOND - 30
+ChangeitemaddvaLue 3 4 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$NECKLACE>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\神阶升级.txt <$NECKLACE>
+CHECKGAMEDIAMOND > 119
+CHECKITEM 天之神铁 2
+CheckItemaddvaLue 3 4 < 3
+#Act
+TAKE 天之神铁 2
+GAMEDIAMOND - 120
+ChangeitemaddvaLue 3 4 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$NECKLACE>强化成功。
+Break
+#ElseAct
+MessageBox [失败]:您的材料或点卷不足或者已升3点。
+Close
+Break
+
+[@Main_05]
+#IF
+EQUAL <$ARMRING_R>
+#Act
+MessageBox 抱歉,您没有佩带手镯!
+break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\装备升级.txt <$ARMRING_R>
+#ElseAct
+MessageBox 你佩带的<$ARMRING_R>无法升级!
+break
+
+
+
+#IF
+#Act
+close
+#Say
+\ \
+<轩辕需500元宝，圣阶需神铁*1+点卷*30，神级需神铁*2+点卷*120/FCOLOR=103>\ \
+攻击:<点击升级/@Ksqh18x> 强化手镯1攻击  魔法:<点击升级/@Ksqh19x> 强化手镯1魔法\　\
+道术:<点击升级/@Ksqh20x> 强化手镯1道术  \　\  \ 
+
+　　　　　　　　　　　　　　　　　　　　　　　　 <返回菜单/@Main>　　　　　　　　　　　　　　　　　　　　　　　　
+
+[@Ksqh18x]
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\装备升级.txt <$ARMRING_R>
+#ElseAct
+MessageBox 只有轩辕及以上装备才可以升级!!
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\轩辕升级.txt <$ARMRING_R>
+CheckItemaddvaLue 6 2 < 3
+CheckGameGold > 499
+#Act
+GameGold - 500
+ChangeitemaddvaLue 6 2 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$ARMRING_R>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\圣阶升级.txt <$ARMRING_R>
+CHECKGAMEDIAMOND > 29
+CHECKITEM 天之神铁 1
+CheckItemaddvaLue 6 2 < 3
+#Act
+TAKE 天之神铁 1
+GAMEDIAMOND - 30
+ChangeitemaddvaLue 6 2 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$ARMRING_R>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\神阶升级.txt <$ARMRING_R>
+CHECKGAMEDIAMOND > 119
+CHECKITEM 天之神铁 2
+CheckItemaddvaLue 6 2 < 3
+#Act
+TAKE 天之神铁 2
+GAMEDIAMOND - 120
+ChangeitemaddvaLue 6 2 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$ARMRING_R>强化成功。
+Break
+#ElseAct
+MessageBox [失败]:您的材料或点卷不足或者已升3点。
+Close
+Break
+
+
+[@Ksqh19x]
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\装备升级.txt <$ARMRING_R>
+#ElseAct
+MessageBox 只有轩辕及以上装备才可以升级!!
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\轩辕升级.txt <$ARMRING_R>
+CheckItemaddvaLue 6 3 < 3
+CheckGameGold > 499
+#Act
+GameGold - 500
+ChangeitemaddvaLue 6 3 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$ARMRING_R>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\圣阶升级.txt <$ARMRING_R>
+CHECKGAMEDIAMOND > 29
+CHECKITEM 天之神铁 1
+CheckItemaddvaLue 6 3 < 3
+#Act
+TAKE 天之神铁 1
+GAMEDIAMOND - 30
+ChangeitemaddvaLue 6 3 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$ARMRING_R>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\神阶升级.txt <$ARMRING_R>
+CHECKGAMEDIAMOND > 119
+CHECKITEM 天之神铁 2
+CheckItemaddvaLue 6 3 < 3
+#Act
+TAKE 天之神铁 2
+GAMEDIAMOND - 120
+ChangeitemaddvaLue 6 3 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$ARMRING_R>强化成功。
+Break
+#ElseAct
+MessageBox [失败]:您的材料或点卷不足或者已升3点。
+Close
+Break
+
+
+[@Ksqh20x]
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\装备升级.txt <$ARMRING_R>
+#ElseAct
+MessageBox 只有轩辕及以上装备才可以升级!!
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\轩辕升级.txt <$ARMRING_R>
+CheckItemaddvaLue 6 4 < 3
+CheckGameGold > 499
+#Act
+GameGold - 500
+ChangeitemaddvaLue 6 4 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$ARMRING_R>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\圣阶升级.txt <$ARMRING_R>
+CHECKGAMEDIAMOND > 29
+CHECKITEM 天之神铁 1
+CheckItemaddvaLue 6 4 < 3
+#Act
+TAKE 天之神铁 1
+GAMEDIAMOND - 30
+ChangeitemaddvaLue 6 4 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$ARMRING_R>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\神阶升级.txt <$ARMRING_R>
+CHECKGAMEDIAMOND > 119
+CHECKITEM 天之神铁 2
+CheckItemaddvaLue 6 4 < 3
+#Act
+TAKE 天之神铁 2
+GAMEDIAMOND - 120
+ChangeitemaddvaLue 6 4 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$ARMRING_R>强化成功。
+Break
+#ElseAct
+MessageBox [失败]:您的材料或点卷不足或者已升3点。
+Close
+Break
+
+
+[@Ksqh21x]
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\装备升级.txt <$ARMRING_R>
+#ElseAct
+MessageBox 只有轩辕及以上装备才可以升级!!
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\轩辕升级.txt <$ARMRING_R>
+CheckItemaddvaLue 6 0 < 3
+CheckGameGold > 499
+#Act
+GameGold - 500
+ChangeitemaddvaLue 6 0 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$ARMRING_R>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\圣阶升级.txt <$ARMRING_R>
+CHECKGAMEDIAMOND > 29
+CHECKITEM 天之神铁 1
+CheckItemaddvaLue 6 0 < 3
+#Act
+TAKE 天之神铁 1
+GAMEDIAMOND - 30
+ChangeitemaddvaLue 6 0 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$ARMRING_R>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\神阶升级.txt <$ARMRING_R>
+CHECKGAMEDIAMOND > 119
+CHECKITEM 天之神铁 2
+CheckItemaddvaLue 6 0 < 3
+#Act
+TAKE 天之神铁 2
+GAMEDIAMOND - 120
+ChangeitemaddvaLue 6 0 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$ARMRING_R>强化成功。
+Break
+#ElseAct
+MessageBox [失败]:您的材料或点卷不足或者已升3点。
+Close
+Break
+
+
+[@Ksqh22x]
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\装备升级.txt <$ARMRING_R>
+#ElseAct
+MessageBox 只有轩辕及以上装备才可以升级!!
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\轩辕升级.txt <$ARMRING_R>
+CheckItemaddvaLue 6 1 < 3
+CheckGameGold > 499
+#Act
+GameGold - 500
+ChangeitemaddvaLue 6 1 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$ARMRING_R>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\圣阶升级.txt <$ARMRING_R>
+CHECKGAMEDIAMOND > 29
+CHECKITEM 天之神铁 1
+CheckItemaddvaLue 6 1 < 3
+#Act
+TAKE 天之神铁 1
+GAMEDIAMOND - 30
+ChangeitemaddvaLue 6 1 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$ARMRING_R>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\神阶升级.txt <$ARMRING_R>
+CHECKGAMEDIAMOND > 119
+CHECKITEM 天之神铁 2
+CheckItemaddvaLue 6 1 < 3
+#Act
+TAKE 天之神铁 2
+GAMEDIAMOND - 120
+ChangeitemaddvaLue 6 1 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$ARMRING_R>强化成功。
+Break
+#ElseAct
+MessageBox [失败]:您的材料或点卷不足或者已升3点。
+Close
+Break
+
+
+[@Main_06]
+#IF
+EQUAL <$RING_R>
+#Act
+MessageBox 抱歉,您没有佩带戒指!
+break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\装备升级.txt <$RING_R>
+#ElseAct
+MessageBox 你佩带的<$RING_R>无法升级!
+break
+
+
+#IF
+#Act
+close
+#SAY
+\ \
+<轩辕需500元宝，圣阶需神铁*1+点卷*30，神级需神铁*2+点卷*120/FCOLOR=103>\ \
+攻击:<点击升级/@Ksqh23x> 强化戒指1攻击  魔法:<点击升级/@Ksqh24x> 强化戒指1魔法\　\
+道术:<点击升级/@Ksqh25x> 强化戒指1道术  \　\  \ 
+
+　　　　　　　　　　　　　　　　　　　　　　　　 <返回菜单/@Main>　　　　　　　　　　　　　　　　　　　　　　　　　
+
+[@Ksqh23x]
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\装备升级.txt <$RING_R>
+#ElseAct
+MessageBox 只有轩辕及以上装备才可以升级!!
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\轩辕升级.txt <$RING_R>
+CheckItemaddvaLue 8 2 < 3
+CheckGameGold > 499
+#Act
+GameGold - 500
+ChangeitemaddvaLue 8 2 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$RING_R>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\圣阶升级.txt <$RING_R>
+CHECKGAMEDIAMOND > 29
+CHECKITEM 天之神铁 1
+CheckItemaddvaLue 8 2 < 3
+#Act
+TAKE 天之神铁 1
+GAMEDIAMOND - 30
+ChangeitemaddvaLue 8 2 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$RING_R>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\神阶升级.txt <$RING_R>
+CHECKGAMEDIAMOND > 119
+CHECKITEM 天之神铁 2
+CheckItemaddvaLue 8 2 < 3
+#Act
+TAKE 天之神铁 2
+GAMEDIAMOND - 120
+ChangeitemaddvaLue 8 2 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$RING_R>强化成功。
+Break
+#ElseAct
+MessageBox [失败]:您的材料或点卷不足或者已升3点。
+Close
+Break
+
+
+[@Ksqh24x]
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\装备升级.txt <$RING_R>
+#ElseAct
+MessageBox 只有轩辕及以上装备才可以升级!!
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\轩辕升级.txt <$RING_R>
+CheckItemaddvaLue 8 3 < 3
+CheckGameGold > 499
+#Act
+GameGold - 500
+ChangeitemaddvaLue 8 3 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$RING_R>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\圣阶升级.txt <$RING_R>
+CHECKGAMEDIAMOND > 29
+CHECKITEM 天之神铁 1
+CheckItemaddvaLue 8 3 < 3
+#Act
+TAKE 天之神铁 1
+GAMEDIAMOND - 30
+ChangeitemaddvaLue 8 3 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$RING_R>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\神阶升级.txt <$RING_R>
+CHECKGAMEDIAMOND > 119
+CHECKITEM 天之神铁 2
+CheckItemaddvaLue 8 3 < 3
+#Act
+TAKE 天之神铁 2
+GAMEDIAMOND - 120
+ChangeitemaddvaLue 8 3 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$RING_R>强化成功。
+Break
+#ElseAct
+MessageBox [失败]:您的材料或点卷不足或者已升3点。
+Close
+Break
+
+
+[@Ksqh25x]
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\装备升级.txt <$RING_R>
+#ElseAct
+MessageBox 只有轩辕及以上装备才可以升级!!
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\轩辕升级.txt <$RING_R>
+CheckItemaddvaLue 8 4 < 3
+CheckGameGold > 499
+#Act
+GameGold - 500
+ChangeitemaddvaLue 8 4 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$RING_R>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\圣阶升级.txt <$RING_R>
+CHECKGAMEDIAMOND > 29
+CHECKITEM 天之神铁 1
+CheckItemaddvaLue 8 4 < 3
+#Act
+TAKE 天之神铁 1
+GAMEDIAMOND - 30
+ChangeitemaddvaLue 8 4 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$RING_R>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\神阶升级.txt <$RING_R>
+CHECKGAMEDIAMOND > 119
+CHECKITEM 天之神铁 2
+CheckItemaddvaLue 8 4 < 3
+#Act
+TAKE 天之神铁 2
+GAMEDIAMOND - 120
+ChangeitemaddvaLue 8 4 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$RING_R>强化成功。
+Break
+#ElseAct
+MessageBox [失败]:您的材料或点卷不足或者已升3点。
+Close
+Break
+
+
+[@Ksqh26x]
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\装备升级.txt <$RING_R>
+#ElseAct
+MessageBox 只有轩辕及以上装备才可以升级!!
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\轩辕升级.txt <$RING_R>
+CheckItemaddvaLue 8 0 < 3
+CheckGameGold > 499
+#Act
+GameGold - 500
+ChangeitemaddvaLue 8 0 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$RING_R>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\圣阶升级.txt <$RING_R>
+CHECKGAMEDIAMOND > 29
+CHECKITEM 天之神铁 1
+CheckItemaddvaLue 8 0 < 3
+#Act
+TAKE 天之神铁 1
+GAMEDIAMOND - 30
+ChangeitemaddvaLue 8 0 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$RING_R>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\神阶升级.txt <$RING_R>
+CHECKGAMEDIAMOND > 119
+CHECKITEM 天之神铁 2
+CheckItemaddvaLue 8 0 < 3
+#Act
+TAKE 天之神铁 2
+GAMEDIAMOND - 120
+ChangeitemaddvaLue 8 0 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$RING_R>强化成功。
+Break
+#ElseAct
+MessageBox [失败]:您的材料或点卷不足或者已升3点。
+Close
+Break
+
+
+[@Ksqh27x]
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\装备升级.txt <$RING_R>
+#ElseAct
+MessageBox 只有轩辕及以上装备才可以升级!!
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\轩辕升级.txt <$RING_R>
+CheckItemaddvaLue 8 1 < 3
+CheckGameGold > 499
+#Act
+GameGold - 500
+ChangeitemaddvaLue 8 1 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$RING_R>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\圣阶升级.txt <$RING_R>
+CHECKGAMEDIAMOND > 29
+CHECKITEM 天之神铁 1
+CheckItemaddvaLue 8 1 < 3
+#Act
+TAKE 天之神铁 1
+GAMEDIAMOND - 30
+ChangeitemaddvaLue 8 1 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$RING_R>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\神阶升级.txt <$RING_R>
+CHECKGAMEDIAMOND > 119
+CHECKITEM 天之神铁 2
+CheckItemaddvaLue 8 1 < 3
+#Act
+TAKE 天之神铁 2
+GAMEDIAMOND - 120
+ChangeitemaddvaLue 8 1 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$RING_R>强化成功。
+Break
+#ElseAct
+MessageBox [失败]:您的材料或点卷不足或者已升3点。
+Close
+Break
+
+
+
+[@Main_07]
+#IF
+EQUAL <$BELT>
+#Act
+MessageBox 抱歉,您没有佩带腰带!
+break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\装备升级.txt <$BELT>
+#ElseAct
+MessageBox 你佩带的<$BELT>无法升级!
+break
+
+#IF
+#Act
+close
+#Say
+\ \
+<轩辕需500元宝，圣阶需神铁*1+点卷*30，神级需神铁*2+点卷*120/FCOLOR=103>\ \
+攻击:<点击升级/@Ksqh28x> 强化腰带1攻击  魔法:<点击升级/@Ksqh29x> 强化腰带1魔法\　\
+道术:<点击升级/@Ksqh30x> 强化腰带1道术  \　\  \ 
+
+　　　　　　　　　　　　　　　　　　　　　　　　 <返回菜单/@Main>　　　　　　　　　　　　　　　　　　　　　　　　　
+
+
+[@Ksqh28x]
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\装备升级.txt <$BELT>
+#ElseAct
+MessageBox 只有轩辕及以上装备才可以升级!!
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\轩辕升级.txt <$BELT>
+CheckItemaddvaLue 10 2 < 3
+CheckGameGold > 499
+#Act
+GameGold - 500
+ChangeitemaddvaLue 10 2 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$BELT>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\圣阶升级.txt <$BELT>
+CHECKGAMEDIAMOND > 29
+CHECKITEM 天之神铁 1
+CheckItemaddvaLue 10 2 < 3
+#Act
+TAKE 天之神铁 1
+GAMEDIAMOND - 30
+ChangeitemaddvaLue 10 2 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$BELT>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\神阶升级.txt <$BELT>
+CHECKGAMEDIAMOND > 119
+CHECKITEM 天之神铁 2
+CheckItemaddvaLue 10 2 < 3
+#Act
+TAKE 天之神铁 2
+GAMEDIAMOND - 120
+ChangeitemaddvaLue 10 2 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$BELT>强化成功。
+Break
+#ElseAct
+MessageBox [失败]:您的材料或点卷不足或者已升3点。
+Close
+Break
+
+
+[@Ksqh29x]
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\装备升级.txt <$BELT>
+#ElseAct
+MessageBox 只有轩辕及以上装备才可以升级!!
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\轩辕升级.txt <$BELT>
+CheckItemaddvaLue 10 3 < 3
+CheckGameGold > 499
+#Act
+GameGold - 500
+ChangeitemaddvaLue 10 3 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$BELT>强化成功。
+Break
+
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\圣阶升级.txt <$BELT>
+CHECKGAMEDIAMOND > 29
+CHECKITEM 天之神铁 1
+CheckItemaddvaLue 10 3 < 3
+#Act
+TAKE 天之神铁 1
+GAMEDIAMOND - 30
+ChangeitemaddvaLue 10 3 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$BELT>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\神阶升级.txt <$BELT>
+CHECKGAMEDIAMOND > 119
+CHECKITEM 天之神铁 2
+CheckItemaddvaLue 10 3 < 3
+#Act
+TAKE 天之神铁 2
+GAMEDIAMOND - 120
+ChangeitemaddvaLue 10 3 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$BELT>强化成功。
+Break
+#ElseAct
+MessageBox [失败]:您的材料或点卷不足或者已升3点。
+Close
+Break
+
+
+[@Ksqh30x]
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\装备升级.txt <$BELT>
+#ElseAct
+MessageBox 只有轩辕及以上装备才可以升级!!
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\轩辕升级.txt <$BELT>
+CheckItemaddvaLue 10 4 < 3
+CheckGameGold > 499
+#Act
+GameGold - 500
+ChangeitemaddvaLue 10 4 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$BELT>强化成功。
+Break
+
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\圣阶升级.txt <$BELT>
+CHECKGAMEDIAMOND > 29
+CHECKITEM 天之神铁 1
+CheckItemaddvaLue 10 4 < 3
+#Act
+TAKE 天之神铁 1
+GAMEDIAMOND - 30
+ChangeitemaddvaLue 10 4 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$BELT>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\神阶升级.txt <$BELT>
+CHECKGAMEDIAMOND > 119
+CHECKITEM 天之神铁 2
+CheckItemaddvaLue 10 4 < 3
+#Act
+TAKE 天之神铁 2
+GAMEDIAMOND - 120
+ChangeitemaddvaLue 10 4 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$BELT>强化成功。
+Break
+#ElseAct
+MessageBox [失败]:您的材料或点卷不足或者已升3点。
+Close
+Break
+
+
+[@Ksqh31x]
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\装备升级.txt <$BELT>
+#ElseAct
+MessageBox 只有轩辕及以上装备才可以升级!!
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\轩辕升级.txt <$BELT>
+CheckItemaddvaLue 10 0 < 3
+CheckGameGold > 499
+#Act
+GameGold - 500
+ChangeitemaddvaLue 10 0 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$BELT>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\圣阶升级.txt <$BELT>
+CHECKGAMEDIAMOND > 29
+CHECKITEM 天之神铁 1
+CheckItemaddvaLue 10 0 < 3
+#Act
+TAKE 天之神铁 1
+GAMEDIAMOND - 30
+ChangeitemaddvaLue 10 0 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$BELT>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\神阶升级.txt <$BELT>
+CHECKGAMEDIAMOND > 119
+CHECKITEM 天之神铁 2
+CheckItemaddvaLue 10 0 < 3
+#Act
+TAKE 天之神铁 2
+GAMEDIAMOND - 120
+ChangeitemaddvaLue 10 0 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$BELT>强化成功。
+Break
+#ElseAct
+MessageBox [失败]:您的材料或点卷不足或者已升3点。
+Close
+Break
+
+
+[@Ksqh32x]
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\装备升级.txt <$BELT>
+#ElseAct
+MessageBox 只有轩辕及以上装备才可以升级!!
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\轩辕升级.txt <$BELT>
+CheckItemaddvaLue 10 1 < 3
+CheckGameGold > 499
+#Act
+GameGold - 500
+ChangeitemaddvaLue 10 1 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$BELT>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\圣阶升级.txt <$BELT>
+CHECKGAMEDIAMOND > 29
+CHECKITEM 天之神铁 1
+CheckItemaddvaLue 10 1 < 3
+#Act
+TAKE 天之神铁 1
+GAMEDIAMOND - 30
+ChangeitemaddvaLue 10 1 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$BELT>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\神阶升级.txt <$BELT>
+CHECKGAMEDIAMOND > 119
+CHECKITEM 天之神铁 2
+CheckItemaddvaLue 10 1 < 3
+#Act
+TAKE 天之神铁 2
+GAMEDIAMOND - 120
+ChangeitemaddvaLue 10 1 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$BELT>强化成功。
+Break
+#ElseAct
+MessageBox [失败]:您的材料或点卷不足或者已升3点。
+Close
+Break
+
+[@Main_08]
+#IF
+EQUAL <$BOOTS>
+#Act
+MessageBox 抱歉,您没有佩带靴子!
+break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\装备升级.txt <$BOOTS>
+#ElseAct
+MessageBox 你佩带的<$BOOTS>无法升级!
+break
+#IF
+#Act
+close
+#Say
+\ \
+<轩辕需500元宝，圣阶需神铁*1+点卷*30，神级需神铁*2+点卷*120/FCOLOR=103>\ \
+攻击:<点击升级/@Ksqh33x> 强化靴子1攻击  魔法:<点击升级/@Ksqh34x> 强化靴子1魔法\　\
+道术:<点击升级/@Ksqh35x> 强化靴子1道术  \　\  \
+
+　　　　　　　　　　　　　　　　　　　　　　　　 <返回菜单/@Main>　　　　　　　　　　　　　　　　　　　　　　　　　　
+
+[@Ksqh33x]
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\装备升级.txt <$BOOTS>
+#ElseAct
+MessageBox 只有轩辕及以上装备才可以升级!!
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\轩辕升级.txt <$BOOTS>
+CheckItemaddvaLue 11 2 < 3
+CheckGameGold > 499
+#Act
+GameGold - 500
+ChangeitemaddvaLue 11 2 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$BOOTS>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\圣阶升级.txt <$BOOTS>
+CHECKGAMEDIAMOND > 29
+CHECKITEM 天之神铁 1
+CheckItemaddvaLue 11 2 < 3
+#Act
+TAKE 天之神铁 1
+GAMEDIAMOND - 30
+ChangeitemaddvaLue 11 2 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$BOOTS>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\神阶升级.txt <$BOOTS>
+CHECKGAMEDIAMOND > 119
+CHECKITEM 天之神铁 2
+CheckItemaddvaLue 11 2 < 3
+#Act
+TAKE 天之神铁 2
+GAMEDIAMOND - 120
+ChangeitemaddvaLue 11 2 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$BOOTS>强化成功。
+Break
+#ElseAct
+MessageBox [失败]:您的材料或点卷不足或者已升3点。
+Close
+Break
+
+
+[@Ksqh34x]
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\装备升级.txt <$BOOTS>
+#ElseAct
+MessageBox 只有轩辕及以上装备才可以升级!!
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\轩辕升级.txt <$BOOTS>
+CheckItemaddvaLue 11 3 < 3
+CheckGameGold > 499
+#Act
+GameGold - 500
+ChangeitemaddvaLue 11 3 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$BOOTS>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\圣阶升级.txt <$BOOTS>
+CHECKGAMEDIAMOND > 29
+CHECKITEM 天之神铁 1
+CheckItemaddvaLue 11 3 < 3
+#Act
+TAKE 天之神铁 1
+GAMEDIAMOND - 30
+ChangeitemaddvaLue 11 3 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$BOOTS>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\神阶升级.txt <$BOOTS>
+CHECKGAMEDIAMOND > 119
+CHECKITEM 天之神铁 2
+CheckItemaddvaLue 11 3 < 3
+#Act
+TAKE 天之神铁 2
+GAMEDIAMOND - 120
+ChangeitemaddvaLue 11 3 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$BOOTS>强化成功。
+Break
+#ElseAct
+MessageBox [失败]:您的材料或点卷不足或者已升3点。
+Close
+Break
+
+
+[@Ksqh35x]
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\装备升级.txt <$BOOTS>
+#ElseAct
+MessageBox 只有轩辕及以上装备才可以升级!!
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\轩辕升级.txt <$BOOTS>
+CheckItemaddvaLue 11 4 < 3
+CheckGameGold > 499
+#Act
+GameGold - 500
+ChangeitemaddvaLue 11 4 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$BOOTS>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\圣阶升级.txt <$BOOTS>
+CHECKGAMEDIAMOND > 29
+CHECKITEM 天之神铁 1
+CheckItemaddvaLue 11 4 < 3
+#Act
+TAKE 天之神铁 1
+GAMEDIAMOND - 30
+ChangeitemaddvaLue 11 4 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$BOOTS>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\神阶升级.txt <$BOOTS>
+CHECKGAMEDIAMOND > 119
+CHECKITEM 天之神铁 2
+CheckItemaddvaLue 11 4 < 3
+#Act
+TAKE 天之神铁 2
+GAMEDIAMOND - 120
+ChangeitemaddvaLue 11 4 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$BOOTS>强化成功。
+Break
+#ElseAct
+MessageBox [失败]:您的材料或点卷不足或者已升3点。
+Close
+Break
+
+
+[@Ksqh36x]
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\装备升级.txt <$BOOTS>
+#ElseAct
+MessageBox 只有轩辕及以上装备才可以升级!!
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\轩辕升级.txt <$BOOTS>
+CheckItemaddvaLue 11 0 < 3
+CheckGameGold > 499
+#Act
+GameGold - 500
+ChangeitemaddvaLue 11 0 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$BOOTS>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\圣阶升级.txt <$BOOTS>
+CHECKGAMEDIAMOND > 29
+CHECKITEM 天之神铁 1
+CheckItemaddvaLue 11 0 < 3
+#Act
+TAKE 天之神铁 1
+GAMEDIAMOND - 30
+ChangeitemaddvaLue 11 0 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$BOOTS>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\神阶升级.txt <$BOOTS>
+CHECKGAMEDIAMOND > 119
+CHECKITEM 天之神铁 2
+CheckItemaddvaLue 11 0 < 3
+#Act
+TAKE 天之神铁 2
+GAMEDIAMOND - 120
+ChangeitemaddvaLue 11 0 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$BOOTS>强化成功。
+Break
+#ElseAct
+MessageBox [失败]:您的材料或点卷不足或者已升3点。
+Close
+Break
+
+
+[@Ksqh37x]
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\装备升级.txt <$BOOTS>
+#ElseAct
+MessageBox 只有轩辕及以上装备才可以升级!!
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\轩辕升级.txt <$BOOTS>
+CheckItemaddvaLue 11 1 < 3
+CheckGameGold > 499
+#Act
+GameGold - 500
+ChangeitemaddvaLue 11 1 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$BOOTS>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\圣阶升级.txt <$BOOTS>
+CHECKGAMEDIAMOND > 29
+CHECKITEM 天之神铁 1
+CheckItemaddvaLue 11 1 < 3
+#Act
+TAKE 天之神铁 1
+GAMEDIAMOND - 30
+ChangeitemaddvaLue 11 1 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$BOOTS>强化成功。
+Break
+
+#IF
+CheckContainsTextList ..\QuestDiary\装备强化\神阶升级.txt <$BOOTS>
+CHECKGAMEDIAMOND > 119
+CHECKITEM 天之神铁 2
+CheckItemaddvaLue 11 1 < 3
+#Act
+TAKE 天之神铁 2
+GAMEDIAMOND - 120
+ChangeitemaddvaLue 11 1 + 1
+GuildNoticeMsg 251 249 (*)恭喜玩家[%s]在[炼金师]处,将<$BOOTS>强化成功。
+Break
+#ElseAct
+MessageBox [失败]:您的材料或点卷不足或者已升3点。
+Close
+Break
+
+
+
+
+

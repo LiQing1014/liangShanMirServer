@@ -1,0 +1,632 @@
+
+[@main]
+
+
+#OR
+CHECKTITLE 天魔妖体Lv10
+CHECKTITLE 天魔妖体Lv11
+CHECKTITLE 天魔妖体Lv12
+CHECKTITLE 天魔妖体Lv13
+CHECKTITLE 天魔妖体Lv14
+CHECKTITLE 天魔妖体Lv15
+CHECKTITLE 天魔妖体Lv16
+CHECKTITLE 天魔妖体Lv17
+CHECKTITLE 天魔妖体Lv18
+CHECKTITLE 天魔妖体Lv19
+CHECKTITLE 天魔妖体Lv20
+CHECKTITLE 天魔妖体Lv21
+CHECKTITLE 天魔妖体Lv22
+CHECKTITLE 天魔妖体Lv23
+CHECKTITLE 天魔妖体Lv24
+CHECKTITLE 天魔妖体Lv25
+CHECKTITLE 天魔妖体Lv26
+CHECKTITLE 天魔妖体Lv27
+CHECKTITLE 天魔妖体Lv28
+CHECKTITLE 天魔妖体Lv29
+CHECKTITLE 天魔妖体Lv30
+#ACT
+#elseact
+MESSAGEBOX 对不起，请先将天魔妖体提升到Lv10在来！
+BREAK
+
+#IF
+CHECKTITLE 天魔妖体Lv10
+#ACT
+MOV S$天魔材料A 悟空宝石
+MOV N$天魔材料A 10
+MOV S$天魔材料B 悟空宝石
+MOV N$天魔材料B 10
+MOV N$天魔元宝D 6000000
+MOV N$天魔大米D 600
+MOV S$天魔按钮1 <天魔妖体Lv11/FCOLOR=251>
+; MOV S$天魔按钮1 <天魔妖体Lv11|253#提升条件：^-^146#1:<$STR(S$天魔材料A)>*<$STR(N$天魔材料A)>^-^150#2:元宝*<$STR(N$天魔元宝D)>/FCOLOR=251>
+MOV S$天魔按钮2 <天魔妖体Lv12/FCOLOR=248>
+MOV S$天魔按钮3 <天魔妖体Lv13/FCOLOR=248>
+MOV S$天魔按钮4 <天魔妖体Lv14/FCOLOR=248>
+MOV S$天魔按钮5 <天魔妖体Lv15/FCOLOR=248>
+MOV S$当前天魔  <天魔妖体Lv10/FCOLOR=254>
+MOV S$当前的天魔 天魔妖体Lv10
+MOV S$下级的天魔 天魔妖体Lv11
+MOV N$颜色1 253
+MOV N$颜色2 253
+MOV N$颜色3 253
+MOV N$颜色4 253
+MOV N$颜色5 253
+MOV N$颜色6 253
+MOV N$颜色7 253
+MOV N$颜色8 253
+MOV N$颜色9 253
+MOV N$颜色10 253
+
+
+#IF
+CHECKTITLE 天魔妖体Lv11
+#ACT
+MOV S$天魔材料A 悟空宝石
+MOV N$天魔材料A 12
+MOV S$天魔材料B 悟空宝石
+MOV N$天魔材料B 12
+MOV N$天魔元宝D 6500000
+MOV N$天魔大米D 650
+MOV S$天魔按钮1 <天魔妖体Lv11/FCOLOR=250>
+MOV S$天魔按钮2 <天魔妖体Lv12/FCOLOR=251>
+; MOV S$天魔按钮2 <天魔妖体Lv12|253#提升条件：^-^146#1:<$STR(S$天魔材料A)>*<$STR(N$天魔材料A)>^-^150#2:元宝*<$STR(N$天魔元宝D)>/FCOLOR=251>
+MOV S$天魔按钮3 <天魔妖体Lv13/FCOLOR=248>
+MOV S$天魔按钮4 <天魔妖体Lv14/FCOLOR=248>
+MOV S$天魔按钮5 <天魔妖体Lv15/FCOLOR=248>
+MOV S$当前天魔  <天魔妖体Lv11/FCOLOR=254>
+MOV S$当前的天魔 天魔妖体Lv11
+MOV S$下级的天魔 天魔妖体Lv12
+MOV N$颜色1 254
+MOV N$颜色2 253
+MOV N$颜色3 253
+MOV N$颜色4 253
+MOV N$颜色5 253
+MOV N$颜色6 253
+MOV N$颜色7 253
+MOV N$颜色8 253
+MOV N$颜色9 253
+MOV N$颜色10 253
+
+#IF
+CHECKTITLE 天魔妖体Lv12
+#ACT
+MOV S$天魔材料A 悟空宝石
+MOV N$天魔材料A 14
+MOV S$天魔材料B 悟空宝石
+MOV N$天魔材料B 14
+MOV N$天魔元宝D 7000000
+MOV N$天魔大米D 700
+MOV S$天魔按钮1 <天魔妖体Lv11/FCOLOR=250>
+MOV S$天魔按钮2 <天魔妖体Lv12/FCOLOR=250>
+MOV S$天魔按钮3 <天魔妖体Lv13/FCOLOR=251>
+; MOV S$天魔按钮3 <天魔妖体Lv13|253#提升条件：^-^146#1:<$STR(S$天魔材料A)>*<$STR(N$天魔材料A)>^-^150#2:元宝*<$STR(N$天魔元宝D)>/FCOLOR=251>
+MOV S$天魔按钮4 <天魔妖体Lv14/FCOLOR=248>
+MOV S$天魔按钮5 <天魔妖体Lv15/FCOLOR=248>
+MOV S$当前天魔  <天魔妖体Lv12/FCOLOR=254>
+MOV S$当前的天魔 天魔妖体Lv12
+MOV S$下级的天魔 天魔妖体Lv13
+MOV N$颜色1 254
+MOV N$颜色2 254
+MOV N$颜色3 253
+MOV N$颜色4 253
+MOV N$颜色5 253
+MOV N$颜色6 253
+MOV N$颜色7 253
+MOV N$颜色8 253
+MOV N$颜色9 253
+MOV N$颜色10 253
+
+
+#IF
+CHECKTITLE 天魔妖体Lv13
+#ACT
+MOV S$天魔材料A 悟空宝石
+MOV N$天魔材料A 16
+MOV S$天魔材料B 悟空宝石
+MOV N$天魔材料B 16
+MOV N$天魔元宝D 7500000
+MOV N$天魔大米D 750
+MOV S$天魔按钮1 <天魔妖体Lv11/FCOLOR=250>
+MOV S$天魔按钮2 <天魔妖体Lv12/FCOLOR=250>
+MOV S$天魔按钮3 <天魔妖体Lv13/FCOLOR=250>
+MOV S$天魔按钮4 <天魔妖体Lv14/FCOLOR=251>
+; MOV S$天魔按钮4 <天魔妖体Lv14|253#提升条件：^-^146#1:<$STR(S$天魔材料A)>*<$STR(N$天魔材料A)>^-^150#2:元宝*<$STR(N$天魔元宝D)>/FCOLOR=251>
+MOV S$天魔按钮5 <天魔妖体Lv15/FCOLOR=248>
+MOV S$当前天魔  <天魔妖体Lv13/FCOLOR=254>
+MOV S$当前的天魔 天魔妖体Lv13
+MOV S$下级的天魔 天魔妖体Lv14
+MOV N$颜色1 254
+MOV N$颜色2 254
+MOV N$颜色3 254
+MOV N$颜色4 253
+MOV N$颜色5 253
+MOV N$颜色6 253
+MOV N$颜色7 253
+MOV N$颜色8 253
+MOV N$颜色9 253
+MOV N$颜色10 253
+
+#IF
+CHECKTITLE 天魔妖体Lv14
+#ACT
+MOV S$天魔材料A 悟空宝石
+MOV N$天魔材料A 18
+MOV S$天魔材料B 悟空宝石
+MOV N$天魔材料B 18
+MOV N$天魔元宝D 8000000
+MOV N$天魔大米D 800
+MOV S$天魔按钮1 <天魔妖体Lv11/FCOLOR=250>
+MOV S$天魔按钮2 <天魔妖体Lv12/FCOLOR=250>
+MOV S$天魔按钮3 <天魔妖体Lv13/FCOLOR=250>
+MOV S$天魔按钮4 <天魔妖体Lv14/FCOLOR=250>
+MOV S$天魔按钮5 <天魔妖体Lv15/FCOLOR=251>
+; MOV S$天魔按钮5 <天魔妖体Lv15|253#提升条件：^-^146#1:<$STR(S$天魔材料A)>*<$STR(N$天魔材料A)>^-^150#2:元宝*<$STR(N$天魔元宝D)>/FCOLOR=251>
+MOV S$当前天魔  <天魔妖体Lv14/FCOLOR=254>
+MOV S$当前的天魔 天魔妖体Lv14
+MOV S$下级的天魔 天魔妖体Lv15
+MOV N$颜色1 254
+MOV N$颜色2 254
+MOV N$颜色3 254
+MOV N$颜色4 254
+MOV N$颜色5 253
+MOV N$颜色6 253
+MOV N$颜色7 253
+MOV N$颜色8 253
+MOV N$颜色9 253
+MOV N$颜色10 253
+
+
+#IF
+CHECKTITLE 天魔妖体Lv15
+#ACT
+SET [64] 1
+MOV S$天魔材料A 悟空宝石
+MOV N$天魔材料A 20
+MOV S$天魔材料B 悟空宝石
+MOV N$天魔材料B 20
+MOV N$天魔元宝D 8500000
+MOV N$天魔大米D 850
+MOV S$天魔按钮1 <天魔妖体Lv16/FCOLOR=251>
+; MOV S$天魔按钮1 <天魔妖体Lv16|253#提升条件：^-^146#1:<$STR(S$天魔材料A)>*<$STR(N$天魔材料A)>^-^150#2:元宝*<$STR(N$天魔元宝D)>/FCOLOR=251>
+MOV S$天魔按钮2 <天魔妖体Lv17/FCOLOR=248>
+MOV S$天魔按钮3 <天魔妖体Lv18/FCOLOR=248>
+MOV S$天魔按钮4 <天魔妖体Lv19/FCOLOR=248>
+MOV S$天魔按钮5 <天魔妖体Lv20/FCOLOR=248>
+MOV S$当前天魔  <天魔妖体Lv15/FCOLOR=254>
+MOV S$当前的天魔 天魔妖体Lv15
+MOV S$下级的天魔 天魔妖体Lv16
+MOV N$颜色1 254
+MOV N$颜色2 254
+MOV N$颜色3 254
+MOV N$颜色4 254
+MOV N$颜色5 254
+MOV N$颜色6 253
+MOV N$颜色7 253
+MOV N$颜色8 253
+MOV N$颜色9 253
+MOV N$颜色10 253
+
+#IF
+CHECKTITLE 天魔妖体Lv16
+#ACT
+MOV S$天魔材料A 悟空宝石
+MOV N$天魔材料A 22
+MOV S$天魔材料B 悟空宝石
+MOV N$天魔材料B 22
+MOV N$天魔元宝D 9000000
+MOV N$天魔大米D 900
+MOV S$天魔按钮1 <天魔妖体Lv16/FCOLOR=250>
+MOV S$天魔按钮2 <天魔妖体Lv17/FCOLOR=251>
+; MOV S$天魔按钮2 <天魔妖体Lv17|253#提升条件：^-^146#1:<$STR(S$天魔材料A)>*<$STR(N$天魔材料A)>^-^150#2:元宝*<$STR(N$天魔元宝D)>/FCOLOR=251>
+MOV S$天魔按钮3 <天魔妖体Lv18/FCOLOR=248>
+MOV S$天魔按钮4 <天魔妖体Lv19/FCOLOR=248>
+MOV S$天魔按钮5 <天魔妖体Lv20/FCOLOR=248>
+MOV S$当前天魔  <天魔妖体Lv16/FCOLOR=254>
+MOV S$当前的天魔 天魔妖体Lv16
+MOV S$下级的天魔 天魔妖体Lv17
+MOV N$颜色1 254
+MOV N$颜色2 254
+MOV N$颜色3 254
+MOV N$颜色4 254
+MOV N$颜色5 254
+MOV N$颜色6 254
+MOV N$颜色7 253
+MOV N$颜色8 253
+MOV N$颜色9 253
+MOV N$颜色10 253
+
+#IF
+CHECKTITLE 天魔妖体Lv17
+#ACT
+MOV S$天魔材料A 悟空宝石
+MOV N$天魔材料A 24
+MOV S$天魔材料B 悟空宝石
+MOV N$天魔材料B 25
+MOV N$天魔元宝D 9500000
+MOV N$天魔大米D 950
+MOV S$天魔按钮1 <天魔妖体Lv16/FCOLOR=250>
+MOV S$天魔按钮2 <天魔妖体Lv17/FCOLOR=250>
+MOV S$天魔按钮3 <天魔妖体Lv18/FCOLOR=251>
+; MOV S$天魔按钮2 <天魔妖体Lv17|253#提升条件：^-^146#1:<$STR(S$天魔材料A)>*<$STR(N$天魔材料A)>^-^150#2:元宝*<$STR(N$天魔元宝D)>/FCOLOR=251>
+MOV S$天魔按钮4 <天魔妖体Lv19/FCOLOR=248>
+MOV S$天魔按钮5 <天魔妖体Lv20/FCOLOR=248>
+MOV S$当前天魔  <天魔妖体Lv17/FCOLOR=254>
+MOV S$当前的天魔 天魔妖体Lv17
+MOV S$下级的天魔 天魔妖体Lv18
+MOV N$颜色1 254
+MOV N$颜色2 254
+MOV N$颜色3 254
+MOV N$颜色4 254
+MOV N$颜色5 254
+MOV N$颜色6 254
+MOV N$颜色7 254
+MOV N$颜色8 253
+MOV N$颜色9 253
+MOV N$颜色10 253
+
+
+
+#IF
+CHECKTITLE 天魔妖体Lv18
+#ACT
+MOV S$天魔材料A 悟空宝石
+MOV N$天魔材料A 26
+MOV S$天魔材料B 悟空宝石
+MOV N$天魔材料B 26
+MOV N$天魔元宝D 10000000
+MOV N$天魔大米D 1000
+MOV S$天魔按钮1 <天魔妖体Lv16/FCOLOR=250>
+MOV S$天魔按钮2 <天魔妖体Lv17/FCOLOR=250>
+MOV S$天魔按钮3 <天魔妖体Lv18/FCOLOR=250>
+MOV S$天魔按钮4 <天魔妖体Lv19/FCOLOR=251>
+; MOV S$天魔按钮4 <天魔妖体Lv19|253#提升条件：^-^146#1:<$STR(S$天魔材料A)>*<$STR(N$天魔材料A)>^-^150#2:元宝*<$STR(N$天魔元宝D)>/FCOLOR=251>
+MOV S$天魔按钮5 <天魔妖体Lv20/FCOLOR=248>
+MOV S$当前天魔  <天魔妖体Lv18/FCOLOR=254>
+MOV S$当前的天魔 天魔妖体Lv18
+MOV S$下级的天魔 天魔妖体Lv19
+MOV N$颜色1 254
+MOV N$颜色2 254
+MOV N$颜色3 254
+MOV N$颜色4 254
+MOV N$颜色5 254
+MOV N$颜色6 254
+MOV N$颜色7 254
+MOV N$颜色8 254
+MOV N$颜色9 253
+MOV N$颜色10 253
+
+#IF
+CHECKTITLE 天魔妖体Lv19
+#ACT
+MOV S$天魔材料A 悟空宝石
+MOV N$天魔材料A 28
+MOV S$天魔材料B 悟空宝石
+MOV N$天魔材料B 28
+MOV N$天魔元宝D 12000000
+MOV N$天魔大米D 1200
+MOV S$天魔按钮1 <天魔妖体Lv16/FCOLOR=250>
+MOV S$天魔按钮2 <天魔妖体Lv17/FCOLOR=250>
+MOV S$天魔按钮3 <天魔妖体Lv18/FCOLOR=250>
+MOV S$天魔按钮4 <天魔妖体Lv19/FCOLOR=250>
+MOV S$天魔按钮5 <天魔妖体Lv20/FCOLOR=251>
+; MOV S$天魔按钮5 <天魔妖体Lv20|253#提升条件：^-^146#1:<$STR(S$天魔材料A)>*<$STR(N$天魔材料A)>^-^150#2:元宝*<$STR(N$天魔元宝D)>/FCOLOR=251>
+MOV S$当前天魔  <天魔妖体Lv19/FCOLOR=254>
+MOV S$当前的天魔 天魔妖体Lv19
+MOV S$下级的天魔 天魔妖体Lv20
+MOV N$颜色1 254
+MOV N$颜色2 254
+MOV N$颜色3 254
+MOV N$颜色4 254
+MOV N$颜色5 254
+MOV N$颜色6 254
+MOV N$颜色7 254
+MOV N$颜色8 254
+MOV N$颜色9 254
+MOV N$颜色10 253
+
+
+
+
+#OR
+CHECKTITLE 天魔妖体Lv20
+CHECKTITLE 天魔妖体Lv21
+CHECKTITLE 天魔妖体Lv22
+CHECKTITLE 天魔妖体Lv23
+CHECKTITLE 天魔妖体Lv24
+CHECKTITLE 天魔妖体Lv25
+CHECKTITLE 天魔妖体Lv26
+CHECKTITLE 天魔妖体Lv27
+CHECKTITLE 天魔妖体Lv28
+CHECKTITLE 天魔妖体Lv29
+CHECKTITLE 天魔妖体Lv30
+#ACT
+MOV S$天魔材料A 当前天魔已满
+MOV N$天魔材料A 0
+MOV S$天魔材料B 当前天魔已满
+MOV N$天魔材料B 0
+MOV N$天魔元宝D 0
+MOV N$天魔大米D 0
+MOV S$天魔按钮1 <天魔妖体Lv16/FCOLOR=250>
+MOV S$天魔按钮2 <天魔妖体Lv17/FCOLOR=250>
+MOV S$天魔按钮3 <天魔妖体Lv18/FCOLOR=250>
+MOV S$天魔按钮4 <天魔妖体Lv19/FCOLOR=250>
+MOV S$天魔按钮5 <天魔妖体Lv20/FCOLOR=250>
+MOV S$当前天魔  <天魔已圆满/FCOLOR=249>
+MOV S$当前的天魔 当前天魔已满
+MOV S$下级的天魔 当前天魔已满
+MOV N$颜色1 254
+MOV N$颜色2 254
+MOV N$颜色3 254
+MOV N$颜色4 254
+MOV N$颜色5 254
+MOV N$颜色6 254
+MOV N$颜色7 254
+MOV N$颜色8 254
+MOV N$颜色9 254
+MOV N$颜色10 254
+
+#OR
+CHECKTITLE 天魔妖体Lv10
+CHECKTITLE 天魔妖体Lv11
+CHECKTITLE 天魔妖体Lv12
+CHECKTITLE 天魔妖体Lv13
+CHECKTITLE 天魔妖体Lv14
+#ACT
+close
+OPENMERCHANTBIGDLG 1 558 1 4 0 0 1 495 2
+#SAY
+; {    ☆一◇刀◇烈◇火☆/AUTOCOLOR=209,253,254,252,215,95,252,247}     <你当前：/FCOLOR=250><$STR(S$当前天魔)>\
+; <━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━/FCOLOR=58>\ 
+; \<天魔妖体:/FCOLOR=161><天魔体质的修炼者拥有强大的肉身，能在战斗中展现出极高的战力和生存能力/FCOLOR=250>\ \
+; \<功能介绍:/FCOLOR=161><天魔妖体会大幅度增加人物的体力元素/FCOLOR=254>\ \
+; \    <☆☆☆/FCOLOR=249>  <$STR(S$天魔按钮1)>  <☆☆☆/FCOLOR=249>  <☆☆☆/FCOLOR=250>  <增加体力元素+22%/FCOLOR=<$STR(N$颜色1)>>  <☆☆☆/FCOLOR=250>\ \
+; \    <☆☆☆/FCOLOR=249>  <$STR(S$天魔按钮2)>  <☆☆☆/FCOLOR=249>  <☆☆☆/FCOLOR=250>  <增加体力元素+24%/FCOLOR=<$STR(N$颜色2)>>  <☆☆☆/FCOLOR=250>\ \
+; \    <☆☆☆/FCOLOR=249>  <$STR(S$天魔按钮3)>  <☆☆☆/FCOLOR=249>  <☆☆☆/FCOLOR=250>  <增加体力元素+26%/FCOLOR=<$STR(N$颜色3)>>  <☆☆☆/FCOLOR=250>\ \
+; \    <☆☆☆/FCOLOR=249>  <$STR(S$天魔按钮4)>  <☆☆☆/FCOLOR=249>  <☆☆☆/FCOLOR=250>  <增加体力元素+28%/FCOLOR=<$STR(N$颜色4)>>  <☆☆☆/FCOLOR=250>\ \
+; \    <☆☆☆/FCOLOR=249>  <$STR(S$天魔按钮5)>  <☆☆☆/FCOLOR=249>  <☆☆☆/FCOLOR=250>  <增加体力元素+30%/FCOLOR=<$STR(N$颜色5)>> <☆☆☆/FCOLOR=250>\ 
+; <━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━/FCOLOR=58>\ \
+; \                   <材料提升|249#提升条件：^-^250#1.<$STR(S$天魔材料A)>*<$STR(N$天魔材料A)>^-^250#2.元宝*<$STR(N$天魔元宝D)>/@材料提升>                          <大米提升|249#提升条件：^-^253#1.大米*<$STR(N$天魔大米D)>/@大米提升>
+
+<Img|width=620|height=300|reset=1|scale9l=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|esc=1|scale9t=10>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=17.0|y=20.0|tipsx=10|tipsy=80|color=250|size=16|text=你当前：>
+<RText|a=0|x=103.0|y=20.0|tipsx=10|tipsy=80|color=255|size=16|text=<$STR(S$当前天魔)>>
+<Text|a=0|x=14.0|y=40.0|tipsx=10|tipsy=80|color=58|size=16|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+<Text|a=0|x=14.0|y=56.0|tipsx=10|tipsy=80|color=161|size=16|text=天魔妖体:>
+<Text|a=0|x=86.0|y=56.0|tipsx=10|tipsy=80|color=250|size=16|text=天魔体质的修炼者拥有强大的肉身，能在战斗中展现出极高的战力和生存能力>
+<Text|a=0|x=14.0|y=78.0|tipsx=10|tipsy=80|color=161|size=16|text=功能介绍:>
+<Text|a=0|x=86.0|y=78.0|tipsx=10|tipsy=80|color=254|size=16|text=天魔妖体会大幅度增加人物的体力元素>
+<Text|a=0|x=14.0|y=105.0|tipsx=10|tipsy=80|color=249|size=16|text=☆☆☆>
+<RText|a=0|x=80.0|y=105.0|tipsx=10|tipsy=80|color=255|size=16|text=<$STR(S$天魔按钮1)>>
+<Text|a=0|x=227.0|y=105.0|tipsx=10|tipsy=80|color=249|size=16|text=☆☆☆>
+<Text|a=0|x=281.0|y=105.0|tipsx=10|tipsy=80|color=250|size=16|text=☆☆☆>
+<Text|a=0|x=353.0|y=105.0|tipsx=10|tipsy=80|color=254|size=16|text=增加体力元素+22%>
+<Text|a=0|x=518.0|y=105.0|tipsx=10|tipsy=80|color=250|size=16|text=☆☆☆>
+<Text|a=0|x=14.0|y=124.0|tipsx=10|tipsy=80|color=249|size=16|text=☆☆☆>
+<RText|a=0|x=80.0|y=124.0|tipsx=10|tipsy=80|color=255|size=16|text=<$STR(S$天魔按钮2)>>
+<Text|a=0|x=227.0|y=124.0|tipsx=10|tipsy=80|color=249|size=16|text=☆☆☆>
+<Text|a=0|x=281.0|y=124.0|tipsx=10|tipsy=80|color=250|size=16|text=☆☆☆>
+<Text|a=0|x=353.0|y=124.0|tipsx=10|tipsy=80|color=253|size=16|text=增加体力元素+24%>
+<Text|a=0|x=518.0|y=124.0|tipsx=10|tipsy=80|color=250|size=16|text=☆☆☆>
+<Text|a=0|x=14.0|y=150.0|tipsx=10|tipsy=80|color=249|size=16|text=☆☆☆>
+<RText|a=0|x=80.0|y=150.0|tipsx=10|tipsy=80|color=255|size=16|text=<$STR(S$天魔按钮3)>>
+<Text|a=0|x=227.0|y=150.0|tipsx=10|tipsy=80|color=249|size=16|text=☆☆☆>
+<Text|a=0|x=281.0|y=150.0|tipsx=10|tipsy=80|color=250|size=16|text=☆☆☆>
+<Text|a=0|x=353.0|y=150.0|tipsx=10|tipsy=80|color=253|size=16|text=增加体力元素+26%>
+<Text|a=0|x=518.0|y=150.0|tipsx=10|tipsy=80|color=250|size=16|text=☆☆☆>
+<Text|a=0|x=14.0|y=169.0|tipsx=10|tipsy=80|color=249|size=16|text=☆☆☆>
+<RText|a=0|x=80.0|y=169.0|tipsx=10|tipsy=80|color=255|size=16|text=<$STR(S$天魔按钮4)>>
+<Text|a=0|x=227.0|y=169.0|tipsx=10|tipsy=80|color=249|size=16|text=☆☆☆>
+<Text|a=0|x=281.0|y=169.0|tipsx=10|tipsy=80|color=250|size=16|text=☆☆☆>
+<Text|a=0|x=353.0|y=169.0|tipsx=10|tipsy=80|color=253|size=16|text=增加体力元素+28%>
+<Text|a=0|x=518.0|y=169.0|tipsx=10|tipsy=80|color=250|size=16|text=☆☆☆>
+<Text|a=0|x=14.0|y=191.0|tipsx=10|tipsy=80|color=249|size=16|text=☆☆☆>
+<RText|a=0|x=80.0|y=191.0|tipsx=10|tipsy=80|color=255|size=16|text=<$STR(S$天魔按钮5)>>
+<Text|a=0|x=227.0|y=191.0|tipsx=10|tipsy=80|color=249|size=16|text=☆☆☆>
+<Text|a=0|x=281.0|y=191.0|tipsx=10|tipsy=80|color=250|size=16|text=☆☆☆>
+<Text|a=0|x=353.0|y=191.0|tipsx=10|tipsy=80|color=253|size=16|text=增加体力元素+30%>
+<Text|a=0|x=518.0|y=191.0|tipsx=10|tipsy=80|color=250|size=16|text=☆☆☆>
+<Text|a=0|x=14.0|y=211.0|tipsx=10|tipsy=80|color=58|size=16|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+<Text|a=0|x=14.0|y=256.0|tipsx=10|tipsy=80|color=255|size=16|text=材料提升|link=@材料提升>
+<Text|a=0|x=182.0|y=257.0|tipsx=10|tipsy=80|color=255|size=16|text=材料提升|link=@大米提升>
+
+
+
+#OR
+CHECKTITLE 天魔妖体Lv15
+CHECKTITLE 天魔妖体Lv16
+CHECKTITLE 天魔妖体Lv17
+CHECKTITLE 天魔妖体Lv18
+CHECKTITLE 天魔妖体Lv19
+CHECKTITLE 天魔妖体Lv20
+CHECKTITLE 天魔妖体Lv21
+CHECKTITLE 天魔妖体Lv22
+CHECKTITLE 天魔妖体Lv23
+CHECKTITLE 天魔妖体Lv24
+CHECKTITLE 天魔妖体Lv25
+CHECKTITLE 天魔妖体Lv26
+CHECKTITLE 天魔妖体Lv27
+CHECKTITLE 天魔妖体Lv28
+CHECKTITLE 天魔妖体Lv29
+CHECKTITLE 天魔妖体Lv30
+#ACT
+close
+OPENMERCHANTBIGDLG 1 558 1 4 0 0 1 495 2
+#SAY
+; {    ☆一◇刀◇烈◇火☆/AUTOCOLOR=209,253,254,252,215,95,252,247}     <你当前：/FCOLOR=250><$STR(S$当前天魔)>\
+; <━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━/FCOLOR=58>\ 
+; \<天魔妖体:/FCOLOR=161><天魔体质的修炼者拥有强大的肉身，能在战斗中展现出极高的战力和生存能力/FCOLOR=250>\ \
+; \<功能介绍:/FCOLOR=161><天魔妖体会大幅度增加人物的体力元素/FCOLOR=254>\ \
+; \    <☆☆☆/FCOLOR=249>  <$STR(S$天魔按钮1)>  <☆☆☆/FCOLOR=249>  <☆☆☆/FCOLOR=250>  <增加体力元素+32%/FCOLOR=<$STR(N$颜色6)>>  <☆☆☆/FCOLOR=250>\ \
+; \    <☆☆☆/FCOLOR=249>  <$STR(S$天魔按钮2)>  <☆☆☆/FCOLOR=249>  <☆☆☆/FCOLOR=250>  <增加体力元素+34%/FCOLOR=<$STR(N$颜色7)>>  <☆☆☆/FCOLOR=250>\ \
+; \    <☆☆☆/FCOLOR=249>  <$STR(S$天魔按钮3)>  <☆☆☆/FCOLOR=249>  <☆☆☆/FCOLOR=250>  <增加体力元素+36%/FCOLOR=<$STR(N$颜色8)>>  <☆☆☆/FCOLOR=250>\ \
+; \    <☆☆☆/FCOLOR=249>  <$STR(S$天魔按钮4)>  <☆☆☆/FCOLOR=249>  <☆☆☆/FCOLOR=250>  <增加体力元素+38%/FCOLOR=<$STR(N$颜色9)>>  <☆☆☆/FCOLOR=250>\ \
+; \    <☆☆☆/FCOLOR=249>  <$STR(S$天魔按钮5)>  <☆☆☆/FCOLOR=249>  <☆☆☆/FCOLOR=250>  <增加体力元素+40%/FCOLOR=<$STR(N$颜色10)>>  <☆☆☆/FCOLOR=250>\ 
+; <━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━/FCOLOR=58>\ \
+; \                   <材料提升|249#提升条件：^-^250#1.<$STR(S$天魔材料A)>*<$STR(N$天魔材料A)>^-^250#2.元宝*<$STR(N$天魔元宝D)>/@材料提升>                          <大米提升|249#提升条件：^-^253#1.大米*<$STR(N$天魔大米D)>/@大米提升>
+
+
+
+
+<Img|width=620|height=300|reset=1|scale9l=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|esc=1|scale9t=10>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=17.0|y=20.0|tipsx=10|tipsy=80|color=250|size=16|text=你当前：>
+<RText|a=0|x=103.0|y=20.0|tipsx=10|tipsy=80|color=255|size=16|text=<$STR(S$当前天魔)>>
+<Text|a=0|x=14.0|y=40.0|tipsx=10|tipsy=80|color=58|size=16|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+<Text|a=0|x=14.0|y=56.0|tipsx=10|tipsy=80|color=161|size=16|text=天魔妖体:>
+<Text|a=0|x=86.0|y=56.0|tipsx=10|tipsy=80|color=250|size=16|text=天魔体质的修炼者拥有强大的肉身，能在战斗中展现出极高的战力和生存能力>
+<Text|a=0|x=14.0|y=78.0|tipsx=10|tipsy=80|color=161|size=16|text=功能介绍:>
+<Text|a=0|x=86.0|y=78.0|tipsx=10|tipsy=80|color=254|size=16|text=天魔妖体会大幅度增加人物的体力元素>
+<Text|a=0|x=14.0|y=105.0|tipsx=10|tipsy=80|color=249|size=16|text=☆☆☆>
+<RText|a=0|x=80.0|y=105.0|tipsx=10|tipsy=80|color=255|size=16|text=<$STR(S$天魔按钮1)>>
+<Text|a=0|x=227.0|y=105.0|tipsx=10|tipsy=80|color=249|size=16|text=☆☆☆>
+<Text|a=0|x=281.0|y=105.0|tipsx=10|tipsy=80|color=250|size=16|text=☆☆☆>
+<Text|a=0|x=353.0|y=105.0|tipsx=10|tipsy=80|color=254|size=16|text=增加体力元素+32%>
+<Text|a=0|x=518.0|y=105.0|tipsx=10|tipsy=80|color=250|size=16|text=☆☆☆>
+<Text|a=0|x=14.0|y=124.0|tipsx=10|tipsy=80|color=249|size=16|text=☆☆☆>
+<RText|a=0|x=80.0|y=124.0|tipsx=10|tipsy=80|color=255|size=16|text=<$STR(S$天魔按钮2)>>
+<Text|a=0|x=227.0|y=124.0|tipsx=10|tipsy=80|color=249|size=16|text=☆☆☆>
+<Text|a=0|x=281.0|y=124.0|tipsx=10|tipsy=80|color=250|size=16|text=☆☆☆>
+<Text|a=0|x=353.0|y=124.0|tipsx=10|tipsy=80|color=253|size=16|text=增加体力元素+34%>
+<Text|a=0|x=518.0|y=124.0|tipsx=10|tipsy=80|color=250|size=16|text=☆☆☆>
+<Text|a=0|x=14.0|y=150.0|tipsx=10|tipsy=80|color=249|size=16|text=☆☆☆>
+<RText|a=0|x=80.0|y=150.0|tipsx=10|tipsy=80|color=255|size=16|text=<$STR(S$天魔按钮3)>>
+<Text|a=0|x=227.0|y=150.0|tipsx=10|tipsy=80|color=249|size=16|text=☆☆☆>
+<Text|a=0|x=281.0|y=150.0|tipsx=10|tipsy=80|color=250|size=16|text=☆☆☆>
+<Text|a=0|x=353.0|y=150.0|tipsx=10|tipsy=80|color=253|size=16|text=增加体力元素+36%>
+<Text|a=0|x=518.0|y=150.0|tipsx=10|tipsy=80|color=250|size=16|text=☆☆☆>
+<Text|a=0|x=14.0|y=169.0|tipsx=10|tipsy=80|color=249|size=16|text=☆☆☆>
+<RText|a=0|x=80.0|y=169.0|tipsx=10|tipsy=80|color=255|size=16|text=<$STR(S$天魔按钮4)>>
+<Text|a=0|x=227.0|y=169.0|tipsx=10|tipsy=80|color=249|size=16|text=☆☆☆>
+<Text|a=0|x=281.0|y=169.0|tipsx=10|tipsy=80|color=250|size=16|text=☆☆☆>
+<Text|a=0|x=353.0|y=169.0|tipsx=10|tipsy=80|color=253|size=16|text=增加体力元素+38%>
+<Text|a=0|x=518.0|y=169.0|tipsx=10|tipsy=80|color=250|size=16|text=☆☆☆>
+<Text|a=0|x=14.0|y=191.0|tipsx=10|tipsy=80|color=249|size=16|text=☆☆☆>
+<RText|a=0|x=80.0|y=191.0|tipsx=10|tipsy=80|color=255|size=16|text=<$STR(S$天魔按钮5)>>
+<Text|a=0|x=227.0|y=191.0|tipsx=10|tipsy=80|color=249|size=16|text=☆☆☆>
+<Text|a=0|x=281.0|y=191.0|tipsx=10|tipsy=80|color=250|size=16|text=☆☆☆>
+<Text|a=0|x=353.0|y=191.0|tipsx=10|tipsy=80|color=253|size=16|text=增加体力元素+40%>
+<Text|a=0|x=518.0|y=191.0|tipsx=10|tipsy=80|color=250|size=16|text=☆☆☆>
+<Text|a=0|x=14.0|y=211.0|tipsx=10|tipsy=80|color=58|size=16|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
+<Text|a=0|x=14.0|y=256.0|tipsx=10|tipsy=80|color=255|size=16|text=材料提升|link=@材料提升>
+<Text|a=0|x=182.0|y=257.0|tipsx=10|tipsy=80|color=255|size=16|text=材料提升|link=@大米提升>
+
+
+
+
+
+
+
+[@大米提升]
+
+
+#OR
+CHECKTITLE 天魔妖体Lv20
+CHECKTITLE 天魔妖体Lv21
+CHECKTITLE 天魔妖体Lv22
+CHECKTITLE 天魔妖体Lv23
+CHECKTITLE 天魔妖体Lv24
+CHECKTITLE 天魔妖体Lv25
+CHECKTITLE 天魔妖体Lv26
+CHECKTITLE 天魔妖体Lv27
+CHECKTITLE 天魔妖体Lv28
+CHECKTITLE 天魔妖体Lv29
+CHECKTITLE 天魔妖体Lv30
+#ACT
+MESSAGEBOX 您当前的天魔妖体已经圆满，无需在升级
+break
+
+
+
+#IF
+CHECKGAMEPOINT < <$STR(N$天魔大米D)>
+#ACT
+MESSAGEBOX 对不起，您当前账户大米不足<$STR(N$天魔大米D)>，请检查包袱！
+BREAK
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$天魔大米D)>
+DEPRIVETITLE <$STR(S$当前的天魔)>
+CONFERTITLE <$STR(S$下级的天魔)>
+MESSAGEBOX 恭喜您，成功获得<$STR(S$下级的天魔)>,请您再接再厉，未来可期！
+GOTO @MAIN
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+[@材料提升]
+
+
+#OR
+CHECKTITLE 天魔妖体Lv20
+CHECKTITLE 天魔妖体Lv21
+CHECKTITLE 天魔妖体Lv22
+CHECKTITLE 天魔妖体Lv23
+CHECKTITLE 天魔妖体Lv24
+CHECKTITLE 天魔妖体Lv25
+CHECKTITLE 天魔妖体Lv26
+CHECKTITLE 天魔妖体Lv27
+CHECKTITLE 天魔妖体Lv28
+CHECKTITLE 天魔妖体Lv29
+CHECKTITLE 天魔妖体Lv30
+#ACT
+MESSAGEBOX 您当前的天魔妖体已经圆满，无需在升级
+break
+
+
+
+#IF
+CHECKGAMEGOLD < <$STR(N$天魔元宝D)>
+#ACT
+MESSAGEBOX 对不起，您当前账户元宝不足<$STR(N$天魔元宝D)>个，请检查包袱！
+BREAK
+
+#IF
+NOT CHECKITEM <$STR(S$天魔材料A)> <$STR(N$天魔材料A)>
+#ACT
+MESSAGEBOX 对不起，您背包里面的<$STR(S$天魔材料A)>不足<$STR(N$天魔材料A)>个，请您凑齐在来！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$天魔材料A)> <$STR(N$天魔材料A)>
+GAMEGOLD - <$STR(N$天魔元宝D)>
+DEPRIVETITLE <$STR(S$当前的天魔)>
+CONFERTITLE <$STR(S$下级的天魔)>
+MESSAGEBOX 恭喜您，成功获得<$STR(S$下级的天魔)>,请您再接再厉，未来可期！
+GOTO @MAIN
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

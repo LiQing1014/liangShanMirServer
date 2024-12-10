@@ -1,0 +1,1752 @@
+[@main]
+#if
+CHECKJOB warrior
+#ACT
+goto @战士强化技能
+BREAK
+
+#if
+CHECKJOB taoist 
+#ACT
+goto @道士强化技能
+BREAK
+
+#if
+CHECKJOB wizard 
+#ACT
+goto @法师强化技能
+BREAK
+
+
+
+
+
+[@战士强化技能]
+#if
+NOT CHECKJOB warrior
+#ACT
+messagebox \\您不是战士，无法强化战士技能！
+BREAK
+
+#IF
+CHECKSKILL 刺杀剑术 ? 0
+#ACT
+#elseact
+MOV S$刺杀剑术强化等级 <暂未学习/SCOLOR=249>
+#IF
+CHECKSKILL 刺杀剑术 = 0 1
+#ACT
+MOV S$刺杀剑术按钮 <√开始强化/@刺杀1>
+MOV N$刺杀剑术材料数量 10
+MOV N$刺杀剑术元宝数量 3000
+MOV S$刺杀剑术强化等级 <强化一重/SCOLOR=253>
+#IF
+CHECKSKILL 刺杀剑术 = 1 1
+#ACT
+MOV S$刺杀剑术按钮 <√开始强化/@刺杀2>
+MOV N$刺杀剑术材料数量 15
+MOV N$刺杀剑术元宝数量 5000
+MOV S$刺杀剑术强化等级 <强化二重/SCOLOR=253>
+#IF
+CHECKSKILL 刺杀剑术 = 2 1
+#ACT
+MOV S$刺杀剑术按钮 <√开始强化/@刺杀3>
+MOV N$刺杀剑术材料数量 20
+MOV N$刺杀剑术元宝数量 10000
+MOV S$刺杀剑术强化等级 <强化三重/SCOLOR=253>
+#IF
+CHECKSKILL 刺杀剑术 = 3 1
+#ACT
+MOV S$刺杀剑术按钮 <√开始强化/@刺杀4>
+MOV N$刺杀剑术材料数量 30
+MOV N$刺杀剑术元宝数量 20000
+MOV S$刺杀剑术强化等级 <强化四重/SCOLOR=253>
+#IF
+CHECKSKILL 刺杀剑术 = 4 1
+#ACT
+MOV S$刺杀剑术按钮 <√开始强化/@刺杀5>
+MOV N$刺杀剑术材料数量 50
+MOV N$刺杀剑术元宝数量 50000
+MOV S$刺杀剑术强化等级 <强化五重/SCOLOR=253>
+
+#IF
+CHECKSKILL 刺杀剑术 > 4 1
+#ACT
+MOV S$刺杀剑术按钮 <已强化顶级/SCOLOR=250>
+MOV S$刺杀剑术强化等级 <强化完成/SCOLOR=249>
+
+;=====================================================
+#IF
+CHECKSKILL 开天斩 ? 0
+#ACT
+#elseact
+MOV S$开天斩按钮 <√暂未学习/SCOLOR=250>
+MOV S$开天斩强化等级 <暂未学习/SCOLOR=249>
+#IF
+CHECKSKILL 开天斩 = 0 1
+#ACT
+MOV S$开天斩按钮 <√开始强化/@开天斩1>
+MOV N$开天斩材料数量 10
+MOV N$开天斩元宝数量 3000
+MOV S$开天斩强化等级 <强化一重/SCOLOR=253>
+#IF
+CHECKSKILL 开天斩 = 1 1
+#ACT
+MOV S$开天斩按钮 <√开始强化/@开天斩2>
+MOV N$开天斩材料数量 15
+MOV N$开天斩元宝数量 5000
+MOV S$开天斩强化等级 <强化二重/SCOLOR=253>
+#IF
+CHECKSKILL 开天斩 = 2 1
+#ACT
+MOV S$开天斩按钮 <√开始强化/@开天斩3>
+MOV N$开天斩材料数量 20
+MOV N$开天斩元宝数量 10000
+MOV S$开天斩强化等级 <强化三重/SCOLOR=253>
+#IF
+CHECKSKILL 开天斩 = 3 1
+#ACT
+MOV S$开天斩按钮 <√开始强化/@开天斩4>
+MOV N$开天斩材料数量 30
+MOV N$开天斩元宝数量 20000
+MOV S$开天斩强化等级 <强化四重/SCOLOR=253>
+#IF
+CHECKSKILL 开天斩 = 4 1
+#ACT
+MOV S$开天斩按钮 <√开始强化/@开天斩5>
+MOV N$开天斩材料数量 50
+MOV N$开天斩元宝数量 50000
+MOV S$开天斩强化等级 <强化五重/SCOLOR=253>
+
+#IF
+CHECKSKILL 开天斩 > 4 1
+#ACT
+MOV S$开天斩按钮 <已强化顶级/SCOLOR=250>
+MOV S$开天斩强化等级 <强化完成/SCOLOR=249>
+;=====================================================
+#IF
+CHECKSKILL 烈火剑法 ? 0
+#ACT
+#elseact
+MOV S$烈火剑法强化等级 <暂未学习/SCOLOR=249>
+#IF
+CHECKSKILL 烈火剑法 = 0 1
+#ACT
+MOV S$烈火剑法按钮 <√开始强化/@烈火1>
+MOV N$烈火剑法材料数量 10
+MOV N$烈火剑法元宝数量 3000
+MOV S$烈火剑法强化等级 <强化一重/SCOLOR=253>
+#IF
+CHECKSKILL 烈火剑法 = 1 1
+#ACT
+MOV S$烈火剑法按钮 <√开始强化/@烈火2>
+MOV N$烈火剑法材料数量 15
+MOV N$烈火剑法元宝数量 5000
+MOV S$烈火剑法强化等级 <强化二重/SCOLOR=253>
+#IF
+CHECKSKILL 烈火剑法 = 2 1
+#ACT
+MOV S$烈火剑法按钮 <√开始强化/@烈火3>
+MOV N$烈火剑法材料数量 20
+MOV N$烈火剑法元宝数量 10000
+MOV S$烈火剑法强化等级 <强化三重/SCOLOR=253>
+#IF
+CHECKSKILL 烈火剑法 = 3 1
+#ACT
+MOV S$烈火剑法按钮 <√开始强化/@烈火4>
+MOV N$烈火剑法材料数量 30
+MOV N$烈火剑法元宝数量 20000
+MOV S$烈火剑法强化等级 <强化四重/SCOLOR=253>
+#IF
+CHECKSKILL 烈火剑法 = 4 1
+#ACT
+MOV S$烈火剑法按钮 <√开始强化/@烈火5>
+MOV N$烈火剑法材料数量 50
+MOV N$烈火剑法元宝数量 50000
+MOV S$烈火剑法强化等级 <强化五重/SCOLOR=253>
+
+#IF
+CHECKSKILL 烈火剑法 > 4 1
+#ACT
+MOV S$烈火剑法按钮 <已强化顶级/SCOLOR=250>
+MOV S$烈火剑法强化等级 <强化完成/SCOLOR=249>
+;=====================================================
+
+
+#IF
+checkjob warrior
+#ACT
+OPENMERCHANTBIGDLG 1  0 1 0 0 0 0
+#SAY
+<IMGEX:1:213:214:215:412:-13/@EXIT>\
+　<技能强化：/SCOLOR=154>\
+　　　<我的一生都在追求无穷的力量，提升自生潜力才是重要的生存法则！/SCOLOR=87>\ 
+<>    上古时代遗留的<“秘籍残页”>，隐藏着无穷的奥秘，传说拥有秘籍残页可以\
+将自身技能进行强化升华，使武者能发挥出超越自身的攻击力… <兑换秘籍残页|方式1：1大米=秘籍残页*1^方式2：打怪也有几率爆出！/@购买秘籍>\
+<>                                                         <兑换大量秘籍|方式1：10大米=秘籍残页*10^方式2：打怪也有几率爆出！/@购买秘籍1>\
+<New~/SCOLOR=249> <技能强化，最高五重，让你变的更强大！强化等级越高伤害就越高！/SCOLOR=253>\ \
+　   <强化刺杀剑术：/SCOLOR=250>[<$STR(S$刺杀剑术强化等级)>] 　 <点我查看材料|254#秘籍残页*<$STR(N$刺杀剑术材料数量)>^146#元宝数量:<$STR(N$刺杀剑术元宝数量)>/SCOLOR=116> 　  <$STR(S$刺杀剑术按钮)>\ \
+　   <强化烈火剑法：/SCOLOR=250>[<$STR(S$烈火剑法强化等级)>] 　 <点我查看材料|254#秘籍残页*<$STR(N$烈火剑法材料数量)>^146#元宝数量:<$STR(N$烈火剑法元宝数量)>/SCOLOR=116> 　  <$STR(S$烈火剑法按钮)>\ \
+　   <强化开 天 斩：/SCOLOR=250>[<$STR(S$开天斩强化等级)>] 　 <点我查看材料|254#秘籍残页*<$STR(N$开天斩材料数量)>^146#元宝数量:<$STR(N$开天斩元宝数量)>/SCOLOR=116>  　 <$STR(S$开天斩按钮)>\ \
+
+;=====================================================
+
+[@购买秘籍]
+#IF
+CHECKGAMEPOINT > 1
+#ACT
+GAMEPOINT - 1
+give 秘籍残页 1
+SENDMSG 6 成功购买秘籍残页*1!
+BREAK
+#ELSEACT
+MESSAGEBOX [购买失败]:大米点不足!
+
+[@购买秘籍1]
+#IF
+CHECKGAMEPOINT > 9
+#ACT
+GAMEPOINT - 10
+give 秘籍残页 10
+SENDMSG 6 成功购买秘籍残页*10!
+BREAK
+#ELSEACT
+MESSAGEBOX [购买失败]:大米点不足!
+
+
+[@刺杀1]
+#IF
+CHECKSKILL 刺杀剑术 ? 0
+#ACT
+#elseact
+messagebox 你还没有学习【刺杀剑术】技能。
+break
+
+#IF
+CHECKSKILL 刺杀剑术 = 0 1
+checkitem 秘籍残页 10
+CheckGameGold > 2999
+#Act
+take 秘籍残页 10
+GameGold - 3000
+SKILLLEVEL 刺杀剑术 + 1 1
+INC U5 1
+Goto @战士强化技能
+SENDMSG 1 恭喜玩家[<$USERNAME>]成功将「刺杀剑术」技能威力强化至一重.
+Break
+#ElseAct
+MESSAGEBOX [强化失败]:\　\　　　　　　请查看你的材料是否充足!
+Break
+
+[@刺杀2]
+#IF
+CHECKSKILL 开天斩 ? 0
+#ACT
+#elseact
+messagebox 需要其他技能都强化到一重才能继续强化
+break
+
+#or
+CHECKSKILL 烈火剑法 < 1 1
+CHECKSKILL 开天斩 < 1 1
+#act
+messagebox 需要其他技能都强化到一重才能继续强化
+break
+
+#IF
+CHECKSKILL 刺杀剑术 = 1 1
+checkitem 秘籍残页 15
+CheckGameGold > 4999
+#Act
+take 秘籍残页 15
+GameGold - 5000
+SKILLLEVEL 刺杀剑术 + 1 1
+INC U5 1
+Goto @战士强化技能
+SENDMSG 1 恭喜玩家[<$USERNAME>]成功将「刺杀剑术」技能威力强化至二重.
+Break
+#ElseAct
+MESSAGEBOX [强化失败]:\　\　　　　　　请查看你的材料是否充足!
+Break
+
+[@刺杀3]
+#or
+CHECKSKILL 烈火剑法 < 2 1
+CHECKSKILL 开天斩 < 2 1
+#act
+messagebox 需要其他技能都强化到二重才能继续强化
+break
+
+#IF
+CHECKSKILL 刺杀剑术 = 2 1
+checkitem 秘籍残页 20
+CheckGameGold > 9999
+#Act
+take 秘籍残页 20
+GameGold - 10000
+SKILLLEVEL 刺杀剑术 + 1 1
+INC U5 1
+Goto @战士强化技能
+SENDMSG 1 恭喜玩家[<$USERNAME>]成功将「刺杀剑术」技能威力强化至三重.
+Break
+#ElseAct
+MESSAGEBOX [强化失败]:\　\　　　　　　请查看你的材料是否充足!
+Break
+
+[@刺杀4]
+#or
+CHECKSKILL 烈火剑法 < 3 1
+CHECKSKILL 开天斩 < 3 1
+#act
+messagebox 需要其他技能都强化到三重才能继续强化
+break
+
+#IF
+CHECKSKILL 刺杀剑术 = 3 1
+checkitem 秘籍残页 30
+CheckGameGold > 19999
+#Act
+take 秘籍残页 30
+GameGold - 20000
+SKILLLEVEL 刺杀剑术 + 1 1
+INC U5 1
+Goto @战士强化技能
+SENDMSG 1 恭喜玩家[<$USERNAME>]成功将「刺杀剑术」技能威力强化至四重.
+Break
+#ElseAct
+MESSAGEBOX [强化失败]:\　\　　　　　　请查看你的材料是否充足!
+Break
+
+[@刺杀5]
+#or
+CHECKSKILL 烈火剑法 < 4 1
+CHECKSKILL 开天斩 < 4 1
+#act
+messagebox 需要其他技能都强化到四重才能继续强化
+break
+
+#IF
+CHECKSKILL 刺杀剑术 = 4 1
+checkitem 秘籍残页 50
+CheckGameGold > 49999
+#Act
+take 秘籍残页 50
+GameGold - 50000
+SKILLLEVEL 刺杀剑术 + 1 1
+INC U5 1
+Goto @战士强化技能
+SENDMSG 1 恭喜玩家[<$USERNAME>]成功将「刺杀剑术」技能威力强化至五重.
+Break
+#ElseAct
+MESSAGEBOX [强化失败]:\　\　　　　　　请查看你的材料是否充足!
+Break
+
+
+
+
+
+
+
+;=====================================================
+
+[@开天斩1]
+#IF
+CHECKSKILL 开天斩 ? 0
+#ACT
+#elseact
+messagebox 你还没有学习【开天斩】技能。
+break
+
+#IF
+CHECKSKILL 开天斩 = 0 1
+checkitem 秘籍残页 10
+CheckGameGold > 2999
+#Act
+take 秘籍残页 10
+GameGold - 3000
+SKILLLEVEL 开天斩 + 1 1
+INC U7 1
+Goto @战士强化技能
+SENDMSG 1 恭喜玩家[<$USERNAME>]成功将「开天斩」技能威力强化至一重.
+Break
+#ElseAct
+MESSAGEBOX [强化失败]:\　\　　　　　　请查看你的材料是否充足!
+Break
+
+[@开天斩2]
+#or
+CHECKSKILL 烈火剑法 < 1 1
+CHECKSKILL 刺杀剑术 < 1 1
+#act
+messagebox 需要其他技能都强化到一重才能继续强化
+break
+
+#IF
+CHECKSKILL 开天斩 = 1 1
+checkitem 秘籍残页 15
+CheckGameGold > 4999
+#Act
+take 秘籍残页 15
+GameGold - 5000
+SKILLLEVEL 开天斩 + 1 1
+INC U7 1
+Goto @战士强化技能
+SENDMSG 1 恭喜玩家[<$USERNAME>]成功将「开天斩」技能威力强化至二重.
+Break
+#ElseAct
+MESSAGEBOX [强化失败]:\　\　　　　　　请查看你的材料是否充足!
+Break
+
+[@开天斩3]
+#or
+CHECKSKILL 烈火剑法 < 2 1
+CHECKSKILL 刺杀剑术 < 2 1
+#act
+messagebox 需要其他技能都强化到二重才能继续强化
+break
+
+#IF
+CHECKSKILL 开天斩 = 2 1
+checkitem 秘籍残页 20
+CheckGameGold > 9999
+#Act
+take 秘籍残页 20
+GameGold - 10000
+SKILLLEVEL 开天斩 + 1 1
+INC U7 1
+Goto @战士强化技能
+SENDMSG 1 恭喜玩家[<$USERNAME>]成功将「开天斩」技能威力强化至三重.
+Break
+#ElseAct
+MESSAGEBOX [强化失败]:\　\　　　　　　请查看你的材料是否充足!
+Break
+
+[@开天斩4]
+#or
+CHECKSKILL 烈火剑法 < 3 1
+CHECKSKILL 刺杀剑术 < 3 1
+#act
+messagebox 需要其他技能都强化到三重才能继续强化
+break
+
+#IF
+CHECKSKILL 开天斩 = 3 1
+checkitem 秘籍残页 30
+CheckGameGold > 19999
+#Act
+take 秘籍残页 30
+GameGold - 20000
+SKILLLEVEL 开天斩 + 1 1
+INC U7 1
+Goto @战士强化技能
+SENDMSG 1 恭喜玩家[<$USERNAME>]成功将「开天斩」技能威力强化至四重.
+Break
+#ElseAct
+MESSAGEBOX [强化失败]:\　\　　　　　　请查看你的材料是否充足!
+Break
+
+[@开天斩5]
+#or
+CHECKSKILL 烈火剑法 < 4 1
+CHECKSKILL 刺杀剑术 < 4 1
+#act
+messagebox 需要其他技能都强化到四重才能继续强化
+break
+
+#IF
+CHECKSKILL 开天斩 = 4 1
+checkitem 秘籍残页 50
+CheckGameGold > 49999
+#Act
+take 秘籍残页 50
+GameGold - 50000
+SKILLLEVEL 开天斩 + 1 1
+INC U7 1
+Goto @战士强化技能
+SENDMSG 1 恭喜玩家[<$USERNAME>]成功将「开天斩」技能威力强化至五重.
+Break
+#ElseAct
+MESSAGEBOX [强化失败]:\　\　　　　　　请查看你的材料是否充足!
+Break
+
+
+
+
+;=====================================================
+
+[@烈火1]
+#IF
+CHECKSKILL 烈火剑法 ? 0
+#ACT
+#elseact
+messagebox 你还没有学习【烈火剑法】技能。
+break
+
+#IF
+CHECKSKILL 烈火剑法 = 0 1
+checkitem 秘籍残页 10
+CheckGameGold > 2999
+#Act
+take 秘籍残页 10
+GameGold - 3000
+SKILLLEVEL 烈火剑法 + 1 1
+INC U6 1
+Goto @战士强化技能
+SENDMSG 1 恭喜玩家[<$USERNAME>]成功将「烈火剑法」技能威力强化至一重.
+Break
+#ElseAct
+MESSAGEBOX [强化失败]:\　\　　　　　　请查看你的材料是否充足!
+Break
+
+[@烈火2]
+#IF
+CHECKSKILL 开天斩 ? 0
+#ACT
+#elseact
+messagebox 需要其他技能都强化到一重才能继续强化
+break
+
+#or
+CHECKSKILL 开天斩 < 1 1
+CHECKSKILL 刺杀剑术 < 1 1
+#act
+messagebox 需要其他技能都强化到一重才能继续强化
+break
+
+#IF
+CHECKSKILL 烈火剑法 = 1 1
+checkitem 秘籍残页 15
+CheckGameGold > 4999
+#Act
+take 秘籍残页 15
+GameGold - 5000
+SKILLLEVEL 烈火剑法 + 1 1
+INC U6 1
+Goto @战士强化技能
+SENDMSG 1 恭喜玩家[<$USERNAME>]成功将「烈火剑法」技能威力强化至二重.
+Break
+#ElseAct
+MESSAGEBOX [强化失败]:\　\　　　　　　请查看你的材料是否充足!
+Break
+
+[@烈火3]
+#or
+CHECKSKILL 开天斩 < 2 1
+CHECKSKILL 刺杀剑术 < 2 1
+#act
+messagebox 需要其他技能都强化到二重才能继续强化
+break
+
+#IF
+CHECKSKILL 烈火剑法 = 2 1
+checkitem 秘籍残页 20
+CheckGameGold > 9999
+#Act
+take 秘籍残页 20
+GameGold - 10000
+SKILLLEVEL 烈火剑法 + 1 1
+INC U6 1
+Goto @战士强化技能
+SENDMSG 1 恭喜玩家[<$USERNAME>]成功将「烈火剑法」技能威力强化至三重.
+Break
+#ElseAct
+MESSAGEBOX [强化失败]:\　\　　　　　　请查看你的材料是否充足!
+Break
+
+[@烈火4]
+#or
+CHECKSKILL 开天斩 < 3 1
+CHECKSKILL 刺杀剑术 < 3 1
+#act
+messagebox 需要其他技能都强化到三重才能继续强化
+break
+
+#IF
+CHECKSKILL 烈火剑法 = 3 1
+checkitem 秘籍残页 30
+CheckGameGold > 19999
+#Act
+take 秘籍残页 30
+GameGold - 20000
+SKILLLEVEL 烈火剑法 + 1 1
+INC U6 1
+Goto @战士强化技能
+SENDMSG 1 恭喜玩家[<$USERNAME>]成功将「烈火剑法」技能威力强化至四重.
+Break
+#ElseAct
+MESSAGEBOX [强化失败]:\　\　　　　　　请查看你的材料是否充足!
+Break
+
+[@烈火5]
+#or
+CHECKSKILL 开天斩 < 4 1
+CHECKSKILL 刺杀剑术 < 4 1
+#act
+messagebox 需要其他技能都强化到四重才能继续强化
+break
+
+#IF
+CHECKSKILL 烈火剑法 = 4 1
+checkitem 秘籍残页 50
+CheckGameGold > 49999
+#Act
+take 秘籍残页 50
+GameGold - 50000
+SKILLLEVEL 烈火剑法 + 1 1
+INC U6 1
+Goto @战士强化技能
+SENDMSG 1 恭喜玩家[<$USERNAME>]成功将「烈火剑法」技能威力强化至五重.
+Break
+#ElseAct
+MESSAGEBOX [强化失败]:\　\　　　　　　请查看你的材料是否充足!
+Break
+
+
+
+
+
+;=====================================================
+
+
+;#################################################################################
+
+[@法师强化技能]
+#if
+NOT CHECKJOB wizard
+#ACT
+messagebox \\您不是法师，无法强化法师技能！
+BREAK
+
+#IF
+CHECKSKILL 火墙 ? 0
+#ACT
+#elseact
+MOV S$火墙强化等级 <暂未学习/SCOLOR=249>
+#IF
+CHECKSKILL 火墙 = 0 1
+#ACT
+MOV S$火墙按钮 <√开始强化/@火墙1>
+MOV N$火墙材料数量 10
+MOV N$火墙元宝数量 3000
+MOV S$火墙强化等级 <强化一重/SCOLOR=253>
+#IF
+CHECKSKILL 火墙 = 1 1
+#ACT
+MOV S$火墙按钮 <√开始强化/@火墙2>
+MOV N$火墙材料数量 15
+MOV N$火墙元宝数量 5000
+MOV S$火墙强化等级 <强化二重/SCOLOR=253>
+#IF
+CHECKSKILL 火墙 = 2 1
+#ACT
+MOV S$火墙按钮 <√开始强化/@火墙3>
+MOV N$火墙材料数量 20
+MOV N$火墙元宝数量 10000
+MOV S$火墙强化等级 <强化三重/SCOLOR=253>
+#IF
+CHECKSKILL 火墙 = 3 1
+#ACT
+MOV S$火墙按钮 <√开始强化/@火墙4>
+MOV N$火墙材料数量 30
+MOV N$火墙元宝数量 20000
+MOV S$火墙强化等级 <强化四重/SCOLOR=253>
+#IF
+CHECKSKILL 火墙 = 4 1
+#ACT
+MOV S$火墙按钮 <√开始强化/@火墙5>
+MOV N$火墙材料数量 50
+MOV N$火墙元宝数量 50000
+MOV S$火墙强化等级 <强化五重/SCOLOR=253>
+
+
+
+#IF
+CHECKSKILL 火墙 > 4 1
+#ACT
+MOV S$火墙按钮 <已强化顶级/SCOLOR=250>
+MOV S$火墙强化等级 <强化完成/SCOLOR=249>
+;=====================================================
+
+;=====================================================
+#IF
+CHECKSKILL 流星火雨 ? 0
+#ACT
+#elseact
+MOV S$流星火雨按钮 <√暂未学习/SCOLOR=250>
+MOV S$流星火雨强化等级 <暂未学习/SCOLOR=249>
+#IF
+CHECKSKILL 流星火雨 = 0 1
+#ACT
+MOV S$流星火雨按钮 <√开始强化/@火雨1>
+MOV N$流星火雨材料数量 10
+MOV N$流星火雨元宝数量 3000
+MOV S$流星火雨强化等级 <强化一重/SCOLOR=253>
+#IF
+CHECKSKILL 流星火雨 = 1 1
+#ACT
+MOV S$流星火雨按钮 <√开始强化/@火雨2>
+MOV N$流星火雨材料数量 15
+MOV N$流星火雨元宝数量 5000
+MOV S$流星火雨强化等级 <强化二重/SCOLOR=253>
+#IF
+CHECKSKILL 流星火雨 = 2 1
+#ACT
+MOV S$流星火雨按钮 <√开始强化/@火雨3>
+MOV N$流星火雨材料数量 20
+MOV N$流星火雨元宝数量 10000
+MOV S$流星火雨强化等级 <强化三重/SCOLOR=253>
+#IF
+CHECKSKILL 流星火雨 = 3 1
+#ACT
+MOV S$流星火雨按钮 <√开始强化/@火雨4>
+MOV N$流星火雨材料数量 30
+MOV N$流星火雨元宝数量 20000
+MOV S$流星火雨强化等级 <强化四重/SCOLOR=253>
+#IF
+CHECKSKILL 流星火雨 = 4 1
+#ACT
+MOV S$流星火雨按钮 <√开始强化/@火雨5>
+MOV N$流星火雨材料数量 50
+MOV N$流星火雨元宝数量 50000
+MOV S$流星火雨强化等级 <强化五重/SCOLOR=253>
+
+
+
+#IF
+CHECKSKILL 流星火雨 > 4 1
+#ACT
+MOV S$流星火雨按钮 <已强化顶级/SCOLOR=250>
+MOV S$流星火雨强化等级 <强化完成/SCOLOR=249>
+;=====================================================
+#IF
+CHECKSKILL 魔法盾 ? 0
+#ACT
+#elseact
+MOV S$魔法盾强化等级 <暂未学习/SCOLOR=249>
+#IF
+CHECKSKILL 魔法盾 = 0 1
+#ACT
+MOV S$魔法盾按钮 <√开始强化/@魔法盾1>
+MOV N$魔法盾材料数量 10
+MOV N$魔法盾元宝数量 3000
+MOV S$魔法盾强化等级 <强化一重/SCOLOR=253>
+#IF
+CHECKSKILL 魔法盾 = 1 1
+#ACT
+MOV S$魔法盾按钮 <√开始强化/@魔法盾2>
+MOV N$魔法盾材料数量 15
+MOV N$魔法盾元宝数量 5000
+MOV S$魔法盾强化等级 <强化二重/SCOLOR=253>
+#IF
+CHECKSKILL 魔法盾 = 2 1
+#ACT
+MOV S$魔法盾按钮 <√开始强化/@魔法盾3>
+MOV N$魔法盾材料数量 20
+MOV N$魔法盾元宝数量 10000
+MOV S$魔法盾强化等级 <强化三重/SCOLOR=253>
+#IF
+CHECKSKILL 魔法盾 = 3 1
+#ACT
+MOV S$魔法盾按钮 <√开始强化/@魔法盾4>
+MOV N$魔法盾材料数量 30
+MOV N$魔法盾元宝数量 20000
+MOV S$魔法盾强化等级 <强化四重/SCOLOR=253>
+#IF
+CHECKSKILL 魔法盾 = 4 1
+#ACT
+MOV S$魔法盾按钮 <√开始强化/@魔法盾5>
+MOV N$魔法盾材料数量 50
+MOV N$魔法盾元宝数量 50000
+MOV S$魔法盾强化等级 <强化五重/SCOLOR=253>
+
+#IF
+CHECKSKILL 魔法盾 > 4 1
+#ACT
+MOV S$魔法盾按钮 <已强化顶级/SCOLOR=250>
+MOV S$魔法盾强化等级 <强化完成/SCOLOR=249>
+;=====================================================
+
+
+#IF
+checkjob wizard
+#ACT
+OPENMERCHANTBIGDLG 1  0 1 0 0 0 0
+#SAY
+<IMGEX:1:213:214:215:412:-13/@EXIT>\
+　<技能强化：/SCOLOR=154>\
+　　　<我的一生都在追求无穷的力量，提升自生潜力才是重要的生存法则！/SCOLOR=87>\ 
+<>    上古时代遗留的<“秘籍残页”>，隐藏着无穷的奥秘，传说拥有秘籍残页可以\
+将自身技能进行强化升华，使武者能发挥出超越自身的攻击力……\ \
+<New~/SCOLOR=249> <技能强化，最高五重，让你变的更强大！强化等级越高伤害就越高！/SCOLOR=253>\ \
+
+
+　   <强化魔 法 盾：/SCOLOR=250>[<$STR(S$魔法盾强化等级)>] 　 <点我查看材料|254#秘籍残页*<$STR(N$魔法盾材料数量)>^146#元宝数量:<$STR(N$魔法盾元宝数量)>/SCOLOR=116>  　 <$STR(S$魔法盾按钮)>\ \
+　   <强化火    墙：/SCOLOR=250>[<$STR(S$火墙强化等级)>] 　 <点我查看材料|254#秘籍残页*<$STR(N$火墙材料数量)>^146#元宝数量:<$STR(N$火墙元宝数量)>/SCOLOR=116>  　 <$STR(S$火墙按钮)>\ \
+　   <强化流星火雨：/SCOLOR=250>[<$STR(S$流星火雨强化等级)>] 　 <点我查看材料|254#秘籍残页*<$STR(N$流星火雨材料数量)>^146#元宝数量:<$STR(N$流星火雨元宝数量)>/SCOLOR=116>  　 <$STR(S$流星火雨按钮)>\
+;=====================================================
+[@魔法盾1]
+#IF
+CHECKSKILL 魔法盾 ? 0
+#ACT
+#elseact
+messagebox 你还没有学习【魔法盾】技能。
+break
+
+#IF
+CHECKSKILL 魔法盾 = 0 1
+checkitem 秘籍残页 10
+CheckGameGold > 2999
+#Act
+take 秘籍残页 10
+GameGold - 3000
+SKILLLEVEL 魔法盾 + 1 1
+INC U5 1
+Goto @法师强化技能
+SENDMSG 1 恭喜玩家[<$USERNAME>]成功将「魔法盾」技能威力强化至一重.
+Break
+#ElseAct
+MESSAGEBOX [强化失败]:\　\　　　　　　请查看你的材料是否充足!
+Break
+
+[@魔法盾2]
+#IF
+CHECKSKILL 流星火雨 ? 0
+#ACT
+#elseact
+messagebox 需要其他技能都强化到一重才能继续强化
+break
+
+#or
+CHECKSKILL 火墙 < 1 1
+CHECKSKILL 流星火雨 < 1 1
+#act
+messagebox 需要其他技能都强化到一重才能继续强化
+break
+
+#IF
+CHECKSKILL 魔法盾 = 1 1
+checkitem 秘籍残页 15
+CheckGameGold > 4999
+#Act
+take 秘籍残页 15
+GameGold - 5000
+SKILLLEVEL 魔法盾 + 1 1
+INC U5 1
+Goto @法师强化技能
+SENDMSG 1 恭喜玩家[<$USERNAME>]成功将「魔法盾」技能威力强化至二重.
+Break
+#ElseAct
+MESSAGEBOX [强化失败]:\　\　　　　　　请查看你的材料是否充足!
+Break
+
+[@魔法盾3]
+#or
+CHECKSKILL 火墙 < 2 1
+CHECKSKILL 流星火雨 < 2 1
+#act
+messagebox 需要其他技能都强化到二重才能继续强化
+break
+
+#IF
+CHECKSKILL 魔法盾 = 2 1
+checkitem 秘籍残页 20
+CheckGameGold > 9999
+#Act
+take 秘籍残页 20
+GameGold - 10000
+SKILLLEVEL 魔法盾 + 1 1
+INC U5 1
+Goto @法师强化技能
+SENDMSG 1 恭喜玩家[<$USERNAME>]成功将「魔法盾」技能威力强化至三重.
+Break
+#ElseAct
+MESSAGEBOX [强化失败]:\　\　　　　　　请查看你的材料是否充足!
+Break
+
+[@魔法盾4]
+#or
+CHECKSKILL 火墙 < 3 1
+CHECKSKILL 流星火雨 < 3 1
+#act
+messagebox 需要其他技能都强化到三重才能继续强化
+break
+
+#IF
+CHECKSKILL 魔法盾 = 3 1
+checkitem 秘籍残页 30
+CheckGameGold > 19999
+#Act
+take 秘籍残页 30
+GameGold - 20000
+SKILLLEVEL 魔法盾 + 1 1
+INC U5 1
+Goto @法师强化技能
+SENDMSG 1 恭喜玩家[<$USERNAME>]成功将「魔法盾」技能威力强化至四重.
+Break
+#ElseAct
+MESSAGEBOX [强化失败]:\　\　　　　　　请查看你的材料是否充足!
+Break
+
+[@魔法盾5]
+#or
+CHECKSKILL 火墙 < 4 1
+CHECKSKILL 流星火雨 < 4 1
+#act
+messagebox 需要其他技能都强化到四重才能继续强化
+break
+
+#IF
+CHECKSKILL 魔法盾 = 4 1
+checkitem 秘籍残页 50
+CheckGameGold > 49999
+#Act
+take 秘籍残页 50
+GameGold - 50000
+SKILLLEVEL 魔法盾 + 1 1
+INC U5 1
+Goto @法师强化技能
+SENDMSG 1 恭喜玩家[<$USERNAME>]成功将「魔法盾」技能威力强化至五重.
+Break
+#ElseAct
+MESSAGEBOX [强化失败]:\　\　　　　　　请查看你的材料是否充足!
+Break
+
+
+
+
+
+
+
+;=====================================================
+
+[@火雨1]
+#IF
+CHECKSKILL 流星火雨 ? 0
+#ACT
+#elseact
+messagebox 你还没有学习【流星火雨】技能。
+break
+
+#IF
+CHECKSKILL 流星火雨 = 0 1
+checkitem 秘籍残页 10
+CheckGameGold > 2999
+#Act
+take 秘籍残页 10
+GameGold - 3000
+SKILLLEVEL 流星火雨 + 1 1
+INC U7 1
+Goto @法师强化技能
+SENDMSG 1 恭喜玩家[<$USERNAME>]成功将「流星火雨」技能威力强化至一重.
+Break
+#ElseAct
+MESSAGEBOX [强化失败]:\　\　　　　　　请查看你的材料是否充足!
+Break
+
+[@火雨2]
+#or
+CHECKSKILL 火墙 < 1 1
+CHECKSKILL 魔法盾 < 1 1
+#act
+messagebox 需要其他技能都强化到一重才能继续强化
+break
+
+#IF
+CHECKSKILL 流星火雨 = 1 1
+checkitem 秘籍残页 15
+CheckGameGold > 4999
+#Act
+take 秘籍残页 15
+GameGold - 5000
+SKILLLEVEL 流星火雨 + 1 1
+INC U7 1
+Goto @法师强化技能
+SENDMSG 1 恭喜玩家[<$USERNAME>]成功将「流星火雨」技能威力强化至二重.
+Break
+#ElseAct
+MESSAGEBOX [强化失败]:\　\　　　　　　请查看你的材料是否充足!
+Break
+
+[@火雨3]
+#or
+CHECKSKILL 火墙 < 2 1
+CHECKSKILL 魔法盾 < 2 1
+#act
+messagebox 需要其他技能都强化到二重才能继续强化
+break
+
+#IF
+CHECKSKILL 流星火雨 = 2 1
+checkitem 秘籍残页 20
+CheckGameGold > 9999
+#Act
+take 秘籍残页 20
+GameGold - 10000
+SKILLLEVEL 流星火雨 + 1 1
+INC U7 1
+Goto @法师强化技能
+SENDMSG 1 恭喜玩家[<$USERNAME>]成功将「流星火雨」技能威力强化至三重.
+Break
+#ElseAct
+MESSAGEBOX [强化失败]:\　\　　　　　　请查看你的材料是否充足!
+Break
+
+[@火雨4]
+#or
+CHECKSKILL 火墙 < 3 1
+CHECKSKILL 魔法盾 < 3 1
+#act
+messagebox 需要其他技能都强化到三重才能继续强化
+break
+
+#IF
+CHECKSKILL 流星火雨 = 3 1
+checkitem 秘籍残页 30
+CheckGameGold > 19999
+#Act
+take 秘籍残页 30
+GameGold - 20000
+SKILLLEVEL 流星火雨 + 1 1
+INC U7 1
+Goto @法师强化技能
+SENDMSG 1 恭喜玩家[<$USERNAME>]成功将「流星火雨」技能威力强化至四重.
+Break
+#ElseAct
+MESSAGEBOX [强化失败]:\　\　　　　　　请查看你的材料是否充足!
+Break
+
+[@火雨5]
+#or
+CHECKSKILL 火墙 < 4 1
+CHECKSKILL 魔法盾 < 4 1
+#act
+messagebox 需要其他技能都强化到四重才能继续强化
+break
+
+#IF
+CHECKSKILL 流星火雨 = 4 1
+checkitem 秘籍残页 50
+CheckGameGold > 49999
+#Act
+take 秘籍残页 50
+GameGold - 50000
+SKILLLEVEL 流星火雨 + 1 1
+INC U7 1
+Goto @法师强化技能
+SENDMSG 1 恭喜玩家[<$USERNAME>]成功将「流星火雨」技能威力强化至五重.
+Break
+#ElseAct
+MESSAGEBOX [强化失败]:\　\　　　　　　请查看你的材料是否充足!
+Break
+
+
+
+
+
+;=====================================================
+
+[@火墙1]
+#IF
+CHECKSKILL 火墙 ? 0
+#ACT
+#elseact
+messagebox 你还没有学习【火墙】技能。
+break
+
+#IF
+CHECKSKILL 火墙 = 0 1
+checkitem 秘籍残页 10
+CheckGameGold > 2999
+#Act
+take 秘籍残页 10
+GameGold - 3000
+SKILLLEVEL 火墙 + 1 1
+INC U6 1
+Goto @法师强化技能
+SENDMSG 1 恭喜玩家[<$USERNAME>]成功将「火墙」技能威力强化至一重.
+Break
+#ElseAct
+MESSAGEBOX [强化失败]:\　\　　　　　　请查看你的材料是否充足!
+Break
+
+[@火墙2]
+#IF
+CHECKSKILL 流星火雨 ? 0
+#ACT
+#elseact
+messagebox 需要其他技能都强化到一重才能继续强化
+break
+
+#or
+CHECKSKILL 流星火雨 < 1 1
+CHECKSKILL 魔法盾 < 1 1
+#act
+messagebox 需要其他技能都强化到一重才能继续强化
+break
+
+#IF
+CHECKSKILL 火墙 = 1 1
+checkitem 秘籍残页 15
+CheckGameGold > 4999
+#Act
+take 秘籍残页 15
+GameGold - 5000
+SKILLLEVEL 火墙 + 1 1
+INC U6 1
+Goto @法师强化技能
+SENDMSG 1 恭喜玩家[<$USERNAME>]成功将「火墙」技能威力强化至二重.
+Break
+#ElseAct
+MESSAGEBOX [强化失败]:\　\　　　　　　请查看你的材料是否充足!
+Break
+
+[@火墙3]
+#or
+CHECKSKILL 流星火雨 < 2 1
+CHECKSKILL 魔法盾 < 2 1
+#act
+messagebox 需要其他技能都强化到二重才能继续强化
+break
+
+#IF
+CHECKSKILL 火墙 = 2 1
+checkitem 秘籍残页 20
+CheckGameGold > 9999
+#Act
+take 秘籍残页 20
+GameGold - 10000
+SKILLLEVEL 火墙 + 1 1
+INC U6 1
+Goto @法师强化技能
+SENDMSG 1 恭喜玩家[<$USERNAME>]成功将「火墙」技能威力强化至三重.
+Break
+#ElseAct
+MESSAGEBOX [强化失败]:\　\　　　　　　请查看你的材料是否充足!
+Break
+
+[@火墙4]
+#or
+CHECKSKILL 流星火雨 < 3 1
+CHECKSKILL 魔法盾 < 3 1
+#act
+messagebox 需要其他技能都强化到三重才能继续强化
+break
+
+#IF
+CHECKSKILL 火墙 = 3 1
+checkitem 秘籍残页 30
+CheckGameGold > 19999
+#Act
+take 秘籍残页 30
+GameGold - 20000
+SKILLLEVEL 火墙 + 1 1
+INC U6 1
+Goto @法师强化技能
+SENDMSG 1 恭喜玩家[<$USERNAME>]成功将「火墙」技能威力强化至四重.
+Break
+#ElseAct
+MESSAGEBOX [强化失败]:\　\　　　　　　请查看你的材料是否充足!
+Break
+
+[@火墙5]
+#or
+CHECKSKILL 流星火雨 < 4 1
+CHECKSKILL 魔法盾 < 4 1
+#act
+messagebox 需要其他技能都强化到四重才能继续强化
+break
+
+#IF
+CHECKSKILL 火墙 = 4 1
+checkitem 秘籍残页 50
+CheckGameGold > 49999
+#Act
+take 秘籍残页 50
+GameGold - 50000
+SKILLLEVEL 火墙 + 1 1
+INC U6 1
+Goto @法师强化技能
+SENDMSG 1 恭喜玩家[<$USERNAME>]成功将「火墙」技能威力强化至五重.
+Break
+#ElseAct
+MESSAGEBOX [强化失败]:\　\　　　　　　请查看你的材料是否充足!
+Break
+
+
+
+
+;=====================================================
+
+
+
+;#################################################################################
+
+[@道士强化技能]
+#if
+NOT CHECKJOB taoist
+#ACT
+messagebox \\您不是道士，无法强化道士技能！
+BREAK
+
+#IF
+CHECKSKILL 群体施毒术 ? 0
+#ACT
+#elseact
+MOV S$群体施毒术按钮 <√暂未学习/SCOLOR=250>
+MOV S$群体施毒术强化等级 <暂未学习/SCOLOR=249>
+#IF
+CHECKSKILL 群体施毒术 = 0 1
+#ACT
+MOV S$群体施毒术按钮 <√开始强化/@群体施毒术1>
+MOV N$群体施毒术材料数量 10
+MOV N$群体施毒术元宝数量 3000
+MOV S$群体施毒术强化等级 <强化一重/SCOLOR=253>
+#IF
+CHECKSKILL 群体施毒术 = 1 1
+#ACT
+MOV S$群体施毒术按钮 <√开始强化/@群体施毒术2>
+MOV N$群体施毒术材料数量 15
+MOV N$群体施毒术元宝数量 5000
+MOV S$群体施毒术强化等级 <强化二重/SCOLOR=253>
+#IF
+CHECKSKILL 群体施毒术 = 2 1
+#ACT
+MOV S$群体施毒术按钮 <√开始强化/@群体施毒术3>
+MOV N$群体施毒术材料数量 20
+MOV N$群体施毒术元宝数量 10000
+MOV S$群体施毒术强化等级 <强化三重/SCOLOR=253>
+#IF
+CHECKSKILL 群体施毒术 = 3 1
+#ACT
+MOV S$群体施毒术按钮 <√开始强化/@群体施毒术4>
+MOV N$群体施毒术材料数量 30
+MOV N$群体施毒术元宝数量 20000
+MOV S$群体施毒术强化等级 <强化四重/SCOLOR=253>
+#IF
+CHECKSKILL 群体施毒术 = 4 1
+#ACT
+MOV S$群体施毒术按钮 <√开始强化/@群体施毒术5>
+MOV N$群体施毒术材料数量 50
+MOV N$群体施毒术元宝数量 50000
+MOV S$群体施毒术强化等级 <强化五重/SCOLOR=253>
+
+
+
+#IF
+CHECKSKILL 群体施毒术 > 4 1
+#ACT
+MOV S$群体施毒术按钮 <已强化顶级/SCOLOR=250>
+MOV S$群体施毒术强化等级 <强化完成/SCOLOR=249>
+;=====================================================
+
+;=====================================================
+#IF
+CHECKSKILL 灵魂火符 ? 0
+#ACT
+#elseact
+MOV S$灵魂火符强化等级 <暂未学习/SCOLOR=249>
+#IF
+CHECKSKILL 灵魂火符 = 0 1
+#ACT
+MOV S$灵魂火符按钮 <√开始强化/@灵魂火符1>
+MOV N$灵魂火符材料数量 10
+MOV N$灵魂火符元宝数量 3000
+MOV S$灵魂火符强化等级 <强化一重/SCOLOR=253>
+#IF
+CHECKSKILL 灵魂火符 = 1 1
+#ACT
+MOV S$灵魂火符按钮 <√开始强化/@灵魂火符2>
+MOV N$灵魂火符材料数量 15
+MOV N$灵魂火符元宝数量 5000
+MOV S$灵魂火符强化等级 <强化二重/SCOLOR=253>
+#IF
+CHECKSKILL 灵魂火符 = 2 1
+#ACT
+MOV S$灵魂火符按钮 <√开始强化/@灵魂火符3>
+MOV N$灵魂火符材料数量 20
+MOV N$灵魂火符元宝数量 10000
+MOV S$灵魂火符强化等级 <强化三重/SCOLOR=253>
+#IF
+CHECKSKILL 灵魂火符 = 3 1
+#ACT
+MOV S$灵魂火符按钮 <√开始强化/@灵魂火符4>
+MOV N$灵魂火符材料数量 30
+MOV N$灵魂火符元宝数量 20000
+MOV S$灵魂火符强化等级 <强化四重/SCOLOR=253>
+#IF
+CHECKSKILL 灵魂火符 = 4 1
+#ACT
+MOV S$灵魂火符按钮 <√开始强化/@灵魂火符5>
+MOV N$灵魂火符材料数量 50
+MOV N$灵魂火符元宝数量 50000
+MOV S$灵魂火符强化等级 <强化五重/SCOLOR=253>
+
+
+
+#IF
+CHECKSKILL 灵魂火符 > 4 1
+#ACT
+MOV S$灵魂火符按钮 <已强化顶级/SCOLOR=250>
+MOV S$灵魂火符强化等级 <强化完成/SCOLOR=249>
+;=====================================================
+#IF
+CHECKSKILL 飓风破 ? 0
+#ACT
+#elseact
+MOV S$飓风破按钮 <√暂未学习/SCOLOR=250>
+MOV S$飓风破强化等级 <暂未学习/SCOLOR=249>
+#IF
+CHECKSKILL 飓风破 = 0 1
+#ACT
+MOV S$飓风破按钮 <√开始强化/@飓风破1>
+MOV N$飓风破材料数量 10
+MOV N$飓风破元宝数量 3000
+MOV S$飓风破强化等级 <强化一重/SCOLOR=253>
+#IF
+CHECKSKILL 飓风破 = 1 1
+#ACT
+MOV S$飓风破按钮 <√开始强化/@飓风破2>
+MOV N$飓风破材料数量 15
+MOV N$飓风破元宝数量 5000
+MOV S$飓风破强化等级 <强化二重/SCOLOR=253>
+#IF
+CHECKSKILL 飓风破 = 2 1
+#ACT
+MOV S$飓风破按钮 <√开始强化/@飓风破3>
+MOV N$飓风破材料数量 20
+MOV N$飓风破元宝数量 10000
+MOV S$飓风破强化等级 <强化三重/SCOLOR=253>
+#IF
+CHECKSKILL 飓风破 = 3 1
+#ACT
+MOV S$飓风破按钮 <√开始强化/@飓风破4>
+MOV N$飓风破材料数量 30
+MOV N$飓风破元宝数量 20000
+MOV S$飓风破强化等级 <强化四重/SCOLOR=253>
+#IF
+CHECKSKILL 飓风破 = 4 1
+#ACT
+MOV S$飓风破按钮 <√开始强化/@飓风破5>
+MOV N$飓风破材料数量 50
+MOV N$飓风破元宝数量 50000
+MOV S$飓风破强化等级 <强化五重/SCOLOR=253>
+
+#IF
+CHECKSKILL 飓风破 > 4 1
+#ACT
+MOV S$飓风破按钮 <已强化顶级/SCOLOR=250>
+MOV S$飓风破强化等级 <强化完成/SCOLOR=249>
+
+;========================================================================================
+
+#IF
+checkjob taoist
+#ACT
+OPENMERCHANTBIGDLG 1  0 1 0 0 0 0
+#SAY
+<IMGEX:1:213:214:215:412:-13/@EXIT>\
+　<技能强化：/SCOLOR=154>\
+　　　<我的一生都在追求无穷的力量，提升自生潜力才是重要的生存法则！/SCOLOR=87>\ 
+<>    上古时代遗留的<“秘籍残页”>，隐藏着无穷的奥秘，传说拥有秘籍残页可以\
+将自身技能进行强化升华，使武者能发挥出超越自身的攻击力……\ \
+<New~/SCOLOR=249> <技能强化，最高五重，让你变的更强大！强化等级越高伤害就越高！/SCOLOR=253>\ \
+
+　   <灵魂火符：/SCOLOR=250>[<$STR(S$灵魂火符强化等级)>] 　 <点我查看材料|254#秘籍残页*<$STR(N$灵魂火符材料数量)>^146#元宝数量:<$STR(N$灵魂火符元宝数量)>/SCOLOR=116>  　 <$STR(S$灵魂火符按钮)>\ \
+　   <飓 风 破：/SCOLOR=250>[<$STR(S$飓风破强化等级)>] 　 <点我查看材料|254#秘籍残页*<$STR(N$飓风破材料数量)>^146#元宝数量:<$STR(N$飓风破元宝数量)>/SCOLOR=116>  　 <$STR(S$飓风破按钮)>\  \
+
+　 <群体施毒术：/SCOLOR=250>[<$STR(S$群体施毒术强化等级)>] 　 <点我查看材料|254#秘籍残页*<$STR(N$群体施毒术材料数量)>^146#元宝数量:<$STR(N$群体施毒术元宝数量)>/SCOLOR=116>  　 <$STR(S$群体施毒术按钮)>\
+
+
+
+[@群体施毒术1]
+#IF
+CHECKSKILL 群体施毒术 ? 0
+#ACT
+#elseact
+messagebox 你还没有学习【群体施毒术】技能。
+break
+
+#IF
+CHECKSKILL 群体施毒术 = 0 1
+checkitem 秘籍残页 10
+CheckGameGold > 2999
+#Act
+take 秘籍残页 10
+GameGold - 3000
+SKILLLEVEL 群体施毒术 + 1 1
+INC U7 1
+Goto @道士强化技能
+SENDMSG 1 恭喜玩家[<$USERNAME>]成功将「群体施毒术」技能威力强化至一重.
+Break
+#ElseAct
+MESSAGEBOX [强化失败]:\　\　　　　　　请查看你的材料是否充足!
+Break
+
+[@群体施毒术2]
+#IF
+CHECKSKILL 飓风破 ? 0
+#ACT
+#elseact
+messagebox 需要其他技能都强化到一重才能继续强化
+break
+
+#or
+CHECKSKILL 灵魂火符 < 1 1
+CHECKSKILL 飓风破 < 1 1
+#act
+messagebox 需要其他技能都强化到一重才能继续强化
+break
+
+#IF
+CHECKSKILL 群体施毒术 = 1 1
+checkitem 秘籍残页 15
+CheckGameGold > 4999
+#Act
+take 秘籍残页 15
+GameGold - 5000
+SKILLLEVEL 群体施毒术 + 1 1
+INC U7 1
+Goto @道士强化技能
+SENDMSG 1 恭喜玩家[<$USERNAME>]成功将「群体施毒术」技能威力强化至二重.
+Break
+#ElseAct
+MESSAGEBOX [强化失败]:\　\　　　　　　请查看你的材料是否充足!
+Break
+
+[@群体施毒术3]
+#or
+CHECKSKILL 灵魂火符 < 2 1
+CHECKSKILL 飓风破 < 2 1
+#act
+messagebox 需要其他技能都强化到二重才能继续强化
+break
+
+#IF
+CHECKSKILL 群体施毒术 = 2 1
+checkitem 秘籍残页 20
+CheckGameGold > 9999
+#Act
+take 秘籍残页 20
+GameGold - 10000
+SKILLLEVEL 群体施毒术 + 1 1
+INC U7 1
+Goto @道士强化技能
+SENDMSG 1 恭喜玩家[<$USERNAME>]成功将「群体施毒术」技能威力强化至三重.
+Break
+#ElseAct
+MESSAGEBOX [强化失败]:\　\　　　　　　请查看你的材料是否充足!
+Break
+
+[@群体施毒术4]
+#or
+CHECKSKILL 灵魂火符 < 3 1
+CHECKSKILL 飓风破 < 3 1
+#act
+messagebox 需要其他技能都强化到三重才能继续强化
+break
+
+#IF
+CHECKSKILL 群体施毒术 = 3 1
+checkitem 秘籍残页 30
+CheckGameGold > 19999
+#Act
+take 秘籍残页 30
+GameGold - 20000
+SKILLLEVEL 群体施毒术 + 1 1
+INC U7 1
+Goto @道士强化技能
+SENDMSG 1 恭喜玩家[<$USERNAME>]成功将「群体施毒术」技能威力强化至四重.
+Break
+#ElseAct
+MESSAGEBOX [强化失败]:\　\　　　　　　请查看你的材料是否充足!
+Break
+
+[@群体施毒术5]
+#or
+CHECKSKILL 灵魂火符 < 4 1
+CHECKSKILL 飓风破 < 4 1
+#act
+messagebox 需要其他技能都强化到四重才能继续强化
+break
+
+#IF
+CHECKSKILL 群体施毒术 = 4 1
+checkitem 秘籍残页 50
+CheckGameGold > 49999
+#Act
+take 秘籍残页 50
+GameGold - 50000
+SKILLLEVEL 群体施毒术 + 1 1
+INC U7 1
+Goto @道士强化技能
+SENDMSG 1 恭喜玩家[<$USERNAME>]成功将「群体施毒术」技能威力强化至五重.
+Break
+#ElseAct
+MESSAGEBOX [强化失败]:\　\　　　　　　请查看你的材料是否充足!
+Break
+
+
+
+
+
+;=====================================================
+
+[@飓风破1]
+#IF
+CHECKSKILL 飓风破 ? 0
+#ACT
+#elseact
+messagebox 你还没有学习【飓风破】技能。
+break
+
+#IF
+CHECKSKILL 飓风破 = 0 1
+checkitem 秘籍残页 10
+CheckGameGold > 2999
+#Act
+take 秘籍残页 10
+GameGold - 3000
+SKILLLEVEL 飓风破 + 1 1
+INC U6 1
+Goto @道士强化技能
+SENDMSG 1 恭喜玩家[<$USERNAME>]成功将「飓风破」技能威力强化至一重.
+Break
+#ElseAct
+MESSAGEBOX [强化失败]:\　\　　　　　　请查看你的材料是否充足!
+Break
+
+[@飓风破2]
+#or
+CHECKSKILL 灵魂火符 < 1 1
+CHECKSKILL 群体施毒术 < 1 1
+#act
+messagebox 需要其他技能都强化到一重才能继续强化
+break
+
+#IF
+CHECKSKILL 飓风破 = 1 1
+checkitem 秘籍残页 15
+CheckGameGold > 4999
+#Act
+take 秘籍残页 15
+GameGold - 5000
+SKILLLEVEL 飓风破 + 1 1
+INC U6 1
+Goto @道士强化技能
+SENDMSG 1 恭喜玩家[<$USERNAME>]成功将「飓风破」技能威力强化至二重.
+Break
+#ElseAct
+MESSAGEBOX [强化失败]:\　\　　　　　　请查看你的材料是否充足!
+Break
+
+[@飓风破3]
+#or
+CHECKSKILL 灵魂火符 < 2 1
+CHECKSKILL 群体施毒术 < 2 1
+#act
+messagebox 需要其他技能都强化到二重才能继续强化
+break
+
+#IF
+CHECKSKILL 飓风破 = 2 1
+checkitem 秘籍残页 20
+CheckGameGold > 9999
+#Act
+take 秘籍残页 20
+GameGold - 10000
+SKILLLEVEL 飓风破 + 1 1
+INC U6 1
+Goto @道士强化技能
+SENDMSG 1 恭喜玩家[<$USERNAME>]成功将「飓风破」技能威力强化至三重.
+Break
+#ElseAct
+MESSAGEBOX [强化失败]:\　\　　　　　　请查看你的材料是否充足!
+Break
+
+[@飓风破4]
+#or
+CHECKSKILL 灵魂火符 < 3 1
+CHECKSKILL 群体施毒术 < 3 1
+#act
+messagebox 需要其他技能都强化到三重才能继续强化
+break
+
+#IF
+CHECKSKILL 飓风破 = 3 1
+checkitem 秘籍残页 30
+CheckGameGold > 19999
+#Act
+take 秘籍残页 30
+GameGold - 20000
+SKILLLEVEL 飓风破 + 1 1
+INC U6 1
+Goto @道士强化技能
+SENDMSG 1 恭喜玩家[<$USERNAME>]成功将「飓风破」技能威力强化至四重.
+Break
+#ElseAct
+MESSAGEBOX [强化失败]:\　\　　　　　　请查看你的材料是否充足!
+Break
+
+[@飓风破5]
+#or
+CHECKSKILL 灵魂火符 < 4 1
+CHECKSKILL 群体施毒术 < 4 1
+#act
+messagebox 需要其他技能都强化到四重才能继续强化
+break
+
+#IF
+CHECKSKILL 飓风破 = 4 1
+checkitem 秘籍残页 50
+CheckGameGold > 49999
+#Act
+take 秘籍残页 50
+GameGold - 50000
+SKILLLEVEL 飓风破 + 1 1
+INC U6 1
+Goto @道士强化技能
+SENDMSG 1 恭喜玩家[<$USERNAME>]成功将「飓风破」技能威力强化至五重.
+Break
+#ElseAct
+MESSAGEBOX [强化失败]:\　\　　　　　　请查看你的材料是否充足!
+Break
+
+
+
+
+;=====================================================
+
+[@灵魂火符1]
+#IF
+CHECKSKILL 灵魂火符 ? 0
+#ACT
+#elseact
+messagebox 你还没有学习【灵魂火符】技能。
+break
+
+#IF
+CHECKSKILL 灵魂火符 = 0 1
+checkitem 秘籍残页 10
+CheckGameGold > 2999
+#Act
+take 秘籍残页 10
+GameGold - 3000
+SKILLLEVEL 灵魂火符 + 1 1
+INC U5 1
+Goto @道士强化技能
+SENDMSG 1 恭喜玩家[<$USERNAME>]成功将「灵魂火符」技能威力强化至一重.
+Break
+#ElseAct
+MESSAGEBOX [强化失败]:\　\　　　　　　请查看你的材料是否充足!
+Break
+
+[@灵魂火符2]
+#IF
+CHECKSKILL 飓风破 ? 0
+#ACT
+#elseact
+messagebox 需要其他技能都强化到一重才能继续强化
+break
+
+#or
+CHECKSKILL 飓风破 < 1 1
+CHECKSKILL 群体施毒术 < 1 1
+#act
+messagebox 需要其他技能都强化到一重才能继续强化
+break
+
+#IF
+CHECKSKILL 灵魂火符 = 1 1
+checkitem 秘籍残页 15
+CheckGameGold > 4999
+#Act
+take 秘籍残页 15
+GameGold - 5000
+SKILLLEVEL 灵魂火符 + 1 1
+INC U5 1
+Goto @道士强化技能
+SENDMSG 1 恭喜玩家[<$USERNAME>]成功将「灵魂火符」技能威力强化至二重.
+Break
+#ElseAct
+MESSAGEBOX [强化失败]:\　\　　　　　　请查看你的材料是否充足!
+Break
+
+[@灵魂火符3]
+#or
+CHECKSKILL 飓风破 < 2 1
+CHECKSKILL 群体施毒术 < 2 1
+#act
+messagebox 需要其他技能都强化到二重才能继续强化
+break
+
+#IF
+CHECKSKILL 灵魂火符 = 2 1
+checkitem 秘籍残页 20
+CheckGameGold > 9999
+#Act
+take 秘籍残页 20
+GameGold - 10000
+SKILLLEVEL 灵魂火符 + 1 1
+INC U5 1
+Goto @道士强化技能
+SENDMSG 1 恭喜玩家[<$USERNAME>]成功将「灵魂火符」技能威力强化至三重.
+Break
+#ElseAct
+MESSAGEBOX [强化失败]:\　\　　　　　　请查看你的材料是否充足!
+Break
+
+[@灵魂火符4]
+#or
+CHECKSKILL 飓风破 < 3 1
+CHECKSKILL 群体施毒术 < 3 1
+#act
+messagebox 需要其他技能都强化到三重才能继续强化
+break
+
+#IF
+CHECKSKILL 灵魂火符 = 3 1
+checkitem 秘籍残页 30
+CheckGameGold > 19999
+#Act
+take 秘籍残页 30
+GameGold - 20000
+SKILLLEVEL 灵魂火符 + 1 1
+INC U5 1
+Goto @道士强化技能
+SENDMSG 1 恭喜玩家[<$USERNAME>]成功将「灵魂火符」技能威力强化至四重.
+Break
+#ElseAct
+MESSAGEBOX [强化失败]:\　\　　　　　　请查看你的材料是否充足!
+Break
+
+[@灵魂火符5]
+#or
+CHECKSKILL 飓风破 < 4 1
+CHECKSKILL 群体施毒术 < 4 1
+#act
+messagebox 需要其他技能都强化到四重才能继续强化
+break
+
+#IF
+CHECKSKILL 灵魂火符 = 4 1
+checkitem 秘籍残页 50
+CheckGameGold > 49999
+#Act
+take 秘籍残页 50
+GameGold - 50000
+SKILLLEVEL 灵魂火符 + 1 1
+INC U5 1
+Goto @道士强化技能
+SENDMSG 1 恭喜玩家[<$USERNAME>]成功将「灵魂火符」技能威力强化至五重.
+Break
+#ElseAct
+MESSAGEBOX [强化失败]:\　\　　　　　　请查看你的材料是否充足!
+Break
+
+
+
+
+
+
+;=====================================================
+

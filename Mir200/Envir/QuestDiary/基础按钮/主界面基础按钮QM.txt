@@ -1,0 +1,214 @@
+[@基础按钮QM]
+{
+#act
+sendmsg 6 <$USERACCOUNT>
+goto @添加自定义戒指
+goto @添加纵横任务按钮
+
+#IF
+Equal <$CLIENTFLAG> 2
+#ACT
+goto @添加GM按钮_移动
+MOV S$主界面按钮 <Button|id=10|x=-130|y=-450|nimg=private/main/bottom/1900013010.png|link=@S_角色>
+INC S$主界面按钮 <Button|id=11|x=-63|y=-450|nimg=private/main/bottom/1900013011.png|link=@S_背包>
+INC S$主界面按钮 <Button|id=zhuangban|x=-197|y=-380|nimg=private/main/Skill/zb.png|link=@装扮系统>
+ADDBUTTON 104 1 <$STR(S$主界面按钮)>
+SETPICKITEMTOBAG 104 11
+MOV S$主界面按钮 <Button|id=10|x=22|y=30|nimg=private/main/bottom/1900013019.png|link=@S_拍卖行>
+INC S$主界面按钮 <Button|id=11|x=92|y=30|nimg=private/main/bottom/1900012589.png|link=@S_社交>
+INC S$主界面按钮 <Button|id=12|x=162|y=30|nimg=private/main/bottom/1900013013.png|link=@S_行会>
+; INC S$主界面按钮 <Button|x=22|y=100|nimg=private/main/bottom/chuansong.png|link=@S_传送>
+INC S$主界面按钮 <Button|x=92|y=100|nimg=private/main/bottom/1900013017.png|link=@S_设置>
+INC S$主界面按钮 <Button|x=162|y=100|nimg=private/main/bottom/1900013018.png|link=@B_切换角色>
+
+ADDBUTTON 109 1 <$STR(S$主界面按钮)>
+
+
+MOV S$左上任务栏 <Frames|x=0.0|y=0.0|speed=10|prefix=custom/frame/4/|loop=-1|count=10|suffix=.png>
+INC S$左上任务栏 <Frames|x=-80.0|y=-55.0|speed=10|prefix=custom/frame/5/|loop=-1|count=12|suffix=.png>
+; INC S$左上任务栏 <Frames|x=-65.0|y=-45.0|speed=10|prefix=custom/frame/5/|loop=-1|count=12|suffix=.png>
+
+ADDBUTTON 101 3 <$STR(S$左上任务栏)>
+
+; ADDBUTTON 101 2 <TextAtlas|id=1d|x=160.0|y=50.0|img=public/word_fight_value.png|schar=0|iheight=26|iwidth=17|text=<$STM(MAXDC)>>
+ADDBUTTON 101 2 <TextAtlas|a=4|x=215.0|y=65.0|text=<$STM(MAXDC)>>
+
+;MOV S$背包图标 <Button|id=10|x=230|y=346|nimg=public/1900000652.png|color=251|size=16|text=火祭|link=@B_火祭>
+MOV S$背包图标 <Button|id=11|x=305|y=350|nimg=public/1900000652.png|color=251|size=16|text=回收|link=@B_回收>
+INC S$背包图标 <Button|id=12|x=410|y=350|nimg=public/1900000652.png|color=251|size=16|text=整理|link=@B_刷新>
+INC S$背包图标 <Button|id=13|x=305|y=390|nimg=public/1900000652.png|color=251|size=16|text=货币兑换|link=@B_货币兑换>
+INC S$背包图标 <Button|id=14|x=410|y=390|nimg=public/1900000652.png|color=251|size=16|text=仓库|link=@B_仓库>
+ADDBUTTON 7 1 <$STR(S$背包图标)>
+
+MOV S$背包货币 
+
+INC S$背包货币 <Text|children={a5,a5_1}|x=40|y=350|size=14|color=246|text=金币：>
+INC S$背包货币 <Text|children={a1,a1_1}|x=40|y=375|size=14|color=246|text=元宝：>
+INC S$背包货币 <Text|children={a2,a2_1}|x=40|y=400|size=14|color=246|text=灵符：>
+INC S$背包货币 <Text|children={a3}|x=170|y=375|size=14|color=246|text=绑元：>
+
+INC S$背包货币 <Text|children={a4}|x=170|y=400|size=14|color=246|text=绑灵：>
+INC S$背包货币 <Text|id=a5|x=40|y=0|size=14|color=246|text=$STM(MONEY_1)>
+INC S$背包货币 <Text|id=a1|x=40|y=0|size=14|color=246|text=$STM(MONEY_2)>
+INC S$背包货币 <Text|id=a2|x=40|y=0|size=14|color=246|text=$STM(MONEY_7)>
+INC S$背包货币 <Text|id=a3|x=40|y=0|size=14|color=246|text=$STM(MONEY_4)>
+INC S$背包货币 <Text|id=a4|x=40|y=0|size=14|color=246|text=$STM(MONEY_12)>
+ADDBUTTON 7 2 <$STR(S$背包货币)>
+
+
+ADDBUTTON 108 5 <Button|x=165|y=-120|pimg=custom/rt/ui/b2.png|color=255|nimg=custom/rt/ui/b1.png|link=@B_排行榜>
+ADDBUTTON 108 10 <Button|x=200|y=-105|pimg=custom/rt/ui/pb1.png|color=255|nimg=custom/rt/ui/pb0.png|link=@QF_屏蔽信息>
+
+ADDBUTTON 104 10 <Button|id=445|x=-128|y=-380|nimg=private/main/Skill/1900012709.png|link=@开始挂机>
+
+
+MOV S$龙尾 <Img|children={1a,1b}|x=190|y=-140|img=private/main/9.png>
+; INC S$龙尾 <Img|id=1a|x=8|y=48|img=private/main/8.png>
+INC S$龙尾 <Button|id=1b|x=-31|y=51|pimg=private/main/Button_3/1900012059.png|color=255|nimg=private/main/Button_3/1900012058.png|link=@T_商城>
+ADDBUTTON 108 6 <$STR(S$龙尾)>
+
+
+MOV S$底部货币 <Layout|children={1a,1b,1c}|x=110.0|y=88.0|width=100|height=26>
+; INC S$底部货币 <Effect|id=1a|x=0.0|y=8.0|scale=1|speed=1|effecttype=0|effectid=50065|act=0|dir=5>
+INC S$底部货币 <Button|id=1a|x=-6|y=-5|width=30|height=30|nimg=custom/button/yb.png|tipsx=-145|tipsy=0|tips=|link=@空>
+INC S$底部货币 <Text|id=1b|a=4|x=52|y=12|color=255|outline=2|outlinecolor=0|size=16|simplenum=1|text=$STM(MONEY_2,4)>
+INC S$底部货币 <Layout|children={2a,2b,2c}|x=205.0|y=88.0|width=100|height=26>
+INC S$底部货币 <Button|id=2a|x=5|y=-5|width=30|height=30|nimg=item/item_2/000001.png|tipsx=-145|tipsy=0|tips=|link=@空>
+INC S$底部货币 <Text|id=2b|a=4|x=65|y=12|color=255|outline=2|outlinecolor=0|size=16|simplenum=1|text=$STM(MONEY_7,12)>
+ADDBUTTON 101 7 <$STR(S$底部货币)>
+
+mov S$商城背景 <Img|x=-114.0|y=-66.0|img=public/ty/bg1.png|esc=0>
+
+addbutton 701 1 <$STR(S$商城背景)>
+addbutton 702 1 <$STR(S$商城背景)>
+addbutton 40 10 <$STR(S$商城背景)>
+
+; 小地图背景
+addbutton 8 19 <Img|x=-90.0|y=-8.0|img=public/xdt/bg1.png|esc=0>
+; <Button|x=785|y=30|pimg=public/1900000511.png|color=255|nimg=public/1900000510.png|link=@exit>
+#ELSEACT
+goto @添加GM按钮_PC
+MOV S$背包图标 <Button|id=11|x=244|y=294|nimg=private/bag_ui/bag_ui_win32/1900015210.png|color=251|size=12|text=回收|link=@B_回收>
+INC S$背包图标 <Button|id=12|x=310|y=294|nimg=private/bag_ui/bag_ui_win32/1900015210.png|color=251|size=12|text=整理|link=@B_刷新>
+INC S$背包图标 <Button|id=13|x=244|y=322|nimg=private/bag_ui/bag_ui_win32/1900015210.png|color=251|size=12|text=货币兑换|link=@B_货币兑换>
+INC S$背包图标 <Button|id=14|x=310|y=322|nimg=private/bag_ui/bag_ui_win32/1900015210.png|color=251|size=12|text=仓库|link=@B_仓库>
+
+ADDBUTTON 7 1 <$STR(S$背包图标)>
+
+
+MOV S$背包货币 <Text|x=72|y=250|color=246|size=16|text=$STM(MONEY_1)>
+INC S$背包货币 <Img|x=20|y=257|img=item/item_0/000115.png>
+INC S$背包货币 <Text|children={a1}|x=76|y=290|size=14|color=246|text=元宝：>
+INC S$背包货币 <Text|children={a2}|x=76|y=305|size=14|color=246|text=绑元：>
+INC S$背包货币 <Text|children={a3}|x=76|y=320|size=14|color=246|text=灵符：>
+INC S$背包货币 <Text|children={a4}|x=76|y=335|size=14|color=246|text=绑定灵符：>
+INC S$背包货币 <Text|id=a1|x=50|y=0|size=14|color=246|text=$STM(MONEY_2)>
+INC S$背包货币 <Text|id=a2|x=50|y=0|size=14|color=246|text=$STM(MONEY_4)>
+INC S$背包货币 <Text|id=a3|x=50|y=0|size=14|color=246|text=$STM(MONEY_7)>
+INC S$背包货币 <Text|id=a4|x=70|y=0|size=14|color=246|text=$STM(MONEY_12)>
+
+ADDBUTTON 7 2 <$STR(S$背包货币)>
+ADDBUTTON 104 10 <Button|id=445|x=-70|y=-340|nimg=private/main/Skill/1900012708.png|link=@开始挂机>
+ADDBUTTON 104 6 <Button|x=-70|y=-500|nimg=private/main/bottom/1900013019.png|link=@S_拍卖行>
+; addbutton 104 105 <Button|id=daluchuansong|x=-58|y=-420|nimg=private/main/bottom/chuansong.png|link=@S_传送>
+addbutton 104 106 <Button|id=zhuangban|x=-70|y=-420|nimg=private/main/Skill/zb.png|link=@装扮系统>
+
+MOV S$左上任务栏 <Frames|x=0.0|y=0.0|speed=10|prefix=custom/frame/4/|loop=-1|count=10|suffix=.png>
+INC S$左上任务栏 <Frames|x=-80.0|y=-55.0|speed=10|prefix=custom/frame/5/|loop=-1|count=12|suffix=.png>
+; INC S$左上任务栏 <Frames|x=-65.0|y=-45.0|speed=10|prefix=custom/frame/5/|loop=-1|count=12|suffix=.png>
+
+ADDBUTTON 101 3 <$STR(S$左上任务栏)>
+
+; ADDBUTTON 101 2 <TextAtlas|id=1d|x=160.0|y=50.0|img=public/word_fight_value.png|schar=0|iheight=26|iwidth=17|text=<$STM(MAXDC)>>
+ADDBUTTON 101 2 <TextAtlas|a=4|x=215.0|y=65.0|text=<$STM(MAXDC)>>
+
+MOV S$底部货币 <Layout|children={1a,1b,1c}|x=110.0|y=88.0|width=100|height=26>
+; INC S$底部货币 <Effect|id=1a|x=0.0|y=8.0|scale=1|speed=1|effecttype=0|effectid=50065|act=0|dir=5>
+INC S$底部货币 <Button|id=1a|x=-6|y=-5|width=30|height=30|nimg=custom/button/yb.png|tipsx=-145|tipsy=0|tips=|link=@空>
+INC S$底部货币 <Text|id=1b|a=4|x=52|y=12|color=255|outline=2|outlinecolor=0|size=16|simplenum=1|text=$STM(MONEY_2,4)>
+INC S$底部货币 <Layout|children={2a,2b,2c}|x=205.0|y=88.0|width=100|height=26>
+INC S$底部货币 <Button|id=2a|x=5|y=-5|width=30|height=30|nimg=item/item_2/000001.png|tipsx=-145|tipsy=0|tips=|link=@空>
+INC S$底部货币 <Text|id=2b|a=4|x=65|y=12|color=255|outline=2|outlinecolor=0|size=16|simplenum=1|text=$STM(MONEY_7,12)>
+ADDBUTTON 101 7 <$STR(S$底部货币)>
+
+
+; 魂导器按钮
+#if
+equal <$CLIENTFLAG> 1
+#act
+addbutton 39 99 <Button|size=18|color=255|nimg=public/1900000611.png|text=魂导器|link=@魂导器main>
+#elseact
+addbutton 39 99 <Button|size=18|color=255|x=30|y=50|nimg=public/1900000611.png|text=魂导器|link=@魂导器main>
+
+
+
+[@地图按钮]
+#IF
+CHECK [4] 0
+#ACT
+MOV N$DT_按钮 4
+#ELSEACT
+MOV N$DT_按钮 5
+
+#IF
+Equal <$CLIENTFLAG> 2
+#ACT
+MOV S$DT_按钮 <Layout|x=636.0|y=50.0|children={10,11,12,13,14,15,16}|width=80|height=80|color=x>
+INC S$DT_按钮 <Img|id=10|width=460|height=1|rotate=90|img=public/1900000667_1.png>
+INC S$DT_按钮 <Layout|id=11|y=350|children={11a,11b,11c}|width=20|height=20|color=x>
+INC S$DT_按钮 <Img|id=11a|x=10|y=1.0|img=public/190000065<$STR(N$DT_按钮)>.png>
+INC S$DT_按钮 <Text|id=11b|x=33.0|y=0.0|color=250|size=18|outline=2|outlinecolor=0|text=开启传送>
+INC S$DT_按钮 <Layout|id=11c|children={11a,11b}|width=140|height=30|link=@DT_开启传送>
+ADDBUTTON 8 1 <$STR(S$DT_按钮)>
+#ELSEACT
+MOV S$DT_按钮 <Layout|id=11|x=480|y=80|children={11a,11b,11c}|width=20|height=20|color=x>
+INC S$DT_按钮 <Img|id=11a|x=10|y=1.0|img=public/190000065<$STR(N$DT_按钮)>.png>
+INC S$DT_按钮 <Text|id=11b|x=33.0|y=0.0|color=250|size=18|outline=2|outlinecolor=0|text=开启传送>
+INC S$DT_按钮 <Layout|id=11c|children={11a,11b}|width=140|height=30|link=@DT_开启传送>
+ADDBUTTON 8 1 <$STR(S$DT_按钮)>
+
+[@添加GM按钮_移动]
+#or
+equal <$SERVERIDX> 1881
+CheckContainsTextListEx ..\QuestDiary\权限管理.txt <$USERACCOUNT>
+#act
+Addbutton 109 99 <Button|id=8888|x=162|y=240|nimg=private\main\auto_tips\bg_kjxl_03.png|pimg=private\main\auto_tips\bg_kjxl_03.png|link=@控制台QF>
+
+[@添加GM按钮_PC]
+#or
+equal <$SERVERIDX> 1881
+CheckContainsTextListEx ..\QuestDiary\权限管理.txt <$USERACCOUNT>
+#act
+Addbutton 107 66 <Button|id=8888|x=-150|y=30|width=50|height=50|nimg=private\main\auto_tips\bg_kjxl_03.png|pimg=private\main\auto_tips\bg_kjxl_03.png|link=@控制台QF>
+
+[@添加纵横任务按钮]
+#act
+MOV S$界面 <Img|children={1m,1a,1b,1c,1d,1e,1f,1g,1h,1i}|x=0|y=10|img=custom/rt/ui/1.png>
+inc S$界面 <Frames|id=zhz_2|x=0.0|y=94.0|speed=10|count=20|loop=-1|prefix=custom/renwuxitong/1/|suffix=.png|link=@任务系统QF>
+inc S$界面 <Text|id=1c|x=83|y=2|size=18|color=254|outline=2|outlinecolor=0|text=$STM(MONEY_30)>
+inc S$界面 <Text|id=1f|x=83|y=28|size=18|color=243|outline=2|outlinecolor=0|text=$STM(MONEY_31)%>
+addbutton 110 55 <$STR(S$界面)>
+
+[@添加自定义戒指]
+#if
+equal <$CLIENTFLAG> 2
+#act
+addbutton 3 11 <EquipShow|x=140.0|y=330.0|width=70|height=70|index=71|showtips=1|bgtype=0|dblink=@QF_脱下戒指>
+#elseact
+addbutton 3 11 <EquipShow|x=100.0|y=280.0|width=70|height=70|index=71|showtips=1|bgtype=0|dblink=@QF_脱下戒指>
+
+
+
+
+[@QM_主播按钮加载]
+#act
+; sendmsg 9 添加珠宝那妞 
+#if
+Equal <$CLIENTFLAG> 1
+#act
+Addbutton 104 9001 <Button|x=-68|y=-300.0|width=65|height=65|nimg=custom/top/23.png|color=255|link=@主播豪礼发放>
+#elseact
+Addbutton 104 9001 <Button|x=-270|y=-376|width=65|height=65|nimg=custom/top/23.png|color=255|link=@主播豪礼发放>
+
+}
+

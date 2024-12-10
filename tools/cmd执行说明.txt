@@ -1,0 +1,2 @@
+[dev打包]           CallPython.exe -m dev -i dev目录 -o 导出目录 -v 版本号 -k 秘钥(选填) -s 增量包(选填) -z (0:不打zip包 1:打zip包 不写默认1)
+[资源打包]          CallPython.exe -m packer -n 生成名字 -i 图片目录 -o 导出目录

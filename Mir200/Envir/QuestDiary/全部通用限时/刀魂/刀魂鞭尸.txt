@@ -1,0 +1,224 @@
+[@鞭尸计算]
+{
+
+#IF
+#ACT
+MOV  N$鞭尸确定 0
+
+#IF
+CHECK [2] 1
+#ACT
+inc N$鞭尸确定 10
+
+#IF
+Checkitemw 嘟嘟神盾·Lv1
+#ACT
+inc N$鞭尸确定 1
+
+#IF
+Checkitemw 嘟嘟神盾·Lv2
+#ACT
+inc N$鞭尸确定 2
+
+#IF
+Checkitemw 嘟嘟神盾·Lv3
+#ACT
+inc N$鞭尸确定 3
+
+#IF
+Checkitemw 嘟嘟神盾·Lv4
+#ACT
+inc N$鞭尸确定 4
+
+#IF
+Checkitemw 嘟嘟神盾·Lv5
+#ACT
+inc N$鞭尸确定 5
+
+#IF
+Checkitemw 嘟嘟神盾·Lv6
+#ACT
+inc N$鞭尸确定 6
+
+#IF
+Checkitemw 嘟嘟神盾·Lv7
+#ACT
+inc N$鞭尸确定 7
+
+#IF
+Checkitemw 嘟嘟神盾·Lv8
+#ACT
+inc N$鞭尸确定 8
+
+#IF
+Checkitemw 嘟嘟神盾·Lv9
+#ACT
+inc N$鞭尸确定 9
+
+#IF
+Checkitemw 嘟嘟神盾·Lv10
+#ACT
+inc N$鞭尸确定 10
+#IF
+Checkitemw 嘟嘟神盾·Lv11
+#ACT
+inc N$鞭尸确定 11
+
+#IF
+Checkitemw 嘟嘟神盾·Lv12
+#ACT
+inc N$鞭尸确定 12
+
+#IF
+Checkitemw 嘟嘟神盾·Lv13
+#ACT
+inc N$鞭尸确定 13
+
+#IF
+Checkitemw 嘟嘟神盾·Lv14
+#ACT
+inc N$鞭尸确定 14
+
+#IF
+Checkitemw 嘟嘟神盾·终极
+#ACT
+inc N$鞭尸确定 15
+#IF
+Checkitemw 烈焰★沉默＇「盾牌」
+#ACT
+inc N$鞭尸确定 30
+#IF
+Check [69] 1
+#ACT
+inc N$鞭尸确定 10
+
+#IF
+equal U49 9
+#Act
+inc N$鞭尸确定 45
+
+#IF
+equal U49 8
+#Act
+inc N$鞭尸确定 40
+
+#IF
+equal U49 7
+#Act
+inc N$鞭尸确定 35
+
+#IF
+equal U49 6
+#Act
+inc N$鞭尸确定 30
+
+#IF
+equal U49 5
+#Act
+inc N$鞭尸确定 25
+
+#IF
+equal U49 4
+#Act
+inc N$鞭尸确定 20
+
+#IF
+equal U49 3
+#Act
+inc N$鞭尸确定 15
+
+#IF
+equal U49 2
+#Act
+inc N$鞭尸确定 10
+
+#IF
+equal U49 1
+#Act
+inc N$鞭尸确定 5
+
+#IF
+CHECKTITLE 武林宗师
+#ACT
+inc N$鞭尸确定 10
+
+;-----星星套装----
+#IF 
+CHECKTITLE 强化3星专属
+#ACT 
+INC  N$鞭尸确定 1
+
+#IF 
+CHECKTITLE 强化4星专属
+#ACT 
+INC  N$鞭尸确定 2
+
+#IF 
+CHECKTITLE 强化5星专属
+#ACT 
+INC  N$鞭尸确定 3
+
+#IF 
+CHECKTITLE 强化6星专属
+#ACT 
+INC  N$鞭尸确定 4
+
+#IF 
+CHECKTITLE 强化7星专属
+#ACT 
+INC  N$鞭尸确定 5
+
+#IF 
+CHECKTITLE 强化8星专属
+#ACT 
+INC  N$鞭尸确定 6
+
+#IF 
+CHECKTITLE 强化9星专属
+#ACT 
+INC  N$鞭尸确定 7
+
+
+
+;------捐献------
+
+
+
+#IF
+NOT CHECKCONTAINSTEXT <$SERVERNAME> 总区
+CHECKVAR HUMAN YL-个人捐献 > 9999999
+#ACT
+INC  N$鞭尸确定 15
+
+#IF
+CHECKVAR HUMAN YL-个人捐献 < 10000000
+equal A31 <$USERNAME>
+#ACT
+INC  N$鞭尸确定 15
+
+#IF
+CHECKVAR HUMAN YL-个人捐献 < 10000000
+equal A32 <$USERNAME>
+#ACT
+INC  N$鞭尸确定 12
+
+#IF
+CHECKVAR HUMAN YL-个人捐献 < 10000000
+equal A33 <$USERNAME>
+#ACT
+INC  N$鞭尸确定 10
+
+#IF
+CHECKVAR HUMAN YL-个人捐献 < 10000000
+equal A34 <$USERNAME>
+#ACT
+INC  N$鞭尸确定 8
+
+#IF
+CHECKVAR HUMAN YL-个人捐献 < 10000000
+equal A35 <$USERNAME>
+#ACT
+INC  N$鞭尸确定 6
+
+
+}

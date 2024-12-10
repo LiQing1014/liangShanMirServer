@@ -1,0 +1,29 @@
+[@MAIN]
+
+
+
+
+#IF
+hour 19 19
+min 21 59
+#ACT
+GOTO @MAIN1
+#ELSEACT
+MESSAGEBOX \对不起领奖时间还没到或者已过期\\领奖时间：19:21-19:59-过时不候\\最终获胜者可领取奖励：388888元宝\\
+BREAK
+
+[@MAIN1]
+#IF
+hour 19 19
+min 21 59
+CheckMapHumanCount  wlzb  = 1
+#ACT
+MOV A10 <$USERNAME>
+CONFERTITLE 武林盟主
+MAPMOVE 3 330 330
+GAMEGOLD + 388888
+SENDMSG 7 [提示]：元宝增加388888个.您当前的元宝为：<$GAMEGOLD>个！
+SendMsg 0 {比武大会ぐ|151:0:1}：恭喜「{%s|227:0:1}」在比武大会中获得最终胜利，领取{[388888元宝]|223:0:1}的奖励！
+#ELSEACT
+MESSAGEBOX \\对不起，胜负未分！地图内还有其他对手！\\请先把其他对手都放倒在地了再来找我吧！\\
+BREAK

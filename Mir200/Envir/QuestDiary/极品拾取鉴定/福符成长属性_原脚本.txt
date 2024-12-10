@@ -1,0 +1,635 @@
+[@福符成长属性]
+{
+
+
+
+#IF
+#ACT
+;MOV N$自身属性 0
+MOV N$福符等级 1
+MOV N$福符属性 1
+MOV N$福符经验 1
+MOV N$下级福符经验 1
+
+
+#IF
+checkjob warrior
+;--------战士----------
+#ACT
+;MOV N$自身属性 <$MAXDC>
+MOV N$血量位置 0
+MOV S$本命职业 战士
+MOV N$本命属性位置1 3
+MOV N$本命属性位置 2
+MOV N$职业切割 15
+MOV N$福符经验值 10
+MOV N$本命属性颜色 249
+MOV N$本命属性A 15
+MOV N$本命属性B 23
+MOV N$职业血量 4
+
+#IF
+checkjob wizard
+;--------法师----------
+#ACT
+;MOV N$自身属性 <$MAXDC>
+MOV N$血量位置 0
+MOV S$本命职业 法师
+MOV N$本命属性位置1 4
+MOV N$本命属性位置 3
+MOV N$职业切割 3
+MOV N$福符经验值 10
+MOV N$本命属性颜色 251
+MOV N$本命属性A 15
+MOV N$本命属性B 23
+MOV N$职业血量 1
+
+#IF
+checkjob taoist
+;--------道士----------
+#ACT
+;MOV N$自身属性 <$MAXDC>
+MOV N$血量位置 0
+MOV S$本命职业 道士
+MOV N$本命属性位置1 5
+MOV N$本命属性位置 4
+MOV N$职业切割 10
+MOV N$福符经验值 10
+MOV N$本命属性颜色 70
+MOV N$本命属性A 15
+MOV N$本命属性B 23
+MOV N$职业血量 2
+
+
+
+
+
+
+#IF
+checkitemw 福星高照符[V1] 1
+#ACT
+MOV S$当前福符名字 福星高照
+MOV N$设置福符等级 3
+MOV N$设置福符U187 1
+MOV N$福符经验 50
+MOV N$福符属性 1
+MOV S$当前福符装备 福星高照符[V1]
+MOV S$下级福符装备 顺风顺水符[V2]
+GOTO @给福符属性
+BREAK
+
+
+#IF
+checkitemw 顺风顺水符[V2] 1
+#ACT
+MOV S$当前福符名字 顺风顺水
+MOV N$设置福符等级 3
+MOV N$设置福符U187 4
+MOV N$福符经验 100
+MOV N$福符属性 2
+MOV S$当前福符装备 顺风顺水符[V2]
+MOV S$下级福符装备 鸿运当头符[V3]
+GOTO @给福符属性
+BREAK
+
+
+#IF
+checkitemw 鸿运当头符[V3] 1
+#ACT
+MOV S$当前福符名字 鸿运当头
+MOV N$设置福符等级 3
+MOV N$设置福符U187 7
+MOV N$福符经验 200
+MOV N$福符属性 3
+MOV S$当前福符装备 鸿运当头符[V3]
+MOV S$下级福符装备 喜气洋洋符[V4]
+GOTO @给福符属性
+BREAK
+
+#IF
+checkitemw 喜气洋洋符[V4] 1
+#ACT
+MOV S$当前福符名字 喜气洋洋
+MOV N$设置福符等级 4
+MOV N$设置福符U187 10
+MOV N$福符经验 400
+MOV N$福符属性 4
+MOV S$当前福符装备 喜气洋洋符[V4]
+MOV S$下级福符装备 吉祥如意符[V5]
+GOTO @给福符属性
+BREAK
+
+#IF
+checkitemw 吉祥如意符[V5] 1
+#ACT
+MOV S$当前福符名字 吉祥如意
+MOV N$设置福符等级 4
+MOV N$设置福符U187 14
+MOV N$福符经验 500
+MOV N$福符属性 5
+MOV S$当前福符装备 吉祥如意符[V5]
+MOV S$下级福符装备 春风得意符[V6]
+GOTO @给福符属性
+BREAK
+
+
+
+#IF
+checkitemw 春风得意符[V6] 1
+#ACT
+MOV S$当前福符名字 春风得意
+MOV N$设置福符等级 4
+MOV N$设置福符U187 18
+MOV N$福符经验 1000
+MOV N$福符属性 6
+MOV S$当前福符装备 春风得意符[V6]
+MOV S$下级福符装备 金榜题名符[V7]
+GOTO @给福符属性
+BREAK
+
+
+
+#IF
+checkitemw 金榜题名符[V7] 1
+#ACT
+MOV S$当前福符名字 金榜题名
+MOV N$设置福符等级 5
+MOV N$设置福符U187 22
+MOV N$福符经验 2000
+MOV N$福符属性 7
+MOV S$当前福符装备 金榜题名符[V7]
+MOV S$下级福符装备 福如东海符[V8]
+GOTO @给福符属性
+BREAK
+
+
+#IF
+checkitemw 福如东海符[V8] 1
+#ACT
+MOV S$当前福符名字 福如东海
+MOV N$设置福符等级 5
+MOV N$设置福符U187 27
+MOV N$福符经验 3000
+MOV N$福符属性 8
+MOV S$当前福符装备 福如东海符[V8]
+MOV S$下级福符装备 笑口常开符[V9]
+GOTO @给福符属性
+BREAK
+
+#IF
+checkitemw 笑口常开符[V9] 1
+#ACT
+MOV S$当前福符名字 笑口常开
+MOV N$设置福符等级 5
+MOV N$设置福符U187 32
+MOV N$福符经验 4000
+MOV N$福符属性 9
+MOV S$当前福符装备 笑口常开符[V9]
+MOV S$下级福符装备 一帆风顺符[V10]
+GOTO @给福符属性
+BREAK
+
+
+#IF
+checkitemw 一帆风顺符[V10] 1
+#ACT
+MOV S$当前福符名字 一帆风顺
+MOV N$设置福符等级 7
+MOV N$设置福符U187 37
+MOV N$福符经验 5000
+MOV N$福符属性 10
+MOV S$当前福符装备 一帆风顺符[V10]
+MOV S$下级福符装备 花开富贵符[V11]
+GOTO @给福符属性
+BREAK
+
+
+#IF
+checkitemw 花开富贵符[V11] 1
+#ACT
+MOV S$当前福符名字 花开富贵
+MOV N$设置福符等级 7
+MOV N$设置福符U187 44
+MOV N$福符经验 20000
+MOV N$福符属性 11
+MOV S$当前福符装备 花开富贵符[V11]
+MOV S$下级福符装备 大吉大利符[V12]
+GOTO @给福符属性
+BREAK
+
+
+#IF
+checkitemw 大吉大利符[V12] 1
+#ACT
+MOV S$当前福符名字 大吉大利
+MOV N$设置福符等级 7
+MOV N$设置福符U187 51
+MOV N$福符经验 22000
+MOV N$福符属性 12
+MOV S$当前福符装备 大吉大利符[V12]
+MOV S$下级福符装备 天降横财符[V13]
+GOTO @给福符属性
+BREAK
+
+#IF
+checkitemw 天降横财符[V13] 1
+#ACT
+MOV S$当前福符名字 天降横财
+MOV N$设置福符等级 10
+MOV N$设置福符U187 58
+MOV N$福符经验 24000
+MOV N$福符属性 13
+MOV S$当前福符装备 天降横财符[V13]
+MOV S$下级福符装备 吉星高照符[V14]
+GOTO @给福符属性
+BREAK
+
+
+
+#IF
+checkitemw 吉星高照符[V14] 1
+#ACT
+MOV S$当前福符名字 吉星高照
+MOV N$设置福符等级 10
+MOV N$设置福符U187 68
+MOV N$福符经验 26000
+MOV N$福符属性 13
+MOV S$当前福符装备 吉星高照符[V14]
+MOV S$下级福符装备 安康福寿符[V15]
+GOTO @给福符属性
+BREAK
+
+
+
+
+
+
+#IF
+checkitemw 安康福寿符[V15] 1
+#ACT
+MOV S$当前福符名字 安康福寿
+MOV N$设置福符等级 10
+MOV N$设置福符U187 78
+MOV N$福符经验 28000
+MOV N$福符属性 13
+MOV S$当前福符装备 安康福寿符[V15]
+MOV S$下级福符装备 心想事成符[V16]
+GOTO @给福符属性
+BREAK
+
+
+
+
+
+#IF
+checkitemw 心想事成符[V16] 1
+#ACT
+MOV S$当前福符名字 心想事成
+MOV N$设置福符等级 12
+MOV N$设置福符U187 88
+MOV N$福符经验 30000
+MOV N$福符属性 13
+MOV S$当前福符装备 心想事成符[V16]
+MOV S$下级福符装备 福禄寿喜符[V17]
+GOTO @给福符属性
+BREAK
+
+
+
+
+
+#IF
+checkitemw 福禄寿喜符[V17] 1
+#ACT
+MOV S$当前福符名字 福禄寿喜
+MOV N$设置福符等级 12
+MOV N$设置福符U187 100
+MOV N$福符经验 32000
+MOV N$福符属性 13
+MOV S$当前福符装备 福禄寿喜符[V17]
+MOV S$下级福符装备 招财进宝符[V18]
+GOTO @给福符属性
+BREAK
+
+
+
+
+
+#IF
+checkitemw 招财进宝符[V18] 1
+#ACT
+MOV S$当前福符名字 招财进宝符
+MOV N$设置福符等级 12
+MOV N$设置福符U187 112
+MOV N$福符经验 34000
+MOV N$福符属性 13
+MOV S$当前福符装备 招财进宝符[V18]
+MOV S$下级福符装备 锦绣前程符[V19]
+GOTO @给福符属性
+BREAK
+
+
+#IF
+checkitemw 锦绣前程符[V19] 1
+#ACT
+MOV S$当前福符名字 锦绣前程
+MOV N$设置福符等级 15
+MOV N$设置福符U187 124
+MOV N$福符经验 36000
+MOV N$福符属性 13
+MOV S$当前福符装备 锦绣前程符[V19]
+MOV S$下级福符装备 一本万利符[V20]
+GOTO @给福符属性
+BREAK
+
+
+#IF
+checkitemw 一本万利符[V20] 1
+#ACT
+MOV S$当前福符名字 一本万利
+MOV N$设置福符等级 15
+MOV N$设置福符U187 139
+MOV N$福符经验 38000
+MOV N$福符属性 13
+MOV S$当前福符装备 一本万利符[V20]
+MOV S$下级福符装备 一马平川符[V21]
+GOTO @给福符属性
+BREAK
+
+
+
+
+
+#IF
+checkitemw 一马平川符[V21] 1
+#ACT
+MOV S$当前福符名字 一马平川
+MOV N$设置福符等级 15
+MOV N$设置福符U187 154
+MOV N$福符经验 45000
+MOV N$福符属性 13
+MOV S$当前福符装备 一马平川符[V21]
+MOV S$下级福符装备 紫气东来符[V22]
+GOTO @给福符属性
+BREAK
+
+
+
+
+
+#IF
+checkitemw 紫气东来符[V22] 1
+#ACT
+MOV S$当前福符名字 紫气东来
+MOV N$设置福符等级 20
+MOV N$设置福符U187 169
+MOV N$福符经验 46000
+MOV N$福符属性 13
+MOV S$当前福符装备 紫气东来符[V22]
+MOV S$下级福符装备 步步高升符[V23]
+GOTO @给福符属性
+BREAK
+
+
+
+
+
+#IF
+checkitemw 步步高升符[V23] 1
+#ACT
+MOV S$当前福符名字 步步高升
+MOV N$设置福符等级 20
+MOV N$设置福符U187 189
+MOV N$福符经验 47000
+MOV N$福符属性 13
+MOV S$当前福符装备 步步高升符[V23]
+MOV S$下级福符装备 金玉满堂符[V24]
+GOTO @给福符属性
+BREAK
+
+
+#IF
+checkitemw 金玉满堂符[V24] 1
+#ACT
+MOV S$当前福符名字 金玉满堂
+MOV N$设置福符等级 25
+MOV N$设置福符U187 209
+MOV N$福符经验 48000
+MOV N$福符属性 13
+MOV S$当前福符装备 金玉满堂符[V24]
+MOV S$下级福符装备 梦想成真符[V25]
+GOTO @给福符属性
+BREAK
+
+
+
+
+
+#IF
+checkitemw 梦想成真符[V25] 1
+#ACT
+MOV S$当前福符名字 梦想成真
+MOV N$设置福符等级 30
+MOV N$设置福符U187 234
+MOV N$福符经验 50000
+MOV N$福符属性 14
+MOV S$当前福符装备 梦想成真符[V25]
+MOV S$下级福符装备 梦想成真符[V25]
+GOTO @给福符属性
+BREAK
+
+
+
+[@给福符属性]
+
+
+
+#IF
+#ACT
+
+MOV N$福符等级 <$STR(U186)>
+MOV N$当前福符经验 <$str(U186)>
+INC N$当前福符经验 1
+MUL N$当前福符经验 <$Str(N$福符经验)>
+MOV N$下级福符经验 <$str(U186)>
+INC N$下级福符经验 2
+MUL N$下级福符经验 <$Str(N$福符经验)>
+
+
+MOV N$福符血量 <$STR(U187)>
+MUL N$福符血量 <$Str(N$职业血量)>
+MOV N$福符属性 <$STR(U187)>
+div N$福符属性 5
+
+MOV N$福符切割 <$STR(U187)>
+MUL N$福符切割 <$Str(N$职业切割)>
+MOV N$福符百分比 0
+
+#IF
+LARGE N$当前福符经验  10000000
+#ACT
+MOV N$当前福符经验  10000000
+
+#IF
+LARGE N$下级福符经验 10000000
+#ACT
+MOV N$下级福符经验 10000000
+
+
+#IF
+LARGE N$设置福符等级 100
+#ACT
+MOV N$设置福符等级 100
+
+
+
+
+
+#IF
+LARGE U186 30
+#ACT
+MOV U186 30
+
+
+#IF
+LARGE U187 264
+#ACT
+MOV U187 264
+
+
+
+
+#IF
+not CHECKCUSTOMITEMPROGRESSBAR 9 0
+#ACT
+MOV U186 1
+MOV U187 <$STR(N$设置福符U187)>
+CHANGECUSTOMITEMPROGRESSBAR 9 0 0 1
+CHANGECUSTOMITEMPROGRESSBAR 9 0 1 福符等级
+CHANGECUSTOMITEMPROGRESSBAR 9 0 2 249
+CHANGECUSTOMITEMPROGRESSBAR 9 0 3 1
+CHANGECUSTOMITEMPROGRESSBAR 9 0 4 2
+CHANGECUSTOMITEMPROGRESSBARVALUE 9 0 1 = <$STR(N$设置福符等级)>
+CHANGECUSTOMITEMPROGRESSBAR 9 1 0 1
+CHANGECUSTOMITEMPROGRESSBAR 9 1 1 福符经验
+CHANGECUSTOMITEMPROGRESSBAR 9 1 2 250
+CHANGECUSTOMITEMPROGRESSBAR 9 1 3 1
+CHANGECUSTOMITEMPROGRESSBAR 9 1 4 2
+CHANGECUSTOMITEMPROGRESSBARVALUE 9 1 1 = <$STR(N$下级福符经验)>
+CHANGECUSTOMITEMPROGRESSBARVALUE 9 0 0 = 0
+CHANGECUSTOMITEMPROGRESSBARVALUE 9 1 0 = 0
+
+
+
+
+
+
+#IF
+CHECKBAGSIZE 3
+not checkitemw 梦想成真符[V25] 1
+not checkitem 梦想成真符[V25] 1
+checkitemw <$STR(S$当前福符装备)> 1
+CHECKCUSTOMITEMPROGRESSBARVALUE 9 0 0 = <$STR(N$设置福符等级)>
+CHECKCUSTOMITEMPROGRESSBARVALUE 9 1 0 = <$STR(N$当前福符经验)>
+#ACT
+takew <$STR(S$当前福符装备)> 1
+take <$STR(S$当前福符装备)> 1
+GiveStateItem <$STR(S$下级福符装备)> 1 1 0 0 1 1 1 1
+AutoTakeOnItem <$STR(S$下级福符装备)> 9
+
+GOTO @福符成长属性
+MOV U186 1
+MOV U187 <$STR(N$设置福符U187)>
+CHANGECUSTOMITEMPROGRESSBAR 9 0 0 1
+CHANGECUSTOMITEMPROGRESSBAR 9 0 1 福符等级
+CHANGECUSTOMITEMPROGRESSBAR 9 0 2 249
+CHANGECUSTOMITEMPROGRESSBAR 9 0 3 1
+CHANGECUSTOMITEMPROGRESSBAR 9 0 4 2
+CHANGECUSTOMITEMPROGRESSBARVALUE 9 0 1 = <$STR(N$设置福符等级)>
+CHANGECUSTOMITEMPROGRESSBAR 9 1 0 1
+CHANGECUSTOMITEMPROGRESSBAR 9 1 1 福符经验
+CHANGECUSTOMITEMPROGRESSBAR 9 1 2 250
+CHANGECUSTOMITEMPROGRESSBAR 9 1 3 1
+CHANGECUSTOMITEMPROGRESSBAR 9 1 4 2
+CHANGECUSTOMITEMPROGRESSBARVALUE 9 1 1 = <$STR(N$下级福符经验)>
+CHANGECUSTOMITEMPROGRESSBARVALUE 9 0 0 = 0
+CHANGECUSTOMITEMPROGRESSBARVALUE 9 1 0 = 0
+
+
+
+
+
+#IF
+CHECKITEMW 梦想成真符[V25] 1
+CHECKCUSTOMITEMPROGRESSBARVALUE 9 0 0 = 30
+#ACT
+MOV U186 31
+
+
+
+#IF
+CHECKCUSTOMITEMPROGRESSBARVALUE 9 1 0 = <$STR(N$当前福符经验)>
+#ACT
+INC U186 1
+INC U187 1
+CHANGECUSTOMITEMPROGRESSBARVALUE 9 0 0 + 1
+CHANGECUSTOMITEMPROGRESSBARVALUE 9 1 0 = 0
+CHANGECUSTOMITEMPROGRESSBARVALUE 9 1 1 = <$STR(N$下级福符经验)>
+
+
+
+
+
+#IF
+#ACT
+CHANGECUSTOMITEMPROGRESSBARVALUE 9 0 1 = <$STR(N$设置福符等级)>
+CHANGECUSTOMITEMPROGRESSBARVALUE 9 1 1 = <$STR(N$当前福符经验)>
+
+; #if
+; #act
+; sendmsg 9 自定义属性
+
+
+#IF
+NOT EQUAL S$福符标记 <$str(n$福符属性)>:<$STR(N$福符血量)>:<$STR(N$福符切割)>:<$STR(N$当前福符经验)>:<$STR(N$设置福符等级)>
+#ACT
+MOV S$福符标记 <$str(n$福符属性)>:<$STR(N$福符血量)>:<$STR(N$福符切割)>:<$STR(N$当前福符经验)>:<$STR(N$设置福符等级)>
+mov N$福符等级 <$str(u186)>
+DEC N$福符等级 1
+UpDateBoxItem 0
+LINKPICKUPITEM
+CHANGECUSTOMITEMTEXT 9 [<$STR(S$当前福符名字)>·<$STR(N$福符等级)>级属性]
+CHANGECUSTOMITEMTEXTColor 9 254
+CHANGECUSTOMITEMABIL 9 4 0 <$STR(N$本命属性颜色)>
+CHANGECUSTOMITEMABIL 9 4 1 <$STR(N$本命属性位置1)>
+CHANGECUSTOMITEMABIL 9 4 2 3
+CHANGECUSTOMITEMABIL 9 4 3 <$STR(N$福符百分比)>
+CHANGECUSTOMITEMVALUE 9 4 = <$str(n$福符属性)>
+CHANGECUSTOMITEMABIL 9 5 0 250
+CHANGECUSTOMITEMABIL 9 5 1 6
+CHANGECUSTOMITEMABIL 9 5 2 4
+CHANGECUSTOMITEMABIL 9 5 3 <$STR(N$福符百分比)>
+CHANGECUSTOMITEMVALUE 9 5 = <$STR(N$福符血量)>
+CHANGECUSTOMITEMABIL 9 6 0 250
+CHANGECUSTOMITEMABIL 9 6 1 7
+CHANGECUSTOMITEMABIL 9 6 2 5
+CHANGECUSTOMITEMABIL 9 6 3 <$STR(N$福符百分比)>
+CHANGECUSTOMITEMVALUE 9 6 = <$STR(N$福符血量)>
+
+CHANGECUSTOMITEMABIL 9 7 0 253
+CHANGECUSTOMITEMABIL 9 7 1 10
+CHANGECUSTOMITEMABIL 9 7 2 6
+CHANGECUSTOMITEMABIL 9 7 3 0
+CHANGECUSTOMITEMVALUE 9 7 = <$STR(N$福符切割)>
+
+
+
+
+;CHANGEITEMADDVALUE 9 <$STR(N$本命属性位置)> = <$str(n$福符属性)>
+
+
+
+
+}
+
+

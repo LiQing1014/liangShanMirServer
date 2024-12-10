@@ -1,0 +1,128 @@
+[@main]
+#if
+#act
+OPENMERCHANTBIGDLG 1 8 0 0 0 0 0
+#say
+<ImgEx:1:5:5:6:392:-16/@EXIT>
+<少侠您好，很高兴见到你! 如果你有需要我可以帮你锻造斗笠！/FCOLOR=70> \ \
+<><锻造的斗笠品级越高，属性就会越强大/SCOLOR=145>\ 
+<><人在江湖飘，没有一顶拉风的斗笠怎么叱咤风云，引领江湖潮流？/SCOLOR=147>\ \
+
+<><【斗笠·(1)阶】/SCOLOR=254> <需求：/SCOLOR=103><(BOSS怪物几率掉落)/SCOLOR=249>              <快速购买|5000元宝兑换神秘斗笠*1/@斗笠>\
+<><【斗笠·(2)阶】/SCOLOR=254> <需求：/SCOLOR=103><神秘斗笠*2+1999元宝/SCOLOR=250>             <开始打造/@宝石2>\  
+<><【斗笠·(3)阶】/SCOLOR=254> <需求：/SCOLOR=103><白银斗笠*2+3999元宝/SCOLOR=250>             <开始打造/@宝石3>\
+<><【斗笠·(4)阶】/SCOLOR=254> <需求：/SCOLOR=103><黄金斗笠*2+6666元宝/SCOLOR=250>             <开始打造/@宝石4>\ 
+<><【斗笠·(5)阶】/SCOLOR=254> <需求：/SCOLOR=103><豪杰斗笠*2+1万元宝+天之神铁*10/SCOLOR=250>  <开始打造/@宝石5>\ \
+<><提示：/SCOLOR=249>打造高级斗笠需要神秘斗笠，二大陆打BOSS有几率获得！\ \
+
+<><提示：/SCOLOR=249>打造高级斗笠需要天之神铁，分解轩辕级别首饰获得！\
+
+
+
+
+[@斗笠]
+#IF
+CHECKGAMEGOLD > 4999
+#ACT
+GAMEGOLD - 5000
+give 神秘斗笠 1
+SENDMSG 6 成功购买神秘斗笠*1!
+BREAK
+#ELSEACT
+MESSAGEBOX [购买失败]:元宝不足!
+
+
+
+
+[@宝石2]
+#IF
+checkitem 神秘斗笠 2
+CHECKGAMEGOLD > 1998
+#ACT
+GAMEGOLD - 1999
+take 神秘斗笠 2
+give 白银斗笠 1
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功打造出：白银斗笠!
+BREAK
+#ELSEACT
+MESSAGEBOX [锻造失败]:您的材料或条件不足!
+BREAK
+
+[@宝石3]
+#IF
+checkitem 白银斗笠 2
+CHECKGAMEGOLD > 3998
+#ACT
+GAMEGOLD - 3999
+take 白银斗笠 2
+give 黄金斗笠 1
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功打造出：黄金斗笠!
+BREAK
+#ELSEACT
+MESSAGEBOX [锻造失败]:您的材料或条件不足!
+BREAK
+
+[@宝石4]
+#IF
+checkitem 黄金斗笠 2
+CHECKGAMEGOLD > 6665
+#ACT
+GAMEGOLD - 6666
+take 黄金斗笠 2
+give 豪杰斗笠 1
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功打造出：豪杰斗笠!
+BREAK
+#ELSEACT
+MESSAGEBOX [锻造失败]:您的材料或条件不足!
+BREAK
+
+[@宝石5]
+#IF
+checkitem 豪杰斗笠 2
+checkitem 天之神铁 10
+CHECKGAMEGOLD > 9999
+#ACT
+GAMEGOLD - 10000
+take 天之神铁 10
+take 豪杰斗笠 2
+give 宗师斗笠 1
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功打造出：宗师斗笠!
+BREAK
+#ELSEACT
+MESSAGEBOX [锻造失败]:您的材料或条件不足!
+BREAK
+
+[@宝石6]
+#IF
+checkitem 宗师斗笠 2
+checkitem 天之神铁 20
+CHECKGAMEGOLD > 19999
+#ACT
+GAMEGOLD - 20000
+take 天之神铁 20
+take 宗师斗笠 2
+give 王者斗笠 1
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功打造出：王者斗笠!
+BREAK
+#ELSEACT
+MESSAGEBOX [锻造失败]:您的材料或条件不足!
+BREAK
+
+[@宝石7]
+#IF
+checkitem 王者斗笠 2
+checkitem 天之神铁 50
+CHECKGAMEGOLD > 49999
+#ACT
+GAMEGOLD - 50000
+take 天之神铁 50
+take 王者斗笠 2
+give 至尊神笠 1
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功打造出：至尊神笠!
+BREAK
+#ELSEACT
+MESSAGEBOX [锻造失败]:您的材料或条件不足!
+BREAK
+
+
+

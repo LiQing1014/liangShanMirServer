@@ -1,0 +1,1393 @@
+[@main]
+#IF
+#ACT
+ReturnBoxItem 1
+ReturnBoxItem 2
+ReturnBoxItem 3
+MOV S$DS强化框装备 请在上方OK框放入需要强化的装备
+MOV S$DS强化框条件 <轮回竹叶x????/FCOLOR=161><＋????大米/FCOLOR=253>
+MOV S$DS强化框几率 {100％/FCOLOR=250}
+MOV S$DS强化星星显示 
+MOV S$DS强化按钮显示 <开始强化/@开始强化X>------<自动强化/@自动开始强化X>
+GOTO @装备强化S
+BREAK
+
+
+[@装备强化S]
+#IF
+#ACT
+; close
+; OPENMERCHANTBIGDLG 1 558 1 4 0 0 1 495 2
+#say
+; <>\
+; <>　 {[强化说明]：/FCOLOR=71}{每强化一级装备增加/FCOLOR=7}{攻魔道+1%/FCOLOR=254}{，每件装备最高可强化至/FCOLOR=7}{[15]星/FCOLOR=250}<>\
+; \
+; <>\
+; <>\
+; <>　{[当前强化装备]：/FCOLOR=150}{<$STR(S$DS强化框装备)>　/FCOLOR=250}<>\
+; <>\
+; <>　{[当前强化条件]：/FCOLOR=150}<$STR(S$DS强化框条件)><>\
+; <>\
+; <>　{[强化成功几率]：/FCOLOR=150}<$STR(S$DS强化框几率)><>\
+; <><$STR(S$DS强化星星显示)>   <>\
+
+
+; <><ITEMBOX:1:0:117:52:10:56:56:*:250#请放入需要强化的装备><>\ \ \ 
+
+; <>                         <$STR(S$DS强化按钮显示)>
+; <>              <强化属性转移/@强化属性转移>   \
+; \ \ \ \
+; \                 {注意强化只能：/FCOLOR=161}{武器+衣服+斗笠+勋章+特戒+首饰/FCOLOR=161}
+
+
+<Img|width=620|height=300|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|reset=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<ITEMBOX|x=60.0|y=172.0|width=55|height=55|boxindex=1|stdmode=*|tipsx=1|tipsy=65|img=public/1900000651_3.png>
+<Text|a=0|x=436.0|y=192.0|tipsx=10|tipsy=80|color=251|size=18|text=强化属性转移|link=@强化属性转移>
+<RText|x=25.0|y=19.0|color=255|size=16|text=<[强化说明]：/FCOLOR=255><每强化一级装备增加/FCOLOR=252><功魔道+1%/FCOLOR=254><每件装备最高可强化至/FCOLOR=254><[15星]/FCOLOR=250>>
+<RText|x=26.0|y=50.0|color=255|size=16|text=<[当前强化装备]：/FCOLOR=255><<$STR(S$DS强化框装备)>/FCOLOR=250>>
+<RText|x=26.0|y=76.0|color=255|size=16|text=<[当前强化条件]：/FCOLOR=255><$STR(S$DS强化框条件)>>
+<RText|x=26.0|y=102.0|color=255|size=16|text=<[强化成功几率]：/FCOLOR=255><100%/FCOLOR=250>>
+<Text|x=174.0|y=193.0|size=16|color=251|text=开始强化|link=@开始强化X>
+<Text|x=272.0|y=193.0|size=16|color=251|text=自动强化|link=@自动开始强化X>
+<Text|x=117.0|y=252.0|color=255|size=18|text=注意强化只能：武器+衣服+斗笠+勋章+特戒+首饰>
+<RText|x=26.0|y=136.0|color=255|size=16|text=<$STR(S$DS强化星星显示)>>
+
+
+[@11111]
+#IF
+#ACT
+close
+OPENMERCHANTBIGDLG 69 1417 1 4 0 0 1 495 2
+#say
+<>　 {全身达到/FCOLOR=7}{[70]星/FCOLOR=253}{以后更有牛逼属性加持！/FCOLOR=7}　　　 <[鼠标移至查看牛逼属性加持]|253#　[属性触发介绍]
+^-^254#　您当前全身星星：<$UPGRADECOUNT>颗
+^-^7#　全身强化达到 30星触发：血量 + 5%
+^7#　全身强化达到 40星触发：血量 + 10%
+^7#　全身强化达到 50星触发：血量 + 15% 
+^7#　全身强化达到 60星触发：血量 + 20%  
+^-^19#　全身强化达到 70星触发：血量 + 25%  怪物切割 + 5%
+^-^19#　全身强化达到 80星触发：血量 + 30%  怪物切割 + 10%
+^-^19#　全身强化达到 90星触发：血量 + 35%  怪物切割 + 15%
+^-^19#　全身强化达到100星触发：血量 + 40%  怪物切割 + 20%
+^-^161#　全身强化达到110星触发：血量 + 45% 怪物切割 + 25%
+^-^161#　全身强化达到120星触发：血量 + 50%  攻击 + 5%  怪物切割 + 30%
+^-^161#　全身强化达到130星触发：血量 + 55%  攻击 + 10%  怪物切割 + 35%
+^-^250#　全身强化达到140星触发：血量 + 60%  攻击 + 15%  怪物切割 + 40%
+^-^250#　全身强化达到150星触发：血量 + 65%  攻击 + 20%  怪物切割 + 45% 
+^-^251#　全身强化达到160星触发：血量 + 70%  攻击 + 25%  怪物切割 + 50% 神力倍攻 + 5%
+^-^251#　全身强化达到170星触发：血量 + 75%  攻击 + 30%  怪物切割 + 55% 神力倍攻 + 10%
+^-^70#　全身强化达到180星触发：血量 + 80%  攻击 + 35%  怪物切割 + 60% 神力倍攻 + 15%
+^-^70#　全身强化达到190星触发：血量 + 85%  攻击 + 40%  怪物切割 + 65% 神力倍攻 + 20%
+^-^249#　全身强化达到200星触发：血量 + 90%  攻击 + 45%  怪物切割 + 70% 神力倍攻 + 25%
+^-^254#  全身强化达到210星触发：血量 + 100%  攻击 + 50%  怪物切割 + 80% 神力倍攻 + 30%/FCOLOR=249><>
+
+
+
+[@开始强化X]
+#IF
+EQUAL <$BOXITEM[1].NAME>
+#ACT
+MESSAGEBOX 还未放入装备！
+CLEARDELAYGOTO
+BREAK
+
+#IF
+LARGE <$BOXITEM[1].CUSTOMVALUE.VALUE5> 14
+#ACT
+GOTO @main
+MESSAGEBOX 操作失败：\　\最高强化+15星，无法继续强化！
+CLEARDELAYGOTO
+break
+
+#IF
+NOT CheckTextList ..\QuestDiary\极品拾取鉴定\可强化列表.txt <$BOXITEM[1].NAME>
+#ACT
+GOTO @main
+messagebox 操作失败：\\此类型物品无法进行强化！
+CLEARDELAYGOTO
+break
+
+;===================================================================
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 0
+#ACT
+MOV N$强化等级 1
+MOV N$JC操作强化几率 1
+MOV N$JC操作强化大米 0
+MOV N$JC操作强化大米 0
+MOV N$JC强化材料_强化石 1
+MOV N$JC强化材料_天宫锤 0
+MOV N$JC强化保底_天宫锤 0
+
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 1
+#ACT
+MOV N$强化等级 2
+MOV N$JC操作强化几率 1
+MOV N$JC操作强化大米 0
+MOV N$JC操作强化大米 0
+MOV N$JC强化材料_强化石 1
+MOV N$JC强化材料_天宫锤 0
+MOV N$JC强化保底_天宫锤 0
+
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 2
+#ACT
+MOV N$强化等级 3
+MOV N$JC操作强化几率 2
+MOV N$JC操作强化大米 0
+MOV N$JC操作强化大米 0
+MOV N$JC强化材料_强化石 1
+MOV N$JC强化材料_天宫锤 0
+MOV N$JC强化保底_天宫锤 0
+
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 3
+#ACT
+MOV N$强化等级 4
+MOV N$JC操作强化几率 2
+MOV N$JC操作强化大米 0
+MOV N$JC操作强化大米 0
+MOV N$JC强化材料_强化石 1
+MOV N$JC强化材料_天宫锤 0
+MOV N$JC强化保底_天宫锤 0
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 4
+#ACT
+MOV N$强化等级 5
+MOV N$JC操作强化几率 2
+MOV N$JC操作强化大米 0
+MOV N$JC操作强化大米 5
+MOV N$JC强化材料_强化石 1
+MOV N$JC强化材料_天宫锤 0
+MOV N$JC强化保底_天宫锤 0
+
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 5
+#ACT
+MOV N$强化等级 6
+MOV N$JC操作强化几率 2
+MOV N$JC操作强化大米 0
+MOV N$JC操作强化大米 10
+MOV N$JC强化材料_强化石 1
+MOV N$JC强化材料_天宫锤 0
+MOV N$JC强化保底_天宫锤 0
+
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 6
+#ACT
+MOV N$强化等级 7
+MOV N$JC操作强化几率 2
+MOV N$JC操作强化大米 0
+MOV N$JC操作强化大米 15
+MOV N$JC强化材料_强化石 1
+MOV N$JC强化材料_天宫锤 0
+MOV N$JC强化保底_天宫锤 0
+
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 7
+#ACT
+MOV N$强化等级 8
+MOV N$JC操作强化几率 2
+MOV N$JC操作强化大米 0
+MOV N$JC操作强化大米 20
+MOV N$JC强化材料_强化石 1
+MOV N$JC强化材料_天宫锤 0
+MOV N$JC强化保底_天宫锤 0
+
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 8
+#ACT
+MOV N$强化等级 9
+MOV N$JC操作强化几率 2
+MOV N$JC操作强化大米 0
+MOV N$JC操作强化大米 25
+MOV N$JC强化材料_强化石 2
+MOV N$JC强化材料_天宫锤 0
+MOV N$JC强化保底_天宫锤 0
+
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 9
+#ACT
+MOV N$强化等级 10
+MOV N$JC操作强化几率 1
+MOV N$JC操作强化大米 1
+MOV N$JC操作强化大米 30
+MOV N$JC强化材料_强化石 2
+MOV N$JC强化材料_天宫锤 0
+MOV N$JC强化保底_天宫锤 0
+
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 10
+#ACT
+MOV N$强化等级 11
+MOV N$JC操作强化几率 3
+MOV N$JC操作强化大米 1
+MOV N$JC操作强化大米 35
+MOV N$JC强化材料_强化石 2
+MOV N$JC强化材料_天宫锤 0
+MOV N$JC强化保底_天宫锤 0
+
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 11
+#ACT
+MOV N$强化等级 12
+MOV N$JC操作强化几率 2
+MOV N$JC操作强化大米 2
+MOV N$JC操作强化大米 40
+MOV N$JC强化材料_强化石 3
+MOV N$JC强化材料_天宫锤 0
+MOV N$JC强化保底_天宫锤 0
+;=======================================================
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 12
+#ACT
+MOV N$强化等级 13
+MOV N$JC操作强化几率 2
+MOV N$JC操作强化大米 2
+MOV N$JC操作强化大米 45
+MOV N$JC强化材料_强化石 4
+MOV N$JC强化材料_天宫锤 0
+MOV N$JC强化保底_天宫锤 0
+
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 13
+#ACT
+MOV N$强化等级 14
+MOV N$JC操作强化几率 3
+MOV N$JC操作强化大米 5
+MOV N$JC操作强化大米 50
+MOV N$JC强化材料_强化石 5
+MOV N$JC强化材料_天宫锤 0
+MOV N$JC强化保底_天宫锤 0
+
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 14
+#ACT
+MOV N$强化等级 15
+MOV N$JC操作强化几率 5
+MOV N$JC操作强化大米 10
+MOV N$JC操作强化大米 100
+MOV N$JC强化材料_强化石 10
+MOV N$JC强化材料_天宫锤 0
+MOV N$JC强化保底_天宫锤 0
+
+
+
+
+#IF
+EQUAL <$BOXITEM[1].STDMODE> 5
+#ACT
+MOV S$JC增加属性类型01 0
+MOV S$JC增加属性类型02 1
+MOV S$JC增加属性类型03 2
+#ELSEACT
+MOV S$JC增加属性类型01 2
+MOV S$JC增加属性类型02 3
+MOV S$JC增加属性类型03 4
+;==============================================================================
+#IF
+NOT CHECKITEM 轮回竹叶 <$STR(N$JC强化材料_强化石)>
+#ACT
+messagebox 操作失败：\\您的轮回竹叶不足<$STR(N$JC强化材料_强化石)>个！
+break
+
+#IF
+CHECKGAMEPOINT < <$STR(N$JC操作强化大米)>
+#ACT
+messagebox 操作失败：\\您当前不足<$STR(N$JC操作强化大米)>大米！
+break
+
+#IF
+CHECKGAMEPOINT  < <$STR(N$JC操作强化大米)>
+#ACT
+messagebox 操作失败：\\您当前不足<$STR(N$JC操作强化大米)>大米！
+break
+
+
+#IF
+Random <$STR(N$JC操作强化几率)>
+#ACT
+GAMEPOINT - <$STR(N$JC操作强化大米)>
+take 轮回竹叶 <$STR(N$JC强化材料_强化石)>
+SetUpgradeItem 1
+;CHANGEITEMUPGRADECOUNT -1 + 1
+UpDateBoxItem 1
+MOV N$DS计算增加属性 <$BOXITEM[1].CUSTOMVALUE.VALUE5>
+INC N$DS计算增加属性 1
+
+;---------------------------
+
+;CHANGECUSTOMITEMTEXT -1 [强化<$BOXITEM[1].CUSTOMVALUE.VALUE5>星属性]
+;CHANGECUSTOMITEMTEXTColor -1 254
+
+CHANGECUSTOMITEMABIL -1 4 0 250
+CHANGECUSTOMITEMABIL -1 4 1 3
+CHANGECUSTOMITEMABIL -1 4 2 4
+CHANGECUSTOMITEMABIL -1 4 3 1
+CHANGECUSTOMITEMVALUE -1 4 = <$STR(N$DS计算增加属性)>
+CHANGECUSTOMITEMABIL -1 5 0 250
+CHANGECUSTOMITEMABIL -1 5 1 4
+CHANGECUSTOMITEMABIL -1 5 2 5
+CHANGECUSTOMITEMABIL -1 5 3 1
+CHANGECUSTOMITEMVALUE -1 5 = <$STR(N$DS计算增加属性)>
+CHANGECUSTOMITEMABIL -1 6 0 250
+CHANGECUSTOMITEMABIL -1 6 1 5
+CHANGECUSTOMITEMABIL -1 6 2 6
+CHANGECUSTOMITEMABIL -1 6 3 1
+CHANGECUSTOMITEMVALUE -1 6 = <$STR(N$DS计算增加属性)>
+
+
+CHANGECUSTOMITEMABIL -1 7 0 250
+CHANGECUSTOMITEMABIL -1 7 1 6
+CHANGECUSTOMITEMABIL -1 7 2 7
+CHANGECUSTOMITEMABIL -1 7 3 1
+CHANGECUSTOMITEMVALUE -1 7 = <$STR(N$DS计算增加属性)>
+CHANGECUSTOMITEMABIL -1 8 0 250
+CHANGECUSTOMITEMABIL -1 8 1 7
+CHANGECUSTOMITEMABIL -1 8 2 8
+CHANGECUSTOMITEMABIL -1 8 3 1
+CHANGECUSTOMITEMVALUE -1 8 = <$STR(N$DS计算增加属性)>
+
+
+UpDateBoxItem 1
+SENDMOVEMSG 0 254 0 5 1 玩家[<$USERNAME>]成功将【<$BOXITEM[1].NAME>】强化到[<$STR(N$DS计算增加属性)>★],星星越多！属性越好！
+SendCenterMsg 250 0 【强化提示】：你的装备【<$BOXITEM[1].NAME>】强化成功到[<$STR(N$DS计算增加属性)>★],星星越多！属性越好！ 0 5
+GOTO @ItemIntoBox1
+BREAK
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$JC操作强化大米)>
+take 轮回竹叶 <$STR(N$JC强化材料_强化石)>
+SetUpgradeItem 1
+;CHANGEITEMUPGRADECOUNT -1 - 1
+UpDateBoxItem 1
+MOV N$DS计算增加属性 <$BOXITEM[1].CUSTOMVALUE.VALUE5>
+DEC N$DS计算增加属性 1
+;CHANGEITEMADDVALUE -1 <$STR(S$JC增加属性类型01)> = <$STR(N$DS计算增加属性)>
+;CHANGEITEMADDVALUE -1 <$STR(S$JC增加属性类型02)> = <$STR(N$DS计算增加属性)>
+;CHANGEITEMADDVALUE -1 <$STR(S$JC增加属性类型03)> = <$STR(N$DS计算增加属性)>
+;---------------------------
+
+;CHANGECUSTOMITEMTEXT -1 [强化<$BOXITEM[1].CUSTOMVALUE.VALUE5>星属性]
+;CHANGECUSTOMITEMTEXTColor -1 254
+CHANGECUSTOMITEMABIL -1 4 0 250
+CHANGECUSTOMITEMABIL -1 4 1 3
+CHANGECUSTOMITEMABIL -1 4 2 4
+CHANGECUSTOMITEMABIL -1 4 3 1
+CHANGECUSTOMITEMVALUE -1 4 = <$STR(N$DS计算增加属性)>
+CHANGECUSTOMITEMABIL -1 5 0 250
+CHANGECUSTOMITEMABIL -1 5 1 4
+CHANGECUSTOMITEMABIL -1 5 2 5
+CHANGECUSTOMITEMABIL -1 5 3 1
+CHANGECUSTOMITEMVALUE -1 5 = <$STR(N$DS计算增加属性)>
+CHANGECUSTOMITEMABIL -1 6 0 250
+CHANGECUSTOMITEMABIL -1 6 1 5
+CHANGECUSTOMITEMABIL -1 6 2 6
+CHANGECUSTOMITEMABIL -1 6 3 1
+CHANGECUSTOMITEMVALUE -1 6 = <$STR(N$DS计算增加属性)>
+
+
+CHANGECUSTOMITEMABIL -1 7 0 250
+CHANGECUSTOMITEMABIL -1 7 1 6
+CHANGECUSTOMITEMABIL -1 7 2 7
+CHANGECUSTOMITEMABIL -1 7 3 1
+CHANGECUSTOMITEMVALUE -1 7 = <$STR(N$DS计算增加属性)>
+CHANGECUSTOMITEMABIL -1 8 0 250
+CHANGECUSTOMITEMABIL -1 8 1 7
+CHANGECUSTOMITEMABIL -1 8 2 8
+CHANGECUSTOMITEMABIL -1 8 3 1
+CHANGECUSTOMITEMVALUE -1 8 = <$STR(N$DS计算增加属性)>
+UpDateBoxItem 1
+GOTO @ItemIntoBox1
+SendCenterMsg 249 0 【强化提示】：你的装备【<$BOXITEM[1].NAME>】强化失败，材料扣除！星星掉一级 0 3
+BREAK
+;------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+[@ItemOutBox1]
+#IF
+#ACT
+goto @main
+[@ItemIntoBox1]
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 0
+#ACT
+MOV N$强化等级 1
+MOV N$JC操作强化几率 1
+MOV N$JC操作强化大米 0
+MOV N$JC操作强化大米 0
+MOV N$JC强化材料_强化石 1
+MOV N$JC强化材料_天宫锤 0
+MOV N$JC强化保底_天宫锤 0
+
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 1
+#ACT
+MOV N$强化等级 2
+MOV N$JC操作强化几率 1
+MOV N$JC操作强化大米 0
+MOV N$JC操作强化大米 0
+MOV N$JC强化材料_强化石 1
+MOV N$JC强化材料_天宫锤 0
+MOV N$JC强化保底_天宫锤 0
+
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 2
+#ACT
+MOV N$强化等级 3
+MOV N$JC操作强化几率 2
+MOV N$JC操作强化大米 0
+MOV N$JC操作强化大米 0
+MOV N$JC强化材料_强化石 1
+MOV N$JC强化材料_天宫锤 0
+MOV N$JC强化保底_天宫锤 0
+
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 3
+#ACT
+MOV N$强化等级 4
+MOV N$JC操作强化几率 2
+MOV N$JC操作强化大米 0
+MOV N$JC操作强化大米 0
+MOV N$JC强化材料_强化石 1
+MOV N$JC强化材料_天宫锤 0
+MOV N$JC强化保底_天宫锤 0
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 4
+#ACT
+MOV N$强化等级 5
+MOV N$JC操作强化几率 2
+MOV N$JC操作强化大米 0
+MOV N$JC操作强化大米 5
+MOV N$JC强化材料_强化石 1
+MOV N$JC强化材料_天宫锤 0
+MOV N$JC强化保底_天宫锤 0
+
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 5
+#ACT
+MOV N$强化等级 6
+MOV N$JC操作强化几率 2
+MOV N$JC操作强化大米 0
+MOV N$JC操作强化大米 10
+MOV N$JC强化材料_强化石 1
+MOV N$JC强化材料_天宫锤 0
+MOV N$JC强化保底_天宫锤 0
+
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 6
+#ACT
+MOV N$强化等级 7
+MOV N$JC操作强化几率 2
+MOV N$JC操作强化大米 0
+MOV N$JC操作强化大米 15
+MOV N$JC强化材料_强化石 1
+MOV N$JC强化材料_天宫锤 0
+MOV N$JC强化保底_天宫锤 0
+
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 7
+#ACT
+MOV N$强化等级 8
+MOV N$JC操作强化几率 2
+MOV N$JC操作强化大米 0
+MOV N$JC操作强化大米 20
+MOV N$JC强化材料_强化石 1
+MOV N$JC强化材料_天宫锤 0
+MOV N$JC强化保底_天宫锤 0
+
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 8
+#ACT
+MOV N$强化等级 9
+MOV N$JC操作强化几率 2
+MOV N$JC操作强化大米 0
+MOV N$JC操作强化大米 25
+MOV N$JC强化材料_强化石 2
+MOV N$JC强化材料_天宫锤 0
+MOV N$JC强化保底_天宫锤 0
+
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 9
+#ACT
+MOV N$强化等级 10
+MOV N$JC操作强化几率 1
+MOV N$JC操作强化大米 1
+MOV N$JC操作强化大米 30
+MOV N$JC强化材料_强化石 2
+MOV N$JC强化材料_天宫锤 0
+MOV N$JC强化保底_天宫锤 0
+
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 10
+#ACT
+MOV N$强化等级 11
+MOV N$JC操作强化几率 3
+MOV N$JC操作强化大米 1
+MOV N$JC操作强化大米 35
+MOV N$JC强化材料_强化石 2
+MOV N$JC强化材料_天宫锤 0
+MOV N$JC强化保底_天宫锤 0
+
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 11
+#ACT
+MOV N$强化等级 12
+MOV N$JC操作强化几率 2
+MOV N$JC操作强化大米 2
+MOV N$JC操作强化大米 40
+MOV N$JC强化材料_强化石 3
+MOV N$JC强化材料_天宫锤 0
+MOV N$JC强化保底_天宫锤 0
+;=======================================================
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 12
+#ACT
+MOV N$强化等级 13
+MOV N$JC操作强化几率 2
+MOV N$JC操作强化大米 2
+MOV N$JC操作强化大米 45
+MOV N$JC强化材料_强化石 4
+MOV N$JC强化材料_天宫锤 0
+MOV N$JC强化保底_天宫锤 0
+
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 13
+#ACT
+MOV N$强化等级 14
+MOV N$JC操作强化几率 3
+MOV N$JC操作强化大米 5
+MOV N$JC操作强化大米 50
+MOV N$JC强化材料_强化石 5
+MOV N$JC强化材料_天宫锤 0
+MOV N$JC强化保底_天宫锤 0
+
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 14
+#ACT
+MOV N$强化等级 15
+MOV N$JC操作强化几率 5
+MOV N$JC操作强化大米 10
+MOV N$JC操作强化大米 100
+MOV N$JC强化材料_强化石 10
+MOV N$JC强化材料_天宫锤 0
+MOV N$JC强化保底_天宫锤 0
+
+
+
+
+
+#IF
+NOT CheckTextList ..\QuestDiary\极品拾取鉴定\可强化列表.txt <$BOXITEM[1].NAME>
+#ACT
+ReturnBoxItem 1
+messagebox 操作失败：\\此类型物品无法进行强化！
+SET [430] 0
+CLEARDELAYGOTO
+break
+
+
+#IF
+LARGE <$BOXITEM[1].CUSTOMVALUE.VALUE5> 14
+#ACT
+GOTO @MAIN
+MESSAGEBOX 　　　[操作失败]:当前放入的装备已经+15满强化！！
+CLEARDELAYGOTO
+BREAK
+
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 0
+#ACT
+MOV S$DS强化框装备 <$BOXITEM[1].NAME>
+MOV S$DS强化框条件 {轮回竹叶x<$STR(N$JC强化材料_强化石)>/FCOLOR=161}
+MOV S$DS强化框几率 {100％/FCOLOR=250}
+MOV S$DS强化星星显示 {★★★★★★★★★★★★★★★/FCOLOR=255}[<$BOXITEM[1].CUSTOMVALUE.VALUE5>星]
+MOV S$DS强化按钮显示 <开始强化/@开始强化X>------<自动强化/@自动开始强化X>
+GOTO @装备强化S
+BREAK
+
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 1
+#ACT
+MOV S$DS强化框装备 <$BOXITEM[1].NAME>
+MOV S$DS强化框条件 {轮回竹叶x<$STR(N$JC强化材料_强化石)>/FCOLOR=161}
+MOV S$DS强化框几率 {50％/FCOLOR=250}
+MOV S$DS强化星星显示 {★/FCOLOR=250}{★★★★★★★★★★★★★★/FCOLOR=255}[<$BOXITEM[1].CUSTOMVALUE.VALUE5>星]
+MOV S$DS强化按钮显示 <开始强化/@开始强化X>------<自动强化/@自动开始强化X>
+GOTO @装备强化S
+BREAK
+
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 2
+#ACT
+MOV S$DS强化框装备 <$BOXITEM[1].NAME>
+MOV S$DS强化框条件 {轮回竹叶x<$STR(N$JC强化材料_强化石)>/FCOLOR=161}
+MOV S$DS强化框几率 {30％/FCOLOR=250}
+MOV S$DS强化星星显示 {★★/FCOLOR=250}{★★★★★★★★★★★★★/FCOLOR=255}[<$BOXITEM[1].CUSTOMVALUE.VALUE5>星]
+MOV S$DS强化按钮显示 <开始强化/@开始强化X>------<自动强化/@自动开始强化X>
+GOTO @装备强化S
+BREAK
+
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 3
+#ACT
+MOV S$DS强化框装备 <$BOXITEM[1].NAME>
+MOV S$DS强化框条件 {轮回竹叶x<$STR(N$JC强化材料_强化石)>/FCOLOR=161}
+MOV S$DS强化框几率 {25％/FCOLOR=250}
+MOV S$DS强化星星显示 {★★★/FCOLOR=250}{★★★★★★★★★★★★/FCOLOR=255}[<$BOXITEM[1].CUSTOMVALUE.VALUE5>星]
+MOV S$DS强化按钮显示 <开始强化/@开始强化X>------<自动强化/@自动开始强化X>
+GOTO @装备强化S
+BREAK
+
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 4
+#ACT
+MOV S$DS强化框装备 <$BOXITEM[1].NAME>
+MOV S$DS强化框条件 {轮回竹叶x<$STR(N$JC强化材料_强化石)>/FCOLOR=161}{＋<$str(N$JC操作强化大米)>点大米/FCOLOR=253}
+MOV S$DS强化框几率 {20％/FCOLOR=250}
+MOV S$DS强化星星显示 {★★★★/FCOLOR=250}{★★★★★★★★★★★/FCOLOR=255}[<$BOXITEM[1].CUSTOMVALUE.VALUE5>星]
+MOV S$DS强化按钮显示 <开始强化/@开始强化X>------<自动强化/@自动开始强化X>
+GOTO @装备强化S
+BREAK
+
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 5
+#ACT
+MOV S$DS强化框装备 <$BOXITEM[1].NAME>
+MOV S$DS强化框条件 {轮回竹叶x<$STR(N$JC强化材料_强化石)>/FCOLOR=161}{＋<$str(N$JC操作强化大米)>点大米/FCOLOR=253}
+MOV S$DS强化框几率 {15％/FCOLOR=250}
+MOV S$DS强化星星显示 {★★★★★/FCOLOR=250}{★★★★★★★★★★/FCOLOR=255}[<$BOXITEM[1].CUSTOMVALUE.VALUE5>星]
+MOV S$DS强化按钮显示 <开始强化/@开始强化X>------<自动强化/@自动开始强化X>
+GOTO @装备强化S
+BREAK
+
+
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 6
+#ACT
+MOV S$DS强化框装备 <$BOXITEM[1].NAME>
+MOV S$DS强化框条件 {轮回竹叶x<$STR(N$JC强化材料_强化石)>/FCOLOR=161}{＋<$str(N$JC操作强化大米)>点大米/FCOLOR=253}
+MOV S$DS强化框几率 {10％/FCOLOR=250}
+MOV S$DS强化星星显示 {★★★★★★/FCOLOR=250}{★★★★★★★★★/FCOLOR=255}[<$BOXITEM[1].CUSTOMVALUE.VALUE5>星]
+MOV S$DS强化按钮显示 <开始强化/@开始强化X>------<自动强化/@自动开始强化X>
+GOTO @装备强化S
+BREAK
+
+;==========================================================================
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 7
+#ACT
+MOV S$DS强化框装备 <$BOXITEM[1].NAME>
+MOV S$DS强化框条件 {轮回竹叶x<$STR(N$JC强化材料_强化石)>/FCOLOR=161}{＋<$str(N$JC操作强化大米)>点大米/FCOLOR=253}
+MOV S$DS强化框几率 {5％/FCOLOR=250}
+MOV S$DS强化星星显示 {★★★★★★★/FCOLOR=250}{★★★★★★★★/FCOLOR=255}[<$BOXITEM[1].CUSTOMVALUE.VALUE5>星]
+MOV S$DS强化按钮显示 <开始强化/@开始强化X>------<自动强化/@自动开始强化X>
+GOTO @装备强化S
+BREAK
+
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 8
+#ACT
+MOV S$DS强化框装备 <$BOXITEM[1].NAME>
+MOV S$DS强化框条件 {轮回竹叶x<$STR(N$JC强化材料_强化石)>/FCOLOR=161}{＋<$str(N$JC操作强化大米)>点大米/FCOLOR=253}
+MOV S$DS强化框几率 {3％/FCOLOR=250}
+MOV S$DS强化星星显示 {★★★★★★★★/FCOLOR=250}{★★★★★★★/FCOLOR=255}[<$BOXITEM[1].CUSTOMVALUE.VALUE5>星]
+MOV S$DS强化按钮显示 <开始强化/@开始强化X>------<自动强化/@自动开始强化X>
+GOTO @装备强化S
+BREAK
+
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 9
+#ACT
+MOV S$DS强化框装备 <$BOXITEM[1].NAME>
+MOV S$DS强化框条件 {轮回竹叶x<$STR(N$JC强化材料_强化石)>/FCOLOR=161}{＋<$str(N$JC操作强化大米)>点大米/FCOLOR=253}
+MOV S$DS强化框几率 {3％/FCOLOR=250}
+MOV S$DS强化星星显示 {★★★★★★★★★/FCOLOR=250}{★★★★★★/FCOLOR=255}[<$BOXITEM[1].CUSTOMVALUE.VALUE5>星]
+MOV S$DS强化按钮显示 <开始强化/@开始强化X>------<自动强化/@自动开始强化X>
+GOTO @装备强化S
+BREAK
+
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 10
+#ACT
+MOV S$DS强化框装备 <$BOXITEM[1].NAME>
+MOV S$DS强化框条件 {轮回竹叶x<$STR(N$JC强化材料_强化石)>/FCOLOR=161}{＋<$str(N$JC操作强化大米)>点大米/FCOLOR=253}
+MOV S$DS强化框几率 {3％/FCOLOR=250}
+MOV S$DS强化星星显示 {★★★★★★★★★★/FCOLOR=250}{★★★★★/FCOLOR=255}[<$BOXITEM[1].CUSTOMVALUE.VALUE5>星]
+MOV S$DS强化按钮显示 <开始强化/@开始强化X>------<自动强化/@自动开始强化X>
+GOTO @装备强化S
+BREAK
+
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 11
+#ACT
+MOV S$DS强化框装备 <$BOXITEM[1].NAME>
+MOV S$DS强化框条件 {轮回竹叶x<$STR(N$JC强化材料_强化石)>/FCOLOR=161}{＋<$str(N$JC操作强化大米)>点大米/FCOLOR=253}
+MOV S$DS强化框几率 {3％/FCOLOR=250}
+MOV S$DS强化星星显示 {★★★★★★★★★★★/FCOLOR=250}{★★★★/FCOLOR=255}[<$BOXITEM[1].CUSTOMVALUE.VALUE5>星]
+MOV S$DS强化按钮显示 <开始强化/@开始强化X>------<自动强化/@自动开始强化X>
+GOTO @装备强化S
+BREAK
+
+;==========================================================================
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 12
+#ACT
+MOV S$DS强化框装备 <$BOXITEM[1].NAME>
+MOV S$DS强化框条件 {轮回竹叶x<$STR(N$JC强化材料_强化石)>/FCOLOR=161}{＋<$str(N$JC操作强化大米)>点大米/FCOLOR=253}
+MOV S$DS强化框几率 {3％/FCOLOR=250}
+MOV S$DS强化星星显示 {★★★★★★★★★★★★/FCOLOR=250}{★★★/FCOLOR=255}[<$BOXITEM[1].CUSTOMVALUE.VALUE5>星]
+MOV S$DS强化按钮显示 <开始强化/@开始强化X>------<自动强化/@自动开始强化X>
+GOTO @装备强化S
+BREAK
+
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 13
+#ACT
+MOV S$DS强化框装备 <$BOXITEM[1].NAME>
+MOV S$DS强化框条件 {轮回竹叶x<$STR(N$JC强化材料_强化石)>/FCOLOR=161}{＋<$str(N$JC操作强化大米)>点大米/FCOLOR=253}
+MOV S$DS强化框几率 {3％/FCOLOR=250}
+MOV S$DS强化星星显示 {★★★★★★★★★★★★★/FCOLOR=250}{★★/FCOLOR=255}[<$BOXITEM[1].CUSTOMVALUE.VALUE5>星]
+MOV S$DS强化按钮显示 <开始强化/@开始强化X>------<自动强化/@自动开始强化X>
+GOTO @装备强化S
+BREAK
+
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 14
+#ACT
+MOV S$DS强化框装备 <$BOXITEM[1].NAME>
+MOV S$DS强化框条件 {轮回竹叶x<$STR(N$JC强化材料_强化石)>/FCOLOR=161}{＋<$str(N$JC操作强化大米)>点大米/FCOLOR=253}
+MOV S$DS强化框几率 {3％/FCOLOR=250}
+MOV S$DS强化星星显示 {★★★★★★★★★★★★★★/FCOLOR=250}{★/FCOLOR=255}[<$BOXITEM[1].CUSTOMVALUE.VALUE5>星]
+MOV S$DS强化按钮显示 <开始强化/@开始强化X>------<自动强化/@自动开始强化X>
+GOTO @装备强化S
+BREAK
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 15
+#ACT
+MOV S$DS强化框装备 <$BOXITEM[1].NAME>
+MOV S$DS强化框条件 {轮回竹叶x<$STR(N$JC强化材料_强化石)>/FCOLOR=161}{＋<$str(N$JC操作强化大米)>点大米/FCOLOR=253}
+MOV S$DS强化框几率 {3％/FCOLOR=250}
+MOV S$DS强化星星显示 {★★★★★★★★★★★★★★★/FCOLOR=250}[<$BOXITEM[1].CUSTOMVALUE.VALUE5>星]
+MOV S$DS强化按钮显示 <已经强化满星/FCOLOR=254}
+GOTO @装备强化S
+BREAK
+
+
+
+
+
+
+
+[@强化属性转移]
+#IF
+#ACT
+close
+ReturnBoxItem 1
+#say
+<>　　　　　　　　　　<（每次收费300点大米）/FCOLOR=249><>\
+<>　　　　　<↓基础装备↓/FCOLOR=231>　　　　　　　　　<↓接收装备↓/FCOLOR=161>\<>\
+<><ITEMBOX:2:0:117:66:-2:56:56:*:250#请放入有星星的装备>
+<><ITEMBOX:3:0:117:193:-2:56:56:*:70#请放入要转移的装备><>\
+<>\
+<>　　　　　　　　　　　　<[点击强化转移]|250#转移条件：300点大米/@DS操作强化转移><>\
+<>\ \ 
+<>                          <返回上一页/@Main>\
+
+
+[@DS操作强化转移]
+#OR
+not CheckBoxItemCount 2 1
+not CheckBoxItemCount 3 1
+#act
+messagebox 操作失败：\\请先放入装备！
+CLEARDELAYGOTO
+break
+
+#IF
+EQUAL <$BOXITEM[2].CUSTOMVALUE.VALUE5> 0
+#ACT
+ReturnBoxItem 2
+messagebox 操作失败：\\转移装备必须强化过才可以哦！
+CLEARDELAYGOTO
+break
+
+#IF
+NOT CheckTextList ..\QuestDiary\极品拾取鉴定\可强化列表.txt <$BOXITEM[2].NAME>
+#ACT
+ReturnBoxItem 2
+messagebox 操作失败：\\此类型物品无法进行强化！
+CLEARDELAYGOTO
+break
+
+#IF
+NOT CheckTextList ..\QuestDiary\极品拾取鉴定\可强化列表.txt <$BOXITEM[3].NAME>
+#ACT
+ReturnBoxItem 3
+messagebox 操作失败：\\此类型物品无法进行强化！
+CLEARDELAYGOTO
+break
+
+#if
+CHECKGAMEPOINT < 300
+#act
+messagebox 非常抱歉：\\您账号上的大米不够300点,无法转移属性！
+break
+
+#IF
+#ACT
+MOV N$DS转移前星数 <$BOXITEM[2].CUSTOMVALUE.VALUE5>
+MOV N$DS转移后星数 <$BOXITEM[3].CUSTOMVALUE.VALUE5>
+
+
+#IF
+EQUAL <$BOXITEM[2].STDMODE> 5
+#ACT
+MOV S$DS转移前类型01 0
+MOV S$DS转移前类型02 1
+MOV S$DS转移前类型03 2
+#ELSEACT
+MOV S$DS转移前类型01 2
+MOV S$DS转移前类型02 3
+MOV S$DS转移前类型03 4
+
+
+#IF
+EQUAL <$BOXITEM[3].STDMODE> 5
+#ACT
+MOV S$DS转移后类型01 0
+MOV S$DS转移后类型02 1
+MOV S$DS转移后类型03 2
+#ELSEACT
+MOV S$DS转移后类型01 2
+MOV S$DS转移后类型02 3
+MOV S$DS转移后类型03 4
+
+
+
+#IF
+#ACT
+GAMEPOINT - 300
+SetUpgradeItem 2
+;CHANGEITEMUPGRADECOUNT -1 = 0
+;CHANGEITEMADDVALUE -1 <$STR(S$DS转移前类型01)> = <$STR(N$DS转移后星数)>
+;CHANGEITEMADDVALUE -1 <$STR(S$DS转移前类型02)> = <$STR(N$DS转移后星数)>
+;CHANGEITEMADDVALUE -1 <$STR(S$DS转移前类型03)> = <$STR(N$DS转移后星数)>
+
+;CHANGECUSTOMITEMTEXT -1 
+;CHANGECUSTOMITEMTEXTColor -1 254
+
+
+CHANGECUSTOMITEMABIL -1 4 0 250
+CHANGECUSTOMITEMABIL -1 4 1 3
+CHANGECUSTOMITEMABIL -1 4 2 4
+CHANGECUSTOMITEMABIL -1 4 3 1
+CHANGECUSTOMITEMVALUE -1 4 = 0
+CHANGECUSTOMITEMABIL -1 5 0 250
+CHANGECUSTOMITEMABIL -1 5 1 4
+CHANGECUSTOMITEMABIL -1 5 2 5
+CHANGECUSTOMITEMABIL -1 5 3 1
+CHANGECUSTOMITEMVALUE -1 5 = 0
+CHANGECUSTOMITEMABIL -1 6 0 250
+CHANGECUSTOMITEMABIL -1 6 1 5
+CHANGECUSTOMITEMABIL -1 6 2 6
+CHANGECUSTOMITEMABIL -1 6 3 1
+CHANGECUSTOMITEMVALUE -1 6 = 0
+CHANGECUSTOMITEMABIL -1 7 0 250
+CHANGECUSTOMITEMABIL -1 7 1 6
+CHANGECUSTOMITEMABIL -1 7 2 7
+CHANGECUSTOMITEMABIL -1 7 3 1
+CHANGECUSTOMITEMVALUE -1 7 = 0
+CHANGECUSTOMITEMABIL -1 8 0 250
+CHANGECUSTOMITEMABIL -1 8 1 7
+CHANGECUSTOMITEMABIL -1 8 2 8
+CHANGECUSTOMITEMABIL -1 8 3 1
+CHANGECUSTOMITEMVALUE -1 8 = 0
+
+
+UpDateBoxItem 2
+
+SetUpgradeItem 3
+;CHANGEITEMUPGRADECOUNT -1 = <$STR(N$DS转移前星数)>
+;CHANGEITEMADDVALUE -1 <$STR(S$DS转移后类型01)> = <$STR(N$DS转移前星数)>
+;CHANGEITEMADDVALUE -1 <$STR(S$DS转移后类型02)> = <$STR(N$DS转移前星数)>
+;CHANGEITEMADDVALUE -1 <$STR(S$DS转移后类型03)> = <$STR(N$DS转移前星数)>
+;CHANGECUSTOMITEMTEXT -1 [强化<$STR(N$DS转移前星数)>星属性]
+;CHANGECUSTOMITEMTEXTColor -1 254
+CHANGECUSTOMITEMABIL -1 4 0 250
+CHANGECUSTOMITEMABIL -1 4 1 3
+CHANGECUSTOMITEMABIL -1 4 2 4
+CHANGECUSTOMITEMABIL -1 4 3 1
+CHANGECUSTOMITEMVALUE -1 4 = <$STR(N$DS转移前星数)>
+
+CHANGECUSTOMITEMABIL -1 5 0 250
+CHANGECUSTOMITEMABIL -1 5 1 4
+CHANGECUSTOMITEMABIL -1 5 2 5
+CHANGECUSTOMITEMABIL -1 5 3 1
+CHANGECUSTOMITEMVALUE -1 5 = <$STR(N$DS转移前星数)>
+
+CHANGECUSTOMITEMABIL -1 6 0 250
+CHANGECUSTOMITEMABIL -1 6 1 5
+CHANGECUSTOMITEMABIL -1 6 2 6
+CHANGECUSTOMITEMABIL -1 6 3 1
+CHANGECUSTOMITEMVALUE -1 6 = <$STR(N$DS转移前星数)>
+
+CHANGECUSTOMITEMABIL -1 7 0 250
+CHANGECUSTOMITEMABIL -1 7 1 6
+CHANGECUSTOMITEMABIL -1 7 2 7
+CHANGECUSTOMITEMABIL -1 7 3 1
+CHANGECUSTOMITEMVALUE -1 7 = <$STR(N$DS转移前星数)>
+CHANGECUSTOMITEMABIL -1 8 0 250
+CHANGECUSTOMITEMABIL -1 8 1 7
+CHANGECUSTOMITEMABIL -1 8 2 8
+CHANGECUSTOMITEMABIL -1 8 3 1
+CHANGECUSTOMITEMVALUE -1 8 = <$STR(N$DS转移前星数)>
+
+
+
+UpDateBoxItem 3
+
+messagebox 操作成功：\\[<$BOXITEM[2].NAME>]加星强化属性已经转移到[<$BOXITEM[3].NAME>]！
+ReturnBoxItem 2
+ReturnBoxItem 3
+close
+break
+
+
+[@ItemIntoBox2]
+#IF
+equal <$BOXITEM[2].CUSTOMVALUE.VALUE5> 0
+#ACT
+ReturnBoxItem 2
+messagebox 操作失败：\\此装备没有强化，无法操作！
+CLEARDELAYGOTO
+break
+
+#IF
+NOT CheckTextList ..\QuestDiary\极品拾取鉴定\可强化列表.txt <$BOXITEM[2].NAME>
+#ACT
+ReturnBoxItem 2
+messagebox 操作失败：\\此类型物品无法进行强化！
+CLEARDELAYGOTO
+break
+
+
+[@ItemIntoBox3]
+#if
+not CheckBoxItemCount 2 1
+#ACT
+ReturnBoxItem 3
+messagebox 操作失败：\\请先放入已强化的装备！
+CLEARDELAYGOTO
+break
+
+#IF
+NOT CheckTextList ..\QuestDiary\极品拾取鉴定\可强化列表.txt <$BOXITEM[3].NAME>
+#ACT
+ReturnBoxItem 3
+messagebox 操作失败：\\此类型物品无法进行强化！
+CLEARDELAYGOTO
+break
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@自动开始强化X]
+#IF
+EQUAL <$BOXITEM[1].NAME>
+#ACT
+MESSAGEBOX 还未放入装备！
+CLEARDELAYGOTO
+BREAK
+
+#IF
+LARGE <$BOXITEM[1].CUSTOMVALUE.VALUE5> 14
+#ACT
+GOTO @main
+MESSAGEBOX 操作失败：\　\最高强化+15星，无法继续强化！
+SET [430] 0
+messagebox 关闭自动强化！
+CLEARDELAYGOTO
+break
+
+#IF
+NOT CheckTextList ..\QuestDiary\极品拾取鉴定\可强化列表.txt <$BOXITEM[1].NAME>
+#ACT
+GOTO @main
+messagebox 操作失败：\\此类型物品无法进行强化！
+SET [430] 0
+messagebox 关闭自动强化！
+CLEARDELAYGOTO
+break
+
+
+#IF
+CHECK [430] 0
+#ACT
+SET [430] 1
+messagebox 开启自动强化！
+GOTO @自动开始强化A
+break
+
+#IF
+CHECK [430] 1
+#ACT
+SET [430] 0
+messagebox 关闭自动强化！
+CLEARDELAYGOTO
+break
+
+
+
+
+
+
+[@自动开始强化A]
+
+#IF
+LARGE <$BOXITEM[1].CUSTOMVALUE.VALUE5> 14
+#ACT
+GOTO @main
+MESSAGEBOX 操作失败：\　\最高强化+15星，无法继续强化！
+SET [430] 0
+messagebox 关闭自动强化！
+CLEARDELAYGOTO
+break
+
+
+#IF
+CHECK [430] 0
+#ACT
+CLEARDELAYGOTO
+break
+
+
+
+
+
+;===================================================================
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 0
+#ACT
+MOV N$强化等级 1
+MOV N$JC操作强化几率 1
+MOV N$JC操作强化大米 0
+MOV N$JC操作强化大米 0
+MOV N$JC强化材料_强化石 1
+MOV N$JC强化材料_天宫锤 0
+MOV N$JC强化保底_天宫锤 0
+
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 1
+#ACT
+MOV N$强化等级 2
+MOV N$JC操作强化几率 1
+MOV N$JC操作强化大米 0
+MOV N$JC操作强化大米 0
+MOV N$JC强化材料_强化石 1
+MOV N$JC强化材料_天宫锤 0
+MOV N$JC强化保底_天宫锤 0
+
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 2
+#ACT
+MOV N$强化等级 3
+MOV N$JC操作强化几率 2
+MOV N$JC操作强化大米 0
+MOV N$JC操作强化大米 0
+MOV N$JC强化材料_强化石 1
+MOV N$JC强化材料_天宫锤 0
+MOV N$JC强化保底_天宫锤 0
+
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 3
+#ACT
+MOV N$强化等级 4
+MOV N$JC操作强化几率 2
+MOV N$JC操作强化大米 0
+MOV N$JC操作强化大米 0
+MOV N$JC强化材料_强化石 1
+MOV N$JC强化材料_天宫锤 0
+MOV N$JC强化保底_天宫锤 0
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 4
+#ACT
+MOV N$强化等级 5
+MOV N$JC操作强化几率 2
+MOV N$JC操作强化大米 5
+MOV N$JC强化材料_强化石 1
+MOV N$JC强化材料_天宫锤 0
+MOV N$JC强化保底_天宫锤 0
+
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 5
+#ACT
+MOV N$强化等级 6
+MOV N$JC操作强化几率 2
+MOV N$JC操作强化大米 10
+MOV N$JC强化材料_强化石 1
+MOV N$JC强化材料_天宫锤 0
+MOV N$JC强化保底_天宫锤 0
+
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 6
+#ACT
+MOV N$强化等级 7
+MOV N$JC操作强化几率 2
+MOV N$JC操作强化大米 15
+MOV N$JC强化材料_强化石 1
+MOV N$JC强化材料_天宫锤 0
+MOV N$JC强化保底_天宫锤 0
+
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 7
+#ACT
+MOV N$强化等级 8
+MOV N$JC操作强化几率 2
+MOV N$JC操作强化大米 20
+MOV N$JC强化材料_强化石 1
+MOV N$JC强化材料_天宫锤 0
+MOV N$JC强化保底_天宫锤 0
+
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 8
+#ACT
+MOV N$强化等级 9
+MOV N$JC操作强化几率 2
+MOV N$JC操作强化大米 25
+MOV N$JC强化材料_强化石 2
+MOV N$JC强化材料_天宫锤 0
+MOV N$JC强化保底_天宫锤 0
+
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 9
+#ACT
+MOV N$强化等级 10
+MOV N$JC操作强化几率 1
+MOV N$JC操作强化大米 30
+MOV N$JC强化材料_强化石 2
+MOV N$JC强化材料_天宫锤 0
+MOV N$JC强化保底_天宫锤 0
+
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 10
+#ACT
+MOV N$强化等级 11
+MOV N$JC操作强化几率 3
+MOV N$JC操作强化大米 35
+MOV N$JC强化材料_强化石 2
+MOV N$JC强化材料_天宫锤 0
+MOV N$JC强化保底_天宫锤 0
+
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 11
+#ACT
+MOV N$强化等级 12
+MOV N$JC操作强化几率 2
+MOV N$JC操作强化大米 40
+MOV N$JC强化材料_强化石 3
+MOV N$JC强化材料_天宫锤 0
+MOV N$JC强化保底_天宫锤 0
+;=======================================================
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 12
+#ACT
+MOV N$强化等级 13
+MOV N$JC操作强化几率 2
+MOV N$JC操作强化大米 45
+MOV N$JC强化材料_强化石 4
+MOV N$JC强化材料_天宫锤 0
+MOV N$JC强化保底_天宫锤 0
+
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 13
+#ACT
+MOV N$强化等级 14
+MOV N$JC操作强化几率 3
+MOV N$JC操作强化大米 50
+MOV N$JC强化材料_强化石 5
+MOV N$JC强化材料_天宫锤 0
+MOV N$JC强化保底_天宫锤 0
+
+#IF
+EQUAL <$BOXITEM[1].CUSTOMVALUE.VALUE5> 14
+#ACT
+MOV N$强化等级 15
+MOV N$JC操作强化几率 5
+MOV N$JC操作强化大米 100
+MOV N$JC强化材料_强化石 10
+MOV N$JC强化材料_天宫锤 0
+MOV N$JC强化保底_天宫锤 0
+
+
+
+
+#IF
+EQUAL <$BOXITEM[1].STDMODE> 5
+#ACT
+MOV S$JC增加属性类型01 0
+MOV S$JC增加属性类型02 1
+MOV S$JC增加属性类型03 2
+#ELSEACT
+MOV S$JC增加属性类型01 2
+MOV S$JC增加属性类型02 3
+MOV S$JC增加属性类型03 4
+;==============================================================================
+#IF
+NOT CHECKITEM 轮回竹叶 <$STR(N$JC强化材料_强化石)>
+#ACT
+messagebox 操作失败：\\您的轮回竹叶不足<$STR(N$JC强化材料_强化石)>个！
+CLEARDELAYGOTO
+break
+
+#IF
+CHECKGAMEPOINT < <$STR(N$JC操作强化大米)>
+#ACT
+messagebox 操作失败：\\您当前不足<$STR(N$JC操作强化大米)>大米！
+CLEARDELAYGOTO
+break
+
+#IF
+CHECKGAMEPOINT  < <$STR(N$JC操作强化大米)>
+#ACT
+messagebox 操作失败：\\您当前不足<$STR(N$JC操作强化大米)>大米！
+CLEARDELAYGOTO
+break
+
+
+#IF
+Random <$STR(N$JC操作强化几率)>
+#ACT
+GAMEPOINT - <$STR(N$JC操作强化大米)>
+take 轮回竹叶 <$STR(N$JC强化材料_强化石)>
+SetUpgradeItem 1
+;CHANGEITEMUPGRADECOUNT -1 + 1
+UpDateBoxItem 1
+MOV N$DS计算增加属性 <$BOXITEM[1].CUSTOMVALUE.VALUE5>
+INC N$DS计算增加属性 1
+
+;---------------------------
+
+
+;CHANGECUSTOMITEMTEXT -1 [强化<$BOXITEM[1].CUSTOMVALUE.VALUE5>星属性]
+;CHANGECUSTOMITEMTEXTColor -1 254
+CHANGECUSTOMITEMABIL -1 4 0 250
+CHANGECUSTOMITEMABIL -1 4 1 3
+CHANGECUSTOMITEMABIL -1 4 2 4
+CHANGECUSTOMITEMABIL -1 4 3 1
+CHANGECUSTOMITEMVALUE -1 4 = <$STR(N$DS计算增加属性)>
+
+CHANGECUSTOMITEMABIL -1 5 0 250
+CHANGECUSTOMITEMABIL -1 5 1 4
+CHANGECUSTOMITEMABIL -1 5 2 5
+CHANGECUSTOMITEMABIL -1 5 3 1
+CHANGECUSTOMITEMVALUE -1 5 = <$STR(N$DS计算增加属性)>
+
+CHANGECUSTOMITEMABIL -1 6 0 250
+CHANGECUSTOMITEMABIL -1 6 1 5
+CHANGECUSTOMITEMABIL -1 6 2 6
+CHANGECUSTOMITEMABIL -1 6 3 1
+CHANGECUSTOMITEMVALUE -1 6 = <$STR(N$DS计算增加属性)>
+
+CHANGECUSTOMITEMABIL -1 7 0 250
+CHANGECUSTOMITEMABIL -1 7 1 6
+CHANGECUSTOMITEMABIL -1 7 2 7
+CHANGECUSTOMITEMABIL -1 7 3 1
+CHANGECUSTOMITEMVALUE -1 7 = <$STR(N$DS计算增加属性)>
+CHANGECUSTOMITEMABIL -1 8 0 250
+CHANGECUSTOMITEMABIL -1 8 1 7
+CHANGECUSTOMITEMABIL -1 8 2 8
+CHANGECUSTOMITEMABIL -1 8 3 1
+CHANGECUSTOMITEMVALUE -1 8 = <$STR(N$DS计算增加属性)>
+
+UpDateBoxItem 1
+SENDMOVEMSG 0 254 0 5 1 玩家[<$USERNAME>]成功将【<$BOXITEM[1].NAME>】强化到[<$STR(N$DS计算增加属性)>★],星星越多！属性越好！
+SendCenterMsg 250 0 【强化提示】：你的装备【<$BOXITEM[1].NAME>】强化成功到[<$STR(N$DS计算增加属性)>★],星星越多！属性越好！ 0 1
+GOTO @ItemIntoBox1
+DELAYGOTO 250 @自动开始强化A
+BREAK
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$JC操作强化大米)>
+take 轮回竹叶 <$STR(N$JC强化材料_强化石)>
+SetUpgradeItem 1
+;CHANGEITEMUPGRADECOUNT -1 - 1
+UpDateBoxItem 1
+MOV N$DS计算增加属性 <$BOXITEM[1].CUSTOMVALUE.VALUE5>
+DEC N$DS计算增加属性 1
+;CHANGEITEMADDVALUE -1 <$STR(S$JC增加属性类型01)> = <$STR(N$DS计算增加属性)>
+;CHANGEITEMADDVALUE -1 <$STR(S$JC增加属性类型02)> = <$STR(N$DS计算增加属性)>
+;CHANGEITEMADDVALUE -1 <$STR(S$JC增加属性类型03)> = <$STR(N$DS计算增加属性)>
+;---------------------------
+
+;CHANGECUSTOMITEMTEXT -1 [强化<$BOXITEM[1].CUSTOMVALUE.VALUE5>星属性]
+;CHANGECUSTOMITEMTEXTColor -1 254
+CHANGECUSTOMITEMABIL -1 4 0 250
+CHANGECUSTOMITEMABIL -1 4 1 3
+CHANGECUSTOMITEMABIL -1 4 2 4
+CHANGECUSTOMITEMABIL -1 4 3 1
+CHANGECUSTOMITEMVALUE -1 4 = <$STR(N$DS计算增加属性)>
+
+CHANGECUSTOMITEMABIL -1 5 0 250
+CHANGECUSTOMITEMABIL -1 5 1 4
+CHANGECUSTOMITEMABIL -1 5 2 5
+CHANGECUSTOMITEMABIL -1 5 3 1
+CHANGECUSTOMITEMVALUE -1 5 = <$STR(N$DS计算增加属性)>
+
+CHANGECUSTOMITEMABIL -1 6 0 250
+CHANGECUSTOMITEMABIL -1 6 1 5
+CHANGECUSTOMITEMABIL -1 6 2 6
+CHANGECUSTOMITEMABIL -1 6 3 1
+CHANGECUSTOMITEMVALUE -1 6 = <$STR(N$DS计算增加属性)>
+
+CHANGECUSTOMITEMABIL -1 7 0 250
+CHANGECUSTOMITEMABIL -1 7 1 6
+CHANGECUSTOMITEMABIL -1 7 2 7
+CHANGECUSTOMITEMABIL -1 7 3 1
+CHANGECUSTOMITEMVALUE -1 7 = <$STR(N$DS计算增加属性)>
+CHANGECUSTOMITEMABIL -1 8 0 250
+CHANGECUSTOMITEMABIL -1 8 1 7
+CHANGECUSTOMITEMABIL -1 8 2 8
+CHANGECUSTOMITEMABIL -1 8 3 1
+CHANGECUSTOMITEMVALUE -1 8 = <$STR(N$DS计算增加属性)>
+UpDateBoxItem 1
+GOTO @ItemIntoBox1
+SendCenterMsg 249 0 【强化提示】：你的装备【<$BOXITEM[1].NAME>】强化失败，材料扣除！星星掉一级 0 1
+DELAYGOTO 250 @自动开始强化A
+BREAK
+;------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+

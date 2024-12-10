@@ -1,0 +1,541 @@
+[@main]
+#OR
+CheckHumInRange 死亡大逃杀 13 8 1
+CheckHumInRange 死亡大逃杀 14 9 1
+CheckHumInRange 死亡大逃杀 14 8 1
+CheckHumInRange 死亡大逃杀 11 10 1
+CheckHumInRange 死亡大逃杀 12 11 1
+CheckHumInRange 死亡大逃杀 11 11 1
+CheckHumInRange 死亡大逃杀 10 11 1
+CheckHumInRange 死亡大逃杀 12 10 1
+CheckHumInRange 死亡大逃杀 9 13 1
+CheckHumInRange 死亡大逃杀 10 13 1
+CheckHumInRange 死亡大逃杀 9 14 1
+CheckHumInRange 死亡大逃杀 10 4 1
+CheckHumInRange 死亡大逃杀 11 4 1
+CheckHumInRange 死亡大逃杀 10 5 1
+CheckHumInRange 死亡大逃杀 8 6 1
+CheckHumInRange 死亡大逃杀 8 7 1
+CheckHumInRange 死亡大逃杀 5 10 1
+CheckHumInRange 死亡大逃杀 5 9 1
+CheckHumInRange 死亡大逃杀 6 9 1
+CheckHumInRange 死亡大逃杀 6 8 1
+#ACT
+messagebox \\对不起，在小房间里面，禁止点NPC，请结束出来以后在点！！
+BREAK
+
+#IF
+CheckMonMap 死亡大逃杀 1
+#ACT
+messagebox \\对不起，杀手还在这里，禁止点NPC，请在杀手离开以后在点！！
+BREAK
+
+
+
+#IF
+CHECKLEVELEX > 0
+#ACT
+MOV  S$排1  <$STR(A100)> 
+MOV  S$排2  <$STR(A101)> 
+MOV  S$排3  <$STR(A102)> 
+MOV  S$排4  <$STR(A103)> 
+MOV  S$排5  <$STR(A104)> 
+MOV  S$排6  <$STR(A105)> 
+MOV  S$排7  <$STR(A106)> 
+MOV  S$排8  <$STR(A107)> 
+MOV  S$排9  <$STR(A108)> 
+MOV  S$排10  <$STR(A109)> 
+MOV  S$排11  <$STR(A110)> 
+MOV  S$排101  {<$STR(G305)>点/SCOLOR=254}
+SetStringBlank <$STR(S$排1)> 20 1
+SetStringBlank <$STR(S$排2)> 20 1
+SetStringBlank <$STR(S$排3)> 20 1
+SetStringBlank <$STR(S$排4)> 20 1
+SetStringBlank <$STR(S$排5)> 20 1
+SetStringBlank <$STR(S$排6)> 20 1
+SetStringBlank <$STR(S$排7)> 20 1
+SetStringBlank <$STR(S$排8)> 20 1
+SetStringBlank <$STR(S$排9)> 20 1
+SetStringBlank <$STR(S$排10)> 20 1
+SetStringBlank <$STR(S$排11)> 20 1
+MOV N$每日排名比例 0
+MOV N$分红比例2 0
+MOV N$分红比例3 0
+MOV N$每日充值比例 <$STR(u19)>
+DIV N$每日充值比例 100
+
+
+MOV N$奖励逃亡值 <$STR(N47)>
+MOV N$分红比例 <$STR(G73)>
+DIV N$分红比例 <$STR(N$奖励逃亡值)>
+INC N$分红比例 1
+MOV N$参与奖励 <$STR(G73)>
+DIV N$参与奖励 <$STR(N$分红比例)>
+
+
+CalcPer <$STR(G73)>  5 N$第一名奖励
+CalcPer <$STR(G73)>  3 N$第二名奖励
+CalcPer <$STR(G73)>  2 N$第三名奖励
+
+#IF
+LARGE u19 99
+#ACT
+MOV N$每日充值比例 1
+
+
+#IF
+equal A160 <$USERNAME>
+#ACT
+MOV N$每日排名比例 5
+
+#IF
+equal A161 <$USERNAME>
+#ACT
+MOV N$每日排名比例 3
+
+#IF
+equal A162 <$USERNAME>
+#ACT
+MOV N$每日排名比例 2
+
+
+
+
+
+
+
+
+#IF
+LARGE <$STR(N47)> 0
+#ACT
+MOV N$当前大逃杀 <$STR(N47)>
+DIV N$当前大逃杀 100
+MOV S$当前大逃杀 ^-^250#当前已经参与大逃杀^-^254#每次参与扣除<$STR(N47)>门票^-^154#每次逃过去奖励：<$STR(N47)>点逃亡值^-^161#参与后请在6个房间中寻找一个杀手不会进的小房间躲着^-^161#杀手到来后还没有躲好，系统将自动给你随机分配房间^-^249#提醒：如果进入房间后在更换房间，系统会二次收取门票^-^249#注意：被杀手逮住嘎了，门票扣除，没有逃亡值奖励^-^254#重要提示：刚开始不会玩，请勿将门票数量设置过大，先设置100-300了解一下
+
+#IF
+EQUAL <$STR(N47)> 0
+#ACT
+MOV N$当前大逃杀 <$STR(N47)>
+DIV N$当前大逃杀 100
+MOV S$当前大逃杀 ^-^231#当前还未参与大逃杀^-^161#请先点击：我要参与大逃杀^-^161#参与后请在6个房间中寻找一个杀手不会进的小房间躲着^-^161#杀手到来后还没有躲好，系统将自动给你随机分配房间^-^249#提醒：如果进入房间后在更换房间，系统会二次收取门票^-^249#注意：被杀手逮住嘎了，门票扣除，没有逃亡值奖励^-^254#重要提示：刚开始不会玩，请勿将门票数量设置过大，先设置100-300了解一下
+MOV N$参与奖励 0
+
+#IF
+#act
+CalcPer <$STR(G73)>  N$每日充值比例 N$分红比例2
+
+
+MOV S$当前参与 ^-^250#当前参与：^-^254#每次参与扣除<$STR(N47)>门票^-^154#每次逃过去奖励：<$STR(N47)>点逃亡值^-^231#请先点击：我要参与大逃杀^-^231#参与后请在6个房间中寻找一个杀手不会进的小房间躲着^-^231#杀手到来后还没有躲好，系统将自动给你随机分配房间^-^249#提醒：如果进入房间后在更换房间，系统会二次收取门票^-^249#注意：被杀手逮住嘎了，门票扣除，没有逃亡值奖励^-^254#重要提示：刚开始不会玩，请勿将门票数量设置过大，先设置100-300了解一下
+
+MOV N$分红比例1 <$STR(G73)>
+DIV N$分红比例1 100
+
+close
+OPENMERCHANTBIGDLG 1 558 1 4 0 0 1 495 2
+#SAY
+\<注意事项：/scolor=249><大逃杀排行须捐献高于1000点逃亡值才会上排行,一共只有10个名额/SCOLOR=250>\ \ 
+\ <第一名/SCOLOR=254>  : <$STR(S$排1)><点击查看属性|254#1.38倍攻击^-^254#1.38倍血量^-^254#怪物切割+1000/SCOLOR=251>           <捐献逃亡值/SCOLOR=161>:{<$STR(G100)>点/SCOLOR=250}\ 
+\ <第二名/SCOLOR=249>  : <$STR(S$排2)><点击查看属性|249#1.35倍攻击^-^249#1.35倍血量^-^249#怪物切割+900/SCOLOR=251>           <捐献逃亡值/SCOLOR=161>:{<$STR(G101)>点/SCOLOR=250}\ 
+\ <第三名/SCOLOR=253>  : <$STR(S$排3)><点击查看属性|253#1.32倍攻击^-^253#1.32倍血量^-^253#怪物切割+800/SCOLOR=251>           <捐献逃亡值/SCOLOR=161>:{<$STR(G102)>点/SCOLOR=250}\ 
+\ <第四名/SCOLOR=243>  : <$STR(S$排4)><点击查看属性|243#1.28倍攻击^-^243#1.28倍血量^-^243#怪物切割+700/SCOLOR=251>           <捐献逃亡值/SCOLOR=161>:{<$STR(G103)>点/SCOLOR=250}\ 
+\ <第五名/SCOLOR=251>  : <$STR(S$排5)><点击查看属性|251#1.25倍攻击^-^251#1.25倍血量^-^251#怪物切割+600/SCOLOR=251>           <捐献逃亡值/SCOLOR=161>:{<$STR(G104)>点/SCOLOR=250}\ 
+\ <第六名/SCOLOR=250>  : <$STR(S$排6)><点击查看属性|250#1.22倍攻击^-^250#1.22倍血量^-^250#怪物切割+500/SCOLOR=251>           <捐献逃亡值/SCOLOR=161>:{<$STR(G105)>点/SCOLOR=250}\ 
+\ <第七名/SCOLOR=161>  : <$STR(S$排7)><点击查看属性|161#1.19倍攻击^-^161#1.19倍血量^-^161#怪物切割+400/SCOLOR=251>           <捐献逃亡值/SCOLOR=161>:{<$STR(G106)>点/SCOLOR=250}\ 
+\ <第八名/SCOLOR=161>  : <$STR(S$排8)><点击查看属性|161#1.15倍攻击^-^161#1.15倍血量^-^161#怪物切割+300/SCOLOR=251>           <捐献逃亡值/SCOLOR=161>:{<$STR(G107)>点/SCOLOR=250}\ 
+\ <第九名/SCOLOR=161>  : <$STR(S$排9)><点击查看属性|161#1.10倍攻击^-^161#1.10倍血量^-^161#怪物切割+200/SCOLOR=251>           <捐献逃亡值/SCOLOR=161>:{<$STR(G108)>点/SCOLOR=250}\ 
+\ <第十名/SCOLOR=161>  : <$STR(S$排10)><点击查看属性|161#1.05倍攻击^-^161#1.05倍血量^-^161#怪物切割+100/SCOLOR=251>           <捐献逃亡值/SCOLOR=161>:{<$STR(G109)>点/SCOLOR=250}\ 
+
+
+
+\ \
+\{您当前的逃亡值：|250#今日躲过杀手次数：<$STR(U128)>次^-^249#今日被杀手嘎次数：<$STR(U129)>次^-^161#参与大逃杀躲过杀手即可获得对应的逃亡值/SCOLOR=161} {<$STR(U126)>点|250#今日躲过杀手次数：<$STR(U128)>次^-^249#今日被杀手嘎次数：<$STR(U129)>次^-^161#参与大逃杀躲过杀手即可获得对应的逃亡值/SCOLOR=254}    {捐献的逃亡值：|250#点击捐献最低100点逃亡值起^-^161#每天凌晨清理排行榜，请理性捐献^-^154#您当前的逃亡值：<$STR(U126)>点^-^250#您已捐献逃亡值：<$STR(U131)>点/SCOLOR=161}{<$STR(U131)>点|250#点击捐献最低100点逃亡值起^-^161#每天凌晨清理排行榜，请理性捐献/SCOLOR=250}
+<>    {全区逃亡值奖池：|250#当被杀手嘎了，原来奖励的逃亡值将被全区奖池吸收^-^249#逃过杀手的追杀，将获得逃亡值奖池的奖励^-^161#初始奖励：<$STR(G73)>÷100=<$STR(N$分红比例1)>^-^161#参与奖励：<$STR(G73)>÷<$STR(N$分红比例)>=<$STR(N$参与奖励)>^-^161#每日充值100元奖励：<$STR(G73)>×1%=<$STR(N$分红比例2)>^-^254#今日充值第一名：<$STR(A160)>-----<$STR(G160)>元^-^161#第一奖励：<$STR(G73)>×5%=<$STR(N$第一名奖励)>^-^253#今日充值第二名：<$STR(A161)>-----<$STR(G161)>元^-^161#第二奖励：<$STR(G73)>×3%=<$STR(N$第二名奖励)>^-^70#今日充值第三名：<$STR(A162)>-----<$STR(G162)>元^-^161#第三奖励：<$STR(G73)>×2%=<$STR(N$第三名奖励)>^-^249#参与的门票数量越多奖励就越多，最高不能超过全区奖池数/SCOLOR=161}{<$STR(G73)>点|250#当被杀手嘎了，原来奖励的逃亡值将被全区奖池吸收^-^249#逃过杀手的追杀，将获得逃亡值奖池的奖励^-^161#初始奖励：<$STR(G73)>÷100=<$STR(N$分红比例1)>^-^161#参与奖励：<$STR(G73)>÷<$STR(N$分红比例)>=<$STR(N$参与奖励)>^-^161#每日充值100元奖励：<$STR(G73)>×1%=<$STR(N$分红比例2)>^-^254#今日充值第一名：<$STR(A160)>-----<$STR(G160)>元^-^161#第一奖励：<$STR(G73)>×5%=<$STR(N$第一名奖励)>^-^253#今日充值第二名：<$STR(A161)>-----<$STR(G161)>元^-^161#第二奖励：<$STR(G73)>×3%=<$STR(N$第二名奖励)>^-^70#今日充值第三名：<$STR(A162)>-----<$STR(G162)>元^-^161#第三奖励：<$STR(G73)>×2%=<$STR(N$第三名奖励)>^-^249#参与的门票数量越多奖励就越多，最高不能超过全区奖池数/SCOLOR=254}\   \ 
+
+
+
+\{我参与：|<$STR(S$当前参与)>/SCOLOR=161}{<$STR(N47)>点门票|<$STR(S$当前参与)>/SCOLOR=154} 
+<>      门票点：{<$STR(U132)>点/SCOLOR=254}    
+<>     <我要参与大逃杀|249#点击最低100点门票参与^-^161#躲过杀手，即可获得100点逃亡值<$STR(S$当前大逃杀)>/@@InPutInteger47(请您输入参与的门票数量，注意：1门票=1逃亡值)>
+<>     <我要捐献逃亡值|250#点击捐献最低1000点逃亡值^-^161#每天凌晨清理排行榜，请理性捐献^-^154#您当前的逃亡值：<$STR(U126)>点^-^250#您已捐献逃亡值：<$STR(U131)>点/@@InPutInteger48(请您输入捐献的逃亡值数量，注意：每天凌晨清理排行榜，请理性捐献)>  \   \ 
+
+
+
+;\<进入①号房|<$STR(S$当前大逃杀)>/@进入①号房>   <进入②号房|<$STR(S$当前大逃杀)>/@进入②号房>   <进入③号房|<$STR(S$当前大逃杀)>/@进入③号房>   <进入④号房|<$STR(S$当前大逃杀)>/@进入;④号房>    <进入⑤号房|<$STR(S$当前大逃杀)>/@进入⑤号房>    <进入⑥号房|<$STR(S$当前大逃杀)>/@进入⑥号房>\ 
+;已经捐献后再捐献会清空\
+
+
+\          <随机进入|<$STR(S$当前大逃杀)>/@随机进入>
+
+
+
+
+[@InPutInteger48]
+
+
+#IF
+CheckMonMap 死亡大逃杀 1
+#ACT
+messagebox \\对不起，杀手还在这里，请在杀手离开以后在来！！
+goto @MAIN
+BREAK
+
+
+
+#or
+EQUAL N48
+EQUAL N48 0
+SMALL N48 1000
+large N48 1000000
+#act
+MOV N48 0
+messagebox \\请输入1000-1000000之内数字.不能为空或者0！
+goto @MAIN
+BREAK
+
+
+#IF
+SMALL U126 <$STR(N48)>
+#ACT
+messagebox \\对不起，您当前的逃亡值不够<$STR(N48)>，无法参与排行！！
+goto @MAIN
+BREAK
+
+
+
+
+
+#IF
+#ACT
+DEC U126 <$STR(N48)>
+INC U131 <$STR(N48)>
+messagebox \\恭喜您，捐献了<$STR(N48)>点逃亡值，正在更新大逃杀排行榜，请稍等在打开！！
+goto @MAIN
+BREAK
+
+
+
+[@InPutInteger47]
+
+#IF
+CheckMonMap 死亡大逃杀 1
+#ACT
+MOV N47 0
+messagebox \\对不起，杀手还在这里，请在杀手离开以后在来！！
+goto @MAIN
+BREAK
+
+
+#IF
+SMALL U132 <$STR(N47)>
+#ACT
+messagebox \\对不起，您当前的门票不够<$STR(N47)>，无法参与
+MOV N47 0
+goto @MAIN
+BREAK
+
+
+
+#or
+EQUAL N47
+EQUAL N47 0
+SMALL N47 100
+large N47 1000000
+#act
+MOV N47 0
+messagebox \\请输入100-100万之内数字.不能为空或者0！已经捐献后再捐献会清空
+goto @MAIN
+BREAK
+
+
+
+
+#IF
+#ACT
+goto @MAIN
+break
+
+
+
+
+
+[@随机进入]
+
+
+#IF
+CheckMonMap 死亡大逃杀 1
+#ACT
+messagebox \\对不起，杀手还在这里，请在杀手离开以后在进入避难房！！
+BREAK
+
+
+#OR
+SMALL N47 100
+#ACT
+messagebox \\对不起，请您先参与大逃杀，否则无法进入避难房！！
+goto @MAIN
+BREAK
+
+
+
+
+
+
+#OR
+SMALL U132 <$STR(N47)>
+SMALL U132 100
+#ACT
+messagebox \\对不起，您当前的门票不够，无法进入避难房！！
+;MOV N47 0
+goto @MAIN
+BREAK
+
+
+
+
+
+#if
+#act
+MOV S$大逃杀第一段 C
+MOV N$大逃杀标记123 1
+
+MOVR P3 0 6
+GetListString ..\QuestDiary\极品拾取鉴定\红色坐标.txt <$STR(P3)> P1 P2  
+MAPMOVE 死亡大逃杀 <$STR(P1)> <$STR(P2)>
+BREAK
+
+
+
+[@进入⑥号房]
+
+
+#IF
+SMALL N47 100
+#ACT
+messagebox \\对不起，请您先参与大逃杀，否则无法进入避难房！！
+goto @MAIN
+BREAK
+
+#IF
+CheckMonMap 死亡大逃杀 1
+#ACT
+messagebox \\对不起，杀手还在这里，请在杀手离开以后在进入避难房！！
+BREAK
+
+
+#OR
+SMALL U132 <$STR(N47)>
+SMALL U132 100
+#ACT
+messagebox \\对不起，您当前的门票不够，无法进入避难房！！
+;MOV N47 0
+goto @MAIN
+BREAK
+
+
+
+
+#if
+#act
+MOV S$大逃杀第一段 C
+MOV N$大逃杀标记123 1
+
+
+mapmove 死亡大逃杀 9 13
+break
+
+
+
+
+
+
+[@进入⑤号房]
+
+#IF
+SMALL N47 100
+#ACT
+messagebox \\对不起，请您先参与大逃杀，否则无法进入避难房！！
+goto @MAIN
+BREAK
+
+#IF
+CheckMonMap 死亡大逃杀 1
+#ACT
+messagebox \\对不起，杀手还在这里，请在杀手离开以后在进入避难房！！
+BREAK
+
+
+
+#OR
+SMALL U132 <$STR(N47)>
+SMALL U132 100
+#ACT
+messagebox \\对不起，您当前的门票不够，无法进入避难房！！
+;MOV N47 0
+goto @MAIN
+BREAK
+
+
+
+
+#if
+#act
+MOV S$大逃杀第一段 C
+MOV N$大逃杀标记123 1
+
+mapmove 死亡大逃杀 11 11
+break
+
+
+
+[@进入④号房]
+
+
+#IF
+SMALL N47 100
+#ACT
+messagebox \\对不起，请您先参与大逃杀，否则无法进入避难房！！
+goto @MAIN
+BREAK
+
+#IF
+CheckMonMap 死亡大逃杀 1
+#ACT
+messagebox \\对不起，杀手还在这里，请在杀手离开以后在进入避难房！！
+BREAK
+
+
+#OR
+SMALL U132 <$STR(N47)>
+SMALL U132 100
+#ACT
+messagebox \\对不起，您当前的门票不够，无法进入避难房！！
+;MOV N47 0
+goto @MAIN
+BREAK
+
+
+
+
+#if
+#act
+MOV S$大逃杀第一段 C
+MOV N$大逃杀标记123 1
+
+mapmove 死亡大逃杀 14 9
+break
+
+
+
+[@进入③号房]
+
+#IF
+SMALL N47 100
+#ACT
+messagebox \\对不起，请您先参与大逃杀，否则无法进入避难房！！
+goto @MAIN
+BREAK
+
+#IF
+CheckMonMap 死亡大逃杀 1
+#ACT
+messagebox \\对不起，杀手还在这里，请在杀手离开以后在进入避难房！！
+BREAK
+
+
+#OR
+SMALL U132 <$STR(N47)>
+SMALL U132 100
+#ACT
+messagebox \\对不起，您当前的门票不够，无法进入避难房！！
+;MOV N47 0
+goto @MAIN
+BREAK
+
+
+
+
+
+#if
+#act
+MOV S$大逃杀第一段 C
+MOV N$大逃杀标记123 1
+
+mapmove 死亡大逃杀 5 10
+break
+
+
+
+
+[@进入②号房]
+
+#IF
+SMALL N47 100
+#ACT
+messagebox \\对不起，请您先参与大逃杀，否则无法进入避难房！！
+goto @MAIN
+BREAK
+
+#IF
+CheckMonMap 死亡大逃杀 1
+#ACT
+messagebox \\对不起，杀手还在这里，请在杀手离开以后在进入避难房！！
+BREAK
+
+#OR
+SMALL U132 <$STR(N47)>
+SMALL U132 100
+#ACT
+messagebox \\对不起，您当前的门票不够，无法进入避难房！！
+;MOV N47 0
+goto @MAIN
+BREAK
+
+
+
+
+
+#if
+#act
+MOV S$大逃杀第一段 C
+MOV N$大逃杀标记123 1
+mapmove 死亡大逃杀 8 7
+break
+
+
+
+
+[@进入①号房]
+
+#IF
+SMALL N47 100
+#ACT
+messagebox \\对不起，请您先参与大逃杀，否则无法进入避难房！！
+goto @MAIN
+BREAK
+
+#IF
+CheckMonMap 死亡大逃杀 1
+#ACT
+messagebox \\对不起，杀手还在这里，请在杀手离开以后在进入避难房！！
+BREAK
+
+#OR
+SMALL U132 <$STR(N47)>
+SMALL U132 100
+#ACT
+messagebox \\对不起，您当前的门票不够，无法进入避难房！！
+;MOV N47 0
+goto @MAIN
+BREAK
+
+
+
+
+
+#if
+#act
+MOV S$大逃杀第一段 C
+MOV N$大逃杀标记123 1
+mapmove 死亡大逃杀 10 4
+break
+

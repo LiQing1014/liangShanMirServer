@@ -1,0 +1,22 @@
+(@@InPutString )
+[@main]
+#IF
+CHECK [307] 0
+#ACT
+SET [307] 1
+SET [27] 1
+;---------给物品段！
+
+#CALL [\游戏登陆\属性加成.txt] @属性设置
+#CALL [\游戏登陆\怪物爆率.txt] @怪物爆率
+GiveStateItem	福星高照符[V1]  1	1	0	0	1	1	1	1
+GiveStateItem	洗髓境  1	1	0	0	1	1	1	1
+GiveStateItem	包工盾牌  1	1	0	0	1	1	1	1
+GiveStateItem	魔血石Lv.4  1	1	0	0	1	1	1	1
+CONFERTITLE 摸鱼达人Lv0
+AutoTakeOnItem 福星高照符[V1] 9
+#CALL [\极品拾取鉴定\境界成长属性.txt] @境界成长属性
+AutoTakeOnItem 洗髓境 14
+#CALL [\极品拾取鉴定\福符成长属性.txt] @福符成长属性
+AutoTakeOnItem 包工盾牌 16
+#CALL [\极品拾取鉴定\盾牌成长属性.txt] @盾牌成长属性

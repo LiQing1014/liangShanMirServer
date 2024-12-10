@@ -1,0 +1,34 @@
+[@main]
+你想进入沙巴克藏宝阁吗？\
+嘿嘿嘿....我这人很看中钱哦\
+如果你想进去就拿10万金币来找我,这是我们老大规定的！\
+如果你没有钱。拿元宝来也行,5元宝就让你进去！金钻免费传送。\ \
+         <我要拿金币进去/@jinrutajian>         <我要拿元宝进去/@jinrutajian1> \\
+         <返回土城/@fantu>\
+               <离开/@exit>
+
+[@jinrutajian]
+#IF
+checkgold 100000
+#ACT
+take 金币 100000
+give 回城卷 1
+mapmove h201 14 102
+#ELSEACT
+MESSAGEBOX  你没有10万！别忽悠我！！！
+
+[@jinrutajian1]
+#IF
+CHECKGAMEGOLD > 4
+#ACT
+GAMEGOLD - 5
+give 回城卷 1
+mapmove h201 14 102
+break
+#ELSEACT
+MESSAGEBOX 我靠！你连5个元宝都没有还想去藏宝阁？
+
+[@fantu]
+#IF
+#ACT
+mapmove 3 333 333

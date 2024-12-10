@@ -1,0 +1,390 @@
+[@Main]
+#if
+Large N$通区_延迟 0
+#act
+SendCenterMsg 250	0 您的点击速度过快，请勿重复点击！	0	<$Str(N$通区_延迟)>
+SendCenterMsg 251	0 您的点击速度过快，请勿重复点击！	0	<$Str(N$通区_延迟)>
+SendCenterMsg 249	0 您的点击速度过快，请勿重复点击！	0	<$Str(N$通区_延迟)>
+#elseact
+MOV n$通区_延迟 3
+WDC @获取会员信息 操作=会员信息		密钥=<$Str(S$平台_名称)>
+WDC @充值地址获取 操作=玩家充值 模板=1		密钥=<$Str(S$平台_名称)>
+[@充值主界面]
+#if
+#act
+OPENMERCHANTBIGDLG <$str(N$通区_素材)> <$Str(N$平台_充值界面)> 1 4 0 0 0 0 0
+#say
+<>                                                                            <Imgex:<$str(N$通区_素材)>:7:8:7:<$STR(N$通用坐标X2)>:<$STR(N$通用坐标Y10)>/@Exit>\
+<>\
+<>                                             <$Str(S$手机绑定提示)>\
+<>\
+<>                <$Str(S$充值按钮1)>　　<$Str(S$充值按钮2)>　　<$Str(S$充值按钮3)>　　<$Str(S$领取充值按钮)>\
+<>\
+<>                <$Str(S$充值按钮4)>　　<$Str(S$充值按钮5)>　　<$Str(S$充值按钮6)>　　<$Str(S$领取充值按钮)>\
+<>\
+<>\
+<>     <我的货币：/fcolor=243>{<$Str(U24)>游戏币/SCOLOR=253}    {(使用<$Str(S$平台_名称)>游戏币兑换成其他货币！)/FCOLOR=10}\
+;<>\
+;<>     <兑换元宝：/SCOLOR=242>{1个游戏币/fcolor=151}＝{ 10000元宝＋1点充值/fcolor=250} <【/fcolor=10><立即兑换/@@InPutInteger2(请输入您要兑换的游戏币数量：1-10000之间的数值)><】/fcolor=10>\
+<>\
+<>     <兑换大米：/SCOLOR=242>{1个游戏币/fcolor=151}＝{ 10大米＋1点充值/fcolor=254}   <【/fcolor=10><立即兑换/@@InPutInteger3(请输入您要兑换的游戏币数量：1-10000之间的数值)><】/fcolor=10>\
+<>\
+<>     <会员等级：/fcolor=243>{<$STR(S$会员等级)> /SCOLOR=229}  <累计充值：/fcolor=243>{<$STR(S$充值数额)>元/SCOLOR=210}  <$Str(S$会员赠送)>\
+<>\
+<>\
+
+#if
+CheckContainstext	<$Servername>	内测
+#say
+<>\<>\<>\<>\<>\
+<> <【+10000币】/@加货币> <+1级/@加1级> <+10级/@加10级> <+100级/@加100级>  <【清元宝】/@清元宝> <【清灵符】/@清灵符> <【清金刚】/@清金刚> <【清泡点】/@清泡点> <【GM权限】/@提权>
+[@提权]
+#if
+Not	CheckContainstext	<$Servername>	内测
+#act
+Messagebox	当前不处于内测状态！
+break
+#if
+Equal	S$提权	
+#act
+Mov	S$提权	已提权
+CHANGEPERMISSION 10
+Messagebox	已开启GM权限！
+#elseact
+Mov	S$提权	
+CHANGEPERMISSION 0
+Messagebox	已关闭GM权限！
+
+[@加货币]
+#if
+CheckContainstext	<$Servername>	内测
+#act
+Inc	U24	10000
+Messagebox	增加10000币成功!
+Goto	@Main
+[@加1级]
+#if
+CheckContainstext	<$Servername>	内测
+#act
+ChangeLevel	+	1
+Sendmsg	7	等级+1！	
+Goto	@Main
+[@加10级]
+#if
+CheckContainstext	<$Servername>	内测
+#act
+ChangeLevel	+	10
+Sendmsg	7	等级+10！	
+Goto	@Main
+[@加100级]
+#if
+CheckContainstext	<$Servername>	内测
+#act
+ChangeLevel	+	100
+Sendmsg	7	等级+100！	
+Goto	@Main
+[@清元宝]
+#if
+CheckContainstext	<$Servername>	内测
+#act
+GameGold	=	0
+Messagebox	元宝清除成功!	
+Goto	@Main
+[@清灵符]
+#if
+CheckContainstext	<$Servername>	内测
+#act
+GameGird	=	0
+Messagebox	灵符清除成功!	
+Goto	@Main
+[@清金刚]
+#if
+CheckContainstext	<$Servername>	内测
+#act
+GameDiamond	=	0
+Messagebox	金刚石清除成功!	
+Goto	@Main
+[@清泡点]
+#if
+CheckContainstext	<$Servername>	内测
+#act
+GamePoint	=	0
+Messagebox	泡点清除成功!	
+Goto	@Main
+
+
+[@充值地址获取]
+#IF
+NOT EQUAL S$CODE 200
+#ACT
+MESSAGEBOX 系统错误：<$STR(S$MSG)>
+BREAK
+
+#IF
+NOT EQUAL S$充值地址1
+#ACT
+MOV S$充值按钮1 <Imgex:<$str(N$通区_素材)>:320:321:320:<$STR(N$通用坐标X5)>:<$STR(N$通用坐标Y5)>/@充值通道|S$充值地址1>
+#IF
+NOT EQUAL S$充值地址2
+#ACT
+MOV S$充值按钮2 <Imgex:<$str(N$通区_素材)>:322:323:322:<$STR(N$通用坐标X5)>:<$STR(N$通用坐标Y5)>/@充值通道|S$充值地址2>
+#IF
+NOT EQUAL S$充值地址3
+#ACT
+MOV S$充值按钮3 <Imgex:<$str(N$通区_素材)>:324:325:324:<$STR(N$通用坐标X5)>:<$STR(N$通用坐标Y5)>/@充值通道|S$充值地址3>
+#IF
+NOT EQUAL S$充值地址4
+#ACT
+MOV S$充值按钮4 <Imgex:<$str(N$通区_素材)>:326:327:326:<$STR(N$通用坐标X5)>:<$STR(N$通用坐标Y5)>/@充值通道2|S$充值地址4>
+#IF
+NOT EQUAL S$充值地址5
+#ACT
+MOV S$充值按钮5 <Imgex:<$str(N$通区_素材)>:328:329:328:<$STR(N$通用坐标X5)>:<$STR(N$通用坐标Y5)>/@充值通道2|S$充值地址5>
+#IF
+NOT EQUAL S$充值地址6
+#ACT
+MOV S$充值按钮6 <Imgex:<$str(N$通区_素材)>:330:331:330:<$STR(N$通用坐标X5)>:<$STR(N$通用坐标Y5)>/@充值通道2|S$充值地址6>
+
+#IF
+small <$STR(S$充值数额)> 100
+#ACT
+MOV	S$会员赠送 <额外赠送：/fcolor=243>{-/SCOLOR=147}
+
+#IF
+LARGE <$STR(S$充值数额)> 99
+small <$STR(S$充值数额)> 500
+#ACT
+MOV	S$会员赠送 <额外赠送：/fcolor=243>{100%充值/SCOLOR=147}
+
+#IF
+LARGE <$STR(S$充值数额)> 499
+#ACT
+MOV	S$会员赠送 <额外赠送：/fcolor=243>{200%充值/SCOLOR=147}
+
+#if
+#act
+MOV S$领取充值按钮 <Imgex:<$str(N$通区_素材)>:336:337:336:<$STR(N$通用坐标X5)>:<$STR(N$通用坐标Y5)>/@领取_平台货币>
+DelayGoto	100	@充值主界面
+
+[@InPutInteger2]
+#or
+Small N2 1
+LARGE N2 10000
+#ACT
+MESSAGEBOX 兑换失败：您输入的数值不正确！\单次兑换：请输入1-10000之间的数值！
+BREAK
+
+#IF
+small U24 <$str(N2)>
+#ACT
+MESSAGEBOX 你没有<$STR(N2)>个游戏币。
+BREAK
+
+#OR
+EQUAL U24 <$STR(N2)>
+LARGE U24 <$STR(N2)>
+#ACT
+DEC	U24	<$STR(N2)>
+;--------------------------------------------------调整货币A1
+Mul	N$货币比例A1	N2	10000
+GameGold	+	<$str(N$货币比例A1)>
+;--------------------------------------------------调整货币A2
+Mul	N$货币比例A2	N2	1
+GameDiamond	+	<$str(N$货币比例A2)>
+;--------------------------------------------------
+MESSAGEBOX	兑换成功!
+Goto	@充值主界面
+BREAK
+[@InPutInteger3]
+#or
+Small N3 1
+LARGE N3 10000
+#ACT
+MESSAGEBOX 兑换失败：您输入的数值不正确！\\单次兑换：请输入1-10000之间的数值！
+BREAK
+
+#IF
+small U24 <$str(N3)>
+#ACT
+MESSAGEBOX 你没有<$STR(N3)>个游戏币。
+BREAK
+
+#OR
+EQUAL U24 <$STR(N3)>
+LARGE U24 <$STR(N3)>
+#ACT
+DEC	U24	<$STR(N3)>
+;--------------------------------------------------调整货币B1
+Mul	N$货币比例B1	N3	10
+GamePoint	+	<$str(N$货币比例B1)>
+;--------------------------------------------------调整货币B2
+Mul	N$货币比例B2	N3	1
+GAMEGIRD	+	<$str(N$货币比例B2)>
+;--------------------------------------------------
+MESSAGEBOX	兑换成功!
+Goto	@充值主界面
+BREAK
+
+[@领取_平台货币]
+#IF
+CHECKCONTAINSTEXT <$SERVERNAME> 测试
+#ACT
+WDC @测试充值回调 操作=领取充值 模板=1 测试领取=1		密钥=<$Str(S$平台_名称)>
+#ELSEACT
+WDC @领取充值回调 操作=领取充值 模板=1		密钥=<$Str(S$平台_名称)>
+
+[@领取充值回调]
+#If
+Not	Equal	S$手机	
+#act
+Div	N$抵用券数量	<$str(S$实际充值)>	10
+
+#if
+Large	N$抵用券数量	0
+#act
+Mov	S$提示抵用券	额外获赠：“<$Str(N$抵用券数量)>张传奇商城抵用券!”
+#elseact
+Mov	S$提示抵用券	
+
+
+
+#IF
+NOT EQUAL S$CODE 200
+#ACT
+CLOSE
+MESSAGEBOX 领取失败：<$STR(S$MSG)>
+#ELSEACT
+CLOSE
+INC U24 <$STR(S$货币数量)>
+INC U25 <$str(S$实际充值)>
+INC U26 <$str(S$实际充值)>
+INC U19 <$str(S$实际充值)>
+GOTO @充值领取记录
+SENDMSG 1  ★[%s]:成功充值<$STR(S$货币数量)>个游戏币，<$Str(S$提示抵用券)>如果您也想获得，请赶快充值吧。
+MESSAGEBOX 您本次充值金额：<$str(S$实际充值)>元　赠送金额：<$str(S$赠送充值)>元\　\<$Str(S$提示抵用券)>\　\赠送金额不计算转区点
+MOV S$实际充值 0
+MOV S$货币数量 0
+MOV S$赠送充值 0
+WDC	@平台_手机奖励补发	操作=人物数据	密钥=<$Str(S$平台_名称)>
+Goto	@领取测试区手机奖励
+[@充值领取记录]
+#IF
+NOT ISEXISTS Envir\Questdiary\一万七网络通服功能\【领取充值记录】.txt
+#ACT
+CLEARNAMELIST ..\Questdiary\一万七网络通服功能\【领取充值记录】.txt
+
+#IF
+#ACT
+ADDTEXTLISTEX ..\Questdiary\一万七网络通服功能\【领取充值记录】.txt 【<$DATETIME>】【<$USERNAME>】【<$str(S$实际充值)>元】【<$STR(S$货币数量)>币】 0
+
+addtextlistex	..\..\..\..\充值统计\<$Day>号<$ServerName>充值统计.txt	【<$DATETIME>】【<$USERNAME>】【<$str(S$实际充值)>元】【<$STR(S$货币数量)>币】 0
+GOTO	@充值总计
+[@充值总计]
+#if
+CheckTextlist	..\..\..\..\充值统计\00充值总计.txt	<$Day>号<$ServerName>
+#act
+GetStringPos	..\..\..\..\充值统计\00充值总计.txt	<$Day>号<$ServerName>
+Inc n0 1
+GetListString	..\..\..\..\充值统计\00充值总计.txt	<$Str(N0)>	S$比奇充值区名	N$比奇充值钱数
+DelTextlist	..\..\..\..\充值统计\00充值总计.txt	<$Day>号<$ServerName>
+DelTextlist	..\..\..\..\充值统计\00充值总计.txt	<$Day>号<$ServerName>:<$str(N$比奇充值钱数)>
+Inc	N$比奇充值钱数	<$str(S$实际充值)>
+Addtextlist	..\..\..\..\充值统计\00充值总计.txt	<$Day>号<$ServerName>
+Addtextlist	..\..\..\..\充值统计\00充值总计.txt	<$Day>号<$ServerName>:<$str(N$比奇充值钱数)>
+
+#Elseact
+Addtextlist	..\..\..\..\充值统计\00充值总计.txt	<$Day>号<$ServerName>
+Addtextlist	..\..\..\..\充值统计\00充值总计.txt	<$Day>号<$ServerName>:<$str(S$实际充值)>
+
+#if
+CheckTextlist	..\..\..\..\充值统计\00充值总计.txt	<$MONTH>月<$Day>号总计
+#act
+GetStringPos	..\..\..\..\充值统计\00充值总计.txt	<$MONTH>月<$Day>号总计
+Inc n0 1
+GetListString	..\..\..\..\充值统计\00充值总计.txt	<$Str(N0)>	S$比奇充值日期	N$比奇充值日钱
+DelTextlist	..\..\..\..\充值统计\00充值总计.txt	<$MONTH>月<$Day>号总计
+DelTextlist	..\..\..\..\充值统计\00充值总计.txt	<$MONTH>月<$Day>号总计:<$str(N$比奇充值日钱)>
+Inc	N$比奇充值日钱	<$str(S$实际充值)>
+Addtextlist	..\..\..\..\充值统计\00充值总计.txt	<$MONTH>月<$Day>号总计
+Addtextlist	..\..\..\..\充值统计\00充值总计.txt	<$MONTH>月<$Day>号总计:<$str(N$比奇充值日钱)>
+#Elseact
+Addtextlist	..\..\..\..\充值统计\00充值总计.txt	<$MONTH>月<$Day>号总计
+Addtextlist	..\..\..\..\充值统计\00充值总计.txt	<$MONTH>月<$Day>号总计:<$str(S$实际充值)>
+
+[@测试充值回调]
+#IF
+NOT EQUAL S$CODE 200
+#ACT
+CLOSE
+MESSAGEBOX 领取失败：<$STR(S$MSG)>
+#ELSEACT
+CLOSE
+INC U24 <$STR(S$货币数量)>
+SENDMSG 1  ★[%s]:恭喜<$USERNAME>成功充值<$STR(S$货币数量)>游戏币，如果您也想获得，请赶快充值吧。
+MESSAGEBOX 您本次充值金额：<$str(S$实际充值)>元　赠送金额：<$str(S$赠送充值)>元\\测试区充值不计算游戏平台累计充值
+Addtextlist	..\..\..\..\充值统计\测试区记录.txt	<$USERNAME>:<$str(S$实际充值)>
+MOV S$实际充值 0
+MOV S$货币数量 0
+MOV S$赠送充值 0
+WDC	@平台_手机奖励补发	操作=人物数据	密钥=<$Str(S$平台_名称)>
+
+[@充值通道]
+#ACT
+CLOSE
+OPENWEBSITE <$STR(S$LP1)>
+[@充值通道2]
+#ACT
+CLOSE
+OpenUrl <$STR(S$LP1)>
+
+[@平台_手机奖励补发]
+#If
+Not	Equal	S$手机
+Small	<$Str(S$充值数额)>	100
+#ACT
+WDC	@平台_手机奖励A 	操作=读取个人变量 键=平台_手机奖励		密钥=<$Str(S$平台_名称)>
+
+[@平台_手机奖励A]
+#if
+Equal	S$平台_手机奖励
+#act
+WDC	@平台_手机奖励B 	操作=会员信息		密钥=<$Str(S$平台_名称)>
+
+[@平台_手机奖励B]
+#if
+Large	<$Str(S$充值数额)>	99
+#act
+WDC	@平台_手机奖励C	操作=设置个人变量 键=平台_手机奖励	 值=已发	密钥=<$Str(S$平台_名称)>
+
+[@平台_手机奖励C]
+#if
+Equal	S$Code	200
+#act
+Inc	U24	100
+Goto	@测试区记录手机奖励
+Messagebox	您已达成《包服卡用户》+绑定手机！获赠奖励：100个游戏币！
+
+[@领取测试区手机奖励]
+#if
+CheckContainstext	<$SerVername>	测试
+#act
+Break
+
+#if
+#act
+ExtractString	:	<$Str(T11)>	S$测试区微信ID	S$测试区机器码
+
+#if
+CheckTextlist	..\QuestDiary\一万七网络通服功能\测试区手机奖励.txt	<$Str(S$测试区微信ID)>
+#act
+DelTextlist	..\QuestDiary\一万七网络通服功能\测试区手机奖励.txt	<$Str(S$测试区微信ID)>
+Inc	U24	100	
+Sendmsg	6	您在测试区绑定手机获赠的“100游戏币”已补发！
+
+
+[@测试区记录手机奖励]
+#if
+CheckContainstext	<$SerVername>	测试
+#act
+ExtractString	:	<$Str(T11)>	S$测试区微信ID	S$测试区机器码
+Addtextlist	..\QuestDiary\一万七网络通服功能\测试区手机奖励.txt	<$Str(S$测试区微信ID)>

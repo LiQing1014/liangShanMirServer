@@ -1,0 +1,43 @@
+[@攻击倍数]
+{
+
+#IF
+CheckLevelEx > 0
+#ACT
+Mov N$攻击倍数 100
+
+
+
+#IF
+CHECKTITLE 帝国◇领袖
+#ACT
+INC N$攻击倍数 2
+SENDMSG 6 恭喜你的[第一神豪]属性触发,获得1.02倍攻加成!
+
+#IF
+checkitemw 至尊血玉
+checkitemw 至尊神笠
+checkitemw 至尊宝石
+#ACT
+INC N$攻击倍数 2
+SENDMSG 6 恭喜你的[三件套装属性触发]属性触发,获得1.02倍攻加成!
+
+
+
+#or
+CHECKTITLE 骰王①①①
+CHECKTITLE 骰王②②②
+CHECKTITLE 骰王③③③
+CHECKTITLE 骰王④④④
+CHECKTITLE 骰王⑤⑤⑤
+CHECKTITLE 骰王⑥⑥⑥
+#ACT
+INC N$攻击倍数 10
+SENDMSG 6  恭喜你获得[骰王]封号,获得1.1倍攻加成!
+
+#IF
+;large N$攻击倍数 100
+#ACT
+POWERRATE N$攻击倍数 72000
+
+}

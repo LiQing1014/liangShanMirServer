@@ -1,0 +1,148 @@
+()
+%100
+[@main]
+; 攻沙快捷传送：\
+; <提示：攻城期间、才支持快捷传送！且每次收费5000元宝。/SCOLOR=249>    \
+; 避免出现先进皇宫被<守点>导致<易守难攻>局面!\
+; ╔━━━━━━━━━━━━━━━━━━━━━━━━━━━╗\
+; ┊<沙大门(战点)/@沙1>┊<复活点(战点)/@沙2>┊<楼梯口(战点)/@沙3>┊<衣服口(战点)/@沙4>┊\
+; ┠┈┈┈┈┈┈┴┈┈┈┈┈┈┴┈┈┈┈┈┈┴┈┈┈┈┈┈┨\
+; ┊<垃圾口(战点)/@沙5>┊<沙影①(战点)/@进4>┊<沙影②(战点)/@进5>┊<沙影③(战点)/@进6>┊\
+; ╚──────┴──────┴──────┴──────╝\
+; <提示：/SCOLOR=249><沙影之道可直接传送进入皇宫作战，每次收费5000元宝！/SCOLOR=250>
+
+<Img|x=0.0|y=0.0|width=620|height=260|scale9t=10|scale9r=10|scale9l=10|scale9b=10|move=0|bg=1|img=public/bg_npc_04.jpg|reset=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=24.0|y=28.0|tipsx=10|tipsy=80|color=255|size=16|text=攻沙快捷传送：>
+<Text|a=0|x=24.0|y=48.0|tipsx=10|tipsy=80|color=249|size=16|text=提示：攻城期间、才支持快捷传送！且每次收费5000元宝。>
+<RText|a=0|x=24.0|y=68.0|tipsx=10|tipsy=80|color=255|size=16|text=避免出现先进皇宫被<守点/FCOLOR=249>导致<易守难攻/FCOLOR=249>局面!>
+<Text|a=0|x=24.0|y=88.0|tipsx=10|tipsy=80|color=255|size=16|text=╔━━━━━━━━━━━━━━━━━━━━━━━━━━━╗>
+<Text|a=0|x=24.0|y=108.0|tipsx=10|tipsy=80|color=255|size=16|text=┊>
+<Text|a=0|x=46.0|y=108.0|tipsx=10|tipsy=80|color=251|size=16|text=沙大门(战点)|link=@沙1>
+<Text|a=0|x=178.0|y=108.0|tipsx=10|tipsy=80|color=255|size=16|text=┊>
+<Text|a=0|x=200.0|y=108.0|tipsx=10|tipsy=80|color=251|size=16|text=复活点(战点)|link=@沙2>
+<Text|a=0|x=332.0|y=108.0|tipsx=10|tipsy=80|color=255|size=16|text=┊>
+<Text|a=0|x=354.0|y=108.0|tipsx=10|tipsy=80|color=251|size=16|text=楼梯口(战点)|link=@沙3>
+<Text|a=0|x=486.0|y=108.0|tipsx=10|tipsy=80|color=255|size=16|text=┊>
+<Text|a=0|x=508.0|y=108.0|tipsx=10|tipsy=80|color=251|size=16|text=衣服口(战点)|link=@沙4>
+<Text|a=0|x=640.0|y=108.0|tipsx=10|tipsy=80|color=255|size=16|text=┊>
+<Text|a=0|x=24.0|y=128.0|tipsx=10|tipsy=80|color=255|size=16|text=┠┈┈┈┈┈┈┴┈┈┈┈┈┈┴┈┈┈┈┈┈┴┈┈┈┈┈┈┨>
+<Text|a=0|x=24.0|y=148.0|tipsx=10|tipsy=80|color=255|size=16|text=┊>
+<Text|a=0|x=46.0|y=148.0|tipsx=10|tipsy=80|color=251|size=16|text=垃圾口(战点)|link=@沙5>
+<Text|a=0|x=178.0|y=148.0|tipsx=10|tipsy=80|color=255|size=16|text=┊>
+<Text|a=0|x=200.0|y=148.0|tipsx=10|tipsy=80|color=251|size=16|text=沙影①(战点)|link=@进4>
+<Text|a=0|x=332.0|y=148.0|tipsx=10|tipsy=80|color=255|size=16|text=┊>
+<Text|a=0|x=354.0|y=148.0|tipsx=10|tipsy=80|color=251|size=16|text=沙影②(战点)|link=@进5>
+<Text|a=0|x=486.0|y=148.0|tipsx=10|tipsy=80|color=255|size=16|text=┊>
+<Text|a=0|x=508.0|y=148.0|tipsx=10|tipsy=80|color=251|size=16|text=沙影③(战点)|link=@进6>
+<Text|a=0|x=640.0|y=148.0|tipsx=10|tipsy=80|color=255|size=16|text=┊>
+<Text|a=0|x=24.0|y=168.0|tipsx=10|tipsy=80|color=255|size=16|text=╚──────┴──────┴──────┴──────╝>
+<Text|a=0|x=24.0|y=188.0|tipsx=10|tipsy=80|color=249|size=16|text=提示：>
+<Text|a=0|x=90.0|y=188.0|tipsx=10|tipsy=80|color=250|size=16|text=沙影之道可直接传送进入皇宫作战，每次收费5000元宝！>
+
+[@进5]
+#if
+CHECKUNDERWAR 沙巴克
+CHECKGAMEGOLD > 4999
+#act
+GAMEGOLD - 5000
+mapmove h201 41 85
+GuildNoticeMsg 251 249 沙城传送く勇士『<$USERNAME>』进入沙巴克影之道！
+BREAK
+#ELSEACT
+MESSAGEBOX 当前没有攻城或您的元宝不足！
+BREAK
+[@进6]
+#if
+CHECKUNDERWAR 沙巴克
+CHECKGAMEGOLD > 4999
+#act
+GAMEGOLD - 5000
+mapmove h201 57 99
+GuildNoticeMsg 251 249 沙城传送く勇士『<$USERNAME>』进入沙巴克影之道！
+BREAK
+#ELSEACT
+MESSAGEBOX 当前没有攻城或您的元宝不足！
+BREAK
+
+[@进4]
+#if
+CHECKUNDERWAR 沙巴克
+CHECKGAMEGOLD > 4999
+#act
+GAMEGOLD - 5000
+mapmove h201 8 100
+GuildNoticeMsg 251 249 沙城传送く勇士『<$USERNAME>』进入沙巴克影之道！
+BREAK
+#ELSEACT
+MESSAGEBOX 当前没有攻城或您的元宝不足！
+BREAK
+
+[@沙1]
+#if
+CHECKUNDERWAR 沙巴克
+CHECKGAMEGOLD > 4999
+#act
+GAMEGOLD - 5000
+mapmove 3 676 333
+GuildNoticeMsg 251 249 沙城传送く勇士『<$USERNAME>』横刀立马，卷土重来，开始征战沙城！
+BREAK
+#ELSEACT
+MESSAGEBOX 当前没有攻城或您的元宝不足！
+BREAK
+
+[@沙2]
+#if
+CHECKUNDERWAR 沙巴克
+CHECKGAMEGOLD > 4999
+#act
+GAMEGOLD - 5000
+mapmove 3 647 291
+GuildNoticeMsg 251 249 沙城传送く勇士『<$USERNAME>』横刀立马，卷土重来，开始征战沙城！
+BREAK
+#ELSEACT
+MESSAGEBOX 当前没有攻城或您的元宝不足！
+BREAK
+
+[@沙3]
+#if
+CHECKUNDERWAR 沙巴克
+CHECKGAMEGOLD > 4999
+#act
+GAMEGOLD - 5000
+mapmove 3 635 281
+GuildNoticeMsg 251 249 沙城传送く勇士『<$USERNAME>』横刀立马，卷土重来，开始征战沙城！
+BREAK
+#ELSEACT
+MESSAGEBOX 当前没有攻城或您的元宝不足！
+BREAK
+
+[@沙4]
+#if
+CHECKUNDERWAR 沙巴克
+CHECKGAMEGOLD > 4999
+#act
+GAMEGOLD - 5000
+mapmove 3 658 274
+GuildNoticeMsg 251 249 沙城传送く勇士『<$USERNAME>』横刀立马，卷土重来，开始征战沙城！
+BREAK
+#ELSEACT
+MESSAGEBOX 当前没有攻城或您的元宝不足！
+BREAK
+
+[@沙5]
+#if
+CHECKUNDERWAR 沙巴克
+CHECKGAMEGOLD > 4999
+#act
+GAMEGOLD - 5000
+mapmove 3 577 293
+GuildNoticeMsg 251 249 沙城传送く勇士『<$USERNAME>』横刀立马，卷土重来，开始征战沙城！
+BREAK
+#ELSEACT
+MESSAGEBOX 当前没有攻城或您的元宝不足！
+BREAK
+
+
+

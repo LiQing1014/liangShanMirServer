@@ -1,0 +1,56 @@
+[@main]
+#IF
+#ACT
+close
+#say
+; <               ★    黄    ★    花    ★   观/AUTOCOLOR=253,249,251,252>    　   \
+; <山环楼阁，溪绕亭台。门前杂树密森森，宅外野花香艳艳。柳间栖白鹭/scolor=161>    　   \
+; <浑如烟里玉无瑕；桃内啭黄鹂，却似火中金有色。/scolor=161>    　 \ 
+; <-------------------------------------------------------------/AUTOCOLOR=255,249,250,254>    　   \
+; <><主要怪物:/FCOLOR=250><蜘蛛精、盘丝大仙、百眼魔君系列怪物/FCOLOR=161>\
+; <><地图爆率:/FCOLOR=251><武神、轩辕系列/FCOLOR=22>\
+; <><进入条件:/FCOLOR=249><74级/FCOLOR=254> + <29转/FCOLOR=253>\ \
+; \                  <进入黄花观地图|249#进入条件：^-^250#1.人物等级达到74级^-^250#2.人物转生29转/@进入黄花观>             \ 
+
+
+<Img|width=530|height=250|reset=1|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|scale9l=10>
+<Layout|x=501.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=530.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=18.0|y=18.0|tipsx=10|tipsy=80|color=253,249,251,252|size=16|text=★    黄    ★    花    ★   观>
+<Text|a=0|x=18.0|y=47.0|tipsx=10|tipsy=80|color=161|size=16|text=山环楼阁，溪绕亭台。门前杂树密森森，宅外野花香艳艳。柳间栖白鹭>
+<Text|a=0|x=18.0|y=71.0|tipsx=10|tipsy=80|color=161|size=16|text=浑如烟里玉无瑕；桃内啭黄鹂，却似火中金有色。>
+<Text|a=0|x=18.0|y=91.0|tipsx=10|tipsy=80|color=255,249,250,254|size=16|text=------------------------------------------------------------->
+<Text|a=0|x=18.0|y=111.0|tipsx=10|tipsy=80|color=250|size=16|text=主要怪物:>
+<Text|a=0|x=117.0|y=111.0|tipsx=10|tipsy=80|color=161|size=16|text=蜘蛛精、盘丝大仙、百眼魔君系列怪物>
+<Text|a=0|x=18.0|y=131.0|tipsx=10|tipsy=80|color=251|size=16|text=地图爆率:>
+<Text|a=0|x=117.0|y=131.0|tipsx=10|tipsy=80|color=22|size=16|text=武神、轩辕系列>
+<Text|a=0|x=18.0|y=151.0|tipsx=10|tipsy=80|color=249|size=16|text=进入条件:>
+<RText|a=0|x=117.0|y=151.0|tipsx=10|tipsy=80|color=254|size=16|text=74级 + <29转/FCOLOR=253>>
+<Text|a=0|x=18.0|y=211.0|tipsx=10|tipsy=80|color=251|size=16|text=进入花果山地图|link=@进入黄花观>
+
+[@进入黄花观]
+
+#IF
+CHECKRENEWLEVEL < 29
+#ACT
+messagebox 对不起，您当前转生等级没有29转，无法进入该地图
+break
+
+#IF
+CHECKLEVELEX < 74
+#ACT
+messagebox 对不起，您的等级不足74级，无法进入该地图！
+break
+
+
+
+
+#IF
+#ACT
+map 黄花观
+SENDMSG 0 玩家{『<$USERNAME>』|250:0}闯入{『<$MapTitle>』|254:0}去打顶级装备了！
+
+
+
+
+

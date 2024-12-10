@@ -1,0 +1,251 @@
+[@main]
+#if
+#act
+mov S90 <$GAMEGOLD>
+OPENMERCHANTBIGDLG 3 402 1 0 1 1 1
+SetStringBlank <$STR(S90)> 8 1
+#say
+<--------------------------------------------------------------/AUTOCOLOR=90>\
+<装备开光/AUTOCOLOR=254> <Hot~/AUTOCOLOR=249>        <闪闪发光？佛主保佑？那就赐与装备光芒吧！/AUTOCOLOR=254,251,168,191,250,70,245,249,253>\
+<--------------------------------------------------------------/AUTOCOLOR=90>\
+  　　　　　　  　　　　　　　　　  ╔----------╗\
+ 　 　　　　　　　　　　　    　　　┆ <项链部位/@项链发光> ┆\
+  　　　　　　╠----------╣\
+  　 　　　　　　　　　　　    　　　┆ <勋章部位/@勋章发光> ┆\ 
+  ╔----------╗╠----------╣\
+  　　 ┆ <左手手镯/@左手镯发光> ┆　　　    　　　┆ <右手手镯/@右手镯发光> ┆\
+  ╠----------╣╠----------╣\
+  　 　┆ <左手戒指/@左戒指发光> ┆　　　    　　　┆ <右手戒指/@右戒指发光> ┆\
+  ╠----------╬----------╦----------╬----------╣\
+  　　 ┆ <毒符部位/@毒符发光> ┆ <腰带部位/@腰带发光> ┆ <鞋子部位/@靴子发光> ┆ <宝石部位/@宝石发光> ┆\
+  ╚----------╩----------╩----------╩----------╝\
+<--------------------------------------------------------------/AUTOCOLOR=90>\
+<1、开光装备没有失败的可能,您需要支付200 元宝费用!/AUTOCOLOR=155>\
+<2、请不要重复赐福开光物品,取消  否者元宝照收不给予反还!/AUTOCOLOR=145>\
+<3、不要说我没提醒你哦^_^ /AUTOCOLOR=147>\
+<--------------------------------------------------------------/AUTOCOLOR=90>\
+<您当前帐户元宝数量为：/AUTOCOLOR=154><$STR(S90)><关闭对话×/@exit>\
+<Img:1408:10:130:-270>\
+
+
+[@宝石发光]
+#IF
+CHECKGAMEGOLD > 199
+CHECKUSEITEM 12
+#ACT
+GAMEGOLD - 200
+SETITEMEFFECT 12 1
+SENDMSG 6 提示：装备我已经给你赐福闪闪发光了，佛主会保佑你的！
+Goto @main
+#ELSEACT
+SendMsg 5 你当前部位尚未佩带该装备或不够支付费用！
+[@毒符发光]
+#IF
+CHECKUSEITEM 9
+CHECKGAMEGOLD > 199
+#ACT
+GAMEGOLD - 200
+SETITEMEFFECT 9 1
+SENDMSG 6 提示：装备我已经给你赐福闪闪发光了，佛主会保佑你的！
+Goto @main
+#ELSEACT
+SendMsg 5 你当前部位尚未佩带该装备或不够支付费用！
+[@右戒指发光]
+#IF
+CHECKUSEITEM 7
+CHECKGAMEGOLD > 199
+#ACT
+GAMEGOLD - 200
+SETITEMEFFECT 7 1
+SENDMSG 6 提示：装备我已经给你赐福闪闪发光了，佛主会保佑你的！
+Goto @main
+#ELSEACT
+SendMsg 5 你当前部位尚未佩带该装备或不够支付费用！
+[@左戒指发光]
+#IF
+CHECKUSEITEM 8
+CHECKGAMEGOLD > 199
+#ACT
+GAMEGOLD - 200
+SETITEMEFFECT 8 1
+SENDMSG 6 提示：装备我已经给你赐福闪闪发光了，佛主会保佑你的！
+Goto @main
+#ELSEACT
+SendMsg 5 你当前部位尚未佩带该装备或不够支付费用！
+[@靴子发光]
+#IF
+CHECKUSEITEM 11
+CHECKGAMEGOLD > 199
+#ACT
+GAMEGOLD - 200
+SETITEMEFFECT 11 1
+SENDMSG 6 提示：装备我已经给你赐福闪闪发光了，佛主会保佑你的！
+Goto @main
+#ELSEACT
+SendMsg 5 你当前部位尚未佩带该装备或不够支付费用！
+[@腰带发光]
+#IF
+CHECKUSEITEM 10
+CHECKGAMEGOLD > 199
+#ACT
+GAMEGOLD - 200
+SETITEMEFFECT 10 1
+SENDMSG 6 提示：装备我已经给你赐福闪闪发光了，佛主会保佑你的！
+Goto @main
+#ELSEACT
+SendMsg 5 你当前部位尚未佩带该装备或不够支付费用！
+[@右手镯发光]
+#IF
+CHECKUSEITEM 5
+CHECKGAMEGOLD > 199
+#ACT
+GAMEGOLD - 200
+SETITEMEFFECT 5 1
+SENDMSG 6 提示：装备我已经给你赐福闪闪发光了，佛主会保佑你的！
+Goto @main
+#ELSEACT
+SendMsg 5 你当前部位尚未佩带该装备或不够支付费用！
+[@左手镯发光]
+#IF
+CHECKUSEITEM 6
+CHECKGAMEGOLD > 199
+#ACT
+GAMEGOLD - 200
+SETITEMEFFECT 6 1
+SENDMSG 6 提示：装备我已经给你赐福闪闪发光了，佛主会保佑你的！
+Goto @main
+#ELSEACT
+SendMsg 5 你当前部位尚未佩带该装备或不够支付费用！
+[@勋章发光]
+#IF
+CHECKUSEITEM 2
+CHECKGAMEGOLD > 199
+#ACT
+GAMEGOLD - 200
+SETITEMEFFECT 2 1
+SENDMSG 6 提示：装备我已经给你赐福闪闪发光了，佛主会保佑你的！
+Goto @main
+#ELSEACT
+SendMsg 5 你当前部位尚未佩带该装备或不够支付费用！
+[@项链发光]
+#IF
+CHECKUSEITEM 3
+CHECKGAMEGOLD > 199
+#ACT
+GAMEGOLD - 200
+SETITEMEFFECT 3 1
+SENDMSG 6 提示：装备我已经给你赐福闪闪发光了，佛主会保佑你的！
+Goto @main
+#ELSEACT
+SendMsg 5 你当前部位尚未佩带该装备或不够支付费用！
+;----------------------【取消发光】-----------------------
+[@宝石取消]
+#IF
+CHECKGAMEGOLD > 199
+;CHECKUSEITEM 12
+#ACT
+GAMEGOLD - 200
+SETITEMEFFECT 12 0
+SENDMSG 6 提示：装备已经取消发光！请鉴赏！
+Goto @取消发光
+#ELSEACT
+SendMsg 5 取消发光难道就不需要支付费用吗？
+[@毒符取消]
+#IF
+;CHECKUSEITEM 9
+CHECKGAMEGOLD > 199
+#ACT
+GAMEGOLD - 200
+SETITEMEFFECT 9 0
+SENDMSG 6 提示：装备已经取消发光！请鉴赏！
+Goto @取消发光
+#ELSEACT
+SendMsg 5 取消发光难道就不需要支付费用吗？
+[@右戒指取消]
+#IF
+;CHECKUSEITEM 7
+CHECKGAMEGOLD > 199
+#ACT
+GAMEGOLD - 200
+SETITEMEFFECT 7 0
+SENDMSG 6 提示：装备已经取消发光！请鉴赏！
+Goto @取消发光
+#ELSEACT
+SendMsg 5 取消发光难道就不需要支付费用吗？
+[@左戒指取消]
+#IF
+;CHECKUSEITEM 8
+CHECKGAMEGOLD > 199
+#ACT
+GAMEGOLD - 200
+SETITEMEFFECT 8 0
+SENDMSG 6 提示：装备已经取消发光！请鉴赏！
+Goto @取消发光
+#ELSEACT
+SendMsg 5 取消发光难道就不需要支付费用吗？
+[@靴子取消]
+#IF
+;CHECKUSEITEM 11
+CHECKGAMEGOLD > 199
+#ACT
+GAMEGOLD - 200
+SETITEMEFFECT 11 0
+SENDMSG 6 提示：装备已经取消发光！请鉴赏！
+Goto @取消发光
+#ELSEACT
+SendMsg 5 取消发光难道就不需要支付费用吗？
+[@腰带取消]
+#IF
+;CHECKUSEITEM 10
+CHECKGAMEGOLD > 199
+#ACT
+GAMEGOLD - 200
+SETITEMEFFECT 10 0
+SENDMSG 6 提示：装备已经取消发光！请鉴赏！
+Goto @取消发光
+#ELSEACT
+SendMsg 5 取消发光难道就不需要支付费用吗？
+[@右手镯取消]
+#IF
+;CHECKUSEITEM 5
+CHECKGAMEGOLD > 199
+#ACT
+GAMEGOLD - 200
+SETITEMEFFECT 5 0
+SENDMSG 6 提示：装备已经取消发光！请鉴赏！
+Goto @取消发光
+#ELSEACT
+SendMsg 5 取消发光难道就不需要支付费用吗？
+[@左手镯取消]
+#IF
+;CHECKUSEITEM 6
+CHECKGAMEGOLD > 199
+#ACT
+GAMEGOLD - 200
+SETITEMEFFECT 6 0
+SENDMSG 6 提示：装备已经取消发光！请鉴赏！
+Goto @取消发光
+#ELSEACT
+SendMsg 5 取消发光难道就不需要支付费用吗？
+[@勋章取消]
+#IF
+;CHECKUSEITEM 2
+CHECKGAMEGOLD > 199
+#ACT
+GAMEGOLD - 200
+SETITEMEFFECT 2 0
+SENDMSG 6 提示：装备已经取消发光！请鉴赏！
+Goto @取消发光
+#ELSEACT
+SendMsg 5 取消发光难道就不需要支付费用吗？
+[@项链取消]
+#IF
+;CHECKUSEITEM 3
+CHECKGAMEGOLD > 199
+#ACT
+GAMEGOLD - 200
+SETITEMEFFECT 3 0
+SENDMSG 6 提示：装备已经取消发光！请鉴赏！
+Goto @取消发光
+#ELSEACT
+SendMsg 5 取消发光难道就不需要支付费用吗？

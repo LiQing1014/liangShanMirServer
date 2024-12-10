@@ -1,0 +1,70 @@
+[@main]
+勇士，你能一路厮杀闯来这里实在难能可贵~想必经历千辛万苦！\
+驻守玛雅太久我已化为一尊金像，身上所藏宝物也因此尘封于世\
+如果你能给我一部玛雅古书！便能驱除我身上封印，唤醒我真身\
+勇士若能成功挑战我，我身上宝物便可任你来拿~\
+不过这可是需要一定运气的哦！\ \
+
+提示：相应职业只可解封相应真身，如法师只可以解封玛雅魔者\ \
+
+<使用1张古书解封玛雅魔者/@wlzs>          <算了，我是过来打酱油的！/@exit>\
+
+[@wlzs]
+#IF
+checkitem 橙色玛雅古书 1
+#ACT
+TAKE  橙色玛雅古书 1
+Gmexecute 清除怪物 SZMS 玛雅魔者 0
+PARAM1 SZMS
+PARAM2 22
+PARAM3 38
+MONGEN 玛雅魔者 1 1
+SENDMSG 0 [玛雅圣城]勇士“%s”成功解封[玛雅魔者]请成功挑战它！ 251 0
+BREAK
+#IF
+checkitem 红色玛雅古书 1
+#ACT
+TAKE  红色玛雅古书 1
+Gmexecute 清除怪物 SZMS 玛雅魔者 0
+PARAM1 SZMS
+PARAM2 22
+PARAM3 38
+MONGEN 玛雅魔者 1 1
+SENDMSG 0 [玛雅圣城]勇士“%s”成功解封[玛雅魔者]请成功挑战它！ 251 0
+BREAK
+#IF
+checkitem 黄色玛雅古书 1
+#ACT
+TAKE  黄色玛雅古书 1
+Gmexecute 清除怪物 SZMS 玛雅魔者 0
+PARAM1 SZMS
+PARAM2 22
+PARAM3 38
+MONGEN 玛雅魔者 1 1
+SENDMSG 0 [玛雅圣城]勇士“%s”成功解封[玛雅魔者]请成功挑战它！ 251 0
+BREAK
+#IF
+checkitem 蓝色玛雅古书 1
+#ACT
+TAKE  蓝色玛雅古书 1
+Gmexecute 清除怪物 SZMS 玛雅魔者 0
+PARAM1 SZMS
+PARAM2 22
+PARAM3 38
+MONGEN 玛雅魔者 1 1
+SENDMSG 0 [玛雅圣城]勇士“%s”成功解封[玛雅魔者]请成功挑战它！ 251 0
+BREAK
+#IF
+checkitem 绿色玛雅古书 1
+#ACT
+TAKE  绿色玛雅古书 1
+Gmexecute 清除怪物 SZMS 玛雅魔者 0
+PARAM1 SZMS
+PARAM2 22
+PARAM3 38
+MONGEN 玛雅魔者 1 1
+SENDMSG 0 [玛雅圣城]勇士“%s”成功解封[玛雅魔者]请成功挑战它！ 251 0
+BREAK
+BREAK
+#ELSEACT
+MESSAGEBOX 小伙子，你没有凑齐五卷古书，其中任何一部，无法解封！\五卷古书分别为：\橙色玛雅古书\红色玛雅古书\黄色玛雅古书\蓝色玛雅古书\绿色玛雅古书\集齐其中任何一部即可解封玛雅魔者真身！

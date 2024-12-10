@@ -1,0 +1,105 @@
+[@main]
+#IF
+#Act
+#say
+<><>
+　<沙城使者/SCOLOR=154> <New/SCOLOR=249>\
+　　　<荣耀，辉煌，沙城是所有人向往的辉煌之巅，兄弟们冲啊！/SCOLOR=87>\
+　<创建行会：/SCOLOR=249><请务必在19:55之前创建行会,否则会导致攻沙无效!!/SCOLOR=253>\
+　<模式：/SCOLOR=149><新区第2天合区拿沙!/SCOLOR=147>\
+　<时间：/SCOLOR=149><城主在22点30分前领取奖励/SCOLOR=147>\
+　<领奖：/SCOLOR=149><首次拿沙奖励1888大米./SCOLOR=147>\
+　<领奖：/SCOLOR=149><老区拿沙奖励888大米./SCOLOR=147>\
+
+<>  <[沙城所属]:/SCOLOR=249> <$OWNERGUILD>        <[沙城城主]:/SCOLOR=249> <$LORD>\
+　<奖励领取：/SCOLOR=149><领取攻沙奖励·√/@领取攻沙奖励>    \
+
+
+
+
+[@领取攻沙奖励]
+#IF
+Checkcastlewar 0
+#Act
+MessageBox [领奖失败]:\　\　　　　　　请在攻城结束后再来领取攻沙奖励！
+Close
+BREAK
+
+
+#IF
+ISCASTLEMASTER
+#ElseAct
+MessageBox [领奖失败]:\　\　　　　　　你不是“沙巴克城主”无法领取攻沙奖励！
+Close
+BREAK
+
+#IF
+small G269 1
+#ACT
+MESSAGEBOX 还未开启攻沙！！！
+break
+
+
+#IF
+EQUAL G269 1
+#ACT
+goto @新区奖励
+
+
+#IF
+large G269 1
+#ACT
+goto @老区奖励
+
+
+
+
+[@新区奖励]
+
+#IF
+HOUR 22
+MIN 01 30
+ISCASTLEMASTER
+EQUAL G269 1
+EQUAL G270 1
+#ACT
+MOV G270 0
+GAMEPOINT + 1888
+SENDMSG 5 提示：领取成功，获得大米1888颗！
+sendmsg 1 恭喜新任沙城主[%s],成功领取攻沙奖励大米1888颗！！！
+sendmsg 1 恭喜新任沙城主[%s],成功领取攻沙奖励大米1888颗！！！
+sendmsg 1 恭喜新任沙城主[%s],成功领取攻沙奖励大米1888颗！！！
+sendmsg 1 恭喜新任沙城主[%s],成功领取攻沙奖励大米1888颗！！！
+sendmsg 1 恭喜新任沙城主[%s],成功领取攻沙奖励大米1888颗！！！
+MESSAGEBOX 恭喜你成功领取攻城奖励！！！！
+#ELSEACT
+MESSAGEBOX 奖励领取时间为每晚的22点01分-22点30分或者你不是沙城主，无权领奖！
+break
+
+
+[@老区奖励]
+#IF
+hour 22 
+min 01 30
+ISCASTLEMASTER
+large G269 1
+EQUAL G270 1
+#ACT
+MOV G270 0
+GAMEPOINT + 888
+SENDMSG 5 提示：领取成功，获得大米888颗！
+sendmsg 1 恭喜新任沙城主[%s],成功领取攻沙奖励大米888颗！！！
+sendmsg 1 恭喜新任沙城主[%s],成功领取攻沙奖励大米888颗！！！
+sendmsg 1 恭喜新任沙城主[%s],成功领取攻沙奖励大米888颗！！！
+sendmsg 1 恭喜新任沙城主[%s],成功领取攻沙奖励大米888颗！！！
+sendmsg 1 恭喜新任沙城主[%s],成功领取攻沙奖励大米888颗！！！
+MESSAGEBOX 恭喜你成功领取攻城奖励！！！！
+#ELSEACT
+MESSAGEBOX 奖励领取时间为每晚的22点01分-22点30分或者你不是沙城主，无权领奖！
+break
+
+
+
+
+
+

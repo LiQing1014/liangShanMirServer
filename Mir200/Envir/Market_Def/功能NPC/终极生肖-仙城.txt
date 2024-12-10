@@ -1,0 +1,353 @@
+[@main]
+#IF
+#ACT
+#SAY
+
+<【远古遗物】/FCOLOR=251>  <Hot~/FCOLOR=249>   \   \   
+
+<遗物获取：/FCOLOR=250><生肖遗物只能在各大地图通过击杀BOSS获取！/FCOLOR=19>\ \
+<遗物进阶：/FCOLOR=250><普通的生肖遗物可/FCOLOR=19><免费><进阶成圣级和神级生肖/FCOLOR=19>\ \
+<使用方法：/FCOLOR=250><免费开启人物界面的奇门阵，可放置生肖遗物/FCOLOR=19>\ \ 
+
+<>    <点击开启奇门阵/@开启>            <进阶圣级生肖/@进阶1>       <进阶神级生肖/@进阶2>\
+
+
+[@开启]
+#IF
+#ACT
+SetSndaItemBox 1 1 8888 1 1 1 1 1 6666 1
+SENDMSG 7 恭喜您，奇门阵开启成功！请打开人物界面查看！
+
+
+[@进阶1]
+#IF
+#ACT
+#SAY
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>    <圣级生肖遗物，进阶条件：/FCOLOR=70><需要3个相同的生肖免费进阶./FCOLOR=250>\ 
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>     <圣·子鼠/@圣1>      <圣·丑牛/@圣2>      <圣·寅虎/@圣3>      <圣·卯兔/@圣4>\ 
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>     <圣·辰龙/@圣5>      <圣·巳蛇/@圣6>      <圣·午马/@圣7>      <圣·未羊/@圣8>\  
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>     <圣·申猴/@圣9>      <圣·酉鸡/@圣10>      <圣·戌狗/@圣11>      <圣·亥猪/@圣12>\
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>                                                         <返回/@main>  \
+
+
+[@进阶2]
+#IF
+#ACT
+#SAY
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<神级生肖进阶：/FCOLOR=70><第一排需要3个圣级，二三排需要5个圣级生肖免费进阶./FCOLOR=250>\ 
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>     <神·子鼠/@神1>      <神·丑牛/@神2>      <神·寅虎/@神3>      <神·卯兔/@神4>\ 
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>     <神·辰龙/@神5>      <神·巳蛇/@神6>      <神·午马/@神7>      <神·未羊/@神8>\  
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>     <神·申猴/@神9>      <神·酉鸡/@神10>      <神·戌狗/@神11>      <神·亥猪/@神12>\ 
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>                                                         <返回/@main>  \
+
+
+[@圣1]
+#if
+checkitem 子鼠 3
+#act
+take 子鼠 3
+give 圣·子鼠 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出圣级生肖：【圣·子鼠】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+[@圣2]
+#if
+checkitem 丑牛 3
+#act
+take 丑牛 3
+give 圣·丑牛 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出圣级生肖：【圣·丑牛】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+[@圣3]
+#if
+checkitem 寅虎 3
+#act
+take 寅虎 3
+give 圣·寅虎 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出圣级生肖：【圣·寅虎】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+[@圣4]
+#if
+checkitem 卯兔 3
+#act
+take 卯兔 3
+give 圣·卯兔 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出圣级生肖：【圣·卯兔】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+[@圣5]
+#if
+checkitem 辰龙 3
+#act
+take 辰龙 3
+give 圣·辰龙 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出圣级生肖：【圣·辰龙】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+[@圣6]
+#if
+checkitem 巳蛇 3
+#act
+take 巳蛇 3
+give 圣·巳蛇 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出圣级生肖：【圣·巳蛇】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+[@圣7]
+#if
+checkitem 午马 3
+#act
+take 午马 3
+give 圣·午马 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出圣级生肖：【圣·午马】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+[@圣8]
+#if
+checkitem 未羊 3
+#act
+take 未羊 3
+give 圣·未羊 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出圣级生肖：【圣·未羊】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+[@圣9]
+#if
+checkitem 申猴 3
+#act
+take 申猴 3
+give 圣·申猴 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出圣级生肖：【圣·申猴】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+[@圣10]
+#if
+checkitem 酉鸡 3
+#act
+take 酉鸡 3
+give 圣·酉鸡 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出圣级生肖：【圣·酉鸡】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+[@圣11]
+#if
+checkitem 戌狗 3
+#act
+take 戌狗 3
+give 圣·戌狗 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出圣级生肖：【圣·戌狗】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+[@圣12]
+#if
+checkitem 亥猪 3
+#act
+take 亥猪 3
+give 圣·亥猪 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出圣级生肖：【圣·亥猪】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+
+
+
+
+
+
+
+[@神1]
+#if
+checkitem 圣·子鼠 3
+#act
+take 圣·子鼠 3
+give 神·子鼠 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出神级生肖：【神·子鼠】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+[@神2]
+#if
+checkitem 圣·丑牛 3
+#act
+take 圣·丑牛 3
+give 神·丑牛 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出神级生肖：【神·丑牛】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+[@神3]
+#if
+checkitem 圣·寅虎 3
+#act
+take 圣·寅虎 3
+give 神·寅虎 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出神级生肖：【神·寅虎】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+[@神4]
+#if
+checkitem 圣·卯兔 3
+#act
+take 圣·卯兔 3
+give 神·卯兔 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出神级生肖：【神·卯兔】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+[@神5]
+#if
+checkitem 圣·辰龙 5
+#act
+take 圣·辰龙 5
+give 神·辰龙 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出神级生肖：【神·辰龙】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+[@神6]
+#if
+checkitem 圣·巳蛇 5
+#act
+take 圣·巳蛇 5
+give 神·巳蛇 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出神级生肖：【神·巳蛇】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+[@神7]
+#if
+checkitem 圣·午马 5
+#act
+take 圣·午马 5
+give 神·午马 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出神级生肖：【神·午马】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+[@神8]
+#if
+checkitem 圣·未羊 5
+#act
+take 圣·未羊 5
+give 神·未羊 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出神级生肖：【神·未羊】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+[@神9]
+#if
+checkitem 圣·申猴 5
+#act
+take 圣·申猴 5
+give 神·申猴 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出神级生肖：【神·申猴】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+[@神10]
+#if
+checkitem 圣·酉鸡 5
+#act
+take 圣·酉鸡 5
+give 神·酉鸡 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出神级生肖：【神·酉鸡】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+[@神11]
+#if
+checkitem 圣·戌狗 5
+#act
+take 圣·戌狗 5
+give 神·戌狗 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出神级生肖：【神·戌狗】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+[@神12]
+#if
+checkitem 圣·亥猪 5
+#act
+take 圣·亥猪 5
+give 神·亥猪 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出神级生肖：【神·亥猪】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+
+
+
+
+

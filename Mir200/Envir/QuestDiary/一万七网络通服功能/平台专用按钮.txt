@@ -1,0 +1,47 @@
+[@平台_专用按钮]
+{
+#IF
+#ACT
+MOV N$按钮排列X <$SCREENWIDTH>
+MOV N$按钮排列Y <$SCREENHEIGHT>
+
+MOV N$挂机按钮X 0
+MOV N$挂捡按钮Y <$SCREENHEIGHT>
+MOV N$捡物按钮X <$SCREENWIDTH>
+
+
+Inc N$挂机按钮X 180
+Dec N$挂捡按钮Y	210
+
+DEC N$捡物按钮X 293
+
+Dec N$按钮排列Y	605
+Dec N$按钮排列X 30
+
+ADDBUTTON <$str(N$通区_素材)> 10 10 11 10 <$str(N$按钮排列X)>	<$str(N$按钮排列Y)> 0  -1 \254/【包服卡介绍】\251/平台旗下任意版本累计充值　　\251/达到100元即可成为包服卡会员　　\251/-\254/【包服卡待遇】\251/每天都可以领取50元真实充值！\-\254/【超级玩家】\253/领取包服卡金额提升至100元充值！
+Inc N$按钮排列Y	62
+ADDBUTTON <$str(N$通区_素材)> 11 12 13 12 <$str(N$按钮排列X)>	<$str(N$按钮排列Y)> 0  -1 \251/【自助转区】
+Inc N$按钮排列Y	62
+ADDBUTTON <$str(N$通区_素材)> 12 14 15 14 <$str(N$按钮排列X)>	<$str(N$按钮排列Y)> 0  -1 \251/【每日签到】
+Inc N$按钮排列Y	62
+ADDBUTTON <$str(N$通区_素材)> 13 16 17 16 <$str(N$按钮排列X)>	<$str(N$按钮排列Y)> 0  -1 \251/【在线客服】
+
+#IF
+Equal	S$自动挂机
+#ACT
+ADDBUTTON <$str(N$通区_素材)> 14 24 25 24 <$str(N$挂机按钮X)>	<$str(N$挂捡按钮Y)> 0 -1 \249/自动挂机：关闭\250/点击开启\-\251/请按键盘：~键(可进行详细挂机设置)
+#Elseact
+ADDBUTTON <$str(N$通区_素材)> 14 26 27 26 <$str(N$挂机按钮X)>	<$str(N$挂捡按钮Y)> 0 -1 \249/自动挂机：开启\250/点击关闭\-\251/请按键盘：~键(可进行详细挂机设置)
+
+
+#IF
+CheckContainstext	<$Str(T12)>	捡物开
+#ACT
+ADDBUTTON <$str(N$通区_素材)> 15 22 23 22 <$str(N$捡物按钮X)>	<$str(N$挂捡按钮Y)> 0 -1 \251/自动拾取：开启\250/点击关闭\-\254/领微信礼包后激活此功能
+StartElf 1
+STARTPICKUP
+#elseact
+ADDBUTTON <$str(N$通区_素材)> 15 20 21 20 <$str(N$捡物按钮X)>	<$str(N$挂捡按钮Y)> 0 -1 \249/自动拾取：关闭\250/点击开启\-\254/领微信礼包后激活此功能
+StartElf 0
+STARTPICKUP
+}

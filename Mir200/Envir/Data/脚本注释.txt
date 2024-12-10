@@ -1,0 +1,19 @@
+StartElf    //未知插件命令 
+STARTPICKUP    //未知插件命令 
+SETSHOWITEMMSG    //无效命令 
+close    //替换命令close 
+CHECKTITLE    //未知插件命令 
+CHECKMYSHOP    //无效命令 
+CHECKSHOPNAME    //无效命令 
+CREATEMYSHOP    //替换为拍卖行系统 
+SETSTORAGEOPEN    //未知插件命令 
+CloseClientBuff    //建议替换为BUFF系统 
+DelMonHp    //未知插件命令 
+OpenUrl    //替换命令OpenWebSite 
+ExtractString    //替换命令GETVALIDSTRSUPER 
+Screffects    替换命令Deleffects 
+SETDUMMYCONFIGFILENAME    //无效命令 
+LOADDUMMYCONFIG    //无效命令 
+CHECKMAPDUMMYPLAYCOUNT    //替换命令CHECKMAPDUMMYPLAYCOUNT 
+CHECKDUMMYCOUNT    //替换命令CHECKDUMMYPLAYCOUNT 
+

@@ -1,0 +1,96 @@
+[@37W客服礼包]
+{
+
+#IF	
+#ACT
+OPENMERCHANTBIGDLG <$Str(N$补丁编号)> 33 1 4 4 -88 0 0 0
+#SAY
+; <>\
+; <>\
+; <>\<Imgex:<$Str(N$补丁编号)>:2:1:2:460:-46/@Exit>\
+; <>\
+; <>                                       <【微信客服专属礼包】/Autocolor=250,254,253,251,249>\
+; <>\
+; <>                     <------------------------------------------------------------/fcolor=13>\
+; <>                     <[37W游戏平台]/SCOLOR=146>      <hot~>  <正版游戏-旭玩五星授权/SCOLOR=250>  <hot~>\
+; <>                     <------------------------------------------------------------/fcolor=13>\
+; <>                     <微信客服：/SCOLOR=243><→ 请打开微信扫一扫/AUTOCOLOR=254,251,168,191,250,70,245,249,253>  <[点此查看微信客服二维码]/@查看客服>   \
+; <>                     <------------------------------------------------------------/fcolor=13>\
+; <>                     <专属福利：/SCOLOR=243><专属功能【自动拾取】/SCOLOR=249>\
+; <>                     <------------------------------------------------------------/fcolor=13>\
+; <>                     <专属福利：/SCOLOR=243><点击查看获得物品|250#福星高照符[V1]*1^-^250#洗髓境*1^-^250#包工盾牌*1^-^250#魔血石Lv.4*1^-^250#摸鱼达人Lv0-称号/SCOLOR=250>  \
+; <>                     <------------------------------------------------------------/fcolor=13>\
+; <>                     <领取选项：/SCOLOR=243> <【立即免费领取专属礼包】/@@InPutString24(请输入客服发送的礼包码)> \
+
+<Img|width=620|height=300|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|reset=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32.0|y=22.0|tipsx=10|tipsy=80|color=13|size=18|text=------------------------------------------------------------>
+<Text|a=0|x=32.0|y=42.0|tipsx=10|tipsy=80|color=146|size=18|text=[37W游戏平台]>
+<Text|a=0|x=175.0|y=42.0|tipsx=10|tipsy=80|color=250|size=18|text=正版游戏-旭玩五星授权>
+<Text|a=0|x=32.0|y=61.0|tipsx=10|tipsy=80|color=13|size=18|text=------------------------------------------------------------>
+<Text|a=0|x=32.0|y=81.0|tipsx=10|tipsy=80|color=243|size=18|text=专属福利：>
+<Text|a=0|x=142.0|y=81.0|tipsx=10|tipsy=80|color=249|size=18|text=专属功能【自动拾取】>
+<Text|a=0|x=32.0|y=101.0|tipsx=10|tipsy=80|color=13|size=18|text=------------------------------------------------------------>
+<Text|a=0|x=32.0|y=121.0|tipsx=10|tipsy=80|color=243|size=18|text=专属福利：>
+<Text|a=0|x=142.0|y=121.0|tips={福星高照符[V1]*1/FCOLOR=250}^{洗髓境*1/FCOLOR=250}^{包工盾牌*1/FCOLOR=250}^{魔血石Lv.4*1/FCOLOR=250}^{摸鱼达人Lv0-称号/FCOLOR=250}|tipsx=10|tipsy=80|color=250|size=18|text=点击查看获得物品>
+<Text|a=0|x=32.0|y=141.0|tipsx=10|tipsy=80|color=13|size=18|text=------------------------------------------------------------>
+<Text|a=0|x=32.0|y=161.0|tipsx=10|tipsy=80|color=243|size=18|text=领取选项：>
+<Text|a=0|x=142.0|y=161.0|tipsx=10|tipsy=80|color=251|size=18|text=【立即免费领取专属礼包】|link=@领取礼包>
+; <Text|x=182.0|y=209.0|color=255|size=18|text=领取码：37W>
+
+
+[@查看客服]
+#IF
+#ACT
+OpenWebSite http://www.37w.com/kf/kf.html
+
+[@领取礼包]
+#act
+; sendmsg 0 <$STR(S24)>111
+#IF
+; EQUAL S24 37W
+CHECK [170] 0
+CHECKBAGSIZE 10
+#ACT
+SET [170] 1
+SET [171] 1
+SET [307] 1
+SET [27] 1
+;---------给物品段！
+
+#CALL [\游戏登陆\属性加成.txt] @属性设置
+#CALL [\游戏登陆\怪物爆率.txt] @怪物爆率
+GiveStateItem	福星高照符[V1]  1	1	0	0	1	1	1	1
+GiveStateItem	洗髓境  1	1	0	0	1	1	1	1
+GiveStateItem	包工盾牌  1	1	0	0	1	1	1	1
+GiveStateItem	魔血石Lv.4  1	1	0	0	1	1	1	1
+CONFERTITLE 摸鱼达人Lv0
+AutoTakeOnItem 福星高照符[V1] 9
+#CALL [\极品拾取鉴定\境界成长属性.txt] @境界成长属性
+AutoTakeOnItem 洗髓境 14
+
+#CALL [\极品拾取鉴定\福符成长属性.txt] @福符成长属性
+AutoTakeOnItem 包工盾牌 16
+#CALL [\极品拾取鉴定\盾牌成长属性.txt] @盾牌成长属性
+
+
+;---------给物品段！
+
+
+SendCenterMsg 254 0 福利：玩家【<$USERNAME>】领取了微信客服专属礼包,开局领先一步! 1 3
+GuildNoticeMsg 250 233 福利：玩家【<$USERNAME>】领取了微信客服专属礼包,开局领先一步!
+Close
+#CALL   [37W通服功能\通服按钮.TXT] @通服按钮
+break
+#ELSEACT
+MESSAGEBOX [系统提示]：\　\1.你已经领取过此福利，不能重复领取！\　\2.没有输入正确的兑换码！\　\3.背包空间不够，请预留10个空格！
+
+
+
+
+
+
+
+
+}

@@ -1,0 +1,165 @@
+[@main]
+#if
+#act
+OPENMERCHANTBIGDLG 1 8 0 0 0 0 0
+#say
+<【大米回收】/FCOLOR=254> <亲爱的玩家，您好！请问有什么可以帮到您的吗！/SCOLOR=70>\
+<ImgEx:1:5:5:6:394:-32/@EXIT> \ 
+<><提示:/SCOLOR=70><考虑后期材料泛滥，以下物品永久回收元宝，请放心不会过时！！/SCOLOR=147>\ \
+<秘籍残页*10个/SCOLOR=249> → <1000元宝/SCOLOR=253> <回收/@回收1>  <秘籍残页*100个/SCOLOR=249> → <10000元宝/SCOLOR=253> <回收/@回收11> \ 
+<一星宝石*10个/SCOLOR=249> → <2000元宝/SCOLOR=253> <回收/@回收2>  <一星宝石*100个/SCOLOR=249> → <20000元宝/SCOLOR=253> <回收/@回收22> \
+<神秘斗笠*10个/SCOLOR=249> → <2000元宝/SCOLOR=253> <回收/@回收3>  <神秘斗笠*100个/SCOLOR=249> → <20000元宝/SCOLOR=253> <回收/@回收33>\
+<经验宝箱*10个/SCOLOR=249> → <2000元宝/SCOLOR=253> <回收/@回收4>  <经验宝箱*100个/SCOLOR=249> → <20000元宝/SCOLOR=253> <回收/@回收44> \
+<护盾精华*10个/SCOLOR=249> → <2000元宝/SCOLOR=253> <回收/@回收5>  <护盾精华*100个/SCOLOR=249> → <20000元宝/SCOLOR=253> <回收/@回收55> \
+<生肖遗物*10个/SCOLOR=249> → <3000元宝/SCOLOR=253> <回收/@回收6>  <生肖遗物*100个/SCOLOR=249> → <30000元宝/SCOLOR=253> <回收/@回收66> \ \
+
+<><温馨提示：/SCOLOR=250><前期不建议回收，回收价格低，每件材料都非常珍贵> \
+<><回收只是为了后期材料泛滥考虑！/SCOLOR=180>\ 
+<><温馨提示：/SCOLOR=253><请您把有用的装备放入仓库再回收，避免点错!>\ \
+
+
+
+
+[@回收1]
+#IF
+checkitem 秘籍残页 10
+#ACT
+take 秘籍残页 10
+GAMEGOLD + 1000
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收秘籍残页*1，元宝增加：+1000
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@回收11]
+#IF
+checkitem 秘籍残页 100
+#ACT
+take 秘籍残页 100
+GAMEGOLD + 10000
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收秘籍残页*100，元宝增加：+10000
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@回收2]
+#IF
+checkitem 一星宝石 10
+#ACT
+take 一星宝石 10
+GAMEGOLD + 2000
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收一星宝石*10，元宝增加：+2000
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@回收22]
+#IF
+checkitem 一星宝石 100
+#ACT
+take 一星宝石 100
+GAMEGOLD + 20000
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收一星宝石*100，元宝增加：+20000
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@回收3]
+#IF
+checkitem 神秘斗笠 10
+#ACT
+take 神秘斗笠 10
+GAMEGOLD + 2000
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收神秘斗笠*10，元宝增加：+2000
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@回收33]
+#IF
+checkitem 神秘斗笠 100
+#ACT
+take 神秘斗笠 100
+GAMEGOLD + 20000
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收神秘斗笠*100，元宝增加：+20000
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@回收4]
+#IF
+checkitem 经验宝箱 10
+#ACT
+take 经验宝箱 10
+GAMEGOLD + 2000
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收经验宝箱*10，元宝增加：+2000
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@回收44]
+#IF
+checkitem 经验宝箱 100
+#ACT
+take 经验宝箱 100
+GAMEGOLD + 20000
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收经验宝箱*100，元宝增加：+20000
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@回收5]
+#IF
+checkitem 护盾精华 10
+#ACT
+take 护盾精华 10
+GAMEGOLD + 2000
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收护盾精华*10，元宝增加：+2000
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@回收55]
+#IF
+checkitem 护盾精华 100
+#ACT
+take 护盾精华 100
+GAMEGOLD + 20000
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收护盾精华*100，元宝增加：+20000
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@回收6]
+#IF
+checkitem 生肖遗物 10
+#ACT
+take 生肖遗物 10
+GAMEGOLD + 3000
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收生肖遗物*10，元宝增加：+3000
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@回收66]
+#IF
+checkitem 生肖遗物 100
+#ACT
+take 生肖遗物 100
+GAMEGOLD + 30000
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收生肖遗物*100，元宝增加：+30000
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK

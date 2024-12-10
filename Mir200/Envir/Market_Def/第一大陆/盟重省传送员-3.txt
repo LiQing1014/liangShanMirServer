@@ -1,0 +1,126 @@
+[@main]
+#Act
+MOV s2 <$YEAR>-<$MONTH>-<$DAY>　<$HOUR>:<$MINUTE>:<$SECOND>分
+SetStringBlank <$STR(s1)> 15 1
+SetStringBlank <$STR(s2)> 22 1
+#say
+<当前服务器时间:/SCOLOR=254>{<$STR(s2)>/SCOLOR=150}　<您进入游戏时间:/SCOLOR=254>{<$LOGINLONG>/SCOLOR=150}\  \
+　<城镇传送:/AUTOCOLOR=250>　<请选择您需要传送的地图/SCOLOR=161>　<[完全免费传送]/SCOLOR=249>\ \  
+　<盟重土城/@jhmove>    <白日天门/@wwmove>    <苍月海岛/@cymove> 　 <新手小村/@bdmove>　  <银杏山谷/@gnmove>\
+　\
+　<比奇大城/@bwmove>　  <封魔神谷/@fmmove>    <毒蛇山谷/@sbkmove>    <魔龙城堡/@molongcb>　  <沙城区域/@LIU456move>\   \
+<温馨提示:请玩家保管好自己的帐号请勿透露给他人/SCOLOR=70>
+[@幻境二层]
+#ACT
+give 回城卷 1
+mapmove H002
+break 
+
+[@抉择之地]
+#ACT
+give 回城卷 1
+mapmove D1004
+break 
+
+[@沙藏宝阁]
+#ACT
+give 回城卷 1
+mapmove H204
+break 
+
+[@牛魔四层]
+#ACT
+give 回城卷 1
+mapmove D2075
+break 
+
+[@霸者大厅]
+#ACT
+give 回城卷 1
+mapmove D2008
+break 
+
+[@祖玛四层]
+#ACT
+give 回城卷 1
+mapmove D504
+break 
+
+[@石墓五层]
+#ACT
+give 回城卷 1
+mapmove D715
+break 
+
+[@蜈蚣洞穴]
+#ACT
+give 回城卷 1
+mapmove 3 139  85
+break 
+
+[@jhmove]
+#ACT
+mapmove 3 333 333
+break 
+[@bwmove]
+#ACT
+mapmove 0 333 268 
+break 
+[@cymove]
+#ACT
+mapmove 5 140 338
+break 
+[@fmmove]
+#ACT
+mapmove 4 241 202
+break 
+[@wwmove]
+#ACT
+mapmove 11 177 324
+break 
+[@bdmove]
+#ACT
+mapmove 0 288 615
+break 
+[@gnmove]
+#ACT
+mapmove 0 634 612
+break 
+[@sbkmove]
+#ACT
+mapmove 2 503 483
+break
+[@molongcb]
+#ACT
+MAPMOVE 6 123 158
+break
+[@LIU456move]
+#ACT
+give 回城卷 1
+mapmove 3 700 400
+break
+[@MLDJMOVE]
+#act
+GIVE 回城卷 1
+mapmove 6 471 377
+break
+[@MLXJMOVE]
+#act
+GIVE 回城卷 1
+mapmove 6 460 68
+break
+[@CYLCmove]
+#ACT
+GIVE 回城卷 1
+mapmove D10062
+break
+[@WMDDmove]
+#ACT
+GIVE 回城卷 1
+mapmove D023 49 362
+break
+[@zm7cmove]
+#act
+mapmove D5071
+GIVE 回城卷 1
+break

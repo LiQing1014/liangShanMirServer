@@ -1,0 +1,169 @@
+
+[@平台_参数配置]
+{
+#IF
+#ACT
+SENDTOPCHATBOARDMSG 1 95 0 99999 {★超级福利：累计充值满100元，送|254:0}{《永久包服卡》|253:0}{→平台旗下多款游戏每天可领取50元充值~|250:0} 1
+Mov	N$通区_延迟	1
+GetStringPos	..\EffectImageList.txt		Magical.pak
+Mov	N$通区_素材	<$Str(N0)>
+ReadConfigFileItem	..\..\mdc.ini		MDC	SERVERKEY	S$平台_名称
+ReadConfigFileItem	..\..\mdc.ini		MDC	SERVERTAG	S$平台_版本
+ReadConfigFileItem	..\..\!Setup.txt	Setup	NpcMemoOffSetX		N$平台_偏移X
+ReadConfigFileItem	..\..\!Setup.txt	Setup	NpcMemoOffSetY		N$平台_偏移Y
+GetRandomText	..\..\..\..\解锁玩家.txt	S$比奇论坛
+Delaygoto		500	@加载平台_参数配置
+#if
+Equal	S$比奇论坛
+#act
+Addtextlist	..\..\..\..\解锁玩家.txt	解除转区玩家名单列表
+addtextlist		..\..\..\..\过滤验证.txt	临时上号过滤验证的玩家名字-每次登录清除一行，多次登录多写几行！
+addtextlist		..\..\..\..\装备补偿.txt	[区名:角色名]复制此两行格式写在下面-请保留此段方便以后使用
+addtextlist		..\..\..\..\装备补偿.txt	装备名:数量
+
+
+
+[@加载平台_参数配置]
+
+#If
+Equal	S$平台_加载
+Not	Equal	<$STR(S$ESP版本自定义标记文本)>
+#act
+Mov	S$平台_名称	<$STR(S$ESP版本自定义标记文本)>
+ExtractString	|	<$STR(S$ESP版本自定义标记文本)>	S$平台_名称	S$无用
+Mov	S$平台_加载	已加载
+
+#If
+Equal	S$平台_加载
+Not	Equal	<$STR(S$太极_版本自定义标记)>
+#act
+Mov	S$平台_名称	<$STR(S$太极_版本自定义标记)>
+ExtractString	|	<$STR(S$太极_版本自定义标记)>	S$平台_名称	S$无用
+Mov	S$平台_加载	已加载
+
+#If
+Not	Equal	S$平台_加载	已加载
+#act
+Delaygoto		500	@加载平台_参数配置
+Break
+
+#IF
+#act
+GetStringPos ..\Questdiary\一万七网络通服功能\平台参数配置.txt		[<$Str(S$平台_名称)>]
+Inc	N0	1
+GetRandomText ..\Questdiary\一万七网络通服功能\平台参数配置.txt	S$平台_数据	<$Str(N0)>
+ExtractString	:	<$Str(S$平台_数据)>	S$平台_名称	S$平台_微信码	S$平台_企业号	S$平台_大称号1	S$平台_大称号2	S$平台_大称号Y
+goto	@通区坐标偏移
+#If
+Equal	S$平台_微信码
+#act
+Kick
+Messagebox	平台配置错误！请联系客服！
+[@通区坐标偏移]
+#IF
+#ACT
+DEC	N$通用坐标X	<$Str(N$平台_偏移X)>
+DEC	N$通用坐标Y	<$Str(N$平台_偏移Y)>
+DEC	N$通用坐标X2	<$Str(N$平台_偏移X)>
+DEC	N$通用坐标X2	2
+DEC	N$通用坐标X4	<$Str(N$平台_偏移X)>
+DEC	N$通用坐标X4	4
+DEC	N$通用坐标X5	<$Str(N$平台_偏移X)>
+DEC	N$通用坐标X5	5
+DEC	N$通用坐标X10	<$Str(N$平台_偏移X)>
+DEC	N$通用坐标X10	10
+DEC	N$通用坐标Y1	<$Str(N$平台_偏移Y)>
+Dec	N$通用坐标Y1	1
+DEC	N$通用坐标Y3	<$Str(N$平台_偏移Y)>
+Dec	N$通用坐标Y3	3
+DEC	N$通用坐标Y5	<$Str(N$平台_偏移Y)>
+Dec	N$通用坐标Y5	5
+DEC	N$通用坐标Y7	<$Str(N$平台_偏移Y)>
+Dec	N$通用坐标Y7	7
+DEC	N$通用坐标Y9	<$Str(N$平台_偏移Y)>
+Dec	N$通用坐标Y9	9
+DEC	N$通用坐标Y10	<$Str(N$平台_偏移Y)>
+Dec	N$通用坐标Y10	10
+DEC	N$通用坐标Y11	<$Str(N$平台_偏移Y)>
+Dec	N$通用坐标Y11	11
+DEC	N$通用坐标Y13	<$Str(N$平台_偏移Y)>
+Dec	N$通用坐标Y13	13
+DEC	N$通用坐标Y21	<$Str(N$平台_偏移Y)>
+Dec	N$通用坐标Y21	21
+DEC	N$通用坐标Y+89	<$Str(N$平台_偏移Y)>
+Inc	N$通用坐标Y+89	89
+DEC	N$通用坐标Y+63	<$Str(N$平台_偏移Y)>
+Inc	N$通用坐标Y+63	63
+
+Mov	N$平台_微信界面	310
+Mov	N$平台_礼包界面	311
+Mov	N$平台_充值界面	312
+Mov	N$平台_包服界面	313
+Mov	N$平台_转区一面	314
+Mov	N$平台_转区二面	315
+Mov	N$平台_签到一面	316
+Mov	N$平台_签到二面	317
+Mov	N$平台_通用界面	319
+Mov	N$平台_国王界面	340
+Mov	N$平台_手机界面	70
+
+;==========13周年界面的删除下列的引号
+;Mov	N$平台_微信界面	380
+;Mov	N$平台_礼包界面	381
+;Mov	N$平台_充值界面	382
+;Mov	N$平台_包服界面	383
+;Mov	N$平台_转区一面	384
+;Mov	N$平台_转区二面	385
+;Mov	N$平台_签到一面	386
+;Mov	N$平台_签到二面	387
+;Mov	N$平台_通用界面	389
+;Mov	N$平台_国王界面	390
+;Mov	N$平台_手机界面	71
+
+
+}
+
+;===========================下列为平台参数详情=================================
+;平台名称:微信公众号:企业客服号:大称号资源:偏移坐标
+[1w7]
+1w7:280:290:440:450:-50
+[HZW520]
+1w7:280:290:440:450:-50
+[tu0]
+tu0:281:291:440:450:-50
+[46uc]
+46uc:282:292:440:450:-50
+[e0e]
+e0e:283:293:440:450:-50
+[cq5]
+cq5:284:294:440:450:-50
+[3w7]
+3w7:285:295:440:450:-50
+[7f7]
+7f7:286:296:440:450:-50
+[w8j]
+w8j:289:299:440:450:-50
+[4f5]
+4f5:287:297:440:450:-50
+[3a3]
+3a3:288:298:440:450:-50
+[wu4]
+wu4:400:410:440:450:-50
+[c5c]
+c5c:401:411:440:450:-50
+[6f9]
+6f9:402:412:440:450:-50
+;===========================下列为平台参数详情=================================
+;平台名称:微信公众号:企业客服号:大称号资源:偏移坐标
+[97w]
+97w:350:360:370:370:-120
+[3jq]
+3jq:351:361:440:450:-50
+[2tw]
+2tw:352:362:440:450:-50
+[2kt]
+2kt:353:363:440:450:-50
+[8zt]
+8zt:354:364:440:450:-50
+[3qk]
+3qk:355:365:440:450:-50

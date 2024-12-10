@@ -1,0 +1,1735 @@
+[@MAIN]
+
+#IF
+#ACT
+MOV N$斗笠合成数量  1
+MOV N$斗笠价格0  1000000
+MOV N$斗笠价格1  2000000
+MOV N$斗笠价格2  3000000
+MOV N$斗笠价格3  5000000
+MOV N$斗笠价格4  7000000
+MOV N$斗笠价格5  9000000
+MOV S$斗笠价格0  钻石斗笠
+MOV S$斗笠价格1  星耀斗笠
+MOV S$斗笠价格2  王者斗笠
+MOV S$斗笠价格3  传奇斗笠
+MOV S$斗笠价格4  荣耀斗笠
+MOV S$斗笠价格5  至尊斗笠
+MOV N$斗笠材料0  30
+MOV N$斗笠材料1  60
+MOV N$斗笠材料2  90
+MOV N$斗笠材料3  120
+MOV N$斗笠材料4  150
+MOV N$斗笠材料5  180
+MOV S$斗笠材料   梦想神石
+
+
+MOV N$斗笠大米0  200
+MOV N$斗笠大米1  400
+MOV N$斗笠大米2  600
+MOV N$斗笠大米3  800
+MOV N$斗笠大米4  1000
+MOV N$斗笠大米5  1200
+
+
+MOV N$勋章合成数量  1
+MOV N$勋章价格0  1000000
+MOV N$勋章价格1  2000000
+MOV N$勋章价格2  3000000
+MOV N$勋章价格3  5000000
+MOV N$勋章价格4  7000000
+MOV N$勋章价格5  9000000
+MOV S$勋章价格0  钻石勋章
+MOV S$勋章价格1  星耀勋章
+MOV S$勋章价格2  王者勋章
+MOV S$勋章价格3  传奇勋章
+MOV S$勋章价格4  荣耀勋章
+MOV S$勋章价格5  至尊勋章
+MOV N$勋章材料0  30
+MOV N$勋章材料1  60
+MOV N$勋章材料2  90
+MOV N$勋章材料3  120
+MOV N$勋章材料4  150
+MOV N$勋章材料5  180
+MOV S$勋章材料   梦想神石
+
+MOV N$勋章大米0  200
+MOV N$勋章大米1  400
+MOV N$勋章大米2  600
+MOV N$勋章大米3  800
+MOV N$勋章大米4  1000
+MOV N$勋章大米5  1200
+
+
+
+#IF
+#ACT
+close
+close
+#SAY
+;<━━━━━━━━━━━━━━━━━━━━━━━━━━━━━/SCOLOR=58>\
+\ \ \ 
+　   <★★★/SCOLOR=250><斗笠打造/@斗笠合成><★★★/SCOLOR=250>          <★★★/SCOLOR=250><勋章打造/@勋章合成><★★★/SCOLOR=250> \ \ \
+
+\　               <★★★★★/SCOLOR=250><特戒合成/@特戒合成><★★★★★/SCOLOR=250>         \ \
+;\                    <★★★★/SCOLOR=250><生肖洗炼/@sdfg生肖洗炼><★★★★/SCOLOR=250> \
+;<>                            <清空包裹|249#请慎重清空包裹，否则后果自付{AUTOCOLOR=12}/@清理包裹>\
+
+
+
+[@清理包裹]
+#IF
+#ACT
+MESSAGEBOX 您确定要清空包袱里面所有的装备材料物品吗？\\请将重要的装备材料物品先存放到仓库\\清理以后官方将不负责找回，请先慎重考虑清楚\\如果点错请按取消 @确认 @取消
+[@确认]
+#act
+Gmexecute ClearBag <$USERNAME>
+
+
+
+[@特戒合成]
+#IF
+#ACT
+MOV N$材料特戒数量  2
+MOV N$大米特戒数量  2
+
+MOV N$材料特戒数量1  1
+MOV N$大米特戒数量1  2
+
+
+MOV S$材料特戒1  梦想神石
+MOV N$材料特戒1  38
+MOV S$材料特戒2  梦想神石
+MOV N$材料特戒2  88
+
+MOV N$特戒元宝价格1  1000000
+MOV S$特戒元宝价格1  100W元宝
+
+MOV N$特戒元宝价格2  2000000
+MOV S$特戒元宝价格2  200W元宝
+
+MOV N$特戒大米价格1  288
+MOV N$特戒大米价格2  588
+
+
+
+close
+close
+#SAY
+\ \ 
+\<材料锻造/scolor=250>：    <涅灭麻痹|250#锻造条件：^-^249#1.任意2级三特戒系列*<$STR(N$材料特戒数量)>^-^250#2.<$STR(S$材料特戒1)>*<$STR(N$材料特戒1)>^-^251#3.<$STR(S$特戒元宝价格1)>/@材料涅灭麻痹>
+<>         <涅槃复活|250#锻造条件：^-^249#1.任意2级三特戒系列*<$STR(N$材料特戒数量)>^-^250#2.<$STR(S$材料特戒1)>*<$STR(N$材料特戒1)>^-^251#3.<$STR(S$特戒元宝价格1)>/@材料涅槃复活>      
+<>          <八卦护身|250#锻造条件：^-^249#1.任意2级三特戒系列*<$STR(N$材料特戒数量)>^-^250#2.<$STR(S$材料特戒1)>*<$STR(N$材料特戒1)>^-^251#3.<$STR(S$特戒元宝价格1)>/@材料八卦护身>      
+
+\ \              <王者麻痹|250#锻造条件：^-^249#1.任意3级三特戒系列*<$STR(N$材料特戒数量)>^-^161#2.王者普通戒指系列*<$STR(N$材料特戒数量1)>^-^250#3.<$STR(S$材料特戒2)>*<$STR(N$材料特戒2)>^-^251#4.<$STR(S$特戒元宝价格2)>/@材料王者麻痹>
+<>         <王者复活|250#锻造条件：^-^249#1.任意3级三特戒系列*<$STR(N$材料特戒数量)>^-^161#2.王者普通戒指系列*<$STR(N$材料特戒数量1)>^-^250#3.<$STR(S$材料特戒2)>*<$STR(N$材料特戒2)>^-^251#4.<$STR(S$特戒元宝价格2)>/@材料王者复活>      
+<>          <王者护身|250#锻造条件：^-^249#1.任意3级三特戒系列*<$STR(N$材料特戒数量)>^-^161#2.王者普通戒指系列*<$STR(N$材料特戒数量1)>^-^250#3.<$STR(S$材料特戒2)>*<$STR(N$材料特戒2)>^-^251#4.<$STR(S$特戒元宝价格2)>/@材料王者护身>  \  \     
+
+
+\<大米锻造/scolor=253>：    <涅灭麻痹|250#锻造条件：^-^249#1.任意2级三特戒系列*<$STR(N$材料特戒数量)>^-^253#2.大米*<$STR(N$特戒大米价格1)>/@大米涅灭麻痹>
+<>         <涅槃复活|250#锻造条件：^-^249#1.任意2级三特戒系列*<$STR(N$材料特戒数量)>^-^253#2.大米*<$STR(N$特戒大米价格1)>/@大米涅槃复活>      
+<>          <八卦护身|250#锻造条件：^-^249#1.任意2级三特戒系列*<$STR(N$材料特戒数量)>^-^253#2.大米*<$STR(N$特戒大米价格1)>/@大米八卦护身>      
+
+\ \              <王者麻痹|250#锻造条件：^-^249#1.任意3级三特戒系列*<$STR(N$材料特戒数量)>^-^161#2.王者普通戒指系列*<$STR(N$材料特戒数量1)>^-^253#3.大米*<$STR(N$特戒大米价格2)>/@大米王者麻痹>
+<>         <王者复活|250#锻造条件：^-^249#1.任意3级三特戒系列*<$STR(N$材料特戒数量)>^-^161#2.王者普通戒指系列*<$STR(N$材料特戒数量1)>^-^253#3.大米*<$STR(N$特戒大米价格2)>/@大米王者复活>      
+<>          <王者护身|250#锻造条件：^-^249#1.任意3级三特戒系列*<$STR(N$材料特戒数量)>^-^161#2.王者普通戒指系列*<$STR(N$材料特戒数量1)>^-^253#3.大米*<$STR(N$特戒大米价格2)>/@大米王者护身>  \  \     
+
+
+
+
+
+[@材料王者护身]
+
+#IF
+CHECKGAMEGOLD < <$STR(N$特戒元宝价格2)>
+#act
+MESSAGEBOX 对不起，您账户上的元宝不足：<$STR(N$特戒元宝价格2)>个，请检查在来！
+BREAK
+
+#IF
+not CHECKITEM <$STR(S$材料特戒2)> <$STR(N$材料特戒2)>
+#act
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$材料特戒2)>不足：<$STR(N$材料特戒2)>个，请检查在来！
+BREAK
+
+
+
+#IF
+#ACT
+getbagitemcount 涅灭麻痹 N1
+getbagitemcount 八卦护身 N2
+getbagitemcount 涅槃复活 N3
+
+
+MOV N$一级特戒数量 0
+INC N$一级特戒数量 <$STR(N1)>
+INC N$一级特戒数量 <$STR(N2)>
+INC N$一级特戒数量 <$STR(N3)>
+
+
+
+#IF
+SMALL N$一级特戒数量 <$STR(N$材料特戒数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$材料特戒数量)>件八卦护身，无法锻造\\\\温馨提醒：涅灭麻痹、八卦护身、涅槃复活，任意<$STR(N$材料特戒数量)>件即可！
+BREAK
+
+
+
+
+#IF
+#ACT
+getbagitemcount 王者·战戒 N6
+getbagitemcount 王者·魔戒 N7
+getbagitemcount 王者·道戒 N8
+
+
+MOV N$一级普通戒数量 0
+INC N$一级普通戒数量 <$STR(N6)>
+INC N$一级普通戒数量 <$STR(N7)>
+INC N$一级普通戒数量 <$STR(N8)>
+
+
+
+#IF
+SMALL N$一级普通戒数量 <$STR(N$材料特戒数量1)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$材料特戒数量1)>件普通王者普通戒指，无法锻造\\\\温馨提醒：王者·战戒、王者·魔戒、王者·道戒，任意<$STR(N$材料特戒数量1)>件即可！
+BREAK
+
+
+
+
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$材料特戒2)> <$STR(N$材料特戒2)>
+GAMEGOLD - <$STR(N$特戒元宝价格2)>
+TakeBagItem 涅灭麻痹|八卦护身|涅槃复活| <$STR(N$材料特戒数量)> 0 0 0 0 N55 0
+TakeBagItem 王者·战戒|王者·魔戒|王者·道戒| <$STR(N$材料特戒数量1)> 0 0 0 0 N55 0
+GIVE 王者护身 1
+MESSAGEBOX 恭喜您，成功打造一件：王者护身
+BREAK
+
+
+
+
+
+
+
+
+[@材料王者复活]
+
+#IF
+CHECKGAMEGOLD < <$STR(N$特戒元宝价格2)>
+#act
+MESSAGEBOX 对不起，您账户上的元宝不足：<$STR(N$特戒元宝价格2)>个，请检查在来！
+BREAK
+
+#IF
+not CHECKITEM <$STR(S$材料特戒2)> <$STR(N$材料特戒2)>
+#act
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$材料特戒2)>不足：<$STR(N$材料特戒2)>个，请检查在来！
+BREAK
+
+
+
+#IF
+#ACT
+getbagitemcount 涅灭麻痹 N1
+getbagitemcount 八卦护身 N2
+getbagitemcount 涅槃复活 N3
+
+
+MOV N$一级特戒数量 0
+INC N$一级特戒数量 <$STR(N1)>
+INC N$一级特戒数量 <$STR(N2)>
+INC N$一级特戒数量 <$STR(N3)>
+
+
+
+#IF
+SMALL N$一级特戒数量 <$STR(N$材料特戒数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$材料特戒数量)>件涅槃复活，无法锻造\\\\温馨提醒：涅灭麻痹、八卦护身、涅槃复活，任意<$STR(N$材料特戒数量)>件即可！
+BREAK
+
+
+
+
+#IF
+#ACT
+getbagitemcount 王者·战戒 N6
+getbagitemcount 王者·魔戒 N7
+getbagitemcount 王者·道戒 N8
+
+
+MOV N$一级普通戒数量 0
+INC N$一级普通戒数量 <$STR(N6)>
+INC N$一级普通戒数量 <$STR(N7)>
+INC N$一级普通戒数量 <$STR(N8)>
+
+
+
+#IF
+SMALL N$一级普通戒数量 <$STR(N$材料特戒数量1)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$材料特戒数量1)>件普通王者普通戒指，无法锻造\\\\温馨提醒：王者·战戒、王者·魔戒、王者·道戒，任意<$STR(N$材料特戒数量1)>件即可！
+BREAK
+
+
+
+
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$材料特戒2)> <$STR(N$材料特戒2)>
+GAMEGOLD - <$STR(N$特戒元宝价格2)>
+TakeBagItem 涅灭麻痹|八卦护身|涅槃复活| <$STR(N$材料特戒数量)> 0 0 0 0 N55 0
+TakeBagItem 王者·战戒|王者·魔戒|王者·道戒| <$STR(N$材料特戒数量1)> 0 0 0 0 N55 0
+GIVE 王者复活 1
+MESSAGEBOX 恭喜您，成功打造一件：王者复活
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@材料王者麻痹]
+
+#IF
+CHECKGAMEGOLD < <$STR(N$特戒元宝价格2)>
+#act
+MESSAGEBOX 对不起，您账户上的元宝不足：<$STR(N$特戒元宝价格2)>个，请检查在来！
+BREAK
+
+#IF
+not CHECKITEM <$STR(S$材料特戒2)> <$STR(N$材料特戒2)>
+#act
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$材料特戒2)>不足：<$STR(N$材料特戒2)>个，请检查在来！
+BREAK
+
+
+
+#IF
+#ACT
+getbagitemcount 涅灭麻痹 N1
+getbagitemcount 八卦护身 N2
+getbagitemcount 涅槃复活 N3
+
+
+MOV N$一级特戒数量 0
+INC N$一级特戒数量 <$STR(N1)>
+INC N$一级特戒数量 <$STR(N2)>
+INC N$一级特戒数量 <$STR(N3)>
+
+
+
+#IF
+SMALL N$一级特戒数量 <$STR(N$材料特戒数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$材料特戒数量)>件涅灭麻痹，无法锻造\\\\温馨提醒：涅灭麻痹、八卦护身、涅槃复活，任意<$STR(N$材料特戒数量)>件即可！
+BREAK
+
+
+
+
+#IF
+#ACT
+getbagitemcount 王者·战戒 N6
+getbagitemcount 王者·魔戒 N7
+getbagitemcount 王者·道戒 N8
+
+
+MOV N$一级普通戒数量 0
+INC N$一级普通戒数量 <$STR(N6)>
+INC N$一级普通戒数量 <$STR(N7)>
+INC N$一级普通戒数量 <$STR(N8)>
+
+
+
+#IF
+SMALL N$一级普通戒数量 <$STR(N$材料特戒数量1)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$材料特戒数量1)>件普通王者普通戒指，无法锻造\\\\温馨提醒：王者·战戒、王者·魔戒、王者·道戒，任意<$STR(N$材料特戒数量1)>件即可！
+BREAK
+
+
+
+
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$材料特戒2)> <$STR(N$材料特戒2)>
+GAMEGOLD - <$STR(N$特戒元宝价格2)>
+TakeBagItem 涅灭麻痹|八卦护身|涅槃复活| <$STR(N$材料特戒数量)> 0 0 0 0 N55 0
+TakeBagItem 王者·战戒|王者·魔戒|王者·道戒| <$STR(N$材料特戒数量1)> 0 0 0 0 N55 0
+GIVE 王者麻痹 1
+MESSAGEBOX 恭喜您，成功打造一件：王者麻痹
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@材料八卦护身]
+
+#IF
+CHECKGAMEGOLD < <$STR(N$特戒元宝价格1)>
+#act
+MESSAGEBOX 对不起，您账户上的元宝不足：<$STR(N$特戒元宝价格1)>个，请检查在来！
+BREAK
+
+#IF
+not CHECKITEM <$STR(S$材料特戒1)> <$STR(N$材料特戒1)>
+#act
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$材料特戒1)>不足：<$STR(N$材料特戒1)>个，请检查在来！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 战意麻痹 N1
+getbagitemcount 魔意护身 N2
+getbagitemcount 道意复活 N3
+
+
+MOV N$一级特戒数量 0
+INC N$一级特戒数量 <$STR(N1)>
+INC N$一级特戒数量 <$STR(N2)>
+INC N$一级特戒数量 <$STR(N3)>
+
+
+
+#IF
+SMALL N$一级特戒数量 <$STR(N$材料特戒数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$材料特戒数量)>件魔意护身，无法锻造\\\\温馨提醒：战意麻痹、魔意护身、道意复活，任意<$STR(N$材料特戒数量)>件即可！
+BREAK
+
+
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$材料特戒1)> <$STR(N$材料特戒1)>
+GAMEGOLD - <$STR(N$特戒元宝价格1)>
+TakeBagItem 战意麻痹|魔意护身|道意复活| <$STR(N$材料特戒数量)> 0 0 0 0 N55 0
+GIVE 八卦护身 1
+MESSAGEBOX 恭喜您，成功打造一件：八卦护身
+BREAK
+
+
+
+
+
+
+
+
+[@材料涅槃复活]
+
+#IF
+CHECKGAMEGOLD < <$STR(N$特戒元宝价格1)>
+#act
+MESSAGEBOX 对不起，您账户上的元宝不足：<$STR(N$特戒元宝价格1)>个，请检查在来！
+BREAK
+
+#IF
+not CHECKITEM <$STR(S$材料特戒1)> <$STR(N$材料特戒1)>
+#act
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$材料特戒1)>不足：<$STR(N$材料特戒1)>个，请检查在来！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 战意麻痹 N1
+getbagitemcount 魔意护身 N2
+getbagitemcount 道意复活 N3
+
+
+MOV N$一级特戒数量 0
+INC N$一级特戒数量 <$STR(N1)>
+INC N$一级特戒数量 <$STR(N2)>
+INC N$一级特戒数量 <$STR(N3)>
+
+
+
+#IF
+SMALL N$一级特戒数量 <$STR(N$材料特戒数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$材料特戒数量)>件道意复活，无法锻造\\\\温馨提醒：战意麻痹、魔意护身、道意复活，任意<$STR(N$材料特戒数量)>件即可！
+BREAK
+
+
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$材料特戒1)> <$STR(N$材料特戒1)>
+GAMEGOLD - <$STR(N$特戒元宝价格1)>
+TakeBagItem 战意麻痹|魔意护身|道意复活| <$STR(N$材料特戒数量)> 0 0 0 0 N55 0
+GIVE 涅槃复活 1
+MESSAGEBOX 恭喜您，成功打造一件：涅槃复活
+BREAK
+
+
+
+
+
+
+
+
+[@材料涅灭麻痹]
+
+#IF
+CHECKGAMEGOLD < <$STR(N$特戒元宝价格1)>
+#act
+MESSAGEBOX 对不起，您账户上的元宝不足：<$STR(N$特戒元宝价格1)>个，请检查在来！
+BREAK
+
+#IF
+not CHECKITEM <$STR(S$材料特戒1)> <$STR(N$材料特戒1)>
+#act
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$材料特戒1)>不足：<$STR(N$材料特戒1)>个，请检查在来！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 战意麻痹 N1
+getbagitemcount 魔意护身 N2
+getbagitemcount 道意复活 N3
+
+
+MOV N$一级特戒数量 0
+INC N$一级特戒数量 <$STR(N1)>
+INC N$一级特戒数量 <$STR(N2)>
+INC N$一级特戒数量 <$STR(N3)>
+
+
+
+#IF
+SMALL N$一级特戒数量 <$STR(N$材料特戒数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$材料特戒数量)>件战意麻痹，无法锻造\\\\温馨提醒：战意麻痹、魔意护身、道意复活，任意<$STR(N$材料特戒数量)>件即可！
+BREAK
+
+
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$材料特戒1)> <$STR(N$材料特戒1)>
+GAMEGOLD - <$STR(N$特戒元宝价格1)>
+TakeBagItem 战意麻痹|魔意护身|道意复活| <$STR(N$材料特戒数量)> 0 0 0 0 N55 0
+GIVE 涅灭麻痹 1
+MESSAGEBOX 恭喜您，成功打造一件：涅灭麻痹
+BREAK
+
+
+
+
+[@大米王者护身]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$特戒大米价格2)>
+#act
+MESSAGEBOX 对不起，您账户上的大米不足：<$STR(N$特戒大米价格2)>点，请检查在来！
+BREAK
+
+
+
+
+#IF
+#ACT
+getbagitemcount 涅灭麻痹 N1
+getbagitemcount 八卦护身 N2
+getbagitemcount 涅槃复活 N3
+
+
+MOV N$一级特戒数量 0
+INC N$一级特戒数量 <$STR(N1)>
+INC N$一级特戒数量 <$STR(N2)>
+INC N$一级特戒数量 <$STR(N3)>
+
+
+
+#IF
+SMALL N$一级特戒数量 <$STR(N$材料特戒数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$材料特戒数量)>件八卦护身，无法锻造\\\\温馨提醒：涅灭麻痹、八卦护身、涅槃复活，任意<$STR(N$材料特戒数量)>件即可！
+BREAK
+
+
+
+
+#IF
+#ACT
+getbagitemcount 王者·战戒 N6
+getbagitemcount 王者·魔戒 N7
+getbagitemcount 王者·道戒 N8
+
+
+MOV N$一级普通戒数量 0
+INC N$一级普通戒数量 <$STR(N6)>
+INC N$一级普通戒数量 <$STR(N7)>
+INC N$一级普通戒数量 <$STR(N8)>
+
+
+
+#IF
+SMALL N$一级普通戒数量 <$STR(N$材料特戒数量1)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$材料特戒数量1)>件普通王者普通戒指，无法锻造\\\\温馨提醒：王者·战戒、王者·魔戒、王者·道戒，任意<$STR(N$材料特戒数量1)>件即可！
+BREAK
+
+
+
+
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$特戒大米价格2)>
+TakeBagItem 涅灭麻痹|八卦护身|涅槃复活| <$STR(N$材料特戒数量)> 0 0 0 0 N55 0
+TakeBagItem 王者·战戒|王者·魔戒|王者·道戒| <$STR(N$材料特戒数量1)> 0 0 0 0 N55 0
+GIVE 王者护身 1
+MESSAGEBOX 恭喜您，成功打造一件：王者护身
+BREAK
+
+
+
+
+
+
+
+
+[@大米王者复活]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$特戒大米价格2)>
+#act
+MESSAGEBOX 对不起，您账户上的大米不足：<$STR(N$特戒大米价格2)>点，请检查在来！
+BREAK
+
+
+
+
+#IF
+#ACT
+getbagitemcount 涅灭麻痹 N1
+getbagitemcount 八卦护身 N2
+getbagitemcount 涅槃复活 N3
+
+
+MOV N$一级特戒数量 0
+INC N$一级特戒数量 <$STR(N1)>
+INC N$一级特戒数量 <$STR(N2)>
+INC N$一级特戒数量 <$STR(N3)>
+
+
+
+#IF
+SMALL N$一级特戒数量 <$STR(N$材料特戒数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$材料特戒数量)>件涅槃复活，无法锻造\\\\温馨提醒：涅灭麻痹、八卦护身、涅槃复活，任意<$STR(N$材料特戒数量)>件即可！
+BREAK
+
+
+
+
+#IF
+#ACT
+getbagitemcount 王者·战戒 N6
+getbagitemcount 王者·魔戒 N7
+getbagitemcount 王者·道戒 N8
+
+
+MOV N$一级普通戒数量 0
+INC N$一级普通戒数量 <$STR(N6)>
+INC N$一级普通戒数量 <$STR(N7)>
+INC N$一级普通戒数量 <$STR(N8)>
+
+
+
+#IF
+SMALL N$一级普通戒数量 <$STR(N$材料特戒数量1)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$材料特戒数量1)>件普通王者普通戒指，无法锻造\\\\温馨提醒：王者·战戒、王者·魔戒、王者·道戒，任意<$STR(N$材料特戒数量1)>件即可！
+BREAK
+
+
+
+
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$特戒大米价格2)>
+TakeBagItem 涅灭麻痹|八卦护身|涅槃复活| <$STR(N$材料特戒数量)> 0 0 0 0 N55 0
+TakeBagItem 王者·战戒|王者·魔戒|王者·道戒| <$STR(N$材料特戒数量1)> 0 0 0 0 N55 0
+GIVE 王者复活 1
+MESSAGEBOX 恭喜您，成功打造一件：王者复活
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@大米王者麻痹]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$特戒大米价格2)>
+#act
+MESSAGEBOX 对不起，您账户上的大米不足：<$STR(N$特戒大米价格2)>点，请检查在来！
+BREAK
+
+
+
+
+
+#IF
+#ACT
+getbagitemcount 涅灭麻痹 N1
+getbagitemcount 八卦护身 N2
+getbagitemcount 涅槃复活 N3
+
+
+MOV N$一级特戒数量 0
+INC N$一级特戒数量 <$STR(N1)>
+INC N$一级特戒数量 <$STR(N2)>
+INC N$一级特戒数量 <$STR(N3)>
+
+
+
+#IF
+SMALL N$一级特戒数量 <$STR(N$材料特戒数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$材料特戒数量)>件涅灭麻痹，无法锻造\\\\温馨提醒：涅灭麻痹、八卦护身、涅槃复活，任意<$STR(N$材料特戒数量)>件即可！
+BREAK
+
+
+
+
+#IF
+#ACT
+getbagitemcount 王者·战戒 N6
+getbagitemcount 王者·魔戒 N7
+getbagitemcount 王者·道戒 N8
+
+
+MOV N$一级普通戒数量 0
+INC N$一级普通戒数量 <$STR(N6)>
+INC N$一级普通戒数量 <$STR(N7)>
+INC N$一级普通戒数量 <$STR(N8)>
+
+
+
+#IF
+SMALL N$一级普通戒数量 <$STR(N$材料特戒数量1)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$材料特戒数量1)>件普通王者普通戒指，无法锻造\\\\温馨提醒：王者·战戒、王者·魔戒、王者·道戒，任意<$STR(N$材料特戒数量1)>件即可！
+BREAK
+
+
+
+
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$特戒大米价格2)>
+TakeBagItem 涅灭麻痹|八卦护身|涅槃复活| <$STR(N$材料特戒数量)> 0 0 0 0 N55 0
+TakeBagItem 王者·战戒|王者·魔戒|王者·道戒| <$STR(N$材料特戒数量1)> 0 0 0 0 N55 0
+GIVE 王者麻痹 1
+MESSAGEBOX 恭喜您，成功打造一件：王者麻痹
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@大米八卦护身]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$特戒大米价格1)>
+#act
+MESSAGEBOX 对不起，您账户上的大米不足：<$STR(N$特戒大米价格1)>点，请检查在来！
+BREAK
+
+
+
+#IF
+#ACT
+getbagitemcount 战意麻痹 N1
+getbagitemcount 魔意护身 N2
+getbagitemcount 道意复活 N3
+
+
+MOV N$一级特戒数量 0
+INC N$一级特戒数量 <$STR(N1)>
+INC N$一级特戒数量 <$STR(N2)>
+INC N$一级特戒数量 <$STR(N3)>
+
+
+
+#IF
+SMALL N$一级特戒数量 <$STR(N$材料特戒数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$材料特戒数量)>件魔意护身，无法锻造\\\\温馨提醒：战意麻痹、魔意护身、道意复活，任意<$STR(N$材料特戒数量)>件即可！
+BREAK
+
+
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$特戒大米价格1)>
+TakeBagItem 战意麻痹|魔意护身|道意复活| <$STR(N$材料特戒数量)> 0 0 0 0 N55 0
+GIVE 八卦护身 1
+MESSAGEBOX 恭喜您，成功打造一件：八卦护身
+BREAK
+
+
+
+
+
+
+
+
+[@大米涅槃复活]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$特戒大米价格1)>
+#act
+MESSAGEBOX 对不起，您账户上的大米不足：<$STR(N$特戒大米价格1)>点，请检查在来！
+BREAK
+
+
+
+#IF
+#ACT
+getbagitemcount 战意麻痹 N1
+getbagitemcount 魔意护身 N2
+getbagitemcount 道意复活 N3
+
+
+MOV N$一级特戒数量 0
+INC N$一级特戒数量 <$STR(N1)>
+INC N$一级特戒数量 <$STR(N2)>
+INC N$一级特戒数量 <$STR(N3)>
+
+
+
+#IF
+SMALL N$一级特戒数量 <$STR(N$材料特戒数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$材料特戒数量)>件道意复活，无法锻造\\\\温馨提醒：战意麻痹、魔意护身、道意复活，任意<$STR(N$材料特戒数量)>件即可！
+BREAK
+
+
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$特戒大米价格1)>
+TakeBagItem 战意麻痹|魔意护身|道意复活| <$STR(N$材料特戒数量)> 0 0 0 0 N55 0
+GIVE 涅槃复活 1
+MESSAGEBOX 恭喜您，成功打造一件：涅槃复活
+BREAK
+
+
+
+
+
+
+
+
+[@大米涅灭麻痹]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$特戒大米价格1)>
+#act
+MESSAGEBOX 对不起，您账户上的大米不足：<$STR(N$特戒大米价格1)>点，请检查在来！
+BREAK
+
+
+
+#IF
+#ACT
+getbagitemcount 战意麻痹 N1
+getbagitemcount 魔意护身 N2
+getbagitemcount 道意复活 N3
+
+
+MOV N$一级特戒数量 0
+INC N$一级特戒数量 <$STR(N1)>
+INC N$一级特戒数量 <$STR(N2)>
+INC N$一级特戒数量 <$STR(N3)>
+
+
+
+#IF
+SMALL N$一级特戒数量 <$STR(N$材料特戒数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$材料特戒数量)>件战意麻痹，无法锻造\\\\温馨提醒：战意麻痹、魔意护身、道意复活，任意<$STR(N$材料特戒数量)>件即可！
+BREAK
+
+
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$特戒大米价格1)>
+TakeBagItem 战意麻痹|魔意护身|道意复活| <$STR(N$材料特戒数量)> 0 0 0 0 N55 0
+GIVE 涅灭麻痹 1
+MESSAGEBOX 恭喜您，成功打造一件：涅灭麻痹
+BREAK
+
+
+
+
+
+
+
+[@勋章合成]
+#IF
+#ACT
+close
+close
+#SAY
+\  < <$STR(S$勋章价格1)>/scolor=251>  <打造需要/scolor=254><:<$STR(S$勋章价格0)><$STR(N$勋章合成数量)>个/scolor=254>      <材料打造|254#打造条件：^-^249#1.<$STR(S$勋章价格0)>*<$STR(N$勋章合成数量)>^-^250#2.<$STR(S$勋章材料)>*<$STR(N$勋章材料0)>^-^251#3.元宝*<$STR(N$勋章价格0)>/@材料星耀勋章>   <大米打造|250#打造条件：^-^249#1.<$STR(S$勋章价格0)>*<$STR(N$勋章合成数量)>^-^253#2.大米*<$STR(N$斗笠大米0)>/@大米星耀勋章>   \  \ 
+\  < <$STR(S$勋章价格2)>/scolor=251>  <打造需要/scolor=254><:<$STR(S$勋章价格1)><$STR(N$勋章合成数量)>个/scolor=254>      <材料打造|254#打造条件：^-^249#1.<$STR(S$勋章价格1)>*<$STR(N$勋章合成数量)>^-^250#2.<$STR(S$勋章材料)>*<$STR(N$勋章材料1)>^-^251#3.元宝*<$STR(N$勋章价格1)>/@材料王者勋章>   <大米打造|250#打造条件：^-^249#1.<$STR(S$勋章价格1)>*<$STR(N$勋章合成数量)>^-^253#2.大米*<$STR(N$斗笠大米1)>/@大米王者勋章>   \  \ 
+\  < <$STR(S$勋章价格3)>/scolor=251>  <打造需要/scolor=254><:<$STR(S$勋章价格2)><$STR(N$勋章合成数量)>个/scolor=254>      <材料打造|254#打造条件：^-^249#1.<$STR(S$勋章价格2)>*<$STR(N$勋章合成数量)>^-^250#2.<$STR(S$勋章材料)>*<$STR(N$勋章材料2)>^-^251#3.元宝*<$STR(N$勋章价格2)>/@材料传奇勋章>   <大米打造|250#打造条件：^-^249#1.<$STR(S$勋章价格2)>*<$STR(N$勋章合成数量)>^-^253#2.大米*<$STR(N$斗笠大米2)>/@大米传奇勋章>   \  \ 
+\  < <$STR(S$勋章价格4)>/scolor=251>  <打造需要/scolor=254><:<$STR(S$勋章价格3)><$STR(N$勋章合成数量)>个/scolor=254>      <材料打造|254#打造条件：^-^249#1.<$STR(S$勋章价格3)>*<$STR(N$勋章合成数量)>^-^250#2.<$STR(S$勋章材料)>*<$STR(N$勋章材料3)>^-^251#3.元宝*<$STR(N$勋章价格3)>/@材料荣耀勋章>   <大米打造|250#打造条件：^-^249#1.<$STR(S$勋章价格3)>*<$STR(N$勋章合成数量)>^-^253#2.大米*<$STR(N$斗笠大米3)>/@大米荣耀勋章>   \  \ 
+\  < <$STR(S$勋章价格5)>/scolor=251>  <打造需要/scolor=254><:<$STR(S$勋章价格4)><$STR(N$勋章合成数量)>个/scolor=254>      <材料打造|254#打造条件：^-^249#1.<$STR(S$勋章价格4)>*<$STR(N$勋章合成数量)>^-^250#2.<$STR(S$勋章材料)>*<$STR(N$勋章材料4)>^-^251#3.元宝*<$STR(N$勋章价格4)>/@材料至尊勋章>   <大米打造|250#打造条件：^-^249#1.<$STR(S$勋章价格4)>*<$STR(N$勋章合成数量)>^-^253#2.大米*<$STR(N$斗笠大米4)>/@大米至尊勋章>   \  \ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@材料至尊勋章]
+
+#IF
+CHECKGAMEGOLD < <$STR(N$勋章价格4)>
+#act
+MESSAGEBOX 对不起，您账户上的元宝不足<$STR(N$勋章价格4)>个，请检查在来！
+BREAK
+
+#IF
+not CHECKITEM <$STR(S$勋章材料)> <$STR(N$勋章材料4)>
+#act
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$勋章材料)>不足<$STR(N$勋章材料4)>个，请检查在来！
+BREAK
+
+
+#IF
+not CHECKITEM <$STR(S$勋章价格4)> <$STR(N$勋章合成数量)>
+#act
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$勋章价格4)>不足<$STR(N$勋章合成数量)>个，请检查在来！
+BREAK
+
+
+
+
+
+
+#IF
+#act
+GAMEGOLD - <$STR(N$勋章价格4)>
+TAKE <$STR(S$勋章材料)> <$STR(N$勋章材料4)>
+TAKE <$STR(S$勋章价格4)> <$STR(N$勋章合成数量)>
+GIVE <$STR(S$勋章价格5)> 1
+MESSAGEBOX 恭喜您，成功合成<$STR(S$勋章价格5)>！
+BREAK
+
+
+
+
+
+[@材料荣耀勋章]
+
+#IF
+CHECKGAMEGOLD < <$STR(N$勋章价格3)>
+#act
+MESSAGEBOX 对不起，您账户上的元宝不足<$STR(N$勋章价格3)>个，请检查在来！
+BREAK
+
+#IF
+not CHECKITEM <$STR(S$勋章材料)> <$STR(N$勋章材料3)>
+#act
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$勋章材料)>不足<$STR(N$勋章材料3)>个，请检查在来！
+BREAK
+
+
+#IF
+not CHECKITEM <$STR(S$勋章价格3)> <$STR(N$勋章合成数量)>
+#act
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$勋章价格3)>不足<$STR(N$勋章合成数量)>个，请检查在来！
+BREAK
+
+
+
+
+
+
+#IF
+#act
+GAMEGOLD - <$STR(N$勋章价格3)>
+TAKE <$STR(S$勋章材料)> <$STR(N$勋章材料3)>
+TAKE <$STR(S$勋章价格3)> <$STR(N$勋章合成数量)>
+GIVE <$STR(S$勋章价格4)> 1
+MESSAGEBOX 恭喜您，成功合成<$STR(S$勋章价格4)>！
+BREAK
+
+
+
+
+
+
+
+
+
+[@材料传奇勋章]
+
+#IF
+CHECKGAMEGOLD < <$STR(N$勋章价格2)>
+#act
+MESSAGEBOX 对不起，您账户上的元宝不足<$STR(N$勋章价格2)>个，请检查在来！
+BREAK
+
+#IF
+not CHECKITEM <$STR(S$勋章材料)> <$STR(N$勋章材料2)>
+#act
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$勋章材料)>不足<$STR(N$勋章材料2)>个，请检查在来！
+BREAK
+
+
+#IF
+not CHECKITEM <$STR(S$勋章价格2)> <$STR(N$勋章合成数量)>
+#act
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$勋章价格2)>不足<$STR(N$勋章合成数量)>个，请检查在来！
+BREAK
+
+
+
+
+
+
+#IF
+#act
+GAMEGOLD - <$STR(N$勋章价格2)>
+TAKE <$STR(S$勋章材料)> <$STR(N$勋章材料2)>
+TAKE <$STR(S$勋章价格2)> <$STR(N$勋章合成数量)>
+GIVE <$STR(S$勋章价格3)> 1
+MESSAGEBOX 恭喜您，成功合成<$STR(S$勋章价格3)>！
+BREAK
+
+
+
+
+
+
+
+
+
+
+[@材料王者勋章]
+
+#IF
+CHECKGAMEGOLD < <$STR(N$勋章价格1)>
+#act
+MESSAGEBOX 对不起，您账户上的元宝不足<$STR(N$勋章价格1)>个，请检查在来！
+BREAK
+
+#IF
+not CHECKITEM <$STR(S$勋章材料)> <$STR(N$勋章材料1)>
+#act
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$勋章材料)>不足<$STR(N$勋章材料1)>个，请检查在来！
+BREAK
+
+
+#IF
+not CHECKITEM <$STR(S$勋章价格1)> <$STR(N$勋章合成数量)>
+#act
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$勋章价格1)>不足<$STR(N$勋章合成数量)>个，请检查在来！
+BREAK
+
+
+
+
+
+
+#IF
+#act
+GAMEGOLD - <$STR(N$勋章价格1)>
+TAKE <$STR(S$勋章材料)> <$STR(N$勋章材料1)>
+TAKE <$STR(S$勋章价格1)> <$STR(N$勋章合成数量)>
+GIVE <$STR(S$勋章价格2)> 1
+MESSAGEBOX 恭喜您，成功合成<$STR(S$勋章价格2)>！
+BREAK
+
+
+
+
+[@材料星耀勋章]
+
+#IF
+CHECKGAMEGOLD < <$STR(N$勋章价格0)>
+#act
+MESSAGEBOX 对不起，您账户上的元宝不足<$STR(N$勋章价格0)>个，请检查在来！
+BREAK
+
+
+#IF
+not CHECKITEM <$STR(S$勋章材料)> <$STR(N$勋章材料0)>
+#act
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$勋章材料)>不足<$STR(N$勋章材料0)>个，请检查在来！
+BREAK
+
+
+#IF
+not CHECKITEM <$STR(S$勋章价格0)> <$STR(N$勋章合成数量)>
+#act
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$勋章价格0)>不足<$STR(N$勋章合成数量)>个，请检查在来！
+BREAK
+
+
+
+#IF
+#act
+GAMEGOLD - <$STR(N$勋章价格0)>
+TAKE <$STR(S$勋章材料)> <$STR(N$勋章材料0)>
+TAKE <$STR(S$勋章价格0)> <$STR(N$勋章合成数量)>
+GIVE <$STR(S$勋章价格1)> 1
+MESSAGEBOX 恭喜您，成功合成<$STR(S$勋章价格1)>！
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+[@大米至尊勋章]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$勋章大米4)>
+#act
+MESSAGEBOX 对不起，您账户上的大米不足<$STR(N$勋章大米4)>点，请检查在来！
+BREAK
+
+
+
+#IF
+not CHECKITEM <$STR(S$勋章价格4)> <$STR(N$勋章合成数量)>
+#act
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$勋章价格4)>不足<$STR(N$勋章合成数量)>个，请检查在来！
+BREAK
+
+
+
+
+
+
+#IF
+#act
+GAMEPOINT - <$STR(N$勋章大米4)>
+TAKE <$STR(S$勋章价格4)> <$STR(N$勋章合成数量)>
+GIVE <$STR(S$勋章价格5)> 1
+MESSAGEBOX 恭喜您，成功合成<$STR(S$勋章价格5)>！
+BREAK
+
+
+
+
+
+[@大米荣耀勋章]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$勋章大米3)>
+#act
+MESSAGEBOX 对不起，您账户上的大米不足<$STR(N$勋章大米3)>点，请检查在来！
+BREAK
+
+
+
+#IF
+not CHECKITEM <$STR(S$勋章价格3)> <$STR(N$勋章合成数量)>
+#act
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$勋章价格3)>不足<$STR(N$勋章合成数量)>个，请检查在来！
+BREAK
+
+
+
+#IF
+#act
+GAMEPOINT - <$STR(N$勋章大米3)>
+TAKE <$STR(S$勋章价格3)> <$STR(N$勋章合成数量)>
+GIVE <$STR(S$勋章价格4)> 1
+MESSAGEBOX 恭喜您，成功合成<$STR(S$勋章价格4)>！
+BREAK
+
+
+
+
+
+
+
+
+
+[@大米传奇勋章]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$勋章大米2)>
+#act
+MESSAGEBOX 对不起，您账户上的大米不足<$STR(N$勋章大米2)>点，请检查在来！
+BREAK
+
+
+#IF
+not CHECKITEM <$STR(S$勋章价格2)> <$STR(N$勋章合成数量)>
+#act
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$勋章价格2)>不足<$STR(N$勋章合成数量)>个，请检查在来！
+BREAK
+
+
+
+
+
+
+#IF
+#act
+GAMEPOINT - <$STR(N$勋章大米2)>
+TAKE <$STR(S$勋章价格2)> <$STR(N$勋章合成数量)>
+GIVE <$STR(S$勋章价格3)> 1
+MESSAGEBOX 恭喜您，成功合成<$STR(S$勋章价格3)>！
+BREAK
+
+
+
+
+
+
+
+[@大米王者勋章]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$勋章大米1)>
+#act
+MESSAGEBOX 对不起，您账户上的大米不足<$STR(N$勋章大米1)>点，请检查在来！
+BREAK
+
+
+#IF
+not CHECKITEM <$STR(S$勋章价格1)> <$STR(N$勋章合成数量)>
+#act
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$勋章价格1)>不足<$STR(N$勋章合成数量)>个，请检查在来！
+BREAK
+
+
+
+
+
+
+#IF
+#act
+GAMEPOINT - <$STR(N$勋章大米1)>
+TAKE <$STR(S$勋章价格1)> <$STR(N$勋章合成数量)>
+GIVE <$STR(S$勋章价格2)> 1
+MESSAGEBOX 恭喜您，成功合成<$STR(S$勋章价格2)>！
+BREAK
+
+
+
+
+[@大米星耀勋章]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$勋章大米0)>
+#act
+MESSAGEBOX 对不起，您账户上的大米不足<$STR(N$勋章大米0)>点，请检查在来！
+BREAK
+
+
+
+#IF
+not CHECKITEM <$STR(S$勋章价格0)> <$STR(N$勋章合成数量)>
+#act
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$勋章价格0)>不足<$STR(N$勋章合成数量)>个，请检查在来！
+BREAK
+
+
+
+#IF
+#act
+GAMEPOINT - <$STR(N$勋章大米0)>
+TAKE <$STR(S$勋章价格0)> <$STR(N$勋章合成数量)>
+GIVE <$STR(S$勋章价格1)> 1
+MESSAGEBOX 恭喜您，成功合成<$STR(S$勋章价格1)>！
+BREAK
+
+
+
+[@斗笠合成]
+#IF
+#ACT
+close
+close
+#SAY
+\  < <$STR(S$斗笠价格1)>/scolor=251>  <打造需要/scolor=254><:<$STR(S$斗笠价格0)><$STR(N$斗笠合成数量)>个/scolor=254>      <材料打造|254#打造条件：^-^249#1.<$STR(S$斗笠价格0)>*<$STR(N$斗笠合成数量)>^-^250#2.<$STR(S$斗笠材料)>*<$STR(N$斗笠材料0)>^-^251#3.元宝*<$STR(N$斗笠价格0)>/@材料星耀斗笠>   <大米打造|250#打造条件：^-^249#1.<$STR(S$斗笠价格0)>*<$STR(N$斗笠合成数量)>^-^253#2.大米*<$STR(N$斗笠大米0)>/@大米星耀斗笠>   \  \ 
+\  < <$STR(S$斗笠价格2)>/scolor=251>  <打造需要/scolor=254><:<$STR(S$斗笠价格1)><$STR(N$斗笠合成数量)>个/scolor=254>      <材料打造|254#打造条件：^-^249#1.<$STR(S$斗笠价格1)>*<$STR(N$斗笠合成数量)>^-^250#2.<$STR(S$斗笠材料)>*<$STR(N$斗笠材料1)>^-^251#3.元宝*<$STR(N$斗笠价格1)>/@材料王者斗笠>   <大米打造|250#打造条件：^-^249#1.<$STR(S$斗笠价格1)>*<$STR(N$斗笠合成数量)>^-^253#2.大米*<$STR(N$斗笠大米1)>/@大米王者斗笠>   \  \ 
+\  < <$STR(S$斗笠价格3)>/scolor=251>  <打造需要/scolor=254><:<$STR(S$斗笠价格2)><$STR(N$斗笠合成数量)>个/scolor=254>      <材料打造|254#打造条件：^-^249#1.<$STR(S$斗笠价格2)>*<$STR(N$斗笠合成数量)>^-^250#2.<$STR(S$斗笠材料)>*<$STR(N$斗笠材料2)>^-^251#3.元宝*<$STR(N$斗笠价格2)>/@材料传奇斗笠>   <大米打造|250#打造条件：^-^249#1.<$STR(S$斗笠价格2)>*<$STR(N$斗笠合成数量)>^-^253#2.大米*<$STR(N$斗笠大米2)>/@大米传奇斗笠>   \  \ 
+\  < <$STR(S$斗笠价格4)>/scolor=251>  <打造需要/scolor=254><:<$STR(S$斗笠价格3)><$STR(N$斗笠合成数量)>个/scolor=254>      <材料打造|254#打造条件：^-^249#1.<$STR(S$斗笠价格3)>*<$STR(N$斗笠合成数量)>^-^250#2.<$STR(S$斗笠材料)>*<$STR(N$斗笠材料3)>^-^251#3.元宝*<$STR(N$斗笠价格3)>/@材料荣耀斗笠>   <大米打造|250#打造条件：^-^249#1.<$STR(S$斗笠价格3)>*<$STR(N$斗笠合成数量)>^-^253#2.大米*<$STR(N$斗笠大米3)>/@大米荣耀斗笠>   \  \ 
+\  < <$STR(S$斗笠价格5)>/scolor=251>  <打造需要/scolor=254><:<$STR(S$斗笠价格4)><$STR(N$斗笠合成数量)>个/scolor=254>      <材料打造|254#打造条件：^-^249#1.<$STR(S$斗笠价格4)>*<$STR(N$斗笠合成数量)>^-^250#2.<$STR(S$斗笠材料)>*<$STR(N$斗笠材料4)>^-^251#3.元宝*<$STR(N$斗笠价格4)>/@材料至尊斗笠>   <大米打造|250#打造条件：^-^249#1.<$STR(S$斗笠价格4)>*<$STR(N$斗笠合成数量)>^-^253#2.大米*<$STR(N$斗笠大米4)>/@大米至尊斗笠>   \  \ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@材料至尊斗笠]
+
+#IF
+CHECKGAMEGOLD < <$STR(N$斗笠价格4)>
+#act
+MESSAGEBOX 对不起，您账户上的元宝不足<$STR(N$斗笠价格4)>个，请检查在来！
+BREAK
+
+#IF
+not CHECKITEM <$STR(S$斗笠材料)> <$STR(N$斗笠材料4)>
+#act
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$斗笠材料)>不足<$STR(N$斗笠材料4)>个，请检查在来！
+BREAK
+
+
+#IF
+not CHECKITEM <$STR(S$斗笠价格4)> <$STR(N$斗笠合成数量)>
+#act
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$斗笠价格4)>不足<$STR(N$斗笠合成数量)>个，请检查在来！
+BREAK
+
+
+
+
+
+
+#IF
+#act
+GAMEGOLD - <$STR(N$斗笠价格4)>
+TAKE <$STR(S$斗笠材料)> <$STR(N$斗笠材料4)>
+TAKE <$STR(S$斗笠价格4)> <$STR(N$斗笠合成数量)>
+GIVE <$STR(S$斗笠价格5)> 1
+MESSAGEBOX 恭喜您，成功合成<$STR(S$斗笠价格5)>！
+BREAK
+
+
+
+
+
+[@材料荣耀斗笠]
+
+#IF
+CHECKGAMEGOLD < <$STR(N$斗笠价格3)>
+#act
+MESSAGEBOX 对不起，您账户上的元宝不足<$STR(N$斗笠价格3)>个，请检查在来！
+BREAK
+
+#IF
+not CHECKITEM <$STR(S$斗笠材料)> <$STR(N$斗笠材料3)>
+#act
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$斗笠材料)>不足<$STR(N$斗笠材料3)>个，请检查在来！
+BREAK
+
+
+#IF
+not CHECKITEM <$STR(S$斗笠价格3)> <$STR(N$斗笠合成数量)>
+#act
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$斗笠价格3)>不足<$STR(N$斗笠合成数量)>个，请检查在来！
+BREAK
+
+
+
+
+
+
+#IF
+#act
+GAMEGOLD - <$STR(N$斗笠价格3)>
+TAKE <$STR(S$斗笠材料)> <$STR(N$斗笠材料3)>
+TAKE <$STR(S$斗笠价格3)> <$STR(N$斗笠合成数量)>
+GIVE <$STR(S$斗笠价格4)> 1
+MESSAGEBOX 恭喜您，成功合成<$STR(S$斗笠价格4)>！
+BREAK
+
+
+
+
+
+
+
+
+
+[@材料传奇斗笠]
+
+#IF
+CHECKGAMEGOLD < <$STR(N$斗笠价格2)>
+#act
+MESSAGEBOX 对不起，您账户上的元宝不足<$STR(N$斗笠价格2)>个，请检查在来！
+BREAK
+
+#IF
+not CHECKITEM <$STR(S$斗笠材料)> <$STR(N$斗笠材料2)>
+#act
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$斗笠材料)>不足<$STR(N$斗笠材料2)>个，请检查在来！
+BREAK
+
+
+#IF
+not CHECKITEM <$STR(S$斗笠价格2)> <$STR(N$斗笠合成数量)>
+#act
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$斗笠价格2)>不足<$STR(N$斗笠合成数量)>个，请检查在来！
+BREAK
+
+
+
+
+
+
+#IF
+#act
+GAMEGOLD - <$STR(N$斗笠价格2)>
+TAKE <$STR(S$斗笠材料)> <$STR(N$斗笠材料2)>
+TAKE <$STR(S$斗笠价格2)> <$STR(N$斗笠合成数量)>
+GIVE <$STR(S$斗笠价格3)> 1
+MESSAGEBOX 恭喜您，成功合成<$STR(S$斗笠价格3)>！
+BREAK
+
+
+
+
+
+
+
+
+
+
+[@材料王者斗笠]
+
+#IF
+CHECKGAMEGOLD < <$STR(N$斗笠价格1)>
+#act
+MESSAGEBOX 对不起，您账户上的元宝不足<$STR(N$斗笠价格1)>个，请检查在来！
+BREAK
+
+#IF
+not CHECKITEM <$STR(S$斗笠材料)> <$STR(N$斗笠材料1)>
+#act
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$斗笠材料)>不足<$STR(N$斗笠材料1)>个，请检查在来！
+BREAK
+
+
+#IF
+not CHECKITEM <$STR(S$斗笠价格1)> <$STR(N$斗笠合成数量)>
+#act
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$斗笠价格1)>不足<$STR(N$斗笠合成数量)>个，请检查在来！
+BREAK
+
+
+
+
+
+
+#IF
+#act
+GAMEGOLD - <$STR(N$斗笠价格1)>
+TAKE <$STR(S$斗笠材料)> <$STR(N$斗笠材料1)>
+TAKE <$STR(S$斗笠价格1)> <$STR(N$斗笠合成数量)>
+GIVE <$STR(S$斗笠价格2)> 1
+MESSAGEBOX 恭喜您，成功合成<$STR(S$斗笠价格2)>！
+BREAK
+
+
+
+
+[@材料星耀斗笠]
+
+#IF
+CHECKGAMEGOLD < <$STR(N$斗笠价格0)>
+#act
+MESSAGEBOX 对不起，您账户上的元宝不足<$STR(N$斗笠价格0)>个，请检查在来！
+BREAK
+
+
+#IF
+not CHECKITEM <$STR(S$斗笠材料)> <$STR(N$斗笠材料0)>
+#act
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$斗笠材料)>不足<$STR(N$斗笠材料0)>个，请检查在来！
+BREAK
+
+
+#IF
+not CHECKITEM <$STR(S$斗笠价格0)> <$STR(N$斗笠合成数量)>
+#act
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$斗笠价格0)>不足<$STR(N$斗笠合成数量)>个，请检查在来！
+BREAK
+
+
+
+#IF
+#act
+GAMEGOLD - <$STR(N$斗笠价格0)>
+TAKE <$STR(S$斗笠材料)> <$STR(N$斗笠材料0)>
+TAKE <$STR(S$斗笠价格0)> <$STR(N$斗笠合成数量)>
+GIVE <$STR(S$斗笠价格1)> 1
+MESSAGEBOX 恭喜您，成功合成<$STR(S$斗笠价格1)>！
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+[@大米至尊斗笠]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$斗笠大米4)>
+#act
+MESSAGEBOX 对不起，您账户上的大米不足<$STR(N$斗笠大米4)>点，请检查在来！
+BREAK
+
+
+
+#IF
+not CHECKITEM <$STR(S$斗笠价格4)> <$STR(N$斗笠合成数量)>
+#act
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$斗笠价格4)>不足<$STR(N$斗笠合成数量)>个，请检查在来！
+BREAK
+
+
+
+
+
+
+#IF
+#act
+GAMEPOINT - <$STR(N$斗笠大米4)>
+TAKE <$STR(S$斗笠价格4)> <$STR(N$斗笠合成数量)>
+GIVE <$STR(S$斗笠价格5)> 1
+MESSAGEBOX 恭喜您，成功合成<$STR(S$斗笠价格5)>！
+BREAK
+
+
+
+
+
+[@大米荣耀斗笠]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$斗笠大米3)>
+#act
+MESSAGEBOX 对不起，您账户上的大米不足<$STR(N$斗笠大米3)>点，请检查在来！
+BREAK
+
+
+
+#IF
+not CHECKITEM <$STR(S$斗笠价格3)> <$STR(N$斗笠合成数量)>
+#act
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$斗笠价格3)>不足<$STR(N$斗笠合成数量)>个，请检查在来！
+BREAK
+
+
+
+#IF
+#act
+GAMEPOINT - <$STR(N$斗笠大米3)>
+TAKE <$STR(S$斗笠价格3)> <$STR(N$斗笠合成数量)>
+GIVE <$STR(S$斗笠价格4)> 1
+MESSAGEBOX 恭喜您，成功合成<$STR(S$斗笠价格4)>！
+BREAK
+
+
+
+
+
+
+
+
+
+[@大米传奇斗笠]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$斗笠大米2)>
+#act
+MESSAGEBOX 对不起，您账户上的大米不足<$STR(N$斗笠大米2)>点，请检查在来！
+BREAK
+
+
+#IF
+not CHECKITEM <$STR(S$斗笠价格2)> <$STR(N$斗笠合成数量)>
+#act
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$斗笠价格2)>不足<$STR(N$斗笠合成数量)>个，请检查在来！
+BREAK
+
+
+
+
+
+
+#IF
+#act
+GAMEPOINT - <$STR(N$斗笠大米2)>
+TAKE <$STR(S$斗笠价格2)> <$STR(N$斗笠合成数量)>
+GIVE <$STR(S$斗笠价格3)> 1
+MESSAGEBOX 恭喜您，成功合成<$STR(S$斗笠价格3)>！
+BREAK
+
+
+
+
+
+
+
+[@大米王者斗笠]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$斗笠大米1)>
+#act
+MESSAGEBOX 对不起，您账户上的大米不足<$STR(N$斗笠大米1)>点，请检查在来！
+BREAK
+
+
+#IF
+not CHECKITEM <$STR(S$斗笠价格1)> <$STR(N$斗笠合成数量)>
+#act
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$斗笠价格1)>不足<$STR(N$斗笠合成数量)>个，请检查在来！
+BREAK
+
+
+
+
+
+
+#IF
+#act
+GAMEPOINT - <$STR(N$斗笠大米1)>
+TAKE <$STR(S$斗笠价格1)> <$STR(N$斗笠合成数量)>
+GIVE <$STR(S$斗笠价格2)> 1
+MESSAGEBOX 恭喜您，成功合成<$STR(S$斗笠价格2)>！
+BREAK
+
+
+
+
+[@大米星耀斗笠]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$斗笠大米0)>
+#act
+MESSAGEBOX 对不起，您账户上的大米不足<$STR(N$斗笠大米0)>点，请检查在来！
+BREAK
+
+
+
+#IF
+not CHECKITEM <$STR(S$斗笠价格0)> <$STR(N$斗笠合成数量)>
+#act
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$斗笠价格0)>不足<$STR(N$斗笠合成数量)>个，请检查在来！
+BREAK
+
+
+
+#IF
+#act
+GAMEPOINT - <$STR(N$斗笠大米0)>
+TAKE <$STR(S$斗笠价格0)> <$STR(N$斗笠合成数量)>
+GIVE <$STR(S$斗笠价格1)> 1
+MESSAGEBOX 恭喜您，成功合成<$STR(S$斗笠价格1)>！
+BREAK
+
+

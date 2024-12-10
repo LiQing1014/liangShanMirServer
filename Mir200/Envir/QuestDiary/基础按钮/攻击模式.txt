@@ -1,0 +1,33 @@
+[@攻击模式]
+{
+
+#IF
+CheckAttackMode 0
+#ACT
+MOV S$AN_MS qt
+#IF
+CheckAttackMode 1
+#ACT
+MOV S$AN_MS hp
+#IF
+CheckAttackMode 4
+#ACT
+MOV S$AN_MS bz
+#IF
+CheckAttackMode 5
+#ACT
+MOV S$AN_MS hh
+#IF
+CheckAttackMode 6
+#ACT
+MOV S$AN_MS se
+#IF
+Equal <$CLIENTFLAG> 2
+#ACT
+DELBUTTON 108 3
+; MOV S$模式按钮 <Button|id=2|x=-320|y=-68|width=37|height=37|pimg=custom/rt/ui/an_<$STR(S$AN_MS)>_2.png|color=255|nimg=custom/rt/ui/an_<$STR(S$AN_MS)>_1.png|link=@切换模式>
+MOV S$模式按钮 <Button|id=2|x=205|y=-70|pimg=custom/rt/ui/an_qt_2.png|color=255|nimg=custom/rt/ui/an_qt_1.png|link=@切换模式>
+ADDBUTTON 108 3 <$STR(S$模式按钮)>
+
+}
+

@@ -1,0 +1,166 @@
+[@战神类回收d]
+{
+#IF
+checkitem 战神项链 1
+#ACT
+take 战神项链 1
+inc m39 1
+inc m37 100000000
+goto @战神类回收d
+
+#IF
+checkitem 战神手镯 1
+#ACT
+take 战神手镯 1
+inc m39 1
+inc m37 100000000
+goto @战神类回收d
+#IF
+checkitem 战神戒指 1
+#ACT
+take 战神戒指 1
+inc m39 1
+inc m37 100000000
+goto @战神类回收d
+
+#IF
+checkitem 战神头盔 1
+#ACT
+take 战神头盔 1
+inc m39 1
+inc m37 100000000
+goto @战神类回收d
+
+
+#IF
+checkitem 战神战靴 1
+#ACT
+take 战神战靴 1
+inc m39 1
+inc m37 25000000
+goto @战神类回收d
+
+
+#IF
+checkitem 战神腰带 1
+#ACT
+take 战神腰带 1
+inc m39 1
+inc m37 25000000
+goto @战神类回收d
+
+
+
+#IF
+checkitem 圣魔项链 1
+#ACT
+take 圣魔项链 1
+inc m39 1
+inc m37 100000000
+goto @战神类回收d
+
+#IF
+checkitem 圣魔手镯 1
+#ACT
+take 圣魔手镯 1
+inc m39 1
+inc m37 100000000
+goto @战神类回收d
+#IF
+checkitem 圣魔戒指 1
+#ACT
+take 圣魔戒指 1
+inc m39 1
+inc m37 100000000
+goto @战神类回收d
+
+#IF
+checkitem 圣魔头盔 1
+#ACT
+take 圣魔头盔 1
+inc m39 1
+inc m37 100000000
+goto @战神类回收d
+
+
+#IF
+checkitem 圣魔魔靴 1
+#ACT
+take 圣魔魔靴 1
+inc m39 1
+inc m37 25000000
+goto @战神类回收d
+
+
+#IF
+checkitem 圣魔腰带 1
+#ACT
+take 圣魔腰带 1
+inc m39 1
+inc m37 25000000
+goto @战神类回收d
+
+
+
+
+#IF
+checkitem 真魂项链 1
+#ACT
+take 真魂项链 1
+inc m39 1
+inc m37 100000000
+goto @战神类回收d
+
+#IF
+checkitem 真魂手镯 1
+#ACT
+take 真魂手镯 1
+inc m39 1
+inc m37 100000000
+goto @战神类回收d
+#IF
+checkitem 真魂戒指 1
+#ACT
+take 真魂戒指 1
+inc m39 1
+inc m37 100000000
+goto @战神类回收d
+
+#IF
+checkitem 真魂头盔 1
+#ACT
+take 真魂头盔 1
+inc m39 1
+inc m37 100000000
+goto @战神类回收d
+
+
+#IF
+checkitem 真魂道靴 1
+#ACT
+take 真魂道靴 1
+inc m39 1
+inc m37 25000000
+goto @战神类回收d
+
+
+#IF
+checkitem 真魂腰带 1
+#ACT
+take 真魂腰带 1
+inc m39 1
+inc m37 25000000
+goto @战神类回收d
+
+
+
+#IF
+LARGE M37 0
+#ACT
+CHANGEEXP + <$STR(M37)> 
+GuildNoticeMsg 255 141  【%s】回收了<$STR(M39)>个圣魔系列装备,获得大量经验！
+MOV M37 0
+MOV M39 0
+BREAK
+#ELSEACT
+}

@@ -1,0 +1,781 @@
+[@main]
+#IF
+#ACT
+;DEPRIVETITLE 贵族VIP21
+MOV S$普升称号材料 魔法神石
+MOV N$普升称号材料 10
+MOV N$普升称号元宝 10000
+MOV N$普升称号充值 10
+MOV S$当前称号A {无贵族VIP/FCOLOR=230}
+MOV S$当前称号 
+MOV S$下级称号 贵族VIP1
+MOV S$下级称号A {贵族VIP1/FCOLOR=161}
+MOV S$当前属性  {当前无贵族VIP:/FCOLOR=161}[{攻魔道+0-0/FCOLOR=230}]
+MOV S$当前属性1 {当前无贵族VIP:/FCOLOR=161}[{防　御+0-0/FCOLOR=230}]
+MOV S$当前属性2 {当前无贵族VIP:/FCOLOR=161}[{体力元素+0%/FCOLOR=230}]
+MOV S$当前属性3 {当前无贵族VIP:/FCOLOR=161}[{怪物爆率+0%/FCOLOR=230}]
+MOV S$当前属性4 
+MOV S$下级属性  {<$STR(S$下级称号)>:/FCOLOR=161}[{攻魔道+1-1/FCOLOR=231}]
+MOV S$下级属性1 {<$STR(S$下级称号)>:/FCOLOR=161}[{防　御+1-1/FCOLOR=231}]
+MOV S$下级属性2 {<$STR(S$下级称号)>:/FCOLOR=161}[{体力元素+1%/FCOLOR=231}]
+MOV S$下级属性3 {<$STR(S$下级称号)>:/FCOLOR=161}[{怪物爆率+50%/FCOLOR=231}]
+MOV S$下级属性4 
+MOV S$普升按钮  <text:散人普升|^-^250#普升条件：^-^146#1：<$STR(S$普升称号材料)>*<$STR(N$普升称号材料)>^-^251#2：元宝*<$STR(N$普升称号元宝)>:130:-25/@普升贵族VIP>
+MOV S$普升按钮1 <text:土豪普升|^-^249#普升条件：^-^254#充值达到<$STR(N$普升称号充值)>点^-^250#免费普升^-^253#当前充值：<$GAMEGIRD>点:130:-25/@土豪普升贵族VIP>
+
+#IF
+CHECKTITLE 贵族VIP1
+#ACT
+MOV U130 1
+MOV S$普升称号材料 魔法神石
+MOV N$普升称号材料 20
+MOV N$普升称号元宝 20000
+MOV N$普升称号充值 20
+MOV S$当前称号A {贵族VIP1/FCOLOR=161}
+MOV S$当前称号 贵族VIP1
+MOV S$下级称号 贵族VIP2
+MOV S$下级称号A {贵族VIP2/FCOLOR=230}
+MOV S$当前属性  {<$STR(S$当前称号)>:/FCOLOR=161}[{攻魔道+1-1/FCOLOR=250}]
+MOV S$当前属性1 {<$STR(S$当前称号)>:/FCOLOR=161}[{防　御+1-1/FCOLOR=250}]
+MOV S$当前属性2 {<$STR(S$当前称号)>:/FCOLOR=161}[{体力元素+1%/FCOLOR=254}]
+MOV S$当前属性3 {<$STR(S$当前称号)>:/FCOLOR=161}[{怪物爆率+50%/FCOLOR=253}]
+MOV S$当前属性4 
+MOV S$下级属性  {<$STR(S$下级称号)>:/FCOLOR=161}[{攻魔道+2-2/FCOLOR=231}]
+MOV S$下级属性1 {<$STR(S$下级称号)>:/FCOLOR=161}[{防　御+2-2/FCOLOR=231}]
+MOV S$下级属性2 {<$STR(S$下级称号)>:/FCOLOR=161}[{体力元素+2%/FCOLOR=231}]
+MOV S$下级属性3 {<$STR(S$下级称号)>:/FCOLOR=161}[{怪物爆率+100%/FCOLOR=231}]
+MOV S$下级属性4 
+MOV S$普升按钮  <text:散人普升|^-^250#普升条件：^-^146#1：<$STR(S$普升称号材料)>*<$STR(N$普升称号材料)>^-^251#2：元宝*<$STR(N$普升称号元宝)>:130:-25/@普升贵族VIP>
+MOV S$普升按钮1 <text:土豪普升|^-^249#普升条件：^-^254#充值达到<$STR(N$普升称号充值)>点^-^250#免费普升^-^253#当前充值：<$GAMEGIRD>点:130:-25/@土豪普升贵族VIP>
+
+
+#IF
+CHECKTITLE 贵族VIP2
+#ACT
+MOV U130 2
+MOV S$普升称号材料 魔法神石
+MOV N$普升称号材料 30
+MOV N$普升称号元宝 30000
+MOV N$普升称号充值 30
+MOV S$当前称号A {贵族VIP2/FCOLOR=161}
+MOV S$当前称号 贵族VIP2
+MOV S$下级称号 贵族VIP3
+MOV S$下级称号A {贵族VIP3/FCOLOR=230}
+MOV S$当前属性  {<$STR(S$当前称号)>:/FCOLOR=161}[{攻魔道+2-2/FCOLOR=250}]
+MOV S$当前属性1 {<$STR(S$当前称号)>:/FCOLOR=161}[{防　御+2-2/FCOLOR=250}]
+MOV S$当前属性2 {<$STR(S$当前称号)>:/FCOLOR=161}[{体力元素+2%/FCOLOR=254}]
+MOV S$当前属性3 {<$STR(S$当前称号)>:/FCOLOR=161}[{怪物爆率+100%/FCOLOR=253}]
+MOV S$当前属性4 
+MOV S$下级属性  {<$STR(S$下级称号)>:/FCOLOR=161}[{攻魔道+3-3/FCOLOR=231}]
+MOV S$下级属性1 {<$STR(S$下级称号)>:/FCOLOR=161}[{防　御+3-3/FCOLOR=231}]
+MOV S$下级属性2 {<$STR(S$下级称号)>:/FCOLOR=161}[{体力元素+3%/FCOLOR=231}]
+MOV S$下级属性3 {<$STR(S$下级称号)>:/FCOLOR=161}[{怪物爆率+150%/FCOLOR=231}]
+MOV S$下级属性4 
+MOV S$普升按钮  <text:散人普升|^-^250#普升条件：^-^146#1：<$STR(S$普升称号材料)>*<$STR(N$普升称号材料)>^-^251#2：元宝*<$STR(N$普升称号元宝)>:130:-25/@普升贵族VIP>
+MOV S$普升按钮1 <text:土豪普升|^-^249#普升条件：^-^254#充值达到<$STR(N$普升称号充值)>点^-^250#免费普升^-^253#当前充值：<$GAMEGIRD>点:130:-25/@土豪普升贵族VIP>
+
+
+#IF
+CHECKTITLE 贵族VIP3
+#ACT
+MOV U130 3
+MOV S$普升称号材料 魔法神石
+MOV N$普升称号材料 50
+MOV N$普升称号元宝 50000
+MOV N$普升称号充值 50
+MOV S$当前称号A {贵族VIP3/FCOLOR=161}
+MOV S$当前称号 贵族VIP3
+MOV S$下级称号 贵族VIP4
+MOV S$下级称号A {贵族VIP4/FCOLOR=230}
+MOV S$当前属性  {<$STR(S$当前称号)>:/FCOLOR=161}[{攻魔道+3-3/FCOLOR=250}]
+MOV S$当前属性1 {<$STR(S$当前称号)>:/FCOLOR=161}[{防　御+3-3/FCOLOR=250}]
+MOV S$当前属性2 {<$STR(S$当前称号)>:/FCOLOR=161}[{体力元素+3%/FCOLOR=254}]
+MOV S$当前属性3 {<$STR(S$当前称号)>:/FCOLOR=161}[{怪物爆率+150%/FCOLOR=253}]
+MOV S$当前属性4 
+MOV S$下级属性  {<$STR(S$下级称号)>:/FCOLOR=161}[{攻魔道+4-4/FCOLOR=231}]
+MOV S$下级属性1 {<$STR(S$下级称号)>:/FCOLOR=161}[{防　御+4-4/FCOLOR=231}]
+MOV S$下级属性2 {<$STR(S$下级称号)>:/FCOLOR=161}[{体力元素+4%/FCOLOR=231}]
+MOV S$下级属性3 {<$STR(S$下级称号)>:/FCOLOR=161}[{怪物爆率+200%/FCOLOR=231}]
+MOV S$下级属性4 
+MOV S$普升按钮  <text:散人普升|^-^250#普升条件：^-^146#1：<$STR(S$普升称号材料)>*<$STR(N$普升称号材料)>^-^251#2：元宝*<$STR(N$普升称号元宝)>:130:-25/@普升贵族VIP>
+MOV S$普升按钮1 <text:土豪普升|^-^249#普升条件：^-^254#充值达到<$STR(N$普升称号充值)>点^-^250#免费普升^-^253#当前充值：<$GAMEGIRD>点:130:-25/@土豪普升贵族VIP>
+
+
+
+#IF
+CHECKTITLE 贵族VIP4
+#ACT
+MOV U130 4
+MOV S$普升称号材料 魔法神石
+MOV N$普升称号材料 70
+MOV N$普升称号元宝 70000
+MOV N$普升称号充值 100
+MOV S$当前称号A {贵族VIP4/FCOLOR=250}
+MOV S$当前称号 贵族VIP4
+MOV S$下级称号 贵族VIP5
+MOV S$下级称号A {贵族VIP5/FCOLOR=230}
+MOV S$当前属性  {<$STR(S$当前称号)>:/FCOLOR=161}[{攻魔道+4-4/FCOLOR=250}]
+MOV S$当前属性1 {<$STR(S$当前称号)>:/FCOLOR=161}[{防　御+4-4/FCOLOR=250}]
+MOV S$当前属性2 {<$STR(S$当前称号)>:/FCOLOR=161}[{体力元素+4%/FCOLOR=254}]
+MOV S$当前属性3 {<$STR(S$当前称号)>:/FCOLOR=161}[{怪物爆率+200%/FCOLOR=253}]
+MOV S$当前属性4 
+MOV S$下级属性  {<$STR(S$下级称号)>:/FCOLOR=161}[{攻魔道+5-5/FCOLOR=231}]
+MOV S$下级属性1 {<$STR(S$下级称号)>:/FCOLOR=161}[{防　御+5-5/FCOLOR=231}]
+MOV S$下级属性2 {<$STR(S$下级称号)>:/FCOLOR=161}[{体力元素+5%/FCOLOR=231}]
+MOV S$下级属性3 {<$STR(S$下级称号)>:/FCOLOR=161}[{怪物爆率+250%/FCOLOR=231}]
+MOV S$下级属性4 
+MOV S$普升按钮  <text:散人普升|^-^250#普升条件：^-^146#1：<$STR(S$普升称号材料)>*<$STR(N$普升称号材料)>^-^251#2：元宝*<$STR(N$普升称号元宝)>:130:-25/@普升贵族VIP>
+MOV S$普升按钮1 <text:土豪普升|^-^249#普升条件：^-^254#充值达到<$STR(N$普升称号充值)>点^-^250#免费普升^-^253#当前充值：<$GAMEGIRD>点:130:-25/@土豪普升贵族VIP>
+
+
+
+
+
+
+#IF
+CHECKTITLE 贵族VIP5
+#ACT
+MOV U130 5
+MOV S$普升称号材料 魔法神石
+MOV N$普升称号材料 90
+MOV N$普升称号元宝 90000
+MOV N$普升称号充值 150
+MOV S$当前称号A {贵族VIP5/FCOLOR=250}
+MOV S$当前称号 贵族VIP5
+MOV S$下级称号 贵族VIP6
+MOV S$下级称号A {贵族VIP5/FCOLOR=230}
+MOV S$当前属性  {<$STR(S$当前称号)>:/FCOLOR=161}[{攻魔道+5-5/FCOLOR=250}]
+MOV S$当前属性1 {<$STR(S$当前称号)>:/FCOLOR=161}[{防　御+5-5/FCOLOR=250}]
+MOV S$当前属性2 {<$STR(S$当前称号)>:/FCOLOR=161}[{体力元素+5%/FCOLOR=254}]
+MOV S$当前属性3 {<$STR(S$当前称号)>:/FCOLOR=161}[{怪物爆率+250%/FCOLOR=253}]
+MOV S$当前属性4 
+MOV S$下级属性  {<$STR(S$下级称号)>:/FCOLOR=161}[{攻魔道+6-6/FCOLOR=231}]
+MOV S$下级属性1 {<$STR(S$下级称号)>:/FCOLOR=161}[{防　御+6-6/FCOLOR=231}]
+MOV S$下级属性2 {<$STR(S$下级称号)>:/FCOLOR=161}[{体力元素+6%/FCOLOR=231}]
+MOV S$下级属性3 {<$STR(S$下级称号)>:/FCOLOR=161}[{怪物爆率+300%/FCOLOR=231}]
+MOV S$下级属性4 
+MOV S$普升按钮  <text:散人普升|^-^250#普升条件：^-^146#1：<$STR(S$普升称号材料)>*<$STR(N$普升称号材料)>^-^251#2：元宝*<$STR(N$普升称号元宝)>:130:-25/@普升贵族VIP>
+MOV S$普升按钮1 <text:土豪普升|^-^249#普升条件：^-^254#充值达到<$STR(N$普升称号充值)>点^-^250#免费普升^-^253#当前充值：<$GAMEGIRD>点:130:-25/@土豪普升贵族VIP>
+
+
+
+
+#IF
+CHECKTITLE 贵族VIP6
+#ACT
+MOV U130 6
+MOV S$普升称号材料 魔法神石
+MOV N$普升称号材料 120
+MOV N$普升称号元宝 120000
+MOV N$普升称号充值 200
+MOV S$当前称号A {贵族VIP6/FCOLOR=250}
+MOV S$当前称号 贵族VIP6
+MOV S$下级称号 贵族VIP7
+MOV S$下级称号A {贵族VIP7/FCOLOR=230}
+MOV S$当前属性  {<$STR(S$当前称号)>:/FCOLOR=161}[{攻魔道+6-6/FCOLOR=250}]
+MOV S$当前属性1 {<$STR(S$当前称号)>:/FCOLOR=161}[{防　御+6-6/FCOLOR=250}]
+MOV S$当前属性2 {<$STR(S$当前称号)>:/FCOLOR=161}[{体力元素+6%/FCOLOR=254}]
+MOV S$当前属性3 {<$STR(S$当前称号)>:/FCOLOR=161}[{怪物爆率+300%/FCOLOR=253}]
+MOV S$当前属性4 
+MOV S$下级属性  {<$STR(S$下级称号)>:/FCOLOR=161}[{攻魔道+7-7/FCOLOR=231}]
+MOV S$下级属性1 {<$STR(S$下级称号)>:/FCOLOR=161}[{防　御+7-7/FCOLOR=231}]
+MOV S$下级属性2 {<$STR(S$下级称号)>:/FCOLOR=161}[{体力元素+7%/FCOLOR=231}]
+MOV S$下级属性3 {<$STR(S$下级称号)>:/FCOLOR=161}[{怪物爆率+350%/FCOLOR=231}]
+MOV S$下级属性4 
+MOV S$普升按钮  <text:散人普升|^-^250#普升条件：^-^146#1：<$STR(S$普升称号材料)>*<$STR(N$普升称号材料)>^-^251#2：元宝*<$STR(N$普升称号元宝)>:130:-25/@普升贵族VIP>
+MOV S$普升按钮1 <text:土豪普升|^-^249#普升条件：^-^254#充值达到<$STR(N$普升称号充值)>点^-^250#免费普升^-^253#当前充值：<$GAMEGIRD>点:130:-25/@土豪普升贵族VIP>
+
+
+
+#IF
+CHECKTITLE 贵族VIP7
+#ACT
+SET [415] 1
+MOV U130 7
+MOV S$普升称号材料 魔法神石
+MOV N$普升称号材料 150
+MOV N$普升称号元宝 150000
+MOV N$普升称号充值 300
+MOV S$当前称号A {贵族VIP7/FCOLOR=251}
+MOV S$当前称号 贵族VIP7
+MOV S$下级称号 贵族VIP8
+MOV S$下级称号A {贵族VIP8/FCOLOR=230}
+MOV S$当前属性  {<$STR(S$当前称号)>:/FCOLOR=161}[{攻魔道+7-7/FCOLOR=250}]
+MOV S$当前属性1 {<$STR(S$当前称号)>:/FCOLOR=161}[{防　御+7-7/FCOLOR=250}]
+MOV S$当前属性2 {<$STR(S$当前称号)>:/FCOLOR=161}[{体力元素+7%/FCOLOR=254}]
+MOV S$当前属性3 {<$STR(S$当前称号)>:/FCOLOR=161}[{怪物爆率+350%/FCOLOR=253}]
+MOV S$当前属性4 
+MOV S$下级属性  {<$STR(S$下级称号)>:/FCOLOR=161}[{攻魔道+8-8/FCOLOR=231}]
+MOV S$下级属性1 {<$STR(S$下级称号)>:/FCOLOR=161}[{防　御+8-8/FCOLOR=231}]
+MOV S$下级属性2 {<$STR(S$下级称号)>:/FCOLOR=161}[{体力元素+8%/FCOLOR=231}]
+MOV S$下级属性3 {<$STR(S$下级称号)>:/FCOLOR=161}[{怪物爆率+400%/FCOLOR=231}]
+MOV S$下级属性4 
+MOV S$普升按钮  <text:散人普升|^-^250#普升条件：^-^146#1：<$STR(S$普升称号材料)>*<$STR(N$普升称号材料)>^-^251#2：元宝*<$STR(N$普升称号元宝)>:130:-25/@普升贵族VIP>
+MOV S$普升按钮1 <text:土豪普升|^-^249#普升条件：^-^254#充值达到<$STR(N$普升称号充值)>点^-^250#免费普升^-^253#当前充值：<$GAMEGIRD>点:130:-25/@土豪普升贵族VIP>
+
+
+
+
+#IF
+CHECKTITLE 贵族VIP8
+#ACT
+MOV U130 8
+MOV S$普升称号材料 魔法神石
+MOV N$普升称号材料 180
+MOV N$普升称号元宝 180000
+MOV N$普升称号充值 400
+MOV S$当前称号A {贵族VIP8/FCOLOR=251}
+MOV S$当前称号 贵族VIP8
+MOV S$下级称号 贵族VIP9
+MOV S$下级称号A {贵族VIP9/FCOLOR=230}
+MOV S$当前属性  {<$STR(S$当前称号)>:/FCOLOR=161}[{攻魔道+8-8/FCOLOR=250}]
+MOV S$当前属性1 {<$STR(S$当前称号)>:/FCOLOR=161}[{防　御+8-8/FCOLOR=250}]
+MOV S$当前属性2 {<$STR(S$当前称号)>:/FCOLOR=161}[{体力元素+8%/FCOLOR=254}]
+MOV S$当前属性3 {<$STR(S$当前称号)>:/FCOLOR=161}[{怪物爆率+400%/FCOLOR=253}]
+MOV S$当前属性4 
+MOV S$下级属性  {<$STR(S$下级称号)>:/FCOLOR=161}[{攻魔道+9-9/FCOLOR=231}]
+MOV S$下级属性1 {<$STR(S$下级称号)>:/FCOLOR=161}[{防　御+9-9/FCOLOR=231}]
+MOV S$下级属性2 {<$STR(S$下级称号)>:/FCOLOR=161}[{体力元素+9%/FCOLOR=231}]
+MOV S$下级属性3 {<$STR(S$下级称号)>:/FCOLOR=161}[{怪物爆率+450%/FCOLOR=231}]
+MOV S$下级属性4 
+MOV S$普升按钮  <text:散人普升|^-^250#普升条件：^-^146#1：<$STR(S$普升称号材料)>*<$STR(N$普升称号材料)>^-^251#2：元宝*<$STR(N$普升称号元宝)>:130:-25/@普升贵族VIP>
+MOV S$普升按钮1 <text:土豪普升|^-^249#普升条件：^-^254#充值达到<$STR(N$普升称号充值)>点^-^250#免费普升^-^253#当前充值：<$GAMEGIRD>点:130:-25/@土豪普升贵族VIP>
+
+
+#IF
+CHECKTITLE 贵族VIP9
+#ACT
+MOV U130 9
+MOV S$普升称号材料 魔法神石
+MOV N$普升称号材料 200
+MOV N$普升称号元宝 200000
+MOV N$普升称号充值 500
+MOV S$当前称号A {贵族VIP9/FCOLOR=251}
+MOV S$当前称号 贵族VIP9
+MOV S$下级称号 贵族VIP10
+MOV S$下级称号A {贵族VIP10/FCOLOR=230}
+MOV S$当前属性  {<$STR(S$当前称号)>:/FCOLOR=161}[{攻魔道+9-9/FCOLOR=250}]
+MOV S$当前属性1 {<$STR(S$当前称号)>:/FCOLOR=161}[{防　御+9-9/FCOLOR=250}]
+MOV S$当前属性2 {<$STR(S$当前称号)>:/FCOLOR=161}[{体力元素+9%/FCOLOR=254}]
+MOV S$当前属性3 {<$STR(S$当前称号)>:/FCOLOR=161}[{怪物爆率+450%/FCOLOR=253}]
+MOV S$当前属性4 
+MOV S$下级属性  {<$STR(S$下级称号)>:/FCOLOR=161}[{攻魔道+10-10/FCOLOR=231}]
+MOV S$下级属性1 {<$STR(S$下级称号)>:/FCOLOR=161}[{防　御+10-10/FCOLOR=231}]
+MOV S$下级属性2 {<$STR(S$下级称号)>:/FCOLOR=161}[{体力元素+10%/FCOLOR=231}]
+MOV S$下级属性3 {<$STR(S$下级称号)>:/FCOLOR=161}[{怪物爆率+500%/FCOLOR=231}]
+MOV S$下级属性4 
+MOV S$普升按钮  <text:散人普升|^-^250#普升条件：^-^146#1：<$STR(S$普升称号材料)>*<$STR(N$普升称号材料)>^-^251#2：元宝*<$STR(N$普升称号元宝)>:130:-25/@普升贵族VIP>
+MOV S$普升按钮1 <text:土豪普升|^-^249#普升条件：^-^254#充值达到<$STR(N$普升称号充值)>点^-^250#免费普升^-^253#当前充值：<$GAMEGIRD>点:130:-25/@土豪普升贵族VIP>
+
+
+
+#IF
+CHECKTITLE 贵族VIP10
+#ACT
+MOV U130 10
+MOV S$普升称号材料 魔法神石
+MOV N$普升称号材料 250
+MOV N$普升称号元宝 250000
+MOV N$普升称号充值 700
+MOV S$当前称号A {贵族VIP10/FCOLOR=70}
+MOV S$当前称号 贵族VIP10
+MOV S$下级称号 贵族VIP11
+MOV S$下级称号A {贵族VIP11/FCOLOR=230}
+MOV S$当前属性  {<$STR(S$当前称号)>:/FCOLOR=161}[{攻魔道+10-10/FCOLOR=250}]
+MOV S$当前属性1 {<$STR(S$当前称号)>:/FCOLOR=161}[{防　御+10-10/FCOLOR=250}]
+MOV S$当前属性2 {<$STR(S$当前称号)>:/FCOLOR=161}[{体力元素+10%/FCOLOR=254}]
+MOV S$当前属性3 {<$STR(S$当前称号)>:/FCOLOR=161}[{攻伤元素+1%/FCOLOR=231}]
+MOV S$当前属性4 {<$STR(S$当前称号)>:/FCOLOR=161}[{怪物爆率+500%/FCOLOR=253}]
+
+
+MOV S$下级属性  {<$STR(S$下级称号)>:/FCOLOR=161}[{攻魔道+11-11/FCOLOR=231}]
+MOV S$下级属性1 {<$STR(S$下级称号)>:/FCOLOR=161}[{防　御+11-11/FCOLOR=231}]
+MOV S$下级属性2 {<$STR(S$下级称号)>:/FCOLOR=161}[{体力元素+11%/FCOLOR=231}]
+MOV S$下级属性3 {<$STR(S$下级称号)>:/FCOLOR=161}[{攻伤元素+2%/FCOLOR=231}]
+MOV S$下级属性4 {<$STR(S$下级称号)>:/FCOLOR=161}[{怪物爆率+550%/FCOLOR=231}]
+MOV S$普升按钮  <text:散人普升|^-^250#普升条件：^-^146#1：<$STR(S$普升称号材料)>*<$STR(N$普升称号材料)>^-^251#2：元宝*<$STR(N$普升称号元宝)>:130:-25/@普升贵族VIP>
+MOV S$普升按钮1 <text:土豪普升|^-^249#普升条件：^-^254#充值达到<$STR(N$普升称号充值)>点^-^250#免费普升^-^253#当前充值：<$GAMEGIRD>点:130:-25/@土豪普升贵族VIP>
+
+
+#IF
+CHECKTITLE 贵族VIP11
+#ACT
+MOV U130 11
+MOV S$普升称号材料 魔法神石
+MOV N$普升称号材料 300
+MOV N$普升称号元宝 300000
+MOV N$普升称号充值 900
+MOV S$当前称号A {贵族VIP11/FCOLOR=70}
+MOV S$当前称号 贵族VIP11
+MOV S$下级称号 贵族VIP12
+MOV S$下级称号A {贵族VIP12/FCOLOR=230}
+MOV S$当前属性  {<$STR(S$当前称号)>:/FCOLOR=161}[{攻魔道+11-11/FCOLOR=250}]
+MOV S$当前属性1 {<$STR(S$当前称号)>:/FCOLOR=161}[{防　御+11-11/FCOLOR=250}]
+MOV S$当前属性2 {<$STR(S$当前称号)>:/FCOLOR=161}[{体力元素+11%/FCOLOR=254}]
+MOV S$当前属性3 {<$STR(S$当前称号)>:/FCOLOR=161}[{攻伤元素+2%/FCOLOR=254}]
+MOV S$当前属性4 {<$STR(S$当前称号)>:/FCOLOR=161}[{怪物爆率+550%/FCOLOR=253}]
+
+MOV S$下级属性  {<$STR(S$下级称号)>:/FCOLOR=161}[{攻魔道+12-12/FCOLOR=231}]
+MOV S$下级属性1 {<$STR(S$下级称号)>:/FCOLOR=161}[{防　御+12-12/FCOLOR=231}]
+MOV S$下级属性2 {<$STR(S$下级称号)>:/FCOLOR=161}[{体力元素+12%/FCOLOR=231}]
+MOV S$下级属性3 {<$STR(S$下级称号)>:/FCOLOR=161}[{攻伤元素+3%/FCOLOR=231}]
+MOV S$下级属性4 {<$STR(S$下级称号)>:/FCOLOR=161}[{怪物爆率+650%/FCOLOR=231}]
+MOV S$普升按钮  <text:散人普升|^-^250#普升条件：^-^146#1：<$STR(S$普升称号材料)>*<$STR(N$普升称号材料)>^-^251#2：元宝*<$STR(N$普升称号元宝)>:130:-25/@普升贵族VIP>
+MOV S$普升按钮1 <text:土豪普升|^-^249#普升条件：^-^254#充值达到<$STR(N$普升称号充值)>点^-^250#免费普升^-^253#当前充值：<$GAMEGIRD>点:130:-25/@土豪普升贵族VIP>
+
+
+
+
+
+#IF
+CHECKTITLE 贵族VIP12
+#ACT
+MOV U130 12
+MOV S$普升称号材料 魔法神石
+MOV N$普升称号材料 350
+MOV N$普升称号元宝 350000
+MOV N$普升称号充值 1200
+MOV S$当前称号A {贵族VIP12/FCOLOR=70}
+MOV S$当前称号 贵族VIP12
+MOV S$下级称号 贵族VIP13
+MOV S$下级称号A {贵族VIP13/FCOLOR=230}
+MOV S$当前属性  {<$STR(S$当前称号)>:/FCOLOR=161}[{攻魔道+12-12/FCOLOR=250}]
+MOV S$当前属性1 {<$STR(S$当前称号)>:/FCOLOR=161}[{防　御+12-12/FCOLOR=250}]
+MOV S$当前属性2 {<$STR(S$当前称号)>:/FCOLOR=161}[{体力元素+12%/FCOLOR=254}]
+MOV S$当前属性3 {<$STR(S$当前称号)>:/FCOLOR=161}[{攻伤元素+3%/FCOLOR=254}]
+MOV S$当前属性4 {<$STR(S$当前称号)>:/FCOLOR=161}[{怪物爆率+600%/FCOLOR=253}]
+
+MOV S$下级属性  {<$STR(S$下级称号)>:/FCOLOR=161}[{攻魔道+13-13/FCOLOR=231}]
+MOV S$下级属性1 {<$STR(S$下级称号)>:/FCOLOR=161}[{防　御+13-13/FCOLOR=231}]
+MOV S$下级属性2 {<$STR(S$下级称号)>:/FCOLOR=161}[{体力元素+13%/FCOLOR=231}]
+MOV S$下级属性3 {<$STR(S$下级称号)>:/FCOLOR=161}[{攻伤元素+4%/FCOLOR=231}]
+MOV S$下级属性4 {<$STR(S$下级称号)>:/FCOLOR=161}[{怪物爆率+650%/FCOLOR=231}]
+MOV S$普升按钮  <text:散人普升|^-^250#普升条件：^-^146#1：<$STR(S$普升称号材料)>*<$STR(N$普升称号材料)>^-^251#2：元宝*<$STR(N$普升称号元宝)>:130:-25/@普升贵族VIP>
+MOV S$普升按钮1 <text:土豪普升|^-^249#普升条件：^-^254#充值达到<$STR(N$普升称号充值)>点^-^250#免费普升^-^253#当前充值：<$GAMEGIRD>点:130:-25/@土豪普升贵族VIP>
+
+
+#IF
+CHECKTITLE 贵族VIP13
+#ACT
+MOV U130 13
+MOV S$普升称号材料 魔法神石
+MOV N$普升称号材料 400
+MOV N$普升称号元宝 400000
+MOV N$普升称号充值 1500
+MOV S$当前称号A {贵族VIP13/FCOLOR=253}
+MOV S$当前称号 贵族VIP13
+MOV S$下级称号 贵族VIP14
+MOV S$下级称号A {贵族VIP14/FCOLOR=230}
+MOV S$当前属性  {<$STR(S$当前称号)>:/FCOLOR=161}[{攻魔道+13-13/FCOLOR=250}]
+MOV S$当前属性1 {<$STR(S$当前称号)>:/FCOLOR=161}[{防　御+13-13/FCOLOR=250}]
+MOV S$当前属性2 {<$STR(S$当前称号)>:/FCOLOR=161}[{体力元素+13%/FCOLOR=254}]
+MOV S$当前属性3 {<$STR(S$当前称号)>:/FCOLOR=161}[{攻伤元素+4%/FCOLOR=254}]
+MOV S$当前属性4 {<$STR(S$当前称号)>:/FCOLOR=161}[{怪物爆率+650%/FCOLOR=253}]
+
+MOV S$下级属性  {<$STR(S$下级称号)>:/FCOLOR=161}[{攻魔道+14-14/FCOLOR=231}]
+MOV S$下级属性1 {<$STR(S$下级称号)>:/FCOLOR=161}[{防　御+14-14/FCOLOR=231}]
+MOV S$下级属性2 {<$STR(S$下级称号)>:/FCOLOR=161}[{体力元素+14%/FCOLOR=231}]
+MOV S$下级属性3 {<$STR(S$下级称号)>:/FCOLOR=161}[{攻伤元素+5%/FCOLOR=231}]
+MOV S$下级属性4 {<$STR(S$下级称号)>:/FCOLOR=161}[{怪物爆率+700%/FCOLOR=231}]
+MOV S$普升按钮  <text:散人普升|^-^250#普升条件：^-^146#1：<$STR(S$普升称号材料)>*<$STR(N$普升称号材料)>^-^251#2：元宝*<$STR(N$普升称号元宝)>:130:-25/@普升贵族VIP>
+MOV S$普升按钮1 <text:土豪普升|^-^249#普升条件：^-^254#充值达到<$STR(N$普升称号充值)>点^-^250#免费普升^-^253#当前充值：<$GAMEGIRD>点:130:-25/@土豪普升贵族VIP>
+
+
+#IF
+CHECKTITLE 贵族VIP14
+#ACT
+MOV U130 14
+MOV S$普升称号材料 魔法神石
+MOV N$普升称号材料 450
+MOV N$普升称号元宝 450000
+MOV N$普升称号充值 2000
+MOV S$当前称号A {贵族VIP14/FCOLOR=253}
+MOV S$当前称号 贵族VIP14
+MOV S$下级称号 贵族VIP15
+MOV S$下级称号A {贵族VIP15/FCOLOR=230}
+MOV S$当前属性  {<$STR(S$当前称号)>:/FCOLOR=161}[{攻魔道+14-14/FCOLOR=250}]
+MOV S$当前属性1 {<$STR(S$当前称号)>:/FCOLOR=161}[{防　御+14-14/FCOLOR=250}]
+MOV S$当前属性2 {<$STR(S$当前称号)>:/FCOLOR=161}[{体力元素+14%/FCOLOR=254}]
+MOV S$当前属性3 {<$STR(S$当前称号)>:/FCOLOR=161}[{攻伤元素+5%/FCOLOR=254}]
+MOV S$当前属性4 {<$STR(S$当前称号)>:/FCOLOR=161}[{怪物爆率+700%/FCOLOR=253}]
+
+MOV S$下级属性  {<$STR(S$下级称号)>:/FCOLOR=161}[{攻魔道+15-15/FCOLOR=231}]
+MOV S$下级属性1 {<$STR(S$下级称号)>:/FCOLOR=161}[{防　御+15-15/FCOLOR=231}]
+MOV S$下级属性2 {<$STR(S$下级称号)>:/FCOLOR=161}[{体力元素+15%/FCOLOR=231}]
+MOV S$下级属性3 {<$STR(S$下级称号)>:/FCOLOR=161}[{攻伤元素+6%/FCOLOR=231}]
+MOV S$下级属性4 {<$STR(S$下级称号)>:/FCOLOR=161}[{怪物爆率+750%/FCOLOR=231}]
+MOV S$普升按钮  <text:散人普升|^-^250#普升条件：^-^146#1：<$STR(S$普升称号材料)>*<$STR(N$普升称号材料)>^-^251#2：元宝*<$STR(N$普升称号元宝)>:130:-25/@普升贵族VIP>
+MOV S$普升按钮1 <text:土豪普升|^-^249#普升条件：^-^254#充值达到<$STR(N$普升称号充值)>点^-^250#免费普升^-^253#当前充值：<$GAMEGIRD>点:130:-25/@土豪普升贵族VIP>
+
+
+#IF
+CHECKTITLE 贵族VIP15
+#ACT
+MOV U130 15
+MOV S$普升称号材料 魔法神石
+MOV N$普升称号材料 500
+MOV N$普升称号元宝 500000
+MOV N$普升称号充值 2500
+MOV S$当前称号A {贵族VIP15/FCOLOR=253}
+MOV S$当前称号 贵族VIP15
+MOV S$下级称号 贵族VIP16
+MOV S$下级称号A {贵族VIP16/FCOLOR=230}
+MOV S$当前属性  {<$STR(S$当前称号)>:/FCOLOR=161}[{攻魔道+15-15/FCOLOR=250}]
+MOV S$当前属性1 {<$STR(S$当前称号)>:/FCOLOR=161}[{防　御+15-15/FCOLOR=250}]
+MOV S$当前属性2 {<$STR(S$当前称号)>:/FCOLOR=161}[{体力元素+15%/FCOLOR=254}]
+MOV S$当前属性3 {<$STR(S$当前称号)>:/FCOLOR=161}[{攻伤元素+6%/FCOLOR=254}]
+MOV S$当前属性4 {<$STR(S$当前称号)>:/FCOLOR=161}[{怪物爆率+750%/FCOLOR=253}]
+
+MOV S$下级属性  {<$STR(S$下级称号)>:/FCOLOR=161}[{攻魔道+16-16/FCOLOR=231}]
+MOV S$下级属性1 {<$STR(S$下级称号)>:/FCOLOR=161}[{防　御+16-16/FCOLOR=231}]
+MOV S$下级属性2 {<$STR(S$下级称号)>:/FCOLOR=161}[{体力元素+16%/FCOLOR=231}]
+MOV S$下级属性3 {<$STR(S$下级称号)>:/FCOLOR=161}[{攻伤元素+7%/FCOLOR=231}]
+MOV S$下级属性4 {<$STR(S$下级称号)>:/FCOLOR=161}[{怪物爆率+800%/FCOLOR=231}]
+MOV S$普升按钮  <text:散人普升|^-^250#普升条件：^-^146#1：<$STR(S$普升称号材料)>*<$STR(N$普升称号材料)>^-^251#2：元宝*<$STR(N$普升称号元宝)>:130:-25/@普升贵族VIP>
+MOV S$普升按钮1 <text:土豪普升|^-^249#普升条件：^-^254#充值达到<$STR(N$普升称号充值)>点^-^250#免费普升^-^253#当前充值：<$GAMEGIRD>点:130:-25/@土豪普升贵族VIP>
+
+
+
+
+#IF
+CHECKTITLE 贵族VIP16
+#ACT
+MOV U130 16
+MOV S$普升称号材料 梦想神石
+MOV N$普升称号材料 10
+MOV N$普升称号元宝 1000000
+MOV N$普升称号充值 3000
+MOV S$当前称号A {贵族VIP16/FCOLOR=249}
+MOV S$当前称号 贵族VIP16
+MOV S$下级称号 贵族VIP17
+MOV S$下级称号A {贵族VIP17/FCOLOR=230}
+MOV S$当前属性  {<$STR(S$当前称号)>:/FCOLOR=161}[{攻魔道+16-16/FCOLOR=250}]
+MOV S$当前属性1 {<$STR(S$当前称号)>:/FCOLOR=161}[{防　御+16-16/FCOLOR=250}]
+MOV S$当前属性2 {<$STR(S$当前称号)>:/FCOLOR=161}[{体力元素+16%/FCOLOR=254}]
+MOV S$当前属性3 {<$STR(S$当前称号)>:/FCOLOR=161}[{攻伤元素+7%/FCOLOR=254}]
+MOV S$当前属性4 {<$STR(S$当前称号)>:/FCOLOR=161}[{怪物爆率+800%/FCOLOR=253}]
+
+MOV S$下级属性  {<$STR(S$下级称号)>:/FCOLOR=161}[{攻魔道+17-17/FCOLOR=231}]
+MOV S$下级属性1 {<$STR(S$下级称号)>:/FCOLOR=161}[{防　御+17-17/FCOLOR=231}]
+MOV S$下级属性2 {<$STR(S$下级称号)>:/FCOLOR=161}[{体力元素+17%/FCOLOR=231}]
+MOV S$下级属性3 {<$STR(S$下级称号)>:/FCOLOR=161}[{攻伤元素+8%/FCOLOR=231}]
+MOV S$下级属性4 {<$STR(S$下级称号)>:/FCOLOR=161}[{怪物爆率+850%/FCOLOR=231}]
+MOV S$普升按钮  <text:散人普升|^-^250#普升条件：^-^146#1：<$STR(S$普升称号材料)>*<$STR(N$普升称号材料)>^-^251#2：元宝*<$STR(N$普升称号元宝)>:130:-25/@普升贵族VIP>
+MOV S$普升按钮1 <text:土豪普升|^-^249#普升条件：^-^254#充值达到<$STR(N$普升称号充值)>点^-^250#免费普升^-^253#当前充值：<$GAMEGIRD>点:130:-25/@土豪普升贵族VIP>
+
+
+
+#IF
+CHECKTITLE 贵族VIP17
+#ACT
+MOV U130 17
+MOV S$普升称号材料 梦想神石
+MOV N$普升称号材料 25
+MOV N$普升称号元宝 2500000
+MOV N$普升称号充值 3500
+MOV S$当前称号A {贵族VIP17/FCOLOR=249}
+MOV S$当前称号 贵族VIP17
+MOV S$下级称号 贵族VIP18
+MOV S$下级称号A {贵族VIP18/FCOLOR=230}
+MOV S$当前属性  {<$STR(S$当前称号)>:/FCOLOR=161}[{攻魔道+17-17/FCOLOR=250}]
+MOV S$当前属性1 {<$STR(S$当前称号)>:/FCOLOR=161}[{防　御+17-17/FCOLOR=250}]
+MOV S$当前属性2 {<$STR(S$当前称号)>:/FCOLOR=161}[{体力元素+17%/FCOLOR=254}]
+MOV S$当前属性3 {<$STR(S$当前称号)>:/FCOLOR=161}[{攻伤元素+8%/FCOLOR=254}]
+MOV S$当前属性4 {<$STR(S$当前称号)>:/FCOLOR=161}[{怪物爆率+850%/FCOLOR=253}]
+
+MOV S$下级属性  {<$STR(S$下级称号)>:/FCOLOR=161}[{攻魔道+18-18/FCOLOR=231}]
+MOV S$下级属性1 {<$STR(S$下级称号)>:/FCOLOR=161}[{防　御+18-18/FCOLOR=231}]
+MOV S$下级属性2 {<$STR(S$下级称号)>:/FCOLOR=161}[{体力元素+18%/FCOLOR=231}]
+MOV S$下级属性3 {<$STR(S$下级称号)>:/FCOLOR=161}[{攻伤元素+9%/FCOLOR=231}]
+MOV S$下级属性4 {<$STR(S$下级称号)>:/FCOLOR=161}[{怪物爆率+900%/FCOLOR=231}]
+MOV S$普升按钮  <text:散人普升|^-^250#普升条件：^-^146#1：<$STR(S$普升称号材料)>*<$STR(N$普升称号材料)>^-^251#2：元宝*<$STR(N$普升称号元宝)>:130:-25/@普升贵族VIP>
+MOV S$普升按钮1 <text:土豪普升|^-^249#普升条件：^-^254#充值达到<$STR(N$普升称号充值)>点^-^250#免费普升^-^253#当前充值：<$GAMEGIRD>点:130:-25/@土豪普升贵族VIP>
+
+
+
+#IF
+CHECKTITLE 贵族VIP18
+#ACT
+MOV U130 18
+MOV S$普升称号材料 梦想神石
+MOV N$普升称号材料 50
+MOV N$普升称号元宝 5000000
+MOV N$普升称号充值 4000
+MOV S$当前称号A {贵族VIP18/FCOLOR=249}
+MOV S$当前称号 贵族VIP18
+MOV S$下级称号 贵族VIP19
+MOV S$下级称号A {贵族VIP19/FCOLOR=230}
+MOV S$当前属性  {<$STR(S$当前称号)>:/FCOLOR=161}[{攻魔道+18-18/FCOLOR=250}]
+MOV S$当前属性1 {<$STR(S$当前称号)>:/FCOLOR=161}[{防　御+18-18/FCOLOR=250}]
+MOV S$当前属性2 {<$STR(S$当前称号)>:/FCOLOR=161}[{体力元素+18%/FCOLOR=254}]
+MOV S$当前属性3 {<$STR(S$当前称号)>:/FCOLOR=161}[{攻伤元素+9%/FCOLOR=254}]
+MOV S$当前属性4 {<$STR(S$当前称号)>:/FCOLOR=161}[{怪物爆率+900%/FCOLOR=253}]
+
+MOV S$下级属性  {<$STR(S$下级称号)>:/FCOLOR=161}[{攻魔道+19-19/FCOLOR=231}]
+MOV S$下级属性1 {<$STR(S$下级称号)>:/FCOLOR=161}[{防　御+19-19/FCOLOR=231}]
+MOV S$下级属性2 {<$STR(S$下级称号)>:/FCOLOR=161}[{体力元素+19%/FCOLOR=231}]
+MOV S$下级属性3 {<$STR(S$下级称号)>:/FCOLOR=161}[{攻伤元素+10%/FCOLOR=231}]
+MOV S$下级属性4 {<$STR(S$下级称号)>:/FCOLOR=161}[{怪物爆率+950%/FCOLOR=231}]
+MOV S$普升按钮  <text:散人普升|^-^250#普升条件：^-^146#1：<$STR(S$普升称号材料)>*<$STR(N$普升称号材料)>^-^251#2：元宝*<$STR(N$普升称号元宝)>:130:-25/@普升贵族VIP>
+MOV S$普升按钮1 <text:土豪普升|^-^249#普升条件：^-^254#充值达到<$STR(N$普升称号充值)>点^-^250#免费普升^-^253#当前充值：<$GAMEGIRD>点:130:-25/@土豪普升贵族VIP>
+
+
+#IF
+CHECKTITLE 贵族VIP19
+#ACT
+MOV U130 19
+MOV S$普升称号材料 梦想神石
+MOV N$普升称号材料 70
+MOV N$普升称号元宝 7000000
+MOV N$普升称号充值 4500
+MOV S$当前称号A {贵族VIP19/FCOLOR=254}
+MOV S$当前称号 贵族VIP19
+MOV S$下级称号 贵族VIP20
+MOV S$下级称号A {贵族VIP20/FCOLOR=230}
+MOV S$当前属性  {<$STR(S$当前称号)>:/FCOLOR=161}[{攻魔道+19-19/FCOLOR=250}]
+MOV S$当前属性1 {<$STR(S$当前称号)>:/FCOLOR=161}[{防　御+19-19/FCOLOR=250}]
+MOV S$当前属性2 {<$STR(S$当前称号)>:/FCOLOR=161}[{体力元素+19%/FCOLOR=254}]
+MOV S$当前属性3 {<$STR(S$当前称号)>:/FCOLOR=161}[{攻伤元素+10%/FCOLOR=254}]
+MOV S$当前属性4 {<$STR(S$当前称号)>:/FCOLOR=161}[{怪物爆率+950%/FCOLOR=253}]
+
+MOV S$下级属性  {<$STR(S$下级称号)>:/FCOLOR=161}[{攻魔道+20-20/FCOLOR=231}]
+MOV S$下级属性1 {<$STR(S$下级称号)>:/FCOLOR=161}[{防　御+20-20/FCOLOR=231}]
+MOV S$下级属性2 {<$STR(S$下级称号)>:/FCOLOR=161}[{体力元素+20%/FCOLOR=231}]
+MOV S$下级属性3 {<$STR(S$下级称号)>:/FCOLOR=161}[{攻伤元素+11%/FCOLOR=231}]
+MOV S$下级属性4 {<$STR(S$下级称号)>:/FCOLOR=161}[{怪物爆率+1000%/FCOLOR=231}]
+MOV S$普升按钮  <text:散人普升|^-^250#普升条件：^-^146#1：<$STR(S$普升称号材料)>*<$STR(N$普升称号材料)>^-^251#2：元宝*<$STR(N$普升称号元宝)>:130:-25/@普升贵族VIP>
+MOV S$普升按钮1 <text:土豪普升|^-^249#普升条件：^-^254#充值达到<$STR(N$普升称号充值)>点^-^250#免费普升^-^253#当前充值：<$GAMEGIRD>点:130:-25/@土豪普升贵族VIP>
+
+#IF
+CHECKTITLE 贵族VIP20
+#ACT
+MOV U130 20
+MOV S$普升称号材料 梦想神石
+MOV N$普升称号材料 100
+MOV N$普升称号元宝 10000000
+MOV N$普升称号充值 5000
+MOV S$当前称号A {贵族VIP20/FCOLOR=254}
+MOV S$当前称号 贵族VIP20
+MOV S$下级称号 贵族VIP21
+MOV S$下级称号A {贵族VIP21/FCOLOR=230}
+MOV S$当前属性  {<$STR(S$当前称号)>:/FCOLOR=161}[{攻魔道+20-20/FCOLOR=250}]
+MOV S$当前属性1 {<$STR(S$当前称号)>:/FCOLOR=161}[{防　御+20-20/FCOLOR=250}]
+MOV S$当前属性2 {<$STR(S$当前称号)>:/FCOLOR=161}[{体力元素+20%/FCOLOR=254}]
+MOV S$当前属性3 {<$STR(S$当前称号)>:/FCOLOR=161}[{攻伤元素+11%/FCOLOR=254}]
+MOV S$当前属性4 {<$STR(S$当前称号)>:/FCOLOR=161}[{怪物爆率+1000%/FCOLOR=253}]
+
+MOV S$下级属性  {<$STR(S$下级称号)>:/FCOLOR=161}[{攻魔道+21-21/FCOLOR=231}]
+MOV S$下级属性1 {<$STR(S$下级称号)>:/FCOLOR=161}[{防　御+21-21/FCOLOR=231}]
+MOV S$下级属性2 {<$STR(S$下级称号)>:/FCOLOR=161}[{体力元素+21%/FCOLOR=231}]
+MOV S$下级属性3 {<$STR(S$下级称号)>:/FCOLOR=161}[{攻伤元素+12%/FCOLOR=231}]
+MOV S$下级属性4 {<$STR(S$下级称号)>:/FCOLOR=161}[{怪物爆率+1100%/FCOLOR=231}]
+MOV S$普升按钮  <text:散人普升|^-^250#普升条件：^-^146#1：<$STR(S$普升称号材料)>*<$STR(N$普升称号材料)>^-^251#2：元宝*<$STR(N$普升称号元宝)>:130:-25/@普升贵族VIP>
+MOV S$普升按钮1 <text:土豪普升|^-^249#普升条件：^-^254#充值达到<$STR(N$普升称号充值)>点^-^250#免费普升^-^253#当前充值：<$GAMEGIRD>点:130:-25/@土豪普升贵族VIP>
+
+
+
+
+
+
+
+
+
+
+
+#OR
+CHECKTITLE 贵族VIP21
+#ACT
+MOV U130 21
+MOV S$普升称号材料 当前已经满
+MOV N$普升称号材料 0
+MOV N$普升称号元宝 0
+MOV N$普升称号充值 0
+MOV S$当前称号A {贵族VIP21/FCOLOR=254}
+MOV S$当前称号 贵族VIP21
+MOV S$下级称号 当前已经满
+MOV S$下级称号A {当前已经满/FCOLOR=230}
+MOV S$当前属性  {<$STR(S$当前称号)>:/FCOLOR=161}[{攻魔道+21-21/FCOLOR=250}]
+MOV S$当前属性1 {<$STR(S$当前称号)>:/FCOLOR=161}[{防　御+21-21/FCOLOR=250}]
+MOV S$当前属性2 {<$STR(S$当前称号)>:/FCOLOR=161}[{体力元素+21%/FCOLOR=254}]
+MOV S$当前属性3 {<$STR(S$当前称号)>:/FCOLOR=161}[{攻伤元素+12%/FCOLOR=254}]
+MOV S$当前属性4 {<$STR(S$当前称号)>:/FCOLOR=161}[{怪物爆率+1100%/FCOLOR=253}]
+
+MOV S$下级属性  {<$STR(S$下级称号)>:/FCOLOR=161}[{攻魔道+21-21/FCOLOR=231}]
+MOV S$下级属性1 {<$STR(S$下级称号)>:/FCOLOR=161}[{防　御+21-21/FCOLOR=231}]
+MOV S$下级属性2 {<$STR(S$下级称号)>:/FCOLOR=161}[{体力元素+21%/FCOLOR=231}]
+MOV S$下级属性3 {<$STR(S$下级称号)>:/FCOLOR=161}[{攻伤元素+12%/FCOLOR=231}]
+MOV S$下级属性4 {<$STR(S$下级称号)>:/FCOLOR=161}[{怪物爆率+1100%/FCOLOR=231}]
+MOV S$普升按钮  <text:当前已经满:130:-25/@普升贵族VIP>
+MOV S$普升按钮1 
+
+
+
+#IF
+#ACT
+ESPFillText S$当前属性 55
+ESPFillText S$当前属性1 55
+ESPFillText S$当前属性2 55
+ESPFillText S$当前属性3 55
+ESPFillText S$当前属性4 55
+close
+OPENMERCHANTBIGDLG 1 555 1 4 0 0 1 400 0
+#SAY
+; <>    <[赞助贵族VIP]：土豪免费领取,散人通过元宝材料可以免费获得/AUTOCOLOR=250,251,252,253,254>\ \ 
+; <>  {您当前赞助:/FCOLOR=161}[<$STR(S$当前称号A)>]              {下一级称号:/FCOLOR=161}[<$STR(S$下级称号A)>]   \ 
+; <><------------------------------------------------------------/AUTOCOLOR=250,254,255,161> \
+; <><$STR(S$当前属性)>       <$STR(S$下级属性)> \
+; <><$STR(S$当前属性1)>       <$STR(S$下级属性1)> \
+; <><$STR(S$当前属性2)>       <$STR(S$下级属性2)> \
+; <><$STR(S$当前属性3)>       <$STR(S$下级属性3)> \
+; <><$STR(S$当前属性4)>       <$STR(S$下级属性4)> \
+; <><------------------------------------------------------------/AUTOCOLOR=250,254,255,161> \
+; <>   {散人普升①:/FCOLOR=161}{<$STR(S$普升称号材料)>*<$STR(N$普升称号材料)>/FCOLOR=146} \
+; <>   {散人普升②:/FCOLOR=161}{元宝*<$STR(N$普升称号元宝)>/FCOLOR=251}        
+; \               <$STR(S$普升按钮)>      <$STR(S$普升按钮1)>\ 
+; \               \
+
+
+<Img|width=620|height=300|esc=1|scale9l=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|scale9t=10|reset=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32.0|y=18.0|tipsx=10|tipsy=80|color=250,251,252,253,254|size=18|text=[赞助贵族VIP]：土豪免费领取,散人通过元宝材料可以免费获得>
+<RText|a=0|x=32.0|y=58.0|tipsx=10|tipsy=80|color=255|size=18|text=[<$STR(S$当前称号A)>]>
+<RText|a=0|x=263.0|y=58.0|tipsx=10|tipsy=80|color=255|size=18|text=[<$STR(S$下级称号A)>]>
+<RText|a=0|x=32.0|y=78.0|tipsx=10|tipsy=80|color=250,254,255,161|size=18|text=------------------------------------------------------------>
+<RText|a=0|x=32.0|y=98.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(S$当前属性)>       <$STR(S$下级属性)>>
+<RText|a=0|x=32.0|y=118.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(S$当前属性1)>       <$STR(S$下级属性1)>>
+<RText|a=0|x=32.0|y=138.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(S$当前属性2)>       <$STR(S$下级属性2)>>
+<RText|a=0|x=32.0|y=158.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(S$当前属性3)>       <$STR(S$下级属性3)>>
+<RText|a=0|x=32.0|y=178.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(S$当前属性4)>       <$STR(S$下级属性4)>>
+<Text|a=0|x=32.0|y=198.0|tipsx=10|tipsy=80|color=250,254,255,161|size=18|text=------------------------------------------------------------>
+<RText|a=0|x=31.0|y=225.0|tipsx=10|tipsy=80|color=255|size=18|text=散人晋升1：<<$str(S$普升称号材料)>*<$str(N$普升称号材料)>/FCOLOR=251>>
+<RText|a=0|x=31.0|y=255.0|tipsx=10|tipsy=80|color=255|size=18|text=散人晋升1：<元宝*<$str(N$普升称号元宝)>/FCOLOR=251>>
+<Text|x=287.0|y=244.0|color=255|size=18|text=散人普升|link=@普升贵族VIP>
+<Text|x=415.0|y=244.0|color=255|size=18|text=土豪普升|link=@土豪普升贵族VIP>
+
+; MOV S$普升称号材料 梦想神石
+; MOV N$普升称号材料 100
+; MOV N$普升称号元宝 10000000
+; MOV N$普升称号充值 5000
+
+
+[@土豪普升贵族VIP]
+
+
+#OR
+CHECKTITLE 贵族VIP21
+#ACT
+MESSAGEBOX 您当前的赞助贵族VIP已经满了，祝您游戏愉快！
+BREAK
+
+
+
+#IF
+CHECKGAMEGIRD < <$STR(N$普升称号充值)>
+#ACT
+MESSAGEBOX 对不起，您当前账户充值不足<$STR(N$普升称号充值)>，请先充值获得！
+BREAK
+
+
+
+
+#IF
+#ACT
+DEPRIVETITLE <$STR(S$当前称号)>
+CONFERTITLE <$STR(S$下级称号)>
+MOV T6 <$STR(S$下级称号)>
+MESSAGEBOX 恭喜您，成功普升<$STR(S$下级称号)>，希望您再接再厉
+goto @MAIN
+break
+
+
+
+
+
+
+
+
+
+
+
+[@普升贵族VIP]
+
+
+
+#OR
+CHECKTITLE 贵族VIP21
+#ACT
+MESSAGEBOX 您当前的赞助贵族VIP已经满了，祝您游戏愉快！
+BREAK
+
+
+#IF
+NOT CHECKITEM <$STR(S$普升称号材料)> <$STR(N$普升称号材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里的<$STR(S$普升称号材料)>不足<$STR(N$普升称号材料)>个，无法普升
+BREAK
+
+#IF
+CHECKGAMEGOLD < <$STR(N$普升称号元宝)>
+#ACT
+MESSAGEBOX 对不起，您账户上元宝不够<$STR(N$普升称号元宝)>，非常遗憾！
+break
+
+
+#IF
+#ACT
+GAMEGOLD - <$STR(N$普升称号元宝)>
+TAKE <$STR(S$普升称号材料)> <$STR(N$普升称号材料)>
+DEPRIVETITLE <$STR(S$当前称号)>
+CONFERTITLE <$STR(S$下级称号)>
+MOV T6 <$STR(S$下级称号)>
+MESSAGEBOX 恭喜您，成功普升<$STR(S$下级称号)>，希望您再接再厉
+goto @MAIN
+break
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

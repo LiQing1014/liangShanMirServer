@@ -1,0 +1,580 @@
+[@会员服务]
+{
+
+#IF
+check [150] 1
+#ACT
+MOV S$吃点卷状态 <关闭自动吃点卷|253#点击关闭/@吃点卷关闭> 
+MOV S$吃点卷信息 <当前状态:/SCOLOR=7><已开启/SCOLOR=250> 
+
+
+#IF
+check [150] 0
+#ACT
+MOV S$吃点卷状态 <开启自动吃点卷|253#点击开启/@吃点卷开启> 
+MOV S$吃点卷信息 <当前状态:/SCOLOR=7><已关闭/SCOLOR=249>
+
+
+#IF
+check [152] 1
+#ACT
+MOV S$吃金币状态 <关闭自动吃材料|253#点击关闭/@吃金币关闭> 
+MOV S$吃金币信息 <当前状态:/SCOLOR=7><已开启/SCOLOR=250> 
+
+
+#IF
+check [152] 0
+#ACT
+MOV S$吃金币状态 <开启自动吃材料|253#点击开启/@吃金币开启> 
+MOV S$吃金币信息 <当前状态:/SCOLOR=7><已关闭/SCOLOR=249> 
+
+#IF
+check [151] 1
+#ACT
+MOV S$吃元宝状态 <关闭自动吃元宝|253#点击关闭/@吃元宝关闭> 
+MOV S$吃元宝信息 <当前状态:/SCOLOR=7><已开启/SCOLOR=250> 
+
+
+#IF
+check [151] 0
+#ACT
+MOV S$吃元宝状态 <开启自动吃元宝|253#点击开启/@吃元宝开启> 
+MOV S$吃元宝信息 <当前状态:/SCOLOR=7><已关闭/SCOLOR=249> 
+
+#if
+check [153] 1
+#act
+MOV S$过滤显示 <开启消息/@开启>
+
+#if
+check [153] 0
+#act
+MOV S$过滤显示 <关闭消息/@关闭1>
+
+#IF
+#ACT
+OPENMERCHANTBIGDLG 1 8 0 0 0 0 0
+#say
+<ImgEx:1:5:5:6:392:-16/@EXIT>
+<【贵族接待员】/FCOLOR=70> <Hot~/FCOLOR=249>  <尊贵的“/SCOLOR=87><VIP会员/SCOLOR=70><”请使用以下特权：/SCOLOR=87>\
+<Img:17:1:0:16>　\
+　　    <贵族特权：/SCOLOR=145>无限洗红，经验使者，装备分解等功能！<$STR(S$过滤显示)>\ 
+　　    <会员说明：/SCOLOR=145>使用“金钻贵族”证明加入，永久享受服务！\
+　　    <友情提示：/SCOLOR=145>更多服务陆续更新，敬请期待！<您当前大米点：/SCOLOR=249><$GAMEPOINT>\
+<--------------------------------------------------------------/AUTOCOLOR=91>\  \
+
+<「/SCOLOR=103><开启嗜血狂暴|253#开启需要50大米点/@回收啊><」　　「/SCOLOR=103><会员无限洗红/@无限洗红><」　　「/SCOLOR=103><经验升级使者/@经验><」/SCOLOR=103>\  \
+<「/SCOLOR=103><远程货币兑换/@挂机><」　　「/SCOLOR=103><分解轩辕系列|253#一件轩辕首饰可分解1颗天之神铁/@会员买药><」　　「/SCOLOR=103><分解赤炎石头/@分解><」/SCOLOR=103>\  \ 
+<--------------------------------------------------------------/AUTOCOLOR=91>\
+<$STR(S$吃金币状态)> <$STR(S$吃金币信息)>   <$STR(S$吃元宝状态)> <$STR(S$吃元宝信息)> \ 
+<$STR(S$吃点卷状态)> <$STR(S$吃点卷信息)>    <购买1个苹果|250#购买需2000元宝/@购买苹果>    <购买5个苹果|250#购买需10000元宝/@购买5苹果> 
+
+
+[@关闭1]
+#IF
+#ACT
+SET [153] 1
+FILTERGLOBALMSG 1
+goto @会员服务
+SENDMSG 6 所有系统提示信息关闭提示。
+BREAK
+
+[@开启]
+#IF
+#ACT
+SET [153] 0
+FILTERGLOBALMSG 0
+goto @会员服务
+SENDMSG 6 所有系统提示信息开启提示。
+BREAK
+
+[@吃点卷关闭]
+#IF
+#ACT
+SET [150] 0
+goto @会员服务
+MESSAGEBOX 已关闭自动吃点卷
+BREAK
+
+[@吃点卷开启]
+#IF
+#ACT
+SET [150] 1
+goto @会员服务
+MESSAGEBOX 已开启自动吃点卷
+BREAK
+
+
+[@分解]
+#if
+#ACT
+close
+#SAY
+ 　 
+<分解说明：/SCOLOR=253><赤炎石为稀有材料，每件圣首饰可分解1颗赤炎石！/SCOLOR=249>\
+<--------------------------------------------------------------/AUTOCOLOR=91>\ \
+　              <为一键分解模式，请把重要装备储仓/SCOLOR=249>\ \
+
+<赤炎石分解：/SCOLOR=250><分解圣阶战首饰/@分解战>  <分解圣阶法首饰/@分解法>  <分解圣阶道首饰/@分解道>　 \
+
+<--------------------------------------------------------------/AUTOCOLOR=91>\ \
+<>                     <天之神铁合成赤炎神石|天之神铁*10个 兑换 赤炎石*1颗/@合成1>\
+<>                                                      <返回上页/@会员服务>  \
+
+
+[@合成1]
+#IF
+checkitem 天之神铁 10
+#ACT
+take 天之神铁 10
+GIVE 赤炎石 1
+SENDMSG 6 恭喜您，用天之神铁*10个成功兑换赤炎石*1颗!
+BREAK
+#ELSEACT
+MESSAGEBOX [兑换失败]:材料不足!
+
+[@关闭1]
+#IF
+#ACT
+SET [153] 1
+FILTERGLOBALMSG 1
+goto @会员服务
+MESSAGEBOX 已关闭所有提示信息
+BREAK
+
+[@开启]
+#IF
+#ACT
+SET [153] 0
+FILTERGLOBALMSG 0
+goto @会员服务
+MESSAGEBOX 已开启所有提示信息
+BREAK
+
+[@吃金币关闭]
+#IF
+#ACT
+SET [152] 0
+goto @会员服务
+MESSAGEBOX 已关闭自动吃所有碎片材料
+BREAK
+
+[@吃金币开启]
+#IF
+#ACT
+SET [152] 1
+goto @会员服务
+MESSAGEBOX 已开启自动吃所有碎片材料
+BREAK
+
+
+[@吃元宝关闭]
+#IF
+#ACT
+SET [151] 0
+goto @会员服务
+MESSAGEBOX 已关闭自动吃元宝
+BREAK
+
+[@吃元宝开启]
+#IF
+#ACT
+SET [151] 1
+goto @会员服务
+MESSAGEBOX 已开启自动吃元宝
+BREAK
+
+
+
+[@会员买药]
+#IF
+#ACT
+MOV N11 0
+MOV N12 0
+
+
+#IF
+CHECKLEVELEX > 1
+#ACT
+TakeBagItem 轩辕战盔|轩辕战链|轩辕战镯|轩辕战戒|轩辕战靴|轩辕战带|轩辕魔盔|轩辕魔链|轩辕魔镯|轩辕魔戒|轩辕魔靴|轩辕魔带|轩辕道盔|轩辕道链|轩辕道镯|轩辕道戒|轩辕道靴|轩辕道带 46 0 0 0 0 N12 0
+
+
+#IF
+large N12 > 0
+#ACT
+GIVE 天之神铁 N12
+SENDMSG 7 分解成功，获得<$STR(N12)>颗天之神铁！
+SENDMSG 0 〖<$USERNAME>〗分解轩辕首饰成功，获得<$STR(N12)>颗天之神铁！
+break
+
+
+
+[@回收啊]
+#IF
+CHECK [168] 1
+#act
+MESSAGEBOX 你已经开启此功能了，请不要重复开启！！
+break
+
+
+#IF
+CHECKGAMEPOINT > 49
+#Act
+GAMEPOINT - 50
+CONFERTITLE 嗜血狂暴
+SET [168] 1
+
+SendCenterMsg 254 0 ●●[江湖传闻]:【<$username>】开启“嗜血狂暴”,此人极度危险,杀死奖励25大米点,勇士们速度行动起来吧! 1 5
+SendCenterMsg 254 0 ●●[江湖传闻]:【<$username>】开启“嗜血狂暴”,此人极度危险,杀死奖励25大米点,勇士们速度行动起来吧! 1 5
+SendCenterMsg 254 0 ●●[江湖传闻]:【<$username>】开启“嗜血狂暴”,此人极度危险,杀死奖励25大米点,勇士们速度行动起来吧! 1 5
+GuildNoticeMsg 255 249 恭喜〖%s〗开启了“嗜血狂暴”状态获得神圣的上古力量!!!
+GuildNoticeMsg 255 249 恭喜〖%s〗开启了“嗜血狂暴”状态获得神圣的上古力量!!!
+#ELSEACT
+MESSAGEBOX 对不起，你的金币不足！
+break
+
+[@经验]
+#if
+#ACT
+#CALL [按钮\高级经验.txt] @高级经验
+
+
+[@挂机]
+
+#IF
+#ACT
+#Call [\橙子制作\货币兑换.txt] @货币兑换A
+
+
+[@经验宝箱]
+#if
+#ACT
+#CALL [按钮\经验箱子.txt] @经验箱子
+BREAK
+
+[@捡物开关]
+#if
+CHECK [1] 0
+#act
+MESSAGEBOX 沙城捐献后才能使用此功能。
+BREAK
+
+#IF
+CHECK [1] 1
+#ACT
+StartElf 1
+STARTPICKUP
+SENDMSG 6 自动捡物功能开启成功。
+MESSAGEBOX 恭喜您，自动捡物功能开启成功！
+#ELSEACT
+MESSAGEBOX 操作失败：沙城捐献才可以使用此功能！
+BREAK
+
+[@开关自动]
+#if
+CHECK [1] 0
+#act
+MESSAGEBOX 沙城捐献后才能使用此功能。
+BREAK
+
+#if
+check [17] 0
+#act
+SET [17] 1
+SENDMSG 6 开启自动回收功能。 
+#ELSEACT
+SET [17] 0
+SENDMSG 6 关闭自动回收功能。 
+
+ 
+
+[@购买5苹果]
+#IF
+CHECKGAMEGOLD > 9999
+#ACT
+GAMEGOLD - 10000
+give 苹果 5
+SENDMSG 6 购买成功，获得5个苹果
+BREAK
+#ELSEACT
+MESSAGEBOX [失败]:您的元宝不足!
+
+[@购买苹果]
+#IF
+CHECKGAMEGOLD > 1999
+#ACT
+GAMEGOLD - 2000
+give 苹果 1
+SENDMSG 6 购买成功，获得1个苹果
+BREAK
+#ELSEACT
+MESSAGEBOX [失败]:您的元宝不足!
+
+[@兑换红包1]
+#IF
+checkitem 1元红包 1
+#ACT
+take 1元红包 1
+GAMEDIAMOND + 10
+GAMEGIRD + 1
+messagebox \\恭喜您成功兑换1元红包，获得10点卷1积分！
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功兑换现金[1元红包]！
+break
+#ELSEACT
+MESSAGEBOX \\您没有红包，无法兑换！
+break
+[@兑换红包2]
+#IF
+checkitem 2元红包 1
+#ACT
+take 2元红包 1
+GAMEDIAMOND + 20
+GAMEGIRD + 2
+messagebox \\恭喜您成功兑换2元红包，获得20点卷2积分！
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功兑换现金[2元红包]！
+break
+#ELSEACT
+MESSAGEBOX \\您没有红包，无法兑换！
+break
+[@兑换红包3]
+#IF
+checkitem 3元红包 1
+#ACT
+take 3元红包 1
+GAMEDIAMOND + 30
+GAMEGIRD + 3
+messagebox \\恭喜您成功兑换3元红包，获得30点卷3积分！
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功兑换现金[3元红包]！
+break
+#ELSEACT
+MESSAGEBOX \\您没有红包，无法兑换！
+break
+[@兑换红包5]
+#IF
+checkitem 5元红包 1
+#ACT
+take 5元红包 1
+GAMEDIAMOND + 50
+GAMEGIRD + 5
+messagebox \\恭喜您成功兑换5元红包，获得50点卷5积分！
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功兑换现金[5元红包]！
+break
+#ELSEACT
+MESSAGEBOX \\您没有红包，无法兑换！
+break
+[@兑换红包10]
+#IF
+checkitem 10元红包 1
+#ACT
+take 10元红包 1
+GAMEDIAMOND + 100
+GAMEGIRD + 10
+messagebox \\恭喜您成功兑换10元红包，获得100点卷10积分！
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功兑换现金[10元红包]！
+break
+#ELSEACT
+MESSAGEBOX \\您没有红包，无法兑换！
+break
+[@兑换红包50]
+#IF
+checkitem 5毛红包 2
+#ACT
+take 5毛红包 2
+GAMEDIAMOND + 10
+GAMEGIRD + 1
+messagebox \\恭喜您成功兑换2个5毛红包，获得10点卷1积分！
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功兑换两个[5毛红包]！
+break
+#ELSEACT
+MESSAGEBOX \\您没有红包，无法兑换！
+break
+
+
+[@免费特修]
+#IF
+check [100] 1
+#ACT
+ACTREPAIRALL
+SENDMSG 6 你身上的装备全部特修好了
+break
+
+[@每日奖励]
+#IF
+CHECKNAMELIST ..\QuestDiary\每日清理\每日奖励.txt
+#ACT
+MESSAGEBOX \\你已经领取过了,请明天再来!
+BREAK
+
+#IF
+check [100] 1
+#ACT
+GAMEGOLD + 500
+messagebox \\[会员服务]：恭喜您领取了每日500元宝奖励
+AddNAMELIST ..\QuestDiary\每日清理\每日奖励.txt
+BREAK
+
+[@无限洗红]
+#IF
+check [100] 1
+CHECKPKPOINTEX  < 100
+#ACT
+MESSAGEBOX \\你都没红名，别开玩笑行吗？
+break
+
+#IF
+check [100] 1
+#ACT
+CHANGEPKPOINT = 0
+SENDMSG 6 你的PK点数已经清除.
+break
+
+
+[@分解战]
+#IF
+checkitem 王者·战盔 1
+#ACT
+take 王者·战盔 1
+GIVE 赤炎石 1
+SENDMSG 0 251 249 〖<$USERNAME>〗分解圣轩辕首饰成功，获得赤炎石1块。
+BREAK
+
+#IF
+checkitem 王者·战靴 1
+#ACT
+take 王者·战靴 1
+GIVE 赤炎石 1
+SENDMSG 0 251 249 〖<$USERNAME>〗分解圣轩辕首饰成功，获得赤炎石1块。
+BREAK
+
+#IF
+checkitem 王者·战带 1
+#ACT
+take 王者·战带 1
+GIVE 赤炎石 1
+SENDMSG 0 251 249 〖<$USERNAME>〗分解圣轩辕首饰成功，获得赤炎石1块。
+BREAK
+
+#IF
+checkitem 王者·战链 1
+#ACT
+take 王者·战链 1
+GIVE 赤炎石 1
+SENDMSG 0 251 249 〖<$USERNAME>〗分解圣轩辕首饰成功，获得赤炎石1块。
+BREAK
+
+#IF
+checkitem 王者·战镯 1
+#ACT
+take 王者·战镯 1
+GIVE 赤炎石 1
+SENDMSG 0 251 249 〖<$USERNAME>〗分解圣轩辕首饰成功，获得赤炎石1块。
+BREAK
+
+#IF
+checkitem 王者·战戒 1
+#ACT
+take 王者·战戒 1
+GIVE 赤炎石 1
+SENDMSG 0 251 249 〖<$USERNAME>〗分解圣轩辕首饰成功，获得赤炎石1块。
+BREAK
+
+[@分解法]
+#IF
+checkitem 王者·魔盔 1
+#ACT
+take 王者·魔盔 1
+GIVE 赤炎石 1
+SENDMSG 0 251 249 〖<$USERNAME>〗分解圣轩辕首饰成功，获得赤炎石1块。
+BREAK
+
+#IF
+checkitem 王者·魔靴 1
+#ACT
+take 王者·魔靴 1
+GIVE 赤炎石 1
+SENDMSG 0 251 249 〖<$USERNAME>〗分解圣轩辕首饰成功，获得赤炎石1块。
+BREAK
+
+#IF
+checkitem 王者·魔带 1
+#ACT
+take 王者·魔带 1
+GIVE 赤炎石 1
+SENDMSG 0 251 249 〖<$USERNAME>〗分解圣轩辕首饰成功，获得赤炎石1块。
+BREAK
+
+#IF
+checkitem 王者·魔链 1
+#ACT
+take 王者·魔链 1
+GIVE 赤炎石 1
+SENDMSG 0 251 249 〖<$USERNAME>〗分解圣轩辕首饰成功，获得赤炎石1块。
+BREAK
+
+#IF
+checkitem 王者·魔镯 1
+#ACT
+take 王者·魔镯 1
+GIVE 赤炎石 1
+SENDMSG 0 251 249 〖<$USERNAME>〗分解圣轩辕首饰成功，获得赤炎石1块。
+BREAK
+
+#IF
+checkitem 王者·魔戒 1
+#ACT
+take 王者·魔戒 1
+GIVE 赤炎石 1
+SENDMSG 0 251 249 〖<$USERNAME>〗分解圣轩辕首饰成功，获得赤炎石1块。
+BREAK
+
+[@分解道]
+#IF
+checkitem 王者·道盔 1
+#ACT
+take 王者·道盔 1
+GIVE 赤炎石 1
+SENDMSG 0 251 249 〖<$USERNAME>〗分解圣轩辕首饰成功，获得赤炎石1块。
+BREAK
+
+#IF
+checkitem 王者·道靴 1
+#ACT
+take 王者·道靴 1
+GIVE 赤炎石 1
+SENDMSG 0 251 249 〖<$USERNAME>〗分解圣轩辕首饰成功，获得赤炎石1块。
+BREAK
+
+#IF
+checkitem 王者·道带 1
+#ACT
+take 王者·道带 1
+GIVE 赤炎石 1
+SENDMSG 0 251 249 〖<$USERNAME>〗分解圣轩辕首饰成功，获得赤炎石1块。
+BREAK
+
+#IF
+checkitem 王者·道链 1
+#ACT
+take 王者·道链 1
+GIVE 赤炎石 1
+SENDMSG 0 251 249 〖<$USERNAME>〗分解圣轩辕首饰成功，获得赤炎石1块。
+BREAK
+
+#IF
+checkitem 王者·道镯 1
+#ACT
+take 王者·道镯 1
+GIVE 赤炎石 1
+SENDMSG 0 251 249 〖<$USERNAME>〗分解圣轩辕首饰成功，获得赤炎石1块。
+BREAK
+
+#IF
+checkitem 王者·道戒 1
+#ACT
+take 王者·道戒 1
+GIVE 赤炎石 1
+SENDMSG 0 251 249 〖<$USERNAME>〗分解圣轩辕首饰成功，获得赤炎石1块。
+BREAK
+
+
+}

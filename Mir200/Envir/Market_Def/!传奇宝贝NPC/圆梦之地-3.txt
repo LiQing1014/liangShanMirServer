@@ -1,0 +1,39 @@
+[@main]
+#if
+#act
+#SaY
+; \ \
+; <>         <→ → → ◆◆◆ 【圆梦打宝地图】 ◆◆◆ ← ← ←/FCOLOR=253> \ \
+; <><地图介绍：/FCOLOR=254> <本地图怪物无限刷新，只要外面有人杀怪，地图内就会刷新怪物！/FCOLOR=249>\
+; <><地图怪物：/FCOLOR=254> <外界杀死的所有怪都有30%的概率在次地图刷新(小怪除外)/FCOLOR=31>\
+; <><地图怪物：/FCOLOR=254> <部分(特殊、专属、个人、活动)怪不会刷新！/FCOLOR=251>\
+; <><进入条件：/FCOLOR=254> <需要玩家任意真实充值即可进入/FCOLOR=250>\ \
+
+; <>                        <《进入圆梦地图》/@进入圆梦ex>            
+
+<Img|x=0.0|y=0.0|width=620|height=260|scale9t=10|scale9r=10|scale9l=10|scale9b=10|move=0|bg=1|img=public/bg_npc_04.jpg|reset=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32.0|y=31.0|tipsx=10|tipsy=80|color=253|size=16|text=→ → → ◆◆◆ 【圆梦打宝地图】 ◆◆◆ ← ← ←>
+<Text|a=0|x=32.0|y=71.0|tipsx=10|tipsy=80|color=254|size=16|text=地图介绍：>
+<Text|a=0|x=142.0|y=71.0|tipsx=10|tipsy=80|color=249|size=16|text=本地图怪物无限刷新，只要外面有人杀怪，地图内就会刷新怪物！>
+<Text|a=0|x=32.0|y=91.0|tipsx=10|tipsy=80|color=254|size=16|text=地图怪物：>
+<Text|a=0|x=142.0|y=91.0|tipsx=10|tipsy=80|color=31|size=16|text=外界杀死的所有怪都有30%的概率在次地图刷新(小怪除外)>
+<Text|a=0|x=32.0|y=111.0|tipsx=10|tipsy=80|color=254|size=16|text=地图怪物：>
+<Text|a=0|x=142.0|y=111.0|tipsx=10|tipsy=80|color=251|size=16|text=部分(特殊、专属、个人、活动)怪不会刷新！>
+<Text|a=0|x=32.0|y=131.0|tipsx=10|tipsy=80|color=254|size=16|text=进入条件：>
+<Text|a=0|x=142.0|y=131.0|tipsx=10|tipsy=80|color=250|size=16|text=需要玩家任意真实充值即可进入>
+<Text|a=0|x=32.0|y=171.0|tipsx=10|tipsy=80|color=251|size=16|text=《进入圆梦地图》|link=@进入圆梦ex>
+
+
+
+[@进入圆梦ex]
+#if
+small u61 1
+#act
+MESSaGEBOX \\[失败]：平台充值任意金额才可进入.
+break
+
+#if
+#act
+Map cqbbymdt

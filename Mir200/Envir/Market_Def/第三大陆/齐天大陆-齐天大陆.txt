@@ -1,0 +1,25 @@
+[@MAIN]
+
+
+#IF
+Checkrenewlevel < 20
+#ACT
+MESSAGEBOX 对不起，您当前的转生不够，请先20转生在来！
+BREAK
+
+#IF
+CHECKLEVELEX < 65
+#ACT
+MESSAGEBOX 对不起，您当前的等级不够，请65级以后在来！
+BREAK
+
+
+
+
+
+
+#IF
+#ACT
+MAPMOVE 齐天大陆 67 39
+SENDMSG 0 {[世界消息]:|151:0:1}大神「{<$USERNAME>|250:0:1}」成功进入全新地图:{「<$MapTitle>」|254:0:1}
+BREAK

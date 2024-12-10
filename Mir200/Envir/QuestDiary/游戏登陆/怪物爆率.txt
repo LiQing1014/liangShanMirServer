@@ -1,0 +1,483 @@
+[@怪物爆率]
+{
+
+#IF
+#ACT
+MOV N$杀怪爆率 100
+
+
+
+
+
+
+#if
+CHECK [307] 1
+#ACT
+INC N$杀怪爆率 400
+
+
+#IF
+LARGE U50 2
+#ACT
+INC N$杀怪爆率 200
+
+#if
+CHECKTITLE 贵族VIP1
+#ACT
+INC N$杀怪爆率 50
+
+#if
+CHECKTITLE 贵族VIP2
+#ACT
+INC N$杀怪爆率 100
+
+#if
+CHECKTITLE 贵族VIP3
+#ACT
+INC N$杀怪爆率 150
+
+#if
+CHECKTITLE 贵族VIP4
+#ACT
+INC N$杀怪爆率 200
+
+#if
+CHECKTITLE 贵族VIP5
+#ACT
+INC N$杀怪爆率 250
+
+#if
+CHECKTITLE 贵族VIP6
+#ACT
+INC N$杀怪爆率 300
+
+#if
+CHECKTITLE 贵族VIP7
+#ACT
+INC N$杀怪爆率 350
+
+#if
+CHECKTITLE 贵族VIP8
+#ACT
+INC N$杀怪爆率 400
+
+#if
+CHECKTITLE 贵族VIP9
+#ACT
+INC N$杀怪爆率 450
+
+#if
+CHECKTITLE 贵族VIP10
+#ACT
+INC N$杀怪爆率 500
+
+#if
+CHECKTITLE 贵族VIP11
+#ACT
+INC N$杀怪爆率 550
+
+#if
+CHECKTITLE 贵族VIP12
+#ACT
+INC N$杀怪爆率 600
+
+#if
+CHECKTITLE 贵族VIP13
+#ACT
+INC N$杀怪爆率 650
+
+#if
+CHECKTITLE 贵族VIP14
+#ACT
+INC N$杀怪爆率 700
+
+#if
+CHECKTITLE 贵族VIP15
+#ACT
+INC N$杀怪爆率 750
+
+#if
+CHECKTITLE 贵族VIP16
+#ACT
+INC N$杀怪爆率 800
+
+#if
+CHECKTITLE 贵族VIP17
+#ACT
+INC N$杀怪爆率 850
+
+#if
+CHECKTITLE 贵族VIP18
+#ACT
+INC N$杀怪爆率 900
+
+#if
+CHECKTITLE 贵族VIP19
+#ACT
+INC N$杀怪爆率 950
+
+#if
+CHECKTITLE 贵族VIP20
+#ACT
+INC N$杀怪爆率 1000
+
+#if
+CHECKTITLE 贵族VIP21
+#ACT
+INC N$杀怪爆率 1100
+
+
+
+#if
+CHECKTITLE 狂暴之力
+#ACT
+INC N$杀怪爆率 200
+
+
+#if
+CHECKITEMW 人阶·申猴
+#ACT
+INC N$杀怪爆率 100
+
+#if
+CHECKITEMW 灵阶·申猴
+#ACT
+INC N$杀怪爆率 200
+
+#if
+CHECKITEMW 地阶·申猴
+#ACT
+INC N$杀怪爆率 300
+
+#if
+CHECKITEMW 天阶·申猴
+#ACT
+INC N$杀怪爆率 400
+
+#if
+CHECKITEMW 神级·申猴
+#ACT
+INC N$杀怪爆率 500
+
+#if
+CHECKITEMW 圣级·申猴
+#ACT
+INC N$杀怪爆率 600
+
+
+
+
+
+
+
+#IF
+EQUAL <$USERNAME> <$STR(A60)>
+CHECKTITLE 摸鱼第一·祖师
+#ACT
+INC N$杀怪爆率 1000
+
+#IF
+EQUAL <$USERNAME> <$STR(A61)>
+CHECKTITLE 摸鱼第二·宗师
+#ACT
+INC N$杀怪爆率 900
+
+#IF
+EQUAL <$USERNAME> <$STR(A62)>
+CHECKTITLE 摸鱼第三·大神
+#ACT
+INC N$杀怪爆率 800
+
+
+#IF
+EQUAL <$USERNAME> <$STR(A63)>
+CHECKTITLE 摸鱼第四·长老
+#ACT
+INC N$杀怪爆率 700
+
+#IF
+EQUAL <$USERNAME> <$STR(A64)>
+CHECKTITLE 摸鱼第五·大师
+#ACT
+INC N$杀怪爆率 600
+
+#IF
+EQUAL <$USERNAME> <$STR(A65)>
+CHECKTITLE 摸鱼第六·鼻祖
+#ACT
+INC N$杀怪爆率 500
+
+#IF
+EQUAL <$USERNAME> <$STR(A66)>
+CHECKTITLE 摸鱼第七·真人
+#ACT
+INC N$杀怪爆率 400
+
+
+#IF
+EQUAL <$USERNAME> <$STR(A67)>
+CHECKTITLE 摸鱼第八·高手
+#ACT
+INC N$杀怪爆率 300
+
+#IF
+EQUAL <$USERNAME> <$STR(A68)>
+CHECKTITLE 摸鱼第九·牛人
+#ACT
+INC N$杀怪爆率 200
+
+
+#IF
+EQUAL <$USERNAME> <$STR(A69)>
+CHECKTITLE 摸鱼第十·专家
+#ACT
+INC N$杀怪爆率 100
+
+#IF
+LARGE U8 999
+SMALL U8 <$STR(G69)>
+#ACT
+INC N$杀怪爆率 50
+
+
+
+
+
+
+
+#IF
+CHECK [1] 1
+#ACT
+INC N$杀怪爆率 300
+
+
+
+
+
+#IF
+#ACT
+MOV N$暴率显示 <$STR(N$杀怪爆率)>
+
+
+
+;=========14区==========14区=========
+;=========14区==========14区=========
+;=========14区==========14区=========
+
+#IF
+CheckContainsTextList ..\..\..\..\37W包服功能\开启14区爆率.txt 开
+CHECKCONTAINSTEXT <$SERVERNAME> 02区
+#ACT
+INC N$杀怪爆率 2
+INC N$暴率显示 10
+
+#IF
+CheckContainsTextList ..\..\..\..\37W包服功能\开启14区爆率.txt 开
+CHECKCONTAINSTEXT <$SERVERNAME> 03区
+#ACT
+INC N$杀怪爆率 4
+INC N$暴率显示 15
+
+#IF
+CheckContainsTextList ..\..\..\..\37W包服功能\开启14区爆率.txt 开
+CHECKCONTAINSTEXT <$SERVERNAME> 04区
+#ACT
+INC N$杀怪爆率 6
+INC N$暴率显示 20
+
+#IF
+CheckContainsTextList ..\..\..\..\37W包服功能\开启14区爆率.txt 开
+CHECKCONTAINSTEXT <$SERVERNAME> 05区
+#ACT
+INC N$杀怪爆率 8
+INC N$暴率显示 25
+
+#IF
+CheckContainsTextList ..\..\..\..\37W包服功能\开启14区爆率.txt 开
+CHECKCONTAINSTEXT <$SERVERNAME> 06区
+#ACT
+INC N$杀怪爆率 10
+INC N$暴率显示 30
+
+#IF
+CheckContainsTextList ..\..\..\..\37W包服功能\开启14区爆率.txt 开
+CHECKCONTAINSTEXT <$SERVERNAME> 07区
+#ACT
+INC N$杀怪爆率 12
+INC N$暴率显示 35
+
+#IF
+CheckContainsTextList ..\..\..\..\37W包服功能\开启14区爆率.txt 开
+CHECKCONTAINSTEXT <$SERVERNAME> 08区
+#ACT
+INC N$杀怪爆率 14
+INC N$暴率显示 40
+
+#IF
+CheckContainsTextList ..\..\..\..\37W包服功能\开启14区爆率.txt 开
+CHECKCONTAINSTEXT <$SERVERNAME> 09区
+#ACT
+INC N$杀怪爆率 16
+INC N$暴率显示 50
+
+#IF
+CheckContainsTextList ..\..\..\..\37W包服功能\开启14区爆率.txt 开
+CHECKCONTAINSTEXT <$SERVERNAME> 10区
+#ACT
+INC N$杀怪爆率 18
+INC N$暴率显示 60
+
+#IF
+CheckContainsTextList ..\..\..\..\37W包服功能\开启14区爆率.txt 开
+CHECKCONTAINSTEXT <$SERVERNAME> 11区
+#ACT
+INC N$杀怪爆率 20
+INC N$暴率显示 70
+
+#IF
+CheckContainsTextList ..\..\..\..\37W包服功能\开启14区爆率.txt 开
+CHECKCONTAINSTEXT <$SERVERNAME> 12区
+#ACT
+INC N$杀怪爆率 22
+INC N$暴率显示 80
+
+#IF
+CheckContainsTextList ..\..\..\..\37W包服功能\开启14区爆率.txt 开
+CHECKCONTAINSTEXT <$SERVERNAME> 13区
+#ACT
+INC N$杀怪爆率 24
+INC N$暴率显示 90
+
+#IF
+CheckContainsTextList ..\..\..\..\37W包服功能\开启14区爆率.txt 开
+CHECKCONTAINSTEXT <$SERVERNAME> 14区
+#ACT
+INC N$杀怪爆率 26
+INC N$暴率显示 100
+
+;=========9区==========9区=========
+;=========9区==========9区=========
+;=========9区==========9区=========
+
+
+#IF
+CheckContainsTextList ..\..\..\..\37W包服功能\开启14区爆率.txt 关
+CHECKCONTAINSTEXT <$SERVERNAME> 02区
+#ACT
+INC N$杀怪爆率 2
+INC N$暴率显示 20
+
+#IF
+CheckContainsTextList ..\..\..\..\37W包服功能\开启14区爆率.txt 关
+CHECKCONTAINSTEXT <$SERVERNAME> 03区
+#ACT
+INC N$杀怪爆率 4
+INC N$暴率显示 30
+
+#IF
+CheckContainsTextList ..\..\..\..\37W包服功能\开启14区爆率.txt 关
+CHECKCONTAINSTEXT <$SERVERNAME> 04区
+#ACT
+INC N$杀怪爆率 6
+INC N$暴率显示 40
+
+#IF
+CheckContainsTextList ..\..\..\..\37W包服功能\开启14区爆率.txt 关
+CHECKCONTAINSTEXT <$SERVERNAME> 05区
+#ACT
+INC N$杀怪爆率 9
+INC N$暴率显示 50
+
+#IF
+CheckContainsTextList ..\..\..\..\37W包服功能\开启14区爆率.txt 关
+CHECKCONTAINSTEXT <$SERVERNAME> 06区
+#ACT
+INC N$杀怪爆率 13
+INC N$暴率显示 60
+
+#IF
+CheckContainsTextList ..\..\..\..\37W包服功能\开启14区爆率.txt 关
+CHECKCONTAINSTEXT <$SERVERNAME> 07区
+#ACT
+INC N$杀怪爆率 15
+INC N$暴率显示 70
+
+#IF
+CheckContainsTextList ..\..\..\..\37W包服功能\开启14区爆率.txt 关
+CHECKCONTAINSTEXT <$SERVERNAME> 08区
+#ACT
+INC N$杀怪爆率 17
+INC N$暴率显示 80
+
+#IF
+CheckContainsTextList ..\..\..\..\37W包服功能\开启14区爆率.txt 关
+CHECKCONTAINSTEXT <$SERVERNAME> 09区
+#ACT
+INC N$杀怪爆率 20
+INC N$暴率显示 100
+
+
+;=========超级会员爆率==========超级会员爆率=========
+;=========超级会员爆率==========超级会员爆率=========
+;=========超级会员爆率==========超级会员爆率=========
+
+
+#IF
+EQUAL N$37W爆率加成 500
+#ACT
+INC N$杀怪爆率 100
+INC N$暴率显示 500
+
+#IF
+EQUAL N$37W爆率加成 200
+#ACT
+INC N$杀怪爆率 50
+INC N$暴率显示 200
+
+#IF
+EQUAL N$37W爆率加成 100
+#ACT
+INC N$杀怪爆率 30
+INC N$暴率显示 100
+
+
+
+
+
+#IF
+#ACT
+MOV N$杀怪爆率1 <$STR(N$杀怪爆率)>
+div N$杀怪爆率1 5
+inc N$杀怪爆率1 100
+
+
+#IF
+SMALL N$杀怪爆率1 100
+#ACT
+MOV N$杀怪爆率1 100
+
+#IF
+LARGE N$杀怪爆率1 1000
+#ACT
+MOV N$杀怪爆率1 1000
+
+
+#IF
+CHECK [1] 1
+#ACT
+INC N$杀怪爆率1 100
+
+#IF
+NOT EQUAL S$人物爆率标记 <$STR(N$杀怪爆率)>
+#ACT
+MOV S$人物爆率标记 <$STR(N$杀怪爆率)>
+; 注释
+; KILLMONBURSTRATE 20140220 20140221 <$STR(N$杀怪爆率1)> 20140223 20140224 20140225 20140226 65000 20140227 20140228
+KILLMONBURSTRATE <$STR(N$杀怪爆率1)> 65000
+SENDMSG 6 杀怪爆率<$STR(N$暴率显示)>%，时长：65000秒
+
+
+
+
+
+}

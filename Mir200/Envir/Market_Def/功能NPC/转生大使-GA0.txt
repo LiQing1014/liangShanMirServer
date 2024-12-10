@@ -1,0 +1,327 @@
+[@main]
+#IF
+CHECKRENEWLEVEL = 0
+#ACT
+#SAY
+<少年,我看你骨骼精奇,是万中无一的武学奇才,维护世界和平就靠你了/SCOLOR=100>\
+<我可助你打通任督二脉,提升自己的天赋境界！能不能成功就看你的命了/SCOLOR=100>\
+<天赋境界共十重，想要提升境界需要坚持不懈的修炼，没有捷径可走/SCOLOR=249>\ \
+
+<当前天赋境界/SCOLOR=31>：{【零重天】/SCOLOR=253}  <提升境界增加人物伤害和防御/SCOLOR=70>\ \
+
+　                      <提升天赋修为/@Start_1转>\   \
+
+　         <提升条件：/SCOLOR=22><需要：1000元宝/SCOLOR=250>\
+　         <境界提升总属性：/SCOLOR=22><防御+5 攻魔道+1 小退生效./SCOLOR=254>\
+
+
+
+#IF
+CHECKRENEWLEVEL = 1
+#ACT
+#SAY
+<少年,我看你骨骼精奇,是万中无一的武学奇才,维护世界和平就靠你了/SCOLOR=100>\
+<我可助你打通任督二脉,提升自己的天赋境界！能不能成功就看你的命了/SCOLOR=100>\
+<天赋境界共十重，想要提升境界需要坚持不懈的修炼，没有捷径可走/SCOLOR=249>\ \
+
+<当前天赋境界/SCOLOR=31>：{一重【感应境】/SCOLOR=253}  <提升境界增加伤害和防御/SCOLOR=70>\ \
+
+　                      <提升天赋修为/@Start_2转>\   \
+
+　         <提升条件：/SCOLOR=22><需要：2000元宝/SCOLOR=250>\
+　         <境界提升总属性：/SCOLOR=22><防御+7 攻魔道+2 属性叠加小退生效./SCOLOR=254>\
+
+
+#IF
+CHECKRENEWLEVEL = 2
+#ACT
+#SAY
+<少年,我看你骨骼精奇,是万中无一的武学奇才,维护世界和平就靠你了/SCOLOR=100>\
+<我可助你打通任督二脉,提升自己的天赋境界！能不能成功就看你的命了/SCOLOR=100>\
+<天赋境界共十重，想要提升境界需要坚持不懈的修炼，没有捷径可走/SCOLOR=249>\ \
+
+<当前天赋境界/SCOLOR=31>：{二重【真气境】/SCOLOR=253}  <提升境界增加伤害和防御/SCOLOR=70>\ \
+
+　                      <提升天赋修为/@Start_3转>\   \
+
+　         <提升条件：/SCOLOR=22><需要：3000元宝/SCOLOR=250>\
+　         <境界提升总属性：/SCOLOR=22><防御+9 攻魔道+4 小退生效./SCOLOR=254>\
+
+
+#IF
+CHECKRENEWLEVEL = 3
+#ACT
+#SAY
+<少年,我看你骨骼精奇,是万中无一的武学奇才,维护世界和平就靠你了/SCOLOR=100>\
+<我可助你打通任督二脉,提升自己的天赋境界！能不能成功就看你的命了/SCOLOR=100>\
+<天赋境界共十重，想要提升境界需要坚持不懈的修炼，没有捷径可走/SCOLOR=249>\ \
+
+<当前天赋境界/SCOLOR=31>：{三重【灵动境】/SCOLOR=253}  <提升境界增加伤害和防御/SCOLOR=70>\ \
+
+　                      <提升天赋修为/@Start_4转>\   \
+
+　         <提升条件：/SCOLOR=22><需要：4000元宝/SCOLOR=250>\
+　         <境界提升总属性：/SCOLOR=22><防御+12 攻魔道+6 小退生效./SCOLOR=254>\
+
+#IF
+CHECKRENEWLEVEL = 4
+#ACT
+#SAY
+<少年,我看你骨骼精奇,是万中无一的武学奇才,维护世界和平就靠你了/SCOLOR=100>\
+<我可助你打通任督二脉,提升自己的天赋境界！能不能成功就看你的命了/SCOLOR=100>\
+<天赋境界共十重，想要提升境界需要坚持不懈的修炼，没有捷径可走/SCOLOR=249>\ \
+
+<当前天赋境界/SCOLOR=31>：{四重【灵轮境】/SCOLOR=253}  <提升境界增加伤害和防御/SCOLOR=70>\ \
+
+　                      <提升天赋修为/@Start_5转>\   \
+
+　         <提升条件：/SCOLOR=22><需要：5000元宝/SCOLOR=250>\
+　         <境界提升总属性：/SCOLOR=22><防御+15 攻魔道+8 小退生效./SCOLOR=254>\
+
+
+
+#IF
+CHECKRENEWLEVEL = 5
+#ACT
+#SAY
+<少年,我看你骨骼精奇,是万中无一的武学奇才,维护世界和平就靠你了/SCOLOR=100>\
+<我可助你打通任督二脉,提升自己的天赋境界！能不能成功就看你的命了/SCOLOR=100>\
+<天赋境界共十重，想要提升境界需要坚持不懈的修炼，没有捷径可走/SCOLOR=249>\ \
+
+<当前天赋境界/SCOLOR=31>：{五重【凝罡境】/SCOLOR=253}  <提升境界增加伤害和防御/SCOLOR=70>\ \
+
+　                      <提升天赋修为/@Start_6转>\   \
+
+　         <提升条件：/SCOLOR=22><需要：10000元宝/SCOLOR=250>\
+　         <境界提升总属性：/SCOLOR=22><防御+18 攻魔道+10 小退生效./SCOLOR=254>\
+
+#IF
+CHECKRENEWLEVEL = 6
+#ACT
+#SAY
+<少年,我看你骨骼精奇,是万中无一的武学奇才,维护世界和平就靠你了/SCOLOR=100>\
+<我可助你打通任督二脉,提升自己的天赋境界！能不能成功就看你的命了/SCOLOR=100>\
+<天赋境界共十重，想要提升境界需要坚持不懈的修炼，没有捷径可走/SCOLOR=249>\ \
+
+<当前天赋境界/SCOLOR=31>：{六重【气魄境】/SCOLOR=253}  <提升境界增加伤害和防御/SCOLOR=70>\ \
+
+　                      <提升天赋修为/@Start_7转>\   \
+
+　         <提升条件：/SCOLOR=22><需要：20000元宝/SCOLOR=250>\
+　         <境界提升总属性：/SCOLOR=22><防御+21 攻魔道+12 小退生效./SCOLOR=254>\
+
+
+#IF
+CHECKRENEWLEVEL = 7
+#ACT
+#SAY
+<少年,我看你骨骼精奇,是万中无一的武学奇才,维护世界和平就靠你了/SCOLOR=100>\
+<我可助你打通任督二脉,提升自己的天赋境界！能不能成功就看你的命了/SCOLOR=100>\
+<天赋境界共十重，想要提升境界需要坚持不懈的修炼，没有捷径可走/SCOLOR=249>\ \
+
+<当前天赋境界/SCOLOR=31>：{七重【融天境】/SCOLOR=253}  <提升境界增加伤害和防御/SCOLOR=70>\ \
+
+　                      <提升天赋修为/@Start_8转>\   \
+
+　         <提升条件：/SCOLOR=22><需要：30000元宝/SCOLOR=250>\
+　         <境界提升总属性：/SCOLOR=22><防御+25 攻魔道+14 小退生效./SCOLOR=254>\
+
+#IF
+CHECKRENEWLEVEL = 8
+#ACT
+#SAY
+<少年,我看你骨骼精奇,是万中无一的武学奇才,维护世界和平就靠你了/SCOLOR=100>\
+<我可助你打通任督二脉,提升自己的天赋境界！能不能成功就看你的命了/SCOLOR=100>\
+<天赋境界共十重，想要提升境界需要坚持不懈的修炼，没有捷径可走/SCOLOR=249>\ \
+
+<当前天赋境界/SCOLOR=31>：{八重【通天境】/SCOLOR=253}  <提升境界增加伤害和防御/SCOLOR=70>\ \
+
+　                      <提升天赋修为/@Start_9转>\   \
+
+　         <提升条件：/SCOLOR=22><需要：50000元宝/SCOLOR=250>\
+　         <境界提升总属性：/SCOLOR=22><防御+28 攻魔道+16 小退生效./SCOLOR=254>\
+
+#IF
+CHECKRENEWLEVEL = 9
+#ACT
+#SAY
+<少年,我看你骨骼精奇,是万中无一的武学奇才,维护世界和平就靠你了/SCOLOR=100>\
+<我可助你打通任督二脉,提升自己的天赋境界！能不能成功就看你的命了/SCOLOR=100>\
+<天赋境界共十重，想要提升境界需要坚持不懈的修炼，没有捷径可走/SCOLOR=249>\ \
+
+<当前天赋境界/SCOLOR=31>：{九重【神魄境】/SCOLOR=253}  <提升境界增加伤害和防御/SCOLOR=70>\ \
+
+　                      <提升天赋修为/@Start_10转>\   \
+
+　         <提升条件：/SCOLOR=22><需要：100000元宝/SCOLOR=250>\
+　         <境界提升总属性：/SCOLOR=22><防御+30 攻魔道+20 小退生效./SCOLOR=254>\
+
+#IF
+CHECKRENEWLEVEL = 10
+#ACT
+#SAY
+<少年,我看你骨骼精奇,是万中无一的武学奇才,维护世界和平就靠你了/SCOLOR=100>\
+<我可助你打通任督二脉,提升自己的天赋境界！能不能成功就看你的命了/SCOLOR=100>\
+<天赋境界共十重，想要提升境界需要坚持不懈的修炼，没有捷径可走/SCOLOR=249>\ \
+
+<当前天赋境界/SCOLOR=31>：{十重【至尊境】/SCOLOR=253}  <提升境界增加伤害和防御/SCOLOR=70>\ \
+
+　                     <当前天赋境界已经提升到最高>\   \
+
+
+
+
+
+　                        
+
+　           
+
+[@Start_1转]
+#IF
+CHECKRENEWLEVEL = 0
+CHECKGAMEGOLD > 999
+#ACT
+GAMEGOLD - 1000
+RENEWLEVEL 1 0 0
+SENDMSG 0 恭喜玩家【%s】提升天赋修为成功，天赋境界提升到一重天【感应境】！！！
+messagebox 恭喜您，天赋修为成功提升到【一重天】，小退获得天赋属性！
+GOTO @main
+BREAK
+#ELSEACT
+MESSAGEBOX [失败原因]:人物等级不够或您没有相应数量的元宝!
+
+[@Start_2转]
+#IF
+CHECKRENEWLEVEL = 1
+CHECKGAMEGOLD > 1999
+#ACT
+GAMEGOLD - 2000
+RENEWLEVEL 1 0 0
+SENDMSG 0 恭喜玩家【%s】提升天赋修为成功，天赋境界提升到二重天【真气境】！！！
+messagebox 恭喜您，天赋修为成功提升到【二重天】，小退获得天赋属性！
+GOTO @main
+BREAK
+#ELSEACT
+MESSAGEBOX [失败原因]:人物等级不够或您没有相应数量的元宝!
+
+[@Start_3转]
+#IF
+CHECKRENEWLEVEL = 2
+CHECKGAMEGOLD > 2999
+#ACT
+GAMEGOLD - 3000
+RENEWLEVEL 1 0 0
+SENDMSG 0 恭喜玩家【%s】提升天赋修为成功，天赋境界提升到三重天【灵动境】！！！
+messagebox 恭喜您，天赋修为成功提升到【三重天】，小退获得天赋属性！
+GOTO @main
+BREAK
+#ELSEACT
+MESSAGEBOX [失败原因]:人物等级不够或您没有相应数量的元宝!
+
+[@Start_4转]
+#IF
+CHECKRENEWLEVEL = 3
+CHECKGAMEGOLD > 3999
+#ACT
+GAMEGOLD - 4000
+RENEWLEVEL 1 0 0
+SENDMSG 0 恭喜玩家【%s】提升天赋修为成功，天赋境界提升到四重天【灵轮境】！！！
+messagebox 恭喜您，天赋修为成功提升到【四重天】，小退获得天赋属性！
+GOTO @main
+BREAK
+#ELSEACT
+MESSAGEBOX [失败原因]:人物等级不够或您没有相应数量的元宝!
+
+[@Start_5转]
+#IF
+CHECKRENEWLEVEL = 4
+CHECKGAMEGOLD > 4999
+#ACT
+GAMEGOLD - 5000
+RENEWLEVEL 1 0 0
+SENDMSG 0 恭喜玩家【%s】提升天赋修为成功，天赋境界提升到五重天【凝罡境】！！！
+messagebox 恭喜您，天赋修为成功提升到【五重天】，小退获得天赋属性！
+GOTO @main
+BREAK
+#ELSEACT
+MESSAGEBOX [失败原因]:人物等级不够或您没有相应数量的元宝!
+
+[@Start_6转]
+#IF
+CHECKRENEWLEVEL = 5
+CHECKGAMEGOLD > 9999
+#ACT
+GAMEGOLD - 10000
+RENEWLEVEL 1 0 0
+SENDMSG 0 恭喜玩家【%s】提升天赋修为成功，天赋境界提升到六重天【气魄境】！！！
+messagebox 恭喜您，天赋修为成功提升到【六重天】，小退获得天赋属性！
+GOTO @main
+BREAK
+#ELSEACT
+MESSAGEBOX [失败原因]:人物等级不够或您没有相应数量的元宝!
+
+[@Start_7转]
+#IF
+CHECKRENEWLEVEL = 6
+CHECKGAMEGOLD > 19999
+#ACT
+GAMEGOLD - 20000
+RENEWLEVEL 1 0 0
+SENDMSG 0 恭喜玩家【%s】提升天赋修为成功，天赋境界提升到七重天【融天境】！！！
+messagebox 恭喜您，天赋修为成功提升到【七重天】，小退获得天赋属性！
+GOTO @main
+BREAK
+#ELSEACT
+MESSAGEBOX [失败原因]:人物等级不够或您没有相应数量的元宝!
+
+
+[@Start_8转]
+#IF
+CHECKRENEWLEVEL = 7
+CHECKGAMEGOLD > 29999
+#ACT
+GAMEGOLD - 30000
+RENEWLEVEL 1 0 0
+SENDMSG 0 恭喜玩家【%s】提升天赋修为成功，天赋境界提升到八重天【通天境】！！！
+messagebox 恭喜您，天赋修为成功提升到【八重天】，小退获得天赋属性！
+GOTO @main
+BREAK
+#ELSEACT
+MESSAGEBOX [失败原因]:人物等级不够或您没有相应数量的元宝!
+
+[@Start_9转]
+#IF
+CHECKRENEWLEVEL = 8
+CHECKGAMEGOLD > 49999
+#ACT
+GAMEGOLD - 50000
+RENEWLEVEL 1 0 0
+SENDMSG 0 恭喜玩家【%s】提升天赋修为成功，天赋境界提升到九重天【神魄境】！！！
+messagebox 恭喜您，天赋修为成功提升到【九重天】，小退获得天赋属性！
+GOTO @main
+BREAK
+#ELSEACT
+MESSAGEBOX [失败原因]:人物等级不够或您没有相应数量的元宝!
+
+
+[@Start_10转]
+#IF
+CHECKRENEWLEVEL = 9
+CHECKGAMEGOLD > 99999
+#ACT
+GAMEGOLD - 100000
+RENEWLEVEL 1 0 0
+SENDMSG 0 恭喜玩家【%s】提升天赋修为成功，天赋境界提升到十重天【至尊境】！！！
+messagebox 恭喜您，天赋修为成功提升到【十重天】，小退获得天赋属性！
+GOTO @main
+BREAK
+#ELSEACT
+MESSAGEBOX [失败原因]:人物等级不够或您没有相应数量的元宝!
+
+
+
+
+
+
+
+

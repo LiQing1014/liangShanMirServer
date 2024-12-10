@@ -1,0 +1,496 @@
+[@main]
+#IF
+#ACT
+close
+#SAY
+\ \
+<少侠您好，很高兴见到你! 我这里可以锻造终极神器，你有兴趣了解吗？/FCOLOR=70> \ \
+<><终极斗笠，终极宝石，终极血玉，触发套装属性，神秘而强大.../SCOLOR=145>\ \ 
+<><人在江湖混，没有终极特殊套装，怎么混呢？/SCOLOR=147>\ \ \
+<>  <查看终极斗笠详情/@main1>    <查看终极宝石详情/@main2>    <查看终极血玉详情/@main3>\
+
+
+[@main3]
+#IF
+#ACT
+close
+#SAY
+\ \ \
+<少侠您好：/SCOLOR=253>\ \
+<>      <血玉打造已经流失了很多年，目前也就我的小师妹会这手艺.../SCOLOR=250>\ \
+<如想了解，推荐大哥您去/SCOLOR=250><“原始天界”/SCOLOR=249><大陆，看看能不能找到小师妹！/SCOLOR=250>\ \
+<>                        <我已知晓，返回主页/@main>
+[@main1]
+#if
+#act
+OPENMERCHANTBIGDLG 1 8 0 0 0 0 0
+#say
+<ImgEx:1:5:5:6:392:-16/@EXIT>
+<少侠您好，很高兴见到你! 如果你有需要我可以帮你锻造斗笠！/FCOLOR=70> \ \
+<><人在江湖飘，没有一顶拉风的斗笠怎么叱咤风云，引领江湖潮流？/SCOLOR=147>\ \
+<><初级斗笠在土城坐上交易市场内进行锻造.../SCOLOR=253>\ 
+<>              <ItemShow:626:0:1:1:1>              <ItemShow:627:0:1:1:1> \ \ \ \
+
+<><【斗笠·王者】/SCOLOR=254> <需求：/SCOLOR=103><宗师斗笠*1+588点卷+赤炎石*10/SCOLOR=250>  <开始打造/@宝石6>\ \
+<><【斗笠·至尊】/SCOLOR=70> <需求：/SCOLOR=103><王者斗笠*1+888点卷+赤炎石*20/SCOLOR=250>  <开始打造/@宝石7>\  \
+<><提示：打造至尊斗笠可搭配其他两件套，触发最强套装属性和倍攻！/SCOLOR=249>\
+
+
+
+
+[@斗笠]
+#IF
+CHECKGAMEGOLD > 4999
+#ACT
+GAMEGOLD - 5000
+give 神秘斗笠 1
+SENDMSG 6 成功购买神秘斗笠*1!
+BREAK
+#ELSEACT
+MESSAGEBOX [购买失败]:元宝不足!
+
+
+
+
+[@宝石2]
+#IF
+checkitem 神秘斗笠 2
+CHECKGAMEGOLD > 1998
+#ACT
+GAMEGOLD - 1999
+take 神秘斗笠 2
+give 白银斗笠 1
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功打造出：白银斗笠!
+BREAK
+#ELSEACT
+MESSAGEBOX [锻造失败]:您的材料或条件不足!
+BREAK
+
+[@宝石3]
+#IF
+checkitem 白银斗笠 2
+CHECKGAMEGOLD > 3998
+#ACT
+GAMEGOLD - 3999
+take 白银斗笠 2
+give 黄金斗笠 1
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功打造出：黄金斗笠!
+BREAK
+#ELSEACT
+MESSAGEBOX [锻造失败]:您的材料或条件不足!
+BREAK
+
+[@宝石4]
+#IF
+checkitem 黄金斗笠 2
+CHECKGAMEGOLD > 6665
+#ACT
+GAMEGOLD - 6666
+take 黄金斗笠 2
+give 豪杰斗笠 1
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功打造出：豪杰斗笠!
+BREAK
+#ELSEACT
+MESSAGEBOX [锻造失败]:您的材料或条件不足!
+BREAK
+
+[@宝石5]
+#IF
+checkitem 豪杰斗笠 2
+checkitem 天之神铁 10
+CHECKGAMEGOLD > 9999
+#ACT
+GAMEGOLD - 10000
+take 天之神铁 10
+take 豪杰斗笠 2
+give 宗师斗笠 1
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功打造出：宗师斗笠!
+BREAK
+#ELSEACT
+MESSAGEBOX [锻造失败]:您的材料或条件不足!
+BREAK
+
+[@宝石6]
+#IF
+checkitem 宗师斗笠 1
+checkitem 赤炎石 10
+CHECKGAMEDIAMOND > 587
+#ACT
+GAMEDIAMOND - 588
+take 赤炎石 10
+take 宗师斗笠 1
+give 王者斗笠 1
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功打造出：王者斗笠!
+BREAK
+#ELSEACT
+MESSAGEBOX [锻造失败]:您的材料或条件不足!
+BREAK
+
+[@宝石7]
+#IF
+checkitem 王者斗笠 1
+checkitem 赤炎石 20
+CHECKGAMEDIAMOND > 887
+#ACT
+GAMEDIAMOND - 888
+take 赤炎石 20
+take 王者斗笠 1
+give 至尊神笠 1
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功打造出：至尊神笠!
+BREAK
+#ELSEACT
+MESSAGEBOX [锻造失败]:您的材料或条件不足!
+BREAK
+
+
+[@main2]
+#IF
+#ACT
+close
+#SAY
+<> \
+<>  <8-9-10级宝石只需要一合一哦，请把七星宝石放在包袱即可打造！/SCOLOR=249>\
+<>        <ItemShow:637:0:1:1:1>            <ItemShow:638:0:1:1:1>            <ItemShow:639:0:1:1:1> \ \ \
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>      <进阶八星宝石/@八星宝石>       <进阶九星宝石/@九星宝石>       <进阶至尊宝石/@至尊宝石>\ 
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<><打造至尊斗笠可搭配其他两件套，触发最强套装属性和倍攻！/SCOLOR=250><返回主页/@main>
+
+
+[@二星宝石]
+#IF
+checkitem 一星宝石 1 
+#ACT
+OPENMERCHANTBIGDLG 1  191 1 0 0 0 0
+#SAY
+<IMGEX:1:213:214:215:375:-5/@exit>\  \
+<宝石进阶：/FCOLOR=70><宝石蕴含天地间最狂暴的能量，需要两颗低一级的宝石进阶！/FCOLOR=250> \
+<ItemShow:630:0:78:78>   <ItemShow:631:0:232:78>\  \ \ \ \ 
+
+<>\  \  \  \ \ \ \
+
+<>           <进阶要求：/FCOLOR=249><一星宝石*2颗+15点卷/FCOLOR=89> \  \
+<>           <进阶说明：/FCOLOR=249><成功几率100%/FCOLOR=89>\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@提升bs2>                                     \ 
+<>                                                          <返回/@宝石进阶>\
+<PlayImg:2:0:10:80:-107:-395:0><PlayImg:2:10:10:80:-298:-395:0>
+#ELSEACT
+messagebox 您的背包里没有一星宝石，无法查看!
+
+
+[@三星宝石]
+#IF
+checkitem 二星宝石 1 
+#ACT
+OPENMERCHANTBIGDLG 1  191 1 0 0 0 0
+#SAY
+<IMGEX:1:213:214:215:375:-5/@exit>\  \
+<宝石进阶：/FCOLOR=70><宝石蕴含天地间最狂暴的能量，需要两颗低一级的宝石进阶！/FCOLOR=250> \
+<ItemShow:631:0:78:78>   <ItemShow:632:0:232:78>\  \ \ \ \ 
+
+<>\  \  \  \ \ \ \
+
+<>           <进阶要求：/FCOLOR=249><二星宝石*2颗+30点卷/FCOLOR=89> \  \
+<>           <进阶说明：/FCOLOR=249><成功几率100%/FCOLOR=89>\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@提升bs3>                                     \ 
+<>                                                          <返回/@宝石进阶>\
+<PlayImg:2:0:10:80:-107:-395:0><PlayImg:2:10:10:80:-298:-395:0>
+#ELSEACT
+messagebox 您的背包里没有二星宝石，无法查看!
+
+
+[@四星宝石]
+#IF
+checkitem 三星宝石 1 
+#ACT
+OPENMERCHANTBIGDLG 1  191 1 0 0 0 0
+#SAY
+<IMGEX:1:213:214:215:375:-5/@exit>\  \
+<宝石进阶：/FCOLOR=70><宝石蕴含天地间最狂暴的能量，需要两颗低一级的宝石进阶！/FCOLOR=250> \
+<ItemShow:632:0:78:78>   <ItemShow:633:0:232:78>\  \ \ \ \ 
+
+<>\  \  \  \ \ \ \
+
+<>           <进阶要求：/FCOLOR=249><三星宝石*2颗+60点卷/FCOLOR=89> \  \
+<>           <进阶说明：/FCOLOR=249><成功几率100%/FCOLOR=89>\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@提升bs4>                                     \ 
+<>                                                          <返回/@宝石进阶>\
+<PlayImg:2:0:10:80:-107:-395:0><PlayImg:2:10:10:80:-298:-395:0> 
+#ELSEACT
+messagebox 您的背包里没有三星宝石，无法查看!
+
+
+
+[@五星宝石]
+#IF
+checkitem 四星宝石 1 
+#ACT
+OPENMERCHANTBIGDLG 1  191 1 0 0 0 0
+#SAY
+<IMGEX:1:213:214:215:375:-5/@exit>\  \
+<宝石进阶：/FCOLOR=70><宝石蕴含天地间最狂暴的能量，需要两颗低一级的宝石进阶！/FCOLOR=250> \
+<ItemShow:633:0:78:78>   <ItemShow:634:0:232:78>\  \ \ \ \ 
+
+<>\  \  \  \ \ \ \
+
+<>           <进阶要求：/FCOLOR=249><四星宝石*2颗+100点卷/FCOLOR=89> \  \
+<>           <进阶说明：/FCOLOR=249><成功几率100%/FCOLOR=89>\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@提升bs5>                                     \ 
+<>                                                          <返回/@宝石进阶>\
+<PlayImg:2:0:10:80:-107:-395:0><PlayImg:2:10:10:80:-298:-395:0>  
+#ELSEACT
+messagebox 您的背包里没有四星宝石，无法查看!
+
+[@六星宝石]
+#IF
+checkitem 五星宝石 1 
+#ACT
+OPENMERCHANTBIGDLG 1  191 1 0 0 0 0
+#SAY
+<IMGEX:1:213:214:215:375:-5/@exit>\  \
+<宝石进阶：/FCOLOR=70><宝石蕴含天地间最狂暴的能量，需要两颗低一级的宝石进阶！/FCOLOR=250> \
+<ItemShow:634:0:78:78>   <ItemShow:635:0:232:78>\  \ \ \ \ 
+
+<>\  \  \  \ \ \ \
+
+<>           <进阶要求：/FCOLOR=249><五星宝石*2颗+150点卷/FCOLOR=89> \  \
+<>           <进阶说明：/FCOLOR=249><成功几率100%/FCOLOR=89>\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@提升bs6>                                     \ 
+<>                                                          <返回/@宝石进阶>\
+<PlayImg:2:0:10:80:-107:-395:0><PlayImg:2:10:10:80:-298:-395:0>  
+#ELSEACT
+messagebox 您的背包里没有五星宝石，无法查看!
+
+
+[@七星宝石]
+#IF
+checkitem 六星宝石 1 
+#ACT
+OPENMERCHANTBIGDLG 1  191 1 0 0 0 0
+#SAY
+<IMGEX:1:213:214:215:375:-5/@exit>\  \
+<宝石进阶：/FCOLOR=70><宝石蕴含天地间最狂暴的能量，需要两颗低一级的宝石进阶！/FCOLOR=250> \
+<ItemShow:635:0:78:78>   <ItemShow:636:0:232:78>\  \ \ \ \ 
+
+<>\  \  \  \ \ \ \
+
+<>           <进阶要求：/FCOLOR=249><六星宝石*2颗+200点卷/FCOLOR=89> \  \
+<>           <进阶说明：/FCOLOR=249><成功几率100%/FCOLOR=89>\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@提升bs7>                                     \ 
+<>                                                          <返回/@宝石进阶>\
+<PlayImg:2:0:10:80:-107:-395:0><PlayImg:2:10:10:80:-298:-395:0>   
+#ELSEACT
+messagebox 您的背包里没有六星宝石，无法查看!
+
+
+[@八星宝石]
+#IF
+checkitem 七星宝石 1 
+#ACT
+OPENMERCHANTBIGDLG 1  191 1 0 0 0 0
+#SAY
+<IMGEX:1:213:214:215:375:-5/@exit>\  \
+<宝石进阶：/FCOLOR=70><宝石蕴含天地间最狂暴的能量，需要两颗低一级的宝石进阶！/FCOLOR=250> \
+<ItemShow:636:0:78:78>   <ItemShow:637:0:232:78>\  \ \ \ \ 
+
+<>\  \  \  \ \ \ \
+
+<>           <进阶要求：/FCOLOR=249><七星宝石*1颗+500点卷/FCOLOR=89> \  \
+<>           <进阶说明：/FCOLOR=249><成功几率100%/FCOLOR=89>\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@提升bs8>                                     \ 
+<>                                                          <返回/@main2>\
+<PlayImg:2:0:10:80:-107:-395:0><PlayImg:2:10:10:80:-298:-395:0>     
+#ELSEACT
+messagebox 您的背包里没有七星宝石，无法查看!
+
+[@九星宝石]
+#IF
+checkitem 八星宝石 1 
+#ACT
+OPENMERCHANTBIGDLG 1  191 1 0 0 0 0
+#SAY
+<IMGEX:1:213:214:215:375:-5/@exit>\  \
+<宝石进阶：/FCOLOR=70><宝石蕴含天地间最狂暴的能量，需要两颗低一级的宝石进阶！/FCOLOR=250> \
+<ItemShow:637:0:78:78>   <ItemShow:638:0:232:78>\  \ \ \ \ 
+
+<>\  \  \  \ \ \ \
+
+<>           <进阶要求：/FCOLOR=249><八星宝石*1颗+1000点卷+赤炎石*10/FCOLOR=89> \  \
+<>           <进阶说明：/FCOLOR=249><成功几率100%/FCOLOR=89>\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@提升bs9>                                     \ 
+<>                                                          <返回/@main2>\
+<PlayImg:2:0:10:80:-107:-395:0><PlayImg:2:10:10:80:-298:-395:0>   
+#ELSEACT
+messagebox 您的背包里没有八星宝石，无法查看!
+
+[@至尊宝石]
+#IF
+checkitem 九星宝石 1 
+#ACT
+OPENMERCHANTBIGDLG 1  191 1 0 0 0 0
+#SAY
+<IMGEX:1:213:214:215:375:-5/@exit>\  \
+<宝石进阶：/FCOLOR=70><宝石蕴含天地间最狂暴的能量，需要两颗低一级的宝石进阶！/FCOLOR=250> \
+<ItemShow:638:0:78:78>   <ItemShow:639:0:231:78>\  \ \ \ \ 
+
+<>\  \  \  \ \ \ \
+
+<>           <进阶要求：/FCOLOR=249><九星宝石*1颗+2000点卷+赤炎石*20/FCOLOR=89> \  \
+<>           <进阶说明：/FCOLOR=249><成功几率100%/FCOLOR=89>\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@提升bs10>                                     \ 
+<>                                                          <返回/@main2>\
+<PlayImg:2:0:10:80:-107:-395:0><PlayImg:2:10:10:80:-298:-395:0>    
+#ELSEACT
+messagebox 您的背包里没有九星宝石，无法查看!
+
+
+
+
+[@提升bs2]
+#IF
+checkitem 一星宝石 2
+CHECKGAMEDIAMOND > 14
+#act
+GAMEDIAMOND - 15
+take 一星宝石 2
+give 二星宝石 1
+messagebox \\恭喜您进阶宝石成功！！！
+SENDMSG 0 神龙长老ぐ：恭喜玩家「%s」进阶宝石成功，获得：二星宝石！
+BREAK
+#ELSEACT
+MESSAGEBOX [进阶失败]:您的材料或条件不足!
+break
+
+
+[@提升bs3]
+#IF
+checkitem 二星宝石 2
+CHECKGAMEDIAMOND > 29
+#act
+GAMEDIAMOND - 30
+take 二星宝石 2
+give 三星宝石 1
+messagebox \\恭喜您进阶宝石成功！！！
+SENDMSG 0 神龙长老ぐ：恭喜玩家「%s」进阶宝石成功，获得：三星宝石！ 
+BREAK
+#ELSEACT
+MESSAGEBOX [进阶失败]:您的材料或条件不足!
+break
+
+
+[@提升bs4]
+#IF
+checkitem 三星宝石 2
+CHECKGAMEDIAMOND > 59
+#act
+GAMEDIAMOND - 60
+take 三星宝石 2
+give 四星宝石 1
+messagebox \\恭喜您进阶宝石成功！！！
+SENDMSG 0 神龙长老ぐ：恭喜玩家「%s」进阶宝石成功，获得：四星宝石！
+BREAK
+#ELSEACT
+MESSAGEBOX [进阶失败]:您的材料或条件不足!
+break
+
+
+[@提升bs5]
+#IF
+checkitem 四星宝石 2
+CHECKGAMEDIAMOND > 99
+#act
+GAMEDIAMOND - 100
+take 四星宝石 2
+give 五星宝石 1
+messagebox \\恭喜您进阶宝石成功！！！
+SENDMSG 0 神龙长老ぐ：恭喜玩家「%s」进阶宝石成功，获得：五星宝石！
+BREAK
+#ELSEACT
+MESSAGEBOX [进阶失败]:您的材料或条件不足!
+break
+
+
+[@提升bs6]
+#IF
+checkitem 五星宝石 2
+CHECKGAMEDIAMOND > 149
+#act
+GAMEDIAMOND - 150
+take 五星宝石 2
+give 六星宝石 1
+messagebox \\恭喜您进阶宝石成功！！！
+SENDMSG 0 神龙长老ぐ：恭喜玩家「%s」进阶宝石成功，获得：六星宝石！ 
+BREAK
+#ELSEACT
+MESSAGEBOX [进阶失败]:您的材料或条件不足!
+break
+
+
+[@提升bs7]
+#IF
+checkitem 六星宝石 2
+CHECKGAMEDIAMOND > 199
+#act
+GAMEDIAMOND - 200
+take 六星宝石 2
+give 七星宝石 1
+messagebox \\恭喜您进阶宝石成功！！！
+SENDMSG 0 神龙长老ぐ：恭喜玩家「%s」进阶宝石成功，获得：七星宝石！
+BREAK
+#ELSEACT
+MESSAGEBOX [进阶失败]:您的材料或条件不足!
+break
+
+
+[@提升bs8]
+#IF
+checkitem 七星宝石 1
+CHECKGAMEDIAMOND > 499
+#act
+GAMEDIAMOND - 500
+take 七星宝石 1
+give 八星宝石 1
+messagebox \\恭喜您进阶宝石成功！！！
+SENDMSG 0 神龙长老ぐ：恭喜玩家「%s」进阶宝石成功，获得：八星宝石！
+BREAK
+#ELSEACT
+MESSAGEBOX [进阶失败]:您的材料或条件不足!
+break
+
+
+
+[@提升bs9]
+#IF
+checkitem 八星宝石 1
+checkitem 赤炎石 10
+CHECKGAMEDIAMOND > 999
+#act
+GAMEDIAMOND - 1000
+take 赤炎石 10
+take 八星宝石 1
+give 九星宝石 1
+messagebox \\恭喜您进阶宝石成功！！！
+SENDMSG 0 神龙长老ぐ：恭喜玩家「%s」进阶宝石成功，获得：九星宝石！
+BREAK
+#ELSEACT
+MESSAGEBOX [进阶失败]:您的材料或条件不足!
+break
+
+
+
+[@提升bs10]
+#IF
+checkitem 九星宝石 1
+checkitem 赤炎石 20
+CHECKGAMEDIAMOND > 1999
+#act
+GAMEDIAMOND - 2000
+take 赤炎石 20
+take 九星宝石 1
+give 至尊宝石 1
+messagebox \\恭喜您进阶宝石成功！！！
+SENDMSG 0 神龙长老ぐ：恭喜玩家「%s」进阶宝石成功，获得：至尊宝石！
+BREAK
+#ELSEACT
+MESSAGEBOX [进阶失败]:您的材料或条件不足!
+break

@@ -1,0 +1,61 @@
+[@雷霆类衣服e]
+{
+
+#IF
+checkitem 雷霆战甲(男) 1
+#ACT
+take 雷霆战甲(男) 1
+inc m39 1
+inc m37 50000000
+goto @雷霆类衣服e
+
+#IF
+checkitem 雷霆战甲(女) 1
+#ACT
+take 雷霆战甲(女) 1
+inc m39 1
+inc m37 50000000
+goto @雷霆类衣服e
+
+#IF
+checkitem 烈焰魔衣(男) 1
+#ACT
+take 烈焰魔衣(男) 1
+inc m39 1
+inc m37 50000000
+goto @雷霆类衣服e
+
+#IF
+checkitem 烈焰魔衣(女) 1
+#ACT
+take 烈焰魔衣(女) 1
+inc m39 1
+inc m37 50000000
+goto @雷霆类衣服e
+
+#IF
+checkitem 光芒道袍(女) 1
+#ACT
+take 光芒道袍(女) 1
+inc m39 1
+inc m37 50000000
+goto @雷霆类衣服e
+
+#IF
+checkitem 光芒道袍(男) 1
+#ACT
+take 光芒道袍(男) 1
+inc m39 1
+inc m37 50000000
+goto @雷霆类衣服e
+
+#IF
+LARGE M37 0
+#ACT
+CHANGEEXP + <$STR(M37)>
+;GuildNoticeMsg 255 141  [%s]回收了<$STR(M39)>个雷霆类衣服装备,获得经验<$STR(M37)>！
+MOV M37 0
+MOV M39 0
+BREAK
+#ELSEACT
+}

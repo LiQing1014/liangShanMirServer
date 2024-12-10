@@ -1,0 +1,165 @@
+[@杀怪触发]
+{
+
+
+
+
+
+
+[@杀怪触发A]
+
+#IF
+checkcontainstext <$KILLMONNAME> <$STR(T20)>
+SMALL U80 100
+#ACT
+INC U80 1
+SendCenterMsg 255 0 转生提醒：您当前已击杀<$STR(U80)>只<$KILLMONNAME>，击杀它完成转生任务 0 5
+
+#IF
+checkcontainstext <$KILLMONNAME> <$STR(T21)>
+SMALL U81 300
+#ACT
+INC U81 1
+SendCenterMsg 255 0 转生提醒：您当前已击杀<$STR(U81)>只<$KILLMONNAME>，击杀它完成转生任务 0 5
+
+
+
+
+#IF
+checkcontainstext <$KILLMONNAME> 朱雀神·圣兽
+SMALL U165 15
+#act
+INC U165 1
+#CALL [\游戏登陆\属性加成.txt] @属性设置
+#CALL [\游戏登陆\封号系统.txt] @封号分类
+#CALL [\游戏登陆\怪物爆率.txt] @怪物爆率
+messagebox \\恭喜你，成功杀死<$KILLMONNAME>，获得它的力量加持！
+SENDMSG 0 玩家{『<$USERNAME>』|250:0}在{『<$MapTitle>』|254:0}里面，爆发强大的实力，击杀了：{<$KILLMONNAME>|249:0}，获得它身上强大的力量加持！！
+SENDMSG 0 玩家{『<$USERNAME>』|250:0}在{『<$MapTitle>』|254:0}里面，爆发强大的实力，击杀了：{<$KILLMONNAME>|249:0}，获得它身上强大的力量加持！！
+SENDMSG 0 玩家{『<$USERNAME>』|250:0}在{『<$MapTitle>』|254:0}里面，爆发强大的实力，击杀了：{<$KILLMONNAME>|249:0}，获得它身上强大的力量加持！！
+SENDMSG 0 玩家{『<$USERNAME>』|250:0}在{『<$MapTitle>』|254:0}里面，爆发强大的实力，击杀了：{<$KILLMONNAME>|249:0}，获得它身上强大的力量加持！！
+SENDMSG 0 玩家{『<$USERNAME>』|250:0}在{『<$MapTitle>』|254:0}里面，爆发强大的实力，击杀了：{<$KILLMONNAME>|249:0}，获得它身上强大的力量加持！！
+
+
+#IF
+checkcontainstext <$KILLMONNAME> 玄武神·圣兽
+SMALL U166 15
+#act
+INC U166 1
+#CALL [\游戏登陆\属性加成.txt] @属性设置
+#CALL [\游戏登陆\封号系统.txt] @封号分类
+#CALL [\游戏登陆\怪物爆率.txt] @怪物爆率
+messagebox \\恭喜你，成功杀死<$KILLMONNAME>，获得它的力量加持！
+SENDMSG 0 玩家{『<$USERNAME>』|250:0}在{『<$MapTitle>』|254:0}里面，爆发强大的实力，击杀了：{<$KILLMONNAME>|249:0}，获得它身上强大的力量加持！！
+SENDMSG 0 玩家{『<$USERNAME>』|250:0}在{『<$MapTitle>』|254:0}里面，爆发强大的实力，击杀了：{<$KILLMONNAME>|249:0}，获得它身上强大的力量加持！！
+SENDMSG 0 玩家{『<$USERNAME>』|250:0}在{『<$MapTitle>』|254:0}里面，爆发强大的实力，击杀了：{<$KILLMONNAME>|249:0}，获得它身上强大的力量加持！！
+SENDMSG 0 玩家{『<$USERNAME>』|250:0}在{『<$MapTitle>』|254:0}里面，爆发强大的实力，击杀了：{<$KILLMONNAME>|249:0}，获得它身上强大的力量加持！！
+SENDMSG 0 玩家{『<$USERNAME>』|250:0}在{『<$MapTitle>』|254:0}里面，爆发强大的实力，击杀了：{<$KILLMONNAME>|249:0}，获得它身上强大的力量加持！！
+
+
+#IF
+checkcontainstext <$KILLMONNAME> 青龙神·圣兽
+SMALL U167 15
+#act
+INC U167 1
+#CALL [\游戏登陆\属性加成.txt] @属性设置
+#CALL [\游戏登陆\封号系统.txt] @封号分类
+#CALL [\游戏登陆\怪物爆率.txt] @怪物爆率
+messagebox \\恭喜你，成功杀死<$KILLMONNAME>，获得它的力量加持！
+SENDMSG 0 玩家{『<$USERNAME>』|250:0}在{『<$MapTitle>』|254:0}里面，爆发强大的实力，击杀了：{<$KILLMONNAME>|249:0}，获得它身上强大的力量加持！！
+SENDMSG 0 玩家{『<$USERNAME>』|250:0}在{『<$MapTitle>』|254:0}里面，爆发强大的实力，击杀了：{<$KILLMONNAME>|249:0}，获得它身上强大的力量加持！！
+SENDMSG 0 玩家{『<$USERNAME>』|250:0}在{『<$MapTitle>』|254:0}里面，爆发强大的实力，击杀了：{<$KILLMONNAME>|249:0}，获得它身上强大的力量加持！！
+SENDMSG 0 玩家{『<$USERNAME>』|250:0}在{『<$MapTitle>』|254:0}里面，爆发强大的实力，击杀了：{<$KILLMONNAME>|249:0}，获得它身上强大的力量加持！！
+SENDMSG 0 玩家{『<$USERNAME>』|250:0}在{『<$MapTitle>』|254:0}里面，爆发强大的实力，击杀了：{<$KILLMONNAME>|249:0}，获得它身上强大的力量加持！！
+
+
+#IF
+checkcontainstext <$KILLMONNAME> 白虎神·圣兽
+SMALL U168 15
+#act
+INC U168 1
+#CALL [\游戏登陆\属性加成.txt] @属性设置
+#CALL [\游戏登陆\封号系统.txt] @封号分类
+#CALL [\游戏登陆\怪物爆率.txt] @怪物爆率
+messagebox \\恭喜你，成功杀死<$KILLMONNAME>，获得它的力量加持！
+SENDMSG 0 玩家{『<$USERNAME>』|250:0}在{『<$MapTitle>』|254:0}里面，爆发强大的实力，击杀了：{<$KILLMONNAME>|249:0}，获得它身上强大的力量加持！！
+SENDMSG 0 玩家{『<$USERNAME>』|250:0}在{『<$MapTitle>』|254:0}里面，爆发强大的实力，击杀了：{<$KILLMONNAME>|249:0}，获得它身上强大的力量加持！！
+SENDMSG 0 玩家{『<$USERNAME>』|250:0}在{『<$MapTitle>』|254:0}里面，爆发强大的实力，击杀了：{<$KILLMONNAME>|249:0}，获得它身上强大的力量加持！！
+SENDMSG 0 玩家{『<$USERNAME>』|250:0}在{『<$MapTitle>』|254:0}里面，爆发强大的实力，击杀了：{<$KILLMONNAME>|249:0}，获得它身上强大的力量加持！！
+SENDMSG 0 玩家{『<$USERNAME>』|250:0}在{『<$MapTitle>』|254:0}里面，爆发强大的实力，击杀了：{<$KILLMONNAME>|249:0}，获得它身上强大的力量加持！！
+
+
+
+
+
+
+
+
+#IF
+CheckKillSlaveName <$KILLMONNAME>
+CheckKillMonName <$STR(T7)>妖兽
+#ACT
+MOV N$境界倍数经验 1
+INC N$境界倍数经验 <$str(U191)>
+
+MOV N$境界经验倍数A <$STR(N$境界经验倍数)>
+MUL N$境界经验倍数A <$STR(N$境界倍数经验)>
+
+MOV N$境界增加经验值 <$STR(N$当前境界经验)>
+DIV N$境界增加经验值 <$STR(N$境界经验倍数A)>
+
+CHANGECUSTOMITEMPROGRESSBARVALUE 14 1 0 + <$STR(N$境界增加经验值)>
+#CALL [\极品拾取鉴定\境界成长属性.txt] @境界成长属性
+#CALL [\极品拾取鉴定\境界成长属性.txt] @境界成长属性
+ESPSendMoveCenterMsg 恭喜您，成功击杀{<$KILLMONNAME>|253}，<$STR(T7)>增加{<$STR(N$境界增加经验值)>点经验|250} 161 0 0 250 5000 0 0   
+BREAK
+
+
+
+
+
+
+
+
+#IF
+CHECKTEXTLIST ..\QuestDiary\极品拾取鉴定\BOSS名单.txt <$KILLMONNAME>
+CheckKillSlaveName <$KILLMONNAME>
+#ACT
+MOV N$符增加经验值 <$ATTACKMONSTER_MAX_HP>
+DIV N$符增加经验值 100
+CHANGECUSTOMITEMPROGRESSBARVALUE 9 1 0 + <$STR(N$符增加经验值)>
+#CALL [\极品拾取鉴定\福符成长属性.txt] @福符成长属性
+#CALL [\极品拾取鉴定\福符成长属性.txt] @福符成长属性
+ESPSendMoveCenterMsg 击杀{<$KILLMONNAME>|249}<$str(S$当前福符名字)>福符+{<$STR(N$符增加经验值)>点经验|250} 161 0 0 60 2000 0 0   
+BREAK
+
+
+
+#IF
+CHECKTEXTLIST ..\QuestDiary\极品拾取鉴定\精英名单.txt <$KILLMONNAME>
+CheckKillSlaveName <$KILLMONNAME>
+#ACT
+MOV N$符增加经验值 <$ATTACKMONSTER_MAX_HP>
+DIV N$符增加经验值 350
+CHANGECUSTOMITEMPROGRESSBARVALUE 9 1 0 + <$STR(N$符增加经验值)>
+#CALL [\极品拾取鉴定\福符成长属性.txt] @福符成长属性
+#CALL [\极品拾取鉴定\福符成长属性.txt] @福符成长属性
+ESPSendMoveCenterMsg 击杀{<$KILLMONNAME>|249}<$str(S$当前福符名字)>福符+{<$STR(N$符增加经验值)>点经验|250} 161 0 0 60 2000 0 0   
+BREAK
+
+
+
+#IF
+CheckKillSlaveName <$KILLMONNAME>
+#ACT
+MOV N$符增加经验值 <$ATTACKMONSTER_MAX_HP>
+DIV N$符增加经验值 2000
+INC N$符增加经验值 1
+CHANGECUSTOMITEMPROGRESSBARVALUE 9 1 0 + <$STR(N$符增加经验值)>
+#CALL [\极品拾取鉴定\福符成长属性.txt] @福符成长属性
+#CALL [\极品拾取鉴定\福符成长属性.txt] @福符成长属性
+ESPSendMoveCenterMsg 击杀{<$KILLMONNAME>|249}<$str(S$当前福符名字)>福符+{<$STR(N$符增加经验值)>点经验|250} 161 0 0 60 2000 0 0   
+BREAK
+
+
+}

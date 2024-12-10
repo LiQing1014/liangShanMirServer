@@ -1,0 +1,400 @@
+[@Main]
+
+
+#IF
+NOT CHECKUSEITEM 9
+#ACT
+MESSAGEBOX 请您先佩戴福符才能查看！
+CLEARDELAYGOTO
+BREAK
+
+#OR
+CHECKITEM 福星高照符[V1] 1
+CHECKITEMW 福星高照符[V1] 1
+#ACT
+MOV S$下级福符 顺风顺水符[V2]
+MOV S$当前福符 福星高照符[V1]
+
+
+#OR
+CHECKITEM 顺风顺水符[V2] 1
+CHECKITEMW 顺风顺水符[V2] 1
+#ACT
+MOV S$下级福符 鸿运当头符[V3]
+MOV S$当前福符 顺风顺水符[V2]
+
+
+#OR
+CHECKITEM 鸿运当头符[V3] 1
+CHECKITEMW 鸿运当头符[V3] 1
+#ACT
+MOV S$下级福符 喜气洋洋符[V4]
+MOV S$当前福符 鸿运当头符[V3]
+
+
+#OR
+CHECKITEM 喜气洋洋符[V4] 1
+CHECKITEMW 喜气洋洋符[V4] 1
+#ACT
+MOV S$下级福符 吉祥如意符[V5]
+MOV S$当前福符 喜气洋洋符[V4]
+
+
+#OR
+CHECKITEM 吉祥如意符[V5] 1
+CHECKITEMW 吉祥如意符[V5] 1
+#ACT
+MOV S$下级福符 春风得意符[V6]
+MOV S$当前福符 吉祥如意符[V5]
+
+
+#OR
+CHECKITEM 春风得意符[V6] 1
+CHECKITEMW 春风得意符[V6] 1
+#ACT
+MOV S$下级福符 金榜题名符[V7]
+MOV S$当前福符 春风得意符[V6]
+
+
+#OR
+CHECKITEM 金榜题名符[V7] 1
+CHECKITEMW 金榜题名符[V7] 1
+#ACT
+MOV S$下级福符 福如东海符[V8]
+MOV S$当前福符 金榜题名符[V7]
+
+
+#OR
+CHECKITEM 福如东海符[V8] 1
+CHECKITEMW 福如东海符[V8] 1
+#ACT
+MOV S$下级福符 笑口常开符[V9]
+MOV S$当前福符 福如东海符[V8]
+
+#OR
+CHECKITEM 笑口常开符[V9] 1
+CHECKITEMW 笑口常开符[V9] 1
+#ACT
+MOV S$下级福符 一帆风顺符[V10]
+MOV S$当前福符 笑口常开符[V9]
+
+
+#IF
+#Act
+#CALL [\极品拾取鉴定\福符成长属性.txt] @福符成长属性
+MOV N$福符经验A <$STR(N$当前福符经验)>
+DIV N$福符经验A 15
+MOV N$福符大米 <$STR(N$当前福符经验)>
+DIV N$福符大米 200
+MOV S$福符经验 当前需要：<$STR(N$福符大米)>大米升级
+
+MOV N$福符元宝 <$STR(N$当前福符经验)>
+MUL N$福符元宝 5
+MOV N$福符材料 <$STR(N$当前福符经验)>
+DIV N$福符材料 60
+MOV S$福符材料 魔法神石
+
+MOV S$福符经验D1 1.元宝*<$STR(N$福符元宝)>
+MOV S$福符经验D2 2.<$STR(S$福符材料)>*<$STR(N$福符材料)>
+
+#IF
+EQUAL N$福符大米 0
+#Act
+MOV N$福符大米 1
+MOV S$福符经验 当前需要：<$STR(N$福符大米)>大米升级
+
+#OR
+CHECKITEM 一帆风顺符[V10] 1
+CHECKITEM 花开富贵符[V11] 1
+CHECKITEM 大吉大利符[V12] 1
+CHECKITEM 天降横财符[V13] 1
+CHECKITEM 吉星高照符[V14] 1
+CHECKITEM 安康福寿符[V15] 1
+CHECKITEM 心想事成符[V16] 1
+CHECKITEM 福禄寿喜符[V17] 1
+CHECKITEM 招财进宝符[V18] 1
+CHECKITEM 锦绣前程符[V19] 1
+CHECKITEM 一本万利符[V20] 1
+CHECKITEM 一马平川符[V21] 1
+CHECKITEM 紫气东来符[V22] 1
+CHECKITEM 步步高升符[V23] 1
+CHECKITEM 金玉满堂符[V24] 1
+CHECKITEM 梦想成真符[V25] 1
+CHECKITEMW 一帆风顺符[V10] 1
+CHECKITEMW 花开富贵符[V11] 1
+CHECKITEMW 大吉大利符[V12] 1
+CHECKITEMW 天降横财符[V13] 1
+CHECKITEMW 吉星高照符[V14] 1
+CHECKITEMW 安康福寿符[V15] 1
+CHECKITEMW 心想事成符[V16] 1
+CHECKITEMW 福禄寿喜符[V17] 1
+CHECKITEMW 招财进宝符[V18] 1
+CHECKITEMW 锦绣前程符[V19] 1
+CHECKITEMW 一本万利符[V20] 1
+CHECKITEMW 一马平川符[V21] 1
+CHECKITEMW 紫气东来符[V22] 1
+CHECKITEMW 步步高升符[V23] 1
+CHECKITEMW 金玉满堂符[V24] 1
+CHECKITEMW 梦想成真符[V25] 1
+#ACT
+MOV S$下级福符 一帆风顺符[V10]
+MOV S$当前福符 一帆风顺符[V10]
+
+
+
+
+
+
+
+#IF
+#Act
+#CALL [\极品拾取鉴定\福符成长属性.txt] @福符成长属性
+MOV N$福符经验A <$STR(N$当前福符经验)>
+DIV N$福符经验A 10
+close
+
+#SAY
+; \  
+; <> <【当前福符】：/SCOLOR=161>　<“<$STR(S$当前福符)>”/SCOLOR=253>     <$STR(S$福符详情展示)>\ \
+; <> <【装备介绍】：/SCOLOR=250>　<增加怪物切割和成长型的属性/SCOLOR=249>           \ \
+; <> <【装备介绍】：/SCOLOR=250>　<据说拥有的人会“好运降临，好运不断”/SCOLOR=161>   　\ \
+; <> <【装备介绍】：/SCOLOR=250>　<本命装备、不可交易、丢弃、爆出/SCOLOR=243>   　\ \ \
+; <>　　　   <Text:材料升级福符经验|^-^250#升下一级需要条件：<$STR(S$福符经验D1)><$STR(S$福符经验D2)>^-^161#击杀怪物可以获得经验:10:-15{FCOLOR=251}/@材料一键升级>
+
+; <>　　　 <Text:大米升级福符经验|^-^253#<$STR(S$福符经验)>^-^250#福符经验：^-^161#击杀怪物可以获得经验:10:-15{FCOLOR=251}/@一键升级>\
+
+<Img|x=0.0|y=0.0|width=620|height=270|scale9t=10|scale9r=10|scale9l=10|scale9b=10|move=0|bg=1|img=public/bg_npc_04.jpg|reset=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=31.0|y=36.0|tipsx=10|tipsy=80|color=161|size=16|text=【当前福符】：>
+<Text|a=0|x=185.0|y=36.0|tipsx=10|tipsy=80|color=253|size=16|text=“<$STR(S$当前福符)>”>
+<Text|a=0|x=31.0|y=76.0|tipsx=10|tipsy=80|color=250|size=16|text=【装备介绍】：>
+<Text|a=0|x=185.0|y=76.0|tipsx=10|tipsy=80|color=249|size=16|text=增加怪物切割和成长型的属性>
+<Text|a=0|x=31.0|y=116.0|tipsx=10|tipsy=80|color=250|size=16|text=【装备介绍】：>
+<Text|a=0|x=185.0|y=116.0|tipsx=10|tipsy=80|color=161|size=16|text=据说拥有的人会“好运降临，好运不断”>
+<Text|a=0|x=31.0|y=156.0|tipsx=10|tipsy=80|color=250|size=16|text=【装备介绍】：>
+<Text|a=0|x=185.0|y=156.0|tipsx=10|tipsy=80|color=243|size=16|text=本命装备、不可交易、丢弃、爆出>
+<Text|a=0|x=49.0|y=216.0|tips={升下一级需要条件：/FCOLOR=250}^{<$STR(S$福符经验D1)>/FCOLOR=251}^{<$STR(S$福符经验D2)>/FCOLOR=146}^{击杀怪物可以获得经验/FCOLOR=161}|tipsx=10|tipsy=80|size=16|color=255|text=材料升级福符经验|link=@材料一键升级>
+<Text|a=0|x=299.0|y=216.0|tips={<$STR(S$福符经验)>/FCOLOR=253}^{福符经验：/FCOLOR=250}^{击杀怪物可以获得经验/FCOLOR=161}|tipsx=10|tipsy=80|size=16|color=255|text=大米升级福符经验|link=@一键升级>
+
+
+; <Text|a=0|x=32|y=260|tipsx=10|tipsy=80|color=255|size=16|text=^-^250#福符经验：^-^161#击杀怪物可以获得经验:10:-15>
+
+[@材料一键升级]
+#IF
+NOT CHECKUSEITEM 9
+#ACT
+MESSAGEBOX 请您先佩戴福符才能注入经验！
+CLEARDELAYGOTO
+BREAK
+
+#IF
+NOT CHECKBAGSIZE  12
+#ACT
+MESSAGEBOX [进阶失败]:\　\　　　　　　您的“包袱位置”不足“12个”空位置！
+break
+
+
+
+
+#IF
+CHECKITEMW 一帆风顺符[V10] 1
+CHECKCUSTOMITEMPROGRESSBARVALUE 9 0 0 = 7
+#ACT
+CLEARDELAYGOTO
+MessageBox 对不起,您当前的福符已满了，无法继续增加经验！
+BREAK
+
+
+
+
+
+
+#OR
+CHECKITEM 花开富贵符[V11] 1
+CHECKITEM 大吉大利符[V12] 1
+CHECKITEM 天降横财符[V13] 1
+CHECKITEM 吉星高照符[V14] 1
+CHECKITEM 安康福寿符[V15] 1
+CHECKITEM 心想事成符[V16] 1
+CHECKITEM 福禄寿喜符[V17] 1
+CHECKITEM 招财进宝符[V18] 1
+CHECKITEM 锦绣前程符[V19] 1
+CHECKITEM 一本万利符[V20] 1
+CHECKITEM 一马平川符[V21] 1
+CHECKITEM 紫气东来符[V22] 1
+CHECKITEM 步步高升符[V23] 1
+CHECKITEM 金玉满堂符[V24] 1
+CHECKITEM 梦想成真符[V25] 1
+CHECKITEMW 花开富贵符[V11] 1
+CHECKITEMW 大吉大利符[V12] 1
+CHECKITEMW 天降横财符[V13] 1
+CHECKITEMW 吉星高照符[V14] 1
+CHECKITEMW 安康福寿符[V15] 1
+CHECKITEMW 心想事成符[V16] 1
+CHECKITEMW 福禄寿喜符[V17] 1
+CHECKITEMW 招财进宝符[V18] 1
+CHECKITEMW 锦绣前程符[V19] 1
+CHECKITEMW 一本万利符[V20] 1
+CHECKITEMW 一马平川符[V21] 1
+CHECKITEMW 紫气东来符[V22] 1
+CHECKITEMW 步步高升符[V23] 1
+CHECKITEMW 金玉满堂符[V24] 1
+CHECKITEMW 梦想成真符[V25] 1
+#ACT
+MESSAGEBOX [进阶失败]:\　\　　　　　　您当前的福符已经满级了
+break
+
+
+
+
+
+#IF
+CHECKGAMEGOLD < <$STR(N$福符元宝)>
+#ACT
+MESSAGEBOX \\\对不起，您的元宝不足<$STR(N$福符元宝)>个，无法注入经验！
+break
+
+
+#IF
+NOT CHECKITEM <$STR(S$福符材料)> <$STR(N$福符材料)>
+#ACT
+MESSAGEBOX \\\对不起，您的包袱里<$STR(S$福符材料)>不足<$STR(N$福符材料)>个，无法注入经验！
+break
+
+
+
+
+#IF
+CHECKGAMEGOLD > <$STR(N$福符元宝)>
+CHECKITEM <$STR(S$福符材料)> <$STR(N$福符材料)>
+#ACT
+GAMEGOLD -  <$STR(N$福符元宝)>
+TAKE <$STR(S$福符材料)> <$STR(N$福符材料)>
+CHANGECUSTOMITEMPROGRESSBARVALUE 9 1 0 + <$STR(N$当前福符经验)>
+SendCenterMsg 21 0 恭喜您的福符经验增加：<$STR(N$当前福符经验)>点经验 0 3
+GOTO @MAIN
+DELAYGOTO 10  @main
+break
+#elseact
+MessageBox \\注入失败：\\1.请检查您的包袱材料和货币是否齐全！！！
+break
+
+
+
+
+
+
+
+[@一键升级]
+
+
+#IF
+NOT CHECKUSEITEM 9
+#ACT
+MESSAGEBOX 请您先佩戴福符才能注入经验！
+CLEARDELAYGOTO
+BREAK
+
+#IF
+NOT CHECKBAGSIZE  12
+#ACT
+MESSAGEBOX [进阶失败]:\　\　　　　　　您的“包袱位置”不足“12个”空位置！
+break
+
+
+
+
+#IF
+CHECKITEMW 一帆风顺符[V10] 1
+CHECKCUSTOMITEMPROGRESSBARVALUE 9 0 0 = 7
+#ACT
+CLEARDELAYGOTO
+MessageBox 对不起,您当前的福符已满了，无法继续增加经验！
+BREAK
+
+
+
+
+
+
+#OR
+CHECKITEM 花开富贵符[V11] 1
+CHECKITEM 大吉大利符[V12] 1
+CHECKITEM 天降横财符[V13] 1
+CHECKITEM 吉星高照符[V14] 1
+CHECKITEM 安康福寿符[V15] 1
+CHECKITEM 心想事成符[V16] 1
+CHECKITEM 福禄寿喜符[V17] 1
+CHECKITEM 招财进宝符[V18] 1
+CHECKITEM 锦绣前程符[V19] 1
+CHECKITEM 一本万利符[V20] 1
+CHECKITEM 一马平川符[V21] 1
+CHECKITEM 紫气东来符[V22] 1
+CHECKITEM 步步高升符[V23] 1
+CHECKITEM 金玉满堂符[V24] 1
+CHECKITEM 梦想成真符[V25] 1
+CHECKITEMW 花开富贵符[V11] 1
+CHECKITEMW 大吉大利符[V12] 1
+CHECKITEMW 天降横财符[V13] 1
+CHECKITEMW 吉星高照符[V14] 1
+CHECKITEMW 安康福寿符[V15] 1
+CHECKITEMW 心想事成符[V16] 1
+CHECKITEMW 福禄寿喜符[V17] 1
+CHECKITEMW 招财进宝符[V18] 1
+CHECKITEMW 锦绣前程符[V19] 1
+CHECKITEMW 一本万利符[V20] 1
+CHECKITEMW 一马平川符[V21] 1
+CHECKITEMW 紫气东来符[V22] 1
+CHECKITEMW 步步高升符[V23] 1
+CHECKITEMW 金玉满堂符[V24] 1
+CHECKITEMW 梦想成真符[V25] 1
+#ACT
+MESSAGEBOX [进阶失败]:\　\　　　　　　您当前的福符已经满级了
+break
+
+
+
+
+#IF
+CHECKGAMEPOINT < <$STR(N$福符大米)>
+#ACT
+MESSAGEBOX \\\对不起，您的大米不足<$STR(N$福符大米)>点
+break
+
+
+
+; #if
+; NOT CHECKCUSTOMITEMPROGRESSBAR 9 1
+; #ACT
+; ; ChangeBindMoney 元宝 <$STR(N$吞噬元宝数量)>
+; ; TAKE 神器装备碎片 <$STR(N$吞噬碎片数量)>
+; CHANGECUSTOMITEMPROGRESSBAR 9 1 0 1
+; CHANGECUSTOMITEMPROGRESSBAR 9 1 1 吞噬等级：
+; CHANGECUSTOMITEMPROGRESSBAR 9 1 2 253
+; CHANGECUSTOMITEMPROGRESSBAR 9 1 3 1
+; CHANGECUSTOMITEMPROGRESSBAR 9 1 4 2
+; CHANGECUSTOMITEMPROGRESSBARVALUE 9 1 1 = 10
+; CHANGECUSTOMITEMPROGRESSBARVALUE 9 1 0 = 1
+
+
+
+#or
+CHECKGAMEPOINT = <$STR(N$福符大米)>
+CHECKGAMEPOINT > <$STR(N$福符大米)>
+#ACT
+GAMEPOINT -  <$STR(N$福符大米)>
+CHANGECUSTOMITEMPROGRESSBARVALUE 9 1 0 + <$STR(N$当前福符经验)>
+SendCenterMsg 21 0 恭喜您的福符经验增加：<$STR(N$当前福符经验)>点经验 0 3
+GOTO @MAIN
+DELAYGOTO 10  @main
+break
+#elseact
+MessageBox \\兑换失败：\\1.请检查您的账号上是否有<$STR(N$福符大米)>点大米\\
+break
+
+
+
+
+
+

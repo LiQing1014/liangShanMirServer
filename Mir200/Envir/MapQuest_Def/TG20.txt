@@ -1,0 +1,16 @@
+[@main]
+#if
+large N89 1
+#act
+INC N89 1
+sendmsg 6 天关：您已杀死【<$STR(N89)>】个怪物,杀死3个后自动传入下一层.
+mapmove TG21
+MOV N89 0
+sendmsg 5 天关：恭喜您进入天关所有关卡,您现在可以进入到21层领取奖励.
+#elseact
+INC N89 1
+sendmsg 6 天关：您已杀死【<$STR(N89)>】个怪物,杀死3个后自动传入下一层.
+break
+
+
+

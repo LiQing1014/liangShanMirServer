@@ -1,0 +1,37 @@
+[@赤金类回收]
+{
+#IF
+checkitem 赤金屠龙 1
+#ACT
+take 赤金屠龙 1
+inc m39 1
+inc m37 100
+goto @赤金类回收
+
+#IF
+checkitem 赤金逍遥扇 1
+#ACT
+take 赤金逍遥扇 1
+inc m39 1
+inc m37 100
+goto @赤金类回收
+
+
+#IF
+checkitem 赤金嗜魂法杖 1
+#ACT
+take 赤金嗜魂法杖 1
+inc m39 1
+inc m37 100
+goto @赤金类回收
+
+
+#IF
+LARGE M37 0
+#ACT
+GAMEGOLD + <$STR(M37)>
+MOV M37 0
+MOV M39 0
+BREAK
+#ELSEACT
+}

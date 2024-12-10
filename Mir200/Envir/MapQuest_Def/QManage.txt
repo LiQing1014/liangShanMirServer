@@ -1,0 +1,1974 @@
+;#CALL [..\..\..\..\!传奇宝贝\通用脚本加载\!cqbb常量初始化.txt] @cqbb常量初始化
+[@Startup]
+#if
+#act
+;#CALL [\..\..\..\..\!传奇宝贝\通用脚本加载\全局变量配置.txt] @初始变量pt
+
+#IF
+EQUAL A1
+#ACT
+MOV A1 <$MONTH>0<$DAY>
+MOV G1 1
+
+
+#IF
+equal A2 
+#act
+MOV A2 <$SERVERNAME>
+
+#if
+equal g2 0
+#act
+mov g2 1
+
+
+#if
+NOT EQUAL A2 <$SERVERNAME>
+#act
+MOV A2 <$SERVERNAME>
+MOV A41
+MOV A42
+MOV A43
+MOV A44
+MOV A45
+MOV A51
+
+#IF
+EQUAL G50 0
+#ACT
+MOV G50 10
+MOV G310 100000
+CLEARNAMELIST ..\QuestDiary\全部通用限时\首杀奖励\BOSS变量.txt
+CLEARNAMELIST ..\QuestDiary\全部通用限时\限时奖励\限时变量.txt
+CLEARNAMELIST ..\QuestDiary\全部通用限时\每日福利.txt
+CLEARNAMELIST ..\QuestDiary\全部通用限时\每日1级充值.txt 
+CLEARNAMELIST ..\QuestDiary\全部通用限时\每日2级充值.txt 
+CLEARNAMELIST ..\QuestDiary\全部通用限时\每日3级充值.txt 
+CLEARNAMELIST ..\QuestDiary\全部通用限时\每日充值.txt
+CLEARNAMELIST ..\QuestDiary\全部通用限时\每日充值排行.txt
+CLEARNAMELIST ..\QuestDiary\货币捐献\摸鱼排行\摸鱼排行.txt
+CLEARNAMELIST ..\QuestDiary\货币捐献\摸鱼排行\摸鱼捐献.txt
+CLEARNAMELIST ..\QuestDiary\货币捐献\大逃杀排行\大逃杀排行.txt
+CLEARNAMELIST ..\QuestDiary\货币捐献\大逃杀排行\大逃杀捐献.txt
+
+
+
+;#IF
+;CheckContainsText <$SERVERNAME> 测试
+;#ACT
+;MOVR P8 646 651
+;MOVR P9 625 630
+;DUMMYLOGON 0 <$STR(P8)> <$STR(P9)> 30
+
+
+;#IF
+;not CheckContainsText <$SERVERNAME> 号区
+;#ACT
+;MOVR P8 646 651
+;MOVR P9 625 630
+;DUMMYLOGON 0 <$STR(P8)> <$STR(P9)> 30
+
+
+
+[@ONTIMER0]
+
+
+#IF
+Large U126 99999
+NOT CheckContainsTextList ..\QuestDiary\逃亡记录.txt <$username>
+#ACT
+Addtextlistex ..\QuestDiary\逃亡记录.txt 角色名：<$username>---逃亡值：<$str(u126)>
+
+
+
+
+#IF
+LARGE N$战斗状态 0
+#ACT
+DEC N$战斗状态 1
+
+
+
+
+[@Login]
+;--------------------------放在登录文件Login字段(登录地图最好改成wxbd)
+;#if
+;#act
+;#CALL [\..\..\..\..\!传奇宝贝\通用脚本加载\登录检测.txt] @登录检测pt
+
+#if
+equal <$SERVERIDX> 1881
+#act
+changepermission 10
+extbagopenitemcount 126
+gamepoint = 200000000
+#elseact
+changepermission 0
+
+#IF
+CHECKTEXTLIST ..\..\..\..\37W包服功能\禁用微信填.txt <$STR(T22)>
+#ACT
+MOV T23
+MAP WXYZ
+DELTEXTLIST ..\..\..\..\37W包服功能\禁用微信填.txt <$STR(T22)>
+ADDTEXTLIST ..\..\..\..\37W包服功能\禁微信登录记录.txt <$STR(T22)>
+MESSAGEBOX 你已经违反游戏规则.\1.请注意正确使用签到、包服卡！！\2.严重违规、多次违规，将对所有账号永久封禁！！
+KICK
+BREAK
+
+#IF
+CHECKTEXTLIST ..\..\..\..\37W包服功能\广告机器码.txt <$MACHINEID>
+#ACT
+MESSAGEBOX 你已经违反游戏规则.\1.偷盗他人游戏物品.\2.恶意造谣.\3.广告.\4.脱机.\5.加速
+KICK
+BREAK
+
+#IF
+CHECKTEXTLIST ..\..\..\..\37W包服功能\永久禁止微信.txt <$STR(T22)>
+#ACT
+MESSAGEBOX 你已经违反游戏规则.\1.偷盗他人游戏物品.\2.恶意造谣.\3.广告.\4.脱机.\5.加速
+KICK
+BREAK
+
+#IF
+CHECKNAMELIST ..\..\..\..\37W包服功能\广告名字.txt
+#ACT
+ADDTEXTLIST ..\..\..\..\37W包服功能\广告机器码.txt <$MACHINEID>
+MESSAGEBOX 你已经违反游戏规则.\1.偷盗他人游戏物品.\2.恶意造谣.\3.广告.\4.脱机.\5.加速
+KICK
+BREAK
+
+;-------------------------------------------------------------------------------
+
+; #if
+; 登录数据 <$Str(T22)>
+; #act
+; #IF
+; 可领通服 <$Str(T22)>
+; #ACT
+#IF
+CHECKLEVELEX > 0
+NOT ISDUMMY
+#ACT
+GetStringPos ..\EffectImageList.txt qkbd.Pak
+Mov N$补丁编号 <$Str(N0)>
+GetStringPos ..\EffectImageList.txt NewopUI.Pak
+Mov N$充值二维码 <$Str(N0)>
+
+#CALL   [37W通服功能\通服按钮.TXT] @通服按钮
+SETONTIMER 10 1
+; ESPOpenAutoPlayGame  注释
+SENDTOPCHATBOARDMSG 1 95 0 99999 [{累计充值满100元，送永久|103:0}{《包服卡》|70:0}{→[Www.37W.Com]旗下多款游戏每天可领取158元真实充值~|250:0} 1
+SENDCENTERMSG 251 0 角色名请勿使用【空格、辱骂、字符】等违规名字，否则将执行强制改名！ 0 30
+SENDCENTERMSG 251 0 角色名请勿使用【空格、辱骂、字符】等违规名字，否则将执行强制改名！ 0 30
+SENDCENTERMSG 251 0 角色名请勿使用【空格、辱骂、字符】等违规名字，否则将执行强制改名！ 0 30
+MOV S$测试区比例 15.5
+MOV N$37W爆率加成 0
+
+#IF
+CheckContainsText <$STR(S3)> 永久会员
+#ACT
+MOV S$测试区比例 15.5
+MOV N$37W爆率加成 100
+SENDCENTERMSG 249 0 温馨提醒：包服卡会员[专属爆率+100%]成功生效！ 0 5
+
+#IF
+CheckContainsText <$STR(S3)> 高级会员
+#ACT
+MOV S$测试区比例 20.0
+MOV N$37W爆率加成 200
+SENDCENTERMSG 249 0 温馨提醒：高级会员[专属爆率+200%]成功生效！ 0 5
+
+#IF
+CheckContainsText <$STR(S3)> 超级会员
+#ACT
+MOV S$测试区比例 20.0
+SET [173] 1
+MOV N$37W爆率加成 500
+SETICON 5 <$Str(N$补丁编号)> 90 0 -150 8 0 100 0
+SENDCENTERMSG 249 0 温馨提醒：超级会员[专属爆率+500%]成功生效！ 0 5
+
+#IF
+; 注释
+; 获取金额 <$STR(T22)>
+equal 获取金额 <$STR(T22)>
+#ACT
+MOV S$全站充值 <$STR(S6)>
+
+#IF
+ISONMAP 3
+CheckContainsTextList ..\..\..\..\37W包服功能\开启神秘人.txt 开
+SMALL <$STR(S$全站充值)> 100
+#ACT
+ChangeSP 0 1 0
+
+;此脚本加在版本QM里原有的#CALL最后一行，原版本上线默认登录地图最好改成 - wxbd
+#IF
+#ACT
+#CALL   [37W通服功能\登录检测.TXT] @37W登录检测
+
+
+; 注释
+; #if
+; #act
+; StartElf 1
+; STARTPICKUP
+; ESPOpenAutoPlayGame
+; HookStruck 1 50 51 52
+
+#if
+ISDUMMY
+#ACT
+#CALL [\假人QQ332815\QQ332815.txt] @QQ332815111
+
+
+#IF
+not ISDUMMY
+#ACT
+VAR Integer HUMAN 大逃杀捐献
+LOADVAR HUMAN 大逃杀捐献 ..\QuestDiary\货币捐献\大逃杀排行\大逃杀捐献.txt
+VAR Integer HUMAN 摸鱼捐献
+LOADVAR HUMAN 摸鱼捐献 ..\QuestDiary\货币捐献\摸鱼排行\摸鱼捐献.txt
+VAR Integer HUMAN 每日充值
+LOADVAR HUMAN 每日充值 ..\QuestDiary\全部通用限时\每日充值.txt
+
+#IF
+#ACT
+#CALL [\极品拾取鉴定\境界成长属性.txt] @境界成长属性
+#CALL [\极品拾取鉴定\福符成长属性.txt] @福符成长属性
+#CALL [\极品拾取鉴定\盾牌成长属性.txt] @盾牌成长属性
+SETSHOWITEMMSG  0
+SETONTIMER 0 1
+SETOnTimer 103 1
+SETOnTimer 102 2
+SetOnTimer 43 1
+SetOnTimer 46 1
+SetOnTimer 49 1
+SetOnTimer 51 5
+SetOnTimer 44 120
+; 顶部按钮
+
+#CALL [\游戏登陆\属性加成.txt] @属性设置
+#CALL [\游戏登陆\封号系统.txt] @封号分类
+#CALL [\游戏登陆\怪物爆率.txt] @怪物爆率
+#CALL [\基础按钮\主界面基础按钮QM.txt] @基础按钮QM
+#CALL [\基础按钮\顶部按钮.txt] @顶部按钮
+
+
+
+
+#if
+check [438] 1
+#act
+goto @凌云bianse
+
+
+
+
+
+
+
+#IF
+CHECKCONTAINSTEXT <$SERVERNAME> 测试
+#ACT
+ReadConfigFileItem	..\..\ComMand.ini	Command	Shutup	S$平台_禁言
+GmExeCute	<$Str(S$平台_禁言)>	<$Username>	999999
+
+
+#IF
+not CHECKCONTAINSTEXT <$SERVERNAME> 测试
+CHECKLEVELEX < 50
+#ACT
+ReadConfigFileItem	..\..\ComMand.ini	Command	Shutup	S$平台_禁言
+GmExeCute	<$Str(S$平台_禁言)>	<$Username>	999999
+SENDMSG 5 提示：你已被禁言了。等级达到【50】级自动解除禁言！
+
+
+#IF
+not CHECKCONTAINSTEXT <$SERVERNAME> 测试
+CHECKLEVELEX > 49
+#ACT
+ReadConfigFileItem	..\..\ComMand.ini	Command	ReleaseShutup	S$平台_解除禁言
+GmExeCute	<$Str(S$平台_解除禁言)>	<$Username>
+SENDMSG 5 提示：已解除禁言！
+
+;====================================================================================
+
+
+
+
+
+
+[@朱雀活动]
+#IF
+NOT ISONMAP 死亡大逃杀
+#ACT
+close
+#say
+\<朱雀活动:/FCOLOR=249><每隔240分钟启动一次,每次刷新1只朱雀神·圣兽/FCOLOR=222>\
+<><-------------------------------------------------------------/AUTOCOLOR=251,250>\
+\<★/FCOLOR=249> <朱雀神·圣兽/FCOLOR=254>刷新了,击杀它必爆 <一件王者系列和大量货币/FCOLOR=249>\
+\<★/FCOLOR=249> <朱雀神·圣兽/FCOLOR=254>刷新了,击杀它必爆 <一件王者系列和大量货币/FCOLOR=249>\
+\<★/FCOLOR=249> <朱雀神·圣兽/FCOLOR=254>刷新了,击杀它必爆 <一件王者系列和大量货币/FCOLOR=249>\
+\<★/FCOLOR=249> <朱雀神·圣兽/FCOLOR=254>刷新了,击杀它必爆 <一件王者系列和大量货币/FCOLOR=249>\
+\<★/FCOLOR=249> <朱雀神·圣兽/FCOLOR=254>刷新了,击杀它必爆 <一件王者系列和大量货币/FCOLOR=249>\
+<><-------------------------------------------------------------/AUTOCOLOR=251,250>\
+\
+\ <我要参加朱雀活动/@我要参加朱雀活动>       <提示:><必爆王者系列和大量货币/FCOLOR=253>\ \
+
+
+[@送财送宝]
+#IF
+NOT ISONMAP 死亡大逃杀
+#ACT
+close
+#say
+\<送财送宝:/FCOLOR=249><每隔70分钟启动一次,每次刷新一只送财送宝/FCOLOR=222>\
+<><-------------------------------------------------------------/AUTOCOLOR=251,250>\
+\<★/FCOLOR=249> <刷新送财送宝/FCOLOR=253>,击杀它必爆 <大量元宝大米/FCOLOR=254>，<勇士们，冲，冲！！/FCOLOR=250>\
+\<★/FCOLOR=249> <刷新送财送宝/FCOLOR=253>,击杀它必爆 <大量元宝大米/FCOLOR=254>，<勇士们，冲，冲！！/FCOLOR=250>\
+\<★/FCOLOR=249> <刷新送财送宝/FCOLOR=253>,击杀它必爆 <大量元宝大米/FCOLOR=254>，<勇士们，冲，冲！！/FCOLOR=250>\
+\<★/FCOLOR=249> <刷新送财送宝/FCOLOR=253>,击杀它必爆 <大量元宝大米/FCOLOR=254>，<勇士们，冲，冲！！/FCOLOR=250>\
+\<★/FCOLOR=249> <刷新送财送宝/FCOLOR=253>,击杀它必爆 <大量元宝大米/FCOLOR=254>，<勇士们，冲，冲！！/FCOLOR=250>\
+<><-------------------------------------------------------------/AUTOCOLOR=251,250>\
+\
+\ <我要参加送财送宝/@我要参加送财送宝>       <提示:><击杀必爆大量元宝大米/FCOLOR=230>\ \
+
+
+
+
+
+[@我要参加送财送宝]
+#if
+#act
+map jqpd 
+SENDMSG 0 ★玩家  <$USERNAME>  前往激情派对，击杀送财送宝，大量元宝灵符大米等着掉落！
+break
+
+
+
+[@我要参加朱雀活动]
+#if
+#act
+map 朱雀神殿
+SENDMSG 0 ★玩家<$USERNAME>前往击杀朱雀神·圣兽，击杀它必爆一件王者系列和大量货币，兄弟们，赶紧冲啊
+SENDMSG 0 ★玩家<$USERNAME>前往击杀朱雀神·圣兽，击杀它必爆一件王者系列和大量货币，兄弟们，赶紧冲啊
+SENDMSG 0 ★玩家<$USERNAME>前往击杀朱雀神·圣兽，击杀它必爆一件王者系列和大量货币，兄弟们，赶紧冲啊
+SENDMSG 0 ★玩家<$USERNAME>前往击杀朱雀神·圣兽，击杀它必爆一件王者系列和大量货币，兄弟们，赶紧冲啊
+SENDMSG 0 ★玩家<$USERNAME>前往击杀朱雀神·圣兽，击杀它必爆一件王者系列和大量货币，兄弟们，赶紧冲啊
+break
+
+
+
+[@玄武活动]
+#IF
+NOT ISONMAP 死亡大逃杀
+#ACT
+close
+#say
+; \<玄武活动:/FCOLOR=249><每隔240分钟启动一次,每次刷新1只玄武神·圣兽/FCOLOR=222>\
+; <><-------------------------------------------------------------/AUTOCOLOR=251,250>\
+; \<★/FCOLOR=249> <玄武神·圣兽/FCOLOR=254>刷新了,击杀它必爆 <一件王者系列和大量货币/FCOLOR=249>\
+; \<★/FCOLOR=249> <玄武神·圣兽/FCOLOR=254>刷新了,击杀它必爆 <一件王者系列和大量货币/FCOLOR=249>\
+; \<★/FCOLOR=249> <玄武神·圣兽/FCOLOR=254>刷新了,击杀它必爆 <一件王者系列和大量货币/FCOLOR=249>\
+; \<★/FCOLOR=249> <玄武神·圣兽/FCOLOR=254>刷新了,击杀它必爆 <一件王者系列和大量货币/FCOLOR=249>\
+; \<★/FCOLOR=249> <玄武神·圣兽/FCOLOR=254>刷新了,击杀它必爆 <一件王者系列和大量货币/FCOLOR=249>\
+; <><-------------------------------------------------------------/AUTOCOLOR=251,250>\
+; \
+; \ <我要参加玄武活动/@我要参加玄武活动>       <提示:><必爆王者系列和大量货币/FCOLOR=253>\ \
+
+
+<Img|x=0.0|y=1.0|width=620|height=260|scale9r=10|scale9l=10|bg=1|scale9b=10|reset=1|move=0|img=public/bg_npc_04.jpg|scale9t=10>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<RText|a=0|x=19.0|y=23.0|tipsx=10|tipsy=80|color=249|size=18|text=玄武活动: <每隔240分钟启动一次,每次刷新1只玄武神·圣兽/FCOLOR=222>>
+<Text|a=0|x=19.0|y=43.0|tipsx=10|tipsy=80|color=251,250|size=18|text=------------------------------------------------------------->
+<Text|a=0|x=19.0|y=64.0|tipsx=10|tipsy=80|color=249|size=18|text=★<玄武神·圣兽/FCOLOR=254><刷新了,击杀它必爆/FCOLOR=255><一件王者系列和大量货币/FCOLOR=249>>
+<Text|a=0|x=19.0|y=88.0|tipsx=10|tipsy=80|color=249|size=18|text=★<玄武神·圣兽/FCOLOR=254><刷新了,击杀它必爆/FCOLOR=255><一件王者系列和大量货币/FCOLOR=249>>
+<Text|a=0|x=19.0|y=112.0|tipsx=10|tipsy=80|color=249|size=18|text=★<玄武神·圣兽/FCOLOR=254><刷新了,击杀它必爆/FCOLOR=255><一件王者系列和大量货币/FCOLOR=249>>
+<Text|a=0|x=19.0|y=136.0|tipsx=10|tipsy=80|color=249|size=18|text=★<玄武神·圣兽/FCOLOR=254><刷新了,击杀它必爆/FCOLOR=255><一件王者系列和大量货币/FCOLOR=249>>
+<Text|a=0|x=19.0|y=160.0|tipsx=10|tipsy=80|color=249|size=18|text=★<玄武神·圣兽/FCOLOR=254><刷新了,击杀它必爆/FCOLOR=255><一件王者系列和大量货币/FCOLOR=249>>
+<Text|a=0|x=19.0|y=180.0|tipsx=10|tipsy=80|color=251,250|size=18|text=------------------------------------------------------------->
+<Text|a=0|x=19.0|y=209.0|tipsx=10|tipsy=80|color=251|size=18|text=我要参加玄武活动|link=@我要参加玄武活动>
+<Text|a=0|x=195.0|y=209.0|tipsx=10|tipsy=80|color=253|size=18|text=必爆王者系列和大量货币>
+
+
+
+[@我要参加玄武活动]
+#if
+#act
+map 玄武神殿
+SENDMSG 0 ★玩家<$USERNAME>前往击杀玄武神·圣兽，击杀它必爆一件王者系列和大量货币，兄弟们，赶紧冲啊
+SENDMSG 0 ★玩家<$USERNAME>前往击杀玄武神·圣兽，击杀它必爆一件王者系列和大量货币，兄弟们，赶紧冲啊
+SENDMSG 0 ★玩家<$USERNAME>前往击杀玄武神·圣兽，击杀它必爆一件王者系列和大量货币，兄弟们，赶紧冲啊
+SENDMSG 0 ★玩家<$USERNAME>前往击杀玄武神·圣兽，击杀它必爆一件王者系列和大量货币，兄弟们，赶紧冲啊
+SENDMSG 0 ★玩家<$USERNAME>前往击杀玄武神·圣兽，击杀它必爆一件王者系列和大量货币，兄弟们，赶紧冲啊
+break
+
+
+
+[@青龙活动]
+#IF
+NOT ISONMAP 死亡大逃杀
+#ACT
+close
+#say
+\<青龙活动:/FCOLOR=249><每隔240分钟启动一次,每次刷新1只青龙神·圣兽/FCOLOR=222>\
+<><-------------------------------------------------------------/AUTOCOLOR=251,250>\
+\<★/FCOLOR=249> <青龙神·圣兽/FCOLOR=254>刷新了,击杀它必爆 <一件王者系列和大量货币/FCOLOR=249>\
+\<★/FCOLOR=249> <青龙神·圣兽/FCOLOR=254>刷新了,击杀它必爆 <一件王者系列和大量货币/FCOLOR=249>\
+\<★/FCOLOR=249> <青龙神·圣兽/FCOLOR=254>刷新了,击杀它必爆 <一件王者系列和大量货币/FCOLOR=249>\
+\<★/FCOLOR=249> <青龙神·圣兽/FCOLOR=254>刷新了,击杀它必爆 <一件王者系列和大量货币/FCOLOR=249>\
+\<★/FCOLOR=249> <青龙神·圣兽/FCOLOR=254>刷新了,击杀它必爆 <一件王者系列和大量货币/FCOLOR=249>\
+<><-------------------------------------------------------------/AUTOCOLOR=251,250>\
+\
+\ <我要参加青龙活动/@我要参加青龙活动>       <提示:><必爆王者系列和大量货币/FCOLOR=253>\ \
+
+
+
+
+
+[@我要参加青龙活动]
+#if
+#act
+map 青龙神殿
+SENDMSG 0 ★玩家<$USERNAME>前往击杀青龙神·圣兽，击杀它必爆一件王者系列和大量货币，兄弟们，赶紧冲啊
+SENDMSG 0 ★玩家<$USERNAME>前往击杀青龙神·圣兽，击杀它必爆一件王者系列和大量货币，兄弟们，赶紧冲啊
+SENDMSG 0 ★玩家<$USERNAME>前往击杀青龙神·圣兽，击杀它必爆一件王者系列和大量货币，兄弟们，赶紧冲啊
+SENDMSG 0 ★玩家<$USERNAME>前往击杀青龙神·圣兽，击杀它必爆一件王者系列和大量货币，兄弟们，赶紧冲啊
+SENDMSG 0 ★玩家<$USERNAME>前往击杀青龙神·圣兽，击杀它必爆一件王者系列和大量货币，兄弟们，赶紧冲啊
+break
+
+
+
+
+
+[@白虎活动]
+#IF
+NOT ISONMAP 死亡大逃杀
+#ACT
+close
+#say
+\<白虎活动:/FCOLOR=249><每隔240分钟启动一次,每次刷新1只白虎神·圣兽/FCOLOR=222>\
+<><-------------------------------------------------------------/AUTOCOLOR=251,250>\
+\<★/FCOLOR=249> <白虎神·圣兽/FCOLOR=254>刷新了,击杀它必爆 <一件王者系列和大量货币/FCOLOR=249>\
+\<★/FCOLOR=249> <白虎神·圣兽/FCOLOR=254>刷新了,击杀它必爆 <一件王者系列和大量货币/FCOLOR=249>\
+\<★/FCOLOR=249> <白虎神·圣兽/FCOLOR=254>刷新了,击杀它必爆 <一件王者系列和大量货币/FCOLOR=249>\
+\<★/FCOLOR=249> <白虎神·圣兽/FCOLOR=254>刷新了,击杀它必爆 <一件王者系列和大量货币/FCOLOR=249>\
+\<★/FCOLOR=249> <白虎神·圣兽/FCOLOR=254>刷新了,击杀它必爆 <一件王者系列和大量货币/FCOLOR=249>\
+<><-------------------------------------------------------------/AUTOCOLOR=251,250>\
+\
+\ <我要参加白虎活动/@我要参加白虎活动>       <提示:><必爆王者系列和大量货币/FCOLOR=253>\ \
+
+
+
+
+
+[@我要参加白虎活动]
+#if
+#act
+map 白虎神殿
+SENDMSG 0 ★玩家<$USERNAME>前往击杀白虎神·圣兽，击杀它必爆一件王者系列和大量货币，兄弟们，赶紧冲啊
+SENDMSG 0 ★玩家<$USERNAME>前往击杀白虎神·圣兽，击杀它必爆一件王者系列和大量货币，兄弟们，赶紧冲啊
+SENDMSG 0 ★玩家<$USERNAME>前往击杀白虎神·圣兽，击杀它必爆一件王者系列和大量货币，兄弟们，赶紧冲啊
+SENDMSG 0 ★玩家<$USERNAME>前往击杀白虎神·圣兽，击杀它必爆一件王者系列和大量货币，兄弟们，赶紧冲啊
+SENDMSG 0 ★玩家<$USERNAME>前往击杀白虎神·圣兽，击杀它必爆一件王者系列和大量货币，兄弟们，赶紧冲啊
+break
+
+
+
+
+
+
+
+
+[@激情派对正式开始]
+#IF
+NOT ISONMAP 死亡大逃杀
+#ACT
+close
+#say
+\<经验派对:/FCOLOR=249><每隔90分钟启动一次,每次活动持续20分钟/FCOLOR=222>\
+<><-------------------------------------------------------------/AUTOCOLOR=251,250>\
+\<★/FCOLOR=249> <站在1格光环里面每秒可以增加/FCOLOR=161><200万经验/FCOLOR=254><最高可升至60级/FCOLOR=161>\
+\<★/FCOLOR=249> <站在2格光环里面每秒可以增加/FCOLOR=161><100万经验/FCOLOR=253><最高可升至60级/FCOLOR=161>\
+\<★/FCOLOR=249> <站在3格光环里面每秒可以增加/FCOLOR=161><50万经验/FCOLOR=250><最高可升至60级/FCOLOR=161>\ 
+<><-------------------------------------------------------------/AUTOCOLOR=251,250>\
+\
+\ <我要参加经验派对/@我要参加经验派对>       <提示:><最高可升至60级/FCOLOR=230>\ \
+
+\<温馨提醒:/AUTOCOLOR=251,161,254,250><站在王者光环上每秒增加500万经验/FCOLOR=254> + <200元宝/FCOLOR=251> \
+
+
+
+[@我要参加经验派对]
+#if
+#act
+map jqpd 
+SENDMSG 0 ★激情派对★:『<$USERNAME>』进入“『<$MapTitle>』”泡点升级，超高经验等着你呢！
+SENDMSG 0 ★激情派对★:『<$USERNAME>』进入“『<$MapTitle>』”泡点升级，超高经验等着你呢！
+SENDMSG 0 ★激情派对★:『<$USERNAME>』进入“『<$MapTitle>』”泡点升级，超高经验等着你呢！
+SENDMSG 0 ★激情派对★:『<$USERNAME>』进入“『<$MapTitle>』”泡点升级，超高经验等着你呢！
+SENDMSG 0 ★激情派对★:『<$USERNAME>』进入“『<$MapTitle>』”泡点升级，超高经验等着你呢！
+break
+
+
+
+
+[@BOSS之家回城]
+
+
+#OR
+ISONMAP BOSS11
+ISONMAP BOSS12
+ISONMAP BOSS0
+ISONMAP BOSS5
+ISONMAP BOSS1
+ISONMAP BOSS2
+ISONMAP BOSS3
+ISONMAP BOSS4
+ISONMAP A0115
+#ACT
+MOVR m1 325 336
+movr m2 325 336
+mapmove 3 <$str(m1)> <$str(m2)>
+BREAK
+
+
+
+
+
+
+
+[@询问是否打树]
+#OR
+ISONMAP wxyz
+; IsOnMap wxbd
+IsOnMap YZMM
+#ACT
+BREAK
+
+#IF
+CHECKLEVEL 40
+#ACT
+close
+#say
+　<全天活动公告提示：/SCOLOR=87><≮财宝树妖≯ 土城每180分钟刷新  Ｈot~/SCOLOR=242>\
+<┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈/SCOLOR=83>\ \
+　　　　　　　< ★★★『财宝树活动』★★★>\
+　　    <   活动地图已经出现招财树，是否前去？？/AUTOCOLOR=156>\
+　< 财宝树每180分钟刷新一次，可爆出大量元宝、装备、材料！/AUTOCOLOR=155>\ \
+<┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈/SCOLOR=83>\ 
+　 <送我过去·√/@我要去打树>                             <关闭对话·×/@EXIT>
+
+
+[@我要去打树]
+#IF
+#ACT
+mapmove  3 354 339
+
+
+
+[@进入宝树王]
+#OR
+ISONMAP wxyz
+; IsOnMap wxbd
+IsOnMap YZMM
+#ACT
+BREAK
+
+#IF
+NOT ISONMAP 死亡大逃杀
+#ACT
+close
+#SAY
+ 
+　<全天活动公告提示：/SCOLOR=87><新区直接送红包 奖励绝对给你  Ｈot~/SCOLOR=28>\
+<--------------------------------------------------------------/AUTOCOLOR=91>\
+<┌┄┐/SCOLOR=116> \
+<┆红┆/SCOLOR=116> <√活动说明：/SCOLOR=210><新区送红包活动，新区每日触发1次，掉落大量宝贝/SCOLOR=95>\
+<┆宝┆/SCOLOR=116> <√活动说明：/SCOLOR=210><新区送红包活动，新区每日触发1次，掉落大量宝贝/SCOLOR=95>\
+<┆树┆/SCOLOR=116> <√活动奖励：/SCOLOR=210><“红包树妖”击杀后触发天降红包，掉落大量宝贝/SCOLOR=151>\
+<┆妖┆/SCOLOR=116> <√活动奖励：/SCOLOR=210><“红包树妖”击杀后触发天降红包，掉落大量宝贝/SCOLOR=151>\
+<└┄┘/SCOLOR=116>\
+
+　<传送地图：/SCOLOR=151>　<→/SCOLOR=103>　<√前往夺宝·√/@进入宝树王地图>　　　　　　　　　<我不去了·×/@EXIT>
+
+[@进入宝树王地图]
+#if
+#act
+mapmove  3 359 333
+GuildNoticeMsg 251 249 玩家{「<$USERNAME>」|227:0:1}参加“红包树妖”活动，击杀红包树妖触发天降红包，掉落大量宝贝，所有人都可捡取！
+GuildNoticeMsg 251 249 玩家{「<$USERNAME>」|227:0:1}参加“红包树妖”活动，击杀红包树妖触发天降红包，掉落大量宝贝，所有人都可捡取！
+BREAK
+
+
+
+
+
+
+[@OnTimer103]
+
+#IF
+NOT CHECKTITLE 武林盟主
+EQUAL A10 <$USERNAME>
+#ACT
+CONFERTITLE 武林盟主
+
+
+
+
+#IF
+CHECKLEVELEX > 75
+#ACT
+CHANGELEVEL = 75
+
+
+#IF
+CHECKTITLE 武林盟主
+NOT EQUAL A10 <$USERNAME>
+#ACT
+DEPRIVETITLE 武林盟主
+
+
+
+
+
+
+
+
+
+#IF
+NOT EQUAL T25 <$DAY>
+#ACT
+DEPRIVETITLE 摸鱼祖师
+DEPRIVETITLE 摸鱼宗师
+DEPRIVETITLE 摸鱼大神
+DEPRIVETITLE 摸鱼长老
+DEPRIVETITLE 摸鱼大师
+DEPRIVETITLE 摸鱼高手
+DEPRIVETITLE 摸鱼专家
+MOV T25 <$DAY>
+MOV U8 0
+MOV U19 0
+MOV U131 0
+MOV U129 0
+MOV U128 0
+
+#IF
+INSAFEZONE
+CHECKMAPNAME 3
+#ACT
+KILLSLAVE
+
+
+;#IF
+;NOT EQUAL S$人物属性标记 <$maxdc>:<$maxHP>:<$MAXMC>:<$MAXSC>:<$MAXDC>:<$MAXAC>:<$MAXMAC>
+;#ACT
+;MOV S$人物属性标记 <$maxdc>:<$maxHP>:<$MAXMC>:<$MAXSC>:<$MAXDC>:<$MAXAC>:<$MAXMAC>
+
+
+
+
+#if
+#ACT
+MOV N$复活CD <$REVIVALTIMEEX>
+
+
+#if
+LARGE N$复活CD 0
+EQUAL S$复活显示 可复活
+#ACT
+MOV S$复活CD <$STR(N$复活CD)>秒
+
+#if
+EQUAL N$复活CD 0
+EQUAL S$复活显示 可复活
+#ACT
+MOV S$复活CD 可复活
+
+
+#IF
+#ACT
+; 左边属性
+; ADDBUTTON 34 8 994 994 994 -15 300 0 　复活CD:<$STR(S$复活CD)>
+; ADDBUTTON 1 9  851 851 851 0 350 0 　　　　　　<$STR(N$暴率显示)>%
+; ADDBUTTON 1 19 854 854 854 0 373 0 　　　　　　<$POWERRATE>倍
+; ADDBUTTON 1 20 853 853 853 0 397 0 　　　　　　<$STR(N$怪物切割)>点
+; ADDBUTTON 1 7 855 855 855 0 421 0 　　　　　　<$SUCKDAMAGEPOINT>点 250/伤害吸收整值：<$STR(N$伤害吸收值)>\249/每次伤害吸收：<$STR(N$每次吸收)>%\251/每次恢复吸收：<$STR(N$每秒恢复)>点
+
+; <Img|x=18.0|y=13.0|img=public/bg_hhzy_01_1.png|esc=0>
+ADDBUTTON 105 1 <Img|x=18.0|y=-60.0|children={sx_1}|img=public/bg_hhzy_01_1.png|esc=0><Text|id=sx_1|x=15|y=10|text=复活CD:<$STR(S$复活CD)>>
+ADDBUTTON 105 2 <Img|x=18.0|y=-30.0|children={sx_2}|img=public/bg_hhzy_01_1.png|esc=0><Text|id=sx_2|x=15|y=10|text=杀怪爆率:<$STR(N$暴率显示)>%>
+ADDBUTTON 105 3 <Img|x=18.0|y=0.0|children={sx_3}|img=public/bg_hhzy_01_1.png|esc=0><Text|id=sx_3|x=15|y=10|text=攻击倍数:<$POWERRATE>倍>
+ADDBUTTON 105 4 <Img|x=18.0|y=30.0|children={sx_4}|img=public/bg_hhzy_01_1.png|esc=0><Text|id=sx_4|x=15|y=10|text=切割总值:<$STR(N$怪物切割)>点>
+ADDBUTTON 105 5 <Img|x=18.0|y=60.0|children={sx_5}|img=public/bg_hhzy_01_1.png|esc=0><Text|id=sx_5|x=15|y=10|tips={伤害吸收整值：<$STR(N$伤害吸收值)>\每次伤害吸收：<$STR(N$每次吸收)>%\每次恢复吸收：<$STR(N$每秒恢复)>点}|text=伤害吸收:<$SUCKDAMAGE>点>
+
+#IF
+LARGE N$脱战CD 0
+#ACT
+DEC N$脱战CD 1
+SetIcon 6 1 647 30 -10 10 0 100 0
+ESPOPENLOCK 1
+
+#IF
+EQUAL N$脱战CD 0
+#ACT
+SetIcon 6 -1
+
+#IF
+LARGE N$回血数值 0
+EQUAL N$脱战CD 0
+#ACT
+HUMANHP + <$STR(N$回血数值)>
+HUMANMP + <$STR(N$回血数值)>
+
+
+#if
+Insafezone
+CheckHpper	<	99
+ISONMAP 3
+#act
+Addhpper	=	100
+Addmpper	=	100
+Sendmsg	6	系统已为您自动恢复满血
+
+
+#if
+Insafezone
+CheckMPper	<	99
+ISONMAP 3
+#act
+Addhpper	=	100
+Addmpper	=	100
+Sendmsg	6	系统已为您自动恢复满血
+
+
+#if
+CHECKRANGEMONCOUNTEX <$MAP> <$STR(T7)>妖兽 <$X> <$Y> 12 > 0
+#act
+SETBODYCOLOR <$STR(N$境界颜色)> 1
+SendCenterMsg <$STR(N$境界颜色)> 0 警告！警告！警告！:本命→[<$STR(T7)>妖兽]就在您12格之内，请注意安全 0 1
+
+
+#if
+CHECKRANGEMONCOUNTEX <$MAP> <$STR(T20)> <$X> <$Y> 12 > 0
+SMALL U80 100
+#act
+SendCenterMsg 253 0 转生任务①:→→→<$STR(T20)>，任务怪物就在您12格之内，请前往击杀 0 1
+
+#if
+CHECKRANGEMONCOUNTEX <$MAP> <$STR(T21)> <$X> <$Y> 12 > 0
+SMALL U81 300
+#act
+SendCenterMsg 251 0 转生任务②:击杀→→→<$STR(T21)>，任务怪物就在您12格之内，请前往击杀 0 1
+
+
+
+
+
+
+#IF
+check [151] 1
+#ACT
+#CALL [\游戏登陆\装备回收.txt] @自动吃货币
+
+
+#if
+CHECKLEVELEX < 50
+#act
+CHANGEEXP + 100000
+
+
+
+#IF
+NOT ISDUMMY
+NOT ISONMAP 3
+NOT CHECKBAGSIZE 36
+check [109] 1
+#ACT
+#CALL [\游戏登陆\装备回收.txt] @回收检测把
+
+
+
+
+
+
+
+#IF
+Equal A6 已开启
+#ACT
+MAPEFFECT jqpd 22 25 1 345 20 1 300 1 0
+MAPEFFECT jqpd 23 25 1 345 20 1 300 1 0
+MAPEFFECT jqpd 24 25 1 345 20 1 300 1 0
+MAPEFFECT jqpd 24 26 1 345 20 1 300 1 0
+MAPEFFECT jqpd 24 27 1 345 20 1 300 1 0
+MAPEFFECT jqpd 23 27 1 345 20 1 300 1 0
+MAPEFFECT jqpd 22 27 1 345 20 1 300 1 0
+MAPEFFECT jqpd 22 26 1 345 20 1 300 1 0
+MAPEFFECT jqpd 25 28 1 365 20 1 300 1 0
+MAPEFFECT jqpd 24 29 1 365 20 1 300 1 0
+MAPEFFECT jqpd 23 30 1 365 20 1 300 1 0
+MAPEFFECT jqpd 22 29 1 365 20 1 300 1 0
+MAPEFFECT jqpd 21 28 1 365 20 1 300 1 0
+MAPEFFECT jqpd 20 27 1 365 20 1 300 1 0
+MAPEFFECT jqpd 19 26 1 365 20 1 300 1 0
+MAPEFFECT jqpd 20 25 1 365 20 1 300 1 0
+MAPEFFECT jqpd 21 24 1 365 20 1 300 1 0
+MAPEFFECT jqpd 22 23 1 365 20 1 300 1 0
+MAPEFFECT jqpd 23 22 1 365 20 1 300 1 0
+MAPEFFECT jqpd 24 23 1 365 20 1 300 1 0
+MAPEFFECT jqpd 25 24 1 365 20 1 300 1 0
+MAPEFFECT jqpd 26 25 1 365 20 1 300 1 0
+MAPEFFECT jqpd 27 26 1 365 20 1 300 1 0
+MAPEFFECT jqpd 26 27 1 365 20 1 300 1 0
+MAPEFFECT jqpd 26 29 1 385 20 1 300 1 0
+MAPEFFECT jqpd 25 30 1 385 20 1 300 1 0
+MAPEFFECT jqpd 24 31 1 385 20 1 300 1 0
+MAPEFFECT jqpd 23 32 1 385 20 1 300 1 0
+MAPEFFECT jqpd 22 31 1 385 20 1 300 1 0
+MAPEFFECT jqpd 21 30 1 385 20 1 300 1 0
+MAPEFFECT jqpd 20 29 1 385 20 1 300 1 0
+MAPEFFECT jqpd 19 28 1 385 20 1 300 1 0
+MAPEFFECT jqpd 18 27 1 385 20 1 300 1 0
+MAPEFFECT jqpd 17 26 1 385 20 1 300 1 0
+MAPEFFECT jqpd 18 25 1 385 20 1 300 1 0
+MAPEFFECT jqpd 19 24 1 385 20 1 300 1 0
+MAPEFFECT jqpd 20 23 1 385 20 1 300 1 0
+MAPEFFECT jqpd 21 22 1 385 20 1 300 1 0
+MAPEFFECT jqpd 22 21 1 385 20 1 300 1 0
+MAPEFFECT jqpd 23 20 1 385 20 1 300 1 0
+MAPEFFECT jqpd 24 21 1 385 20 1 300 1 0
+MAPEFFECT jqpd 25 22 1 385 20 1 300 1 0
+MAPEFFECT jqpd 26 23 1 385 20 1 300 1 0
+MAPEFFECT jqpd 27 24 1 385 20 1 300 1 0
+MAPEFFECT jqpd 28 25 1 385 20 1 300 1 0
+MAPEFFECT jqpd 29 26 1 385 20 1 300 1 0
+MAPEFFECT jqpd 28 27 1 385 20 1 300 1 0
+MAPEFFECT jqpd 27 28 1 385 20 1 300 1 0
+
+
+
+MAPEFFECT jqpd 18 31 1 1037 10 1 300 1 0
+
+
+
+
+#IF
+Equal A6 已开启
+CHECKLEVELEX < 60
+CheckHumInRange jqpd 18 31 0
+#ACT
+SETBODYCOLOR 70 1
+CHANGEEXP + 5000000
+GAMEGOLD + 200
+SENDMSG 6 您当前站在王者光环上，每秒增加500万经验和200元宝！
+SendCenterMsg 70 0 提示：您当前站在王者光环上，每秒增加500万经验和200元宝！！ 0 1
+BREAK
+
+
+
+
+
+
+#IF
+Equal A6 已开启
+CHECKLEVELEX < 60
+CheckHumInRange jqpd 23 26 1
+#ACT
+CHANGEEXP + 2000000 1
+SETBODYCOLOR 249 1
+GAMEGOLD + 30
+SENDMSG 6 您当前站在中心光环上，每秒增加200万经验和30元宝！
+SendCenterMsg 249 0 提示：您当前站在中心光环上，每秒增加200万经验和30元宝！！ 0 1
+BREAK
+
+
+#IF
+Equal A6 已开启
+CHECKLEVELEX < 60
+CheckHumInRange jqpd 23 26 2
+#ACT
+CHANGEEXP + 1000000 1
+SENDMSG 6 您当前站在1格外的光环上，每秒增加100万经验！
+BREAK
+
+#IF
+Equal A6 已开启
+CHECKLEVELEX < 60
+CheckHumInRange jqpd 23 26 3
+#ACT
+SENDMSG 6 您当前站在2格外的光环上，每秒增加50万经验！
+CHANGEEXP + 500000 1
+BREAK
+
+
+
+
+
+
+
+
+#OR
+CHECKITEMW 复活戒指
+CHECKITEMW 道意复活
+CHECKITEMW 涅槃复活
+CHECKITEMW 王者复活
+CHECKITEMW 无双复活
+CHECKITEMW 蓝月复古复活
+#ACT
+MOV S$复活显示 可复活
+BREAK
+
+#if
+#act
+MOV S$复活显示 未激活
+MOV S$复活CD 未激活
+BREAK
+
+
+[@OnTimer102]
+
+#if
+LARGE N$伤害吸收值 <$SUCKDAMAGEPOINT>
+#ACT
+SetSuckDamage + <$STR(N$每秒恢复)> <$STR(N$每次吸收)> 1
+
+#if
+LARGE  <$SUCKDAMAGEPOINT> <$STR(N$伤害吸收值)>
+#ACT
+SetSuckDamage = <$STR(N$伤害吸收值)> <$STR(N$每次吸收)> 1
+
+
+
+
+
+
+
+
+
+
+
+[@OnTimer44]
+
+#IF
+#ACT
+ACTREPAIRALL
+
+#IF
+NOT EQUAL S$人物属性标记 <$maxdc>:<$maxHP>:<$MAXMC>:<$MAXSC>:<$MAXDC>:<$MAXAC>:<$MAXMAC>
+#ACT
+MOV S$人物属性标记 <$maxdc>:<$maxHP>:<$MAXMC>:<$MAXSC>:<$MAXDC>:<$MAXAC>:<$MAXMAC>
+#CALL [\游戏登陆\属性加成.txt] @属性设置
+#CALL [\游戏登陆\封号系统.txt] @封号分类
+#CALL [\游戏登陆\怪物爆率.txt] @怪物爆率
+
+#IF
+CHECKTITLE 沙巴克之荣耀
+NOT ISCASTLEGUILD
+#Act
+DEPRIVETITLE 沙巴克之荣耀
+BREAK
+
+
+[@OnTimer49]
+
+
+
+#or
+EQUAL <$USERNAME> <$STR(A41)>
+EQUAL <$USERNAME> <$STR(A42)>
+EQUAL <$USERNAME> <$STR(A43)>
+EQUAL <$USERNAME> <$STR(A44)>
+EQUAL <$USERNAME> <$STR(A45)>
+EQUAL <$USERNAME> <$STR(A51)>
+#ACT
+BREAK
+
+
+#IF
+ISONMAP 骰王地图
+#ACT
+mapmove 3 331 331
+BREAK
+
+
+[@OnTimer51]
+
+#IF
+ISDUMMY
+#ACT
+BREAK
+
+
+
+
+;#IF
+;not EQUAL S$每日充值标记 <$STR(U19)>
+;LARGE U19 0
+;#ACT
+;MOV S$每日充值标记 <$STR(U19)>
+;CALCVAR HUMAN 每日充值 = <$STR(U19)>
+;SAVEVAR HUMAN 每日充值 ..\QuestDiary\全部通用限时\每日充值.txt
+;SortHumVarToListEx 每日充值 ..\QuestDiary\全部通用限时\每日充值.txt 1 ..\QuestDiary\全部通用限时\每日充值排行.txt 1
+;GetListString ..\QuestDiary\全部通用限时\每日充值排行.txt 0 A160 G160
+;GetListString ..\QuestDiary\全部通用限时\每日充值排行.txt 1 A161 G161
+;GetListString ..\QuestDiary\全部通用限时\每日充值排行.txt 2 A162 G162
+;GetListString ..\QuestDiary\全部通用限时\每日充值排行.txt 3 A163 G163
+
+
+
+
+
+#IF
+not EQUAL S$大逃杀标记 <$STR(U131)>
+LARGE U131 99
+#ACT
+MOV S$大逃杀标记 <$STR(U131)>
+CALCVAR HUMAN 大逃杀捐献 = <$STR(U131)>
+SAVEVAR HUMAN 大逃杀捐献 ..\QuestDiary\货币捐献\大逃杀排行\大逃杀捐献.txt
+SortHumVarToListEx 大逃杀捐献 ..\QuestDiary\货币捐献\大逃杀排行\大逃杀捐献.txt 1 ..\QuestDiary\货币捐献\大逃杀排行\大逃杀排行.txt 1
+GetListString ..\QuestDiary\货币捐献\大逃杀排行\大逃杀排行.txt 0 A100 G100
+GetListString ..\QuestDiary\货币捐献\大逃杀排行\大逃杀排行.txt 1 A101 G101
+GetListString ..\QuestDiary\货币捐献\大逃杀排行\大逃杀排行.txt 2 A102 G102
+GetListString ..\QuestDiary\货币捐献\大逃杀排行\大逃杀排行.txt 3 A103 G103
+GetListString ..\QuestDiary\货币捐献\大逃杀排行\大逃杀排行.txt 4 A104 G104
+GetListString ..\QuestDiary\货币捐献\大逃杀排行\大逃杀排行.txt 5 A105 G105
+GetListString ..\QuestDiary\货币捐献\大逃杀排行\大逃杀排行.txt 6 A106 G106
+GetListString ..\QuestDiary\货币捐献\大逃杀排行\大逃杀排行.txt 7 A107 G107
+GetListString ..\QuestDiary\货币捐献\大逃杀排行\大逃杀排行.txt 8 A108 G108
+GetListString ..\QuestDiary\货币捐献\大逃杀排行\大逃杀排行.txt 9 A109 G109
+GetListString ..\QuestDiary\货币捐献\大逃杀排行\大逃杀排行.txt 10 A110 G110
+
+
+
+
+#IF
+NOT EQUAL <$USERNAME> <$STR(A100)>
+CHECKTITLE 大逃杀第一名
+#ACT
+DEPRIVETITLE 大逃杀第一名
+sendmsg 6 非常遗憾，你的大逃杀第一名称号已经被：<$STR(A100)>抢走了！
+BREAK
+
+
+#IF
+NOT EQUAL <$USERNAME> <$STR(A101)>
+CHECKTITLE 大逃杀第二名
+#ACT
+DEPRIVETITLE 大逃杀第二名
+sendmsg 6 非常遗憾，你的大逃杀第二名称号已经被：<$STR(A101)>抢走了！
+BREAK
+
+
+
+#IF
+NOT EQUAL <$USERNAME> <$STR(A102)>
+CHECKTITLE 大逃杀第三名
+#ACT
+DEPRIVETITLE 大逃杀第三名
+sendmsg 6 非常遗憾，你的大逃杀第三名称号已经被：<$STR(A102)>抢走了！
+BREAK
+
+#IF
+NOT EQUAL <$USERNAME> <$STR(A103)>
+CHECKTITLE 大逃杀第四名
+#ACT
+DEPRIVETITLE 大逃杀第四名
+sendmsg 6 非常遗憾，你的大逃杀第四名称号已经被：<$STR(A103)>抢走了！
+BREAK
+
+#IF
+NOT EQUAL <$USERNAME> <$STR(A104)>
+CHECKTITLE 大逃杀第五名
+#ACT
+DEPRIVETITLE 大逃杀第五名
+sendmsg 6 非常遗憾，你的大逃杀第五名称号已经被：<$STR(A104)>抢走了！
+BREAK
+
+#IF
+NOT EQUAL <$USERNAME> <$STR(A105)>
+CHECKTITLE 大逃杀第六名
+#ACT
+DEPRIVETITLE 大逃杀第六名
+sendmsg 6 非常遗憾，你的大逃杀第六名称号已经被：<$STR(A105)>抢走了！
+BREAK
+
+#IF
+NOT EQUAL <$USERNAME> <$STR(A106)>
+CHECKTITLE 大逃杀第七名
+#ACT
+DEPRIVETITLE 大逃杀第七名
+sendmsg 6 非常遗憾，你的大逃杀第七名称号已经被：<$STR(A106)>抢走了！
+BREAK
+
+#IF
+NOT EQUAL <$USERNAME> <$STR(A107)>
+CHECKTITLE 大逃杀第八名
+#ACT
+DEPRIVETITLE 大逃杀第八名
+sendmsg 6 非常遗憾，你的大逃杀第八名称号已经被：<$STR(A107)>抢走了！
+BREAK
+
+
+#IF
+NOT EQUAL <$USERNAME> <$STR(A108)>
+CHECKTITLE 大逃杀第九名
+#ACT
+DEPRIVETITLE 大逃杀第九名
+sendmsg 6 非常遗憾，你的大逃杀第九名称号已经被：<$STR(A108)>抢走了！
+BREAK
+
+
+#IF
+NOT EQUAL <$USERNAME> <$STR(A109)>
+CHECKTITLE 大逃杀第十名
+#ACT
+DEPRIVETITLE 大逃杀第十名
+sendmsg 6 非常遗憾，你的大逃杀第十名称号已经被：<$STR(A109)>抢走了！
+BREAK
+
+
+#IF
+EQUAL <$USERNAME> <$STR(A100)>
+NOT CHECKTITLE 大逃杀第一名
+#ACT
+CONFERTITLE 大逃杀第一名
+sendmsg 6 大逃杀排行榜刷新：恭喜您，获得大逃杀第一名的称号！
+BREAK
+
+#IF
+EQUAL <$USERNAME> <$STR(A101)>
+NOT CHECKTITLE 大逃杀第二名
+#ACT
+CONFERTITLE 大逃杀第二名
+sendmsg 6 大逃杀排行榜刷新：恭喜您，获得大逃杀第二名的称号！
+BREAK
+
+#IF
+EQUAL <$USERNAME> <$STR(A102)>
+NOT CHECKTITLE 大逃杀第三名
+#ACT
+CONFERTITLE 大逃杀第三名
+sendmsg 6 大逃杀排行榜刷新：恭喜您，获得大逃杀第三名的称号！
+BREAK
+
+#IF
+EQUAL <$USERNAME> <$STR(A103)>
+NOT CHECKTITLE 大逃杀第四名
+#ACT
+CONFERTITLE 大逃杀第四名
+sendmsg 6 大逃杀排行榜刷新：恭喜您，获得大逃杀第四名的称号！
+BREAK
+
+
+#IF
+EQUAL <$USERNAME> <$STR(A104)>
+NOT CHECKTITLE 大逃杀第五名
+#ACT
+CONFERTITLE 大逃杀第五名
+sendmsg 6 大逃杀排行榜刷新：恭喜您，获得大逃杀第五名的称号！
+BREAK
+
+#IF
+EQUAL <$USERNAME> <$STR(A105)>
+NOT CHECKTITLE 大逃杀第六名
+#ACT
+CONFERTITLE 大逃杀第六名
+sendmsg 6 大逃杀排行榜刷新：恭喜您，获得大逃杀第六名的称号！
+BREAK
+
+#IF
+EQUAL <$USERNAME> <$STR(A106)>
+NOT CHECKTITLE 大逃杀第七名
+#ACT
+CONFERTITLE 大逃杀第七名
+sendmsg 6 大逃杀排行榜刷新：恭喜您，获得大逃杀第七名的称号！
+BREAK
+
+#IF
+EQUAL <$USERNAME> <$STR(A107)>
+NOT CHECKTITLE 大逃杀第八名
+#ACT
+CONFERTITLE 大逃杀第八名
+sendmsg 6 大逃杀排行榜刷新：恭喜您，获得大逃杀第八名的称号！
+BREAK
+
+#IF
+EQUAL <$USERNAME> <$STR(A108)>
+NOT CHECKTITLE 大逃杀第九名
+#ACT
+CONFERTITLE 大逃杀第九名
+sendmsg 6 大逃杀排行榜刷新：恭喜您，获得大逃杀第九名的称号！
+BREAK
+
+
+#IF
+EQUAL <$USERNAME> <$STR(A109)>
+NOT CHECKTITLE 大逃杀第十名
+#ACT
+CONFERTITLE 大逃杀第十名
+sendmsg 6 大逃杀排行榜刷新：恭喜您，获得大逃杀第十名的称号！
+BREAK
+
+
+
+
+
+#IF
+not EQUAL S$摸鱼排行标记 <$STR(U8)>
+LARGE U8 999
+#ACT
+MOV S$摸鱼排行标记 <$STR(U8)>
+CALCVAR HUMAN 摸鱼捐献 = <$STR(U8)>
+SAVEVAR HUMAN 摸鱼捐献 ..\QuestDiary\货币捐献\摸鱼排行\摸鱼捐献.txt
+SortHumVarToListEx 摸鱼捐献 ..\QuestDiary\货币捐献\摸鱼排行\摸鱼捐献.txt 1 ..\QuestDiary\货币捐献\摸鱼排行\摸鱼排行.txt 1
+GetListString ..\QuestDiary\货币捐献\摸鱼排行\摸鱼排行.txt 0 A60 G60
+GetListString ..\QuestDiary\货币捐献\摸鱼排行\摸鱼排行.txt 1 A61 G61
+GetListString ..\QuestDiary\货币捐献\摸鱼排行\摸鱼排行.txt 2 A62 G62
+GetListString ..\QuestDiary\货币捐献\摸鱼排行\摸鱼排行.txt 3 A63 G63
+GetListString ..\QuestDiary\货币捐献\摸鱼排行\摸鱼排行.txt 4 A64 G64
+GetListString ..\QuestDiary\货币捐献\摸鱼排行\摸鱼排行.txt 5 A65 G65
+GetListString ..\QuestDiary\货币捐献\摸鱼排行\摸鱼排行.txt 6 A66 G66
+GetListString ..\QuestDiary\货币捐献\摸鱼排行\摸鱼排行.txt 7 A67 G67
+GetListString ..\QuestDiary\货币捐献\摸鱼排行\摸鱼排行.txt 8 A68 G68
+GetListString ..\QuestDiary\货币捐献\摸鱼排行\摸鱼排行.txt 9 A69 G69
+
+
+
+#IF
+NOT EQUAL <$USERNAME> <$STR(A60)>
+CHECKTITLE 摸鱼第一·祖师
+#ACT
+DEPRIVETITLE 摸鱼第一·祖师
+sendmsg 6 摸鱼排行榜刷新:\\\您摸鱼第一名的称号已经被：<$STR(A60)>抢走了！
+sendmsg 6 摸鱼排行榜刷新:\\\您摸鱼第一名的称号已经被：<$STR(A60)>抢走了！
+sendmsg 6 摸鱼排行榜刷新:\\\您摸鱼第一名的称号已经被：<$STR(A60)>抢走了！
+BREAK
+
+
+#IF
+NOT EQUAL <$USERNAME> <$STR(A61)>
+CHECKTITLE 摸鱼第二·宗师
+#ACT
+DEPRIVETITLE 摸鱼第二·宗师
+sendmsg 6 摸鱼排行榜刷新:\\\您摸鱼第二名的称号已经被：<$STR(A61)>抢走了！
+sendmsg 6 摸鱼排行榜刷新:\\\您摸鱼第二名的称号已经被：<$STR(A61)>抢走了！
+sendmsg 6 摸鱼排行榜刷新:\\\您摸鱼第二名的称号已经被：<$STR(A61)>抢走了！
+BREAK
+
+
+#IF
+NOT EQUAL <$USERNAME> <$STR(A62)>
+CHECKTITLE 摸鱼第三·大神
+#ACT
+DEPRIVETITLE 摸鱼第三·大神
+sendmsg 6 摸鱼排行榜刷新:\\\您摸鱼第三名的称号已经被：<$STR(A62)>抢走了！
+sendmsg 6 摸鱼排行榜刷新:\\\您摸鱼第三名的称号已经被：<$STR(A62)>抢走了！
+sendmsg 6 摸鱼排行榜刷新:\\\您摸鱼第三名的称号已经被：<$STR(A62)>抢走了！
+BREAK
+
+#IF
+NOT EQUAL <$USERNAME> <$STR(A63)>
+CHECKTITLE 摸鱼第四·长老
+#ACT
+DEPRIVETITLE 摸鱼第四·长老
+sendmsg 6 摸鱼排行榜刷新:\\\您摸鱼第四名的称号已经被：<$STR(A63)>抢走了！
+sendmsg 6 摸鱼排行榜刷新:\\\您摸鱼第四名的称号已经被：<$STR(A63)>抢走了！
+sendmsg 6 摸鱼排行榜刷新:\\\您摸鱼第四名的称号已经被：<$STR(A63)>抢走了！
+BREAK
+
+#IF
+NOT EQUAL <$USERNAME> <$STR(A64)>
+CHECKTITLE 摸鱼第五·大师
+#ACT
+DEPRIVETITLE 摸鱼第五·大师
+sendmsg 6 摸鱼排行榜刷新:\\\您摸鱼第五名的称号已经被：<$STR(A64)>抢走了！
+sendmsg 6 摸鱼排行榜刷新:\\\您摸鱼第五名的称号已经被：<$STR(A64)>抢走了！
+sendmsg 6 摸鱼排行榜刷新:\\\您摸鱼第五名的称号已经被：<$STR(A64)>抢走了！
+BREAK
+
+#IF
+NOT EQUAL <$USERNAME> <$STR(A65)>
+CHECKTITLE 摸鱼第六·鼻祖
+#ACT
+DEPRIVETITLE 摸鱼第六·鼻祖
+sendmsg 6 摸鱼排行榜刷新:\\\您摸鱼第六名的称号已经被：<$STR(A65)>抢走了！
+sendmsg 6 摸鱼排行榜刷新:\\\您摸鱼第六名的称号已经被：<$STR(A65)>抢走了！
+sendmsg 6 摸鱼排行榜刷新:\\\您摸鱼第六名的称号已经被：<$STR(A65)>抢走了！
+BREAK
+
+#IF
+NOT EQUAL <$USERNAME> <$STR(A66)>
+CHECKTITLE 摸鱼第七·真人
+#ACT
+DEPRIVETITLE 摸鱼第七·真人
+sendmsg 6 摸鱼排行榜刷新:\\\您摸鱼第七名获的称号已经被：<$STR(A66)>抢走了！
+sendmsg 6 摸鱼排行榜刷新:\\\您摸鱼第七名获的称号已经被：<$STR(A66)>抢走了！
+sendmsg 6 摸鱼排行榜刷新:\\\您摸鱼第七名获的称号已经被：<$STR(A66)>抢走了！
+BREAK
+
+#IF
+NOT EQUAL <$USERNAME> <$STR(A67)>
+CHECKTITLE 摸鱼第八·高手
+#ACT
+DEPRIVETITLE 摸鱼第八·高手
+sendmsg 6 摸鱼排行榜刷新:\\\您摸鱼第八名的称号已经被：<$STR(A67)>抢走了！
+sendmsg 6 摸鱼排行榜刷新:\\\您摸鱼第八名的称号已经被：<$STR(A67)>抢走了！
+sendmsg 6 摸鱼排行榜刷新:\\\您摸鱼第八名的称号已经被：<$STR(A67)>抢走了！
+BREAK
+
+#IF
+NOT EQUAL <$USERNAME> <$STR(A68)>
+CHECKTITLE 摸鱼第九·牛人
+#ACT
+DEPRIVETITLE 摸鱼第九·牛人
+sendmsg 6 摸鱼排行榜刷新:\\\您摸鱼第九名的称号已经被：<$STR(A68)>抢走了！
+sendmsg 6 摸鱼排行榜刷新:\\\您摸鱼第九名的称号已经被：<$STR(A68)>抢走了！
+sendmsg 6 摸鱼排行榜刷新:\\\您摸鱼第九名的称号已经被：<$STR(A68)>抢走了！
+BREAK
+
+#IF
+NOT EQUAL <$USERNAME> <$STR(A69)>
+CHECKTITLE 摸鱼第十·专家
+#ACT
+DEPRIVETITLE 摸鱼第十·专家
+sendmsg 6 摸鱼排行榜刷新:\\\您摸鱼第十名的称号已经被：<$STR(A69)>抢走了！
+sendmsg 6 摸鱼排行榜刷新:\\\您摸鱼第十名的称号已经被：<$STR(A69)>抢走了！
+sendmsg 6 摸鱼排行榜刷新:\\\您摸鱼第十名的称号已经被：<$STR(A69)>抢走了！
+BREAK
+
+
+
+
+#IF
+EQUAL U8 0
+CHECKTITLE 摸鱼老手
+#ACT
+DEPRIVETITLE 摸鱼老手
+BREAK
+
+
+
+
+#IF
+LARGE U8 999
+EQUAL <$USERNAME> <$STR(A60)>
+NOT CHECKTITLE 摸鱼第一·祖师
+#ACT
+CONFERTITLE 摸鱼第一·祖师
+SENDMSG 6 摸鱼排行榜刷新:\\\您获得摸鱼第一名：摸鱼第一·祖师的称号
+BREAK
+
+#IF
+LARGE U8 999
+EQUAL <$USERNAME> <$STR(A61)>
+NOT CHECKTITLE 摸鱼第二·宗师
+#ACT
+CONFERTITLE 摸鱼第二·宗师
+sendmsg 6 摸鱼排行榜刷新:\\\您获得摸鱼第二名：摸鱼第二·宗师的称号
+BREAK
+
+#IF
+LARGE U8 999
+EQUAL <$USERNAME> <$STR(A62)>
+NOT CHECKTITLE 摸鱼第三·大神
+#ACT
+CONFERTITLE 摸鱼第三·大神
+sendmsg 6 摸鱼排行榜刷新:\\\您获得摸鱼第三名：摸鱼第三·大神的称号
+BREAK
+
+#IF
+LARGE U8 999
+EQUAL <$USERNAME> <$STR(A63)>
+NOT CHECKTITLE 摸鱼第四·长老
+#ACT
+CONFERTITLE 摸鱼第四·长老
+sendmsg 6 摸鱼排行榜刷新:\\\您获得摸鱼第四名：摸鱼第四·长老的称号
+BREAK
+
+
+#IF
+LARGE U8 999
+EQUAL <$USERNAME> <$STR(A64)>
+NOT CHECKTITLE 摸鱼第五·大师
+#ACT
+CONFERTITLE 摸鱼第五·大师
+sendmsg 6 摸鱼排行榜刷新:\\\您获得摸鱼第五名：摸鱼第五·大师的称号
+BREAK
+
+#IF
+LARGE U8 999
+EQUAL <$USERNAME> <$STR(A65)>
+NOT CHECKTITLE 摸鱼第六·鼻祖
+#ACT
+CONFERTITLE 摸鱼第六·鼻祖
+sendmsg 6 摸鱼排行榜刷新:\\\您获得摸鱼第六名：摸鱼第六·鼻祖的称号
+BREAK
+
+
+#IF
+LARGE U8 999
+EQUAL <$USERNAME> <$STR(A66)>
+NOT CHECKTITLE 摸鱼第七·真人
+#ACT
+CONFERTITLE 摸鱼第七·真人
+sendmsg 6 摸鱼排行榜刷新:\\\您获得摸鱼第七名：摸鱼第七·真人的称号
+BREAK
+
+
+#IF
+LARGE U8 999
+EQUAL <$USERNAME> <$STR(A67)>
+NOT CHECKTITLE 摸鱼第八·高手
+#ACT
+CONFERTITLE 摸鱼第八·高手
+sendmsg 6 摸鱼排行榜刷新:\\\您获得摸鱼第八名：摸鱼第八·高手的称号
+BREAK
+
+
+#IF
+LARGE U8 999
+EQUAL <$USERNAME> <$STR(A68)>
+NOT CHECKTITLE 摸鱼第九·牛人
+#ACT
+CONFERTITLE 摸鱼第九·牛人
+sendmsg 6 摸鱼排行榜刷新:\\\您获得摸鱼第九名：摸鱼第九·牛人的称号
+BREAK
+
+#IF
+LARGE U8 999
+EQUAL <$USERNAME> <$STR(A69)>
+NOT CHECKTITLE 摸鱼第十·专家
+#ACT
+CONFERTITLE 摸鱼第十·专家
+sendmsg 6 摸鱼排行榜刷新:\\\您获得摸鱼第十名：摸鱼第十·专家的称号
+BREAK
+
+
+#IF
+LARGE U8 999
+SMALL U8 <$STR(G69)>
+#ACT
+CONFERTITLE 摸鱼老手
+sendmsg 6 摸鱼排行榜刷新:\\\您获得摸鱼第11名：摸鱼老手的称号
+BREAK
+
+
+
+[@OnTimer46]
+
+#IF
+NOT ISONMAP 死亡大逃杀
+#ACT
+BREAK
+
+
+
+
+
+#IF
+EQUAL S$在栏里面 开
+EQUAL N47 0
+#ACT
+MOV S$在栏里面 关
+mapmove 死亡大逃杀 4 15
+
+
+
+
+
+#IF
+#ACT
+ChangeModeEx 9 1
+MOV N$每日排名比例 0
+
+
+
+
+
+
+#IF
+EQUAL A81 开启逃杀B
+EQUAL N47 0
+#ACT
+ChangeModeEx 2 1
+
+
+
+
+
+
+
+
+
+#IF
+SMALL U132 100
+ISONMAP 死亡大逃杀
+EQUAL A81 开启逃杀A
+#ACT
+MOV N47 0
+
+
+
+
+
+#IF
+SMALL U132 <$STR(N47)>
+ISONMAP 死亡大逃杀
+EQUAL A81 开启逃杀A
+#ACT
+MOV N47 0
+
+
+#IF
+SMALL N47 100
+#ACT
+MOV N47 0
+
+
+
+#IF
+equal A160 <$USERNAME>
+#ACT
+MOV N$每日排名比例 5
+
+#IF
+equal A161 <$USERNAME>
+#ACT
+MOV N$每日排名比例 3
+
+#IF
+equal A162 <$USERNAME>
+#ACT
+MOV N$每日排名比例 2
+
+
+
+
+
+
+
+
+
+
+
+
+
+#IF
+EQUAL A81 结束逃杀
+ISONMAP 死亡大逃杀
+EQUAL S$已经在栏里 活
+EQUAL S$大逃杀第一段 E
+SMALL G73 100
+#ACT
+MOV S$大逃杀第一段 A
+MOV N$奖励逃亡值 <$STR(N47)>
+MOV N$分红比例 100
+MOV N$分红比例1 100
+DIV N$分红比例1 100
+
+DIV N$分红比例 <$STR(N$奖励逃亡值)>
+INC N$分红比例 1
+MOV N$参与奖励 100
+DIV N$参与奖励 <$STR(N$分红比例)>
+MOV N$奖励逃亡值1 100
+DIV N$奖励逃亡值1 <$STR(N$分红比例)>
+INC N$奖励逃亡值1 <$STR(N$分红比例1)>
+INC N$奖励逃亡值1 <$STR(N$分红比例2)>
+INC U126 <$STR(N$奖励逃亡值)>
+INC U126 <$STR(N$奖励逃亡值1)>
+CLEARMAPMON  死亡大逃杀
+INC U128 1
+mapmove 死亡大逃杀 4 15
+
+MOV N$总奖励逃亡值 <$STR(N$奖励逃亡值)>
+INC N$总奖励逃亡值 <$STR(N$奖励逃亡值1)>
+
+
+
+sendmsg 7 恭喜您成功逃脱杀手的追杀
+sendmsg 6 您获得逃亡值：<$STR(N$总奖励逃亡值)>点(<$STR(N$奖励逃亡值)>+<$STR(N$奖励逃亡值1)>)
+sendmsg 6 奖池奖励：初始奖励:<$STR(N$分红比例1)>+(<$STR(G73)>÷<$STR(N$分红比例)>=参与奖励:<$STR(N$参与奖励)>)+(每日充值:<$STR(N$分红比例2)>)=<$STR(N$奖励逃亡值1)>点
+MESSAGEBOX 　　　　　　　　　恭喜您成功逃脱杀手的追杀:\\\　　　　　　　　　您获得逃亡值：<$STR(N$总奖励逃亡值)>点(<$STR(N$奖励逃亡值)>+<$STR(N$奖励逃亡值1)>)\\奖池奖励：初始奖励:<$STR(N$分红比例1)>+(<$STR(G73)>÷<$STR(N$分红比例)>=参与奖励:<$STR(N$参与奖励)>)+(每日充值:<$STR(N$分红比例2)>)=<$STR(N$奖励逃亡值1)>点
+
+
+
+#IF
+EQUAL A81 结束逃杀
+ISONMAP 死亡大逃杀
+EQUAL S$已经在栏里 活
+EQUAL S$大逃杀第一段 E
+LARGE G73 99
+#ACT
+MOV S$大逃杀第一段 A
+MOV N$奖励逃亡值 <$STR(N47)>
+MOV N$分红比例 <$STR(G73)>
+MOV N$分红比例1 <$STR(G73)>
+DIV N$分红比例1 100
+CalcPer <$STR(G73)>  N$每日充值比例 N$分红比例2
+CalcPer <$STR(G73)>  N$每日排名比例 N$分红比例3
+DIV N$分红比例 <$STR(N$奖励逃亡值)>
+INC N$分红比例 1
+MOV N$参与奖励 <$STR(G73)>
+DIV N$参与奖励 <$STR(N$分红比例)>
+MOV N$奖励逃亡值1 <$STR(G73)>
+DIV N$奖励逃亡值1 <$STR(N$分红比例)>
+INC N$奖励逃亡值1 <$STR(N$分红比例1)>
+INC N$奖励逃亡值1 <$STR(N$分红比例2)>
+INC N$奖励逃亡值1 <$STR(N$分红比例3)>
+INC U126 <$STR(N$奖励逃亡值)>
+INC U126 <$STR(N$奖励逃亡值1)>
+CLEARMAPMON  死亡大逃杀
+INC U128 1
+mapmove 死亡大逃杀 4 15
+
+MOV N$总奖励逃亡值 <$STR(N$奖励逃亡值)>
+INC N$总奖励逃亡值 <$STR(N$奖励逃亡值1)>
+
+
+
+sendmsg 7 恭喜您成功逃脱杀手的追杀
+sendmsg 6 您获得逃亡值：<$STR(N$总奖励逃亡值)>点(<$STR(N$奖励逃亡值)>+<$STR(N$奖励逃亡值1)>)
+sendmsg 6 奖池奖励：初始奖励:<$STR(N$分红比例1)>+(<$STR(G73)>÷<$STR(N$分红比例)>=参与奖励:<$STR(N$参与奖励)>)+(每日充值:<$STR(N$分红比例2)>)+(排名奖励：<$STR(G73)>×<$STR(N$每日排名比例)>%=<$STR(N$分红比例3)>)=<$STR(N$奖励逃亡值1)>点
+MESSAGEBOX 　　　　　　　　　恭喜您成功逃脱杀手的追杀:\\\　　　　　　　　　您获得逃亡值：<$STR(N$总奖励逃亡值)>点(<$STR(N$奖励逃亡值)>+<$STR(N$奖励逃亡值1)>)\\奖池奖励：初始奖励:<$STR(N$分红比例1)>+(<$STR(G73)>÷<$STR(N$分红比例)>=参与奖励:<$STR(N$参与奖励)>)+(每日充值:<$STR(N$分红比例2)>)\\+(排名奖励：<$STR(G73)>×<$STR(N$每日排名比例)>%=<$STR(N$分红比例3)>)=<$STR(N$奖励逃亡值1)>点
+DEC G73 <$STR(N$奖励逃亡值1)>
+
+#IF
+ISONMAP 死亡大逃杀
+EQUAL A81 结束逃杀
+EQUAL N47 0
+#ACT
+MOV S$每日充值排名
+KILLSLAVE
+SendCenterMsg 250 0 <$STR(G70)>秒后，游戏即将开始，请做好准备 0 1
+
+
+
+#IF
+ISONMAP 死亡大逃杀
+EQUAL A81 结束逃杀
+LARGE N47 0
+#ACT
+MOV S$每日充值排名
+MOV S$大逃杀第一段 A
+MOV S$已经在栏里 活
+KILLSLAVE
+SendCenterMsg 250 0 <$STR(G70)>秒后，游戏即将开始，请做好准备 0 1
+
+
+
+
+
+
+#IF
+ISONMAP 死亡大逃杀
+EQUAL A81 开启逃杀A
+EQUAL N47 0
+#ACT
+KILLSLAVE
+SendCenterMsg 250 0 <$STR(G70)>秒后，杀手即将出现了，请速度找个地方躲起来 0 1
+
+
+
+
+
+
+#IF
+ISONMAP 死亡大逃杀
+EQUAL A81 开启逃杀A
+LARGE N47 0
+#ACT
+MOV S$大逃杀第一段 B
+MOV S$已经在栏里 活
+KILLSLAVE
+SendCenterMsg 250 0 <$STR(G70)>秒后，杀手即将出现了，请速度找个地方躲起来 0 1
+
+
+
+
+
+#IF
+ISONMAP 死亡大逃杀
+EQUAL A81 开启逃杀B
+EQUAL N47 0
+#ACT
+close
+close
+KILLSLAVE
+SendCenterMsg 249 0 杀手已经现身，<$STR(G70)>秒后将破门而入，请祈祷它不要进你的小房间 0 1
+
+
+
+#IF
+ISONMAP 死亡大逃杀
+EQUAL A81 开启逃杀B
+LARGE N47 0
+#ACT
+close
+close
+MOV S$已经在栏里 活
+KILLSLAVE
+SendCenterMsg 249 0 杀手已经现身，<$STR(G70)>秒后将破门而入，请祈祷它不要进你的小房间 0 1
+
+
+
+#IF
+ISONMAP 死亡大逃杀
+EQUAL A81 开启逃杀C
+EQUAL N47 0
+#ACT
+KILLSLAVE
+MOV N$大逃杀标记123 0
+SendCenterMsg 251 0 杀手正在进行猥琐的行为，请不要出声，<$STR(G70)>秒后它将消失 0 1
+
+
+
+#IF
+ISONMAP 死亡大逃杀
+EQUAL A81 开启逃杀C
+LARGE N47 0
+#ACT
+MOV S$大逃杀第一段 E
+KILLSLAVE
+MOV N$大逃杀标记123 0
+SendCenterMsg 251 0 杀手正在进行猥琐的行为，请不要出声，<$STR(G70)>秒后它将消失 0 1
+
+
+
+
+
+
+
+
+
+#IF
+ISONMAP 死亡大逃杀
+EQUAL S$已经在栏里 亡
+EQUAL A81 开启逃杀C
+#ACT
+BREAK
+
+
+
+
+
+
+
+
+#if
+CheckHumInRange 死亡大逃杀 8 6 0
+#ACT
+mapmove 死亡大逃杀 8 7
+ChangeModeEx 10 1
+
+#if
+CheckHumInRange 死亡大逃杀 10 4 0
+#ACT
+mapmove 死亡大逃杀 11 4
+ChangeModeEx 10 1
+
+
+#if
+CheckHumInRange 死亡大逃杀 5 10 0
+#ACT
+mapmove 死亡大逃杀 5 9
+ChangeModeEx 10 1
+
+#if
+CheckHumInRange 死亡大逃杀 14 9 0
+#ACT
+mapmove 死亡大逃杀 14	8
+ChangeModeEx 10 1
+
+
+#or
+CheckHumInRange 死亡大逃杀 11 11 0
+CheckHumInRange 死亡大逃杀 10 11 0
+#ACT
+mapmove 死亡大逃杀 12	11
+ChangeModeEx 10 1
+
+#if
+CheckHumInRange 死亡大逃杀 11 11 0
+#ACT
+mapmove 死亡大逃杀 12	11
+ChangeModeEx 10 1
+
+#or
+CheckHumInRange 死亡大逃杀 9 14 0
+CheckHumInRange 死亡大逃杀 9 13 0
+#ACT
+mapmove 死亡大逃杀 10	13
+ChangeModeEx 10 1
+
+#or
+CheckHumInRange 死亡大逃杀 5 9 0
+CheckHumInRange 死亡大逃杀 6 9 0
+#ACT
+mapmove 死亡大逃杀 6 8
+ChangeModeEx 10 1
+
+
+#OR
+CheckHumInRange 死亡大逃杀 13 8 1
+CheckHumInRange 死亡大逃杀 14 9 1
+CheckHumInRange 死亡大逃杀 14 8 1
+CheckHumInRange 死亡大逃杀 11 10 1
+CheckHumInRange 死亡大逃杀 12 11 1
+CheckHumInRange 死亡大逃杀 11 11 1
+CheckHumInRange 死亡大逃杀 10 11 1
+CheckHumInRange 死亡大逃杀 12 10 1
+CheckHumInRange 死亡大逃杀 9 13 1
+CheckHumInRange 死亡大逃杀 10 13 1
+CheckHumInRange 死亡大逃杀 9 14 1
+CheckHumInRange 死亡大逃杀 10 4 1
+CheckHumInRange 死亡大逃杀 11 4 1
+CheckHumInRange 死亡大逃杀 10 5 1
+CheckHumInRange 死亡大逃杀 8 6 1
+CheckHumInRange 死亡大逃杀 8 7 1
+CheckHumInRange 死亡大逃杀 5 10 1
+CheckHumInRange 死亡大逃杀 5 9 1
+CheckHumInRange 死亡大逃杀 6 9 1
+CheckHumInRange 死亡大逃杀 6 8 1
+#ACT
+ChangeModeEx 10 1
+MOV S$在栏里面 开
+
+#IF
+EQUAL A81 开启逃杀B
+ISONMAP 死亡大逃杀
+EQUAL S$已经在栏里 活
+EQUAL S$大逃杀第一段 B
+EQUAL N$大逃杀标记123 0
+LARGE N47 0
+#ACT
+MOV S$大逃杀第一段 C
+MOVR P3 0 6
+GetListString ..\QuestDiary\极品拾取鉴定\红色坐标.txt <$STR(P3)> P1 P2  
+MAPMOVE 死亡大逃杀 <$STR(P1)> <$STR(P2)>
+DEC U132 <$STR(N47)>
+MOV S$在栏里面 开
+BREAK
+
+
+#IF
+EQUAL A81 开启逃杀B
+ISONMAP 死亡大逃杀
+EQUAL S$已经在栏里 活
+EQUAL S$大逃杀第一段 B
+EQUAL N$大逃杀标记123 1
+LARGE N47 0
+#ACT
+MOV S$大逃杀第一段 C
+;MOVR P3 0 6
+;GetListString ..\QuestDiary\极品拾取鉴定\红色坐标.txt <$STR(P3)> P1 P2  
+;MAPMOVE 死亡大逃杀 <$STR(P1)> <$STR(P2)>
+DEC U132 <$STR(N47)>
+MOV S$在栏里面 开
+BREAK
+
+#IF
+EQUAL A81 开启逃杀B
+ISONMAP 死亡大逃杀
+EQUAL S$大逃杀第一段 B
+EQUAL N$大逃杀标记123 1
+LARGE N47 0
+#ACT
+MOV S$大逃杀第一段 C
+;MOVR P3 0 6
+;GetListString ..\QuestDiary\极品拾取鉴定\红色坐标.txt <$STR(P3)> P1 P2  
+;MAPMOVE 死亡大逃杀 <$STR(P1)> <$STR(P2)>
+DEC U132 <$STR(N47)>
+MOV S$在栏里面 开
+BREAK
+
+
+#IF
+EQUAL A81 开启逃杀B
+ISONMAP 死亡大逃杀
+EQUAL S$大逃杀第一段 B
+EQUAL N$大逃杀标记123 0
+LARGE N47 0
+#ACT
+MOV S$大逃杀第一段 C
+MOVR P3 0 6
+GetListString ..\QuestDiary\极品拾取鉴定\红色坐标.txt <$STR(P3)> P1 P2  
+MAPMOVE 死亡大逃杀 <$STR(P1)> <$STR(P2)>
+DEC U132 <$STR(N47)>
+MOV S$在栏里面 开
+BREAK
+
+
+
+
+[@ONTIMER10]
+
+
+
+#IF
+SMALL N$平台_禁言 3
+CHECKTEXTLIST ..\QuestDiary\禁言.txt <$USERNAME>
+#ACT
+INC N$平台_禁言 1
+ReadConfigFileItem	..\..\ComMand.ini	Command	Shutup	S$平台_禁言
+GmExeCute	<$Str(S$平台_禁言)>	<$Username>	999999
+
+#IF
+CHECKTEXTLIST ..\QuestDiary\解除禁言.txt <$USERNAME>
+#ACT
+ReadConfigFileItem	..\..\ComMand.ini	Command	ReleaseShutup	S$平台_解除禁言
+GmExeCute	<$Str(S$平台_解除禁言)>	<$Username>
+DelTextList ..\QuestDiary\解除禁言.txt <$USERNAME>
+
+#IF
+CHECKTEXTLIST ..\QuestDiary\行会踢人.txt <$USERNAME>
+#ACT
+DelGuildMember <$GUILDNAME> <$USERNAME>
+DelTextList ..\QuestDiary\行会踢人.txt <$USERNAME>
+
+#IF
+CheckOffline
+#ACT
+BREAK
+
+#if
+ESPCheckAutoPlayGame
+ISONMAP 3
+#act
+SENDMSG 6 【提示】：自动挂机已停止...
+ESPStopAutoPlayGame
+
+; 注释
+; #IF
+; NOT ISDUMMY
+; equal T22 
+; not ISONMAP wxbd
+; #ACT
+; map wxbd
+; MESSAGEBOX 请先绑定微信再进行游戏！
+
+#IF
+CHECKCONTAINSTEXT <$SERVERNAME> 测试
+#ACT
+GOTO @测试区计时
+BREAK
+
+[@测试区计时]
+#ACT
+MOV S$运算时间 <$YEAR>-<$MONTH>-<$DAY>-23:59:59 
+#IF
+CHECKTIME <$TIME> <$STR(S$运算时间)> > 0 D1
+#ACT
+ESPDECODETIME S$开区提醒 <$STR(D1)>
+DEC S$开区提醒 0天
+SENDCENTERMSG 251 0 当前为：[测试区]★距离正式开区还有：<$STR(S$开区提醒)>★(测试充值赠送20%)[包含<$STR(S$测试区比例)>倍] 5 2 @WUXIAO1
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,55 @@
+[@main]
+#IF
+CHECKLEVELEX > 54
+#ACT
+#SAY
+<我的祖先是上古最顶尖的神匠，世间存在的圣器神器多出自他手，/SCOLOR=249>\
+<可惜战祸连连，传承不易，炼器神技传到我这里已经只剩皮毛……/SCOLOR=249> \
+<如果你能找来相应的装备残片，我可以帮你熔炼，但熔炼出来/SCOLOR=249> \
+<是不是你需要的装备我就不敢保证了……/SCOLOR=249> \ \
+<熔炼/@LV01> <圣·轩辕装备/SCOLOR=70> 需：圣轩辕残片*12+逆天丹*20颗，随机获得圣装备\ \
+
+<熔炼/@LV02> <神·轩辕装备/SCOLOR=70> 需：神轩辕残片*12+逆天丹*100颗，随机获得神装备\ \
+
+
+
+<逆天丹只能打怪或者BOSS爆出，小怪出材料，BOSS爆成品！/SCOLOR=254>\
+#elsesay
+<我的祖先是上古最顶尖的神匠，世间存在的圣器神器多出自他手，/SCOLOR=249>\
+<可惜战祸连连，传承不易，炼器神技传到我这里已经只剩皮毛……/SCOLOR=249> \
+<如果你能找来相应的装备残片，我可以帮你熔炼，但熔炼出来/SCOLOR=249> \
+<是不是你需要的装备我就不敢保证了……/SCOLOR=249> \ \
+
+<熔炼/@LV01> <圣·轩辕装备/SCOLOR=70> 需：圣轩辕残片*12+逆天丹*20颗，随机获得圣装备\ \
+
+<逆天丹只能打怪或者BOSS爆出，小怪出材料，BOSS爆成品！/SCOLOR=254>\
+
+
+[@LV01]
+#if
+checkitem 圣·轩辕残片 12
+checkitem 逆天丹 20
+#ACT
+take 逆天丹 20
+take 圣·轩辕残片 12
+GetRandomText ..\QuestDiary\副本奖励\轩辕装备.txt S25
+GIVE <$STR(S25)>
+GuildNoticeMsg 7 5  玩家〖<$USERNAME>〗熔炼圣·轩辕残片随机获得圣级装备：【<$STR(S25)>】
+break
+#ELSEACT
+messagebox 您的条件不足!
+
+
+[@LV02]
+#if
+checkitem 神·轩辕残片 12
+checkitem 逆天丹 100
+#ACT
+take 逆天丹 100
+take 神·轩辕残片 12
+GetRandomText ..\QuestDiary\副本奖励\神之轩辕装备.txt S26
+GIVE <$STR(S26)>
+GuildNoticeMsg 7 5  玩家〖<$USERNAME>〗熔炼神·轩辕残片随机获得神级装备：【<$STR(S26)>】
+break
+#ELSEACT
+messagebox 您的条件不足!

@@ -1,0 +1,1189 @@
+[@main]
+
+
+
+#IF
+#ACT
+SET [150] 1
+MOV N$属性U26 4542
+MOV N$强化后属性 0
+
+
+#IF
+EQUAL U26 1
+#ACT
+MOV N$属性U26 2
+MOV N$强化后属性 2
+MOV N$强化颜色 70
+MOV S$属性选择1 <ImgEx:0:229:229:229:15:-3|250#生肖强化:防御属性/@防御>
+#ELSEACT
+MOV S$属性选择1 <ImgEx:0:228:228:228:15:-3|9#生肖强化:防御属性/@防御>
+
+
+#IF
+EQUAL U26 3
+#ACT
+MOV N$属性U26
+MOV N$强化颜色 249
+MOV S$属性选择2 <ImgEx:0:229:229:229:15:-3|250#生肖强化:攻击属性/@攻击>
+MOV N$强化后属性 1
+#ELSEACT
+MOV S$属性选择2 <ImgEx:0:228:228:228:15:-3|9#生肖强化:攻击属性/@攻击>
+
+
+#IF
+EQUAL U26 4
+#ACT
+MOV N$强化后属性 1
+MOV N$属性U26
+MOV N$强化颜色 251
+MOV S$属性选择3 <ImgEx:0:229:229:229:15:-3|250#生肖强化:魔法属性/@魔法>
+#ELSEACT
+MOV S$属性选择3 <ImgEx:0:228:228:228:15:-3|9#生肖强化:魔法属性/@魔法>
+
+
+#IF
+EQUAL U26 5
+#ACT
+MOV N$强化后属性 1
+MOV N$属性U26
+MOV N$强化颜色 146
+MOV S$属性选择4 <ImgEx:0:229:229:229:15:-3|250#生肖强化:道术属性/@道术>
+#ELSEACT
+MOV S$属性选择4 <ImgEx:0:228:228:228:15:-3|9#生肖强化:道术属性/@道术>
+
+#IF
+EQUAL U26 6
+#ACT
+MOV N$强化后属性 10
+MOV N$属性U26 7
+MOV N$强化颜色 250
+MOV S$属性选择5 <ImgEx:0:229:229:229:15:-3|250#生肖强化:生命属性/@生命>
+#ELSEACT
+MOV S$属性选择5 <ImgEx:0:228:228:228:15:-3|9#生肖强化:生命属性/@生命>
+
+
+
+
+#IF
+#Act
+close
+OPENMERCHANTBIGDLG 1 560 1 4 0 0 1 400 2
+Goto @开启自动
+MOV N$强化等级1 <$Str(N$强化等级)>
+DEC N$强化等级1 1
+#say
+\<每个让你难堪的现在，都有个不够努力的曾经，没有修炼，你不会成长/FCOLOR=145>
+\<在人生的赌局中,即使受挫失利,强者也会坦然接受,这是必须的成长之路/FCOLOR=145>
+\<生肖修炼:/FCOLOR=250><您好，我可为你生肖强化，但必须是终极6级的生肖才可以/FCOLOR=249>\ \
+   \ 
+<><强化材料：/FCOLOR=155><轮回竹叶/FCOLOR=250>*<$Str(N$材料费用1)>   <强化费用：/FCOLOR=155><$Str(N$元宝费用)> {／/FCOLOR=250}<$GAMEGOLD> <元宝/FCOLOR=254> \ 
+<>   \
+<><生肖名称：/FCOLOR=250>{<$BOXITEM[1].NAME>./SCOLOR=70}  <$Str(S$生肖大米)> <$Str(S$成功几率)>\   
+<>    \ 
+<>  <当前可强化：/FCOLOR=13>{<$Str(N$强化等级1)>/SCOLOR=250}/{<$Str(N$生肖强化等级)>/SCOLOR=254}                  <$Str(S$开启自动啊)>\   \ \
+<>   \  <ITEMBOX:1:0:117:135:-50:42:42:100,101,102,103,104,105,106,107,108,109,110,111:251#放入需要强化的生肖> \
+<>                        <开始强化|^251#强化生肖说明^-^253#强化1级五选一^-^250#人物攻击+1点^-^250#人物魔法+1点^-^250#人物道术+1点^-^250#人物防御+2点 ^-^250#人物生命+10点 ^-^253#怪物切割+1%/@开始强化生肖>\ \ \ 
+ \ <$Str(S$属性选择1)>   <防御|^103#强化一级：防御+2点/@防御> <$Str(S$属性选择2)>   <攻击|^249#强化一级：攻击+1点/@攻击> <$Str(S$属性选择3)>   <魔法|^249#强化一级：魔法+1点/@魔法> <$Str(S$属性选择4)>   <道术|^249#强化一级：道术+1点/@道术> <$Str(S$属性选择5)>   <生命|^250#强化一级：生命+10点/@生命>
+
+\  \ \           <转换属性|^103#请先选择属性，然后将生肖放OK框里面/@转换属性>                 <清除强化属性|249#请慎重清除属性，否则官方不予复原/@清除强化属性>
+
+
+
+
+
+[@转换属性]
+
+
+#if
+CHECKCUSTOMITEMVALUE -1 6 = 0
+#ACT
+MESSAGEBOX \\\\对不起，请先将生肖强化到1级以上在来！
+break
+
+
+
+#IF
+#ACT
+GOTO @main
+GOTO @检测材料
+MOV N$强化等级AA <$Str(N$强化等级)>
+DEC N$强化等级AA 1
+MOV N$强化后属性5 <$Str(N$强化等级AA)>
+MUL N$强化后属性5 <$Str(N$强化后属性)>
+MOV N$强化后属性6 <$Str(N$强化等级AA)>
+MUL N$强化后属性6 1
+LINKPICKUPITEM
+SetUpgradeItem 1
+CHANGEITEMUPGRADECOUNT -1 = 0
+CHANGECUSTOMITEMTEXT -1 [修炼属性]:
+CHANGECUSTOMITEMTEXTCOLOR -1 254
+
+
+CHANGECUSTOMITEMABIL -1 2 0 <$Str(N$强化颜色)> 
+CHANGECUSTOMITEMABIL -1 3 0 <$Str(N$强化颜色)> 
+
+
+CHANGECUSTOMITEMABIL -1 2 1 <$Str(U26)> 
+CHANGECUSTOMITEMABIL -1 3 1 <$Str(N$属性U26)> 
+
+
+CHANGECUSTOMITEMABIL -1 2 2 2
+CHANGECUSTOMITEMABIL -1 3 2 3
+
+CHANGECUSTOMITEMABIL -1 2 3 0
+CHANGECUSTOMITEMABIL -1 3 3 0
+
+
+CHANGECUSTOMITEMVALUE -1 2 = <$Str(N$强化后属性5)>
+CHANGECUSTOMITEMVALUE -1 3 = <$Str(N$强化后属性5)>
+
+
+
+
+SendCenterMsg 249 0 【提示】：恭喜您【<$BOXITEM[1].NAME>】属性切换成功 0 3
+SetUpgradeItem 1
+UpDateBoxItem 1
+SENDUPGRADEITEM
+
+
+
+
+
+
+[@清除强化属性]
+#IF
+#ACT
+MESSAGEBOX 您确定要清除当前生肖的强化属性吗？\\清除属性以后,官方将不负责找回，请先慎重考虑清楚\\如果点错请按取消 @确认55 @取消
+
+[@确认55]
+#IF
+#ACT
+LINKPICKUPITEM
+SetUpgradeItem 1
+
+CHANGEITEMUPGRADECOUNT -1 = 0
+CHANGECUSTOMITEMTEXT -1 
+CHANGECUSTOMITEMTEXTCOLOR -1 254
+
+
+CHANGECUSTOMITEMABIL -1 2 0 250
+CHANGECUSTOMITEMABIL -1 3 0 250
+
+
+CHANGECUSTOMITEMABIL -1 2 1 <$Str(U26)> 
+CHANGECUSTOMITEMABIL -1 3 1 <$Str(N$属性U26)> 
+
+
+CHANGECUSTOMITEMABIL -1 2 2 2
+CHANGECUSTOMITEMABIL -1 3 2 3
+
+CHANGECUSTOMITEMABIL -1 2 3 1
+CHANGECUSTOMITEMABIL -1 3 3 1
+
+
+CHANGECUSTOMITEMVALUE -1 2 = 0
+CHANGECUSTOMITEMVALUE -1 3 = 0
+
+
+
+CHANGECUSTOMITEMABIL -1 1 0 249
+CHANGECUSTOMITEMABIL -1 1 1 5
+CHANGECUSTOMITEMABIL -1 1 2 1
+CHANGECUSTOMITEMABIL -1 1 3 0
+CHANGECUSTOMITEMVALUE -1 1 = 0
+
+
+CHANGECUSTOMITEMABIL -1 7 0 249
+CHANGECUSTOMITEMABIL -1 7 1 9
+CHANGECUSTOMITEMABIL -1 7 2 7
+CHANGECUSTOMITEMABIL -1 7 3 0
+CHANGECUSTOMITEMVALUE -1 7 = 0
+
+
+CHANGECUSTOMITEMABIL -1 8 0 249
+CHANGECUSTOMITEMABIL -1 8 1 10
+CHANGECUSTOMITEMABIL -1 8 2 8
+CHANGECUSTOMITEMABIL -1 8 3 0
+CHANGECUSTOMITEMVALUE -1 8 = 0
+
+
+
+CHANGECUSTOMITEMABIL -1 5 0 249
+CHANGECUSTOMITEMABIL -1 5 1 7
+CHANGECUSTOMITEMABIL -1 5 2 5
+CHANGECUSTOMITEMABIL -1 5 3 0
+CHANGECUSTOMITEMVALUE -1 5 = 0
+
+
+CHANGECUSTOMITEMABIL -1 6 0 249
+CHANGECUSTOMITEMABIL -1 6 1 8
+CHANGECUSTOMITEMABIL -1 6 2 6
+CHANGECUSTOMITEMABIL -1 6 3 0
+CHANGECUSTOMITEMVALUE -1 6 = 0
+
+MESSAGEBOX 【提示】：已将您的强化属性清除，请查收
+SetUpgradeItem 1
+UpDateBoxItem 1
+SENDUPGRADEITEM
+GOTO @main
+
+[@生命]
+#IF
+#ACT
+MOV U26 6
+GOTO @main
+
+
+[@道术]
+#IF
+#ACT
+MOV U26 5
+GOTO @main
+
+[@魔法]
+#IF
+#ACT
+MOV U26 4
+GOTO @main
+
+
+
+[@攻击]
+#IF
+#ACT
+MOV U26 3
+GOTO @main
+
+
+[@防御]
+#IF
+#ACT
+MOV U26 1
+GOTO @main
+
+
+
+[@ItemIntoBox1]
+#IF
+#ACT
+SetUpgradeItem 1
+MOV S$OK框物品名字 <$BOXITEM[1].NAME>
+
+#IF
+CHECKLEVELEX > 0
+#ACT
+GOTO @检测材料
+SetUpgradeItem 1
+
+
+[@开启自动]
+#IF
+CHECK [90] 0
+#ACT
+MOV S$开启自动啊 <开启自动强化/@开启自动1>
+#ELSEACT
+MOV S$开启自动啊 <关闭自动强化{FCOLOR=249}/@开启自动1>
+
+
+
+[@开启自动1]
+
+
+
+
+
+
+
+
+#if
+NOT EQUAL <$Str(S$OK框物品名字)> <$BOXITEM[1].NAME>
+#ACT
+ReturnBoxItem 1
+CLEARDELAYGOTO
+MessageBox 对不起,强化已经停止！
+BREAK
+
+#IF
+CHECK [90] 0
+#ACT
+SET [90] 1
+MOV S$开启自动啊 <开启自动强化/@开启自动1>
+Goto @main
+
+
+#ELSEACT
+SET [90] 0
+MOV S$开启自动啊 <关闭自动强化{FCOLOR=249}/@开启自动1>
+Goto @main
+
+[@开始强化生肖]
+#if
+NOT CheckBoxItemCount 1 1
+#ACT
+ReturnBoxItem 1
+CLEARDELAYGOTO
+MessageBox 对不起,强化已经停止！
+BREAK
+
+#if
+NOT EQUAL <$Str(S$OK框物品名字)> <$BOXITEM[1].NAME>
+#ACT
+ReturnBoxItem 1
+CLEARDELAYGOTO
+MessageBox 对不起,强化已经停止！
+BREAK
+
+#IF
+NOT CheckTextlist ..\QuestDiary\极品拾取鉴定\十二生肖\3级生肖.txt <$BOXITEM[1].NAME>
+#ACT
+ReturnBoxItem 1
+CLEARDELAYGOTO
+MessageBox 对不起,只能终极生肖才能强化！
+BREAK
+
+
+#IF
+small U26 1
+#ACT
+MESSAGEBOX 请您先选择一种需要强化的属性
+BREAK
+
+
+
+
+#IF
+CHECK [90] 0
+#ACT
+Goto @手动强化生肖
+#ELSEACT
+Goto @自动强化生肖
+
+
+[@手动强化生肖]
+
+#IF
+small U26 1
+#ACT
+MESSAGEBOX 请您先选择一种需要强化的属性
+BREAK
+
+
+
+#IF
+CHECKLEVELEX > 0
+#ACT
+SetUpgradeItem 1
+
+
+
+
+#IF
+CheckTextlist ..\QuestDiary\极品拾取鉴定\十二生肖\3级生肖.txt <$BOXITEM[1].NAME>
+#ACT
+MOV N$生肖强化等级 15
+MOV N$生肖强化等级A 30
+GOTO @检测材料
+GOTO @强化1级生肖
+
+
+#IF
+CheckTextlist ..\QuestDiary\极品拾取鉴定\十二生肖\4级生肖.txt <$BOXITEM[1].NAME>
+#ACT
+MOV N$生肖强化等级 25
+MOV N$生肖强化等级A 50
+GOTO @检测材料
+GOTO @强化1级生肖
+
+
+
+
+[@检测材料]
+
+#if
+NOT EQUAL <$Str(S$OK框物品名字)> <$BOXITEM[1].NAME>
+#ACT
+ReturnBoxItem 1
+CLEARDELAYGOTO
+MessageBox 对不起,强化已经停止！
+BREAK
+
+
+
+#IF
+CheckTextlist ..\QuestDiary\极品拾取鉴定\十二生肖\1级生肖.txt <$BOXITEM[1].NAME>
+#ACT
+MOV N$生肖强化等级 5
+MOV N$生肖强化等级A 5
+
+
+#IF
+CheckTextlist ..\QuestDiary\极品拾取鉴定\十二生肖\2级生肖.txt <$BOXITEM[1].NAME>
+#ACT
+MOV N$生肖强化等级 10
+MOV N$生肖强化等级A 10
+
+#IF
+CheckTextlist ..\QuestDiary\极品拾取鉴定\十二生肖\3级生肖.txt <$BOXITEM[1].NAME>
+#ACT
+MOV N$生肖强化等级 15
+MOV N$生肖强化等级A 15
+
+#IF
+CheckTextlist ..\QuestDiary\极品拾取鉴定\十二生肖\4级生肖.txt <$BOXITEM[1].NAME>
+#ACT
+MOV N$生肖强化等级 20
+MOV N$生肖强化等级A 20
+
+
+
+
+
+
+
+#IF
+CHECKCUSTOMITEMVALUE  -1 6 = 0
+#ACT
+MOV N$成功几率 2
+MOV S$成功几率 <成功几率：/FCOLOR=161>{50%/SCOLOR=250}
+MOV N$元宝费用 20000
+MOV N$积分费用 10
+MOV N$材料费用1 1
+MOV N$材料费用2 1
+MOV N$强化等级 1
+MOV N$大米费用 0
+MOV S$生肖大米 　
+GOTO @main
+
+
+#IF
+CHECKCUSTOMITEMVALUE  -1 6 = 1
+#ACT
+MOV N$成功几率 2
+MOV S$成功几率 <成功几率：/FCOLOR=161>{48%/SCOLOR=250}
+MOV N$元宝费用 30000
+MOV N$积分费用 10
+MOV N$材料费用1 1
+MOV N$材料费用2 1
+MOV N$强化等级 2
+MOV N$大米费用 0
+MOV S$生肖大米 　
+GOTO @main
+
+
+#IF
+CHECKCUSTOMITEMVALUE  -1 6 = 2
+#ACT
+MOV N$成功几率 2
+MOV S$成功几率 <成功几率：/FCOLOR=161>{46%/SCOLOR=250}
+MOV N$元宝费用 40000
+MOV N$积分费用 10
+MOV N$材料费用1 1
+MOV N$材料费用2 1
+MOV N$强化等级 3
+MOV N$大米费用 0
+MOV S$生肖大米 　
+GOTO @main
+
+
+
+#IF
+CHECKCUSTOMITEMVALUE  -1 6 = 3
+#ACT
+MOV N$成功几率 2
+MOV S$成功几率 <成功几率：/FCOLOR=161>{44%/SCOLOR=250}
+MOV N$元宝费用 50000
+MOV N$积分费用 10
+MOV N$材料费用1 1
+MOV N$材料费用2 1
+MOV N$强化等级 4
+MOV N$大米费用 0
+MOV S$生肖大米 　
+GOTO @main
+
+
+
+#IF
+CHECKCUSTOMITEMVALUE  -1 6 = 4
+#ACT
+MOV N$成功几率 2
+MOV S$成功几率 <成功几率：/FCOLOR=161>{42%/SCOLOR=250}
+MOV N$元宝费用 55000
+MOV N$积分费用 10
+MOV N$材料费用1 1
+MOV N$材料费用2 1
+MOV N$强化等级 5
+MOV N$大米费用 0
+MOV S$生肖大米 　
+GOTO @main
+
+
+#IF
+CHECKCUSTOMITEMVALUE -1 6 = 5
+#ACT
+MOV N$成功几率 2
+MOV S$成功几率 <成功几率：/FCOLOR=161>{40%/SCOLOR=250}
+MOV N$元宝费用 60000
+MOV N$积分费用 10
+MOV N$材料费用1 1
+MOV N$材料费用2 1
+MOV N$强化等级 6
+MOV N$大米费用 0
+MOV S$生肖大米 　
+GOTO @main
+
+
+
+#IF
+CHECKCUSTOMITEMVALUE -1 6 = 6
+#ACT
+MOV N$成功几率 3
+MOV S$成功几率 <成功几率：/FCOLOR=161>{35%/SCOLOR=250}
+MOV N$元宝费用 65000
+MOV N$积分费用 10
+MOV N$材料费用1 1
+MOV N$材料费用2 1
+MOV N$强化等级 7
+MOV N$大米费用 0
+MOV S$生肖大米 　
+GOTO @main
+
+
+
+#IF
+CHECKCUSTOMITEMVALUE -1 6 = 7
+#ACT
+MOV N$成功几率 4
+MOV S$成功几率 <成功几率：/FCOLOR=161>{30%/SCOLOR=250}
+MOV N$元宝费用 70000
+MOV N$积分费用 10
+MOV N$材料费用1 1
+MOV N$材料费用2 1
+MOV N$强化等级 8
+MOV N$大米费用 0
+MOV S$生肖大米 　
+GOTO @main
+
+
+
+#IF
+CHECKCUSTOMITEMVALUE -1 6 = 8
+#ACT
+MOV N$成功几率 5
+MOV S$成功几率 <成功几率：/FCOLOR=161>{28%/SCOLOR=250}
+MOV N$元宝费用 75000
+MOV N$积分费用 10
+MOV N$材料费用1 1
+MOV N$材料费用2 1
+MOV N$强化等级 9
+MOV N$大米费用 0
+GOTO @main
+
+#IF
+CHECKCUSTOMITEMVALUE -1 6 = 9
+#ACT
+MOV N$成功几率 7
+MOV S$成功几率 <成功几率：/FCOLOR=161>{25%/SCOLOR=250}
+MOV N$元宝费用 75000
+MOV N$积分费用 10
+MOV N$材料费用1 1
+MOV N$材料费用2 1
+MOV N$强化等级 10
+MOV N$大米费用 5
+MOV S$生肖大米 <强化费用：/FCOLOR=155>{<$Str(N$大米费用)>/SCOLOR=251}/{<$GAMEPOINT>/SCOLOR=250}　<大米/FCOLOR=253>
+GOTO @main
+
+
+#IF
+CHECKCUSTOMITEMVALUE -1 6 = 10
+#ACT
+MOV N$成功几率 10
+MOV S$成功几率 <成功几率：/FCOLOR=161>{18%/SCOLOR=250}
+MOV N$元宝费用 80000
+MOV N$积分费用 10
+MOV N$材料费用1 1
+MOV N$材料费用2 1
+MOV N$强化等级 11
+MOV N$大米费用 5
+MOV S$生肖大米 <强化费用：/FCOLOR=155>{<$Str(N$大米费用)>/SCOLOR=251}/{<$GAMEPOINT>/SCOLOR=250}　<大米/FCOLOR=253>
+GOTO @main
+
+
+#IF
+CHECKCUSTOMITEMVALUE -1 6 = 11
+#ACT
+MOV N$成功几率 12
+MOV S$成功几率 <成功几率：/FCOLOR=161>{14%/SCOLOR=249}
+MOV N$元宝费用 85000
+MOV N$积分费用 10
+MOV N$材料费用1 1
+MOV N$材料费用2 1
+MOV N$强化等级 12
+MOV N$大米费用 10
+MOV S$生肖大米 <强化费用：/FCOLOR=155>{<$Str(N$大米费用)>/SCOLOR=251}/{<$GAMEPOINT>/SCOLOR=250}　<大米/FCOLOR=253>
+GOTO @main
+
+#IF
+CHECKCUSTOMITEMVALUE -1 6 = 12
+#ACT
+MOV N$成功几率 15
+MOV S$成功几率 <成功几率：/FCOLOR=161>{12%/SCOLOR=249}
+MOV N$元宝费用 85000
+MOV N$积分费用 10
+MOV N$材料费用1 1
+MOV N$材料费用2 1
+MOV N$强化等级 13
+MOV N$大米费用 15
+MOV S$生肖大米 <强化费用：/FCOLOR=155>{<$Str(N$大米费用)>/SCOLOR=251}/{<$GAMEPOINT>/SCOLOR=250}　<大米/FCOLOR=253>
+GOTO @main
+
+#IF
+CHECKCUSTOMITEMVALUE -1 6 = 13
+#ACT
+MOV N$成功几率 25
+MOV S$成功几率 <成功几率：/FCOLOR=161>{10%/SCOLOR=249}
+MOV N$元宝费用 90000
+MOV N$积分费用 10
+MOV N$材料费用1 1
+MOV N$材料费用2 1
+MOV N$强化等级 14
+MOV N$大米费用 20
+MOV S$生肖大米 <强化费用：/FCOLOR=155>{<$Str(N$大米费用)>/SCOLOR=251}/{<$GAMEPOINT>/SCOLOR=250}　<大米/FCOLOR=253>
+GOTO @main
+
+
+#IF
+CHECKCUSTOMITEMVALUE -1 6 = 14
+#ACT
+MOV N$成功几率 30
+MOV S$成功几率 <成功几率：/FCOLOR=161>{9%/SCOLOR=249}
+MOV N$元宝费用 100000
+MOV N$积分费用 10
+MOV N$材料费用1 1
+MOV N$材料费用2 1
+MOV N$强化等级 15
+MOV N$大米费用 25
+MOV S$生肖大米 <强化费用：/FCOLOR=155>{<$Str(N$大米费用)>/SCOLOR=251}/{<$GAMEPOINT>/SCOLOR=250}　<大米/FCOLOR=253>
+GOTO @main
+
+
+#IF
+CHECKCUSTOMITEMVALUE -1 6 = 15
+#ACT
+MOV N$成功几率 25
+MOV S$成功几率 <成功几率：/FCOLOR=161>{7%/SCOLOR=249}
+MOV N$元宝费用 100000
+MOV N$积分费用 10
+MOV N$材料费用1 2
+MOV N$材料费用2 1
+MOV N$强化等级 16
+MOV N$大米费用 30
+MOV S$生肖大米 <强化费用：/FCOLOR=155>{<$Str(N$大米费用)>/SCOLOR=251}/{<$GAMEPOINT>/SCOLOR=250}　<大米/FCOLOR=253>
+GOTO @main
+
+
+#IF
+CHECKCUSTOMITEMVALUE -1 6 = 16
+#ACT
+MOV N$成功几率 15
+MOV S$成功几率 <成功几率：/FCOLOR=161>{5%/SCOLOR=249}
+MOV N$元宝费用 100000
+MOV N$积分费用 10
+MOV N$材料费用1 2
+MOV N$材料费用2 1
+MOV N$强化等级 17
+MOV N$大米费用 35
+MOV S$生肖大米 <强化费用：/FCOLOR=155>{<$Str(N$大米费用)>/SCOLOR=251}/{<$GAMEPOINT>/SCOLOR=250}　<大米/FCOLOR=253>
+GOTO @main
+
+
+#IF
+CHECKCUSTOMITEMVALUE -1 6 = 17
+#ACT
+MOV N$成功几率 20
+MOV S$成功几率 <成功几率：/FCOLOR=161>{4%/SCOLOR=249}
+MOV N$元宝费用 100000
+MOV N$积分费用 10
+MOV N$材料费用1 2
+MOV N$材料费用2 1
+MOV N$强化等级 18
+MOV N$大米费用 40
+MOV S$生肖大米 <强化费用：/FCOLOR=155>{<$Str(N$大米费用)>/SCOLOR=251}/{<$GAMEPOINT>/SCOLOR=250}　<大米/FCOLOR=253>
+GOTO @main
+
+
+
+#IF
+CHECKCUSTOMITEMVALUE -1 6 = 18
+#ACT
+MOV N$成功几率 25
+MOV S$成功几率 <成功几率：/FCOLOR=161>{3%/SCOLOR=249}
+MOV N$元宝费用 100000
+MOV N$积分费用 10
+MOV N$材料费用1 2
+MOV N$材料费用2 1
+MOV N$强化等级 19
+MOV N$大米费用 45
+MOV S$生肖大米 <强化费用：/FCOLOR=155>{<$Str(N$大米费用)>/SCOLOR=251}/{<$GAMEPOINT>/SCOLOR=250}　<大米/FCOLOR=253>
+GOTO @main
+
+
+
+#IF
+CHECKCUSTOMITEMVALUE -1 6 = 19
+#ACT
+MOV N$成功几率 30
+MOV S$成功几率 <成功几率：/FCOLOR=161>{2%/SCOLOR=249}
+MOV N$元宝费用 100000
+MOV N$积分费用 10
+MOV N$材料费用1 2
+MOV N$材料费用2 1
+MOV N$强化等级 20
+MOV N$大米费用 50
+MOV S$生肖大米 <强化费用：/FCOLOR=155>{<$Str(N$大米费用)>/SCOLOR=251}/{<$GAMEPOINT>/SCOLOR=250}　<大米/FCOLOR=253>
+GOTO @main
+
+
+
+#IF
+CHECKCUSTOMITEMVALUE -1 6 = 20
+#ACT
+MOV N$成功几率 30
+MOV S$成功几率 <成功几率：/FCOLOR=161>{2%/SCOLOR=249}
+MOV N$元宝费用 100000
+MOV N$积分费用 10
+MOV N$材料费用1 2
+MOV N$材料费用2 1
+MOV N$强化等级 21
+MOV N$大米费用 50
+MOV S$生肖大米 <强化费用：/FCOLOR=155>{<$Str(N$大米费用)>/SCOLOR=251}/{<$GAMEPOINT>/SCOLOR=250}　<大米/FCOLOR=253>
+GOTO @main
+
+
+
+
+#IF
+CHECKCUSTOMITEMVALUE -1 6 = 21
+#ACT
+MOV N$成功几率 20
+MOV S$成功几率 <成功几率：/FCOLOR=161>{2%/SCOLOR=249}
+MOV N$元宝费用 50000
+MOV N$积分费用 10
+MOV N$材料费用1 2
+MOV N$材料费用2 1
+MOV N$强化等级 22
+MOV N$大米费用 50
+MOV S$生肖大米 <强化费用：/FCOLOR=155>{<$Str(N$大米费用)>/SCOLOR=251}/{<$GAMEPOINT>/SCOLOR=250}　<大米/FCOLOR=253>
+GOTO @main
+
+
+#IF
+CHECKCUSTOMITEMVALUE -1 6 = 22
+#ACT
+MOV N$成功几率 70
+MOV N$元宝费用 150000
+MOV N$积分费用 200
+MOV N$材料费用1 1
+MOV N$材料费用2 1
+MOV N$强化等级 23
+MOV N$大米费用 30
+MOV S$生肖大米 <强化费用：/FCOLOR=155>{<$Str(N$大米费用)>/SCOLOR=251}/{<$GAMEGOLD>/SCOLOR=250}　<大米/FCOLOR=253>
+GOTO @main
+
+
+
+#IF
+CHECKCUSTOMITEMVALUE -1 6 = 23
+#ACT
+MOV N$成功几率 70
+MOV N$元宝费用 150000
+MOV N$积分费用 200
+MOV N$材料费用1 1
+MOV N$材料费用2 1
+MOV N$强化等级 24
+MOV N$大米费用 30
+MOV S$生肖大米 <强化费用：/FCOLOR=155>{<$Str(N$大米费用)>/SCOLOR=251}/{<$GAMEGOLD>/SCOLOR=250}　<大米/FCOLOR=253>
+GOTO @main
+
+
+
+#IF
+CHECKCUSTOMITEMVALUE -1 6 = 24
+#ACT
+MOV N$成功几率 70
+MOV N$元宝费用 150000
+MOV N$积分费用 200
+MOV N$材料费用1 1
+MOV N$材料费用2 1
+MOV N$强化等级 25
+MOV N$大米费用 30
+MOV S$生肖大米 <强化费用：/FCOLOR=155>{<$Str(N$大米费用)>/SCOLOR=251}/{<$GAMEGOLD>/SCOLOR=250}　<大米/FCOLOR=253>
+GOTO @main
+
+
+#IF
+CHECKCUSTOMITEMVALUE -1 6 = 25
+#ACT
+MOV N$成功几率 70
+MOV N$元宝费用 150000
+MOV N$积分费用 200
+MOV N$材料费用1 1
+MOV N$材料费用2 1
+MOV N$强化等级 26
+MOV N$大米费用 30
+MOV S$生肖大米 <强化费用：/FCOLOR=155>{<$Str(N$大米费用)>/SCOLOR=251}/{<$GAMEGOLD>/SCOLOR=250}　<大米/FCOLOR=253>
+GOTO @main
+
+
+
+
+
+
+
+
+
+[@强化1级生肖]
+#if
+NOT EQUAL <$Str(S$OK框物品名字)> <$BOXITEM[1].NAME>
+#ACT
+ReturnBoxItem 1
+CLEARDELAYGOTO
+MessageBox 对不起,强化已经停止！
+BREAK
+
+
+#IF
+#ACT
+GOTO @检测材料
+
+
+#IF
+CHECKGAMEGOLD < <$Str(N$元宝费用)>
+#ACT
+MessageBox 对不起,您包袱的元宝不足<$Str(N$元宝费用)>个！
+BREAK
+
+
+
+
+#IF
+CHECKGAMEPOINT < <$Str(N$大米费用)>
+#ACT
+MESSAGEBOX \\\\对不起，您的大米不足:<$Str(N$大米费用)>点
+break
+
+
+#or
+CHECKCUSTOMITEMVALUE -1 6 > <$Str(N$生肖强化等级A)>
+CHECKCUSTOMITEMVALUE -1 6 = <$Str(N$生肖强化等级A)>
+#ACT
+MESSAGEBOX \\\\已经升级到最高了。无法继续升级！
+break
+
+#IF
+CHECKITEM 轮回竹叶 <$Str(N$材料费用1)>
+#ACT
+GOTO @强化生肖属性
+#ELSEACT
+MESSAGEBOX \请检查您包袱里面是否有以下的材料\\1.轮回竹叶：<$Str(N$材料费用1)>个\
+
+[@强化生肖属性]
+
+
+#if
+NOT EQUAL <$Str(S$OK框物品名字)> <$BOXITEM[1].NAME>
+#ACT
+ReturnBoxItem 1
+CLEARDELAYGOTO
+MessageBox 对不起,强化已经停止！
+BREAK
+
+
+#or
+CHECKCUSTOMITEMVALUE -1 6 > <$Str(N$生肖强化等级A)>
+CHECKCUSTOMITEMVALUE -1 6 = <$Str(N$生肖强化等级A)>
+#ACT
+ReturnBoxItem 1
+CLEARDELAYGOTO
+MESSAGEBOX \\\\已经升级到最高了。无法继续升级！
+break
+
+
+#IF
+random <$STR(N$成功几率)>
+#ACT
+TAKE 轮回竹叶 <$Str(N$材料费用1)>
+GAMEGOLD - <$Str(N$元宝费用)>
+GAMEPOINT - <$Str(N$大米费用)>
+
+
+MOV N$强化后属性5 <$Str(N$强化等级)>
+MUL N$强化后属性5 <$Str(N$强化后属性)>
+
+MOV N$强化后属性6 <$Str(N$强化等级)>
+MUL N$强化后属性6 1
+
+
+
+LINKPICKUPITEM
+SetUpgradeItem 1
+
+CHANGEITEMUPGRADECOUNT -1 = 0
+CHANGECUSTOMITEMTEXT -1 [强化属性]:
+CHANGECUSTOMITEMTEXTCOLOR -1 254
+
+
+CHANGECUSTOMITEMABIL -1 2 0 <$Str(N$强化颜色)> 
+CHANGECUSTOMITEMABIL -1 3 0 <$Str(N$强化颜色)> 
+
+
+CHANGECUSTOMITEMABIL -1 2 1 <$Str(U26)> 
+CHANGECUSTOMITEMABIL -1 3 1 <$Str(N$属性U26)> 
+
+
+CHANGECUSTOMITEMABIL -1 2 2 2
+CHANGECUSTOMITEMABIL -1 3 2 3
+
+CHANGECUSTOMITEMABIL -1 2 3 0
+CHANGECUSTOMITEMABIL -1 3 3 0
+
+
+CHANGECUSTOMITEMVALUE -1 2 = <$Str(N$强化后属性5)>
+CHANGECUSTOMITEMVALUE -1 3 = <$Str(N$强化后属性5)>
+
+
+
+
+
+CHANGECUSTOMITEMABIL -1 6 0 253
+CHANGECUSTOMITEMABIL -1 6 1 10
+CHANGECUSTOMITEMABIL -1 6 2 6
+CHANGECUSTOMITEMABIL -1 6 3 1
+CHANGECUSTOMITEMVALUE -1 6 + 1
+
+
+
+SendCenterMsg 249 0 【提示】：恭喜您【<$BOXITEM[1].NAME>】强化成功，隐藏属性提升1级 0 3
+SetUpgradeItem 1
+UpDateBoxItem 1
+SENDUPGRADEITEM
+GOTO @检测材料
+GOTO @main
+#ELSEACT
+TAKE 轮回竹叶 <$Str(N$材料费用1)>
+GAMEGOLD - <$Str(N$元宝费用)>
+GAMEPOINT - <$Str(N$大米费用)>
+SendCenterMsg 250 0 〖提示〗：对不起，强化失败 0 3
+GOTO @检测材料
+GOTO @main
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@自动强化生肖]
+
+
+
+#if
+NOT EQUAL <$Str(S$OK框物品名字)> <$BOXITEM[1].NAME>
+#ACT
+ReturnBoxItem 1
+CLEARDELAYGOTO
+MessageBox 对不起,强化已经停止！
+BREAK
+
+
+
+
+
+#IF
+CHECK [90] 0
+#ACT
+break
+
+
+#IF
+CHECKLEVELEX > 0
+#ACT
+SetUpgradeItem 1
+
+
+#IF
+CheckTextlist ..\QuestDiary\极品拾取鉴定\十二生肖\1级生肖.txt <$BOXITEM[1].NAME>
+#ACT
+MOV N$生肖强化等级 5
+MOV N$生肖强化等级A 5
+GOTO @检测材料
+GOTO @强化1级生肖1
+
+
+#IF
+CheckTextlist ..\QuestDiary\极品拾取鉴定\十二生肖\2级生肖.txt <$BOXITEM[1].NAME>
+#ACT
+MOV N$生肖强化等级 10
+MOV N$生肖强化等级A 10
+GOTO @检测材料
+GOTO @强化1级生肖1
+
+#IF
+CheckTextlist ..\QuestDiary\极品拾取鉴定\十二生肖\3级生肖.txt <$BOXITEM[1].NAME>
+#ACT
+MOV N$生肖强化等级 15
+MOV N$生肖强化等级A 15
+GOTO @检测材料
+GOTO @强化1级生肖1
+
+
+#IF
+CheckTextlist ..\QuestDiary\极品拾取鉴定\十二生肖\4级生肖.txt <$BOXITEM[1].NAME>
+#ACT
+MOV N$生肖强化等级 20
+MOV N$生肖强化等级A 20
+GOTO @检测材料
+GOTO @强化1级生肖1
+
+
+
+[@强化1级生肖1]
+
+
+#or
+CHECKCUSTOMITEMVALUE -1 6 > <$Str(N$生肖强化等级A)>
+CHECKCUSTOMITEMVALUE -1 6 = <$Str(N$生肖强化等级A)>
+#ACT
+ReturnBoxItem 1
+CLEARDELAYGOTO
+MESSAGEBOX \\\\已经升级到最高了。无法继续升级！
+break
+
+
+
+
+
+
+
+
+
+#IF
+CHECKGAMEGOLD < <$Str(N$元宝费用)>
+#ACT
+messagebox [提示]：对不起，您包袱元宝不够：<$Str(N$元宝费用)>！
+BREAK
+
+
+#IF
+CHECKGAMEPOINT < <$Str(N$大米费用)>
+#ACT
+MESSAGEBOX \\\\对不起，您的大米不足:<$Str(N$大米费用)>点
+break
+
+
+#IF
+CHECKCUSTOMITEMVALUE -1 6 > <$Str(N$生肖强化等级A)>
+CHECKCUSTOMITEMVALUE -1 6 = <$Str(N$生肖强化等级A)>
+#ACT
+MESSAGEBOX \\\\已经升级到最高了。无法继续升级！
+break
+
+
+#IF
+CHECKITEM 轮回竹叶 <$Str(N$材料费用1)>
+#ACT
+GOTO @强化生肖属性1
+#ELSEACT
+MESSAGEBOX \请检查您包袱里面是否有以下的材料\\1.轮回竹叶：<$Str(N$材料费用1)>个\
+
+[@强化生肖属性1]
+#IF
+random <$STR(N$成功几率)>
+#ACT
+TAKE 轮回竹叶 <$Str(N$材料费用1)>
+GAMEGOLD - <$Str(N$元宝费用)>
+GAMEPOINT - <$Str(N$大米费用)>
+
+
+MOV N$强化后属性5 <$Str(N$强化等级)>
+MUL N$强化后属性5 <$Str(N$强化后属性)>
+
+MOV N$强化后属性6 <$Str(N$强化等级)>
+MUL N$强化后属性6 1
+
+
+
+LINKPICKUPITEM
+SetUpgradeItem 1
+
+CHANGEITEMUPGRADECOUNT -1 = 0
+CHANGECUSTOMITEMTEXT -1 [强化属性]:
+CHANGECUSTOMITEMTEXTCOLOR -1 254
+
+
+CHANGECUSTOMITEMABIL -1 2 0 <$Str(N$强化颜色)> 
+CHANGECUSTOMITEMABIL -1 3 0 <$Str(N$强化颜色)> 
+
+CHANGECUSTOMITEMABIL -1 2 1 <$Str(U26)> 
+CHANGECUSTOMITEMABIL -1 3 1 <$Str(N$属性U26)> 
+
+
+CHANGECUSTOMITEMABIL -1 2 2 2
+CHANGECUSTOMITEMABIL -1 3 2 3
+
+CHANGECUSTOMITEMABIL -1 2 3 0
+CHANGECUSTOMITEMABIL -1 3 3 0
+
+
+CHANGECUSTOMITEMVALUE -1 2 = <$Str(N$强化后属性5)>
+CHANGECUSTOMITEMVALUE -1 3 = <$Str(N$强化后属性5)>
+
+
+
+CHANGECUSTOMITEMABIL -1 6 0 253
+CHANGECUSTOMITEMABIL -1 6 1 10
+CHANGECUSTOMITEMABIL -1 6 2 6
+CHANGECUSTOMITEMABIL -1 6 3 1
+CHANGECUSTOMITEMVALUE -1 6 + 1
+
+SendCenterMsg 249 0 【提示】：恭喜您【<$BOXITEM[1].NAME>】强化成功，性提升1级 0 3
+SetUpgradeItem 1
+UpDateBoxItem 1
+SENDUPGRADEITEM
+GOTO @检测材料
+DELAYGOTO 1 @自动强化生肖
+GOTO @main
+#ELSEACT
+TAKE 轮回竹叶 <$Str(N$材料费用1)>
+GAMEGOLD - <$Str(N$元宝费用)>
+GAMEPOINT - <$Str(N$大米费用)>
+
+SendCenterMsg 250 0 〖提示〗：对不起，强化失败 0 3
+GOTO @检测材料
+DELAYGOTO 1 @自动强化生肖
+

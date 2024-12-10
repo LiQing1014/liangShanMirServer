@@ -1,0 +1,140 @@
+[@main]
+
+#IF
+#ACT
+
+
+getdbitemfieldvalue 梦想神石	Idx	N$材料Idx1
+
+MOV	S$材料展示1	 <ItemShow:<$Str(N$材料Idx1)>:0:150:-143:1>
+MOV	S$材料展示2	 <ItemShow:<$Str(N$材料Idx2)>:0:0:-203:1>
+MOV	S$材料展示3	 <ItemShow:<$Str(N$材料Idx3)>:0:0:-203:1>
+
+close
+#say
+<>\ \ 
+<>    <合成梦想神石|251#合成条件^-^250#需要100个魔法神石=1个梦想神石^-^161#包袱材料大于10000合成100^-^161#包袱材料大于1000合成10/@合成庆帝之石>      <合成条件:/SCOLOR=250><需要100个魔法神石=1个梦想神石/SCOLOR=254> \  \
+<>\ \  \ \
+<>                       <购买梦想神石|249#购买价格^250#10大米*1个/@@InPutInteger32(注意：10大米=1个梦想神石，请输入购买数量，1-1000数值之间)>
+
+\     
+
+\  \ \                    \
+\                                               \ \ 
+\   
+\<$STR(S$材料展示1)>      \ \ \    \ 
+
+
+
+
+[@InPutInteger32]
+
+#or
+EQUAL N32
+EQUAL N32 0
+large N32 1000
+#act
+MOV N32 0
+goto @main
+messagebox \\请输入购买1000内数字.不能为空或者0！
+BREAK
+
+
+
+
+#IF
+NOT CHECKBAGSIZE  12
+#ACT
+MESSAGEBOX [失败]:\　\　　　　　　您的“包袱位置”不足“12个”空位置！
+break
+
+
+#IF
+#ACT
+MOV S$给材料 梦想神石
+MOV N65 <$STR(N32)>
+MUL N65 10
+MOV N66 <$STR(N32)>
+MUL N66 1
+
+
+#IF
+CHECKGAMEPOINT < <$STR(N65)>
+#ACT
+messagebox \\对不起，您包袱里的大米不够<$STR(N65)>，无法购买！！
+BREAK
+
+
+
+
+#or
+CHECKGAMEPOINT > <$STR(N65)>
+CHECKGAMEPOINT = <$STR(N65)>
+#ACT
+GAMEPOINT - <$STR(N65)>
+GiveStateItem <$Str(S$给材料)> 1 1 0 0 1 1 0 <$STR(N66)>
+MessageBox \\恭喜您，用<$STR(N65)>大米购买获得：(<$STR(N66)>)个<$Str(S$给材料)>
+goto @main
+break
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@合成梦想神石]
+
+#if
+NOT checkitem 魔法神石 100
+#act
+messagebox \　\合成失败\　\您的包袱里面没有100个魔法神石
+break
+
+
+
+#if
+checkitem 魔法神石 10000
+#act
+take 魔法神石 10000
+GIVE 梦想神石 100
+
+
+
+#if
+checkitem 魔法神石 1000
+#act
+take 魔法神石 1000
+GIVE 梦想神石 10
+
+
+
+#if
+checkitem 魔法神石 100
+#act
+take 魔法神石 100
+GIVE 梦想神石 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

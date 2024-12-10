@@ -1,0 +1,5 @@
+[@main]
+#IF
+#Act
+#Call [\宅男数据\激情泡点.txt] @顶部_活动大厅
+break

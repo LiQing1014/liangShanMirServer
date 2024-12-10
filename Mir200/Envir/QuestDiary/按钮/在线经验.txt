@@ -1,0 +1,39 @@
+[@在线经验]
+{
+#IF
+CHECKLEVELEX < 28
+#ACT
+MESSAGEBOX \\30级才能使用此功能！
+break
+
+#IF
+#ACT
+close
+#SAY
+<><Hot~/SCOLOR=19>     <为您省去繁琐的打怪过程，轻松泡点升级/SCOLOR=154>  \
+<┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄/SCOLOR=13>\
+<免费随身泡点{FCOLOR=251}/@开始> - <代练系统-新区福利-可泡到53级/SCOLOR=250> - <每秒获得/SCOLOR=19><5000/SCOLOR=215> <经验/SCOLOR=19>\
+<┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄/SCOLOR=13>\
+<免费随身泡点{FCOLOR=251}/@开始> - <代练系统-新区福利-可泡到53级/SCOLOR=250> - <每秒获得/SCOLOR=19><5000/SCOLOR=215> <经验/SCOLOR=19>\
+<┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄/SCOLOR=13>\
+<免费随身泡点{FCOLOR=251}/@开始> - <代练系统-新区福利-可泡到53级/SCOLOR=250> - <每秒获得/SCOLOR=19><5000/SCOLOR=215> <经验/SCOLOR=19>\
+<┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄/SCOLOR=13>\
+<温馨提示：/SCOLOR=249><所有地图随身泡点，无需等待，上线即可开始打装备！/SCOLOR=253>  \
+
+[@开始]
+#IF
+CHECKLEVELEX > 52
+#ACT
+MESSAGEBOX \\您的等级已经达到53级，无法再继续泡点升级！
+break
+
+#IF
+CHECKLEVELEX < 53
+#ACT 
+SETONTIMER 2 1
+messagebox 恭喜您在线经验已经成功开启！
+GuildNoticeMsg 255 252 玩家:「<$Username>」开启【免费泡点】，升级嗷嗷快你还在等什么？
+GuildNoticeMsg 255 252 玩家:「<$Username>」开启【免费泡点】，升级嗷嗷快你还在等什么？
+BREAK
+
+}

@@ -1,0 +1,1116 @@
+(@@InPutString)
+[@二级密码验证]
+{
+#if
+CheckStringlength <$STR(T2)> > 0
+#ACT
+goto @未通过
+#elseact
+sendmsg 6 ═════════════════════════════
+sendmsg 6 你的帐号还未设置二级密码，为保障你的帐号安全设置及时设置。
+sendmsg 6 你的帐号还未设置二级密码，为保障你的帐号安全设置及时设置。
+sendmsg 6 你的帐号还未设置二级密码，为保障你的帐号安全设置及时设置。
+sendmsg 6 ═════════════════════════════
+
+[@未通过]
+#if
+equal T1 <$IPADDR>
+#act
+sendmsg 6 本次登陆的IP地址与您上次登陆的IP符合,您可以正常游戏.
+#elseact
+ChangeModeEx 1 500 
+ChangeModeEx 2 500 
+ChangeModeEx 10 500 
+DelayCall 30000 @密保验证下线
+DelayCall 31000 @下线
+DELAYGOTO 5 @验证密保
+sendmsg 6 本次登陆的IP地址与您上次登陆的IP不符合,请输入密保验证.
+BREAK
+
+[@验证密保]
+#IF
+#Act
+mov S$密码总位数 0
+mov S$密码位数一 0
+mov S$密码位数二 0
+mov S$密码位数三 0
+mov S$密码位数四 0
+mov S$密码位数五 0
+mov S$密码位数六 0
+mov S$密码位数七 0
+mov S$密码位数八 0
+mov S$密码一坐标 
+mov S$密码二坐标 
+mov S$密码三坐标 
+mov S$密码四坐标 
+mov S$密码五坐标 
+mov S$密码六坐标 
+mov S$密码七坐标 
+mov S$密码八坐标 
+OPENMERCHANTBIGDLG 12 180 0 0 0 0 0
+GetRandomText ..\QuestDiary\数据文件\二级密码\按钮排序.txt S$按钮排序
+#SAY
+<Img:2:1:390:-12/@EXIT>\ \
+<二级密码/SCOLOR=154>\
+　<本次登陆的IP地址与您上次登陆的IP符合,您可以正常游戏./SCOLOR=87>\
+　<Img:803:0:0:4>\
+　<1、请在下面输入您熟悉的密保，请勿过于简单,可以输入6-8个字符！/SCOLOR=87>\
+　<2、密保功能一旦开启永久生效，合区无任何影响，不需要重新设置！/SCOLOR=87>\
+　<3、设置密保后每次登录IP变化后上线都需要验证，不输入掉线处理！/SCOLOR=87>\
+　<4、为了您的装备和元宝，建议您设置二级密码，有效防止盗号！/SCOLOR=87>\
+　\
+　　　　　　　　　　　　　　　 <← 请在30秒输入验证密码/SCOLOR=103>\
+　\
+<$STR(S$按钮排序)><Img:179:12:0:0/@删除密码><Img:168:12:-6:-1/@新密码确定>\
+　\
+　\
+　<如果您在30秒未输入验证密码/SCOLOR=87><系统将会T您下线！>\
+
+
+[@输入密保A]
+<Img:2:1:390:-12/@EXIT>\ \
+<二级密码/SCOLOR=154>\
+　<本次登陆的IP地址与您上次登陆的IP符合,您可以正常游戏1./SCOLOR=87>\
+　<Img:803:0:0:4>\
+　<1、请在下面输入您熟悉的密保，请勿过于简单,可以输入6-8个字符！/SCOLOR=87>\
+　<2、密保功能一旦开启永久生效，合区无任何影响，不需要重新设置！/SCOLOR=87>\
+　<3、设置密保后每次登录IP变化后上线都需要验证，不输入掉线处理！/SCOLOR=87>\
+　<4、为了您的装备和元宝，建议您设置二级密码，有效防止盗号！/SCOLOR=87>\
+　\
+　　　　　　　　　　　　　　　 <← 请在30秒输入验证密码/SCOLOR=103>\
+　　　　<$STR(S$密码一坐标)><$STR(S$密码二坐标)><$STR(S$密码三坐标)><$STR(S$密码四坐标)><$STR(S$密码五坐标)><$STR(S$密码六坐标)><$STR(S$密码七坐标)><$STR(S$密码八坐标)>\
+<$STR(S$按钮排序)><Img:179:12:0:0/@删除密码><Img:168:12:-6:-1/@新密码确定>\
+　\
+　\
+　<如果您在30秒未输入验证密码/SCOLOR=87><系统将会T您下线！>\
+
+[@新密码确定]
+#IF
+large S$密码位数一 9
+#ACT
+mov S$密码位数一 0
+#IF
+large S$密码位数二 9
+#ACT
+mov S$密码位数二 0
+
+#IF
+large S$密码位数三 9
+#ACT
+mov S$密码位数三 0
+
+#IF
+large S$密码位数四 9
+#ACT
+mov S$密码位数四 0
+
+#IF
+large S$密码位数五 9
+#ACT
+mov S$密码位数五 0
+
+#IF
+large S$密码位数六 9
+#ACT
+mov S$密码位数六 0
+
+#IF
+large S$密码位数七 9
+#ACT
+mov S$密码位数七 0
+
+#IF
+large S$密码位数八 9
+#ACT
+mov S$密码位数八 0
+
+
+#IF
+small S$密码总位数 6
+#ACT
+MESSAGEBOX \\输入错误，二级密码由6-8个字符组成!\\请输入正确的二级密码！
+break
+
+#IF
+equal S$密码总位数 6
+#ACT
+mov T4 <$STR(S$密码位数一)><$STR(S$密码位数二)><$STR(S$密码位数三)><$STR(S$密码位数四)><$STR(S$密码位数五)><$STR(S$密码位数六)>
+DELAYGOTO 1 @新密码确定BB
+break
+#IF
+equal S$密码总位数 7
+#ACT
+mov T4 <$STR(S$密码位数一)><$STR(S$密码位数二)><$STR(S$密码位数三)><$STR(S$密码位数四)><$STR(S$密码位数五)><$STR(S$密码位数六)><$STR(S$密码位数七)>
+DELAYGOTO 1 @新密码确定BB
+break
+#IF
+equal S$密码总位数 8
+#ACT
+mov T4 <$STR(S$密码位数一)><$STR(S$密码位数二)><$STR(S$密码位数三)><$STR(S$密码位数四)><$STR(S$密码位数五)><$STR(S$密码位数六)><$STR(S$密码位数七)><$STR(S$密码位数八)>
+DELAYGOTO 1 @新密码确定BB
+break
+
+[@新密码确定BB]
+#IF
+Equal T2 <$STR(T4)>
+#ACT
+#Act
+CLEARDELAYGOTO
+ChangeModeEx 1 1
+ChangeModeEx 2 1
+ChangeModeEx 10 1
+mov T1 <$IPADDR>
+MESSAGEBOX 【验证正确】\\【您的账号已经解锁，可以正常游戏了】
+CLOSE
+#elseact
+MESSAGEBOX 二级密码输入错误！\\请重新输入正确的二级密码后确认！\\二级密码验证正确后才可以正常登陆游戏！
+break
+
+[@删除密码]
+#IF
+equal S$密码总位数 8
+#ACT
+MOV S$密码位数八 0
+MOV S$密码八坐标 
+MOV S$密码总位数 7
+GOTO @输入密保A
+break
+
+#IF
+equal S$密码总位数 7
+#ACT
+MOV S$密码位数七 0
+MOV S$密码七坐标 
+MOV S$密码总位数 6
+GOTO @输入密保A
+break
+
+#IF
+equal S$密码总位数 6
+#ACT
+MOV S$密码位数六 0
+MOV S$密码六坐标 
+MOV S$密码总位数 5
+GOTO @输入密保A
+break
+
+#IF
+equal S$密码总位数 5
+#ACT
+MOV S$密码位数五 0
+MOV S$密码五坐标 
+MOV S$密码总位数 4
+GOTO @输入密保A
+break
+
+#IF
+equal S$密码总位数 4
+#ACT
+MOV S$密码位数四 0
+MOV S$密码四坐标 
+MOV S$密码总位数 3
+GOTO @输入密保A
+break
+
+#IF
+equal S$密码总位数 3
+#ACT
+MOV S$密码位数三 0
+MOV S$密码三坐标 
+MOV S$密码总位数 2
+GOTO @输入密保A
+break
+
+#IF
+equal S$密码总位数 2
+#ACT
+MOV S$密码位数二 0
+MOV S$密码二坐标 
+MOV S$密码总位数 1
+GOTO @输入密保A
+break
+
+#IF
+equal S$密码总位数 1
+#ACT
+MOV S$密码位数一 0
+MOV S$密码一坐标 
+MOV S$密码总位数 0
+GOTO @输入密保A
+break
+
+[@删除密码A]
+#IF
+equal S$密码总位数 8
+#ACT
+MOV S$密码位数八 0
+MOV S$密码八坐标 
+MOV S$密码总位数 7
+GOTO @输入密保A
+break
+
+#IF
+equal S$密码总位数 7
+#ACT
+MOV S$密码位数七 0
+MOV S$密码七坐标 
+MOV S$密码总位数 6
+GOTO @输入密保A
+break
+
+#IF
+equal S$密码总位数 6
+#ACT
+MOV S$密码位数六 0
+MOV S$密码六坐标 
+MOV S$密码总位数 5
+GOTO @输入密保A
+break
+
+#IF
+equal S$密码总位数 5
+#ACT
+MOV S$密码位数五 0
+MOV S$密码五坐标 
+MOV S$密码总位数 4
+GOTO @输入密保A
+break
+
+#IF
+equal S$密码总位数 4
+#ACT
+MOV S$密码位数四 0
+MOV S$密码四坐标 
+MOV S$密码总位数 3
+GOTO @输入密保A
+break
+
+#IF
+equal S$密码总位数 3
+#ACT
+MOV S$密码位数三 0
+MOV S$密码三坐标 
+MOV S$密码总位数 2
+GOTO @输入密保A
+break
+
+#IF
+equal S$密码总位数 2
+#ACT
+MOV S$密码位数二 0
+MOV S$密码二坐标 
+MOV S$密码总位数 1
+GOTO @输入密保A
+break
+
+#IF
+equal S$密码总位数 1
+#ACT
+MOV S$密码位数一 0
+MOV S$密码一坐标 
+MOV S$密码总位数 0
+GOTO @输入密保A
+break
+
+[@密码数字零]
+#IF
+large S$密码总位数 7
+#ACT
+MESSAGEBOX \\密码最多只能设置8位数！
+break
+#IF
+small S$密码位数一 1
+#ACT
+MOV S$密码位数一 10
+MOV S$密码一坐标 <Img:178:12:6:-18>
+MOV S$密码总位数 1
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数二 1
+#ACT
+MOV S$密码位数二 10
+MOV S$密码二坐标 <Img:178:12:-4:-18>
+MOV S$密码总位数 2
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数三 1
+#ACT
+MOV S$密码位数三 10
+MOV S$密码三坐标 <Img:178:12:-14:-18>
+MOV S$密码总位数 3
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数四 1
+#ACT
+MOV S$密码位数四 10
+MOV S$密码四坐标 <Img:178:12:-24:-18>
+MOV S$密码总位数 4
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数五 1
+#ACT
+MOV S$密码位数五 10
+MOV S$密码五坐标 <Img:178:12:-34:-18>
+MOV S$密码总位数 5
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数六 1
+#ACT
+MOV S$密码位数六 10
+MOV S$密码六坐标 <Img:178:12:-44:-18>
+MOV S$密码总位数 6
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数七 1
+#ACT
+MOV S$密码位数七 10
+MOV S$密码七坐标 <Img:178:12:-54:-18>
+MOV S$密码总位数 7
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数八 1
+#ACT
+MOV S$密码位数八 10
+MOV S$密码八坐标 <Img:178:12:-64:-18>
+MOV S$密码总位数 8
+GOTO @输入密保A
+break
+
+[@密码数字九]
+#IF
+large S$密码总位数 7
+#ACT
+MESSAGEBOX \\密码最多只能设置8位数！
+break
+
+#IF
+small S$密码位数一 1
+#ACT
+MOV S$密码位数一 9
+MOV S$密码一坐标 <Img:177:12:6:-18>
+MOV S$密码总位数 1
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数二 1
+#ACT
+MOV S$密码位数二 9
+MOV S$密码二坐标 <Img:177:12:-4:-18>
+MOV S$密码总位数 2
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数三 1
+#ACT
+MOV S$密码位数三 9
+MOV S$密码三坐标 <Img:177:12:-14:-18>
+MOV S$密码总位数 3
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数四 1
+#ACT
+MOV S$密码位数四 9
+MOV S$密码四坐标 <Img:177:12:-24:-18>
+MOV S$密码总位数 4
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数五 1
+#ACT
+MOV S$密码位数五 9
+MOV S$密码五坐标 <Img:177:12:-34:-18>
+MOV S$密码总位数 5
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数六 1
+#ACT
+MOV S$密码位数六 9
+MOV S$密码六坐标 <Img:177:12:-44:-18>
+MOV S$密码总位数 6
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数七 1
+#ACT
+MOV S$密码位数七 9
+MOV S$密码七坐标 <Img:177:12:-54:-18>
+MOV S$密码总位数 7
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数八 1
+#ACT
+MOV S$密码位数八 9
+MOV S$密码八坐标 <Img:177:12:-64:-18>
+MOV S$密码总位数 8
+GOTO @输入密保A
+break
+
+[@密码数字八]
+#IF
+large S$密码总位数 7
+#ACT
+MESSAGEBOX \\密码最多只能设置8位数！
+break
+
+#IF
+small S$密码位数一 1
+#ACT
+MOV S$密码位数一 8
+MOV S$密码一坐标 <Img:176:12:6:-18>
+MOV S$密码总位数 1
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数二 1
+#ACT
+MOV S$密码位数二 8
+MOV S$密码二坐标 <Img:176:12:-4:-18>
+MOV S$密码总位数 2
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数三 1
+#ACT
+MOV S$密码位数三 8
+MOV S$密码三坐标 <Img:176:12:-14:-18>
+MOV S$密码总位数 3
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数四 1
+#ACT
+MOV S$密码位数四 8
+MOV S$密码四坐标 <Img:176:12:-24:-18>
+MOV S$密码总位数 4
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数五 1
+#ACT
+MOV S$密码位数五 8
+MOV S$密码五坐标 <Img:176:12:-34:-18>
+MOV S$密码总位数 5
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数六 1
+#ACT
+MOV S$密码位数六 8
+MOV S$密码六坐标 <Img:176:12:-44:-18>
+MOV S$密码总位数 6
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数七 1
+#ACT
+MOV S$密码位数七 8
+MOV S$密码七坐标 <Img:176:12:-54:-18>
+MOV S$密码总位数 7
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数八 1
+#ACT
+MOV S$密码位数八 8
+MOV S$密码八坐标 <Img:176:12:-64:-18>
+MOV S$密码总位数 8
+GOTO @输入密保A
+break
+
+[@密码数字七]
+#IF
+large S$密码总位数 7
+#ACT
+MESSAGEBOX \\密码最多只能设置8位数！
+break
+
+#IF
+small S$密码位数一 1
+#ACT
+MOV S$密码位数一 7
+MOV S$密码一坐标 <Img:175:12:6:-18>
+MOV S$密码总位数 1
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数二 1
+#ACT
+MOV S$密码位数二 7
+MOV S$密码二坐标 <Img:175:12:-4:-18>
+MOV S$密码总位数 2
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数三 1
+#ACT
+MOV S$密码位数三 7
+MOV S$密码三坐标 <Img:175:12:-14:-18>
+MOV S$密码总位数 3
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数四 1
+#ACT
+MOV S$密码位数四 7
+MOV S$密码四坐标 <Img:175:12:-24:-18>
+MOV S$密码总位数 4
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数五 1
+#ACT
+MOV S$密码位数五 7
+MOV S$密码五坐标 <Img:175:12:-34:-18>
+MOV S$密码总位数 5
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数六 1
+#ACT
+MOV S$密码位数六 7
+MOV S$密码六坐标 <Img:175:12:-44:-18>
+MOV S$密码总位数 6
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数七 1
+#ACT
+MOV S$密码位数七 7
+MOV S$密码七坐标 <Img:175:12:-54:-18>
+MOV S$密码总位数 7
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数八 1
+#ACT
+MOV S$密码位数八 7
+MOV S$密码八坐标 <Img:175:12:-64:-18>
+MOV S$密码总位数 8
+GOTO @输入密保A
+break
+
+[@密码数字六]
+#IF
+large S$密码总位数 7
+#ACT
+MESSAGEBOX \\密码最多只能设置8位数！
+break
+
+#IF
+small S$密码位数一 1
+#ACT
+MOV S$密码位数一 6
+MOV S$密码一坐标 <Img:174:12:6:-18>
+MOV S$密码总位数 1
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数二 1
+#ACT
+MOV S$密码位数二 6
+MOV S$密码二坐标 <Img:174:12:-4:-18>
+MOV S$密码总位数 2
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数三 1
+#ACT
+MOV S$密码位数三 6
+MOV S$密码三坐标 <Img:174:12:-14:-18>
+MOV S$密码总位数 3
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数四 1
+#ACT
+MOV S$密码位数四 6
+MOV S$密码四坐标 <Img:174:12:-24:-18>
+MOV S$密码总位数 4
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数五 1
+#ACT
+MOV S$密码位数五 6
+MOV S$密码五坐标 <Img:174:12:-34:-18>
+MOV S$密码总位数 5
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数六 1
+#ACT
+MOV S$密码位数六 6
+MOV S$密码六坐标 <Img:174:12:-44:-18>
+MOV S$密码总位数 6
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数七 1
+#ACT
+MOV S$密码位数七 6
+MOV S$密码七坐标 <Img:174:12:-54:-18>
+MOV S$密码总位数 7
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数八 1
+#ACT
+MOV S$密码位数八 6
+MOV S$密码八坐标 <Img:174:12:-64:-18>
+MOV S$密码总位数 8
+GOTO @输入密保A
+break
+
+[@密码数字五]
+#IF
+large S$密码总位数 7
+#ACT
+MESSAGEBOX \\密码最多只能设置8位数！
+break
+
+#IF
+small S$密码位数一 1
+#ACT
+MOV S$密码位数一 5
+MOV S$密码一坐标 <Img:173:12:6:-18>
+MOV S$密码总位数 1
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数二 1
+#ACT
+MOV S$密码位数二 5
+MOV S$密码二坐标 <Img:173:12:-4:-18>
+MOV S$密码总位数 2
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数三 1
+#ACT
+MOV S$密码位数三 5
+MOV S$密码三坐标 <Img:173:12:-14:-18>
+MOV S$密码总位数 3
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数四 1
+#ACT
+MOV S$密码位数四 5
+MOV S$密码四坐标 <Img:173:12:-24:-18>
+MOV S$密码总位数 4
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数五 1
+#ACT
+MOV S$密码位数五 5
+MOV S$密码五坐标 <Img:173:12:-34:-18>
+MOV S$密码总位数 5
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数六 1
+#ACT
+MOV S$密码位数六 5
+MOV S$密码六坐标 <Img:173:12:-44:-18>
+MOV S$密码总位数 6
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数七 1
+#ACT
+MOV S$密码位数七 5
+MOV S$密码七坐标 <Img:173:12:-54:-18>
+MOV S$密码总位数 7
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数八 1
+#ACT
+MOV S$密码位数八 5
+MOV S$密码八坐标 <Img:173:12:-64:-18>
+MOV S$密码总位数 8
+GOTO @输入密保A
+break
+
+[@密码数字四]
+#IF
+large S$密码总位数 7
+#ACT
+MESSAGEBOX \\密码最多只能设置8位数！
+break
+
+#IF
+small S$密码位数一 1
+#ACT
+MOV S$密码位数一 4
+MOV S$密码一坐标 <Img:172:12:6:-18>
+MOV S$密码总位数 1
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数二 1
+#ACT
+MOV S$密码位数二 4
+MOV S$密码二坐标 <Img:172:12:-4:-18>
+MOV S$密码总位数 2
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数三 1
+#ACT
+MOV S$密码位数三 4
+MOV S$密码三坐标 <Img:172:12:-14:-18>
+MOV S$密码总位数 3
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数四 1
+#ACT
+MOV S$密码位数四 4
+MOV S$密码四坐标 <Img:172:12:-24:-18>
+MOV S$密码总位数 4
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数五 1
+#ACT
+MOV S$密码位数五 4
+MOV S$密码五坐标 <Img:172:12:-34:-18>
+MOV S$密码总位数 5
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数六 1
+#ACT
+MOV S$密码位数六 4
+MOV S$密码六坐标 <Img:172:12:-44:-18>
+MOV S$密码总位数 6
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数七 1
+#ACT
+MOV S$密码位数七 4
+MOV S$密码七坐标 <Img:172:12:-54:-18>
+MOV S$密码总位数 7
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数八 1
+#ACT
+MOV S$密码位数八 4
+MOV S$密码八坐标 <Img:172:12:-64:-18>
+MOV S$密码总位数 8
+GOTO @输入密保A
+break
+
+[@密码数字三]
+#IF
+large S$密码总位数 7
+#ACT
+MESSAGEBOX \\密码最多只能设置8位数！
+break
+
+#IF
+small S$密码位数一 1
+#ACT
+MOV S$密码位数一 3
+MOV S$密码一坐标 <Img:171:12:6:-18>
+MOV S$密码总位数 1
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数二 1
+#ACT
+MOV S$密码位数二 3
+MOV S$密码二坐标 <Img:171:12:-4:-18>
+MOV S$密码总位数 2
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数三 1
+#ACT
+MOV S$密码位数三 3
+MOV S$密码三坐标 <Img:171:12:-14:-18>
+MOV S$密码总位数 3
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数四 1
+#ACT
+MOV S$密码位数四 3
+MOV S$密码四坐标 <Img:171:12:-24:-18>
+MOV S$密码总位数 4
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数五 1
+#ACT
+MOV S$密码位数五 2
+MOV S$密码五坐标 <Img:171:12:-34:-18>
+MOV S$密码总位数 5
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数六 1
+#ACT
+MOV S$密码位数六 3
+MOV S$密码六坐标 <Img:171:12:-44:-18>
+MOV S$密码总位数 6
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数七 1
+#ACT
+MOV S$密码位数七 3
+MOV S$密码七坐标 <Img:171:12:-54:-18>
+MOV S$密码总位数 7
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数八 1
+#ACT
+MOV S$密码位数八 3
+MOV S$密码八坐标 <Img:171:12:-64:-18>
+MOV S$密码总位数 8
+GOTO @输入密保A
+break
+
+[@密码数字二]
+#IF
+large S$密码总位数 7
+#ACT
+MESSAGEBOX \\密码最多只能设置8位数！
+break
+
+#IF
+small S$密码位数一 1
+#ACT
+MOV S$密码位数一 2
+MOV S$密码一坐标 <Img:170:12:6:-18>
+MOV S$密码总位数 1
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数二 1
+#ACT
+MOV S$密码位数二 2
+MOV S$密码二坐标 <Img:170:12:-4:-18>
+MOV S$密码总位数 2
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数三 1
+#ACT
+MOV S$密码位数三 2
+MOV S$密码三坐标 <Img:170:12:-14:-18>
+MOV S$密码总位数 3
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数四 1
+#ACT
+MOV S$密码位数四 2
+MOV S$密码四坐标 <Img:170:12:-24:-18>
+MOV S$密码总位数 4
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数五 1
+#ACT
+MOV S$密码位数五 2
+MOV S$密码五坐标 <Img:170:12:-34:-18>
+MOV S$密码总位数 5
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数六 1
+#ACT
+MOV S$密码位数六 2
+MOV S$密码六坐标 <Img:170:12:-44:-18>
+MOV S$密码总位数 6
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数七 1
+#ACT
+MOV S$密码位数七 2
+MOV S$密码七坐标 <Img:170:12:-54:-18>
+MOV S$密码总位数 7
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数八 1
+#ACT
+MOV S$密码位数八 2
+MOV S$密码八坐标 <Img:170:12:-64:-18>
+MOV S$密码总位数 8
+GOTO @输入密保A
+break
+
+[@密码数字一]
+
+#IF
+large S$密码总位数 7
+#ACT
+MESSAGEBOX \\密码最多只能设置8位数！
+break
+
+#IF
+small S$密码位数一 1
+#ACT
+MOV S$密码位数一 1
+MOV S$密码一坐标 <Img:169:12:6:-18>
+MOV S$密码总位数 1
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数二 1
+#ACT
+MOV S$密码位数二 1
+MOV S$密码二坐标 <Img:169:12:-4:-18>
+MOV S$密码总位数 2
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数三 1
+#ACT
+MOV S$密码位数三 1
+MOV S$密码三坐标 <Img:169:12:-14:-18>
+MOV S$密码总位数 3
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数四 1
+#ACT
+MOV S$密码位数四 1
+MOV S$密码四坐标 <Img:169:12:-24:-18>
+MOV S$密码总位数 4
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数五 1
+#ACT
+MOV S$密码位数五 1
+MOV S$密码五坐标 <Img:169:12:-34:-18>
+MOV S$密码总位数 5
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数六 1
+#ACT
+MOV S$密码位数六 1
+MOV S$密码六坐标 <Img:169:12:-44:-18>
+MOV S$密码总位数 6
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数七 1
+#ACT
+MOV S$密码位数七 1
+MOV S$密码七坐标 <Img:169:12:-54:-18>
+MOV S$密码总位数 7
+GOTO @输入密保A
+break
+
+#IF
+small S$密码位数八 1
+#ACT
+MOV S$密码位数八 1
+MOV S$密码八坐标 <Img:169:12:-64:-18>
+MOV S$密码总位数 8
+GOTO @输入密保A
+break
+
+
+[@密保验证下线]
+#IF
+#ACT
+GuildNoticeMsg 254 200 30秒时间到，你没有输入正确密保，踢你下线 SELF
+GuildNoticeMsg 254 200 30秒时间到，你没有输入正确密保，踢你下线 SELF
+GuildNoticeMsg 254 200 30秒时间到，你没有输入正确密保，踢你下线 SELF
+[@下线]
+#IF
+#act
+Kick
+}

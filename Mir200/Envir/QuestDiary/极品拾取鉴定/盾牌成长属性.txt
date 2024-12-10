@@ -1,0 +1,872 @@
+[@盾牌成长属性]
+{
+
+
+
+#IF
+#ACT
+MOV N$自身属性 0
+MOV N$盾牌等级 1
+MOV N$盾牌属性 1
+MOV N$盾牌经验 1
+MOV N$下级盾牌经验 1
+
+
+#IF
+checkjob warrior
+;--------战士----------
+#ACT
+MOV N$自身属性 <$MAXDC>
+MOV N$血量位置 0
+MOV S$本命职业 战士
+MOV N$本命属性位置1 3
+MOV N$本命属性位置 2
+MOV N$职业切割 2
+MOV N$盾牌经验值 10
+MOV N$本命属性颜色 249
+MOV N$本命属性A 15
+MOV N$本命属性B 23
+MOV N$职业血量 1
+
+#IF
+checkjob wizard
+;--------法师----------
+#ACT
+MOV N$自身属性 <$MAXDC>
+MOV N$血量位置 0
+MOV S$本命职业 法师
+MOV N$本命属性位置1 4
+MOV N$本命属性位置 3
+MOV N$职业切割 2
+MOV N$盾牌经验值 10
+MOV N$本命属性颜色 251
+MOV N$本命属性A 15
+MOV N$本命属性B 23
+MOV N$职业血量 1
+
+#IF
+checkjob taoist
+;--------道士----------
+#ACT
+MOV N$自身属性 <$MAXDC>
+MOV N$血量位置 0
+MOV S$本命职业 道士
+MOV N$本命属性位置1 5
+MOV N$本命属性位置 4
+MOV N$职业切割 2
+MOV N$盾牌经验值 10
+MOV N$本命属性颜色 70
+MOV N$本命属性A 15
+MOV N$本命属性B 23
+MOV N$职业血量 1
+
+
+
+
+
+
+#IF
+checkitemw 包工盾牌 1
+#ACT
+MOV S$当前盾牌名字 包工盾牌
+MOV N$设置盾牌等级 5
+MOV N$设置盾牌U192 1
+MOV N$盾牌经验 200
+MOV N$盾牌属性 1
+MOV S$当前盾牌装备 包工盾牌
+MOV S$下级盾牌装备 短工盾牌
+GOTO @给盾牌属性
+MOV N$盾牌颜色 7
+MOV N$盾牌经验倍数 1
+BREAK
+
+
+#IF
+checkitemw 短工盾牌 1
+#ACT
+MOV S$当前盾牌名字 短工盾牌
+MOV N$设置盾牌等级 5
+MOV N$设置盾牌U192 7
+MOV N$盾牌经验 250
+MOV N$盾牌属性 2
+MOV S$当前盾牌装备 短工盾牌
+MOV S$下级盾牌装备 长工盾牌
+GOTO @给盾牌属性
+MOV N$盾牌颜色 2
+MOV N$盾牌经验倍数 5
+BREAK
+
+
+#IF
+checkitemw 长工盾牌 1
+#ACT
+MOV S$当前盾牌名字 长工盾牌
+MOV N$设置盾牌等级 5
+MOV N$设置盾牌U192 12
+MOV N$盾牌经验 300
+MOV N$盾牌属性 3
+MOV S$当前盾牌装备 长工盾牌
+MOV S$下级盾牌装备 中农盾牌
+GOTO @给盾牌属性
+MOV N$盾牌颜色 2
+MOV N$盾牌经验倍数 10
+BREAK
+
+#IF
+checkitemw 中农盾牌 1
+#ACT
+MOV S$当前盾牌名字 中农盾牌
+MOV N$设置盾牌等级 5
+MOV N$设置盾牌U192 17
+MOV N$盾牌经验 350
+MOV N$盾牌属性 4
+MOV S$当前盾牌装备 中农盾牌
+MOV S$下级盾牌装备 富农盾牌
+GOTO @给盾牌属性
+MOV N$盾牌颜色 3
+MOV N$盾牌经验倍数 15
+BREAK
+
+#IF
+checkitemw 富农盾牌 1
+#ACT
+MOV S$当前盾牌名字 富农盾牌
+MOV N$设置盾牌等级 5
+MOV N$设置盾牌U192 22
+MOV N$盾牌经验 400
+MOV N$盾牌属性 5
+MOV S$当前盾牌装备 富农盾牌
+MOV S$下级盾牌装备 掌柜盾牌
+GOTO @给盾牌属性
+MOV N$盾牌颜色 3
+MOV N$盾牌经验倍数 20
+BREAK
+
+
+
+#IF
+checkitemw 掌柜盾牌 1
+#ACT
+MOV S$当前盾牌名字 掌柜盾牌
+MOV N$设置盾牌等级 5
+MOV N$设置盾牌U192 27
+MOV N$盾牌经验 500
+MOV N$盾牌属性 6
+MOV S$当前盾牌装备 掌柜盾牌
+MOV S$下级盾牌装备 商人盾牌
+GOTO @给盾牌属性
+MOV N$盾牌颜色 6
+MOV N$盾牌经验倍数 30
+BREAK
+
+
+
+#IF
+checkitemw 商人盾牌 1
+#ACT
+MOV S$当前盾牌名字 商人盾牌
+MOV N$设置盾牌等级 5
+MOV N$设置盾牌U192 32
+MOV N$盾牌经验 700
+MOV N$盾牌属性 7
+MOV S$当前盾牌装备 商人盾牌
+MOV S$下级盾牌装备 财主盾牌
+GOTO @给盾牌属性
+MOV N$盾牌颜色 6
+MOV N$盾牌经验倍数 40
+BREAK
+
+
+#IF
+checkitemw 财主盾牌 1
+#ACT
+MOV S$当前盾牌名字 财主盾牌
+MOV N$设置盾牌等级 5
+MOV N$设置盾牌U192 37
+MOV N$盾牌经验 1000
+MOV N$盾牌属性 8
+MOV S$当前盾牌装备 财主盾牌
+MOV S$下级盾牌装备 县尉盾牌
+GOTO @给盾牌属性
+MOV N$盾牌颜色 161
+MOV N$盾牌经验倍数 45
+BREAK
+
+#IF
+checkitemw 县尉盾牌 1
+#ACT
+MOV S$当前盾牌名字 县尉盾牌
+MOV N$设置盾牌等级 5
+MOV N$设置盾牌U192 42
+MOV N$盾牌经验 2000
+MOV N$盾牌属性 9
+MOV S$当前盾牌装备 县尉盾牌
+MOV S$下级盾牌装备 县丞盾牌
+GOTO @给盾牌属性
+MOV N$盾牌颜色 161
+MOV N$盾牌经验倍数 50
+BREAK
+
+
+#IF
+checkitemw 县丞盾牌 1
+#ACT
+MOV S$当前盾牌名字 县丞盾牌
+MOV N$设置盾牌等级 5
+MOV N$设置盾牌U192 47
+MOV N$盾牌经验 3000
+MOV N$盾牌属性 10
+MOV S$当前盾牌装备 县丞盾牌
+MOV S$下级盾牌装备 县令盾牌
+GOTO @给盾牌属性
+MOV N$盾牌颜色 250
+MOV N$盾牌经验倍数 60
+BREAK
+
+
+#IF
+checkitemw 县令盾牌 1
+#ACT
+MOV S$当前盾牌名字 县令盾牌
+MOV N$设置盾牌等级 5
+MOV N$设置盾牌U192 52
+MOV N$盾牌经验 10000
+MOV N$盾牌属性 11
+MOV S$当前盾牌装备 县令盾牌
+MOV S$下级盾牌装备 通判盾牌
+GOTO @给盾牌属性
+MOV N$盾牌颜色 250
+MOV N$盾牌经验倍数 70
+BREAK
+
+
+#IF
+checkitemw 通判盾牌 1
+#ACT
+MOV S$当前盾牌名字 通判盾牌
+MOV N$设置盾牌等级 5
+MOV N$设置盾牌U192 57
+MOV N$盾牌经验 11000
+MOV N$盾牌属性 12
+MOV S$当前盾牌装备 通判盾牌
+MOV S$下级盾牌装备 主事盾牌
+GOTO @给盾牌属性
+MOV N$盾牌颜色 146
+MOV N$盾牌经验倍数 80
+BREAK
+
+#IF
+checkitemw 主事盾牌 1
+#ACT
+MOV S$当前盾牌名字 主事盾牌
+MOV N$设置盾牌等级 5
+MOV N$设置盾牌U192 62
+MOV N$盾牌经验 12000
+MOV N$盾牌属性 13
+MOV S$当前盾牌装备 主事盾牌
+MOV S$下级盾牌装备 知府盾牌
+GOTO @给盾牌属性
+MOV N$盾牌颜色 146
+MOV N$盾牌经验倍数 100
+BREAK
+
+
+
+#IF
+checkitemw 知府盾牌 1
+#ACT
+MOV S$当前盾牌名字 知府盾牌
+MOV N$设置盾牌等级 5
+MOV N$设置盾牌U192 67
+MOV N$盾牌经验 12500
+MOV N$盾牌属性 13
+MOV S$当前盾牌装备 知府盾牌
+MOV S$下级盾牌装备 员外盾牌
+GOTO @给盾牌属性
+MOV N$盾牌颜色 154
+MOV N$盾牌经验倍数 120
+BREAK
+
+
+
+
+
+
+#IF
+checkitemw 员外盾牌 1
+#ACT
+MOV S$当前盾牌名字 员外盾牌
+MOV N$设置盾牌等级 5
+MOV N$设置盾牌U192 72
+MOV N$盾牌经验 13000
+MOV N$盾牌属性 13
+MOV S$当前盾牌装备 员外盾牌
+MOV S$下级盾牌装备 郎中盾牌
+GOTO @给盾牌属性
+MOV N$盾牌颜色 154
+MOV N$盾牌经验倍数 140
+BREAK
+
+
+
+
+
+#IF
+checkitemw 郎中盾牌 1
+#ACT
+MOV S$当前盾牌名字 郎中盾牌
+MOV N$设置盾牌等级 5
+MOV N$设置盾牌U192 77
+MOV N$盾牌经验 13500
+MOV N$盾牌属性 13
+MOV S$当前盾牌装备 郎中盾牌
+MOV S$下级盾牌装备 侍郎盾牌
+GOTO @给盾牌属性
+MOV N$盾牌颜色 242
+MOV N$盾牌经验倍数 160
+BREAK
+
+
+
+
+
+#IF
+checkitemw 侍郎盾牌 1
+#ACT
+MOV S$当前盾牌名字 侍郎盾牌
+MOV N$设置盾牌等级 5
+MOV N$设置盾牌U192 82
+MOV N$盾牌经验 14000
+MOV N$盾牌属性 13
+MOV S$当前盾牌装备 侍郎盾牌
+MOV S$下级盾牌装备 巡抚盾牌
+GOTO @给盾牌属性
+MOV N$盾牌颜色 242
+MOV N$盾牌经验倍数 180
+BREAK
+
+
+
+
+
+#IF
+checkitemw 巡抚盾牌 1
+#ACT
+MOV S$当前盾牌名字 巡抚盾牌
+MOV N$设置盾牌等级 5
+MOV N$设置盾牌U192 87
+MOV N$盾牌经验 14500
+MOV N$盾牌属性 13
+MOV S$当前盾牌装备 巡抚盾牌
+MOV S$下级盾牌装备 总督盾牌
+GOTO @给盾牌属性
+MOV N$盾牌颜色 241
+MOV N$盾牌经验倍数 200
+BREAK
+
+
+#IF
+checkitemw 总督盾牌 1
+#ACT
+MOV S$当前盾牌名字 总督盾牌
+MOV N$设置盾牌等级 5
+MOV N$设置盾牌U192 92
+MOV N$盾牌经验 15000
+MOV N$盾牌属性 13
+MOV S$当前盾牌装备 总督盾牌
+MOV S$下级盾牌装备 尚书盾牌
+GOTO @给盾牌属性
+MOV N$盾牌颜色 241
+MOV N$盾牌经验倍数 220
+BREAK
+
+
+#IF
+checkitemw 尚书盾牌 1
+#ACT
+MOV S$当前盾牌名字 尚书盾牌
+MOV N$设置盾牌等级 5
+MOV N$设置盾牌U192 97
+MOV N$盾牌经验 20000
+MOV N$盾牌属性 13
+MOV S$当前盾牌装备 尚书盾牌
+MOV S$下级盾牌装备 学士盾牌
+GOTO @给盾牌属性
+MOV N$盾牌颜色 251
+MOV N$盾牌经验倍数 240
+BREAK
+
+
+
+
+
+#IF
+checkitemw 学士盾牌 1
+#ACT
+MOV S$当前盾牌名字 学士盾牌
+MOV N$设置盾牌等级 5
+MOV N$设置盾牌U192 102
+MOV N$盾牌经验 30000
+MOV N$盾牌属性 13
+MOV S$当前盾牌装备 学士盾牌
+MOV S$下级盾牌装备 太保盾牌
+GOTO @给盾牌属性
+MOV N$盾牌颜色 251
+MOV N$盾牌经验倍数 260
+BREAK
+
+
+
+
+
+#IF
+checkitemw 太保盾牌 1
+#ACT
+MOV S$当前盾牌名字 太保盾牌
+MOV N$设置盾牌等级 5
+MOV N$设置盾牌U192 107
+MOV N$盾牌经验 30000
+MOV N$盾牌属性 13
+MOV S$当前盾牌装备 太保盾牌
+MOV S$下级盾牌装备 太傅盾牌
+GOTO @给盾牌属性
+MOV N$盾牌颜色 243
+MOV N$盾牌经验倍数 280
+BREAK
+
+
+
+
+
+#IF
+checkitemw 太傅盾牌 1
+#ACT
+MOV S$当前盾牌名字 太傅盾牌
+MOV N$设置盾牌等级 5
+MOV N$设置盾牌U192 112
+MOV N$盾牌经验 30000
+MOV N$盾牌属性 13
+MOV S$当前盾牌装备 太傅盾牌
+MOV S$下级盾牌装备 太师盾牌
+GOTO @给盾牌属性
+MOV N$盾牌颜色 243
+MOV N$盾牌经验倍数 200
+BREAK
+
+
+#IF
+checkitemw 太师盾牌 1
+#ACT
+MOV S$当前盾牌名字 太师盾牌
+MOV N$设置盾牌等级 5
+MOV N$设置盾牌U192 117
+MOV N$盾牌经验 30000
+MOV N$盾牌属性 13
+MOV S$当前盾牌装备 太师盾牌
+MOV S$下级盾牌装备 三等伯盾
+GOTO @给盾牌属性
+MOV N$盾牌颜色 70
+MOV N$盾牌经验倍数 210
+BREAK
+
+
+#IF
+checkitemw 三等伯盾 1
+#ACT
+MOV S$当前盾牌名字 三等伯盾
+MOV N$设置盾牌等级 5
+MOV N$设置盾牌U192 122
+MOV N$盾牌经验 30000
+MOV N$盾牌属性 13
+MOV S$当前盾牌装备 三等伯盾
+MOV S$下级盾牌装备 二等伯盾
+GOTO @给盾牌属性
+MOV N$盾牌颜色 70
+MOV N$盾牌经验倍数 230
+BREAK
+
+#IF
+checkitemw 二等伯盾 1
+#ACT
+MOV S$当前盾牌名字 二等伯盾
+MOV N$设置盾牌等级 5
+MOV N$设置盾牌U192 127
+MOV N$盾牌经验 30000
+MOV N$盾牌属性 13
+MOV S$当前盾牌装备 二等伯盾
+MOV S$下级盾牌装备 一等伯盾
+GOTO @给盾牌属性
+MOV N$盾牌颜色 253
+MOV N$盾牌经验倍数 250
+BREAK
+
+#IF
+checkitemw 一等伯盾 1
+#ACT
+MOV S$当前盾牌名字 一等伯盾
+MOV N$设置盾牌等级 5
+MOV N$设置盾牌U192 132
+MOV N$盾牌经验 30000
+MOV N$盾牌属性 13
+MOV S$当前盾牌装备 一等伯盾
+MOV S$下级盾牌装备 三等侯盾
+GOTO @给盾牌属性
+MOV N$盾牌颜色 253
+MOV N$盾牌经验倍数 260
+BREAK
+#IF
+checkitemw 三等侯盾 1
+#ACT
+MOV S$当前盾牌名字 三等侯盾
+MOV N$设置盾牌等级 5
+MOV N$设置盾牌U192 137
+MOV N$盾牌经验 30000
+MOV N$盾牌属性 13
+MOV S$当前盾牌装备 三等侯盾
+MOV S$下级盾牌装备 二等侯盾
+GOTO @给盾牌属性
+MOV N$盾牌颜色 249
+MOV N$盾牌经验倍数 270
+BREAK
+
+#IF
+checkitemw 二等侯盾 1
+#ACT
+MOV S$当前盾牌名字 二等侯盾
+MOV N$设置盾牌等级 5
+MOV N$设置盾牌U192 142
+MOV N$盾牌经验 30000
+MOV N$盾牌属性 13
+MOV S$当前盾牌装备 二等侯盾
+MOV S$下级盾牌装备 一等侯盾
+GOTO @给盾牌属性
+MOV N$盾牌颜色 249
+MOV N$盾牌经验倍数 280
+BREAK
+
+#IF
+checkitemw 一等侯盾 1
+#ACT
+MOV S$当前盾牌名字 一等侯盾
+MOV N$设置盾牌等级 5
+MOV N$设置盾牌U192 147
+MOV N$盾牌经验 30000
+MOV N$盾牌属性 13
+MOV S$当前盾牌装备 一等侯盾
+MOV S$下级盾牌装备 辅国公盾
+GOTO @给盾牌属性
+MOV N$盾牌颜色 254
+MOV N$盾牌经验倍数 290
+BREAK
+
+
+#IF
+checkitemw 辅国公盾 1
+#ACT
+MOV S$当前盾牌名字 辅国公盾
+MOV N$设置盾牌等级 5
+MOV N$设置盾牌U192 152
+MOV N$盾牌经验 30000
+MOV N$盾牌属性 13
+MOV S$当前盾牌装备 辅国公盾
+MOV S$下级盾牌装备 郡王盾牌
+GOTO @给盾牌属性
+MOV N$盾牌颜色 254
+MOV N$盾牌经验倍数 290
+BREAK
+
+
+#IF
+checkitemw 郡王盾牌 1
+#ACT
+MOV S$当前盾牌名字 郡王盾牌
+MOV N$设置盾牌等级 5
+MOV N$设置盾牌U192 157
+MOV N$盾牌经验 30000
+MOV N$盾牌属性 13
+MOV S$当前盾牌装备 郡王盾牌
+MOV S$下级盾牌装备 亲王盾牌
+GOTO @给盾牌属性
+MOV N$盾牌颜色 254
+MOV N$盾牌经验倍数 290
+BREAK
+
+
+#IF
+checkitemw 亲王盾牌 1
+#ACT
+MOV S$当前盾牌名字 亲王盾牌
+MOV N$设置盾牌等级 5
+MOV N$设置盾牌U192 162
+MOV N$盾牌经验 30000
+MOV N$盾牌属性 13
+MOV S$当前盾牌装备 亲王盾牌
+MOV S$下级盾牌装备 至尊盾牌
+GOTO @给盾牌属性
+MOV N$盾牌颜色 254
+MOV N$盾牌经验倍数 290
+BREAK
+
+
+#IF
+checkitemw 至尊盾牌 1
+#ACT
+MOV S$当前盾牌名字 至尊盾牌
+MOV N$设置盾牌等级 5
+MOV N$设置盾牌U192 167
+MOV N$盾牌经验 30000
+MOV N$盾牌属性 13
+MOV S$当前盾牌装备 至尊盾牌
+MOV S$下级盾牌装备 一刀盾牌
+GOTO @给盾牌属性
+MOV N$盾牌颜色 254
+MOV N$盾牌经验倍数 290
+BREAK
+
+
+#IF
+checkitemw 一刀盾牌 1
+#ACT
+MOV S$当前盾牌名字 一刀盾牌
+MOV N$设置盾牌等级 5
+MOV N$设置盾牌U192 172
+MOV N$盾牌经验 30000
+MOV N$盾牌属性 13
+MOV S$当前盾牌装备 一刀盾牌
+MOV S$下级盾牌装备 烈火盾牌
+GOTO @给盾牌属性
+MOV N$盾牌颜色 254
+MOV N$盾牌经验倍数 290
+BREAK
+
+
+#IF
+checkitemw 烈火盾牌 1
+#ACT
+MOV S$当前盾牌名字 烈火盾牌
+MOV N$设置盾牌等级 5
+MOV N$设置盾牌U192 177
+MOV N$盾牌经验 40000
+MOV N$盾牌属性 13
+MOV S$当前盾牌装备 烈火盾牌
+MOV S$下级盾牌装备 蓝月复古盾牌
+GOTO @给盾牌属性
+MOV N$盾牌颜色 254
+MOV N$盾牌经验倍数 290
+BREAK
+
+
+#IF
+checkitemw 蓝月复古盾牌 1
+#ACT
+MOV S$当前盾牌名字 蓝月复古
+MOV N$设置盾牌等级 5
+MOV N$设置盾牌U192 182
+MOV N$盾牌经验 50000
+MOV N$盾牌属性 14
+MOV S$当前盾牌装备 蓝月复古盾牌
+MOV S$下级盾牌装备 蓝月复古盾牌
+GOTO @给盾牌属性
+MOV N$盾牌颜色 254
+MOV N$盾牌经验倍数 300
+BREAK
+
+
+
+[@给盾牌属性]
+
+
+
+#IF
+#ACT
+MOV T8 <$Str(S$当前盾牌名字)>
+MOV N$盾牌等级 <$STR(U193)>
+MOV N$当前盾牌经验 <$str(U193)>
+INC N$当前盾牌经验 1
+MUL N$当前盾牌经验 <$Str(N$盾牌经验)>
+MOV N$下级盾牌经验 <$str(U193)>
+INC N$下级盾牌经验 2
+MUL N$下级盾牌经验 <$Str(N$盾牌经验)>
+MUL N$自身属性 2
+MOV N$盾牌伤害吸收 <$STR(U192)>
+MUL N$盾牌伤害吸收 350
+MOV N$盾牌每秒恢复 <$STR(U192)>
+MUL N$盾牌每秒恢复 3
+MOV N$盾牌每次吸收 20
+
+
+#IF
+LARGE U192  80
+#ACT
+MOV N$盾牌每次吸收 <$STR(U192)>
+DIV N$盾牌每次吸收 2
+
+
+#IF
+LARGE N$当前盾牌经验  10000000
+#ACT
+MOV N$当前盾牌经验  10000000
+
+#IF
+LARGE N$下级盾牌经验 10000000
+#ACT
+MOV N$下级盾牌经验 10000000
+
+
+#IF
+LARGE N$设置盾牌等级 100
+#ACT
+MOV N$设置盾牌等级 100
+
+
+
+
+
+#IF
+LARGE U193 11
+#ACT
+MOV U193 10
+
+
+
+
+#IF
+LARGE U192 371
+#ACT
+MOV U192 370
+
+
+
+#IF
+#ACT
+MOV N$盾牌百分比 1
+
+
+
+#IF
+not CHECKCUSTOMITEMPROGRESSBAR 16 0
+#ACT
+MOV U193 1
+MOV U192 <$STR(N$设置盾牌U192)>
+CHANGECustomItemProgressbar 16 0 0 1
+CHANGECustomItemProgressbar 16 0 1 盾牌等级
+CHANGECustomItemProgressbar 16 0 2 249
+CHANGECustomItemProgressbar 16 0 3 3
+CHANGECustomItemProgressbar 16 0 4 2
+CHANGECUSTOMITEMPROGRESSBARVALUE 16 0 1 = <$STR(N$设置盾牌等级)>
+CHANGECustomItemProgressbar 16 1 0 1
+CHANGECustomItemProgressbar 16 1 1 盾牌经验
+CHANGECustomItemProgressbar 16 1 2 250
+CHANGECustomItemProgressbar 16 1 3 11
+CHANGECustomItemProgressbar 16 1 4 11
+CHANGECUSTOMITEMPROGRESSBARVALUE 16 1 1 = <$STR(N$下级盾牌经验)>
+CHANGECUSTOMITEMPROGRESSBARVALUE 16 0 0 = 0
+CHANGECUSTOMITEMPROGRESSBARVALUE 16 1 0 = 0
+
+
+
+
+
+
+#IF
+CHECKBAGSIZE 3
+not checkitemw 蓝月复古盾牌 1
+not checkitem 蓝月复古盾牌 1
+checkitemw <$STR(S$当前盾牌装备)> 1
+CHECKCUSTOMITEMPROGRESSBARVALUE 16 0 0 = <$STR(N$设置盾牌等级)>
+CHECKCUSTOMITEMPROGRESSBARVALUE 16 1 0 = <$STR(N$当前盾牌经验)>
+#ACT
+takew <$STR(S$当前盾牌装备)> 1
+take <$STR(S$当前盾牌装备)> 1
+GiveStateItem <$STR(S$下级盾牌装备)> 1 1 0 0 1 1 1 1
+AutoTakeOnItem <$STR(S$下级盾牌装备)> 16
+GOTO @盾牌成长属性
+MOV U193 1
+MOV U192 <$STR(N$设置盾牌U192)>
+CHANGECustomItemProgressbar 16 0 0 1
+CHANGECustomItemProgressbar 16 0 1 盾牌等级
+CHANGECustomItemProgressbar 16 0 2 249
+CHANGECustomItemProgressbar 16 0 3 3
+CHANGECustomItemProgressbar 16 0 4 2
+CHANGECUSTOMITEMPROGRESSBARVALUE 16 0 1 = <$STR(N$设置盾牌等级)>
+CHANGECustomItemProgressbar 16 1 0 1
+CHANGECustomItemProgressbar 16 1 1 盾牌经验
+CHANGECustomItemProgressbar 16 1 2 250
+CHANGECustomItemProgressbar 16 1 3 11
+CHANGECustomItemProgressbar 16 1 4 11
+CHANGECUSTOMITEMPROGRESSBARVALUE 16 1 1 = <$STR(N$下级盾牌经验)>
+CHANGECUSTOMITEMPROGRESSBARVALUE 16 0 0 = 0
+CHANGECUSTOMITEMPROGRESSBARVALUE 16 1 0 = 0
+
+
+
+
+
+
+
+
+
+
+#IF
+CHECKCUSTOMITEMPROGRESSBARVALUE 16 1 0 = <$STR(N$当前盾牌经验)>
+#ACT
+INC U193 1
+INC U192 1
+CHANGECUSTOMITEMPROGRESSBARVALUE 16 0 0 + 1
+CHANGECUSTOMITEMPROGRESSBARVALUE 16 1 0 = 0
+CHANGECUSTOMITEMPROGRESSBARVALUE 16 1 1 = <$STR(N$下级盾牌经验)>
+
+
+
+
+
+#IF
+#ACT
+CHANGECUSTOMITEMPROGRESSBARVALUE 16 0 1 = <$STR(N$设置盾牌等级)>
+CHANGECUSTOMITEMPROGRESSBARVALUE 16 1 1 = <$STR(N$当前盾牌经验)>
+
+
+
+
+
+#IF
+NOT EQUAL S$盾牌标记 <$str(n$盾牌属性)>:<$STR(N$盾牌血量)>:<$STR(N$盾牌切割)>:<$STR(N$当前盾牌经验)>:<$STR(N$设置盾牌等级)>
+#ACT
+MOV S$盾牌标记 <$str(n$盾牌属性)>:<$STR(N$盾牌血量)>:<$STR(N$盾牌切割)>:<$STR(N$当前盾牌经验)>:<$STR(N$设置盾牌等级)>
+mov N$盾牌等级 <$str(U193)>
+DEC N$盾牌等级 1
+UpDateBoxItem 0
+LINKPICKUPITEM
+CHANGECUSTOMITEMTEXT 16 [<$STR(S$当前盾牌名字)>·<$STR(N$盾牌等级)>级属性]
+CHANGECUSTOMITEMTEXTColor 16 250
+
+CHANGECUSTOMITEMABIL 16 5 0 254
+CHANGECUSTOMITEMABIL 16 5 1 11
+CHANGECUSTOMITEMABIL 16 5 2 5
+CHANGECUSTOMITEMABIL 16 5 3 0
+CHANGECUSTOMITEMVALUE 16 5 = <$STR(N$盾牌伤害吸收)>
+
+CHANGECUSTOMITEMABIL 16 6 0 249
+CHANGECUSTOMITEMABIL 16 6 1 12
+CHANGECUSTOMITEMABIL 16 6 2 6
+CHANGECUSTOMITEMABIL 16 6 3 1
+CHANGECUSTOMITEMVALUE 16 6 = <$STR(N$盾牌每次吸收)>
+
+CHANGECUSTOMITEMABIL 16 7 0 251
+CHANGECUSTOMITEMABIL 16 7 1 13
+CHANGECUSTOMITEMABIL 16 7 2 7
+CHANGECUSTOMITEMABIL 16 7 3 0
+CHANGECUSTOMITEMVALUE 16 7 = <$STR(N$盾牌每秒恢复)>
+
+
+
+
+
+;CHANGEITEMADDVALUE 16 <$STR(N$本命属性位置)> = <$str(N$职业攻击)>
+
+
+
+
+}
+
+

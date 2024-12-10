@@ -1,0 +1,175 @@
+[@绑定手机]
+{
+#if
+Isonmap	wxbd
+#act
+Messagebox	当前地图禁用此功能！
+break
+
+#if
+Equal	T12
+#act
+Messagebox	操作异常：此功能目前无法使用！
+break
+#if
+Small	N$通区_延迟	1
+#act
+Mov	N$通区_延迟	2
+WDC	@平台_手机绑定开始	操作=人物数据		密钥=<$Str(S$平台_名称)>
+
+#elseact
+SendCenterMsg 250	0 您的点击速度过快，请勿重复点击！	0	<$Str(N$通区_延迟)>
+SendCenterMsg 251	0 您的点击速度过快，请勿重复点击！	0	<$Str(N$通区_延迟)>
+SendCenterMsg 249	0 您的点击速度过快，请勿重复点击！	0	<$Str(N$通区_延迟)>
+
+
+[@平台_手机绑定开始]
+#if
+Not	Equal	S$手机
+#act
+Messagebox	您已绑定过手机了！
+Break
+#if
+#act
+OPENMERCHANTBIGDLG <$Str(N$通区_素材)> <$Str(N$平台_手机界面)> 1 4 0 -20  0 0 0
+#say
+<>\
+<><Imgex:<$str(N$通区_素材)>:7:8:7:337:-25/@Exit>\
+<><Imgex:<$Str(N$通区_素材)>:80:81:80:69:215/@@InputString3(请输入您要绑定的手机号码：)><Img:76:<$Str(N$通区_素材)>:69:218>\
+
+[@InputString3]
+#if
+Not	CheckStringlength <$Str(S3)> = 11
+#act
+Messagebox	绑定失败：你输入的“手机号码”不正确，请重新输入！
+Break
+#if
+#act
+Mov	S$手机号码检查1	 <$Str(S3)>	
+Dec	S$手机号码检查1	9	11
+Div	N$手机号码检查1	<$Str(S$手机号码检查1)>	10
+Mov	S$手机号码检查2	 <$Str(S3)>	
+Dec	S$手机号码检查2	11	11
+Dec	S$手机号码检查2	1	9
+Mov	S$手机号码检查3	 <$Str(S3)>	
+Dec	S$手机号码检查3	1	10
+#or
+Large	N$手机号码检查1	19999999
+Equal	N$手机号码检查1	0
+#act
+Messagebox	绑定失败：你输入的“手机号码”不正确，请重新输入！
+Break
+
+#IF
+Not	Equal	S$手机号码检查2	0
+Not	Equal	S$手机号码检查2	1
+Not	Equal	S$手机号码检查2	2
+Not	Equal	S$手机号码检查2	3
+Not	Equal	S$手机号码检查2	4
+Not	Equal	S$手机号码检查2	5
+Not	Equal	S$手机号码检查2	6
+Not	Equal	S$手机号码检查2	7
+Not	Equal	S$手机号码检查2	8
+Not	Equal	S$手机号码检查2	9
+#act
+Messagebox	绑定失败：你输入的“手机号码”不正确，请重新输入！
+Break
+#IF
+Not	Equal	S$手机号码检查3	0
+Not	Equal	S$手机号码检查3	1
+Not	Equal	S$手机号码检查3	2
+Not	Equal	S$手机号码检查3	3
+Not	Equal	S$手机号码检查3	4
+Not	Equal	S$手机号码检查3	5
+Not	Equal	S$手机号码检查3	6
+Not	Equal	S$手机号码检查3	7
+Not	Equal	S$手机号码检查3	8
+Not	Equal	S$手机号码检查3	9
+#act
+Messagebox	绑定失败：你输入的“手机号码”不正确，请重新输入！
+Break
+
+#if
+#act
+Wdc @绑定手机验证 操作=获取短信验证码 手机号=<$Str(S3)>	密钥=<$Str(S$平台_名称)>
+
+[@绑定手机验证]
+#if
+Not	Equal	S$CODE	200
+#act
+messagebox	提交失败：<$Str(S$MSG)>
+Break
+#if
+#act
+OPENMERCHANTBIGDLG <$Str(N$通区_素材)> <$Str(N$平台_手机界面)> 1 4 0 -20  0 0 0
+#say
+<>\
+<><Imgex:<$str(N$通区_素材)>:7:8:7:337:-25/@Exit>\
+<><Imgex:<$Str(N$通区_素材)>:82:83:82:69:215/@@InputInteger4(请输入你收到的验证码:)><Img:77:<$Str(N$通区_素材)>:69:218>\
+
+[@InputInteger4]
+#if
+Large	N4	999
+Small	N4	10000
+#act
+Wdc	@绑定手机最终验证	操作=验证短信验证码	手机号=<$Str(S3)>	验证码=<$Str(N4)>	密钥=<$Str(S$平台_名称)>
+#ELSEACT
+Messagebox	验证失败：你输入的验证码不正确！
+
+[@绑定手机最终验证]
+#if
+Not	Equal	S$手机
+#act
+Messagebox	您已绑定过手机了！
+Break
+
+#if
+Equal	S$CODE	200
+#act
+Messagebox	回复成功，正在进行绑定，请稍后！
+wdc	@检查最终绑定成功 操作=绑定手机 手机号=<$Str(S3)>	密钥=<$Str(S$平台_名称)>
+
+#ELSEACT
+Messagebox	验证失败：<$Str(S$MSG)>
+
+[@检查最终绑定成功]
+#if
+Equal	S$CODE	200
+#act
+Close
+WDC	@手机_绑定奖励	操作=会员信息		密钥=<$Str(S$平台_名称)>
+Mov	S$手机	<$Str(S3)>
+#CALL	[一万七网络通服功能\平台商城按钮.TXT]	@平台_商城显示
+#ELSEACT
+Messagebox	验证失败：<$Str(S$MSG)>
+[@手机_绑定奖励]
+#If
+Equal	S$平台_手机奖励	
+#ACT
+WDC	@平台_手机奖励 	操作=读取个人变量 键=平台_手机奖励	 值=关闭	密钥=<$Str(S$平台_名称)>
+
+[@平台_手机奖励]
+#if
+Large	<$Str(S$充值数额)>	99
+Equal	S$平台_手机奖励
+#act
+WDC	@平台_手机奖励给予 	操作=设置个人变量 键=平台_手机奖励	 值=已发	密钥=<$Str(S$平台_名称)>
+break
+#if
+#act
+Messagebox	绑定成功.祝您游戏愉快！
+[@平台_手机奖励给予]
+#if
+Equal	S$Code	200
+#act
+Inc	U24	100
+Goto	@测试区记录手机绑定奖励
+Messagebox	您已达成《包服卡用户》+绑定手机！获赠奖励：100个游戏币！
+
+[@测试区记录手机绑定奖励]
+#if
+CheckContainstext	<$SerVername>	测试
+#act
+ExtractString	:	<$Str(T11)>	S$测试区微信ID	S$测试区机器码
+Addtextlist	..\QuestDiary\一万七网络通服功能\测试区手机奖励.txt	<$Str(S$测试区微信ID)>
+}

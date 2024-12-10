@@ -1,0 +1,28 @@
+[@main]
+
+#IF
+#ACT
+close
+#say
+\  \
+尊敬的沙巴克勇士，你已经用你的实力证明了自己。。。\  \
+现在我代表皇帝陛下赠予你“沙巴克之荣耀”称号，\
+你，准备好了吗？\ \
+
+<领取沙巴克之荣耀称号/@领取荣耀>  <说明：沙巴克成员免费领取！/FCOLOR=250> \  
+ \  
+ 
+
+
+[@领取荣耀]
+#IF
+ISCASTLEGUILD
+#act
+DEPRIVETITLE 沙巴克之荣耀
+CONFERTITLE 沙巴克之荣耀
+messagebox \\恭喜您成功领取：沙巴克之荣耀！
+SENDMSG 0 系统公告ぐ：恭喜沙城成员「%s」成功领取『沙巴克之荣耀』称号！
+#ELSEACT
+MESSAGEBOX 失败:原因如下\\　　　　1.您还不是沙巴克成员！
+BREAK
+

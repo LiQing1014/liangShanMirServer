@@ -1,0 +1,57 @@
+[@main]
+#IF
+#ACT
+close
+#say
+; <               ★    紫    ★    云    ★   山/AUTOCOLOR=253,249,251,252>    　   \
+; <此处到那里有千里之遥。那厢有一座山，名唤紫云山，山中有个千花洞/scolor=161>    　   \
+; <洞里有位圣贤，唤做毗蓝婆。他能降得此怪..../scolor=161>    　 \ 
+; <-------------------------------------------------------------/AUTOCOLOR=255,249,250,254>    　   \
+; <><主要怪物:/FCOLOR=250><柏树精、大公鸡、毗蓝婆系列怪物/FCOLOR=161>\
+; <><地图爆率:/FCOLOR=251><武神、轩辕系列/FCOLOR=22>\
+; <><进入条件:/FCOLOR=249><71级/FCOLOR=254> + <26转/FCOLOR=253>\ \
+; \                  <进入紫云山地图|249#进入条件：^-^250#1.人物等级达到71级^-^250#2.人物转生26转/@进入紫云山>             \ 
+
+
+<Img|width=530|height=250|reset=1|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|scale9l=10>
+<Layout|x=501.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=530.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=18.0|y=18.0|tipsx=10|tipsy=80|color=253,249,251,252|size=16|text=★    紫    ★    云    ★   山>
+<Text|a=0|x=18.0|y=47.0|tipsx=10|tipsy=80|color=161|size=16|text=此处到那里有千里之遥。那厢有一座山，名唤紫云山，山中有个千花洞>
+<Text|a=0|x=18.0|y=71.0|tipsx=10|tipsy=80|color=161|size=16|text=洞里有位圣贤，唤做毗蓝婆。他能降得此怪....>
+<Text|a=0|x=18.0|y=91.0|tipsx=10|tipsy=80|color=255,249,250,254|size=16|text=------------------------------------------------------------->
+<Text|a=0|x=18.0|y=111.0|tipsx=10|tipsy=80|color=250|size=16|text=主要怪物:>
+<Text|a=0|x=117.0|y=111.0|tipsx=10|tipsy=80|color=161|size=16|text=小骊龙、石敢当、黄风大圣系列怪物>
+<Text|a=0|x=18.0|y=131.0|tipsx=10|tipsy=80|color=251|size=16|text=地图爆率:>
+<Text|a=0|x=117.0|y=131.0|tipsx=10|tipsy=80|color=22|size=16|text=武神、轩辕系列>
+<Text|a=0|x=18.0|y=151.0|tipsx=10|tipsy=80|color=249|size=16|text=进入条件:>
+<RText|a=0|x=117.0|y=151.0|tipsx=10|tipsy=80|color=254|size=16|text=71级 + <26转/FCOLOR=253>>
+<Text|a=0|x=18.0|y=211.0|tipsx=10|tipsy=80|color=251|size=16|text=进入花果山地图|link=@进入紫云山>
+
+
+[@进入紫云山]
+
+#IF
+CHECKRENEWLEVEL < 26
+#ACT
+messagebox 对不起，您当前转生等级没有26转，无法进入该地图
+break
+
+#IF
+CHECKLEVELEX < 71
+#ACT
+messagebox 对不起，您的等级不足71级，无法进入该地图！
+break
+
+
+
+
+#IF
+#ACT
+map 紫云山
+SENDMSG 0 玩家{『<$USERNAME>』|250:0}闯入{『<$MapTitle>』|253:0}去打顶级装备了！
+
+
+
+
+

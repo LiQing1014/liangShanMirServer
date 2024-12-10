@@ -1,0 +1,36 @@
+[@main]
+哎，岁月如梭，已经好久都没人来圣堂看我了！\
+圣堂每半个小时刷新一次！50级可诱惑天之虎卫！\ 
+如果还没有刷新，您可以花500元宝刷新一次\ \ \
+
+<好的我要刷宝宝/@551>\ \   
+
+<算了太贵了/@exit>\
+
+
+[@551]
+#IF
+checkmonmap TZSD 15
+#ACT
+MESSAGEBOX \当前地图宝宝太多，请先诱惑再刷？
+break
+
+#IF
+CHECKGAMEGOLD > 499
+#ACT
+GAMEGOLD - 500
+Param1 TZSD
+Param2 44
+Param3 37
+MonGen 天之虎卫 2 1
+messagebox \\恭喜您刷新宝宝成功！
+#ELSEACT
+MESSAGEBOX \朋友！你没有500元宝啊！凑什么热闹？
+BREAK
+
+
+
+
+
+
+

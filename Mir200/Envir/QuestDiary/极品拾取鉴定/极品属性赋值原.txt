@@ -1,0 +1,731 @@
+[@战士极品赋值]
+{
+
+
+
+#or
+CompareText <$CURRTEMSTDMODE> 5
+CompareText <$CURRTEMSTDMODE> 6
+#ACT
+MOV N$给予点数 2
+MOV N$属性位置 0
+
+#or
+CompareText <$CURRTEMSTDMODE> 10
+CompareText <$CURRTEMSTDMODE> 11
+#ACT
+MOV N$给予点数 1
+MOV N$属性位置 2
+
+
+#or
+CompareText <$CURRTEMSTDMODE> 15
+CompareText <$CURRTEMSTDMODE> 19
+CompareText <$CURRTEMSTDMODE> 20
+CompareText <$CURRTEMSTDMODE> 26
+CompareText <$CURRTEMSTDMODE> 24
+CompareText <$CURRTEMSTDMODE> 22
+CompareText <$CURRTEMSTDMODE> 23
+CompareText <$CURRTEMSTDMODE> 62
+CompareText <$CURRTEMSTDMODE> 64
+#ACT
+MOV N$给予点数 0
+MOV N$属性位置 2
+
+
+#IF
+CheckItemAddValue -1 0 > <$STR(S$鉴定上限)>
+#ACT
+CHANGEITEMADDVALUE -1 0 = <$STR(S$鉴定上限)>
+
+#IF
+CheckItemAddValue -1 1 > <$STR(S$鉴定上限)>
+#ACT
+CHANGEITEMADDVALUE -1 1 = <$STR(S$鉴定上限)>
+
+#IF
+CheckItemAddValue -1 2 > <$STR(S$鉴定上限)>
+#ACT
+CHANGEITEMADDVALUE -1 2 = <$STR(S$鉴定上限)>
+
+#IF
+CheckItemAddValue -1 3 > <$STR(S$鉴定上限)>
+#ACT
+CHANGEITEMADDVALUE -1 3 = <$STR(S$鉴定上限)>
+
+
+#IF
+CheckItemAddValue -1 4 > <$STR(S$鉴定上限)>
+#ACT
+CHANGEITEMADDVALUE -1 4 = <$STR(S$鉴定上限)>
+
+
+#IF
+#ACT
+MOV N$给予属性 0
+MOV N$检查属性1  3
+MOV N$检查属性2  4
+MOV N$检查属性3  5
+MOV N$检查属性4  6
+MOV N$检查属性5  7
+MOV N$检查属性6  8
+MOV N$检查属性7  9
+MOV N$检查属性8  10
+MOV N$检查属性9  11
+MOV N$检查属性10 12
+INC N$检查属性1  <$STR(N$给予点数)>
+INC N$检查属性2  <$STR(N$给予点数)>
+INC N$检查属性3  <$STR(N$给予点数)>
+INC N$检查属性4  <$STR(N$给予点数)>
+INC N$检查属性5  <$STR(N$给予点数)>
+INC N$检查属性6  <$STR(N$给予点数)>
+INC N$检查属性7  <$STR(N$给予点数)>
+INC N$检查属性8  <$STR(N$给予点数)>
+INC N$检查属性9  <$STR(N$给予点数)>
+INC N$检查属性10 <$STR(N$给予点数)>
+;SENDMSG 5 你当前装备位置：<$STR(N$属性位置)>：检查属性<$STR(N$检查属性1)>,鉴定上限<$STR(S$鉴定上限)>
+
+
+
+
+
+
+
+
+
+#IF
+CheckItemAddValue -1 <$STR(N$属性位置)> = <$STR(N$检查属性1)> 
+EQUAL S$属性类型 攻击
+#ACT
+MOV N$给予属性 1
+
+
+
+#IF
+CheckItemAddValue -1 <$STR(N$属性位置)> = <$STR(N$检查属性2)>
+EQUAL S$属性类型 攻击
+#ACT
+MOV N$给予属性 2
+
+
+#IF
+CheckItemAddValue -1 <$STR(N$属性位置)> = <$STR(N$检查属性3)>
+EQUAL S$属性类型 攻击
+#ACT
+MOV N$给予属性 3
+
+
+#IF
+CheckItemAddValue -1 <$STR(N$属性位置)> = <$STR(N$检查属性4)>
+EQUAL S$属性类型 攻击
+#ACT
+MOV N$给予属性 4
+
+
+#IF
+CheckItemAddValue -1 <$STR(N$属性位置)> = <$STR(N$检查属性5)>
+EQUAL S$属性类型 攻击
+#ACT
+MOV N$给予属性 5
+
+
+#IF
+CheckItemAddValue -1 <$STR(N$属性位置)> = <$STR(N$检查属性6)>
+EQUAL S$属性类型 攻击
+#ACT
+MOV N$给予属性 6
+
+
+
+#IF
+CheckItemAddValue -1 <$STR(N$属性位置)> = <$STR(N$检查属性7)>
+EQUAL S$属性类型 攻击
+#ACT
+MOV N$给予属性 7
+
+#IF
+CheckItemAddValue -1 <$STR(N$属性位置)> = <$STR(N$检查属性8)>
+EQUAL S$属性类型 攻击
+#ACT
+MOV N$给予属性 8
+
+#IF
+CheckItemAddValue -1 <$STR(N$属性位置)> = <$STR(N$检查属性9)>
+EQUAL S$属性类型 攻击
+#ACT
+MOV N$给予属性 9
+
+
+#IF
+CheckItemAddValue -1 <$STR(N$属性位置)> = <$STR(N$检查属性10)>
+EQUAL S$属性类型 攻击
+#ACT
+MOV N$给予属性 10
+
+
+
+#IF
+#ACT
+GetRandomText ..\QuestDiary\极品拾取鉴定\随机元素.txt S$随机元素
+MOVR N$元素上限 1 <$STR(S$鉴定上限)>
+SetNewItemValue -1 <$Str(S$随机元素)> = <$STR(N$元素上限)>
+
+
+#IF
+EQUAL S$属性类型 攻击
+CheckItemAddValue -1 <$STR(N$属性位置)> > <$STR(S$鉴定上限)>
+#ACT
+CHANGEITEMADDVALUE -1 <$STR(N$属性位置)> = <$STR(S$鉴定上限)>
+CHANGEITEMUPGRADECOUNT -1 = <$STR(N$给予属性)>
+CHANGECUSTOMITEMTEXT -1 [极品觉醒]
+CHANGECUSTOMITEMTEXTCOLOR -1 103
+CHANGECUSTOMITEMABIL -1 1 0 22
+CHANGECUSTOMITEMABIL -1 1 1 15
+CHANGECUSTOMITEMABIL -1 1 2 1
+CHANGECUSTOMITEMABIL -1 1 3 0
+CHANGECUSTOMITEMVALUE -1 1 = <$STR(N$给予属性)>
+CHANGECUSTOMITEMABIL -1 2 0 19
+CHANGECUSTOMITEMABIL -1 2 1 16
+CHANGECUSTOMITEMABIL -1 2 2 2
+CHANGECUSTOMITEMABIL -1 2 3 0
+CHANGECUSTOMITEMVALUE -1 2 = <$STR(N$给予属性)>
+CHANGECUSTOMITEMABIL -1 3 0 246
+CHANGECUSTOMITEMABIL -1 3 1 17
+CHANGECUSTOMITEMABIL -1 3 2 3
+CHANGECUSTOMITEMABIL -1 3 3 0
+CHANGECUSTOMITEMVALUE -1 3 = <$STR(S$鉴定上限)>
+SetUpgradeItem 6
+UpDateBoxItem 6
+SENDUPGRADEITEM
+break
+
+
+
+
+
+
+#IF
+EQUAL S$属性类型 攻击
+LARGE N$给予属性 0
+#ACT
+CHANGEITEMUPGRADECOUNT -1 = <$STR(N$给予属性)>
+CHANGECUSTOMITEMTEXT -1 [极品觉醒]
+CHANGECUSTOMITEMTEXTCOLOR -1 103
+CHANGECUSTOMITEMABIL -1 1 0 22
+CHANGECUSTOMITEMABIL -1 1 1 15
+CHANGECUSTOMITEMABIL -1 1 2 1
+CHANGECUSTOMITEMABIL -1 1 3 0
+CHANGECUSTOMITEMVALUE -1 1 = <$STR(N$给予属性)>
+CHANGECUSTOMITEMABIL -1 2 0 19
+CHANGECUSTOMITEMABIL -1 2 1 16
+CHANGECUSTOMITEMABIL -1 2 2 2
+CHANGECUSTOMITEMABIL -1 2 3 0
+CHANGECUSTOMITEMVALUE -1 2 = <$STR(N$给予属性)>
+CHANGECUSTOMITEMABIL -1 3 0 246
+CHANGECUSTOMITEMABIL -1 3 1 17
+CHANGECUSTOMITEMABIL -1 3 2 3
+CHANGECUSTOMITEMABIL -1 3 3 0
+CHANGECUSTOMITEMVALUE -1 3 = <$STR(S$鉴定上限)>
+SetUpgradeItem 6
+UpDateBoxItem 6
+SENDUPGRADEITEM
+break
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@法师极品赋值]
+
+#or
+CompareText <$CURRTEMSTDMODE> 5
+CompareText <$CURRTEMSTDMODE> 6
+#ACT
+MOV N$给予点数 2
+MOV N$属性位置 1
+
+#or
+CompareText <$CURRTEMSTDMODE> 10
+CompareText <$CURRTEMSTDMODE> 11
+#ACT
+MOV N$给予点数 1
+MOV N$属性位置 3
+
+
+#or
+CompareText <$CURRTEMSTDMODE> 15
+CompareText <$CURRTEMSTDMODE> 19
+CompareText <$CURRTEMSTDMODE> 20
+CompareText <$CURRTEMSTDMODE> 26
+CompareText <$CURRTEMSTDMODE> 24
+CompareText <$CURRTEMSTDMODE> 22
+CompareText <$CURRTEMSTDMODE> 23
+CompareText <$CURRTEMSTDMODE> 62
+CompareText <$CURRTEMSTDMODE> 64
+#ACT
+MOV N$给予点数 0
+MOV N$属性位置 3
+
+
+#IF
+CheckItemAddValue -1 0 > <$STR(S$鉴定上限)>
+#ACT
+CHANGEITEMADDVALUE -1 0 = <$STR(S$鉴定上限)>
+
+#IF
+CheckItemAddValue -1 1 > <$STR(S$鉴定上限)>
+#ACT
+CHANGEITEMADDVALUE -1 1 = <$STR(S$鉴定上限)>
+
+#IF
+CheckItemAddValue -1 2 > <$STR(S$鉴定上限)>
+#ACT
+CHANGEITEMADDVALUE -1 2 = <$STR(S$鉴定上限)>
+
+#IF
+CheckItemAddValue -1 3 > <$STR(S$鉴定上限)>
+#ACT
+CHANGEITEMADDVALUE -1 3 = <$STR(S$鉴定上限)>
+
+
+#IF
+CheckItemAddValue -1 4 > <$STR(S$鉴定上限)>
+#ACT
+CHANGEITEMADDVALUE -1 4 = <$STR(S$鉴定上限)>
+
+
+
+#IF
+#ACT
+MOV N$给予属性 0
+MOV N$检查属性1  3
+MOV N$检查属性2  4
+MOV N$检查属性3  5
+MOV N$检查属性4  6
+MOV N$检查属性5  7
+MOV N$检查属性6  8
+MOV N$检查属性7  9
+MOV N$检查属性8  10
+MOV N$检查属性9  11
+MOV N$检查属性10 12
+INC N$检查属性1  <$STR(N$给予点数)>
+INC N$检查属性2  <$STR(N$给予点数)>
+INC N$检查属性3  <$STR(N$给予点数)>
+INC N$检查属性4  <$STR(N$给予点数)>
+INC N$检查属性5  <$STR(N$给予点数)>
+INC N$检查属性6  <$STR(N$给予点数)>
+INC N$检查属性7  <$STR(N$给予点数)>
+INC N$检查属性8  <$STR(N$给予点数)>
+INC N$检查属性9  <$STR(N$给予点数)>
+INC N$检查属性10 <$STR(N$给予点数)>
+;SENDMSG 5 你当前装备位置：<$STR(N$属性位置)>：检查属性<$STR(N$检查属性1)>
+
+
+
+
+
+
+
+
+
+#IF
+CheckItemAddValue -1 <$STR(N$属性位置)> = <$STR(N$检查属性1)> 
+EQUAL S$属性类型 魔法
+#ACT
+MOV N$给予属性 1
+
+
+
+#IF
+CheckItemAddValue -1 <$STR(N$属性位置)> = <$STR(N$检查属性2)>
+EQUAL S$属性类型 魔法
+#ACT
+MOV N$给予属性 2
+
+
+#IF
+CheckItemAddValue -1 <$STR(N$属性位置)> = <$STR(N$检查属性3)>
+EQUAL S$属性类型 魔法
+#ACT
+MOV N$给予属性 3
+
+
+#IF
+CheckItemAddValue -1 <$STR(N$属性位置)> = <$STR(N$检查属性4)>
+EQUAL S$属性类型 魔法
+#ACT
+MOV N$给予属性 4
+
+
+#IF
+CheckItemAddValue -1 <$STR(N$属性位置)> = <$STR(N$检查属性5)>
+EQUAL S$属性类型 魔法
+#ACT
+MOV N$给予属性 5
+
+
+#IF
+CheckItemAddValue -1 <$STR(N$属性位置)> = <$STR(N$检查属性6)>
+EQUAL S$属性类型 魔法
+#ACT
+MOV N$给予属性 6
+
+
+
+#IF
+CheckItemAddValue -1 <$STR(N$属性位置)> = <$STR(N$检查属性7)>
+EQUAL S$属性类型 魔法
+#ACT
+MOV N$给予属性 7
+
+#IF
+CheckItemAddValue -1 <$STR(N$属性位置)> = <$STR(N$检查属性8)>
+EQUAL S$属性类型 魔法
+#ACT
+MOV N$给予属性 8
+
+#IF
+CheckItemAddValue -1 <$STR(N$属性位置)> = <$STR(N$检查属性9)>
+EQUAL S$属性类型 魔法
+#ACT
+MOV N$给予属性 9
+
+
+#IF
+CheckItemAddValue -1 <$STR(N$属性位置)> = <$STR(N$检查属性10)>
+EQUAL S$属性类型 魔法
+#ACT
+MOV N$给予属性 10
+
+
+
+
+#IF
+#ACT
+GetRandomText ..\QuestDiary\极品拾取鉴定\随机元素.txt S$随机元素
+MOVR N$元素上限 1 <$STR(S$鉴定上限)>
+SetNewItemValue -1 <$Str(S$随机元素)> = <$STR(N$元素上限)>
+
+
+#IF
+EQUAL S$属性类型 魔法
+CheckItemAddValue -1 <$STR(N$属性位置)> > <$STR(S$鉴定上限)>
+#ACT
+CHANGEITEMADDVALUE -1 <$STR(N$属性位置)> = <$STR(S$鉴定上限)>
+CHANGEITEMUPGRADECOUNT -1 = <$STR(N$给予属性)>
+CHANGECUSTOMITEMTEXT -1 [极品觉醒]
+CHANGECUSTOMITEMTEXTCOLOR -1 103
+CHANGECUSTOMITEMABIL -1 1 0 22
+CHANGECUSTOMITEMABIL -1 1 1 15
+CHANGECUSTOMITEMABIL -1 1 2 1
+CHANGECUSTOMITEMABIL -1 1 3 0
+CHANGECUSTOMITEMVALUE -1 1 = <$STR(N$给予属性)>
+CHANGECUSTOMITEMABIL -1 2 0 19
+CHANGECUSTOMITEMABIL -1 2 1 16
+CHANGECUSTOMITEMABIL -1 2 2 2
+CHANGECUSTOMITEMABIL -1 2 3 0
+CHANGECUSTOMITEMVALUE -1 2 = <$STR(N$给予属性)>
+CHANGECUSTOMITEMABIL -1 3 0 246
+CHANGECUSTOMITEMABIL -1 3 1 17
+CHANGECUSTOMITEMABIL -1 3 2 3
+CHANGECUSTOMITEMABIL -1 3 3 0
+CHANGECUSTOMITEMVALUE -1 3 = <$STR(S$鉴定上限)>
+SetUpgradeItem 6
+UpDateBoxItem 6
+SENDUPGRADEITEM
+
+break
+
+
+
+#IF
+EQUAL S$属性类型 魔法
+LARGE N$给予属性 0
+#ACT
+CHANGEITEMUPGRADECOUNT -1 = <$STR(N$给予属性)>
+CHANGECUSTOMITEMTEXT -1 [极品觉醒]
+CHANGECUSTOMITEMTEXTCOLOR -1 103
+CHANGECUSTOMITEMABIL -1 1 0 22
+CHANGECUSTOMITEMABIL -1 1 1 15
+CHANGECUSTOMITEMABIL -1 1 2 1
+CHANGECUSTOMITEMABIL -1 1 3 0
+CHANGECUSTOMITEMVALUE -1 1 = <$STR(N$给予属性)>
+CHANGECUSTOMITEMABIL -1 2 0 19
+CHANGECUSTOMITEMABIL -1 2 1 16
+CHANGECUSTOMITEMABIL -1 2 2 2
+CHANGECUSTOMITEMABIL -1 2 3 0
+CHANGECUSTOMITEMVALUE -1 2 = <$STR(N$给予属性)>
+CHANGECUSTOMITEMABIL -1 3 0 246
+CHANGECUSTOMITEMABIL -1 3 1 17
+CHANGECUSTOMITEMABIL -1 3 2 3
+CHANGECUSTOMITEMABIL -1 3 3 0
+CHANGECUSTOMITEMVALUE -1 3 = <$STR(S$鉴定上限)>
+SetUpgradeItem 6
+UpDateBoxItem 6
+SENDUPGRADEITEM
+break
+
+
+
+
+
+
+
+
+
+
+[@道士极品赋值]
+
+#or
+CompareText <$CURRTEMSTDMODE> 5
+CompareText <$CURRTEMSTDMODE> 6
+#ACT
+MOV N$给予点数 2
+MOV N$属性位置 2
+
+#or
+CompareText <$CURRTEMSTDMODE> 10
+CompareText <$CURRTEMSTDMODE> 11
+#ACT
+MOV N$给予点数 1
+MOV N$属性位置 4
+
+
+#or
+CompareText <$CURRTEMSTDMODE> 15
+CompareText <$CURRTEMSTDMODE> 19
+CompareText <$CURRTEMSTDMODE> 20
+CompareText <$CURRTEMSTDMODE> 26
+CompareText <$CURRTEMSTDMODE> 24
+CompareText <$CURRTEMSTDMODE> 22
+CompareText <$CURRTEMSTDMODE> 23
+CompareText <$CURRTEMSTDMODE> 62
+CompareText <$CURRTEMSTDMODE> 64
+#ACT
+MOV N$给予点数 0
+MOV N$属性位置 4
+
+
+
+
+#IF
+CheckItemAddValue -1 0 > <$STR(S$鉴定上限)>
+#ACT
+CHANGEITEMADDVALUE -1 0 = <$STR(S$鉴定上限)>
+
+#IF
+CheckItemAddValue -1 1 > <$STR(S$鉴定上限)>
+#ACT
+CHANGEITEMADDVALUE -1 1 = <$STR(S$鉴定上限)>
+
+#IF
+CheckItemAddValue -1 2 > <$STR(S$鉴定上限)>
+#ACT
+CHANGEITEMADDVALUE -1 2 = <$STR(S$鉴定上限)>
+
+#IF
+CheckItemAddValue -1 3 > <$STR(S$鉴定上限)>
+#ACT
+CHANGEITEMADDVALUE -1 3 = <$STR(S$鉴定上限)>
+
+
+#IF
+CheckItemAddValue -1 4 > <$STR(S$鉴定上限)>
+#ACT
+CHANGEITEMADDVALUE -1 4 = <$STR(S$鉴定上限)>
+
+
+#IF
+#ACT
+MOV N$给予属性 0
+MOV N$检查属性1  3
+MOV N$检查属性2  4
+MOV N$检查属性3  5
+MOV N$检查属性4  6
+MOV N$检查属性5  7
+MOV N$检查属性6  8
+MOV N$检查属性7  9
+MOV N$检查属性8  10
+MOV N$检查属性9  11
+MOV N$检查属性10 12
+INC N$检查属性1  <$STR(N$给予点数)>
+INC N$检查属性2  <$STR(N$给予点数)>
+INC N$检查属性3  <$STR(N$给予点数)>
+INC N$检查属性4  <$STR(N$给予点数)>
+INC N$检查属性5  <$STR(N$给予点数)>
+INC N$检查属性6  <$STR(N$给予点数)>
+INC N$检查属性7  <$STR(N$给予点数)>
+INC N$检查属性8  <$STR(N$给予点数)>
+INC N$检查属性9  <$STR(N$给予点数)>
+INC N$检查属性10 <$STR(N$给予点数)>
+;SENDMSG 5 你当前装备位置：<$STR(N$属性位置)>：检查属性<$STR(N$检查属性1)>,鉴定上限<$STR(S$鉴定上限)>
+
+
+
+
+
+
+
+
+
+#IF
+CheckItemAddValue -1 <$STR(N$属性位置)> = <$STR(N$检查属性1)> 
+EQUAL S$属性类型 道术
+#ACT
+MOV N$给予属性 1
+
+
+
+#IF
+CheckItemAddValue -1 <$STR(N$属性位置)> = <$STR(N$检查属性2)>
+EQUAL S$属性类型 道术
+#ACT
+MOV N$给予属性 2
+
+
+#IF
+CheckItemAddValue -1 <$STR(N$属性位置)> = <$STR(N$检查属性3)>
+EQUAL S$属性类型 道术
+#ACT
+MOV N$给予属性 3
+
+
+#IF
+CheckItemAddValue -1 <$STR(N$属性位置)> = <$STR(N$检查属性4)>
+EQUAL S$属性类型 道术
+#ACT
+MOV N$给予属性 4
+
+
+#IF
+CheckItemAddValue -1 <$STR(N$属性位置)> = <$STR(N$检查属性5)>
+EQUAL S$属性类型 道术
+#ACT
+MOV N$给予属性 5
+
+
+#IF
+CheckItemAddValue -1 <$STR(N$属性位置)> = <$STR(N$检查属性6)>
+EQUAL S$属性类型 道术
+#ACT
+MOV N$给予属性 6
+
+
+
+#IF
+CheckItemAddValue -1 <$STR(N$属性位置)> = <$STR(N$检查属性7)>
+EQUAL S$属性类型 道术
+#ACT
+MOV N$给予属性 7
+
+#IF
+CheckItemAddValue -1 <$STR(N$属性位置)> = <$STR(N$检查属性8)>
+EQUAL S$属性类型 道术
+#ACT
+MOV N$给予属性 8
+
+#IF
+CheckItemAddValue -1 <$STR(N$属性位置)> = <$STR(N$检查属性9)>
+EQUAL S$属性类型 道术
+#ACT
+MOV N$给予属性 9
+
+
+#IF
+CheckItemAddValue -1 <$STR(N$属性位置)> = <$STR(N$检查属性10)>
+EQUAL S$属性类型 道术
+#ACT
+MOV N$给予属性 10
+
+
+
+
+#IF
+#ACT
+GetRandomText ..\QuestDiary\极品拾取鉴定\随机元素.txt S$随机元素
+MOVR N$元素上限 1 <$STR(S$鉴定上限)>
+SetNewItemValue -1 <$Str(S$随机元素)> = <$STR(N$元素上限)>
+
+
+#IF
+EQUAL S$属性类型 道术
+CheckItemAddValue -1 <$STR(N$属性位置)> > <$STR(S$鉴定上限)>
+#ACT
+CHANGEITEMADDVALUE -1 <$STR(N$属性位置)> = <$STR(S$鉴定上限)>
+CHANGEITEMUPGRADECOUNT -1 = <$STR(N$给予属性)>
+CHANGECUSTOMITEMTEXT -1 [极品觉醒]
+CHANGECUSTOMITEMTEXTCOLOR -1 103
+CHANGECUSTOMITEMABIL -1 1 0 22
+CHANGECUSTOMITEMABIL -1 1 1 15
+CHANGECUSTOMITEMABIL -1 1 2 1
+CHANGECUSTOMITEMABIL -1 1 3 0
+CHANGECUSTOMITEMVALUE -1 1 = <$STR(N$给予属性)>
+CHANGECUSTOMITEMABIL -1 2 0 19
+CHANGECUSTOMITEMABIL -1 2 1 16
+CHANGECUSTOMITEMABIL -1 2 2 2
+CHANGECUSTOMITEMABIL -1 2 3 0
+CHANGECUSTOMITEMVALUE -1 2 = <$STR(N$给予属性)>
+CHANGECUSTOMITEMABIL -1 3 0 246
+CHANGECUSTOMITEMABIL -1 3 1 17
+CHANGECUSTOMITEMABIL -1 3 2 3
+CHANGECUSTOMITEMABIL -1 3 3 0
+CHANGECUSTOMITEMVALUE -1 3 = <$STR(S$鉴定上限)>
+SetUpgradeItem 6
+UpDateBoxItem 6
+SENDUPGRADEITEM
+
+break
+
+
+
+#IF
+EQUAL S$属性类型 道术
+LARGE N$给予属性 0
+#ACT
+CHANGEITEMUPGRADECOUNT -1 = <$STR(N$给予属性)>
+CHANGECUSTOMITEMTEXT -1 [极品觉醒]
+CHANGECUSTOMITEMTEXTCOLOR -1 103
+CHANGECUSTOMITEMABIL -1 1 0 22
+CHANGECUSTOMITEMABIL -1 1 1 15
+CHANGECUSTOMITEMABIL -1 1 2 1
+CHANGECUSTOMITEMABIL -1 1 3 0
+CHANGECUSTOMITEMVALUE -1 1 = <$STR(N$给予属性)>
+CHANGECUSTOMITEMABIL -1 2 0 19
+CHANGECUSTOMITEMABIL -1 2 1 16
+CHANGECUSTOMITEMABIL -1 2 2 2
+CHANGECUSTOMITEMABIL -1 2 3 0
+CHANGECUSTOMITEMVALUE -1 2 = <$STR(N$给予属性)>
+CHANGECUSTOMITEMABIL -1 3 0 246
+CHANGECUSTOMITEMABIL -1 3 1 17
+CHANGECUSTOMITEMABIL -1 3 2 3
+CHANGECUSTOMITEMABIL -1 3 3 0
+CHANGECUSTOMITEMVALUE -1 3 = <$STR(S$鉴定上限)>
+SetUpgradeItem 6
+UpDateBoxItem 6
+SENDUPGRADEITEM
+break
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

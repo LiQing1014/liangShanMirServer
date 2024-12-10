@@ -1,0 +1,622 @@
+(@buy @sell @upgradenow @getbackupgnow @repair @s_repair @@InPutString @@InPutInteger @ReclaimItem )
+%100
++10
++11
++15
+[@会员服务]
+{
+#if
+;IsOnMap EM029
+IsOnMap EM029A
+#act
+SENDMSG 7 提示:次地图不许使用会员
+break
+#ELSESAY 
+　   <┅┅∽┅┅∽┅┅∽┅/SCOLOR=151><〖/SCOLOR=19><钻石会员/SCOLOR=145><〗/SCOLOR=19><┅∽┅┅∽┅┅∽┅┅/SCOLOR=151>\ \
+　　   <「/SCOLOR=70> <暗杀城主/@暗杀城主> <」/SCOLOR=70>   <「/SCOLOR=70> <沃玛三层/@传送07> <」/SCOLOR=70>  <「/SCOLOR=70> <六大暗之/@六大暗之> <」/SCOLOR=70> 　\ \
+　　   <「/SCOLOR=70> <霸者大厅/@传送11> <」/SCOLOR=70>　 <「/SCOLOR=70> <祖玛七层/@传送14> <」/SCOLOR=70>  <「/SCOLOR=70> <BOSS之家/@传送77> <」/SCOLOR=70> \ \
+　　   <「/SCOLOR=70> <在线仓库/@仓库> <」/SCOLOR=70>　 <「/SCOLOR=70> <特修装备/@会员特修> <」/SCOLOR=70>  <「/SCOLOR=70> <会员买药/@会员买药> <」/SCOLOR=70> \ \
+　　   <「/SCOLOR=70> <随身泡点/@随身> <」/SCOLOR=70>　 <「/SCOLOR=70> <在线回收/@回收cd> <」/SCOLOR=70>  <「/SCOLOR=70> <会员洗红/@洗红> <」/SCOLOR=70> \ \
+
+ 　 　     \
+
+
+[@随身]
+#if
+CHECKLEVELEX < 54
+#act
+SETONTIMER 7 1
+sendmsg 7 成功开启隐身泡点！
+#elseact
+messagebox 54级以下才可以使用此功能!
+[@回收cd]
+#IF
+;CHECKLEVELEX < 58
+#Act
+#say
+
+　　 <赤月类回收/@赤月类装备回收>---<   2元宝 /AUTOCOLOR=20>      <赤月类回收/@赤月类装备回收2>---<     20W经验 /AUTOCOLOR=22> \
+　　 <雷霆类回收/@雷霆类装备回收>---<   5元宝 /AUTOCOLOR=20>      <雷霆类回收/@雷霆类装备回收2>---<     50W经验 /AUTOCOLOR=22> \
+　　 <强化类回收/@强化类装备回收>---<  20元宝 /AUTOCOLOR=20>      <强化类回收/@强化类装备回收2>---<    100W经验 /AUTOCOLOR=22> \
+　　 <屠龙类回收/@屠龙类装备回收>---<  50元宝 /AUTOCOLOR=20>      <屠龙类回收/@屠龙类装备回收2>---<    200W经验 /AUTOCOLOR=22> \
+　　 <雷霆类衣服/@雷霆类衣服回收>---< 100元宝 /AUTOCOLOR=20>      <雷霆类衣服/@雷霆类衣服回收2>---<   1000W经验 /AUTOCOLOR=22> \
+　　 <赤金类回收/@赤金类装备回收>---< 100元宝 /AUTOCOLOR=20>      <赤金类回收/@赤金类装备回收2>---<   1000W经验 /AUTOCOLOR=22> \
+　　 <战神类回收/@战神类首饰回收>---< 200元宝 /AUTOCOLOR=20>      <战神类回收/@战神圣魔类回收2>---<   2000W经验 /AUTOCOLOR=22> \
+　　 <开天类回收/@开天凤天类回收>---< 500元宝 /AUTOCOLOR=20>      <开天类回收/@开天凤天类回收2>---<   5000W经验 /AUTOCOLOR=22> \
+　　 　　  <特别提示：装备回收经全可以往聚宝珠里面聚经验/AUTOCOLOR=250>
+
+
+
+
+
+
+
+[@开天凤天类回收]
+#CALL [\\橙子制作\装备回收\开天类回收.txt] @开天类回收
+
+
+[@开天凤天类回收2]
+#CALL [\\橙子制作\经验回收\开天类回收e.txt] @开天类回收e
+
+
+
+
+
+
+[@雷霆类衣服回收3]
+#CALL [\\橙子制作\经验回收\雷霆类衣服e.txt] @雷霆类衣服e
+
+[@战神圣魔类回收3]
+#CALL [\\橙子制作\经验回收\战神类回收e.txt] @战神类回收e
+
+[@赤金类装备回收3]
+#CALL [\\橙子制作\经验回收\赤金类回收e.txt] @赤金类回收e
+
+
+
+[@雷霆类衣服回收2]
+#CALL [\\橙子制作\经验回收\雷霆类衣服c.txt] @雷霆类衣服c
+
+
+[@雷霆类衣服回收]
+#CALL [\\橙子制作\装备回收\雷霆类衣服.txt] @雷霆类衣服
+
+
+
+
+
+
+
+[@战神圣魔类回收3]
+#CALL [\\橙子制作\经验回收\战神类回收d.txt] @战神类回收d
+
+[@战神类首饰回收]
+#CALL [\\橙子制作\装备回收\战神类回收.txt] @战神类回收
+
+
+
+
+[@战神圣魔类回收2]
+#CALL [\\橙子制作\经验回收\战神类回收.txt] @战神类回收c
+
+
+
+[@屠龙类装备回收2]
+#CALL [\\橙子制作\经验回收\屠龙类回收.txt] @屠龙类回收c
+
+
+[@屠龙类装备回收]
+#CALL [\\橙子制作\装备回收\屠龙类回收.txt] @屠龙类回收
+
+
+[@赤金类装备回收2]
+#CALL [\\橙子制作\经验回收\赤金类回收.txt] @赤金类回收c
+
+
+[@赤金类装备回收]
+#CALL [\\橙子制作\装备回收\赤金类回收.txt] @赤金类回收
+
+
+
+[@赤月类装备回收]
+#CALL [\\橙子制作\装备回收\赤月类回收.txt] @赤月类回收
+
+[@赤月类衣服回收]
+#CALL [\\橙子制作\装备回收\赤月类衣服.txt] @赤月类衣服
+
+[@雷霆类装备回收]
+#CALL [\\橙子制作\装备回收\雷霆类回收.txt] @雷霆类回收
+
+[@强化类装备回收]
+#CALL [\\橙子制作\装备回收\强化雷霆类.txt] @强化雷霆类
+
+
+[@雷霆类衣服回收]
+#CALL [\\橙子制作\装备回收\雷霆类衣服.txt] @雷霆类衣服
+
+
+
+
+
+
+
+
+
+
+[@赤月类装备回收2]
+#CALL [\\橙子制作\经验回收\赤月类回收.txt] @赤月类回收c
+
+[@赤月类衣服回收2]
+#CALL [\\橙子制作\经验回收\赤月类衣服.txt] @赤月类衣服c
+
+[@雷霆类装备回收2]
+#CALL [\\橙子制作\经验回收\雷霆类回收.txt] @雷霆类回收c
+
+[@强化类装备回收2]
+#CALL [\\橙子制作\经验回收\强化雷霆类.txt] @强化雷霆类c
+
+
+
+
+
+[@暗杀城主]
+#if
+checkgold 200000
+#ACT
+take 金币 200000
+mapmove H201 13 100
+#ELSESAY
+暗杀城主需要20W金币
+
+
+
+
+
+[@会员买药]
+　\
+#if
+;checkcastlewar
+#ACT
+#say
+　　　    　 <防止顶药外挂，限制了购买速度/SCOLOR=31>\
+　\
+　　　   <太阳水包/@1包> 1元宝       <雪霜包/@2包> 3元宝\
+
+　\
+[@2包]
+#if
+	CheckBagSize	1
+CHECKGAMEGOLD > 2
+#ACT
+GAMEGOLD - 3
+give 雪霜包 1
+MESSAGEBOX   亲，购买成功！
+#ELSEACT
+MESSAGEBOX  你背包没有1个空格，或没有3元宝！
+
+[@1包]
+#if
+	CheckBagSize	1
+CHECKGAMEGOLD > 1
+#ACT
+GAMEGOLD - 2
+give 强效太阳包 1
+MESSAGEBOX   亲，购买成功！
+#ELSEACT
+MESSAGEBOX  你背包没有1个空格，或没有2元宝！
+
+
+
+
+
+
+
+
+
+[@会员特修]
+#IF
+checkgold 200000
+#ACT
+take 金币 200000
+ACTREPAIRALL
+#SAY
+你全身的装备全部修好了！
+#ELSESAY
+特修全部装备需要20W金币
+
+[@仓库]
+#IF 
+#ACT
+#CALL [\\城市商人\保管员.txt] @保管员
+
+[@买药]
+#CALL [\\城市商人\药店.txt] @药店
+
+
+
+[@命运六层]
+#IF 
+#ACT
+give 回城卷 1
+mapmove yhzt6
+break 
+
+[@升级cd]
+#IF 
+#ACT
+give 回城卷 1
+mapmove hy1
+break 
+
+
+
+
+
+[@神力]
+#if
+CHECKNAMELIST ..\QuestDiary\数据文件\双倍名单.txt
+#ACT
+messagebox ぐ【失败】：你今天已经开启过了....
+break
+
+
+#if
+#ACT
+ADDNAMELIST ..\QuestDiary\数据文件\双倍名单.txt
+POWERRATE 130 600
+CHANGENAMECOLOR 253
+SETRANKLEVELNAME %s\◥■■■会■■■◤\◥■■员■■◤\◥■神■◤\◥力◤\双倍攻击\
+GuildNoticeMsg 254 56 ぐ钻石会员『<$USERNAME>』开启双倍攻击，十分钟内进入癫狂状态[每日仅限1次]！
+GuildNoticeMsg 254 56 ぐ钻石会员『<$USERNAME>』开启双倍攻击，十分钟内进入癫狂状态[每日仅限1次]！
+GuildNoticeMsg 254 56 ぐ钻石会员『<$USERNAME>』开启双倍攻击，十分钟内进入癫狂状态[每日仅限1次]！
+GuildNoticeMsg 254 56 ぐ钻石会员『<$USERNAME>』开启双倍攻击，十分钟内进入癫狂状态[每日仅限1次]！
+DELAYGOTO 600 @恢复封号
+break
+
+[@恢复封号]
+SENDMSG 7 你的狂暴状态已经消失!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@转职]
+#IF
+CHECKJOB warrior
+#SAY
+是不是战士不好玩呀，换换别的职业试试吧！\ \
+此服务要2000元宝,转职不掉级,转职后基本技能书自动学满!\\
+『<玩玩法师/@法师>』\
+『<玩玩道士/@道士>』\ \
+〖<关闭/@exit>〗
+#ACT
+break
+#IF
+CHECKJOB wizard
+#SAY
+是不是法师不好玩呀，换换别的职业试试吧！\ \
+此服务要2000元宝,转职不掉级,转职后基本技能书自动学满!\\
+『<玩玩战士/@战士>』\
+『<玩玩道士/@道士>』\ \
+〖<返回/@changjob>〗〖<关闭/@exit>〗
+#ACT
+break
+#IF
+CHECKJOB taoist
+#SAY
+是不是道士不好玩呀，换换别的职业试试吧！\ \
+此服务要2000元宝,转职不掉级,转职后基本技能书自动学满!\\
+『<玩玩战士/@战士>』\
+『<玩玩法师/@法师>』\ \
+〖<返回/@changjob>〗〖<关闭/@exit>〗
+#ACT
+break
+[@战士]
+#IF
+CHECKGAMEGOLD > 1999
+#ACT
+GAMEGOLD - 2000
+CLEARSKILL
+CHANGEJOB warrior
+ADDSKILL 基本剑术 3
+ADDSKILL 攻杀剑术 3
+ADDSKILL 刺杀剑术 3
+ADDSKILL 半月弯刀 3
+ADDSKILL 野蛮冲撞 3
+ADDSKILL 烈火剑法 3
+SENDMSG 6 恭喜:玩家「<$USERNAME>」成功转职为战士。
+#ELSEACT
+MESSAGEBOX 对不起，您的元宝已经不足2000个。
+BREAK
+[@法师]
+#IF
+CHECKGAMEGOLD > 1999
+#ACT
+GAMEGOLD - 2000
+CLEARSKILL
+CHANGEJOB WIZARD
+ADDSKILL 火球术 3
+ADDSKILL 大火球 3
+ADDSKILL 抗拒火环 3
+ADDSKILL 地狱火 3
+ADDSKILL 雷电术 3
+ADDSKILL 疾光电影 3
+ADDSKILL 诱惑之光 3
+ADDSKILL 瞬息移动 3
+ADDSKILL 火墙 3
+ADDSKILL 地狱雷光 3
+ADDSKILL 魔法盾 3
+ADDSKILL 圣言术 3
+ADDSKILL 冰咆哮 3
+SENDMSG 6 恭喜:玩家「<$USERNAME>」成功转职为法师。
+#ELSEACT
+MESSAGEBOX 对不起，您的元宝已经不足2000个。
+BREAK
+[@道士]
+#IF
+CHECKGAMEGOLD > 1999
+#ACT
+GAMEGOLD - 2000
+CLEARSKILL
+CHANGEJOB taoist
+GIVE 护身符(大) 1
+GIVE 黄色药粉(大量) 1
+GIVE 灰色药粉(大量) 1
+ADDSKILL 治愈术 3
+ADDSKILL 精神力战法 3
+ADDSKILL 施毒术 3
+ADDSKILL 灵魂火符 3
+ADDSKILL 幽灵盾 3
+ADDSKILL 神圣战甲术 3
+ADDSKILL 困魔咒 3
+ADDSKILL 隐身术 3
+ADDSKILL 集体隐身术 3
+ADDSKILL 心灵启示 3
+ADDSKILL 群体治疗术 3
+ADDSKILL 召唤神兽 3
+SENDMSG 6 恭喜:玩家「<$USERNAME>」成功转职为道士。
+#ELSEACT
+MESSAGEBOX 对不起，您的元宝已经不足2000个。
+BREAK
+
+
+
+[@传送12]
+#IF 
+checkgold 500000
+#ACT
+take 金币 500000
+give 回城卷 1
+mapmove h201 13 103
+break 
+#ELSEACT
+MESSAGEBOX 需要50W万金币用来支付我们的服务费用!
+
+
+
+
+[@死亡回廊]
+#IF
+checkgold 300000
+#ACT
+take 金币 300000
+MAPMOVE r001 20 84
+break
+#ELSEACT
+MESSAGEBOX 需要30W万金币用来支付我们的服务费用!
+
+[@工资]
+#CALL [\游戏触发\金钻工资.txt] @工资领取
+
+[@洗红]
+#if
+checkpkpoint 2
+#act
+#CALL [\游戏触发\金钻洗红.txt] @免费洗红
+#ELSEACT
+SENDMSG 6 您还没红呢！！
+
+[@传送01]
+#IF
+#ACT
+give 回城卷 1
+mapmove 0 659 218
+break
+
+[@传送02]
+#IF
+#ACT
+give 回城卷 1
+mapmove 3 333 333
+break
+
+[@传送03]
+#IF
+#ACT
+give 回城卷 1
+mapmove 5 140 338
+break
+
+
+
+[@传送77]
+#IF
+CHECKLEVELEX > 45
+checkgold 500000
+#ACT
+take 金币 500000
+MAPMOVE F010
+GuildNoticeMsg 162 161   玩家[%s]进入会员BOSS之家挑战...
+give 回城卷
+break
+#ELSEACT
+MESSAGEBOX 亲，进入BOSS之家，需要50W万金币和46级！
+
+
+
+
+
+
+
+[@传送04]
+#IF 
+#ACT
+give 回城卷 1
+mapmove 11 177 324
+break 
+
+
+[@传送05]
+#IF 
+#ACT
+give 回城卷 1
+mapmove Q004
+break 
+
+
+[@传送06]
+#IF 
+#ACT
+mapmove H106
+break 
+
+
+[@传送07]
+#IF 
+#ACT
+give 回城卷 1
+mapmove D023   52 366
+break 
+
+
+[@传送08]
+#IF 
+#ACT
+mapmove D715 85 77 
+break 
+
+
+[@传送09]
+#IF 
+#ACT
+give 回城卷 1
+mapmove D504 53 176
+break 
+
+
+[@传送10]
+#IF 
+#ACT
+give 回城卷 1
+mapmove D2078 160 163
+break 
+
+
+[@传送11]
+#IF 
+#ACT
+give 回城卷 1
+mapmove D2008 84 85
+break 
+
+
+
+[@传送13]
+#IF 
+#ACT
+give 回城卷 1
+mapmove D1004 171 88
+break 
+
+
+[@传送14]
+#IF 
+#ACT
+give 回城卷 1
+mapmove D5071
+break 
+
+
+[@传送15]
+#IF 
+checkgold 200000
+#ACT
+take 金币 200000
+give 回城卷 1
+mapmove h007 167 170
+break
+#ELSEACT
+MESSAGEBOX 亲，直达幻七，需要20W万金币
+
+
+
+
+
+
+
+[@六大暗之]
+#IF 
+#say
+　╔┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄╗\
+　┆ <死亡神殿/@衣服01>    <地狱烈焰/@衣服02>    <钳虫巢穴/@衣服03> ┆\
+　╠┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄╣\
+　┆ <堕落坟场/@衣服04>    <困惑殿堂/@衣服05>    <深渊魔域/@衣服06> ┆\
+　╚┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄╝
+
+[@衣服01]
+#IF 
+#ACT
+give 回城卷 1
+mapmove 4 205 218
+break 
+
+[@衣服02]
+#IF 
+#ACT
+give 回城卷 1
+mapmove 0 428 474
+break 
+
+[@衣服03]
+#IF 
+#ACT
+give 回城卷 1
+mapmove 11 343 325
+break 
+
+
+[@衣服04]
+#IF 
+#ACT
+give 回城卷 1
+mapmove 1 320 56
+break 
+
+
+[@衣服05]
+#IF 
+#ACT
+give 回城卷 1
+mapmove T118
+break 
+
+
+[@衣服06]
+#IF 
+#ACT
+give 回城卷 1
+mapmove 1 215 312
+break 
+}

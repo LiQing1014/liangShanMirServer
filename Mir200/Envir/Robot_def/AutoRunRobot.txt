@@ -1,0 +1,115 @@
+;SEC：按秒运行
+;MIN：按分运行
+;HOUR：按小时运行
+;DAY：按天运行
+;RunOnDay：按每天什么时候运行
+;RUNONWEEK：按星期几及时间运行
+;#AutoRun NPC RUNONWEEK 5:15:55 @SendRedMsg
+;星期五15点55分运行
+;-----------------------------------------------定时器添加
+
+#AutoRun NPC SEC 60 @假人登录
+
+#AutoRun NPC RUNONDAY 00:00:31 @首次攻沙计算A
+#AutoRun NPC RUNONDAY 19:29:01 @攻沙提示公告A
+#AutoRun NPC RUNONDAY 19:55:01 @加载攻沙行会A
+#AutoRun NPC RUNONDAY 22:01:01 @沙巴克占领奖励A
+
+#AutoRun NPC RUNONDAY 19:35:01 @攻沙提示A
+#AutoRun NPC RUNONDAY 19:40:01 @攻沙提示A
+#AutoRun NPC RUNONDAY 19:50:01 @攻沙提示A
+
+
+
+
+;#AutoRun NPC RUNONDAY 00:30 @cqbb定时_每日计时
+;#AutoRun NPC RUNONDAY 15:00 @cqbb定时_攻城喊话
+;#AutoRun NPC RUNONDAY 18:00 @cqbb定时_攻城喊话
+;#AutoRun NPC RUNONDAY 19:00 @cqbb定时_攻城喊话
+;#AutoRun NPC RUNONDAY 19:30 @cqbb定时_攻城喊话
+;#AutoRun NPC RUNONDAY 19:50 @cqbb定时_攻城喊话
+;#AutoRun NPC RUNONDAY 19:59 @cqbb定时_攻城开始
+;#AutoRun NPC RUNONDAY 22:10 @cqbb定时_奖励开放
+;#AutoRun NPC RUNONDAY 23:30 @cqbb定时_奖励关闭
+;#AutoRun NPC SEC 5 @cqbb定时_假人登录
+
+;#AutoRun NPC SEC 1 @开始干掉
+
+
+
+;#AutoRun NPC SEC 1  @激情派对光环
+
+#AutoRun NPC MIN 1  @激情派对计时
+
+#AutoRun NPC MIN 90 @激情派对开启
+
+
+#AutoRun NPC HOUR 2 @宝树王
+
+#AutoRun NPC HOUR 1 @法师宝宝
+
+;------------------------------------------------------------------------
+#AutoRun NPC RUNONDAY 00:01 @每日清理
+
+
+#AutoRun NPC MIN 70 @送财送宝
+
+#AutoRun NPC RUNONDAY 8:00 @朱雀神兽
+#AutoRun NPC RUNONDAY 12:00 @朱雀神兽
+#AutoRun NPC RUNONDAY 17:00 @朱雀神兽
+#AutoRun NPC RUNONDAY 21:00 @朱雀神兽
+
+
+#AutoRun NPC RUNONDAY 9:00 @玄武神兽
+#AutoRun NPC RUNONDAY 13:00 @玄武神兽
+#AutoRun NPC RUNONDAY 18:00 @玄武神兽
+#AutoRun NPC RUNONDAY 22:00 @玄武神兽
+
+#AutoRun NPC RUNONDAY 10:00 @青龙神兽
+#AutoRun NPC RUNONDAY 14:00 @青龙神兽
+#AutoRun NPC RUNONDAY 19:00 @青龙神兽
+#AutoRun NPC RUNONDAY 23:00 @青龙神兽
+
+#AutoRun NPC RUNONDAY 11:00 @白虎神兽
+#AutoRun NPC RUNONDAY 15:00 @白虎神兽
+#AutoRun NPC RUNONDAY 20:00 @白虎神兽
+#AutoRun NPC RUNONDAY 00:00 @白虎神兽
+
+
+
+
+
+
+
+#AutoRun NPC RUNONDAY 7:00 @早上提示
+#AutoRun NPC RUNONDAY 12:05 @中午提示
+#AutoRun NPC RUNONDAY 18:05 @晚上提示
+
+
+#AutoRun NPC RUNONDAY 19:10 @武林争霸1
+#AutoRun NPC RUNONDAY 19:20 @武林争霸2
+
+
+#AutoRun NPC RUNONDAY 22:30:00 @瑶池仙境
+#AutoRun NPC RUNONDAY 22:20:00 @仙境10分钟提示
+#AutoRun NPC RUNONDAY 22:25:00 @仙境5分钟提示
+
+#AutoRun NPC RUNONDAY 14:35:00 @仙境5分钟提示
+
+#AutoRun NPC RUNONDAY 00:30 @世界白虎
+
+#AutoRun NPC RUNONDAY 12:30 @世界朱雀
+
+#AutoRun NPC RUNONDAY 06:30 @世界玄武
+
+#AutoRun NPC RUNONDAY 18:30 @世界青龙
+
+
+
+
+
+
+
+
+
+

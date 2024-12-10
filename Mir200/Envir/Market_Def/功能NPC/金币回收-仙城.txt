@@ -1,0 +1,676 @@
+[@main]
+#if
+#act
+OPENMERCHANTBIGDLG 1 8 0 0 0 0 0
+#say
+<【大米回收】/FCOLOR=254> <亲爱的玩家，您好！请问有什么可以帮到您的吗！/SCOLOR=70>\
+<ImgEx:1:5:5:6:394:-32/@EXIT> \ 
+<><提示:/SCOLOR=70><以下装备永久回收大米，请放心不会过时！！/SCOLOR=147>\ \
+<无双·神剑/SCOLOR=249> → <1000大米点/SCOLOR=253> <回收/@回收21>  <无双·魔杖/SCOLOR=249> → <1000大米点/SCOLOR=253> <回收/@回收22> \
+<无双·道扇/SCOLOR=249> → <1000大米点/SCOLOR=253> <回收/@回收23> \ \
+<无双·战甲/SCOLOR=249> → <688大米点/SCOLOR=253> <回收/@回收24>  <无双·战衣/SCOLOR=249> → <688大米点/SCOLOR=253> <回收/@回收25> \
+<无双·魔袍/SCOLOR=249> → <688大米点/SCOLOR=253> <回收/@回收26>  <无双·魔衣/SCOLOR=249> → <688大米点/SCOLOR=253> <回收/@回收27> \
+<无双·道袍/SCOLOR=249> → <688大米点/SCOLOR=253> <回收/@回收28>  <无双·道衣/SCOLOR=249> → <688大米点/SCOLOR=253> <回收/@回收29> \ \
+;<等级满68级/SCOLOR=249> → <满级68级回收3888大米点/SCOLOR=250>   <开始回收/@回收等级>\  \
+<><温馨提示：/SCOLOR=249><请您把有用的装备放入仓库再回收，避免点错!>\ \
+<>                       <点我查看下一页/@下1>  
+
+
+[@下1]
+#if
+#act
+OPENMERCHANTBIGDLG 1 8 0 0 0 0 0
+#say
+<【大米点回收】/FCOLOR=254> <亲爱的玩家，您好！请问有什么可以帮到您的吗！/SCOLOR=70>\
+<ImgEx:1:5:5:6:394:-32/@EXIT> \ 
+<><回收多余材料:/SCOLOR=250><每个价格不一样，请点击对应物品回收大米点/SCOLOR=147>\ \
+<王者·神剑/SCOLOR=249> → <200大米点/SCOLOR=253> <回收/@回收211>  <王者·魔杖/SCOLOR=249> → <200大米点/SCOLOR=253> <回收/@回收222> \
+<王者·道扇/SCOLOR=249> → <200大米点/SCOLOR=253> <回收/@回收233> \ \
+<王者·战甲/SCOLOR=249> → <88大米点/SCOLOR=253> <回收/@回收244>  <王者·战衣/SCOLOR=249> → <88大米点/SCOLOR=253> <回收/@回收255> \
+<王者·魔袍/SCOLOR=249> → <88大米点/SCOLOR=253> <回收/@回收266>  <王者·魔衣/SCOLOR=249> → <88大米点/SCOLOR=253> <回收/@回收277> \
+<王者·道袍/SCOLOR=249> → <88大米点/SCOLOR=253> <回收/@回收288>  <王者·道衣/SCOLOR=249> → <88大米点/SCOLOR=253> <回收/@回收299> \ \
+
+<女娲补天神石/SCOLOR=249> → <18大米点/SCOLOR=253> <回收/@女娲1>   \ \
+
+
+
+<><温馨提示：/SCOLOR=249><请您把有用的装备放入仓库再回收，避免点错!/SCOLOR=253>    
+
+
+  
+[@下一页]
+#if
+#act
+OPENMERCHANTBIGDLG 1 8 0 0 0 0 0
+#say
+<【大米点回收】/FCOLOR=254> <亲爱的玩家，您好！请问有什么可以帮到您的吗！/SCOLOR=70>\
+<ImgEx:1:5:5:6:394:-32/@EXIT> \ 
+<><回收时装:/SCOLOR=250><神阶时装回收1000大米点，请点击对应时装回收大米点/SCOLOR=147>\
+<神·蓝月复古(男)/SCOLOR=249> → <回收/@时装1>    <神·蓝月复古(女)/SCOLOR=249> → <回收/@时装2> \
+<神·黄金战士(男)/SCOLOR=249> → <回收/@时装3>    <神·黄金法师(女)/SCOLOR=249> → <回收/@时装4> \
+<神·吕布(男)/SCOLOR=249>     → <回收/@时装5>    <神·貂蝉(女)/SCOLOR=249>     → <回收/@时装6> \
+<神·夏日清凉(男)/SCOLOR=249> → <回收/@时装7>    <神·夏日清凉(女)/SCOLOR=249> → <回收/@时装8> \
+<神·至尊宝(男)/SCOLOR=249>   → <回收/@时装9>    <神·紫霞仙子(女)/SCOLOR=249> → <回收/@时装10> \ \
+<神·侠骨柔情(男)/SCOLOR=249> → <回收/@时装11>    <神·侠骨柔情(女)/SCOLOR=249> → <回收/@时装12> \
+<神·传奇皇帝(男)/SCOLOR=249> → <回收/@时装13>    <神·传奇皇后(女)/SCOLOR=249> → <回收/@时装14> \ \ 
+
+<><温馨提示：/SCOLOR=249><请您把有用的装备放入仓库再回收，避免点错!/SCOLOR=253>    <下一页/@下一页1>
+
+[@下一页1]
+#if
+#act
+OPENMERCHANTBIGDLG 1 8 0 0 0 0 0
+#say
+<【大米点回收】/FCOLOR=254> <亲爱的玩家，您好！请问有什么可以帮到您的吗！/SCOLOR=70>\
+<ImgEx:1:5:5:6:394:-32/@EXIT> \ 
+<><回收时装:/SCOLOR=250><神阶时装回收1000大米点，请点击对应时装回收大米点/SCOLOR=147>\
+<神·猎魔少年(男)/SCOLOR=249> → <回收/@时1>      <神·猎魔少女(女)/SCOLOR=249> → <回收/@时2> \
+<神·锦衣卫(男)/SCOLOR=249>   → <回收/@时3>      <神·锦衣卫(女)/SCOLOR=249> → <回收/@时4> \
+<神·屠龙勇士(男)/SCOLOR=249> → <回收/@时5>      <神·屠龙勇士(女)/SCOLOR=249> → <回收/@时6> \
+<神·龙鳞法师(男)/SCOLOR=249> → <回收/@时7>      <神·龙鳞法师(女)/SCOLOR=249> → <回收/@时8> \
+<神·武林盟主(男)/SCOLOR=249> → <回收/@时9>      <神·武林盟主(女)/SCOLOR=249> → <回收/@时10> \ \
+<神·西装暴徒(男)/SCOLOR=249> → <回收/@时11>     <神·西装暴徒(女)/SCOLOR=249> → <回收/@时12> \
+<神·李小龙(男)/SCOLOR=249>   → <回收/@时13>     <神·李小凤(女)/SCOLOR=249> → <回收/@时14> \ \ 
+
+<><温馨提示：/SCOLOR=249><请您把有用的装备放入仓库再回收，避免点错!/SCOLOR=253>   <返回首页/@main>
+
+[@兑换称号]
+#IF
+CHECK [88] 0
+CHECKLEVELEX > 61
+Equal U12 10
+#ACT
+SET [88] 1
+MOV U12 0
+DEPRIVETITLE 万世主宰
+GIVE 大米点 1
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功兑换62级+万世主宰，大米点增加：+1
+BREAK
+#ELSEACT
+MESSAGEBOX [兑换失败]:您的条件不足!
+BREAK
+
+[@回收等级]
+#IF
+CHECKLEVELEX > 67
+CHECK [501] 1
+#ACT
+SET [501] 0
+CHANGELEVEL = 67
+DEPRIVETITLE 陆地神仙
+GIVE 大米点 3888
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收68级，大米点增加：+3888
+BREAK
+#ELSEACT
+MESSAGEBOX [兑换失败]:您的条件不足!
+BREAK
+
+
+
+
+[@时14]
+#IF
+checkitem 神·李小凤(女) 1
+#ACT
+take 神·李小凤(女) 1
+GAMEPOINT + 1000
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收神·李小凤(女)，大米点增加：+1000
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@时13]
+#IF
+checkitem 神·李小龙(男) 1
+#ACT
+take 神·李小龙(男) 1
+GAMEPOINT + 1000
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收神·李小龙(男)，大米点增加：+1000
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@时12]
+#IF
+checkitem 神·西装暴徒(女) 1
+#ACT
+take 神·西装暴徒(女) 1
+GAMEPOINT + 1000
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收神·西装暴徒(女)，大米点增加：+1000
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@时11]
+#IF
+checkitem 神·西装暴徒(男) 1
+#ACT
+take 神·西装暴徒(男) 1
+GAMEPOINT + 1000
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收神·西装暴徒(男)，大米点增加：+1000
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@时10]
+#IF
+checkitem 神·武林盟主(女) 1
+#ACT
+take 神·武林盟主(女) 1
+GAMEPOINT + 1000
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收神·武林盟主(女)，大米点增加：+1000
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@时9]
+#IF
+checkitem 神·武林盟主(男) 1
+#ACT
+take 神·武林盟主(男) 1
+GAMEPOINT + 1000
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收神·武林盟主(男)，大米点增加：+1000
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@时8]
+#IF
+checkitem 神·龙鳞法师(女) 1
+#ACT
+take 神·龙鳞法师(女) 1
+GAMEPOINT + 1000
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收神·龙鳞法师(女)，大米点增加：+1000
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@时7]
+#IF
+checkitem 神·龙鳞法师(男) 1
+#ACT
+take 神·龙鳞法师(男) 1
+GAMEPOINT + 1000
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收神·龙鳞法师(男)，大米点增加：+1000
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@时6]
+#IF
+checkitem 神·屠龙勇士(女) 1
+#ACT
+take 神·屠龙勇士(女) 1
+GAMEPOINT + 1000
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收神·屠龙勇士(女)，大米点增加：+1000
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@时5]
+#IF
+checkitem 神·屠龙勇士(男) 1
+#ACT
+take 神·屠龙勇士(男) 1
+GAMEPOINT + 1000
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收神·屠龙勇士(男)，大米点增加：+1000
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@时4]
+#IF
+checkitem 神·锦衣卫(女) 1
+#ACT
+take 神·锦衣卫(女) 1
+GAMEPOINT + 1000
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收神·锦衣卫(女)，大米点增加：+1000
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@时3]
+#IF
+checkitem 神·锦衣卫(男) 1
+#ACT
+take 神·锦衣卫(男) 1
+GAMEPOINT + 1000
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收神·锦衣卫(男)，大米点增加：+1000
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@时2]
+#IF
+checkitem 神·猎魔少女(女) 1
+#ACT
+take 神·猎魔少女(女) 1
+GAMEPOINT + 1000
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收神·猎魔少女(女)，大米点增加：+1000
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@时1]
+#IF
+checkitem 神·猎魔少年(男) 1
+#ACT
+take 神·猎魔少年(男) 1
+GAMEPOINT + 1000
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收神·猎魔少年(男)，大米点增加：+1000
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+
+
+[@时装14]
+#IF
+checkitem 神·传奇皇后(女) 1
+#ACT
+take 神·传奇皇后(女) 1
+GAMEPOINT + 1000
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收神·传奇皇后(女)，大米点增加：+1000
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@时装13]
+#IF
+checkitem 神·传奇皇帝(男) 1
+#ACT
+take 神·传奇皇帝(男) 1
+GAMEPOINT + 1000
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收神·传奇皇帝(男)，大米点增加：+1000
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@时装12]
+#IF
+checkitem 神·侠骨柔情(女) 1
+#ACT
+take 神·侠骨柔情(女) 1
+GAMEPOINT + 1000
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收神·侠骨柔情(女)，大米点增加：+1000
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@时装11]
+#IF
+checkitem 神·侠骨柔情(男) 1
+#ACT
+take 神·侠骨柔情(男) 1
+GAMEPOINT + 1000
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收神·侠骨柔情(男)，大米点增加：+1000
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@时装10]
+#IF
+checkitem 神·紫霞仙子(女) 1
+#ACT
+take 神·紫霞仙子(女) 1
+GAMEPOINT + 1000
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收神·紫霞仙子(女)，大米点增加：+1000
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@时装9]
+#IF
+checkitem 神·至尊宝(男) 1
+#ACT
+take 神·至尊宝(男) 1
+GAMEPOINT + 1000
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收神·至尊宝(男)，大米点增加：+1000
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@时装8]
+#IF
+checkitem 神·夏日清凉(女) 1
+#ACT
+take 神·夏日清凉(女) 1
+GAMEPOINT + 1000
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收神·夏日清凉(女)，大米点增加：+1000
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@时装7]
+#IF
+checkitem 神·夏日清凉(男) 1
+#ACT
+take 神·夏日清凉(男) 1
+GAMEPOINT + 1000
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收神·夏日清凉(男)，大米点增加：+1000
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@时装6]
+#IF
+checkitem 神·貂蝉(女) 1
+#ACT
+take 神·貂蝉(女) 1
+GAMEPOINT + 1000
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收神·貂蝉(女)，大米点增加：+1000
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@时装5]
+#IF
+checkitem 神·吕布(男) 1
+#ACT
+take 神·吕布(男) 1
+GAMEPOINT + 1000
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收神·吕布(男)，大米点增加：+1000
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@时装4]
+#IF
+checkitem 神·黄金法师(女) 1
+#ACT
+take 神·黄金法师(女) 1
+GAMEPOINT + 1000
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收神·黄金法师(女)，大米点增加：+1000
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@时装3]
+#IF
+checkitem 神·黄金战士(男) 1
+#ACT
+take 神·黄金战士(男) 1
+GAMEPOINT + 1000
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收神·黄金战士(男)，大米点增加：+1000
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@时装2]
+#IF
+checkitem 神·蓝月复古(女) 1
+#ACT
+take 神·蓝月复古(女) 1
+GAMEPOINT + 1000
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收神·蓝月复古(女)，大米点增加：+1000
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@时装1]
+#IF
+checkitem 神·蓝月复古(男) 1
+#ACT
+take 神·蓝月复古(男) 1
+GAMEPOINT + 1000
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收神·蓝月复古(男)，大米点增加：+1000
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@回收29]
+#IF
+checkitem 无双·道衣 1
+#ACT
+take 无双·道衣 1
+GAMEPOINT + 688
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收无双·道衣，大米点增加：+688
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@回收28]
+#IF
+checkitem 无双·道袍 1
+#ACT
+take 无双·道袍 1
+GAMEPOINT + 688
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收无双·道袍，大米点增加：+688
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@回收27]
+#IF
+checkitem 无双·魔衣 1
+#ACT
+take 无双·魔衣 1
+GAMEPOINT + 688
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收无双·魔衣，大米点增加：+688
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@回收26]
+#IF
+checkitem 无双·魔袍 1
+#ACT
+take 无双·魔袍 1
+GAMEPOINT + 688
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收无双·魔袍，大米点增加：+688
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@回收25]
+#IF
+checkitem 无双·战衣 1
+#ACT
+take 无双·战衣 1
+GAMEPOINT + 688
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收无双·战衣，大米点增加：+688
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@回收24]
+#IF
+checkitem 无双·战甲 1
+#ACT
+take 无双·战甲 1
+GAMEPOINT + 688
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收无双·战甲，大米点增加：+688
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@回收23]
+#IF
+checkitem 无双·道扇 1
+#ACT
+take 无双·道扇 1
+GAMEPOINT + 1000
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收无双·道扇，大米点增加：+1000
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@回收22]
+#IF
+checkitem 无双·魔杖 1
+#ACT
+take 无双·魔杖 1
+GAMEPOINT + 1000
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收无双·魔杖，大米点增加：+1000
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@回收21]
+#IF
+checkitem 无双·神剑 1
+#ACT
+take 无双·神剑 1
+GAMEPOINT + 1000
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收无双·神剑，大米点增加：+1000
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+
+[@回收233]
+#IF
+checkitem 王者·道扇 1
+#ACT
+take 王者·道扇 1
+GAMEPOINT + 200
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收王者·道扇，大米点增加：+200
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@回收222]
+#IF
+checkitem 王者·魔杖 1
+#ACT
+take 王者·魔杖 1
+GAMEPOINT + 200
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收王者·魔杖，大米点增加：+200
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@回收211]
+#IF
+checkitem 王者·神剑 1
+#ACT
+take 王者·神剑 1
+GAMEPOINT + 200
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收王者·神剑，大米点增加：+200
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+
+[@回收299]
+#IF
+checkitem 王者·道衣 1
+#ACT
+take 王者·道衣 1
+GAMEPOINT + 88
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收王者·道衣，大米点增加：+88
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@回收288]
+#IF
+checkitem 王者·道袍 1
+#ACT
+take 王者·道袍 1
+GAMEPOINT + 88
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收王者·道袍，大米点增加：+88
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@回收277]
+#IF
+checkitem 王者·魔衣 1
+#ACT
+take 王者·魔衣 1
+GAMEPOINT + 88
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收王者·魔衣，大米点增加：+88
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@回收266]
+#IF
+checkitem 王者·魔袍 1
+#ACT
+take 王者·魔袍 1
+GAMEPOINT + 88
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收王者·魔袍，大米点增加：+88
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@回收255]
+#IF
+checkitem 王者·战衣 1
+#ACT
+take 王者·战衣 1
+GAMEPOINT + 88
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收王者·战衣，大米点增加：+88
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@回收244]
+#IF
+checkitem 王者·战甲 1
+#ACT
+take 王者·战甲 1
+GAMEPOINT + 88
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收王者·战甲，大米点增加：+88
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!
+BREAK
+
+[@女娲1]
+#IF
+checkitem 女娲补天神石 
+#ACT
+take 女娲补天神石 1
+GAMEPOINT + 18
+SENDMSG 0 恭喜玩家[<$USERNAME>]成功回收女娲补天神石，大米点增加：+18
+BREAK
+#ELSEACT
+MESSAGEBOX [回收失败]:您的条件不足!

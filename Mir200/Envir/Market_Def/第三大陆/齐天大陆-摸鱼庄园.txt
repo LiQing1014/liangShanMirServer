@@ -1,0 +1,45 @@
+[@MAIN]
+
+
+#IF
+Checkrenewlevel < 20
+#ACT
+MESSAGEBOX 对不起，您当前的转生不够，请先20转生在来！
+BREAK
+
+#IF
+CHECKLEVELEX < 65
+#ACT
+MESSAGEBOX 对不起，您当前的等级不够，请65级以后在来！
+BREAK
+
+
+
+#OR
+CheckitemW 金仙境
+CheckitemW 玄仙境
+CheckitemW 仙君境
+CheckitemW 仙帝境
+CheckitemW 仙尊境
+CheckitemW 神人境
+CheckitemW 天神境
+CheckitemW 玄神境
+CheckitemW 神王境
+CheckitemW 神君境
+CheckitemW 真神境
+CheckitemW 天帝境
+CheckitemW 神帝境
+CheckitemW 天尊境
+CheckitemW 主宰境
+#ACT
+#ELSEACT
+MESSAGEBOX 对不起，请佩戴金仙境或者以上的物品进入！
+BREAK
+
+
+
+#IF
+#ACT
+MAPMOVE 齐天大陆 67 39
+SENDMSG 0 {[世界消息]:|151:0:1}大神「{<$USERNAME>|250:0:1}」成功进入全新地图:{「<$MapTitle>」|254:0:1}
+BREAK

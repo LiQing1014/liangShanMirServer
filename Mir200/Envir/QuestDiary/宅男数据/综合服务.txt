@@ -1,0 +1,648 @@
+(@@sendmsg @storage @getback)
+[@综合服务4]
+{
+#IF
+#ACT
+OPENMERCHANTBIGDLG 34 22 1 0 0 20 1 350 0
+#SAY
+<ImgEx:1:5:5:6:360:-16/@EXIT>\  \
+　<万事通/SCOLOR=19> <尊敬的玩家,您好。/SCOLOR=151> <〖欢迎使用综合服务〗/SCOLOR=87>\
+<---------------------------------------------------------/AUTOCOLOR=90>\ \ \ 
+
+
+<>      <武器幸运/@武器幸运>         <我想转职√/@转职>          <我要变性√/@性别变更> \ \ 
+<>               <消息屏蔽/@消息屏蔽>    \  
+
+<---------------------------------------------------------/AUTOCOLOR=90>\
+
+
+[@消息屏蔽]
+
+#IF
+CHECK [350] 0
+#ACT
+SET [350] 1
+FILTERGLOBALMSG 1
+MESSAGEBOX \　\　\[开启]过滤全服提示信息
+
+#ELSEACT
+SET [350] 0
+FILTERGLOBALMSG 0
+MESSAGEBOX \　\　\[关闭]过滤全服提示信息
+
+
+
+
+
+
+
+
+[@武器幸运]
+#IF
+#ACT
+close
+#say
+<><武器幸运+8/SCOLOR=100>　 <需要：元宝10万  50%成功/SCOLOR=160>  <失败不掉幸运/SCOLOR=250>   \ 
+<><武器幸运+9/SCOLOR=132> 　<需要：元宝10万  40%成功/SCOLOR=160>  <失败不掉幸运/SCOLOR=250>   \ 
+<><武器幸运+10/SCOLOR=150>　<需要：元宝10万  30%成功/SCOLOR=160>  <失败几率掉幸运/SCOLOR=249>   \ 
+<><武器幸运+11/SCOLOR=250>  <需要：元宝10万  20%成功/SCOLOR=160>  <失败几率掉幸运/SCOLOR=249>   \ 
+<><武器幸运+12/SCOLOR=253>　<需要：元宝10万  10%成功/SCOLOR=160>  <失败几率掉幸运/SCOLOR=249>   \ 
+<><武器幸运+13/SCOLOR=254>　<需要：元宝10万   5%成功/SCOLOR=160>  <失败几率掉幸运/SCOLOR=249> <直升运13|249#花费2888大米直接提升幸运13^-^250#提示：幸运+13自带1.20倍攻击/@直升运13>\ 
+<><幸运+11点触发/SCOLOR=230><1.05倍//SCOLOR=250>   <幸运+12点/SCOLOR=230><1.10倍/SCOLOR=253>  <幸运+13点/SCOLOR=230><1.20倍/SCOLOR=254>\ 
+\<本服运10触发最高伤害，超级祝福油最高+7幸运，运11以上触发倍攻/SCOLOR=12> 
+\                 <提升武器幸运/@提升武器幸运>                 <幸运转移|250#武器幸运13才能转移^-^255#幸运13永久免费转移/@幸运转移>
+
+
+
+
+
+
+
+[@幸运转移]
+
+#IF
+NOT CHECKUSEITEM 1
+#ACT
+MessageBox 对不起，请先将您的武器带上才能转移！！！
+break
+
+
+#IF
+CheckItemAddValue 1 3 < 13
+#act 
+messagebox 对不起，您没有幸运+13的武器
+break
+
+
+#IF
+#ACT
+#SAY
+<将要转移幸运的武器穿戴在身上/SCOLOR=161>\
+<将要接收幸运转移的武器放入下面物品框内/SCOLOR=161>\
+<ITEMBOX:5:0:117:160:20:36:36:5,6:请放入接收幸运的武器> \ \ \ \ \
+<                          ><确定转移|254#转移不收费用/@确定转移>
+
+[@确定转移]
+#IF
+NOT EQUAL <$BOXITEM[5].STDMODE> 5
+NOT EQUAL <$BOXITEM[5].STDMODE> 6
+#ACT
+ReturnBoxItem 5
+MESSAGEBOX 请放入待接收转移的武器！
+BREAK
+
+#IF
+NOT CHECKUSEITEM 1
+#ACT
+MessageBox 对不起，请先将您的武器带上才能转移！！！
+break
+
+#IF
+Checkitemw 首充玫瑰 1
+#ACT
+messagebox 对不起，首充玫瑰不能加幸运，请换其他武器来
+break
+
+
+
+
+
+#IF
+CheckItemAddValue 1 3 > 12
+#ACT
+SetUpgradeItem 5
+CHANGEITEMADDVALUE 1 3 = 0
+CHANGEITEMADDVALUE -1 3 = 13
+UpDateBoxItem 5
+ReturnBoxItem 5
+MESSAGEBOX 恭喜您，武器的幸运成功转移！
+break
+#ELSEACT
+MESSAGEBOX 你身上佩戴的武器是运13吗？
+BREAK
+
+
+
+
+
+
+[@直升运13]  
+
+#IF
+Checkitemw 首充玫瑰 1
+#ACT
+messagebox 对不起，首充玫瑰不能加幸运，请换其他武器来
+break
+
+
+
+
+#or
+CheckItemAddValue 1 3 = 13 
+CheckItemAddValue 1 3 > 12 
+#act 
+messagebox 对不起，您的武器已经是幸运+13了
+break
+
+
+
+#IF
+CheckItemAddValue 1 3 < 7
+#act 
+messagebox 对不起，您没有幸运+7的武器
+break
+
+
+#IF
+NOT CHECKUSEITEM 1
+#ACT
+MessageBox 对不起，请先将您的武器带上才能加幸运！！！
+break
+
+#IF
+CHECKGAMEPOINT < 2888
+#ACT
+MessageBox 对不起，您没有2888大米，无法提升！！！
+break
+
+
+#IF
+CHECKGAMEPOINT > 2887
+#ACT
+GAMEPOINT - 2888
+sendmsg 0  恭喜玩家【%s】在幸运之家把自己的武器提升到了幸运+13
+CHANGEITEMADDVALUE 1 3 = 13
+SENDMSG 5 武器被加幸运了... 
+messagebox 恭喜你，武器成功提升到幸运+13了！！！
+#CALL [\游戏登陆\属性加成.txt] @属性设置
+break
+
+
+
+[@提升武器幸运]  
+
+
+#IF
+Checkitemw 首充玫瑰 1
+#ACT
+messagebox 对不起，首充玫瑰不能加幸运，请换其他武器来
+break
+
+
+#IF
+NOT CHECKUSEITEM 1
+#ACT
+MessageBox 对不起，请先将您的武器带上才能加幸运！！！
+break
+
+
+#IF
+CheckItemAddValue 1 3 < 7
+#act 
+messagebox 对不起，您没有幸运+7的武器
+break
+
+
+#or
+CheckItemAddValue 1 3 = 13 
+CheckItemAddValue 1 3 > 12 
+#act 
+messagebox 对不起，您的武器已经是幸运+13了
+break
+
+#if
+CHECKGAMEGOLD < 100000
+#act 
+messagebox 对不起，您包袱里没有10万元宝，提升失败！！！
+break
+
+#if
+RANDOM 15
+CheckItemAddValue 1 3 = 12
+#ACT
+GAMEGOLD - 100000
+sendmsg 0  恭喜玩家【%s】在幸运之家把自己的武器提升到了幸运+13
+CHANGEITEMADDVALUE 1 3 + 1
+SENDMSG 5 武器被加幸运了... 
+messagebox 恭喜你，武器成功提升到幸运+13了！！！
+#CALL [\游戏登陆\属性加成.txt] @属性设置
+break
+
+#if
+RANDOM 5
+CheckItemAddValue 1 3 = 11
+#ACT
+GAMEGOLD - 100000
+sendmsg 0  恭喜玩家【%s】在幸运之家把自己的武器提升到了幸运+12
+CHANGEITEMADDVALUE 1 3 + 1
+SENDMSG 5 武器被加幸运了... 
+messagebox 恭喜你，武器成功提升到幸运+12了！！！
+#CALL [\游戏登陆\属性加成.txt] @属性设置
+break
+
+#if
+RANDOM 4
+CheckItemAddValue 1 3 = 10
+#ACT
+GAMEGOLD - 100000
+sendmsg 0  恭喜玩家【%s】在幸运之家把自己的武器提升到了幸运+11
+CHANGEITEMADDVALUE 1 3 + 1
+SENDMSG 5 武器被加幸运了... 
+messagebox 恭喜你，武器成功提升到幸运+11了！！！
+#CALL [\游戏登陆\属性加成.txt] @属性设置
+break
+
+
+#if
+RANDOM 2
+CheckItemAddValue 1 3 = 9
+#ACT
+GAMEGOLD - 100000
+sendmsg 0  恭喜玩家【%s】在幸运之家把自己的武器提升到了幸运+10
+CHANGEITEMADDVALUE 1 3 + 1
+SENDMSG 5 武器被加幸运了... 
+messagebox 恭喜你，武器成功提升到幸运+10了！！！
+#CALL [\游戏登陆\属性加成.txt] @属性设置
+break
+
+#if
+RANDOM 2
+CheckItemAddValue 1 3 = 8
+#ACT
+GAMEGOLD - 100000
+sendmsg 0  恭喜玩家【%s】在幸运之家把自己的武器提升到了幸运+9
+CHANGEITEMADDVALUE 1 3 + 1
+SENDMSG 5 武器被加幸运了... 
+messagebox 恭喜你，武器成功提升到幸运+9了！！！
+break
+
+
+#if
+RANDOM 2
+CheckItemAddValue 1 3 = 7
+#ACT
+GAMEGOLD - 100000
+sendmsg 0  恭喜玩家【%s】在幸运之家把自己的武器提升到了幸运+8
+CHANGEITEMADDVALUE 1 3 + 1
+SENDMSG 5 武器被加幸运了... 
+messagebox 恭喜你，武器成功提升到幸运+8了！！！
+break
+
+#if
+CheckItemAddValue 1 3 > 9
+RANDOM 2
+#ACT
+GAMEGOLD - 100000
+CHANGEITEMADDVALUE 1 3 - 1
+SENDMSG 5 你的武器被诅咒了!!!
+messagebox 对不起，你的武器被诅咒幸运-1
+#CALL [\游戏登陆\属性加成.txt] @属性设置
+BREAK
+
+
+
+#if
+#ACT
+GAMEGOLD - 100000
+SENDMSG 7 对不起，武器升级幸运失败，请再接再厉... 
+break
+
+
+
+
+
+
+
+
+[@性别变更]
+#IF
+gender man
+#SAY
+<变性服务/SCOLOR=168>   \
+<阴阳师/SCOLOR=19> <尊敬的玩家,您好。/SCOLOR=151> <〖欢迎使用变性服务〗/SCOLOR=87>\
+<--------------------------------------------------------------/AUTOCOLOR=90>\
+<是不是做男人没什么意思呀，想不想尝尝做女人的味道呀！！/SCOLOR=156>\
+<好了，辛亏上天冥怜有我这个人来帮你，不用担心，手术一眨眼就/SCOLOR=155>\
+<好了，你丝毫感觉不到疼痛的,那我们现在就开始吧。。。/SCOLOR=145>\
+<变性手术需要收费5000元宝的哦……/SCOLOR=147>\
+<--------------------------------------------------------------/AUTOCOLOR=90>\
+<√变成女的/@nvde>                                       <关闭对话×/@exit>\ 
+<--------------------------------------------------------------/AUTOCOLOR=90>\
+#ELSESAY
+<变性服务/SCOLOR=168>   \
+<阴阳师/SCOLOR=19> <尊敬的玩家,您好。/SCOLOR=151> <〖欢迎使用变性服务〗/SCOLOR=87>\
+<--------------------------------------------------------------/AUTOCOLOR=90>\
+<是不是做女人没什么意思呀，想不想尝尝做男人的味道呀！！/SCOLOR=156>\
+<好了，辛亏上天冥怜有我这个人来帮你，不用担心，手术一眨眼就/SCOLOR=155>\
+<好了，你丝毫感觉不到疼痛的,那我们现在就开始吧。。。/SCOLOR=145>\
+<变性手术需要收费5000元宝的哦……/SCOLOR=147>\
+<--------------------------------------------------------------/AUTOCOLOR=90>\
+<√变成男的/@nande>                                       <关闭对话×/@exit>\ 
+
+[@nvde]
+#IF
+CHECKGAMEGOLD > 4999
+#ACT
+CHANGEGENDER 1
+GAMEGOLD - 5000
+messagebox \\恭喜阁下，手术非常的成功，你已经变成一位女人了！
+#elseact
+messagebox \\阁下，变性手术需要准备5000元宝哦！
+[@nande]
+#IF
+CHECKGAMEGOLD > 4999
+#ACT
+CHANGEGENDER 0
+GAMEGOLD - 5000
+messagebox \\恭喜阁下，手术非常的成功，你已经变成一位男人了！
+#elseact
+messagebox \\阁下，变性手术需要准备5000元宝哦！
+break
+
+
+
+
+
+
+;-----------------------------------------[职业变更]----------------------------------------
+[@转职]
+#IF
+CHECK [2] 1
+#ACT
+close
+#SAY
+<万事通/SCOLOR=19> <尊敬的玩家,您好。/SCOLOR=151> <〖欢迎使用转职服务〗/SCOLOR=87>\
+<〖转职服务〗/SCOLOR=89>：{[<$USERNAME>]/AUTOCOLOR=253}<您好！需要转职吗？/SCOLOR=254>\
+<--------------------------------------------------------------/SCOLOR=89>\
+<1、转职后保留你现有的级别，各项技能会全部删除，包括新技能！/SCOLOR=156>\
+<提示：/SCOLOR=242><转职以后各项技能会全部删除，包括新技能!/SCOLOR=249>\
+<2、目前转职需要支付5000元宝，才可顺利转职/SCOLOR=145>\
+<快去体验那完全不一样的职业给你带来的快感吧！/SCOLOR=147>\
+<--------------------------------------------------------------/SCOLOR=89>\
+　　  <√我要开始转职/@我确定转职>　　　　    　　  <√转职护体重练/@转职技能>　\
+#elseACT
+close
+#elsesay
+<万事通/SCOLOR=19> <尊敬的玩家,您好。/SCOLOR=151> <〖欢迎使用转职服务〗/SCOLOR=87>\
+<〖转职服务〗/SCOLOR=89>：{[<$USERNAME>]/AUTOCOLOR=253}<您好！需要转职吗？/SCOLOR=254>\
+<--------------------------------------------------------------/SCOLOR=89>\
+<1、转职后保留你现有的级别，各项技能会全部删除，包括新技能！/SCOLOR=156>\
+<提示：/SCOLOR=242><转职以后各项技能会全部删除，包括新技能!/SCOLOR=249>\
+<2、目前转职需要支付5000元宝，才可顺利转职/SCOLOR=145>\
+<快去体验那完全不一样的职业给你带来的快感吧！/SCOLOR=147>\
+<--------------------------------------------------------------/SCOLOR=89>\
+　　<√确定转职/@我确定转职>　　　　　　　      　    <关闭对话×/@EXIT>　\
+
+
+[@转职技能]
+#IF
+#ACT
+close
+#SAY
+<万事通/SCOLOR=19> <尊敬的玩家,您好。/SCOLOR=151> <〖欢迎使用技能重练服务〗/SCOLOR=87>\
+<〖技能重练〗/SCOLOR=89>：{[<$USERNAME>]/AUTOCOLOR=253}<您好！需要重新修炼神技吗？/SCOLOR=254>\
+<--------------------------------------------------------------/SCOLOR=89>\
+<1、转职后保留你现有的级别，各项技能会全部删除，包括新技能！/SCOLOR=156>\
+<提示：/SCOLOR=242><转职以后各项技能会全部删除，包括新技能!/SCOLOR=249>\ \
+<2、已经学习过护体神盾的玩家，转职后可重新修炼护体神盾技能！/SCOLOR=253>\
+<--------------------------------------------------------------/SCOLOR=89>\
+　　<√开始修炼护体神盾/@修炼护体神盾>　　　　　　　      　    <关闭对话×/@EXIT>　\
+
+　
+[@我确定转职]
+#if
+checkjob warrior
+#say
+<--------------------------------------------------------------/AUTOCOLOR=90>\
+<作为战士您是否已经厌倦了烈火和半月呢？为了让您自由的发挥，/SCOLOR=254>\
+<先看清楚下面的需知：/SCOLOR=242>\ 
+<一：转职需要5000元宝，等级大于50级/SCOLOR=156>\
+<二：基转职以后需要重新练习技能哦,我们会删除您以前所有修炼的技能！/SCOLOR=155>\
+<三：请认真考虑清楚之后在转职业哦！不然失去的东西是回不来的！/SCOLOR=145>\
+<注意：/SCOLOR=242><转职以后各项技能会全部删除，包括新技能!!/SCOLOR=253>\
+<--------------------------------------------------------------/AUTOCOLOR=90>\
+<√转职成法师/@法师>   <√转职成道士/@道士>                        <关闭对话×/@EXIT>\
+#if
+checkjob wizard
+#say
+<--------------------------------------------------------------/AUTOCOLOR=90>\
+<作为法师您是否不再喜欢闪电和冰咆哮了呢？为了让您自由的发挥，/SCOLOR=254>\
+<先看清楚下面的需知：/SCOLOR=242>\ 
+<一：转职需要5000元宝，等级大于50级/SCOLOR=156>\
+<二：基转职以后需要重新练习技能哦,我们会删除您以前所有修炼的技能！/SCOLOR=155>\
+<三：请认真考虑清楚之后在转职业哦！不然失去的东西是回不来的！/SCOLOR=145>\
+<注意：/SCOLOR=242><转职以后各项技能会全部删除，包括新技能!/SCOLOR=253>\
+<--------------------------------------------------------------/AUTOCOLOR=90>\
+<√转职成战士/@战士>   <√转职成道士/@道士1>                        <关闭对话×/@EXIT>\
+#if
+checkjob taoist
+#say
+<--------------------------------------------------------------/AUTOCOLOR=90>\
+<作为道士您是否不在只想做为别人的配角只放宝宝和打防了呢？/SCOLOR=254>\
+<先看清楚下面的需知：/SCOLOR=242>\ 
+<一：转职需要5000元宝，等级大于50级/SCOLOR=156>\
+<二：基转职以后需要重新练习技能哦,我们会删除您以前所有修炼的技能！/SCOLOR=155>\
+<三：请认真考虑清楚之后在转职业哦！不然失去的东西是回不来的！/SCOLOR=145>\
+<注意：/SCOLOR=242><转职以后各项技能会全部删除，包括新技能!!/SCOLOR=253> \
+<--------------------------------------------------------------/AUTOCOLOR=90>\
+<√转职成战士/@战士1>   <√转职成法师/@法师1>                        <关闭对话×/@EXIT>\
+
+[@修炼护体神盾]
+#IF
+CHECKSKILL 护体神盾 = 3
+#ACT
+SENDMSG 6 您已经学习了此技能，无需重复学习！
+break
+
+#IF
+CHECK [2] 1
+#ACT
+ADDSKILL 护体神盾 3
+SENDMSG 0 151 58 技能大师ぐ：恭喜玩家「%s」成功修炼<护><体><神><盾>！
+SENDMSG 0 151 58 技能大师ぐ：恭喜玩家「%s」成功修炼<护><体><神><盾>！
+break
+#ELSEACT
+MESSAGEBOX \\修炼失败:原因如下\\　　　　1.您的条件不足！
+break
+
+[@道士]
+#IF
+checkgamegold > 4999
+#act
+GAMEGOLD - 5000
+CLEARSKILL
+CHANGEJOB Taoist
+ADDSKILL 治愈术 3
+ADDSKILL 精神力战法 3
+ADDSKILL 施毒术 3
+ADDSKILL 灵魂火符 3
+ADDSKILL 幽灵盾 3
+ADDSKILL 神圣战甲术 3
+ADDSKILL 隐身术 3
+ADDSKILL 集体隐身术 3
+ADDSKILL 心灵启示 3
+ADDSKILL 困魔咒 3
+ADDSKILL 群体治愈术 3
+ADDSKILL 召唤骷髅 3
+ADDSKILL 召唤神兽 3
+ADDSKILL 心灵召唤 3
+ADDSKILL 召唤龙卫 3
+GOTO @转职清空1
+LOGOUT
+messagebox \\恭喜您！转职成功，您现在是：一位神圣的道士了！
+#ELSEACT
+messagebox \\[错误]：你没有10000元宝支付转职费用！
+BREAK
+
+
+[@法师]
+#IF
+checkgamegold > 4999
+#act
+GAMEGOLD - 5000
+CLEARSKILL
+CHANGEJOB Wizard
+ADDSKILL 火球术 3
+ADDSKILL 大火球 3
+ADDSKILL 地狱火 3
+ADDSKILL 雷电术 3
+ADDSKILL 爆裂火焰 3
+ADDSKILL 抗拒火环 3
+ADDSKILL 疾光电影 3
+ADDSKILL 诱惑之光 3
+ADDSKILL 瞬息移动 3
+ADDSKILL 火墙 3
+ADDSKILL 地狱雷光 3
+ADDSKILL 魔法盾 3
+ADDSKILL 圣言术 3
+ADDSKILL 冰咆哮 3
+ADDSKILL 心灵召唤 3
+ADDSKILL 召唤龙卫 3
+GOTO @转职清空2
+LOGOUT
+messagebox \\恭喜您！转职成功，您现在是：一位神秘的魔法师了！
+#ELSEACT
+messagebox \\[错误]：你没有10000元宝支付转职费用！
+break
+
+
+[@战士]
+#IF
+checkgamegold > 4999
+#act
+GAMEGOLD - 5000
+CLEARSKILL
+CHANGEJOB Warrior
+ADDSKILL 基本剑术 3
+ADDSKILL 攻杀剑术 3
+ADDSKILL 刺杀剑术 3
+ADDSKILL 半月弯刀 3
+ADDSKILL 野蛮冲撞 3
+ADDSKILL 烈火剑法 3
+ADDSKILL 心灵召唤 3
+ADDSKILL 召唤龙卫 3
+GOTO @转职清空3
+LOGOUT
+messagebox \\恭喜您！转职成功，您现在是：一位伟大的战士了！
+#ELSEACT
+messagebox \\[错误]：你没有10000元宝支付转职费用！
+break
+
+
+[@道士1]
+#IF
+checkgamegold > 4999
+#act
+GAMEGOLD - 5000
+CLEARSKILL
+CHANGEJOB Taoist
+ADDSKILL 治愈术 3
+ADDSKILL 精神力战法 3
+ADDSKILL 施毒术 3
+ADDSKILL 灵魂火符 3
+ADDSKILL 幽灵盾 3
+ADDSKILL 神圣战甲术 3
+ADDSKILL 隐身术 3
+ADDSKILL 集体隐身术 3
+ADDSKILL 心灵启示 3
+ADDSKILL 困魔咒 3
+ADDSKILL 群体治愈术 3
+ADDSKILL 召唤骷髅 3
+ADDSKILL 召唤神兽 3
+ADDSKILL 心灵召唤 3
+ADDSKILL 召唤龙卫 3
+GOTO @转职清空4
+LOGOUT
+messagebox \\恭喜您！转职成功，您现在是：一位神圣的道士了！
+#ELSEACT
+messagebox \\[错误]：你没有10000元宝支付转职费用！
+BREAK
+
+
+[@法师1]
+#IF
+checkgamegold > 4999
+#act
+GAMEGOLD - 5000
+CLEARSKILL
+CHANGEJOB Wizard
+ADDSKILL 火球术 3
+ADDSKILL 大火球 3
+ADDSKILL 地狱火 3
+ADDSKILL 雷电术 3
+ADDSKILL 爆裂火焰 3
+ADDSKILL 抗拒火环 3
+ADDSKILL 疾光电影 3
+ADDSKILL 诱惑之光 3
+ADDSKILL 瞬息移动 3
+ADDSKILL 火墙 3
+ADDSKILL 地狱雷光 3
+ADDSKILL 魔法盾 3
+ADDSKILL 圣言术 3
+ADDSKILL 冰咆哮 3
+ADDSKILL 心灵召唤 3
+ADDSKILL 召唤龙卫 3
+GOTO @转职清空5
+LOGOUT
+messagebox \\恭喜您！转职成功，您现在是：一位神秘的魔法师了！
+#ELSEACT
+messagebox \\[错误]：你没有10000元宝支付转职费用！
+break
+
+
+[@战士1]
+#IF
+checkgamegold > 4999
+#act
+GAMEGOLD - 5000
+CLEARSKILL
+CHANGEJOB Warrior
+ADDSKILL 基本剑术 3
+ADDSKILL 攻杀剑术 3
+ADDSKILL 刺杀剑术 3
+ADDSKILL 半月弯刀 3
+ADDSKILL 野蛮冲撞 3
+ADDSKILL 烈火剑法 3
+ADDSKILL 心灵召唤 3
+ADDSKILL 召唤龙卫 3
+LOGOUT
+messagebox \\恭喜您！转职成功，您现在是：一位伟大的战士了！
+#ELSEACT
+messagebox \\[错误]：你没有10000元宝支付转职费用！
+break
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

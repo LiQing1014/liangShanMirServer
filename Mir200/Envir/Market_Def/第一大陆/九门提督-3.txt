@@ -1,0 +1,47 @@
+[@main]
+#IF
+#ACT
+#SAY
+; <【神威狱】/FCOLOR=254>  <Hot~/FCOLOR=249>                 <每日开启一次狱之大门！/AUTOCOLOR=253>\  \
+; <神威狱，乃上古时期用来禁锢封印大妖魔的神秘存在./FCOLOR=249>\  
+; <但是最近封印的大妖魔变得极不稳定！封印也不再坚不可破开始松动/FCOLOR=249>\ \
+; <神威狱共1层，每日22点30分准时开启，大门开启时间20分钟/FCOLOR=250>\  
+; <地图刷新终极BOSS“神狱之主”，异常凶猛，实力不够不要去送死/FCOLOR=250>\    \
+
+; <>                                       <进入神威狱/@qdc1>         \  \
+
+<Img|width=620|height=300|img=public/bg_npc_01.png|bg=1|scale9r=10|scale9t=10|scale9b=10|reset=1|scale9l=10|move=0>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=60|tipsx=10|tipsy=80|color=254|size=18|text=【神威狱】>
+<Text|a=0|x=142|y=60|tipsx=10|tipsy=80|color=249|size=18|text=Hot~>
+<Text|a=0|x=186|y=60|tips=|tipsx=10|tipsy=80|color=253|size=18|text=每日开启一次狱之大门！>
+<Text|a=0|x=32|y=100|tipsx=10|tipsy=80|color=249|size=18|text=神威狱，乃上古时期用来禁锢封印大妖魔的神秘存在.>
+<Text|a=0|x=32|y=120|tipsx=10|tipsy=80|color=249|size=18|text=但是最近封印的大妖魔变得极不稳定！封印也不再坚不可破开始松动>
+<Text|a=0|x=32|y=160|tipsx=10|tipsy=80|color=250|size=18|text=神威狱共1层，每日22点30分准时开启，大门开启时间20分钟>
+<Text|a=0|x=32|y=180|tipsx=10|tipsy=80|color=250|size=18|text=地图刷新终极BOSS“神狱之主”，异常凶猛，实力不够不要去送死>
+<Text|a=0|x=32|y=220|tipsx=10|tipsy=80|color=251|size=18|text=进入神威狱|link=@qdc1>
+
+
+[@qdc1]
+#IF
+HOUR 22 22
+MIN  30 50
+#ACT
+GOTO @xueses
+break
+#ELSEACT
+MessageBox 狱之大门没有开启，22点30可以进入，22点50大门关闭!!
+break
+
+[@xueses]
+#IF
+HOUR 22 22
+MIN 30 50
+#ACT
+mapmove MT1
+GuildNoticeMsg 251 249 少侠{「<$USERNAME>」|227:0:1}进入“神威狱”，希望他还能活着回来！
+break
+
+
+

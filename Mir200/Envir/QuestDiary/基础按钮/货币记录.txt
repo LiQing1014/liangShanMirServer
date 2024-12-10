@@ -1,0 +1,15 @@
+[@货币]
+{
+#IF
+Equal <$CLIENTFLAG> 2
+#ACT
+MOV S$底部货币 <Button|x=176|y=-31|width=35|height=35|nimg=item/item_5/000001.png|tipsx=150|tipsy=5|tips={元宝/FCOLOR=251}^玛法大陆流通的一种稀缺货币。可用于购^买多种{稀有道具/FCOLOR=250}^可通过{装备回收/FCOLOR=250}获得^绑定元宝无法在拍卖行使用|link=@空>
+INC S$底部货币 <Img|children={1a}|x=210|y=-22|width=120|height=22|img=private/main/124.png>
+INC S$底部货币 <Text|id=1a|a=4|x=60|y=10|color=255|outline=2|outlinecolor=0|size=16|simplenum=1|text=$STM(ITEMCOUNT_2)>
+INC S$底部货币 <Button|x=336|y=-31|width=34|height=34|nimg=item/item_5/000253.png|tipsx=-145|tipsy=0|tips={元宝/FCOLOR=251}^玛法大陆流通的一种稀缺货币。可用于购^买多种{稀有道具/FCOLOR=250}^可通过{装备回收/FCOLOR=250}获得^绑定元宝无法在拍卖行使用|link=@空>
+INC S$底部货币 <Img|children={1b}|x=370|y=-22|width=120|height=22|img=private/main/124.png>
+INC S$底部货币 <Text|id=1b|a=4|x=60|y=10|color=255|outline=2|outlinecolor=0|size=16|simplenum=1|text=$STM(ITEMCOUNT_4)>
+ADDBUTTON 108 7 <$STR(S$底部货币)>
+; ADDBUTTON 101 20 <$STR(S$底部货币)>
+
+}

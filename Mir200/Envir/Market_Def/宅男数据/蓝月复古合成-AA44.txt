@@ -1,0 +1,3821 @@
+[@main]
+
+
+
+#IF
+CHECKLEVELEX < 75
+#ACT
+messagebox 对不起，你当前的实力还差得远，请先到75级在找我!
+break
+
+
+#IF
+#ACT
+MOV N$二级合成武器数量 2
+MOV S$二级合成武器材料 命运莲花
+MOV N$二级合成武器材料 30
+MOV N$二级合成武器大米 8888
+
+
+MOV N$二级合成衣服数量 2
+MOV S$二级合成衣服材料 命运莲花
+MOV N$二级合成衣服材料 30
+MOV N$二级合成衣服大米 8888
+
+MOV N$二级合成首饰数量 2
+MOV S$二级合成首饰材料 命运莲花
+MOV N$二级合成首饰材料 10
+MOV N$二级合成首饰大米 5888
+
+
+MOV N$大米合成武器数量 1
+MOV S$大米合成武器材料 命运莲花
+MOV N$大米合成武器材料 30
+MOV N$大米合成武器大米 8888
+
+
+MOV N$大米合成衣服数量 1
+MOV S$大米合成衣服材料 命运莲花
+MOV N$大米合成衣服材料 30
+MOV N$大米合成衣服大米 8888
+
+MOV N$大米合成首饰数量 1
+MOV S$大米合成首饰材料 命运莲花
+MOV N$大米合成首饰材料 10
+MOV N$大米合成首饰大米 5888
+
+
+
+#IF
+#ACT
+close
+OPENMERCHANTBIGDLG 1 567 1 4 0 0 1 633 0
+#say
+; \
+
+
+; \<><蓝月复古锻造：/SCOLOR=254><BOSS等系列怪物有超低几率爆出，不过建议合成.../SCOLOR=249>\ \
+
+	
+; \<----------------------------------------------散人锻造----------------------------------------------/SCOLOR=161>  \ \
+; \<> <战士锻造：/SCOLOR=250><蓝月复古·神斩|249#锻造条件：^-^250#1.无双武器随意*<$STR(N$二级合成武器数量)>把^-^250#2.<$STR(S$二级合成武器材料)>*<$STR(N$二级合成武器材料)>/@材料锻造蓝月复古·神斩>
+; <>   <蓝月复古·战甲|249#锻造条件：^-^250#1.无双衣服随意*<$STR(N$二级合成衣服数量)>件^-^250#2.<$STR(S$二级合成衣服材料)>*<$STR(N$二级合成衣服材料)>/@材料锻造蓝月复古·战甲>
+; <>   <蓝月复古·战衣|249#锻造条件：^-^250#1.无双衣服随意*<$STR(N$二级合成衣服数量)>件^-^250#2.<$STR(S$二级合成衣服材料)>*<$STR(N$二级合成衣服材料)>/@材料锻造蓝月复古·战衣>
+; <>   <蓝月复古·战盔|249#锻造条件：^-^250#1.无双首饰随意*<$STR(N$二级合成首饰数量)>件^-^250#2.<$STR(S$二级合成首饰材料)>*<$STR(N$二级合成首饰材料)>/@材料锻造蓝月复古·战盔>
+; <>   <蓝月复古·战链|249#锻造条件：^-^250#1.无双首饰随意*<$STR(N$二级合成首饰数量)>件^-^250#2.<$STR(S$二级合成首饰材料)>*<$STR(N$二级合成首饰材料)>/@材料锻造蓝月复古·战链>\ \
+; <>           <蓝月复古·战镯|249#锻造条件：^-^250#1.无双首饰随意*<$STR(N$二级合成首饰数量)>件^-^250#2.<$STR(S$二级合成首饰材料)>*<$STR(N$二级合成首饰材料)>/@材料锻造蓝月复古·战镯> 
+; <>   <蓝月复古·战戒|249#锻造条件：^-^250#1.无双首饰随意*<$STR(N$二级合成首饰数量)>件^-^250#2.<$STR(S$二级合成首饰材料)>*<$STR(N$二级合成首饰材料)>/@材料锻造蓝月复古·战戒>
+; <>   <蓝月复古·战带|249#锻造条件：^-^250#1.无双首饰随意*<$STR(N$二级合成首饰数量)>件^-^250#2.<$STR(S$二级合成首饰材料)>*<$STR(N$二级合成首饰材料)>/@材料锻造蓝月复古·战带>
+; <>   <蓝月复古·战靴|249#锻造条件：^-^250#1.无双首饰随意*<$STR(N$二级合成首饰数量)>件^-^250#2.<$STR(S$二级合成首饰材料)>*<$STR(N$二级合成首饰材料)>/@材料锻造蓝月复古·战靴> \ \
+
+; \<> <法师锻造：/SCOLOR=250><蓝月复古·魔杖|249#锻造条件：^-^250#1.无双武器随意*<$STR(N$二级合成武器数量)>把^-^250#2.<$STR(S$二级合成武器材料)>*<$STR(N$二级合成武器材料)>/@材料锻造蓝月复古·魔杖>
+; <>   <蓝月复古·魔袍|249#锻造条件：^-^250#1.无双衣服随意*<$STR(N$二级合成衣服数量)>件^-^250#2.<$STR(S$二级合成衣服材料)>*<$STR(N$二级合成衣服材料)>/@材料锻造蓝月复古·魔袍>
+; <>   <蓝月复古·魔衣|249#锻造条件：^-^250#1.无双衣服随意*<$STR(N$二级合成衣服数量)>件^-^250#2.<$STR(S$二级合成衣服材料)>*<$STR(N$二级合成衣服材料)>/@材料锻造蓝月复古·魔衣>
+; <>   <蓝月复古·魔盔|249#锻造条件：^-^250#1.无双首饰随意*<$STR(N$二级合成首饰数量)>件^-^250#2.<$STR(S$二级合成首饰材料)>*<$STR(N$二级合成首饰材料)>/@材料锻造蓝月复古·魔盔>
+; <>   <蓝月复古·魔链|249#锻造条件：^-^250#1.无双首饰随意*<$STR(N$二级合成首饰数量)>件^-^250#2.<$STR(S$二级合成首饰材料)>*<$STR(N$二级合成首饰材料)>/@材料锻造蓝月复古·魔链>\ \
+; <>           <蓝月复古·魔镯|249#锻造条件：^-^250#1.无双首饰随意*5件^-^250#2.<$STR(S$二级合成首饰材料)>*<$STR(N$二级合成首饰材料)>/@材料锻造蓝月复古·魔镯> 
+; <>   <蓝月复古·魔戒|249#锻造条件：^-^250#1.无双首饰随意*<$STR(N$二级合成首饰数量)>件^-^250#2.<$STR(S$二级合成首饰材料)>*<$STR(N$二级合成首饰材料)>/@材料锻造蓝月复古·魔戒>
+; <>   <蓝月复古·魔带|249#锻造条件：^-^250#1.无双首饰随意*<$STR(N$二级合成首饰数量)>件^-^250#2.<$STR(S$二级合成首饰材料)>*<$STR(N$二级合成首饰材料)>/@材料锻造蓝月复古·魔带>
+; <>   <蓝月复古·魔靴|249#锻造条件：^-^250#1.无双首饰随意*<$STR(N$二级合成首饰数量)>件^-^250#2.<$STR(S$二级合成首饰材料)>*<$STR(N$二级合成首饰材料)>/@材料锻造蓝月复古·魔靴> \ \
+
+; \<> <道士锻造：/SCOLOR=250><蓝月复古·道刃|249#锻造条件：^-^250#1.无双武器随意*<$STR(N$二级合成武器数量)>把^-^250#2.<$STR(S$二级合成武器材料)>*<$STR(N$二级合成武器材料)>/@材料锻造蓝月复古·道刃>
+; <>   <蓝月复古·道袍|249#锻造条件：^-^250#1.无双衣服随意*<$STR(N$二级合成衣服数量)>件^-^250#2.<$STR(S$二级合成衣服材料)>*<$STR(N$二级合成衣服材料)>/@材料锻造蓝月复古·道袍>
+; <>   <蓝月复古·道衣|249#锻造条件：^-^250#1.无双衣服随意*<$STR(N$二级合成衣服数量)>件^-^250#2.<$STR(S$二级合成衣服材料)>*<$STR(N$二级合成衣服材料)>/@材料锻造蓝月复古·道衣>
+; <>   <蓝月复古·道盔|249#锻造条件：^-^250#1.无双首饰随意*<$STR(N$二级合成首饰数量)>件^-^250#2.<$STR(S$二级合成首饰材料)>*<$STR(N$二级合成首饰材料)>/@材料锻造蓝月复古·道盔>
+; <>   <蓝月复古·道链|249#锻造条件：^-^250#1.无双首饰随意*<$STR(N$二级合成首饰数量)>件^-^250#2.<$STR(S$二级合成首饰材料)>*<$STR(N$二级合成首饰材料)>/@材料锻造蓝月复古·道链>\ \
+; <>           <蓝月复古·道镯|249#锻造条件：^-^250#1.无双首饰随意*<$STR(N$二级合成首饰数量)>件^-^250#2.<$STR(S$二级合成首饰材料)>*<$STR(N$二级合成首饰材料)>/@材料锻造蓝月复古·道镯> 
+; <>   <蓝月复古·道戒|249#锻造条件：^-^250#1.无双首饰随意*<$STR(N$二级合成首饰数量)>件^-^250#2.<$STR(S$二级合成首饰材料)>*<$STR(N$二级合成首饰材料)>/@材料锻造蓝月复古·道戒>
+; <>   <蓝月复古·道带|249#锻造条件：^-^250#1.无双首饰随意*<$STR(N$二级合成首饰数量)>件^-^250#2.<$STR(S$二级合成首饰材料)>*<$STR(N$二级合成首饰材料)>/@材料锻造蓝月复古·道带>
+; <>   <蓝月复古·道靴|249#锻造条件：^-^250#1.无双首饰随意*<$STR(N$二级合成首饰数量)>件^-^250#2.<$STR(S$二级合成首饰材料)>*<$STR(N$二级合成首饰材料)>/@材料锻造蓝月复古·道靴> \ \
+
+
+
+
+; \<----------------------------------------------大米锻造----------------------------------------------/SCOLOR=253>  \ \
+; \<> <战士锻造：/SCOLOR=250><蓝月复古·神斩|249#锻造条件：^-^250#1.无双武器随意*<$STR(N$大米合成武器数量)>把^-^253#2.大米*<$STR(N$大米合成武器大米)>/@大米锻造蓝月复古·神斩>
+; <>   <蓝月复古·战甲|249#锻造条件：^-^250#1.无双衣服随意*<$STR(N$大米合成衣服数量)>件^-^253#2.大米*<$STR(N$大米合成衣服大米)>/@大米锻造蓝月复古·战甲>
+; <>   <蓝月复古·战衣|249#锻造条件：^-^250#1.无双衣服随意*<$STR(N$大米合成衣服数量)>件^-^253#2.大米*<$STR(N$大米合成衣服大米)>/@大米锻造蓝月复古·战衣>
+; <>   <蓝月复古·战盔|249#锻造条件：^-^250#1.无双首饰随意*<$STR(N$大米合成首饰数量)>件^-^253#2.大米*<$STR(N$大米合成首饰大米)>/@大米锻造蓝月复古·战盔>
+; <>   <蓝月复古·战链|249#锻造条件：^-^250#1.无双首饰随意*<$STR(N$大米合成首饰数量)>件^-^253#2.大米*<$STR(N$大米合成首饰大米)>/@大米锻造蓝月复古·战链>\ \
+; <>           <蓝月复古·战镯|249#锻造条件：^-^250#1.无双首饰随意*<$STR(N$大米合成首饰数量)>件^-^253#2.大米*<$STR(N$大米合成首饰大米)>/@大米锻造蓝月复古·战镯> 
+; <>   <蓝月复古·战戒|249#锻造条件：^-^250#1.无双首饰随意*<$STR(N$大米合成首饰数量)>件^-^253#2.大米*<$STR(N$大米合成首饰大米)>/@大米锻造蓝月复古·战戒>
+; <>   <蓝月复古·战带|249#锻造条件：^-^250#1.无双首饰随意*<$STR(N$大米合成首饰数量)>件^-^253#2.大米*<$STR(N$大米合成首饰大米)>/@大米锻造蓝月复古·战带>
+; <>   <蓝月复古·战靴|249#锻造条件：^-^250#1.无双首饰随意*<$STR(N$大米合成首饰数量)>件^-^253#2.大米*<$STR(N$大米合成首饰大米)>/@大米锻造蓝月复古·战靴> \ \
+
+; \<> <法师锻造：/SCOLOR=250><蓝月复古·魔杖|249#锻造条件：^-^250#1.无双武器随意*<$STR(N$大米合成武器数量)>把^-^253#2.大米*<$STR(N$大米合成武器大米)>/@大米锻造蓝月复古·魔杖>
+; <>   <蓝月复古·魔袍|249#锻造条件：^-^250#1.无双衣服随意*<$STR(N$大米合成衣服数量)>件^-^253#2.大米*<$STR(N$大米合成衣服大米)>/@大米锻造蓝月复古·魔袍>
+; <>   <蓝月复古·魔衣|249#锻造条件：^-^250#1.无双衣服随意*<$STR(N$大米合成衣服数量)>件^-^253#2.大米*<$STR(N$大米合成衣服大米)>/@大米锻造蓝月复古·魔衣>
+; <>   <蓝月复古·魔盔|249#锻造条件：^-^250#1.无双首饰随意*<$STR(N$大米合成首饰数量)>件^-^253#2.大米*<$STR(N$大米合成首饰大米)>/@大米锻造蓝月复古·魔盔>
+; <>   <蓝月复古·魔链|249#锻造条件：^-^250#1.无双首饰随意*<$STR(N$大米合成首饰数量)>件^-^253#2.大米*<$STR(N$大米合成首饰大米)>/@大米锻造蓝月复古·魔链>\ \
+; <>           <蓝月复古·魔镯|249#锻造条件：^-^250#1.无双首饰随意*<$STR(N$大米合成首饰数量)>件^-^253#2.大米*<$STR(N$大米合成首饰大米)>/@大米锻造蓝月复古·魔镯> 
+; <>   <蓝月复古·魔戒|249#锻造条件：^-^250#1.无双首饰随意*<$STR(N$大米合成首饰数量)>件^-^253#2.大米*<$STR(N$大米合成首饰大米)>/@大米锻造蓝月复古·魔戒>
+; <>   <蓝月复古·魔带|249#锻造条件：^-^250#1.无双首饰随意*<$STR(N$大米合成首饰数量)>件^-^253#2.大米*<$STR(N$大米合成首饰大米)>/@大米锻造蓝月复古·魔带>
+; <>   <蓝月复古·魔靴|249#锻造条件：^-^250#1.无双首饰随意*<$STR(N$大米合成首饰数量)>件^-^253#2.大米*<$STR(N$大米合成首饰大米)>/@大米锻造蓝月复古·魔靴> \ \
+
+; \<> <道士锻造：/SCOLOR=250><蓝月复古·道刃|249#锻造条件：^-^250#1.无双武器随意*<$STR(N$大米合成武器数量)>把^-^253#2.大米*<$STR(N$大米合成武器大米)>/@大米锻造蓝月复古·道刃>
+; <>   <蓝月复古·道袍|249#锻造条件：^-^250#1.无双衣服随意*<$STR(N$大米合成衣服数量)>件^-^253#2.大米*<$STR(N$大米合成衣服大米)>/@大米锻造蓝月复古·道袍>
+; <>   <蓝月复古·道衣|249#锻造条件：^-^250#1.无双衣服随意*<$STR(N$大米合成衣服数量)>件^-^253#2.大米*<$STR(N$大米合成衣服大米)>/@大米锻造蓝月复古·道衣>
+; <>   <蓝月复古·道盔|249#锻造条件：^-^250#1.无双首饰随意*<$STR(N$大米合成首饰数量)>件^-^253#2.大米*<$STR(N$大米合成首饰大米)>/@大米锻造蓝月复古·道盔>
+; <>   <蓝月复古·道链|249#锻造条件：^-^250#1.无双首饰随意*<$STR(N$大米合成首饰数量)>件^-^253#2.大米*<$STR(N$大米合成首饰大米)>/@大米锻造蓝月复古·道链>\ \
+; <>           <蓝月复古·道镯|249#锻造条件：^-^250#1.无双首饰随意*<$STR(N$大米合成首饰数量)>件^-^253#2.大米*<$STR(N$大米合成首饰大米)>/@大米锻造蓝月复古·道镯> 
+; <>   <蓝月复古·道戒|249#锻造条件：^-^250#1.无双首饰随意*<$STR(N$大米合成首饰数量)>件^-^253#2.大米*<$STR(N$大米合成首饰大米)>/@大米锻造蓝月复古·道戒>
+; <>   <蓝月复古·道带|249#锻造条件：^-^250#1.无双首饰随意*<$STR(N$大米合成首饰数量)>件^-^253#2.大米*<$STR(N$大米合成首饰大米)>/@大米锻造蓝月复古·道带>
+; <>   <蓝月复古·道靴|249#锻造条件：^-^250#1.无双首饰随意*<$STR(N$大米合成首饰数量)>件^-^253#2.大米*<$STR(N$大米合成首饰大米)>/@大米锻造蓝月复古·道靴> \ \  \
+
+
+
+; <>                            <注意：/AUTOCOLOR=249><合成的所有装备都有几率杀怪直接爆出来/AUTOCOLOR=161>  \
+
+
+
+<Img|x=-5.0|y=0.0|width=700|height=600|esc=1|move=0|bg=1|scale9t=10|scale9b=10|img=public_win32/bg_npc_01.png|show=4|loadDelay=1|scale9r=10|scale9l=10|reset=1>
+<Layout|x=667.0|y=-18.0|width=80|height=80|link=@exit>
+<Button|x=695.0|y=1.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<RText|x=24.0|y=20.0|color=249|size=16|text=<蓝月复古锻造：/FCOLOR=254><BOSS等系列怪物有超低几率爆出，不过建议合成.../FCOLOR=249>>
+<Text|x=258.0|y=51.0|color=251|size=16|text=散人锻造>
+<Img|x=-5.0|y=0.0|width=700|height=600|esc=1|move=0|bg=1|scale9t=10|scale9b=10|img=public_win32/bg_npc_01.png|show=4|loadDelay=1|scale9r=10|scale9l=10|reset=1>
+<Layout|x=667.0|y=-18.0|width=80|height=80|link=@exit>
+<Button|x=695.0|y=1.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<RText|x=24.0|y=20.0|color=249|size=16|text=<蓝月复古锻造：/FCOLOR=254><BOSS等系列怪物有超低几率爆出，不过建议合成.../FCOLOR=249>>
+<Text|x=297.0|y=51.0|color=251|size=16|text=散人锻造>
+<Text|x=18.0|y=88.0|color=250|size=16|text=战士锻造：>
+<Text|x=105.0|y=88.0|color=251|size=16|text=蓝月复古·神斩|link=@材料锻造蓝月复古·神斩>
+<Text|x=224.0|y=88.0|color=251|size=16|text=蓝月复古·战甲|link=@材料锻造蓝月复古·战甲>
+<Text|x=338.0|y=88.0|color=251|size=16|text=蓝月复古·战衣|link=@材料锻造蓝月复古·战衣>
+<Text|x=460.0|y=88.0|color=251|size=16|text=蓝月复古·战盔|link=@材料锻造蓝月复古·战盔>
+<Text|x=578.0|y=88.0|color=251|size=16|text=蓝月复古·战链|link=@材料锻造蓝月复古·战链>
+<Text|x=105.0|y=118.0|color=251|size=16|text=蓝月复古·战镯|link=@材料锻造蓝月复古·战镯>
+<Text|x=224.0|y=118.0|color=251|size=16|text=蓝月复古·战戒|link=@材料锻造蓝月复古·战戒>
+<Text|x=338.0|y=118.0|color=251|size=16|text=蓝月复古·战带|link=@材料锻造蓝月复古·战带>
+<Text|x=460.0|y=118.0|color=251|size=16|text=蓝月复古·战靴|link=@材料锻造蓝月复古·战靴>
+<Text|x=18.0|y=149.0|color=250|size=16|text=法师锻造：>
+<Text|x=105.0|y=149.0|color=251|size=16|text=蓝月复古·魔杖|link=@材料锻造蓝月复古·魔杖>
+<Text|x=224.0|y=149.0|color=251|size=16|text=蓝月复古·魔袍|link=@材料锻造蓝月复古·魔袍>
+<Text|x=338.0|y=149.0|color=251|size=16|text=蓝月复古·魔衣|link=@材料锻造蓝月复古·魔衣>
+<Text|x=460.0|y=149.0|color=251|size=16|text=蓝月复古·魔盔|link=@材料锻造蓝月复古·魔盔>
+<Text|x=578.0|y=149.0|color=251|size=16|text=蓝月复古·魔链|link=@材料锻造蓝月复古·魔链>
+<Text|x=105.0|y=179.0|color=251|size=16|text=蓝月复古·魔镯|link=@材料锻造蓝月复古·魔镯>
+<Text|x=224.0|y=179.0|color=251|size=16|text=蓝月复古·魔戒|link=@材料锻造蓝月复古·魔戒>
+<Text|x=338.0|y=179.0|color=251|size=16|text=蓝月复古·魔带|link=@材料锻造蓝月复古·魔带>
+<Text|x=460.0|y=179.0|color=251|size=16|text=蓝月复古·魔靴|link=@材料锻造蓝月复古·魔靴>
+<Text|x=18.0|y=210.0|color=250|size=16|text=道士锻造：>
+<Text|x=105.0|y=210.0|color=251|size=16|text=蓝月复古·道刃|link=@材料锻造蓝月复古·道刃>
+<Text|x=224.0|y=210.0|color=251|size=16|text=蓝月复古·道袍|link=@材料锻造蓝月复古·道袍>
+<Text|x=338.0|y=210.0|color=251|size=16|text=蓝月复古·道衣|link=@材料锻造蓝月复古·道衣>
+<Text|x=460.0|y=210.0|color=251|size=16|text=蓝月复古·道盔|link=@材料锻造蓝月复古·道盔>
+<Text|x=578.0|y=210.0|color=251|size=16|text=蓝月复古·道链|link=@材料锻造蓝月复古·道链>
+<Text|x=105.0|y=240.0|color=251|size=16|text=蓝月复古·道镯|link=@材料锻造蓝月复古·道镯>
+<Text|x=224.0|y=240.0|color=251|size=16|text=蓝月复古·道戒|link=@材料锻造蓝月复古·道戒>
+<Text|x=338.0|y=240.0|color=251|size=16|text=蓝月复古·道带|link=@材料锻造蓝月复古·道带>
+<Text|x=460.0|y=240.0|color=251|size=16|text=蓝月复古·道靴|link=@材料锻造蓝月复古·道靴>
+<Text|x=297.0|y=284.0|size=16|color=251|text=大米锻造>
+<Text|x=18.0|y=325.0|color=250|size=16|text=战士锻造：>
+<Text|x=105.0|y=325.0|color=251|size=16|text=蓝月复古·神斩|link=@大米锻造蓝月复古·神斩>
+<Text|x=224.0|y=325.0|color=251|size=16|text=蓝月复古·战甲|link=@大米锻造蓝月复古·战甲>
+<Text|x=338.0|y=325.0|color=251|size=16|text=蓝月复古·战衣|link=@大米锻造蓝月复古·战衣>
+<Text|x=460.0|y=325.0|color=251|size=16|text=蓝月复古·战盔|link=@大米锻造蓝月复古·战盔>
+<Text|x=578.0|y=325.0|color=251|size=16|text=蓝月复古·战链|link=@大米锻造蓝月复古·战链>
+<Text|x=105.0|y=355.0|color=251|size=16|text=蓝月复古·战镯|link=@大米锻造蓝月复古·战镯>
+<Text|x=224.0|y=355.0|color=251|size=16|text=蓝月复古·战戒|link=@大米锻造蓝月复古·战戒>
+<Text|x=338.0|y=355.0|color=251|size=16|text=蓝月复古·战带|link=@大米锻造蓝月复古·战带>
+<Text|x=460.0|y=355.0|color=251|size=16|text=蓝月复古·战靴|link=@大米锻造蓝月复古·战靴>
+<Text|x=18.0|y=386.0|color=250|size=16|text=法师锻造：>
+<Text|x=105.0|y=386.0|color=251|size=16|text=蓝月复古·魔杖|link=@大米锻造蓝月复古·魔杖>
+<Text|x=224.0|y=386.0|color=251|size=16|text=蓝月复古·魔袍|link=@大米锻造蓝月复古·魔袍>
+<Text|x=338.0|y=386.0|color=251|size=16|text=蓝月复古·魔衣|link=@大米锻造蓝月复古·魔衣>
+<Text|x=460.0|y=386.0|color=251|size=16|text=蓝月复古·魔盔|link=@大米锻造蓝月复古·魔盔>
+<Text|x=578.0|y=386.0|color=251|size=16|text=蓝月复古·魔链|link=@大米锻造蓝月复古·魔链>
+<Text|x=105.0|y=416.0|color=251|size=16|text=蓝月复古·魔镯|link=@大米锻造蓝月复古·魔镯>
+<Text|x=224.0|y=416.0|color=251|size=16|text=蓝月复古·魔戒|link=@大米锻造蓝月复古·魔戒>
+<Text|x=338.0|y=416.0|color=251|size=16|text=蓝月复古·魔带|link=@大米锻造蓝月复古·魔带>
+<Text|x=460.0|y=416.0|color=251|size=16|text=蓝月复古·魔靴|link=@大米锻造蓝月复古·魔靴>
+<Text|x=18.0|y=447.0|color=250|size=16|text=道士锻造：>
+<Text|x=105.0|y=447.0|color=251|size=16|text=蓝月复古·道刃|link=@大米锻造蓝月复古·道刃>
+<Text|x=224.0|y=447.0|color=251|size=16|text=蓝月复古·道袍|link=@大米锻造蓝月复古·道袍>
+<Text|x=338.0|y=447.0|color=251|size=16|text=蓝月复古·道衣|link=@大米锻造蓝月复古·道衣>
+<Text|x=460.0|y=447.0|color=251|size=16|text=蓝月复古·道盔|link=@大米锻造蓝月复古·道盔>
+<Text|x=578.0|y=447.0|color=251|size=16|text=蓝月复古·道链|link=@大米锻造蓝月复古·道链>
+<Text|x=105.0|y=477.0|color=251|size=16|text=蓝月复古·道镯|link=@大米锻造蓝月复古·道镯>
+<Text|x=224.0|y=477.0|color=251|size=16|text=蓝月复古·道戒|link=@大米锻造蓝月复古·道戒>
+<Text|x=338.0|y=477.0|color=251|size=16|text=蓝月复古·道带|link=@大米锻造蓝月复古·道带>
+<Text|x=460.0|y=477.0|color=251|size=16|text=蓝月复古·道靴|link=@大米锻造蓝月复古·道靴>
+<RText|x=185.0|y=521.0|color=251|size=16|text=<注意：/FCOLOR=249><合成的所有装备都有几率杀怪直接爆出来/FCOLOR=250>>
+
+
+
+[@大米锻造蓝月复古·战靴]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$大米合成首饰大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$大米合成首饰大米)>点，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 无双·战盔 N1
+getbagitemcount 无双·战链 N2
+getbagitemcount 无双·战镯 N3
+getbagitemcount 无双·战戒 N4
+getbagitemcount 无双·战带 N5
+getbagitemcount 无双·战靴 N6
+getbagitemcount 无双·魔盔 N7
+getbagitemcount 无双·魔链 N8
+getbagitemcount 无双·魔镯 N9
+getbagitemcount 无双·魔戒 N10
+getbagitemcount 无双·魔带 N11
+getbagitemcount 无双·魔靴 N12
+getbagitemcount 无双·道盔 N13
+getbagitemcount 无双·道链 N14
+getbagitemcount 无双·道镯 N15
+getbagitemcount 无双·道戒 N16
+getbagitemcount 无双·道带 N17
+getbagitemcount 无双·道靴 N18
+MOV N$创新首饰数量 0
+INC N$创新首饰数量 <$STR(N1)>
+INC N$创新首饰数量 <$STR(N2)>
+INC N$创新首饰数量 <$STR(N3)>
+INC N$创新首饰数量 <$STR(N4)>
+INC N$创新首饰数量 <$STR(N5)>
+INC N$创新首饰数量 <$STR(N6)>
+INC N$创新首饰数量 <$STR(N7)>
+INC N$创新首饰数量 <$STR(N8)>
+INC N$创新首饰数量 <$STR(N9)>
+INC N$创新首饰数量 <$STR(N10)>
+INC N$创新首饰数量 <$STR(N11)>
+INC N$创新首饰数量 <$STR(N12)>
+INC N$创新首饰数量 <$STR(N13)>
+INC N$创新首饰数量 <$STR(N14)>
+INC N$创新首饰数量 <$STR(N15)>
+INC N$创新首饰数量 <$STR(N16)>
+INC N$创新首饰数量 <$STR(N17)>
+INC N$创新首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$创新首饰数量 <$STR(N$大米合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$大米合成首饰数量)>件【无双系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$大米合成首饰大米)>
+TakeBagItem |无双·战盔|无双·战链|无双·战镯|无双·战戒|无双·战带|无双·战靴|无双·魔盔|无双·魔链|无双·魔镯|无双·魔戒|无双·魔带|无双·魔靴|无双·道盔|无双·道链|无双·道镯|无双·道戒|无双·道带|无双·道靴|| <$STR(N$大米合成首饰数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·战靴 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·战靴*1
+BREAK
+
+
+
+
+[@大米锻造蓝月复古·战带]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$大米合成首饰大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$大米合成首饰大米)>点，无法锻造！
+BREAK
+
+
+
+
+#IF
+#ACT
+getbagitemcount 无双·战盔 N1
+getbagitemcount 无双·战链 N2
+getbagitemcount 无双·战镯 N3
+getbagitemcount 无双·战戒 N4
+getbagitemcount 无双·战带 N5
+getbagitemcount 无双·战靴 N6
+getbagitemcount 无双·魔盔 N7
+getbagitemcount 无双·魔链 N8
+getbagitemcount 无双·魔镯 N9
+getbagitemcount 无双·魔戒 N10
+getbagitemcount 无双·魔带 N11
+getbagitemcount 无双·魔靴 N12
+getbagitemcount 无双·道盔 N13
+getbagitemcount 无双·道链 N14
+getbagitemcount 无双·道镯 N15
+getbagitemcount 无双·道戒 N16
+getbagitemcount 无双·道带 N17
+getbagitemcount 无双·道靴 N18
+MOV N$创新首饰数量 0
+INC N$创新首饰数量 <$STR(N1)>
+INC N$创新首饰数量 <$STR(N2)>
+INC N$创新首饰数量 <$STR(N3)>
+INC N$创新首饰数量 <$STR(N4)>
+INC N$创新首饰数量 <$STR(N5)>
+INC N$创新首饰数量 <$STR(N6)>
+INC N$创新首饰数量 <$STR(N7)>
+INC N$创新首饰数量 <$STR(N8)>
+INC N$创新首饰数量 <$STR(N9)>
+INC N$创新首饰数量 <$STR(N10)>
+INC N$创新首饰数量 <$STR(N11)>
+INC N$创新首饰数量 <$STR(N12)>
+INC N$创新首饰数量 <$STR(N13)>
+INC N$创新首饰数量 <$STR(N14)>
+INC N$创新首饰数量 <$STR(N15)>
+INC N$创新首饰数量 <$STR(N16)>
+INC N$创新首饰数量 <$STR(N17)>
+INC N$创新首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$创新首饰数量 <$STR(N$大米合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$大米合成首饰数量)>件【无双系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$大米合成首饰大米)>
+TakeBagItem |无双·战盔|无双·战链|无双·战镯|无双·战戒|无双·战带|无双·战靴|无双·魔盔|无双·魔链|无双·魔镯|无双·魔戒|无双·魔带|无双·魔靴|无双·道盔|无双·道链|无双·道镯|无双·道戒|无双·道带|无双·道靴|| <$STR(N$大米合成首饰数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·战带 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·战带*1
+BREAK
+
+
+
+
+[@大米锻造蓝月复古·战戒]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$大米合成首饰大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$大米合成首饰大米)>点，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 无双·战盔 N1
+getbagitemcount 无双·战链 N2
+getbagitemcount 无双·战镯 N3
+getbagitemcount 无双·战戒 N4
+getbagitemcount 无双·战带 N5
+getbagitemcount 无双·战靴 N6
+getbagitemcount 无双·魔盔 N7
+getbagitemcount 无双·魔链 N8
+getbagitemcount 无双·魔镯 N9
+getbagitemcount 无双·魔戒 N10
+getbagitemcount 无双·魔带 N11
+getbagitemcount 无双·魔靴 N12
+getbagitemcount 无双·道盔 N13
+getbagitemcount 无双·道链 N14
+getbagitemcount 无双·道镯 N15
+getbagitemcount 无双·道戒 N16
+getbagitemcount 无双·道带 N17
+getbagitemcount 无双·道靴 N18
+MOV N$创新首饰数量 0
+INC N$创新首饰数量 <$STR(N1)>
+INC N$创新首饰数量 <$STR(N2)>
+INC N$创新首饰数量 <$STR(N3)>
+INC N$创新首饰数量 <$STR(N4)>
+INC N$创新首饰数量 <$STR(N5)>
+INC N$创新首饰数量 <$STR(N6)>
+INC N$创新首饰数量 <$STR(N7)>
+INC N$创新首饰数量 <$STR(N8)>
+INC N$创新首饰数量 <$STR(N9)>
+INC N$创新首饰数量 <$STR(N10)>
+INC N$创新首饰数量 <$STR(N11)>
+INC N$创新首饰数量 <$STR(N12)>
+INC N$创新首饰数量 <$STR(N13)>
+INC N$创新首饰数量 <$STR(N14)>
+INC N$创新首饰数量 <$STR(N15)>
+INC N$创新首饰数量 <$STR(N16)>
+INC N$创新首饰数量 <$STR(N17)>
+INC N$创新首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$创新首饰数量 <$STR(N$大米合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$大米合成首饰数量)>件【无双系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$大米合成首饰大米)>
+TakeBagItem |无双·战盔|无双·战链|无双·战镯|无双·战戒|无双·战带|无双·战靴|无双·魔盔|无双·魔链|无双·魔镯|无双·魔戒|无双·魔带|无双·魔靴|无双·道盔|无双·道链|无双·道镯|无双·道戒|无双·道带|无双·道靴|| <$STR(N$大米合成首饰数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·战戒 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·战戒*1
+BREAK
+
+
+
+
+
+[@大米锻造蓝月复古·战镯]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$大米合成首饰大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$大米合成首饰大米)>点，无法锻造！
+BREAK
+
+#IF
+#ACT
+getbagitemcount 无双·战盔 N1
+getbagitemcount 无双·战链 N2
+getbagitemcount 无双·战镯 N3
+getbagitemcount 无双·战戒 N4
+getbagitemcount 无双·战带 N5
+getbagitemcount 无双·战靴 N6
+getbagitemcount 无双·魔盔 N7
+getbagitemcount 无双·魔链 N8
+getbagitemcount 无双·魔镯 N9
+getbagitemcount 无双·魔戒 N10
+getbagitemcount 无双·魔带 N11
+getbagitemcount 无双·魔靴 N12
+getbagitemcount 无双·道盔 N13
+getbagitemcount 无双·道链 N14
+getbagitemcount 无双·道镯 N15
+getbagitemcount 无双·道戒 N16
+getbagitemcount 无双·道带 N17
+getbagitemcount 无双·道靴 N18
+MOV N$创新首饰数量 0
+INC N$创新首饰数量 <$STR(N1)>
+INC N$创新首饰数量 <$STR(N2)>
+INC N$创新首饰数量 <$STR(N3)>
+INC N$创新首饰数量 <$STR(N4)>
+INC N$创新首饰数量 <$STR(N5)>
+INC N$创新首饰数量 <$STR(N6)>
+INC N$创新首饰数量 <$STR(N7)>
+INC N$创新首饰数量 <$STR(N8)>
+INC N$创新首饰数量 <$STR(N9)>
+INC N$创新首饰数量 <$STR(N10)>
+INC N$创新首饰数量 <$STR(N11)>
+INC N$创新首饰数量 <$STR(N12)>
+INC N$创新首饰数量 <$STR(N13)>
+INC N$创新首饰数量 <$STR(N14)>
+INC N$创新首饰数量 <$STR(N15)>
+INC N$创新首饰数量 <$STR(N16)>
+INC N$创新首饰数量 <$STR(N17)>
+INC N$创新首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$创新首饰数量 <$STR(N$大米合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$大米合成首饰数量)>件【无双系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$大米合成首饰大米)>
+TakeBagItem |无双·战盔|无双·战链|无双·战镯|无双·战戒|无双·战带|无双·战靴|无双·魔盔|无双·魔链|无双·魔镯|无双·魔戒|无双·魔带|无双·魔靴|无双·道盔|无双·道链|无双·道镯|无双·道戒|无双·道带|无双·道靴|| <$STR(N$大米合成首饰数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·战镯 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·战镯*1
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@大米锻造蓝月复古·战链]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$大米合成首饰大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$大米合成首饰大米)>点，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 无双·战盔 N1
+getbagitemcount 无双·战链 N2
+getbagitemcount 无双·战镯 N3
+getbagitemcount 无双·战戒 N4
+getbagitemcount 无双·战带 N5
+getbagitemcount 无双·战靴 N6
+getbagitemcount 无双·魔盔 N7
+getbagitemcount 无双·魔链 N8
+getbagitemcount 无双·魔镯 N9
+getbagitemcount 无双·魔戒 N10
+getbagitemcount 无双·魔带 N11
+getbagitemcount 无双·魔靴 N12
+getbagitemcount 无双·道盔 N13
+getbagitemcount 无双·道链 N14
+getbagitemcount 无双·道镯 N15
+getbagitemcount 无双·道戒 N16
+getbagitemcount 无双·道带 N17
+getbagitemcount 无双·道靴 N18
+MOV N$创新首饰数量 0
+INC N$创新首饰数量 <$STR(N1)>
+INC N$创新首饰数量 <$STR(N2)>
+INC N$创新首饰数量 <$STR(N3)>
+INC N$创新首饰数量 <$STR(N4)>
+INC N$创新首饰数量 <$STR(N5)>
+INC N$创新首饰数量 <$STR(N6)>
+INC N$创新首饰数量 <$STR(N7)>
+INC N$创新首饰数量 <$STR(N8)>
+INC N$创新首饰数量 <$STR(N9)>
+INC N$创新首饰数量 <$STR(N10)>
+INC N$创新首饰数量 <$STR(N11)>
+INC N$创新首饰数量 <$STR(N12)>
+INC N$创新首饰数量 <$STR(N13)>
+INC N$创新首饰数量 <$STR(N14)>
+INC N$创新首饰数量 <$STR(N15)>
+INC N$创新首饰数量 <$STR(N16)>
+INC N$创新首饰数量 <$STR(N17)>
+INC N$创新首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$创新首饰数量 <$STR(N$大米合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$大米合成首饰数量)>件【无双系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$大米合成首饰大米)>
+TakeBagItem |无双·战盔|无双·战链|无双·战镯|无双·战戒|无双·战带|无双·战靴|无双·魔盔|无双·魔链|无双·魔镯|无双·魔戒|无双·魔带|无双·魔靴|无双·道盔|无双·道链|无双·道镯|无双·道戒|无双·道带|无双·道靴|| <$STR(N$大米合成首饰数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·战链 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·战链*1
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@大米锻造蓝月复古·战盔]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$大米合成首饰大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$大米合成首饰大米)>点，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 无双·战盔 N1
+getbagitemcount 无双·战链 N2
+getbagitemcount 无双·战镯 N3
+getbagitemcount 无双·战戒 N4
+getbagitemcount 无双·战带 N5
+getbagitemcount 无双·战靴 N6
+getbagitemcount 无双·魔盔 N7
+getbagitemcount 无双·魔链 N8
+getbagitemcount 无双·魔镯 N9
+getbagitemcount 无双·魔戒 N10
+getbagitemcount 无双·魔带 N11
+getbagitemcount 无双·魔靴 N12
+getbagitemcount 无双·道盔 N13
+getbagitemcount 无双·道链 N14
+getbagitemcount 无双·道镯 N15
+getbagitemcount 无双·道戒 N16
+getbagitemcount 无双·道带 N17
+getbagitemcount 无双·道靴 N18
+MOV N$创新首饰数量 0
+INC N$创新首饰数量 <$STR(N1)>
+INC N$创新首饰数量 <$STR(N2)>
+INC N$创新首饰数量 <$STR(N3)>
+INC N$创新首饰数量 <$STR(N4)>
+INC N$创新首饰数量 <$STR(N5)>
+INC N$创新首饰数量 <$STR(N6)>
+INC N$创新首饰数量 <$STR(N7)>
+INC N$创新首饰数量 <$STR(N8)>
+INC N$创新首饰数量 <$STR(N9)>
+INC N$创新首饰数量 <$STR(N10)>
+INC N$创新首饰数量 <$STR(N11)>
+INC N$创新首饰数量 <$STR(N12)>
+INC N$创新首饰数量 <$STR(N13)>
+INC N$创新首饰数量 <$STR(N14)>
+INC N$创新首饰数量 <$STR(N15)>
+INC N$创新首饰数量 <$STR(N16)>
+INC N$创新首饰数量 <$STR(N17)>
+INC N$创新首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$创新首饰数量 <$STR(N$大米合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$大米合成首饰数量)>件【无双系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$大米合成首饰大米)>
+TakeBagItem |无双·战盔|无双·战链|无双·战镯|无双·战戒|无双·战带|无双·战靴|无双·魔盔|无双·魔链|无双·魔镯|无双·魔戒|无双·魔带|无双·魔靴|无双·道盔|无双·道链|无双·道镯|无双·道戒|无双·道带|无双·道靴|| <$STR(N$大米合成首饰数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·战盔 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·战盔*1
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@大米锻造蓝月复古·战衣]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$大米合成衣服大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$大米合成衣服大米)>点，无法锻造！
+BREAK
+
+
+
+#IF
+#ACT
+getbagitemcount 无双·战甲 N1
+getbagitemcount 无双·战衣 N2
+getbagitemcount 无双·魔袍 N3
+getbagitemcount 无双·魔衣 N4
+getbagitemcount 无双·道袍 N5
+getbagitemcount 无双·道衣 N6
+MOV N$创新衣服数量 0
+INC N$创新衣服数量 <$STR(N1)>
+INC N$创新衣服数量 <$STR(N2)>
+INC N$创新衣服数量 <$STR(N3)>
+INC N$创新衣服数量 <$STR(N4)>
+INC N$创新衣服数量 <$STR(N5)>
+INC N$创新衣服数量 <$STR(N6)>
+
+
+
+
+
+
+#IF
+SMALL N$创新衣服数量 <$STR(N$大米合成衣服数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$大米合成衣服数量)>件【无双系列】的衣服，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$大米合成衣服大米)>
+TakeBagItem |无双·战甲|无双·战衣|无双·魔袍|无双·魔衣|无双·道袍|无双·道衣|| <$STR(N$大米合成衣服数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·战衣 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·战衣*1
+BREAK
+
+
+
+
+
+
+
+[@大米锻造蓝月复古·战甲]
+
+
+#IF
+CHECKGAMEPOINT < <$STR(N$大米合成衣服大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$大米合成衣服大米)>点，无法锻造！
+BREAK
+
+#IF
+#ACT
+getbagitemcount 无双·战甲 N1
+getbagitemcount 无双·战衣 N2
+getbagitemcount 无双·魔袍 N3
+getbagitemcount 无双·魔衣 N4
+getbagitemcount 无双·道袍 N5
+getbagitemcount 无双·道衣 N6
+MOV N$创新衣服数量 0
+INC N$创新衣服数量 <$STR(N1)>
+INC N$创新衣服数量 <$STR(N2)>
+INC N$创新衣服数量 <$STR(N3)>
+INC N$创新衣服数量 <$STR(N4)>
+INC N$创新衣服数量 <$STR(N5)>
+INC N$创新衣服数量 <$STR(N6)>
+
+
+
+
+
+
+#IF
+SMALL N$创新衣服数量 <$STR(N$大米合成衣服数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$大米合成衣服数量)>件【无双系列】的衣服，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$大米合成衣服大米)>
+TakeBagItem |无双·战甲|无双·战衣|无双·魔袍|无双·魔衣|无双·道袍|无双·道衣|| <$STR(N$大米合成衣服数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·战甲 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·战甲*1
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@大米锻造蓝月复古·神斩]
+
+
+#IF
+CHECKGAMEPOINT < <$STR(N$大米合成武器大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$大米合成武器大米)>点，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 无双·神剑 N1
+getbagitemcount 无双·魔杖 N2
+getbagitemcount 无双·道扇 N3
+MOV N$创新武器数量 0
+INC N$创新武器数量 <$STR(N1)>
+INC N$创新武器数量 <$STR(N2)>
+INC N$创新武器数量 <$STR(N3)>
+
+
+
+
+
+#IF
+SMALL N$创新武器数量 <$STR(N$大米合成武器数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$大米合成武器数量)>把【无双系列】的武器，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$大米合成武器大米)>
+TakeBagItem |无双·神剑|无双·魔杖|无双·道扇|| <$STR(N$大米合成武器数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·神斩 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·神斩*1
+BREAK
+
+
+
+
+[@大米锻造蓝月复古·魔靴]
+
+
+#IF
+CHECKGAMEPOINT < <$STR(N$大米合成首饰大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$大米合成首饰大米)>点，无法锻造！
+BREAK
+
+
+
+#IF
+#ACT
+getbagitemcount 无双·战盔 N1
+getbagitemcount 无双·战链 N2
+getbagitemcount 无双·战镯 N3
+getbagitemcount 无双·战戒 N4
+getbagitemcount 无双·战带 N5
+getbagitemcount 无双·战靴 N6
+getbagitemcount 无双·魔盔 N7
+getbagitemcount 无双·魔链 N8
+getbagitemcount 无双·魔镯 N9
+getbagitemcount 无双·魔戒 N10
+getbagitemcount 无双·魔带 N11
+getbagitemcount 无双·魔靴 N12
+getbagitemcount 无双·道盔 N13
+getbagitemcount 无双·道链 N14
+getbagitemcount 无双·道镯 N15
+getbagitemcount 无双·道戒 N16
+getbagitemcount 无双·道带 N17
+getbagitemcount 无双·道靴 N18
+MOV N$创新首饰数量 0
+INC N$创新首饰数量 <$STR(N1)>
+INC N$创新首饰数量 <$STR(N2)>
+INC N$创新首饰数量 <$STR(N3)>
+INC N$创新首饰数量 <$STR(N4)>
+INC N$创新首饰数量 <$STR(N5)>
+INC N$创新首饰数量 <$STR(N6)>
+INC N$创新首饰数量 <$STR(N7)>
+INC N$创新首饰数量 <$STR(N8)>
+INC N$创新首饰数量 <$STR(N9)>
+INC N$创新首饰数量 <$STR(N10)>
+INC N$创新首饰数量 <$STR(N11)>
+INC N$创新首饰数量 <$STR(N12)>
+INC N$创新首饰数量 <$STR(N13)>
+INC N$创新首饰数量 <$STR(N14)>
+INC N$创新首饰数量 <$STR(N15)>
+INC N$创新首饰数量 <$STR(N16)>
+INC N$创新首饰数量 <$STR(N17)>
+INC N$创新首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$创新首饰数量 <$STR(N$大米合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$大米合成首饰数量)>件【无双系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$大米合成首饰大米)>
+TakeBagItem |无双·战盔|无双·战链|无双·战镯|无双·战戒|无双·战带|无双·战靴|无双·魔盔|无双·魔链|无双·魔镯|无双·魔戒|无双·魔带|无双·魔靴|无双·道盔|无双·道链|无双·道镯|无双·道戒|无双·道带|无双·道靴|| <$STR(N$大米合成首饰数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·魔靴 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·魔靴*1
+BREAK
+
+
+
+
+[@大米锻造蓝月复古·魔带]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$大米合成首饰大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$大米合成首饰大米)>点，无法锻造！
+BREAK
+
+#IF
+#ACT
+getbagitemcount 无双·战盔 N1
+getbagitemcount 无双·战链 N2
+getbagitemcount 无双·战镯 N3
+getbagitemcount 无双·战戒 N4
+getbagitemcount 无双·战带 N5
+getbagitemcount 无双·战靴 N6
+getbagitemcount 无双·魔盔 N7
+getbagitemcount 无双·魔链 N8
+getbagitemcount 无双·魔镯 N9
+getbagitemcount 无双·魔戒 N10
+getbagitemcount 无双·魔带 N11
+getbagitemcount 无双·魔靴 N12
+getbagitemcount 无双·道盔 N13
+getbagitemcount 无双·道链 N14
+getbagitemcount 无双·道镯 N15
+getbagitemcount 无双·道戒 N16
+getbagitemcount 无双·道带 N17
+getbagitemcount 无双·道靴 N18
+MOV N$创新首饰数量 0
+INC N$创新首饰数量 <$STR(N1)>
+INC N$创新首饰数量 <$STR(N2)>
+INC N$创新首饰数量 <$STR(N3)>
+INC N$创新首饰数量 <$STR(N4)>
+INC N$创新首饰数量 <$STR(N5)>
+INC N$创新首饰数量 <$STR(N6)>
+INC N$创新首饰数量 <$STR(N7)>
+INC N$创新首饰数量 <$STR(N8)>
+INC N$创新首饰数量 <$STR(N9)>
+INC N$创新首饰数量 <$STR(N10)>
+INC N$创新首饰数量 <$STR(N11)>
+INC N$创新首饰数量 <$STR(N12)>
+INC N$创新首饰数量 <$STR(N13)>
+INC N$创新首饰数量 <$STR(N14)>
+INC N$创新首饰数量 <$STR(N15)>
+INC N$创新首饰数量 <$STR(N16)>
+INC N$创新首饰数量 <$STR(N17)>
+INC N$创新首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$创新首饰数量 <$STR(N$大米合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$大米合成首饰数量)>件【无双系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$大米合成首饰大米)>
+TakeBagItem |无双·战盔|无双·战链|无双·战镯|无双·战戒|无双·战带|无双·战靴|无双·魔盔|无双·魔链|无双·魔镯|无双·魔戒|无双·魔带|无双·魔靴|无双·道盔|无双·道链|无双·道镯|无双·道戒|无双·道带|无双·道靴|| <$STR(N$大米合成首饰数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·魔带 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·魔带*1
+BREAK
+
+
+
+
+[@大米锻造蓝月复古·魔戒]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$大米合成首饰大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$大米合成首饰大米)>点，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 无双·战盔 N1
+getbagitemcount 无双·战链 N2
+getbagitemcount 无双·战镯 N3
+getbagitemcount 无双·战戒 N4
+getbagitemcount 无双·战带 N5
+getbagitemcount 无双·战靴 N6
+getbagitemcount 无双·魔盔 N7
+getbagitemcount 无双·魔链 N8
+getbagitemcount 无双·魔镯 N9
+getbagitemcount 无双·魔戒 N10
+getbagitemcount 无双·魔带 N11
+getbagitemcount 无双·魔靴 N12
+getbagitemcount 无双·道盔 N13
+getbagitemcount 无双·道链 N14
+getbagitemcount 无双·道镯 N15
+getbagitemcount 无双·道戒 N16
+getbagitemcount 无双·道带 N17
+getbagitemcount 无双·道靴 N18
+MOV N$创新首饰数量 0
+INC N$创新首饰数量 <$STR(N1)>
+INC N$创新首饰数量 <$STR(N2)>
+INC N$创新首饰数量 <$STR(N3)>
+INC N$创新首饰数量 <$STR(N4)>
+INC N$创新首饰数量 <$STR(N5)>
+INC N$创新首饰数量 <$STR(N6)>
+INC N$创新首饰数量 <$STR(N7)>
+INC N$创新首饰数量 <$STR(N8)>
+INC N$创新首饰数量 <$STR(N9)>
+INC N$创新首饰数量 <$STR(N10)>
+INC N$创新首饰数量 <$STR(N11)>
+INC N$创新首饰数量 <$STR(N12)>
+INC N$创新首饰数量 <$STR(N13)>
+INC N$创新首饰数量 <$STR(N14)>
+INC N$创新首饰数量 <$STR(N15)>
+INC N$创新首饰数量 <$STR(N16)>
+INC N$创新首饰数量 <$STR(N17)>
+INC N$创新首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$创新首饰数量 <$STR(N$大米合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$大米合成首饰数量)>件【无双系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$大米合成首饰大米)>
+TakeBagItem |无双·战盔|无双·战链|无双·战镯|无双·战戒|无双·战带|无双·战靴|无双·魔盔|无双·魔链|无双·魔镯|无双·魔戒|无双·魔带|无双·魔靴|无双·道盔|无双·道链|无双·道镯|无双·道戒|无双·道带|无双·道靴|| <$STR(N$大米合成首饰数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·魔戒 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·魔戒*1
+BREAK
+
+
+
+
+
+[@大米锻造蓝月复古·魔镯]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$大米合成首饰大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$大米合成首饰大米)>点，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 无双·战盔 N1
+getbagitemcount 无双·战链 N2
+getbagitemcount 无双·战镯 N3
+getbagitemcount 无双·战戒 N4
+getbagitemcount 无双·战带 N5
+getbagitemcount 无双·战靴 N6
+getbagitemcount 无双·魔盔 N7
+getbagitemcount 无双·魔链 N8
+getbagitemcount 无双·魔镯 N9
+getbagitemcount 无双·魔戒 N10
+getbagitemcount 无双·魔带 N11
+getbagitemcount 无双·魔靴 N12
+getbagitemcount 无双·道盔 N13
+getbagitemcount 无双·道链 N14
+getbagitemcount 无双·道镯 N15
+getbagitemcount 无双·道戒 N16
+getbagitemcount 无双·道带 N17
+getbagitemcount 无双·道靴 N18
+MOV N$创新首饰数量 0
+INC N$创新首饰数量 <$STR(N1)>
+INC N$创新首饰数量 <$STR(N2)>
+INC N$创新首饰数量 <$STR(N3)>
+INC N$创新首饰数量 <$STR(N4)>
+INC N$创新首饰数量 <$STR(N5)>
+INC N$创新首饰数量 <$STR(N6)>
+INC N$创新首饰数量 <$STR(N7)>
+INC N$创新首饰数量 <$STR(N8)>
+INC N$创新首饰数量 <$STR(N9)>
+INC N$创新首饰数量 <$STR(N10)>
+INC N$创新首饰数量 <$STR(N11)>
+INC N$创新首饰数量 <$STR(N12)>
+INC N$创新首饰数量 <$STR(N13)>
+INC N$创新首饰数量 <$STR(N14)>
+INC N$创新首饰数量 <$STR(N15)>
+INC N$创新首饰数量 <$STR(N16)>
+INC N$创新首饰数量 <$STR(N17)>
+INC N$创新首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$创新首饰数量 <$STR(N$大米合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$大米合成首饰数量)>件【无双系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$大米合成首饰大米)>
+TakeBagItem |无双·战盔|无双·战链|无双·战镯|无双·战戒|无双·战带|无双·战靴|无双·魔盔|无双·魔链|无双·魔镯|无双·魔戒|无双·魔带|无双·魔靴|无双·道盔|无双·道链|无双·道镯|无双·道戒|无双·道带|无双·道靴|| <$STR(N$大米合成首饰数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·魔镯 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·魔镯*1
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@大米锻造蓝月复古·魔链]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$大米合成首饰大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$大米合成首饰大米)>点，无法锻造！
+BREAK
+
+
+
+#IF
+#ACT
+getbagitemcount 无双·战盔 N1
+getbagitemcount 无双·战链 N2
+getbagitemcount 无双·战镯 N3
+getbagitemcount 无双·战戒 N4
+getbagitemcount 无双·战带 N5
+getbagitemcount 无双·战靴 N6
+getbagitemcount 无双·魔盔 N7
+getbagitemcount 无双·魔链 N8
+getbagitemcount 无双·魔镯 N9
+getbagitemcount 无双·魔戒 N10
+getbagitemcount 无双·魔带 N11
+getbagitemcount 无双·魔靴 N12
+getbagitemcount 无双·道盔 N13
+getbagitemcount 无双·道链 N14
+getbagitemcount 无双·道镯 N15
+getbagitemcount 无双·道戒 N16
+getbagitemcount 无双·道带 N17
+getbagitemcount 无双·道靴 N18
+MOV N$创新首饰数量 0
+INC N$创新首饰数量 <$STR(N1)>
+INC N$创新首饰数量 <$STR(N2)>
+INC N$创新首饰数量 <$STR(N3)>
+INC N$创新首饰数量 <$STR(N4)>
+INC N$创新首饰数量 <$STR(N5)>
+INC N$创新首饰数量 <$STR(N6)>
+INC N$创新首饰数量 <$STR(N7)>
+INC N$创新首饰数量 <$STR(N8)>
+INC N$创新首饰数量 <$STR(N9)>
+INC N$创新首饰数量 <$STR(N10)>
+INC N$创新首饰数量 <$STR(N11)>
+INC N$创新首饰数量 <$STR(N12)>
+INC N$创新首饰数量 <$STR(N13)>
+INC N$创新首饰数量 <$STR(N14)>
+INC N$创新首饰数量 <$STR(N15)>
+INC N$创新首饰数量 <$STR(N16)>
+INC N$创新首饰数量 <$STR(N17)>
+INC N$创新首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$创新首饰数量 <$STR(N$大米合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$大米合成首饰数量)>件【无双系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$大米合成首饰大米)>
+TakeBagItem |无双·战盔|无双·战链|无双·战镯|无双·战戒|无双·战带|无双·战靴|无双·魔盔|无双·魔链|无双·魔镯|无双·魔戒|无双·魔带|无双·魔靴|无双·道盔|无双·道链|无双·道镯|无双·道戒|无双·道带|无双·道靴|| <$STR(N$大米合成首饰数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·魔链 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·魔链*1
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@大米锻造蓝月复古·魔盔]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$大米合成首饰大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$大米合成首饰大米)>点，无法锻造！
+BREAK
+
+
+
+#IF
+#ACT
+getbagitemcount 无双·战盔 N1
+getbagitemcount 无双·战链 N2
+getbagitemcount 无双·战镯 N3
+getbagitemcount 无双·战戒 N4
+getbagitemcount 无双·战带 N5
+getbagitemcount 无双·战靴 N6
+getbagitemcount 无双·魔盔 N7
+getbagitemcount 无双·魔链 N8
+getbagitemcount 无双·魔镯 N9
+getbagitemcount 无双·魔戒 N10
+getbagitemcount 无双·魔带 N11
+getbagitemcount 无双·魔靴 N12
+getbagitemcount 无双·道盔 N13
+getbagitemcount 无双·道链 N14
+getbagitemcount 无双·道镯 N15
+getbagitemcount 无双·道戒 N16
+getbagitemcount 无双·道带 N17
+getbagitemcount 无双·道靴 N18
+MOV N$创新首饰数量 0
+INC N$创新首饰数量 <$STR(N1)>
+INC N$创新首饰数量 <$STR(N2)>
+INC N$创新首饰数量 <$STR(N3)>
+INC N$创新首饰数量 <$STR(N4)>
+INC N$创新首饰数量 <$STR(N5)>
+INC N$创新首饰数量 <$STR(N6)>
+INC N$创新首饰数量 <$STR(N7)>
+INC N$创新首饰数量 <$STR(N8)>
+INC N$创新首饰数量 <$STR(N9)>
+INC N$创新首饰数量 <$STR(N10)>
+INC N$创新首饰数量 <$STR(N11)>
+INC N$创新首饰数量 <$STR(N12)>
+INC N$创新首饰数量 <$STR(N13)>
+INC N$创新首饰数量 <$STR(N14)>
+INC N$创新首饰数量 <$STR(N15)>
+INC N$创新首饰数量 <$STR(N16)>
+INC N$创新首饰数量 <$STR(N17)>
+INC N$创新首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$创新首饰数量 <$STR(N$大米合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$大米合成首饰数量)>件【无双系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$大米合成首饰大米)>
+TakeBagItem |无双·战盔|无双·战链|无双·战镯|无双·战戒|无双·战带|无双·战靴|无双·魔盔|无双·魔链|无双·魔镯|无双·魔戒|无双·魔带|无双·魔靴|无双·道盔|无双·道链|无双·道镯|无双·道戒|无双·道带|无双·道靴|| <$STR(N$大米合成首饰数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·魔盔 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·魔盔*1
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@大米锻造蓝月复古·魔衣]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$大米合成衣服大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$大米合成衣服大米)>点，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 无双·战甲 N1
+getbagitemcount 无双·战衣 N2
+getbagitemcount 无双·魔袍 N3
+getbagitemcount 无双·魔衣 N4
+getbagitemcount 无双·道袍 N5
+getbagitemcount 无双·道衣 N6
+MOV N$创新衣服数量 0
+INC N$创新衣服数量 <$STR(N1)>
+INC N$创新衣服数量 <$STR(N2)>
+INC N$创新衣服数量 <$STR(N3)>
+INC N$创新衣服数量 <$STR(N4)>
+INC N$创新衣服数量 <$STR(N5)>
+INC N$创新衣服数量 <$STR(N6)>
+
+
+
+
+
+
+#IF
+SMALL N$创新衣服数量 <$STR(N$大米合成衣服数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$大米合成衣服数量)>件【无双系列】的衣服，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$大米合成衣服大米)>
+TakeBagItem |无双·战甲|无双·战衣|无双·魔袍|无双·魔衣|无双·道袍|无双·道衣|| <$STR(N$大米合成衣服数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·魔衣 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·魔衣*1
+BREAK
+
+
+
+
+
+
+
+[@大米锻造蓝月复古·魔袍]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$大米合成衣服大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$大米合成衣服大米)>点，无法锻造！
+BREAK
+
+
+
+#IF
+#ACT
+getbagitemcount 无双·战甲 N1
+getbagitemcount 无双·战衣 N2
+getbagitemcount 无双·魔袍 N3
+getbagitemcount 无双·魔衣 N4
+getbagitemcount 无双·道袍 N5
+getbagitemcount 无双·道衣 N6
+MOV N$创新衣服数量 0
+INC N$创新衣服数量 <$STR(N1)>
+INC N$创新衣服数量 <$STR(N2)>
+INC N$创新衣服数量 <$STR(N3)>
+INC N$创新衣服数量 <$STR(N4)>
+INC N$创新衣服数量 <$STR(N5)>
+INC N$创新衣服数量 <$STR(N6)>
+
+
+
+
+
+
+#IF
+SMALL N$创新衣服数量 <$STR(N$大米合成衣服数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$大米合成衣服数量)>件【无双系列】的衣服，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$大米合成衣服大米)>
+TakeBagItem |无双·战甲|无双·战衣|无双·魔袍|无双·魔衣|无双·道袍|无双·道衣|| <$STR(N$大米合成衣服数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·魔袍 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·魔袍*1
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@大米锻造蓝月复古·魔杖]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$大米合成武器大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$大米合成武器大米)>点，无法锻造！
+BREAK
+
+
+
+#IF
+#ACT
+getbagitemcount 无双·神剑 N1
+getbagitemcount 无双·魔杖 N2
+getbagitemcount 无双·道扇 N3
+MOV N$创新武器数量 0
+INC N$创新武器数量 <$STR(N1)>
+INC N$创新武器数量 <$STR(N2)>
+INC N$创新武器数量 <$STR(N3)>
+
+
+
+
+
+#IF
+SMALL N$创新武器数量 <$STR(N$大米合成武器数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$大米合成武器数量)>把【无双系列】的武器，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$大米合成武器大米)>
+TakeBagItem |无双·神剑|无双·魔杖|无双·道扇|| <$STR(N$大米合成武器数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·魔杖 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·魔杖*1
+BREAK
+
+
+
+
+
+[@大米锻造蓝月复古·道靴]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$大米合成首饰大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$大米合成首饰大米)>点，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 无双·战盔 N1
+getbagitemcount 无双·战链 N2
+getbagitemcount 无双·战镯 N3
+getbagitemcount 无双·战戒 N4
+getbagitemcount 无双·战带 N5
+getbagitemcount 无双·战靴 N6
+getbagitemcount 无双·魔盔 N7
+getbagitemcount 无双·魔链 N8
+getbagitemcount 无双·魔镯 N9
+getbagitemcount 无双·魔戒 N10
+getbagitemcount 无双·魔带 N11
+getbagitemcount 无双·魔靴 N12
+getbagitemcount 无双·道盔 N13
+getbagitemcount 无双·道链 N14
+getbagitemcount 无双·道镯 N15
+getbagitemcount 无双·道戒 N16
+getbagitemcount 无双·道带 N17
+getbagitemcount 无双·道靴 N18
+MOV N$创新首饰数量 0
+INC N$创新首饰数量 <$STR(N1)>
+INC N$创新首饰数量 <$STR(N2)>
+INC N$创新首饰数量 <$STR(N3)>
+INC N$创新首饰数量 <$STR(N4)>
+INC N$创新首饰数量 <$STR(N5)>
+INC N$创新首饰数量 <$STR(N6)>
+INC N$创新首饰数量 <$STR(N7)>
+INC N$创新首饰数量 <$STR(N8)>
+INC N$创新首饰数量 <$STR(N9)>
+INC N$创新首饰数量 <$STR(N10)>
+INC N$创新首饰数量 <$STR(N11)>
+INC N$创新首饰数量 <$STR(N12)>
+INC N$创新首饰数量 <$STR(N13)>
+INC N$创新首饰数量 <$STR(N14)>
+INC N$创新首饰数量 <$STR(N15)>
+INC N$创新首饰数量 <$STR(N16)>
+INC N$创新首饰数量 <$STR(N17)>
+INC N$创新首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$创新首饰数量 <$STR(N$大米合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$大米合成首饰数量)>件【无双系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$大米合成首饰大米)>
+TakeBagItem |无双·战盔|无双·战链|无双·战镯|无双·战戒|无双·战带|无双·战靴|无双·魔盔|无双·魔链|无双·魔镯|无双·魔戒|无双·魔带|无双·魔靴|无双·道盔|无双·道链|无双·道镯|无双·道戒|无双·道带|无双·道靴|| <$STR(N$大米合成首饰数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·道靴 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·道靴*1
+BREAK
+
+
+
+
+[@大米锻造蓝月复古·道带]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$大米合成首饰大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$大米合成首饰大米)>点，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 无双·战盔 N1
+getbagitemcount 无双·战链 N2
+getbagitemcount 无双·战镯 N3
+getbagitemcount 无双·战戒 N4
+getbagitemcount 无双·战带 N5
+getbagitemcount 无双·战靴 N6
+getbagitemcount 无双·魔盔 N7
+getbagitemcount 无双·魔链 N8
+getbagitemcount 无双·魔镯 N9
+getbagitemcount 无双·魔戒 N10
+getbagitemcount 无双·魔带 N11
+getbagitemcount 无双·魔靴 N12
+getbagitemcount 无双·道盔 N13
+getbagitemcount 无双·道链 N14
+getbagitemcount 无双·道镯 N15
+getbagitemcount 无双·道戒 N16
+getbagitemcount 无双·道带 N17
+getbagitemcount 无双·道靴 N18
+MOV N$创新首饰数量 0
+INC N$创新首饰数量 <$STR(N1)>
+INC N$创新首饰数量 <$STR(N2)>
+INC N$创新首饰数量 <$STR(N3)>
+INC N$创新首饰数量 <$STR(N4)>
+INC N$创新首饰数量 <$STR(N5)>
+INC N$创新首饰数量 <$STR(N6)>
+INC N$创新首饰数量 <$STR(N7)>
+INC N$创新首饰数量 <$STR(N8)>
+INC N$创新首饰数量 <$STR(N9)>
+INC N$创新首饰数量 <$STR(N10)>
+INC N$创新首饰数量 <$STR(N11)>
+INC N$创新首饰数量 <$STR(N12)>
+INC N$创新首饰数量 <$STR(N13)>
+INC N$创新首饰数量 <$STR(N14)>
+INC N$创新首饰数量 <$STR(N15)>
+INC N$创新首饰数量 <$STR(N16)>
+INC N$创新首饰数量 <$STR(N17)>
+INC N$创新首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$创新首饰数量 <$STR(N$大米合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$大米合成首饰数量)>件【无双系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$大米合成首饰大米)>
+TakeBagItem |无双·战盔|无双·战链|无双·战镯|无双·战戒|无双·战带|无双·战靴|无双·魔盔|无双·魔链|无双·魔镯|无双·魔戒|无双·魔带|无双·魔靴|无双·道盔|无双·道链|无双·道镯|无双·道戒|无双·道带|无双·道靴|| <$STR(N$大米合成首饰数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·道带 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·道带*1
+BREAK
+
+
+
+
+[@大米锻造蓝月复古·道戒]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$大米合成首饰大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$大米合成首饰大米)>点，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 无双·战盔 N1
+getbagitemcount 无双·战链 N2
+getbagitemcount 无双·战镯 N3
+getbagitemcount 无双·战戒 N4
+getbagitemcount 无双·战带 N5
+getbagitemcount 无双·战靴 N6
+getbagitemcount 无双·魔盔 N7
+getbagitemcount 无双·魔链 N8
+getbagitemcount 无双·魔镯 N9
+getbagitemcount 无双·魔戒 N10
+getbagitemcount 无双·魔带 N11
+getbagitemcount 无双·魔靴 N12
+getbagitemcount 无双·道盔 N13
+getbagitemcount 无双·道链 N14
+getbagitemcount 无双·道镯 N15
+getbagitemcount 无双·道戒 N16
+getbagitemcount 无双·道带 N17
+getbagitemcount 无双·道靴 N18
+MOV N$创新首饰数量 0
+INC N$创新首饰数量 <$STR(N1)>
+INC N$创新首饰数量 <$STR(N2)>
+INC N$创新首饰数量 <$STR(N3)>
+INC N$创新首饰数量 <$STR(N4)>
+INC N$创新首饰数量 <$STR(N5)>
+INC N$创新首饰数量 <$STR(N6)>
+INC N$创新首饰数量 <$STR(N7)>
+INC N$创新首饰数量 <$STR(N8)>
+INC N$创新首饰数量 <$STR(N9)>
+INC N$创新首饰数量 <$STR(N10)>
+INC N$创新首饰数量 <$STR(N11)>
+INC N$创新首饰数量 <$STR(N12)>
+INC N$创新首饰数量 <$STR(N13)>
+INC N$创新首饰数量 <$STR(N14)>
+INC N$创新首饰数量 <$STR(N15)>
+INC N$创新首饰数量 <$STR(N16)>
+INC N$创新首饰数量 <$STR(N17)>
+INC N$创新首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$创新首饰数量 <$STR(N$大米合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$大米合成首饰数量)>件【无双系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$大米合成首饰大米)>
+TakeBagItem |无双·战盔|无双·战链|无双·战镯|无双·战戒|无双·战带|无双·战靴|无双·魔盔|无双·魔链|无双·魔镯|无双·魔戒|无双·魔带|无双·魔靴|无双·道盔|无双·道链|无双·道镯|无双·道戒|无双·道带|无双·道靴|| <$STR(N$大米合成首饰数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·道戒 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·道戒*1
+BREAK
+
+
+
+
+
+[@大米锻造蓝月复古·道镯]
+
+
+#IF
+CHECKGAMEPOINT < <$STR(N$大米合成首饰大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$大米合成首饰大米)>点，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 无双·战盔 N1
+getbagitemcount 无双·战链 N2
+getbagitemcount 无双·战镯 N3
+getbagitemcount 无双·战戒 N4
+getbagitemcount 无双·战带 N5
+getbagitemcount 无双·战靴 N6
+getbagitemcount 无双·魔盔 N7
+getbagitemcount 无双·魔链 N8
+getbagitemcount 无双·魔镯 N9
+getbagitemcount 无双·魔戒 N10
+getbagitemcount 无双·魔带 N11
+getbagitemcount 无双·魔靴 N12
+getbagitemcount 无双·道盔 N13
+getbagitemcount 无双·道链 N14
+getbagitemcount 无双·道镯 N15
+getbagitemcount 无双·道戒 N16
+getbagitemcount 无双·道带 N17
+getbagitemcount 无双·道靴 N18
+MOV N$创新首饰数量 0
+INC N$创新首饰数量 <$STR(N1)>
+INC N$创新首饰数量 <$STR(N2)>
+INC N$创新首饰数量 <$STR(N3)>
+INC N$创新首饰数量 <$STR(N4)>
+INC N$创新首饰数量 <$STR(N5)>
+INC N$创新首饰数量 <$STR(N6)>
+INC N$创新首饰数量 <$STR(N7)>
+INC N$创新首饰数量 <$STR(N8)>
+INC N$创新首饰数量 <$STR(N9)>
+INC N$创新首饰数量 <$STR(N10)>
+INC N$创新首饰数量 <$STR(N11)>
+INC N$创新首饰数量 <$STR(N12)>
+INC N$创新首饰数量 <$STR(N13)>
+INC N$创新首饰数量 <$STR(N14)>
+INC N$创新首饰数量 <$STR(N15)>
+INC N$创新首饰数量 <$STR(N16)>
+INC N$创新首饰数量 <$STR(N17)>
+INC N$创新首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$创新首饰数量 <$STR(N$大米合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$大米合成首饰数量)>件【无双系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$大米合成首饰大米)>
+TakeBagItem |无双·战盔|无双·战链|无双·战镯|无双·战戒|无双·战带|无双·战靴|无双·魔盔|无双·魔链|无双·魔镯|无双·魔戒|无双·魔带|无双·魔靴|无双·道盔|无双·道链|无双·道镯|无双·道戒|无双·道带|无双·道靴|| <$STR(N$大米合成首饰数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·道镯 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·道镯*1
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@大米锻造蓝月复古·道链]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$大米合成首饰大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$大米合成首饰大米)>点，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 无双·战盔 N1
+getbagitemcount 无双·战链 N2
+getbagitemcount 无双·战镯 N3
+getbagitemcount 无双·战戒 N4
+getbagitemcount 无双·战带 N5
+getbagitemcount 无双·战靴 N6
+getbagitemcount 无双·魔盔 N7
+getbagitemcount 无双·魔链 N8
+getbagitemcount 无双·魔镯 N9
+getbagitemcount 无双·魔戒 N10
+getbagitemcount 无双·魔带 N11
+getbagitemcount 无双·魔靴 N12
+getbagitemcount 无双·道盔 N13
+getbagitemcount 无双·道链 N14
+getbagitemcount 无双·道镯 N15
+getbagitemcount 无双·道戒 N16
+getbagitemcount 无双·道带 N17
+getbagitemcount 无双·道靴 N18
+MOV N$创新首饰数量 0
+INC N$创新首饰数量 <$STR(N1)>
+INC N$创新首饰数量 <$STR(N2)>
+INC N$创新首饰数量 <$STR(N3)>
+INC N$创新首饰数量 <$STR(N4)>
+INC N$创新首饰数量 <$STR(N5)>
+INC N$创新首饰数量 <$STR(N6)>
+INC N$创新首饰数量 <$STR(N7)>
+INC N$创新首饰数量 <$STR(N8)>
+INC N$创新首饰数量 <$STR(N9)>
+INC N$创新首饰数量 <$STR(N10)>
+INC N$创新首饰数量 <$STR(N11)>
+INC N$创新首饰数量 <$STR(N12)>
+INC N$创新首饰数量 <$STR(N13)>
+INC N$创新首饰数量 <$STR(N14)>
+INC N$创新首饰数量 <$STR(N15)>
+INC N$创新首饰数量 <$STR(N16)>
+INC N$创新首饰数量 <$STR(N17)>
+INC N$创新首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$创新首饰数量 <$STR(N$大米合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$大米合成首饰数量)>件【无双系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$大米合成首饰大米)>
+TakeBagItem |无双·战盔|无双·战链|无双·战镯|无双·战戒|无双·战带|无双·战靴|无双·魔盔|无双·魔链|无双·魔镯|无双·魔戒|无双·魔带|无双·魔靴|无双·道盔|无双·道链|无双·道镯|无双·道戒|无双·道带|无双·道靴|| <$STR(N$大米合成首饰数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·道链 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·道链*1
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@大米锻造蓝月复古·道盔]
+
+
+#IF
+CHECKGAMEPOINT < <$STR(N$大米合成首饰大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$大米合成首饰大米)>点，无法锻造！
+BREAK
+
+#IF
+#ACT
+getbagitemcount 无双·战盔 N1
+getbagitemcount 无双·战链 N2
+getbagitemcount 无双·战镯 N3
+getbagitemcount 无双·战戒 N4
+getbagitemcount 无双·战带 N5
+getbagitemcount 无双·战靴 N6
+getbagitemcount 无双·魔盔 N7
+getbagitemcount 无双·魔链 N8
+getbagitemcount 无双·魔镯 N9
+getbagitemcount 无双·魔戒 N10
+getbagitemcount 无双·魔带 N11
+getbagitemcount 无双·魔靴 N12
+getbagitemcount 无双·道盔 N13
+getbagitemcount 无双·道链 N14
+getbagitemcount 无双·道镯 N15
+getbagitemcount 无双·道戒 N16
+getbagitemcount 无双·道带 N17
+getbagitemcount 无双·道靴 N18
+MOV N$创新首饰数量 0
+INC N$创新首饰数量 <$STR(N1)>
+INC N$创新首饰数量 <$STR(N2)>
+INC N$创新首饰数量 <$STR(N3)>
+INC N$创新首饰数量 <$STR(N4)>
+INC N$创新首饰数量 <$STR(N5)>
+INC N$创新首饰数量 <$STR(N6)>
+INC N$创新首饰数量 <$STR(N7)>
+INC N$创新首饰数量 <$STR(N8)>
+INC N$创新首饰数量 <$STR(N9)>
+INC N$创新首饰数量 <$STR(N10)>
+INC N$创新首饰数量 <$STR(N11)>
+INC N$创新首饰数量 <$STR(N12)>
+INC N$创新首饰数量 <$STR(N13)>
+INC N$创新首饰数量 <$STR(N14)>
+INC N$创新首饰数量 <$STR(N15)>
+INC N$创新首饰数量 <$STR(N16)>
+INC N$创新首饰数量 <$STR(N17)>
+INC N$创新首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$创新首饰数量 <$STR(N$大米合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$大米合成首饰数量)>件【无双系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$大米合成首饰大米)>
+TakeBagItem |无双·战盔|无双·战链|无双·战镯|无双·战戒|无双·战带|无双·战靴|无双·魔盔|无双·魔链|无双·魔镯|无双·魔戒|无双·魔带|无双·魔靴|无双·道盔|无双·道链|无双·道镯|无双·道戒|无双·道带|无双·道靴|| <$STR(N$大米合成首饰数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·道盔 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·道盔*1
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@大米锻造蓝月复古·道衣]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$大米合成衣服大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$大米合成衣服大米)>点，无法锻造！
+BREAK
+
+#IF
+#ACT
+getbagitemcount 无双·战甲 N1
+getbagitemcount 无双·战衣 N2
+getbagitemcount 无双·魔袍 N3
+getbagitemcount 无双·魔衣 N4
+getbagitemcount 无双·道袍 N5
+getbagitemcount 无双·道衣 N6
+MOV N$创新衣服数量 0
+INC N$创新衣服数量 <$STR(N1)>
+INC N$创新衣服数量 <$STR(N2)>
+INC N$创新衣服数量 <$STR(N3)>
+INC N$创新衣服数量 <$STR(N4)>
+INC N$创新衣服数量 <$STR(N5)>
+INC N$创新衣服数量 <$STR(N6)>
+
+
+
+
+
+
+#IF
+SMALL N$创新衣服数量 <$STR(N$大米合成衣服数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$大米合成衣服数量)>件【无双系列】的衣服，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$大米合成衣服大米)>
+TakeBagItem |无双·战甲|无双·战衣|无双·魔袍|无双·魔衣|无双·道袍|无双·道衣|| <$STR(N$大米合成衣服数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·道衣 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·道衣*1
+BREAK
+
+
+
+
+
+
+
+[@大米锻造蓝月复古·道袍]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$大米合成衣服大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$大米合成衣服大米)>点，无法锻造！
+BREAK
+
+
+
+#IF
+#ACT
+getbagitemcount 无双·战甲 N1
+getbagitemcount 无双·战衣 N2
+getbagitemcount 无双·魔袍 N3
+getbagitemcount 无双·魔衣 N4
+getbagitemcount 无双·道袍 N5
+getbagitemcount 无双·道衣 N6
+MOV N$创新衣服数量 0
+INC N$创新衣服数量 <$STR(N1)>
+INC N$创新衣服数量 <$STR(N2)>
+INC N$创新衣服数量 <$STR(N3)>
+INC N$创新衣服数量 <$STR(N4)>
+INC N$创新衣服数量 <$STR(N5)>
+INC N$创新衣服数量 <$STR(N6)>
+
+
+
+
+
+
+#IF
+SMALL N$创新衣服数量 <$STR(N$大米合成衣服数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$大米合成衣服数量)>件【无双系列】的衣服，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$大米合成衣服大米)>
+TakeBagItem |无双·战甲|无双·战衣|无双·魔袍|无双·魔衣|无双·道袍|无双·道衣|| <$STR(N$大米合成衣服数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·道袍 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·道袍*1
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@大米锻造蓝月复古·道刃]
+
+#IF
+CHECKGAMEPOINT < <$STR(N$大米合成武器大米)>
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足：<$STR(N$大米合成武器大米)>点，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 无双·神剑 N1
+getbagitemcount 无双·魔杖 N2
+getbagitemcount 无双·道扇 N3
+MOV N$创新武器数量 0
+INC N$创新武器数量 <$STR(N1)>
+INC N$创新武器数量 <$STR(N2)>
+INC N$创新武器数量 <$STR(N3)>
+
+
+
+
+
+#IF
+SMALL N$创新武器数量 <$STR(N$大米合成武器数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$大米合成武器数量)>把【无双系列】的武器，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+GAMEPOINT - <$STR(N$大米合成武器大米)>
+TakeBagItem |无双·神剑|无双·魔杖|无双·道扇|| <$STR(N$大米合成武器数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·道刃 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·道刃*1
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+[@材料锻造蓝月复古·战靴]
+
+#IF
+NOT CHECKITEM <$STR(S$二级合成首饰材料)> <$STR(N$二级合成首饰材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$二级合成首饰材料)>】不够<$STR(N$二级合成首饰材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 无双·战盔 N1
+getbagitemcount 无双·战链 N2
+getbagitemcount 无双·战镯 N3
+getbagitemcount 无双·战戒 N4
+getbagitemcount 无双·战带 N5
+getbagitemcount 无双·战靴 N6
+getbagitemcount 无双·魔盔 N7
+getbagitemcount 无双·魔链 N8
+getbagitemcount 无双·魔镯 N9
+getbagitemcount 无双·魔戒 N10
+getbagitemcount 无双·魔带 N11
+getbagitemcount 无双·魔靴 N12
+getbagitemcount 无双·道盔 N13
+getbagitemcount 无双·道链 N14
+getbagitemcount 无双·道镯 N15
+getbagitemcount 无双·道戒 N16
+getbagitemcount 无双·道带 N17
+getbagitemcount 无双·道靴 N18
+MOV N$二级首饰数量 0
+INC N$二级首饰数量 <$STR(N1)>
+INC N$二级首饰数量 <$STR(N2)>
+INC N$二级首饰数量 <$STR(N3)>
+INC N$二级首饰数量 <$STR(N4)>
+INC N$二级首饰数量 <$STR(N5)>
+INC N$二级首饰数量 <$STR(N6)>
+INC N$二级首饰数量 <$STR(N7)>
+INC N$二级首饰数量 <$STR(N8)>
+INC N$二级首饰数量 <$STR(N9)>
+INC N$二级首饰数量 <$STR(N10)>
+INC N$二级首饰数量 <$STR(N11)>
+INC N$二级首饰数量 <$STR(N12)>
+INC N$二级首饰数量 <$STR(N13)>
+INC N$二级首饰数量 <$STR(N14)>
+INC N$二级首饰数量 <$STR(N15)>
+INC N$二级首饰数量 <$STR(N16)>
+INC N$二级首饰数量 <$STR(N17)>
+INC N$二级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$二级首饰数量 <$STR(N$二级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$二级合成首饰数量)>件【无双系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$二级合成首饰材料)> <$STR(N$二级合成首饰材料)>
+TakeBagItem |无双·战盔|无双·战链|无双·战镯|无双·战戒|无双·战带|无双·战靴|无双·魔盔|无双·魔链|无双·魔镯|无双·魔戒|无双·魔带|无双·魔靴|无双·道盔|无双·道链|无双·道镯|无双·道戒|无双·道带|无双·道靴|| <$STR(N$二级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·战靴 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·战靴*1
+BREAK
+
+
+
+[@材料锻造蓝月复古·战带]
+
+#IF
+NOT CHECKITEM <$STR(S$二级合成首饰材料)> <$STR(N$二级合成首饰材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$二级合成首饰材料)>】不够<$STR(N$二级合成首饰材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 无双·战盔 N1
+getbagitemcount 无双·战链 N2
+getbagitemcount 无双·战镯 N3
+getbagitemcount 无双·战戒 N4
+getbagitemcount 无双·战带 N5
+getbagitemcount 无双·战靴 N6
+getbagitemcount 无双·魔盔 N7
+getbagitemcount 无双·魔链 N8
+getbagitemcount 无双·魔镯 N9
+getbagitemcount 无双·魔戒 N10
+getbagitemcount 无双·魔带 N11
+getbagitemcount 无双·魔靴 N12
+getbagitemcount 无双·道盔 N13
+getbagitemcount 无双·道链 N14
+getbagitemcount 无双·道镯 N15
+getbagitemcount 无双·道戒 N16
+getbagitemcount 无双·道带 N17
+getbagitemcount 无双·道靴 N18
+MOV N$二级首饰数量 0
+INC N$二级首饰数量 <$STR(N1)>
+INC N$二级首饰数量 <$STR(N2)>
+INC N$二级首饰数量 <$STR(N3)>
+INC N$二级首饰数量 <$STR(N4)>
+INC N$二级首饰数量 <$STR(N5)>
+INC N$二级首饰数量 <$STR(N6)>
+INC N$二级首饰数量 <$STR(N7)>
+INC N$二级首饰数量 <$STR(N8)>
+INC N$二级首饰数量 <$STR(N9)>
+INC N$二级首饰数量 <$STR(N10)>
+INC N$二级首饰数量 <$STR(N11)>
+INC N$二级首饰数量 <$STR(N12)>
+INC N$二级首饰数量 <$STR(N13)>
+INC N$二级首饰数量 <$STR(N14)>
+INC N$二级首饰数量 <$STR(N15)>
+INC N$二级首饰数量 <$STR(N16)>
+INC N$二级首饰数量 <$STR(N17)>
+INC N$二级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$二级首饰数量 <$STR(N$二级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$二级合成首饰数量)>件【无双系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$二级合成首饰材料)> <$STR(N$二级合成首饰材料)>
+TakeBagItem |无双·战盔|无双·战链|无双·战镯|无双·战戒|无双·战带|无双·战靴|无双·魔盔|无双·魔链|无双·魔镯|无双·魔戒|无双·魔带|无双·魔靴|无双·道盔|无双·道链|无双·道镯|无双·道戒|无双·道带|无双·道靴|| <$STR(N$二级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·战带 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·战带*1
+BREAK
+
+
+
+
+[@材料锻造蓝月复古·战戒]
+
+#IF
+NOT CHECKITEM <$STR(S$二级合成首饰材料)> <$STR(N$二级合成首饰材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$二级合成首饰材料)>】不够<$STR(N$二级合成首饰材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 无双·战盔 N1
+getbagitemcount 无双·战链 N2
+getbagitemcount 无双·战镯 N3
+getbagitemcount 无双·战戒 N4
+getbagitemcount 无双·战带 N5
+getbagitemcount 无双·战靴 N6
+getbagitemcount 无双·魔盔 N7
+getbagitemcount 无双·魔链 N8
+getbagitemcount 无双·魔镯 N9
+getbagitemcount 无双·魔戒 N10
+getbagitemcount 无双·魔带 N11
+getbagitemcount 无双·魔靴 N12
+getbagitemcount 无双·道盔 N13
+getbagitemcount 无双·道链 N14
+getbagitemcount 无双·道镯 N15
+getbagitemcount 无双·道戒 N16
+getbagitemcount 无双·道带 N17
+getbagitemcount 无双·道靴 N18
+MOV N$二级首饰数量 0
+INC N$二级首饰数量 <$STR(N1)>
+INC N$二级首饰数量 <$STR(N2)>
+INC N$二级首饰数量 <$STR(N3)>
+INC N$二级首饰数量 <$STR(N4)>
+INC N$二级首饰数量 <$STR(N5)>
+INC N$二级首饰数量 <$STR(N6)>
+INC N$二级首饰数量 <$STR(N7)>
+INC N$二级首饰数量 <$STR(N8)>
+INC N$二级首饰数量 <$STR(N9)>
+INC N$二级首饰数量 <$STR(N10)>
+INC N$二级首饰数量 <$STR(N11)>
+INC N$二级首饰数量 <$STR(N12)>
+INC N$二级首饰数量 <$STR(N13)>
+INC N$二级首饰数量 <$STR(N14)>
+INC N$二级首饰数量 <$STR(N15)>
+INC N$二级首饰数量 <$STR(N16)>
+INC N$二级首饰数量 <$STR(N17)>
+INC N$二级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$二级首饰数量 <$STR(N$二级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$二级合成首饰数量)>件【无双系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$二级合成首饰材料)> <$STR(N$二级合成首饰材料)>
+TakeBagItem |无双·战盔|无双·战链|无双·战镯|无双·战戒|无双·战带|无双·战靴|无双·魔盔|无双·魔链|无双·魔镯|无双·魔戒|无双·魔带|无双·魔靴|无双·道盔|无双·道链|无双·道镯|无双·道戒|无双·道带|无双·道靴|| <$STR(N$二级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·战戒 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·战戒*1
+BREAK
+
+
+
+
+
+[@材料锻造蓝月复古·战镯]
+
+#IF
+NOT CHECKITEM <$STR(S$二级合成首饰材料)> <$STR(N$二级合成首饰材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$二级合成首饰材料)>】不够<$STR(N$二级合成首饰材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 无双·战盔 N1
+getbagitemcount 无双·战链 N2
+getbagitemcount 无双·战镯 N3
+getbagitemcount 无双·战戒 N4
+getbagitemcount 无双·战带 N5
+getbagitemcount 无双·战靴 N6
+getbagitemcount 无双·魔盔 N7
+getbagitemcount 无双·魔链 N8
+getbagitemcount 无双·魔镯 N9
+getbagitemcount 无双·魔戒 N10
+getbagitemcount 无双·魔带 N11
+getbagitemcount 无双·魔靴 N12
+getbagitemcount 无双·道盔 N13
+getbagitemcount 无双·道链 N14
+getbagitemcount 无双·道镯 N15
+getbagitemcount 无双·道戒 N16
+getbagitemcount 无双·道带 N17
+getbagitemcount 无双·道靴 N18
+MOV N$二级首饰数量 0
+INC N$二级首饰数量 <$STR(N1)>
+INC N$二级首饰数量 <$STR(N2)>
+INC N$二级首饰数量 <$STR(N3)>
+INC N$二级首饰数量 <$STR(N4)>
+INC N$二级首饰数量 <$STR(N5)>
+INC N$二级首饰数量 <$STR(N6)>
+INC N$二级首饰数量 <$STR(N7)>
+INC N$二级首饰数量 <$STR(N8)>
+INC N$二级首饰数量 <$STR(N9)>
+INC N$二级首饰数量 <$STR(N10)>
+INC N$二级首饰数量 <$STR(N11)>
+INC N$二级首饰数量 <$STR(N12)>
+INC N$二级首饰数量 <$STR(N13)>
+INC N$二级首饰数量 <$STR(N14)>
+INC N$二级首饰数量 <$STR(N15)>
+INC N$二级首饰数量 <$STR(N16)>
+INC N$二级首饰数量 <$STR(N17)>
+INC N$二级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$二级首饰数量 <$STR(N$二级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$二级合成首饰数量)>件【无双系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$二级合成首饰材料)> <$STR(N$二级合成首饰材料)>
+TakeBagItem |无双·战盔|无双·战链|无双·战镯|无双·战戒|无双·战带|无双·战靴|无双·魔盔|无双·魔链|无双·魔镯|无双·魔戒|无双·魔带|无双·魔靴|无双·道盔|无双·道链|无双·道镯|无双·道戒|无双·道带|无双·道靴|| <$STR(N$二级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·战镯 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·战镯*1
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@材料锻造蓝月复古·战链]
+
+#IF
+NOT CHECKITEM <$STR(S$二级合成首饰材料)> <$STR(N$二级合成首饰材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$二级合成首饰材料)>】不够<$STR(N$二级合成首饰材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 无双·战盔 N1
+getbagitemcount 无双·战链 N2
+getbagitemcount 无双·战镯 N3
+getbagitemcount 无双·战戒 N4
+getbagitemcount 无双·战带 N5
+getbagitemcount 无双·战靴 N6
+getbagitemcount 无双·魔盔 N7
+getbagitemcount 无双·魔链 N8
+getbagitemcount 无双·魔镯 N9
+getbagitemcount 无双·魔戒 N10
+getbagitemcount 无双·魔带 N11
+getbagitemcount 无双·魔靴 N12
+getbagitemcount 无双·道盔 N13
+getbagitemcount 无双·道链 N14
+getbagitemcount 无双·道镯 N15
+getbagitemcount 无双·道戒 N16
+getbagitemcount 无双·道带 N17
+getbagitemcount 无双·道靴 N18
+MOV N$二级首饰数量 0
+INC N$二级首饰数量 <$STR(N1)>
+INC N$二级首饰数量 <$STR(N2)>
+INC N$二级首饰数量 <$STR(N3)>
+INC N$二级首饰数量 <$STR(N4)>
+INC N$二级首饰数量 <$STR(N5)>
+INC N$二级首饰数量 <$STR(N6)>
+INC N$二级首饰数量 <$STR(N7)>
+INC N$二级首饰数量 <$STR(N8)>
+INC N$二级首饰数量 <$STR(N9)>
+INC N$二级首饰数量 <$STR(N10)>
+INC N$二级首饰数量 <$STR(N11)>
+INC N$二级首饰数量 <$STR(N12)>
+INC N$二级首饰数量 <$STR(N13)>
+INC N$二级首饰数量 <$STR(N14)>
+INC N$二级首饰数量 <$STR(N15)>
+INC N$二级首饰数量 <$STR(N16)>
+INC N$二级首饰数量 <$STR(N17)>
+INC N$二级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$二级首饰数量 <$STR(N$二级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$二级合成首饰数量)>件【无双系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$二级合成首饰材料)> <$STR(N$二级合成首饰材料)>
+TakeBagItem |无双·战盔|无双·战链|无双·战镯|无双·战戒|无双·战带|无双·战靴|无双·魔盔|无双·魔链|无双·魔镯|无双·魔戒|无双·魔带|无双·魔靴|无双·道盔|无双·道链|无双·道镯|无双·道戒|无双·道带|无双·道靴|| <$STR(N$二级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·战链 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·战链*1
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@材料锻造蓝月复古·战盔]
+
+#IF
+NOT CHECKITEM <$STR(S$二级合成首饰材料)> <$STR(N$二级合成首饰材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$二级合成首饰材料)>】不够<$STR(N$二级合成首饰材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 无双·战盔 N1
+getbagitemcount 无双·战链 N2
+getbagitemcount 无双·战镯 N3
+getbagitemcount 无双·战戒 N4
+getbagitemcount 无双·战带 N5
+getbagitemcount 无双·战靴 N6
+getbagitemcount 无双·魔盔 N7
+getbagitemcount 无双·魔链 N8
+getbagitemcount 无双·魔镯 N9
+getbagitemcount 无双·魔戒 N10
+getbagitemcount 无双·魔带 N11
+getbagitemcount 无双·魔靴 N12
+getbagitemcount 无双·道盔 N13
+getbagitemcount 无双·道链 N14
+getbagitemcount 无双·道镯 N15
+getbagitemcount 无双·道戒 N16
+getbagitemcount 无双·道带 N17
+getbagitemcount 无双·道靴 N18
+MOV N$二级首饰数量 0
+INC N$二级首饰数量 <$STR(N1)>
+INC N$二级首饰数量 <$STR(N2)>
+INC N$二级首饰数量 <$STR(N3)>
+INC N$二级首饰数量 <$STR(N4)>
+INC N$二级首饰数量 <$STR(N5)>
+INC N$二级首饰数量 <$STR(N6)>
+INC N$二级首饰数量 <$STR(N7)>
+INC N$二级首饰数量 <$STR(N8)>
+INC N$二级首饰数量 <$STR(N9)>
+INC N$二级首饰数量 <$STR(N10)>
+INC N$二级首饰数量 <$STR(N11)>
+INC N$二级首饰数量 <$STR(N12)>
+INC N$二级首饰数量 <$STR(N13)>
+INC N$二级首饰数量 <$STR(N14)>
+INC N$二级首饰数量 <$STR(N15)>
+INC N$二级首饰数量 <$STR(N16)>
+INC N$二级首饰数量 <$STR(N17)>
+INC N$二级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$二级首饰数量 <$STR(N$二级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$二级合成首饰数量)>件【无双系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$二级合成首饰材料)> <$STR(N$二级合成首饰材料)>
+TakeBagItem |无双·战盔|无双·战链|无双·战镯|无双·战戒|无双·战带|无双·战靴|无双·魔盔|无双·魔链|无双·魔镯|无双·魔戒|无双·魔带|无双·魔靴|无双·道盔|无双·道链|无双·道镯|无双·道戒|无双·道带|无双·道靴|| <$STR(N$二级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·战盔 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·战盔*1
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@材料锻造蓝月复古·战衣]
+
+#IF
+NOT CHECKITEM <$STR(S$二级合成衣服材料)> <$STR(N$二级合成衣服材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$二级合成衣服材料)>】不够<$STR(N$二级合成衣服材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 无双·战甲 N1
+getbagitemcount 无双·战衣 N2
+getbagitemcount 无双·魔袍 N3
+getbagitemcount 无双·魔衣 N4
+getbagitemcount 无双·道袍 N5
+getbagitemcount 无双·道衣 N6
+MOV N$二级衣服数量 0
+INC N$二级衣服数量 <$STR(N1)>
+INC N$二级衣服数量 <$STR(N2)>
+INC N$二级衣服数量 <$STR(N3)>
+INC N$二级衣服数量 <$STR(N4)>
+INC N$二级衣服数量 <$STR(N5)>
+INC N$二级衣服数量 <$STR(N6)>
+
+
+
+
+
+
+#IF
+SMALL N$二级衣服数量 <$STR(N$二级合成衣服数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$二级合成衣服数量)>件【无双系列】的衣服，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$二级合成衣服材料)> <$STR(N$二级合成衣服材料)>
+TakeBagItem |无双·战甲|无双·战衣|无双·魔袍|无双·魔衣|无双·道袍|无双·道衣|| <$STR(N$二级合成衣服数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·战衣 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·战衣*1
+BREAK
+
+
+
+
+
+
+
+[@材料锻造蓝月复古·战甲]
+
+#IF
+NOT CHECKITEM <$STR(S$二级合成衣服材料)> <$STR(N$二级合成衣服材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$二级合成衣服材料)>】不够<$STR(N$二级合成衣服材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 无双·战甲 N1
+getbagitemcount 无双·战衣 N2
+getbagitemcount 无双·魔袍 N3
+getbagitemcount 无双·魔衣 N4
+getbagitemcount 无双·道袍 N5
+getbagitemcount 无双·道衣 N6
+MOV N$二级衣服数量 0
+INC N$二级衣服数量 <$STR(N1)>
+INC N$二级衣服数量 <$STR(N2)>
+INC N$二级衣服数量 <$STR(N3)>
+INC N$二级衣服数量 <$STR(N4)>
+INC N$二级衣服数量 <$STR(N5)>
+INC N$二级衣服数量 <$STR(N6)>
+
+
+
+
+
+
+#IF
+SMALL N$二级衣服数量 <$STR(N$二级合成衣服数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$二级合成衣服数量)>件【无双系列】的衣服，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$二级合成衣服材料)> <$STR(N$二级合成衣服材料)>
+TakeBagItem |无双·战甲|无双·战衣|无双·魔袍|无双·魔衣|无双·道袍|无双·道衣|| <$STR(N$二级合成衣服数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·战甲 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·战甲*1
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@材料锻造蓝月复古·神斩]
+
+#IF
+NOT CHECKITEM <$STR(S$二级合成武器材料)> <$STR(N$二级合成武器材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$二级合成武器材料)>】不够<$STR(N$二级合成武器材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 无双·神剑 N1
+getbagitemcount 无双·魔杖 N2
+getbagitemcount 无双·道扇 N3
+MOV N$二级武器数量 0
+INC N$二级武器数量 <$STR(N1)>
+INC N$二级武器数量 <$STR(N2)>
+INC N$二级武器数量 <$STR(N3)>
+
+
+
+
+
+#IF
+SMALL N$二级武器数量 <$STR(N$二级合成武器数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$二级合成武器数量)>把【无双系列】的武器，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$二级合成武器材料)> <$STR(N$二级合成武器材料)>
+TakeBagItem |无双·神剑|无双·魔杖|无双·道扇|| <$STR(N$二级合成武器数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·神斩 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·神斩*1
+BREAK
+
+
+
+
+[@材料锻造蓝月复古·魔靴]
+
+#IF
+NOT CHECKITEM <$STR(S$二级合成首饰材料)> <$STR(N$二级合成首饰材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$二级合成首饰材料)>】不够<$STR(N$二级合成首饰材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 无双·战盔 N1
+getbagitemcount 无双·战链 N2
+getbagitemcount 无双·战镯 N3
+getbagitemcount 无双·战戒 N4
+getbagitemcount 无双·战带 N5
+getbagitemcount 无双·战靴 N6
+getbagitemcount 无双·魔盔 N7
+getbagitemcount 无双·魔链 N8
+getbagitemcount 无双·魔镯 N9
+getbagitemcount 无双·魔戒 N10
+getbagitemcount 无双·魔带 N11
+getbagitemcount 无双·魔靴 N12
+getbagitemcount 无双·道盔 N13
+getbagitemcount 无双·道链 N14
+getbagitemcount 无双·道镯 N15
+getbagitemcount 无双·道戒 N16
+getbagitemcount 无双·道带 N17
+getbagitemcount 无双·道靴 N18
+MOV N$二级首饰数量 0
+INC N$二级首饰数量 <$STR(N1)>
+INC N$二级首饰数量 <$STR(N2)>
+INC N$二级首饰数量 <$STR(N3)>
+INC N$二级首饰数量 <$STR(N4)>
+INC N$二级首饰数量 <$STR(N5)>
+INC N$二级首饰数量 <$STR(N6)>
+INC N$二级首饰数量 <$STR(N7)>
+INC N$二级首饰数量 <$STR(N8)>
+INC N$二级首饰数量 <$STR(N9)>
+INC N$二级首饰数量 <$STR(N10)>
+INC N$二级首饰数量 <$STR(N11)>
+INC N$二级首饰数量 <$STR(N12)>
+INC N$二级首饰数量 <$STR(N13)>
+INC N$二级首饰数量 <$STR(N14)>
+INC N$二级首饰数量 <$STR(N15)>
+INC N$二级首饰数量 <$STR(N16)>
+INC N$二级首饰数量 <$STR(N17)>
+INC N$二级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$二级首饰数量 <$STR(N$二级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$二级合成首饰数量)>件【无双系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$二级合成首饰材料)> <$STR(N$二级合成首饰材料)>
+TakeBagItem |无双·战盔|无双·战链|无双·战镯|无双·战戒|无双·战带|无双·战靴|无双·魔盔|无双·魔链|无双·魔镯|无双·魔戒|无双·魔带|无双·魔靴|无双·道盔|无双·道链|无双·道镯|无双·道戒|无双·道带|无双·道靴|| <$STR(N$二级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·魔靴 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·魔靴*1
+BREAK
+
+
+
+
+[@材料锻造蓝月复古·魔带]
+
+#IF
+NOT CHECKITEM <$STR(S$二级合成首饰材料)> <$STR(N$二级合成首饰材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$二级合成首饰材料)>】不够<$STR(N$二级合成首饰材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 无双·战盔 N1
+getbagitemcount 无双·战链 N2
+getbagitemcount 无双·战镯 N3
+getbagitemcount 无双·战戒 N4
+getbagitemcount 无双·战带 N5
+getbagitemcount 无双·战靴 N6
+getbagitemcount 无双·魔盔 N7
+getbagitemcount 无双·魔链 N8
+getbagitemcount 无双·魔镯 N9
+getbagitemcount 无双·魔戒 N10
+getbagitemcount 无双·魔带 N11
+getbagitemcount 无双·魔靴 N12
+getbagitemcount 无双·道盔 N13
+getbagitemcount 无双·道链 N14
+getbagitemcount 无双·道镯 N15
+getbagitemcount 无双·道戒 N16
+getbagitemcount 无双·道带 N17
+getbagitemcount 无双·道靴 N18
+MOV N$二级首饰数量 0
+INC N$二级首饰数量 <$STR(N1)>
+INC N$二级首饰数量 <$STR(N2)>
+INC N$二级首饰数量 <$STR(N3)>
+INC N$二级首饰数量 <$STR(N4)>
+INC N$二级首饰数量 <$STR(N5)>
+INC N$二级首饰数量 <$STR(N6)>
+INC N$二级首饰数量 <$STR(N7)>
+INC N$二级首饰数量 <$STR(N8)>
+INC N$二级首饰数量 <$STR(N9)>
+INC N$二级首饰数量 <$STR(N10)>
+INC N$二级首饰数量 <$STR(N11)>
+INC N$二级首饰数量 <$STR(N12)>
+INC N$二级首饰数量 <$STR(N13)>
+INC N$二级首饰数量 <$STR(N14)>
+INC N$二级首饰数量 <$STR(N15)>
+INC N$二级首饰数量 <$STR(N16)>
+INC N$二级首饰数量 <$STR(N17)>
+INC N$二级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$二级首饰数量 <$STR(N$二级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$二级合成首饰数量)>件【无双系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$二级合成首饰材料)> <$STR(N$二级合成首饰材料)>
+TakeBagItem |无双·战盔|无双·战链|无双·战镯|无双·战戒|无双·战带|无双·战靴|无双·魔盔|无双·魔链|无双·魔镯|无双·魔戒|无双·魔带|无双·魔靴|无双·道盔|无双·道链|无双·道镯|无双·道戒|无双·道带|无双·道靴|| <$STR(N$二级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·魔带 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·魔带*1
+BREAK
+
+
+
+
+[@材料锻造蓝月复古·魔戒]
+
+#IF
+NOT CHECKITEM <$STR(S$二级合成首饰材料)> <$STR(N$二级合成首饰材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$二级合成首饰材料)>】不够<$STR(N$二级合成首饰材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 无双·战盔 N1
+getbagitemcount 无双·战链 N2
+getbagitemcount 无双·战镯 N3
+getbagitemcount 无双·战戒 N4
+getbagitemcount 无双·战带 N5
+getbagitemcount 无双·战靴 N6
+getbagitemcount 无双·魔盔 N7
+getbagitemcount 无双·魔链 N8
+getbagitemcount 无双·魔镯 N9
+getbagitemcount 无双·魔戒 N10
+getbagitemcount 无双·魔带 N11
+getbagitemcount 无双·魔靴 N12
+getbagitemcount 无双·道盔 N13
+getbagitemcount 无双·道链 N14
+getbagitemcount 无双·道镯 N15
+getbagitemcount 无双·道戒 N16
+getbagitemcount 无双·道带 N17
+getbagitemcount 无双·道靴 N18
+MOV N$二级首饰数量 0
+INC N$二级首饰数量 <$STR(N1)>
+INC N$二级首饰数量 <$STR(N2)>
+INC N$二级首饰数量 <$STR(N3)>
+INC N$二级首饰数量 <$STR(N4)>
+INC N$二级首饰数量 <$STR(N5)>
+INC N$二级首饰数量 <$STR(N6)>
+INC N$二级首饰数量 <$STR(N7)>
+INC N$二级首饰数量 <$STR(N8)>
+INC N$二级首饰数量 <$STR(N9)>
+INC N$二级首饰数量 <$STR(N10)>
+INC N$二级首饰数量 <$STR(N11)>
+INC N$二级首饰数量 <$STR(N12)>
+INC N$二级首饰数量 <$STR(N13)>
+INC N$二级首饰数量 <$STR(N14)>
+INC N$二级首饰数量 <$STR(N15)>
+INC N$二级首饰数量 <$STR(N16)>
+INC N$二级首饰数量 <$STR(N17)>
+INC N$二级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$二级首饰数量 <$STR(N$二级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$二级合成首饰数量)>件【无双系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$二级合成首饰材料)> <$STR(N$二级合成首饰材料)>
+TakeBagItem |无双·战盔|无双·战链|无双·战镯|无双·战戒|无双·战带|无双·战靴|无双·魔盔|无双·魔链|无双·魔镯|无双·魔戒|无双·魔带|无双·魔靴|无双·道盔|无双·道链|无双·道镯|无双·道戒|无双·道带|无双·道靴|| <$STR(N$二级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·魔戒 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·魔戒*1
+BREAK
+
+
+
+
+
+[@材料锻造蓝月复古·魔镯]
+
+#IF
+NOT CHECKITEM <$STR(S$二级合成首饰材料)> <$STR(N$二级合成首饰材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$二级合成首饰材料)>】不够<$STR(N$二级合成首饰材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 无双·战盔 N1
+getbagitemcount 无双·战链 N2
+getbagitemcount 无双·战镯 N3
+getbagitemcount 无双·战戒 N4
+getbagitemcount 无双·战带 N5
+getbagitemcount 无双·战靴 N6
+getbagitemcount 无双·魔盔 N7
+getbagitemcount 无双·魔链 N8
+getbagitemcount 无双·魔镯 N9
+getbagitemcount 无双·魔戒 N10
+getbagitemcount 无双·魔带 N11
+getbagitemcount 无双·魔靴 N12
+getbagitemcount 无双·道盔 N13
+getbagitemcount 无双·道链 N14
+getbagitemcount 无双·道镯 N15
+getbagitemcount 无双·道戒 N16
+getbagitemcount 无双·道带 N17
+getbagitemcount 无双·道靴 N18
+MOV N$二级首饰数量 0
+INC N$二级首饰数量 <$STR(N1)>
+INC N$二级首饰数量 <$STR(N2)>
+INC N$二级首饰数量 <$STR(N3)>
+INC N$二级首饰数量 <$STR(N4)>
+INC N$二级首饰数量 <$STR(N5)>
+INC N$二级首饰数量 <$STR(N6)>
+INC N$二级首饰数量 <$STR(N7)>
+INC N$二级首饰数量 <$STR(N8)>
+INC N$二级首饰数量 <$STR(N9)>
+INC N$二级首饰数量 <$STR(N10)>
+INC N$二级首饰数量 <$STR(N11)>
+INC N$二级首饰数量 <$STR(N12)>
+INC N$二级首饰数量 <$STR(N13)>
+INC N$二级首饰数量 <$STR(N14)>
+INC N$二级首饰数量 <$STR(N15)>
+INC N$二级首饰数量 <$STR(N16)>
+INC N$二级首饰数量 <$STR(N17)>
+INC N$二级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$二级首饰数量 <$STR(N$二级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$二级合成首饰数量)>件【无双系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$二级合成首饰材料)> <$STR(N$二级合成首饰材料)>
+TakeBagItem |无双·战盔|无双·战链|无双·战镯|无双·战戒|无双·战带|无双·战靴|无双·魔盔|无双·魔链|无双·魔镯|无双·魔戒|无双·魔带|无双·魔靴|无双·道盔|无双·道链|无双·道镯|无双·道戒|无双·道带|无双·道靴|| <$STR(N$二级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·魔镯 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·魔镯*1
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@材料锻造蓝月复古·魔链]
+
+#IF
+NOT CHECKITEM <$STR(S$二级合成首饰材料)> <$STR(N$二级合成首饰材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$二级合成首饰材料)>】不够<$STR(N$二级合成首饰材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 无双·战盔 N1
+getbagitemcount 无双·战链 N2
+getbagitemcount 无双·战镯 N3
+getbagitemcount 无双·战戒 N4
+getbagitemcount 无双·战带 N5
+getbagitemcount 无双·战靴 N6
+getbagitemcount 无双·魔盔 N7
+getbagitemcount 无双·魔链 N8
+getbagitemcount 无双·魔镯 N9
+getbagitemcount 无双·魔戒 N10
+getbagitemcount 无双·魔带 N11
+getbagitemcount 无双·魔靴 N12
+getbagitemcount 无双·道盔 N13
+getbagitemcount 无双·道链 N14
+getbagitemcount 无双·道镯 N15
+getbagitemcount 无双·道戒 N16
+getbagitemcount 无双·道带 N17
+getbagitemcount 无双·道靴 N18
+MOV N$二级首饰数量 0
+INC N$二级首饰数量 <$STR(N1)>
+INC N$二级首饰数量 <$STR(N2)>
+INC N$二级首饰数量 <$STR(N3)>
+INC N$二级首饰数量 <$STR(N4)>
+INC N$二级首饰数量 <$STR(N5)>
+INC N$二级首饰数量 <$STR(N6)>
+INC N$二级首饰数量 <$STR(N7)>
+INC N$二级首饰数量 <$STR(N8)>
+INC N$二级首饰数量 <$STR(N9)>
+INC N$二级首饰数量 <$STR(N10)>
+INC N$二级首饰数量 <$STR(N11)>
+INC N$二级首饰数量 <$STR(N12)>
+INC N$二级首饰数量 <$STR(N13)>
+INC N$二级首饰数量 <$STR(N14)>
+INC N$二级首饰数量 <$STR(N15)>
+INC N$二级首饰数量 <$STR(N16)>
+INC N$二级首饰数量 <$STR(N17)>
+INC N$二级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$二级首饰数量 <$STR(N$二级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$二级合成首饰数量)>件【无双系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$二级合成首饰材料)> <$STR(N$二级合成首饰材料)>
+TakeBagItem |无双·战盔|无双·战链|无双·战镯|无双·战戒|无双·战带|无双·战靴|无双·魔盔|无双·魔链|无双·魔镯|无双·魔戒|无双·魔带|无双·魔靴|无双·道盔|无双·道链|无双·道镯|无双·道戒|无双·道带|无双·道靴|| <$STR(N$二级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·魔链 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·魔链*1
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@材料锻造蓝月复古·魔盔]
+
+#IF
+NOT CHECKITEM <$STR(S$二级合成首饰材料)> <$STR(N$二级合成首饰材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$二级合成首饰材料)>】不够<$STR(N$二级合成首饰材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 无双·战盔 N1
+getbagitemcount 无双·战链 N2
+getbagitemcount 无双·战镯 N3
+getbagitemcount 无双·战戒 N4
+getbagitemcount 无双·战带 N5
+getbagitemcount 无双·战靴 N6
+getbagitemcount 无双·魔盔 N7
+getbagitemcount 无双·魔链 N8
+getbagitemcount 无双·魔镯 N9
+getbagitemcount 无双·魔戒 N10
+getbagitemcount 无双·魔带 N11
+getbagitemcount 无双·魔靴 N12
+getbagitemcount 无双·道盔 N13
+getbagitemcount 无双·道链 N14
+getbagitemcount 无双·道镯 N15
+getbagitemcount 无双·道戒 N16
+getbagitemcount 无双·道带 N17
+getbagitemcount 无双·道靴 N18
+MOV N$二级首饰数量 0
+INC N$二级首饰数量 <$STR(N1)>
+INC N$二级首饰数量 <$STR(N2)>
+INC N$二级首饰数量 <$STR(N3)>
+INC N$二级首饰数量 <$STR(N4)>
+INC N$二级首饰数量 <$STR(N5)>
+INC N$二级首饰数量 <$STR(N6)>
+INC N$二级首饰数量 <$STR(N7)>
+INC N$二级首饰数量 <$STR(N8)>
+INC N$二级首饰数量 <$STR(N9)>
+INC N$二级首饰数量 <$STR(N10)>
+INC N$二级首饰数量 <$STR(N11)>
+INC N$二级首饰数量 <$STR(N12)>
+INC N$二级首饰数量 <$STR(N13)>
+INC N$二级首饰数量 <$STR(N14)>
+INC N$二级首饰数量 <$STR(N15)>
+INC N$二级首饰数量 <$STR(N16)>
+INC N$二级首饰数量 <$STR(N17)>
+INC N$二级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$二级首饰数量 <$STR(N$二级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$二级合成首饰数量)>件【无双系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$二级合成首饰材料)> <$STR(N$二级合成首饰材料)>
+TakeBagItem |无双·战盔|无双·战链|无双·战镯|无双·战戒|无双·战带|无双·战靴|无双·魔盔|无双·魔链|无双·魔镯|无双·魔戒|无双·魔带|无双·魔靴|无双·道盔|无双·道链|无双·道镯|无双·道戒|无双·道带|无双·道靴|| <$STR(N$二级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·魔盔 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·魔盔*1
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@材料锻造蓝月复古·魔衣]
+
+#IF
+NOT CHECKITEM <$STR(S$二级合成衣服材料)> <$STR(N$二级合成衣服材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$二级合成衣服材料)>】不够<$STR(N$二级合成衣服材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 无双·战甲 N1
+getbagitemcount 无双·战衣 N2
+getbagitemcount 无双·魔袍 N3
+getbagitemcount 无双·魔衣 N4
+getbagitemcount 无双·道袍 N5
+getbagitemcount 无双·道衣 N6
+MOV N$二级衣服数量 0
+INC N$二级衣服数量 <$STR(N1)>
+INC N$二级衣服数量 <$STR(N2)>
+INC N$二级衣服数量 <$STR(N3)>
+INC N$二级衣服数量 <$STR(N4)>
+INC N$二级衣服数量 <$STR(N5)>
+INC N$二级衣服数量 <$STR(N6)>
+
+
+
+
+
+
+#IF
+SMALL N$二级衣服数量 <$STR(N$二级合成衣服数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$二级合成衣服数量)>件【无双系列】的衣服，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$二级合成衣服材料)> <$STR(N$二级合成衣服材料)>
+TakeBagItem |无双·战甲|无双·战衣|无双·魔袍|无双·魔衣|无双·道袍|无双·道衣|| <$STR(N$二级合成衣服数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·魔衣 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·魔衣*1
+BREAK
+
+
+
+
+
+
+
+[@材料锻造蓝月复古·魔袍]
+
+#IF
+NOT CHECKITEM <$STR(S$二级合成衣服材料)> <$STR(N$二级合成衣服材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$二级合成衣服材料)>】不够<$STR(N$二级合成衣服材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 无双·战甲 N1
+getbagitemcount 无双·战衣 N2
+getbagitemcount 无双·魔袍 N3
+getbagitemcount 无双·魔衣 N4
+getbagitemcount 无双·道袍 N5
+getbagitemcount 无双·道衣 N6
+MOV N$二级衣服数量 0
+INC N$二级衣服数量 <$STR(N1)>
+INC N$二级衣服数量 <$STR(N2)>
+INC N$二级衣服数量 <$STR(N3)>
+INC N$二级衣服数量 <$STR(N4)>
+INC N$二级衣服数量 <$STR(N5)>
+INC N$二级衣服数量 <$STR(N6)>
+
+
+
+
+
+
+#IF
+SMALL N$二级衣服数量 <$STR(N$二级合成衣服数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$二级合成衣服数量)>件【无双系列】的衣服，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$二级合成衣服材料)> <$STR(N$二级合成衣服材料)>
+TakeBagItem |无双·战甲|无双·战衣|无双·魔袍|无双·魔衣|无双·道袍|无双·道衣|| <$STR(N$二级合成衣服数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·魔袍 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·魔袍*1
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@材料锻造蓝月复古·魔杖]
+
+#IF
+NOT CHECKITEM <$STR(S$二级合成武器材料)> <$STR(N$二级合成武器材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$二级合成武器材料)>】不够<$STR(N$二级合成武器材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 无双·神剑 N1
+getbagitemcount 无双·魔杖 N2
+getbagitemcount 无双·道扇 N3
+MOV N$二级武器数量 0
+INC N$二级武器数量 <$STR(N1)>
+INC N$二级武器数量 <$STR(N2)>
+INC N$二级武器数量 <$STR(N3)>
+
+
+
+
+
+#IF
+SMALL N$二级武器数量 <$STR(N$二级合成武器数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$二级合成武器数量)>把【无双系列】的武器，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$二级合成武器材料)> <$STR(N$二级合成武器材料)>
+TakeBagItem |无双·神剑|无双·魔杖|无双·道扇|| <$STR(N$二级合成武器数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·魔杖 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·魔杖*1
+BREAK
+
+
+
+
+
+[@材料锻造蓝月复古·道靴]
+
+#IF
+NOT CHECKITEM <$STR(S$二级合成首饰材料)> <$STR(N$二级合成首饰材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$二级合成首饰材料)>】不够<$STR(N$二级合成首饰材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 无双·战盔 N1
+getbagitemcount 无双·战链 N2
+getbagitemcount 无双·战镯 N3
+getbagitemcount 无双·战戒 N4
+getbagitemcount 无双·战带 N5
+getbagitemcount 无双·战靴 N6
+getbagitemcount 无双·魔盔 N7
+getbagitemcount 无双·魔链 N8
+getbagitemcount 无双·魔镯 N9
+getbagitemcount 无双·魔戒 N10
+getbagitemcount 无双·魔带 N11
+getbagitemcount 无双·魔靴 N12
+getbagitemcount 无双·道盔 N13
+getbagitemcount 无双·道链 N14
+getbagitemcount 无双·道镯 N15
+getbagitemcount 无双·道戒 N16
+getbagitemcount 无双·道带 N17
+getbagitemcount 无双·道靴 N18
+MOV N$二级首饰数量 0
+INC N$二级首饰数量 <$STR(N1)>
+INC N$二级首饰数量 <$STR(N2)>
+INC N$二级首饰数量 <$STR(N3)>
+INC N$二级首饰数量 <$STR(N4)>
+INC N$二级首饰数量 <$STR(N5)>
+INC N$二级首饰数量 <$STR(N6)>
+INC N$二级首饰数量 <$STR(N7)>
+INC N$二级首饰数量 <$STR(N8)>
+INC N$二级首饰数量 <$STR(N9)>
+INC N$二级首饰数量 <$STR(N10)>
+INC N$二级首饰数量 <$STR(N11)>
+INC N$二级首饰数量 <$STR(N12)>
+INC N$二级首饰数量 <$STR(N13)>
+INC N$二级首饰数量 <$STR(N14)>
+INC N$二级首饰数量 <$STR(N15)>
+INC N$二级首饰数量 <$STR(N16)>
+INC N$二级首饰数量 <$STR(N17)>
+INC N$二级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$二级首饰数量 <$STR(N$二级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$二级合成首饰数量)>件【无双系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$二级合成首饰材料)> <$STR(N$二级合成首饰材料)>
+TakeBagItem |无双·战盔|无双·战链|无双·战镯|无双·战戒|无双·战带|无双·战靴|无双·魔盔|无双·魔链|无双·魔镯|无双·魔戒|无双·魔带|无双·魔靴|无双·道盔|无双·道链|无双·道镯|无双·道戒|无双·道带|无双·道靴|| <$STR(N$二级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·道靴 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·道靴*1
+BREAK
+
+
+
+
+[@材料锻造蓝月复古·道带]
+
+#IF
+NOT CHECKITEM <$STR(S$二级合成首饰材料)> <$STR(N$二级合成首饰材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$二级合成首饰材料)>】不够<$STR(N$二级合成首饰材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 无双·战盔 N1
+getbagitemcount 无双·战链 N2
+getbagitemcount 无双·战镯 N3
+getbagitemcount 无双·战戒 N4
+getbagitemcount 无双·战带 N5
+getbagitemcount 无双·战靴 N6
+getbagitemcount 无双·魔盔 N7
+getbagitemcount 无双·魔链 N8
+getbagitemcount 无双·魔镯 N9
+getbagitemcount 无双·魔戒 N10
+getbagitemcount 无双·魔带 N11
+getbagitemcount 无双·魔靴 N12
+getbagitemcount 无双·道盔 N13
+getbagitemcount 无双·道链 N14
+getbagitemcount 无双·道镯 N15
+getbagitemcount 无双·道戒 N16
+getbagitemcount 无双·道带 N17
+getbagitemcount 无双·道靴 N18
+MOV N$二级首饰数量 0
+INC N$二级首饰数量 <$STR(N1)>
+INC N$二级首饰数量 <$STR(N2)>
+INC N$二级首饰数量 <$STR(N3)>
+INC N$二级首饰数量 <$STR(N4)>
+INC N$二级首饰数量 <$STR(N5)>
+INC N$二级首饰数量 <$STR(N6)>
+INC N$二级首饰数量 <$STR(N7)>
+INC N$二级首饰数量 <$STR(N8)>
+INC N$二级首饰数量 <$STR(N9)>
+INC N$二级首饰数量 <$STR(N10)>
+INC N$二级首饰数量 <$STR(N11)>
+INC N$二级首饰数量 <$STR(N12)>
+INC N$二级首饰数量 <$STR(N13)>
+INC N$二级首饰数量 <$STR(N14)>
+INC N$二级首饰数量 <$STR(N15)>
+INC N$二级首饰数量 <$STR(N16)>
+INC N$二级首饰数量 <$STR(N17)>
+INC N$二级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$二级首饰数量 <$STR(N$二级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$二级合成首饰数量)>件【无双系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$二级合成首饰材料)> <$STR(N$二级合成首饰材料)>
+TakeBagItem |无双·战盔|无双·战链|无双·战镯|无双·战戒|无双·战带|无双·战靴|无双·魔盔|无双·魔链|无双·魔镯|无双·魔戒|无双·魔带|无双·魔靴|无双·道盔|无双·道链|无双·道镯|无双·道戒|无双·道带|无双·道靴|| <$STR(N$二级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·道带 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·道带*1
+BREAK
+
+
+
+
+[@材料锻造蓝月复古·道戒]
+
+#IF
+NOT CHECKITEM <$STR(S$二级合成首饰材料)> <$STR(N$二级合成首饰材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$二级合成首饰材料)>】不够<$STR(N$二级合成首饰材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 无双·战盔 N1
+getbagitemcount 无双·战链 N2
+getbagitemcount 无双·战镯 N3
+getbagitemcount 无双·战戒 N4
+getbagitemcount 无双·战带 N5
+getbagitemcount 无双·战靴 N6
+getbagitemcount 无双·魔盔 N7
+getbagitemcount 无双·魔链 N8
+getbagitemcount 无双·魔镯 N9
+getbagitemcount 无双·魔戒 N10
+getbagitemcount 无双·魔带 N11
+getbagitemcount 无双·魔靴 N12
+getbagitemcount 无双·道盔 N13
+getbagitemcount 无双·道链 N14
+getbagitemcount 无双·道镯 N15
+getbagitemcount 无双·道戒 N16
+getbagitemcount 无双·道带 N17
+getbagitemcount 无双·道靴 N18
+MOV N$二级首饰数量 0
+INC N$二级首饰数量 <$STR(N1)>
+INC N$二级首饰数量 <$STR(N2)>
+INC N$二级首饰数量 <$STR(N3)>
+INC N$二级首饰数量 <$STR(N4)>
+INC N$二级首饰数量 <$STR(N5)>
+INC N$二级首饰数量 <$STR(N6)>
+INC N$二级首饰数量 <$STR(N7)>
+INC N$二级首饰数量 <$STR(N8)>
+INC N$二级首饰数量 <$STR(N9)>
+INC N$二级首饰数量 <$STR(N10)>
+INC N$二级首饰数量 <$STR(N11)>
+INC N$二级首饰数量 <$STR(N12)>
+INC N$二级首饰数量 <$STR(N13)>
+INC N$二级首饰数量 <$STR(N14)>
+INC N$二级首饰数量 <$STR(N15)>
+INC N$二级首饰数量 <$STR(N16)>
+INC N$二级首饰数量 <$STR(N17)>
+INC N$二级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$二级首饰数量 <$STR(N$二级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$二级合成首饰数量)>件【无双系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$二级合成首饰材料)> <$STR(N$二级合成首饰材料)>
+TakeBagItem |无双·战盔|无双·战链|无双·战镯|无双·战戒|无双·战带|无双·战靴|无双·魔盔|无双·魔链|无双·魔镯|无双·魔戒|无双·魔带|无双·魔靴|无双·道盔|无双·道链|无双·道镯|无双·道戒|无双·道带|无双·道靴|| <$STR(N$二级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·道戒 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·道戒*1
+BREAK
+
+
+
+
+
+[@材料锻造蓝月复古·道镯]
+
+#IF
+NOT CHECKITEM <$STR(S$二级合成首饰材料)> <$STR(N$二级合成首饰材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$二级合成首饰材料)>】不够<$STR(N$二级合成首饰材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 无双·战盔 N1
+getbagitemcount 无双·战链 N2
+getbagitemcount 无双·战镯 N3
+getbagitemcount 无双·战戒 N4
+getbagitemcount 无双·战带 N5
+getbagitemcount 无双·战靴 N6
+getbagitemcount 无双·魔盔 N7
+getbagitemcount 无双·魔链 N8
+getbagitemcount 无双·魔镯 N9
+getbagitemcount 无双·魔戒 N10
+getbagitemcount 无双·魔带 N11
+getbagitemcount 无双·魔靴 N12
+getbagitemcount 无双·道盔 N13
+getbagitemcount 无双·道链 N14
+getbagitemcount 无双·道镯 N15
+getbagitemcount 无双·道戒 N16
+getbagitemcount 无双·道带 N17
+getbagitemcount 无双·道靴 N18
+MOV N$二级首饰数量 0
+INC N$二级首饰数量 <$STR(N1)>
+INC N$二级首饰数量 <$STR(N2)>
+INC N$二级首饰数量 <$STR(N3)>
+INC N$二级首饰数量 <$STR(N4)>
+INC N$二级首饰数量 <$STR(N5)>
+INC N$二级首饰数量 <$STR(N6)>
+INC N$二级首饰数量 <$STR(N7)>
+INC N$二级首饰数量 <$STR(N8)>
+INC N$二级首饰数量 <$STR(N9)>
+INC N$二级首饰数量 <$STR(N10)>
+INC N$二级首饰数量 <$STR(N11)>
+INC N$二级首饰数量 <$STR(N12)>
+INC N$二级首饰数量 <$STR(N13)>
+INC N$二级首饰数量 <$STR(N14)>
+INC N$二级首饰数量 <$STR(N15)>
+INC N$二级首饰数量 <$STR(N16)>
+INC N$二级首饰数量 <$STR(N17)>
+INC N$二级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$二级首饰数量 <$STR(N$二级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$二级合成首饰数量)>件【无双系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$二级合成首饰材料)> <$STR(N$二级合成首饰材料)>
+TakeBagItem |无双·战盔|无双·战链|无双·战镯|无双·战戒|无双·战带|无双·战靴|无双·魔盔|无双·魔链|无双·魔镯|无双·魔戒|无双·魔带|无双·魔靴|无双·道盔|无双·道链|无双·道镯|无双·道戒|无双·道带|无双·道靴|| <$STR(N$二级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·道镯 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·道镯*1
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@材料锻造蓝月复古·道链]
+
+#IF
+NOT CHECKITEM <$STR(S$二级合成首饰材料)> <$STR(N$二级合成首饰材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$二级合成首饰材料)>】不够<$STR(N$二级合成首饰材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 无双·战盔 N1
+getbagitemcount 无双·战链 N2
+getbagitemcount 无双·战镯 N3
+getbagitemcount 无双·战戒 N4
+getbagitemcount 无双·战带 N5
+getbagitemcount 无双·战靴 N6
+getbagitemcount 无双·魔盔 N7
+getbagitemcount 无双·魔链 N8
+getbagitemcount 无双·魔镯 N9
+getbagitemcount 无双·魔戒 N10
+getbagitemcount 无双·魔带 N11
+getbagitemcount 无双·魔靴 N12
+getbagitemcount 无双·道盔 N13
+getbagitemcount 无双·道链 N14
+getbagitemcount 无双·道镯 N15
+getbagitemcount 无双·道戒 N16
+getbagitemcount 无双·道带 N17
+getbagitemcount 无双·道靴 N18
+MOV N$二级首饰数量 0
+INC N$二级首饰数量 <$STR(N1)>
+INC N$二级首饰数量 <$STR(N2)>
+INC N$二级首饰数量 <$STR(N3)>
+INC N$二级首饰数量 <$STR(N4)>
+INC N$二级首饰数量 <$STR(N5)>
+INC N$二级首饰数量 <$STR(N6)>
+INC N$二级首饰数量 <$STR(N7)>
+INC N$二级首饰数量 <$STR(N8)>
+INC N$二级首饰数量 <$STR(N9)>
+INC N$二级首饰数量 <$STR(N10)>
+INC N$二级首饰数量 <$STR(N11)>
+INC N$二级首饰数量 <$STR(N12)>
+INC N$二级首饰数量 <$STR(N13)>
+INC N$二级首饰数量 <$STR(N14)>
+INC N$二级首饰数量 <$STR(N15)>
+INC N$二级首饰数量 <$STR(N16)>
+INC N$二级首饰数量 <$STR(N17)>
+INC N$二级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$二级首饰数量 <$STR(N$二级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$二级合成首饰数量)>件【无双系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$二级合成首饰材料)> <$STR(N$二级合成首饰材料)>
+TakeBagItem |无双·战盔|无双·战链|无双·战镯|无双·战戒|无双·战带|无双·战靴|无双·魔盔|无双·魔链|无双·魔镯|无双·魔戒|无双·魔带|无双·魔靴|无双·道盔|无双·道链|无双·道镯|无双·道戒|无双·道带|无双·道靴|| <$STR(N$二级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·道链 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·道链*1
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@材料锻造蓝月复古·道盔]
+
+#IF
+NOT CHECKITEM <$STR(S$二级合成首饰材料)> <$STR(N$二级合成首饰材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$二级合成首饰材料)>】不够<$STR(N$二级合成首饰材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 无双·战盔 N1
+getbagitemcount 无双·战链 N2
+getbagitemcount 无双·战镯 N3
+getbagitemcount 无双·战戒 N4
+getbagitemcount 无双·战带 N5
+getbagitemcount 无双·战靴 N6
+getbagitemcount 无双·魔盔 N7
+getbagitemcount 无双·魔链 N8
+getbagitemcount 无双·魔镯 N9
+getbagitemcount 无双·魔戒 N10
+getbagitemcount 无双·魔带 N11
+getbagitemcount 无双·魔靴 N12
+getbagitemcount 无双·道盔 N13
+getbagitemcount 无双·道链 N14
+getbagitemcount 无双·道镯 N15
+getbagitemcount 无双·道戒 N16
+getbagitemcount 无双·道带 N17
+getbagitemcount 无双·道靴 N18
+MOV N$二级首饰数量 0
+INC N$二级首饰数量 <$STR(N1)>
+INC N$二级首饰数量 <$STR(N2)>
+INC N$二级首饰数量 <$STR(N3)>
+INC N$二级首饰数量 <$STR(N4)>
+INC N$二级首饰数量 <$STR(N5)>
+INC N$二级首饰数量 <$STR(N6)>
+INC N$二级首饰数量 <$STR(N7)>
+INC N$二级首饰数量 <$STR(N8)>
+INC N$二级首饰数量 <$STR(N9)>
+INC N$二级首饰数量 <$STR(N10)>
+INC N$二级首饰数量 <$STR(N11)>
+INC N$二级首饰数量 <$STR(N12)>
+INC N$二级首饰数量 <$STR(N13)>
+INC N$二级首饰数量 <$STR(N14)>
+INC N$二级首饰数量 <$STR(N15)>
+INC N$二级首饰数量 <$STR(N16)>
+INC N$二级首饰数量 <$STR(N17)>
+INC N$二级首饰数量 <$STR(N18)>
+
+
+#IF
+SMALL N$二级首饰数量 <$STR(N$二级合成首饰数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$二级合成首饰数量)>件【无双系列】的首饰，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$二级合成首饰材料)> <$STR(N$二级合成首饰材料)>
+TakeBagItem |无双·战盔|无双·战链|无双·战镯|无双·战戒|无双·战带|无双·战靴|无双·魔盔|无双·魔链|无双·魔镯|无双·魔戒|无双·魔带|无双·魔靴|无双·道盔|无双·道链|无双·道镯|无双·道戒|无双·道带|无双·道靴|| <$STR(N$二级合成首饰数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·道盔 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·道盔*1
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@材料锻造蓝月复古·道衣]
+
+#IF
+NOT CHECKITEM <$STR(S$二级合成衣服材料)> <$STR(N$二级合成衣服材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$二级合成衣服材料)>】不够<$STR(N$二级合成衣服材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 无双·战甲 N1
+getbagitemcount 无双·战衣 N2
+getbagitemcount 无双·魔袍 N3
+getbagitemcount 无双·魔衣 N4
+getbagitemcount 无双·道袍 N5
+getbagitemcount 无双·道衣 N6
+MOV N$二级衣服数量 0
+INC N$二级衣服数量 <$STR(N1)>
+INC N$二级衣服数量 <$STR(N2)>
+INC N$二级衣服数量 <$STR(N3)>
+INC N$二级衣服数量 <$STR(N4)>
+INC N$二级衣服数量 <$STR(N5)>
+INC N$二级衣服数量 <$STR(N6)>
+
+
+
+
+
+
+#IF
+SMALL N$二级衣服数量 <$STR(N$二级合成衣服数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$二级合成衣服数量)>件【无双系列】的衣服，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$二级合成衣服材料)> <$STR(N$二级合成衣服材料)>
+TakeBagItem |无双·战甲|无双·战衣|无双·魔袍|无双·魔衣|无双·道袍|无双·道衣|| <$STR(N$二级合成衣服数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·道衣 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·道衣*1
+BREAK
+
+
+
+
+
+
+
+[@材料锻造蓝月复古·道袍]
+
+#IF
+NOT CHECKITEM <$STR(S$二级合成衣服材料)> <$STR(N$二级合成衣服材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$二级合成衣服材料)>】不够<$STR(N$二级合成衣服材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 无双·战甲 N1
+getbagitemcount 无双·战衣 N2
+getbagitemcount 无双·魔袍 N3
+getbagitemcount 无双·魔衣 N4
+getbagitemcount 无双·道袍 N5
+getbagitemcount 无双·道衣 N6
+MOV N$二级衣服数量 0
+INC N$二级衣服数量 <$STR(N1)>
+INC N$二级衣服数量 <$STR(N2)>
+INC N$二级衣服数量 <$STR(N3)>
+INC N$二级衣服数量 <$STR(N4)>
+INC N$二级衣服数量 <$STR(N5)>
+INC N$二级衣服数量 <$STR(N6)>
+
+
+
+
+
+
+#IF
+SMALL N$二级衣服数量 <$STR(N$二级合成衣服数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$二级合成衣服数量)>件【无双系列】的衣服，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$二级合成衣服材料)> <$STR(N$二级合成衣服材料)>
+TakeBagItem |无双·战甲|无双·战衣|无双·魔袍|无双·魔衣|无双·道袍|无双·道衣|| <$STR(N$二级合成衣服数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·道袍 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·道袍*1
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@材料锻造蓝月复古·道刃]
+
+#IF
+NOT CHECKITEM <$STR(S$二级合成武器材料)> <$STR(N$二级合成武器材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面：【<$STR(S$二级合成武器材料)>】不够<$STR(N$二级合成武器材料)>个，无法锻造！
+BREAK
+
+
+#IF
+#ACT
+getbagitemcount 无双·神剑 N1
+getbagitemcount 无双·魔杖 N2
+getbagitemcount 无双·道扇 N3
+MOV N$二级武器数量 0
+INC N$二级武器数量 <$STR(N1)>
+INC N$二级武器数量 <$STR(N2)>
+INC N$二级武器数量 <$STR(N3)>
+
+
+
+
+
+#IF
+SMALL N$二级武器数量 <$STR(N$二级合成武器数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$二级合成武器数量)>把【无双系列】的武器，无法打造！
+BREAK
+
+
+
+#IF
+#ACT
+TAKE <$STR(S$二级合成武器材料)> <$STR(N$二级合成武器材料)>
+TakeBagItem |无双·神剑|无双·魔杖|无双·道扇|| <$STR(N$二级合成武器数量)> 0 0 0 0 N55 0
+GIVE 蓝月复古·道刃 1
+MESSAGEBOX 恭喜您，成功锻造：蓝月复古·道刃*1
+BREAK
+
+
+

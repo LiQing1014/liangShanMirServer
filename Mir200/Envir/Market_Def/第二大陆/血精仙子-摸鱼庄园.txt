@@ -1,0 +1,417 @@
+[@Main]
+
+#IF
+#ACT
+close
+;OPENMERCHANTBIGDLG 1 557 1 4 0 0 1 400 0
+#SAY
+; <血石使者/SCOLOR=154> <New/SCOLOR=249>\ 
+; <>  <摸鱼是一种人生境界，能够让人们在工作与休闲之间找到完美的平衡/SCOLOR=230>\
+; <偷得浮生半日闲, 发现忙碌中也有小确幸..../SCOLOR=230>\  \
+; <[沃玛血石]|250#每秒恢复210HPMP/@无用>     <属性：><每秒恢复210HPMP/AUTOCOLOR=250>     <材料打造|250#打造条件：^-^249#1.梦想神石*10^-^251#2.元宝*100W^-^250#3.魔血石.Max*1/@元宝沃玛血石>   <大米打造|250#打造条件：^-^253#1.大米*200^-^250#2.魔血石.Max*1/@大米沃玛血石>\ 
+; <[祖玛血石]|250#每秒恢复240HPMP/@无用>     <属性：><每秒恢复240HPMP/AUTOCOLOR=250>     <材料打造|250#打造条件：^-^249#1.梦想神石*20^-^251#2.元宝*200W^-^250#3.沃玛血石*1/@元宝祖玛血石>   <大米打造|250#打造条件：^-^253#1.大米*400^-^250#2.沃玛血石*1/@大米祖玛血石>\ 
+; <[赤月血石]|250#每秒恢复270HPMP/@无用>     <属性：><每秒恢复270HPMP/AUTOCOLOR=250>     <材料打造|250#打造条件：^-^249#1.梦想神石*30^-^251#2.元宝*300W^-^250#3.祖玛血石*1/@元宝赤月血石>   <大米打造|250#打造条件：^-^253#1.大米*600^-^250#2.祖玛血石*1/@大米赤月血石>\ 
+; <[黄金血石]|250#每秒恢复300HPMP/@无用>     <属性：><每秒恢复300HPMP/AUTOCOLOR=250>     <材料打造|250#打造条件：^-^249#1.梦想神石*40^-^251#2.元宝*400W^-^250#3.赤月血石*1/@元宝黄金血石>   <大米打造|250#打造条件：^-^253#1.大米*800^-^250#2.赤月血石*1/@大米黄金血石>\ 
+; <[魔龙血石]|250#每秒恢复350HPMP/@无用>     <属性：><每秒恢复350HPMP/AUTOCOLOR=250>     <材料打造|250#打造条件：^-^249#1.梦想神石*50^-^251#2.元宝*500W^-^250#3.黄金血石*1/@元宝魔龙血石>   <大米打造|250#打造条件：^-^253#1.大米*1000^-^250#2.黄金血石*1/@大米魔龙血石>\ 
+
+<Img|width=620|height=300|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|reset=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=23.0|y=25.0|tipsx=10|tipsy=80|color=154|size=18|text=血石使者>
+<Text|a=0|x=111.0|y=25.0|tipsx=10|tipsy=80|color=249|size=18|text=New>
+<Text|a=0|x=23.0|y=45.0|tipsx=10|tipsy=80|color=230|size=18|text=摸鱼是一种人生境界，能够让人们在工作与休闲之间找到完美的平衡>
+<Text|a=0|x=23.0|y=65.0|tipsx=10|tipsy=80|color=230|size=18|text=偷得浮生半日闲, 发现忙碌中也有小确幸....>
+<Text|a=0|x=23.0|y=105.0|tipsx=10|tipsy=80|color=251|size=18|text=[沃玛血石]|link=@无用>
+<RText|a=0|x=150.0|y=105.0|tipsx=10|tipsy=80|color=250|size=18|text=<属性：/FCOLOR=249>每秒恢复210HPMP>
+<Text|a=0|x=398.0|y=105.0|tipsx=10|tipsy=80|color=251|size=18|text=材料打造|link=@元宝沃玛血石>
+<Text|a=0|x=500.0|y=105.0|tipsx=10|tipsy=80|color=251|size=18|text=大米打造|link=@大米沃玛血石>
+<Text|a=0|x=23.0|y=125.0|tipsx=10|tipsy=80|color=251|size=18|text=[祖玛血石]|link=@无用>
+<RText|a=0|x=150.0|y=125.0|tipsx=10|tipsy=80|color=250|size=18|text=<属性：/FCOLOR=249>每秒恢复240HPMP>
+<Text|a=0|x=398.0|y=125.0|tipsx=10|tipsy=80|color=251|size=18|text=材料打造|link=@元宝祖玛血石>
+<Text|a=0|x=500.0|y=125.0|tipsx=10|tipsy=80|color=251|size=18|text=大米打造|link=@大米祖玛血石>
+<Text|a=0|x=23.0|y=145.0|tipsx=10|tipsy=80|color=251|size=18|text=[赤月血石]|link=@无用>
+<RText|a=0|x=150.0|y=145.0|tipsx=10|tipsy=80|color=250|size=18|text=<属性：/FCOLOR=249>每秒恢复270HPMP>
+<Text|a=0|x=398.0|y=145.0|tipsx=10|tipsy=80|color=251|size=18|text=材料打造|link=@元宝赤月血石>
+<Text|a=0|x=500.0|y=145.0|tipsx=10|tipsy=80|color=251|size=18|text=大米打造|link=@大米赤月血石>
+<Text|a=0|x=23.0|y=165.0|tipsx=10|tipsy=80|color=251|size=18|text=[黄金血石]|link=@无用>
+<RText|a=0|x=150.0|y=165.0|tipsx=10|tipsy=80|color=250|size=18|text=<属性：/FCOLOR=249>每秒恢复300HPMP>
+<Text|a=0|x=398.0|y=165.0|tipsx=10|tipsy=80|color=251|size=18|text=材料打造|link=@元宝黄金血石>
+<Text|a=0|x=500.0|y=165.0|tipsx=10|tipsy=80|color=251|size=18|text=大米打造|link=@大米黄金血石>
+<Text|a=0|x=23.0|y=185.0|tipsx=10|tipsy=80|color=251|size=18|text=[魔龙血石]|link=@无用>
+<RText|a=0|x=150.0|y=185.0|tipsx=10|tipsy=80|color=250|size=18|text=<属性：/FCOLOR=249>每秒恢复350HPMP>
+<Text|a=0|x=398.0|y=185.0|tipsx=10|tipsy=80|color=251|size=18|text=材料打造|link=@元宝魔龙血石>
+<Text|a=0|x=500.0|y=185.0|tipsx=10|tipsy=80|color=251|size=18|text=大米打造|link=@大米魔龙血石>
+
+
+
+[@元宝魔龙血石]
+
+#IF
+CHECKGAMEGOLD < 5000000
+#ACT
+MESSAGEBOX 对不起，您的账户上元宝不足5000000个，请好好检查！
+break
+
+#IF
+NOT CHECKITEM 梦想神石 50
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有50个梦想神石，无法打造！
+break
+
+
+
+
+#IF
+NOT CHECKITEM 黄金血石 1
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有1个黄金血石，无法打造！
+break
+
+
+
+
+#IF
+#Act
+GAMEGOLD - 5000000
+TAKE 梦想神石 50
+TAKE 黄金血石 1
+Give 魔龙血石 1
+SendCenterMsg 250 0 【提示】：恭喜您成功打造一个【魔龙血石】 0 3
+Break
+
+
+
+
+[@元宝黄金血石]
+
+#IF
+CHECKGAMEGOLD < 4000000
+#ACT
+MESSAGEBOX 对不起，您的账户上元宝不足4000000个，请好好检查！
+break
+
+#IF
+NOT CHECKITEM 梦想神石 40
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有40个梦想神石，无法打造！
+break
+
+
+
+
+#IF
+NOT CHECKITEM 赤月血石 1
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有1个赤月血石，无法打造！
+break
+
+
+
+
+#IF
+#Act
+GAMEGOLD - 4000000
+TAKE 梦想神石 40
+TAKE 赤月血石 1
+Give 黄金血石 1
+SendCenterMsg 250 0 【提示】：恭喜您成功打造一个【黄金血石】 0 3
+Break
+
+
+
+
+
+
+
+[@元宝赤月血石]
+
+#IF
+CHECKGAMEGOLD < 3000000
+#ACT
+MESSAGEBOX 对不起，您的账户上元宝不足3000000个，请好好检查！
+break
+
+#IF
+NOT CHECKITEM 梦想神石 30
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有30个梦想神石，无法打造！
+break
+
+
+
+
+#IF
+NOT CHECKITEM 祖玛血石 1
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有1个祖玛血石，无法打造！
+break
+
+
+
+
+#IF
+#Act
+GAMEGOLD - 3000000
+TAKE 梦想神石 30
+TAKE 祖玛血石 1
+Give 赤月血石 1
+SendCenterMsg 250 0 【提示】：恭喜您成功打造一个【赤月血石】 0 3
+Break
+
+
+
+
+
+
+
+
+[@元宝祖玛血石]
+
+#IF
+CHECKGAMEGOLD < 2000000
+#ACT
+MESSAGEBOX 对不起，您的账户上元宝不足2000000个，请好好检查！
+break
+
+#IF
+NOT CHECKITEM 梦想神石 20
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有20个梦想神石，无法打造！
+break
+
+
+
+
+#IF
+NOT CHECKITEM 沃玛血石 1
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有1个沃玛血石，无法打造！
+break
+
+
+
+
+#IF
+#Act
+GAMEGOLD - 2000000
+TAKE 梦想神石 20
+TAKE 沃玛血石 1
+Give 祖玛血石 1
+SendCenterMsg 250 0 【提示】：恭喜您成功打造一个【祖玛血石】 0 3
+Break
+
+
+
+
+
+
+
+
+
+
+[@元宝沃玛血石]
+
+#IF
+CHECKGAMEGOLD < 1000000
+#ACT
+MESSAGEBOX 对不起，您的账户上元宝不足1000000个，请好好检查！
+break
+
+#IF
+NOT CHECKITEM 魔血石.Max 1
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有1个魔血石.Max，无法打造！
+break
+
+#IF
+NOT CHECKITEM 梦想神石 10
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有10个梦想神石，无法打造！
+break
+
+
+
+
+#IF
+#Act
+GAMEGOLD - 1000000
+TAKE 梦想神石 10
+TAKE 魔血石.Max 1
+Give 沃玛血石 1
+SendCenterMsg 250 0 【提示】：恭喜您成功打造一个【沃玛血石】 0 3
+Break
+
+
+
+
+[@大米魔龙血石]
+
+#IF
+CHECKGAMEPOINT < 1000
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足1000点，请好好检查！
+break
+
+
+
+
+#IF
+NOT CHECKITEM 黄金血石 1
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有1个黄金血石，无法打造！
+break
+
+
+
+
+#IF
+#Act
+GAMEPOINT - 1000
+TAKE 黄金血石 1
+Give 魔龙血石 1
+SendCenterMsg 250 0 【提示】：恭喜您成功打造一个【魔龙血石】 0 3
+Break
+
+
+
+
+[@大米黄金血石]
+
+#IF
+CHECKGAMEPOINT < 800
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足800点，请好好检查！
+break
+
+
+
+#IF
+NOT CHECKITEM 赤月血石 1
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有1个赤月血石，无法打造！
+break
+
+
+
+
+#IF
+#Act
+GAMEPOINT - 800
+TAKE 赤月血石 1
+Give 黄金血石 1
+SendCenterMsg 250 0 【提示】：恭喜您成功打造一个【黄金血石】 0 3
+Break
+
+
+
+
+
+
+
+[@大米赤月血石]
+
+
+#IF
+CHECKGAMEPOINT < 600
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足600点，请好好检查！
+break
+
+
+
+
+#IF
+NOT CHECKITEM 祖玛血石 1
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有1个祖玛血石，无法打造！
+break
+
+
+
+
+#IF
+#Act
+GAMEPOINT - 600
+TAKE 祖玛血石 1
+Give 赤月血石 1
+SendCenterMsg 250 0 【提示】：恭喜您成功打造一个【赤月血石】 0 3
+Break
+
+
+
+
+
+
+
+
+[@大米祖玛血石]
+
+#IF
+CHECKGAMEPOINT < 400
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足400点，请好好检查！
+break
+
+
+
+
+#IF
+NOT CHECKITEM 沃玛血石 1
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有1个沃玛血石，无法打造！
+break
+
+
+
+
+#IF
+#Act
+GAMEPOINT - 400
+TAKE 沃玛血石 1
+Give 祖玛血石 1
+SendCenterMsg 250 0 【提示】：恭喜您成功打造一个【祖玛血石】 0 3
+Break
+
+
+
+
+
+
+
+
+
+
+[@大米沃玛血石]
+
+#IF
+CHECKGAMEPOINT < 200
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足200点，请好好检查！
+break
+
+
+
+#IF
+NOT CHECKITEM 魔血石.Max 1
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有1个魔血石.Max，无法打造！
+break
+
+
+
+
+
+
+#IF
+#Act
+GAMEPOINT - 200
+TAKE 魔血石.Max 1
+Give 沃玛血石 1
+SendCenterMsg 250 0 【提示】：恭喜您成功打造一个【沃玛血石】 0 3
+Break
+
+
+
+
+
+

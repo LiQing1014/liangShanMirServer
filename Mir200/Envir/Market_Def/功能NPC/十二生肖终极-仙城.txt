@@ -1,0 +1,346 @@
+[@main]
+#IF
+#ACT
+#SAY
+
+<【远古遗物】/FCOLOR=251>  <Hot~/FCOLOR=249>   \   \   
+
+<遗物获取：/FCOLOR=250><生肖遗物可在各大地图通过击杀BOSS获取！/FCOLOR=19>\ \
+<遗物进阶：/FCOLOR=250><普通的生肖遗物可/FCOLOR=19><合成><进阶成圣级和神级生肖/FCOLOR=19>\ \
+<生肖属性：每个生肖元素都不同，乃上古牛逼神器，拥有者可得天下.../FCOLOR=250>\ \ 
+
+<>          <进阶神级生肖/@进阶2>         <终极生肖融合/@开启>\
+
+
+[@开启]
+#IF
+#ACT
+close
+#SAY
+;<---------------------------------------------------------------/AUTOCOLOR=91>\
+<只有神级生肖可进行融合、比如：两个同等级的生肖/SCOLOR=146>\ 
+<融合属性:攻击+3 魔法+3 道术+3  /SCOLOR=222>\
+;<---------------------------------------------------------------/AUTOCOLOR=91>\ 
+<备注：融合后属性太过暴烈！只能融合一次/SCOLOR=245>\
+
+
+<              ><ITEMBOX:1:0:250:0:12:24:24:*:请将要融合的神级生肖放入框内>         　<ITEMBOX:2:0:250:100:12:24:24:*:请将神级生肖放入框内>\　 　
+<>                       <开始洗练/@洗练>  　\　\
+<>   <请将要融合的神级生肖放入框内>          <请将神级生肖放入框内>\ \
+<>                <每次洗练需要消耗同级别生肖一枚/SCOLOR=251>\
+
+
+[@ItemIntoBox1]
+#IF
+#ACT
+SetUpgradeItem 1
+#IF
+NOT EQUAL <$BOXITEM[1].NAME> 神·子鼠
+NOT EQUAL <$BOXITEM[1].NAME> 神·丑牛
+NOT EQUAL <$BOXITEM[1].NAME> 神·寅虎
+NOT EQUAL <$BOXITEM[1].NAME> 神·卯兔
+NOT EQUAL <$BOXITEM[1].NAME> 神·辰龙
+NOT EQUAL <$BOXITEM[1].NAME> 神·巳蛇
+NOT EQUAL <$BOXITEM[1].NAME> 神·午马
+NOT EQUAL <$BOXITEM[1].NAME> 神·未羊
+NOT EQUAL <$BOXITEM[1].NAME> 神·申猴
+NOT EQUAL <$BOXITEM[1].NAME> 神·酉鸡
+NOT EQUAL <$BOXITEM[1].NAME> 神·戌狗
+NOT EQUAL <$BOXITEM[1].NAME> 神·亥猪
+
+#ACT
+ReturnBoxItem 1
+MESSAGEBOX 温馨提示：只能放入神级生肖融合！
+BREAK
+
+[@ItemIntoBox2]
+#IF
+#ACT
+SetUpgradeItem 2
+#IF
+NOT EQUAL <$BOXITEM[2].NAME> 神·子鼠
+NOT EQUAL <$BOXITEM[2].NAME> 神·丑牛
+NOT EQUAL <$BOXITEM[2].NAME> 神·寅虎
+NOT EQUAL <$BOXITEM[2].NAME> 神·卯兔
+NOT EQUAL <$BOXITEM[2].NAME> 神·辰龙
+NOT EQUAL <$BOXITEM[2].NAME> 神·巳蛇
+NOT EQUAL <$BOXITEM[2].NAME> 神·午马
+NOT EQUAL <$BOXITEM[2].NAME> 神·未羊
+NOT EQUAL <$BOXITEM[2].NAME> 神·申猴
+NOT EQUAL <$BOXITEM[2].NAME> 神·酉鸡
+NOT EQUAL <$BOXITEM[2].NAME> 神·戌狗
+NOT EQUAL <$BOXITEM[2].NAME> 神·亥猪
+#ACT
+ReturnBoxItem 2
+MESSAGEBOX 温馨提示：只能放入神级生肖融合！
+BREAK
+
+
+[@洗练]
+#IF
+#ACT
+SetUpgradeItem 1
+SetUpgradeItem 2
+
+#OR
+NOT CheckBoxItemCount 1 1
+NOT CheckBoxItemCount 2 1
+#ACT
+MESSAGEBOX 温馨提示：请放入神级生肖！
+BREAK
+
+#OR
+EQUAL <$BOXITEM[1].NAME> 神·子鼠
+EQUAL <$BOXITEM[1].NAME> 神·丑牛
+EQUAL <$BOXITEM[1].NAME> 神·寅虎
+EQUAL <$BOXITEM[1].NAME> 神·卯兔
+EQUAL <$BOXITEM[1].NAME> 神·辰龙
+EQUAL <$BOXITEM[1].NAME> 神·巳蛇
+EQUAL <$BOXITEM[1].NAME> 神·午马
+EQUAL <$BOXITEM[1].NAME> 神·未羊
+EQUAL <$BOXITEM[1].NAME> 神·申猴
+EQUAL <$BOXITEM[1].NAME> 神·酉鸡
+EQUAL <$BOXITEM[1].NAME> 神·戌狗
+EQUAL <$BOXITEM[1].NAME> 神·亥猪
+#ACT
+GOTO @稀有
+BREAK
+
+
+[@稀有]
+#OR
+EQUAL <$BOXITEM[2].NAME> 神·子鼠
+EQUAL <$BOXITEM[2].NAME> 神·丑牛
+EQUAL <$BOXITEM[2].NAME> 神·寅虎
+EQUAL <$BOXITEM[2].NAME> 神·卯兔
+EQUAL <$BOXITEM[2].NAME> 神·辰龙
+EQUAL <$BOXITEM[2].NAME> 神·巳蛇
+EQUAL <$BOXITEM[2].NAME> 神·午马
+EQUAL <$BOXITEM[2].NAME> 神·未羊
+EQUAL <$BOXITEM[2].NAME> 神·申猴
+EQUAL <$BOXITEM[2].NAME> 神·酉鸡
+EQUAL <$BOXITEM[2].NAME> 神·戌狗
+EQUAL <$BOXITEM[2].NAME> 神·亥猪
+#ACT
+GOTO @洗练属性1
+UpDateBoxItem 1
+#elseact
+ReturnBoxItem 1
+ReturnBoxItem 2
+MESSAGEBOX 温馨提示：请放入相同级别的生肖！
+BREAK
+
+
+
+
+[@洗练属性1]
+#IF
+#ACT
+SetUpgradeItem 1
+
+#IF
+#ACT
+DELBOXITEM 2 1
+CHANGEITEMADDVALUE -1 2 = 3
+CHANGEITEMADDVALUE -1 3 = 3
+CHANGEITEMADDVALUE -1 4 = 3
+UpDateBoxItem 1
+ReturnBoxItem 1
+ReturnBoxItem 2
+MESSAGEBOX 温馨提示：洗练成功！
+break
+
+
+
+
+
+[@进阶2]
+#IF
+#ACT
+#SAY
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<生肖进阶：/FCOLOR=70><需要三个圣级生肖+188大米点./FCOLOR=250>\ 
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>     <神·子鼠/@神1>      <神·丑牛/@神2>      <神·寅虎/@神3>      <神·卯兔/@神4>\ 
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>     <神·辰龙/@神5>      <神·巳蛇/@神6>      <神·午马/@神7>      <神·未羊/@神8>\  
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>     <神·申猴/@神9>      <神·酉鸡/@神10>      <神·戌狗/@神11>      <神·亥猪/@神12>\ 
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>                                                         <返回/@main>  \
+
+
+
+[@神1]
+#if
+checkitem 圣·子鼠 3
+CHECKGAMEPOINT > 187
+#act
+GAMEPOINT - 188
+take 圣·子鼠 3
+give 神·子鼠 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出神级生肖：【神·子鼠】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+[@神2]
+#if
+checkitem 圣·丑牛 3
+CHECKGAMEPOINT > 187
+#act
+GAMEPOINT - 188
+take 圣·丑牛 3
+give 神·丑牛 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出神级生肖：【神·丑牛】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+[@神3]
+#if
+checkitem 圣·寅虎 3
+CHECKGAMEPOINT > 187
+#act
+GAMEPOINT - 188
+take 圣·寅虎 3
+give 神·寅虎 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出神级生肖：【神·寅虎】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+[@神4]
+#if
+checkitem 圣·卯兔 3
+CHECKGAMEPOINT > 187
+#act
+GAMEPOINT - 188
+take 圣·卯兔 3
+give 神·卯兔 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出神级生肖：【神·卯兔】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+[@神5]
+#if
+checkitem 圣·辰龙 3
+CHECKGAMEPOINT > 187
+#act
+GAMEPOINT - 188
+take 圣·辰龙 3
+give 神·辰龙 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出神级生肖：【神·辰龙】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+[@神6]
+#if
+checkitem 圣·巳蛇 3
+CHECKGAMEPOINT > 187
+#act
+GAMEPOINT - 188
+take 圣·巳蛇 3
+give 神·巳蛇 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出神级生肖：【神·巳蛇】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+[@神7]
+#if
+checkitem 圣·午马 3
+CHECKGAMEPOINT > 187
+#act
+GAMEPOINT - 188
+take 圣·午马 3
+give 神·午马 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出神级生肖：【神·午马】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+[@神8]
+#if
+checkitem 圣·未羊 3
+CHECKGAMEPOINT > 187
+#act
+GAMEPOINT - 188
+take 圣·未羊 3
+give 神·未羊 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出神级生肖：【神·未羊】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+[@神9]
+#if
+checkitem 圣·申猴 3
+CHECKGAMEPOINT > 187
+#act
+GAMEPOINT - 188
+take 圣·申猴 3
+give 神·申猴 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出神级生肖：【神·申猴】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+[@神10]
+#if
+checkitem 圣·酉鸡 3
+CHECKGAMEPOINT > 187
+#act
+GAMEPOINT - 188
+take 圣·酉鸡 3
+give 神·酉鸡 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出神级生肖：【神·酉鸡】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+[@神11]
+#if
+checkitem 圣·戌狗 3
+CHECKGAMEPOINT > 187
+#act
+GAMEPOINT - 188
+take 圣·戌狗 3
+give 神·戌狗 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出神级生肖：【神·戌狗】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+[@神12]
+#if
+checkitem 圣·亥猪 3
+CHECKGAMEPOINT > 187
+#act
+GAMEPOINT - 188
+take 圣·亥猪 3
+give 神·亥猪 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出神级生肖：【神·亥猪】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+
+
+
+
+

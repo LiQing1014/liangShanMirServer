@@ -1,0 +1,626 @@
+[@main]
+#IF
+CHECK [442] 1
+#ACT
+goto @7000礼包
+BREAK
+
+#IF
+CHECK [441] 1
+#ACT
+goto @7000礼包
+BREAK
+
+#IF
+CHECK [439] 1
+#ACT
+goto @4000礼包
+BREAK
+
+#IF
+CHECK [437] 1
+#ACT
+goto @3000礼包
+BREAK
+
+#IF
+CHECK [436] 1
+#ACT
+goto @2000礼包
+BREAK
+
+
+#IF
+CHECKGAMEGIRD > 1000
+#ACT
+OPENMERCHANTBIGDLG 1  317 0 0 0 0 0
+#SAY
+<Img:2:1:434:-6/@EXIT>\ \
+<>                <1.76帝国霸业/FCOLOR=254> —  <高清复古/FCOLOR=254> — <充值礼包/FCOLOR=254>    <1大米 = 10颗江山币/FCOLOR=70>       \
+<--------------------------------------------------------------------------/AUTOCOLOR=91>\
+<【兑换礼包一】|250#加每日充值回馈共获得18万元宝/@222> <充值满100领取/FCOLOR=243>  <含：/FCOLOR=249> <03万元宝/FCOLOR=250>+<龙卫LV2/FCOLOR=242>+<4.0倍泡点/FCOLOR=254>+<(新手大礼包)|70#新手大礼包：^250#  ^249#武学秘籍50张！^250#超级祝福油*2^250#功勋令中量^250# ^249#赠送血怒神兵^251#前期打怪利器，起步更快，事半功倍！^250# ^249#赠送运3神链^251#幸运+3，配合血怒神兵发挥最佳伤害！^250# ^251#获得1.2倍回收^250#回收元宝1.2倍加成，经济快人一步！^250# ^249#获得江山富二代封号^242#永久获得攻击BUFF^242#攻魔道2-5^242#头顶封号，身份象征！^^/FCOLOR=150>       \ 
+<--------------------------------------------------------------------------/AUTOCOLOR=91>\
+<【兑换礼包二】/@333> <充值满200领取/FCOLOR=243>  <含：/FCOLOR=249> <12万元宝/FCOLOR=250>+<龙卫LV3/FCOLOR=242>+<5.0倍泡点/FCOLOR=254>+<(超值大礼包)|70#超值大礼包：^250# ^249#武学秘籍50张！^250# ^250#超级祝福油*2^250#功勋令大量^250# ^251#获得特殊：三清魂珠、三清勋章、三星宝石^250# ^249#赠送侠客斗笠^251#常在江湖飘，没有一顶拉风的斗笠怎么行？^^/FCOLOR=150>      \ 
+<--------------------------------------------------------------------------/AUTOCOLOR=91>\
+<【兑换礼包三】/@200> <充值满300领取/FCOLOR=243>  <含：/FCOLOR=249> <18万元宝/FCOLOR=250>+<龙卫LV4/FCOLOR=242>+<6.0倍泡点/FCOLOR=254>+<(高级大礼包)|70#高级大礼包：^250# ^249#武学秘籍50张！^250# ^242#魂珠碎片(大)^242#勋章碎片(大)^250#功勋令中量^250# ^251#1.3倍爆率^250#打怪增加1.3倍爆率加成！^250# ^251#龙卫特技：此礼包领取的龙卫附加毒素攻击，打BOSS给力^250# ^249#获得江山高富帅封号^242#永久获得攻击BUFF^242#攻魔道3-7^242#头顶封号，身份象征！^^/FCOLOR=150>       \ 
+<--------------------------------------------------------------------------/AUTOCOLOR=91>\
+<【兑换礼包四】/@500> <充值满500领取/FCOLOR=243>  <含：/FCOLOR=249> <40万元宝/FCOLOR=250>+<龙卫LV5/FCOLOR=242>+<9.0倍泡点/FCOLOR=254>+<(豪华大礼包)|70#豪华大礼包：^250# ^249#武学秘籍50张^250# ^242#魂珠碎片(特)^242#勋章碎片(特)^250#功勋令大量^250# ^253#获得：豪杰斗笠^250# ^251#获得超酷时装：蓝月复古^250# ^249#获得江山大富豪封号^242#永久获得攻击BUFF^242#攻魔道5-9^242#头顶封号，身份象征！^^/FCOLOR=150>    \ 
+<--------------------------------------------------------------------------/AUTOCOLOR=91>\
+<【兑换礼包五】/@1000> <充值满1000领取/FCOLOR=243> <含：/FCOLOR=249> <70万元宝/FCOLOR=250>+<终极龙卫/FCOLOR=242>+<12倍泡点./FCOLOR=254>+<(至尊大礼包)|70#至尊大礼包：^250# ^253#获得：豪杰斗笠^250# ^251#获得武器：王者·神剑(分职业)^^250# ^251#获得神技：战士逐日剑法、道士无极真气、法师灭天火^250# ^249#获得家财万贯封号^242#永久获得攻击BUFF^242#攻魔道7-13^242#头顶封号，身份象征！^^/FCOLOR=150>    \ 
+<--------------------------------------------------------------------------/AUTOCOLOR=91>\
+<> <【王者大礼】/@1500> <充值达到1588免费领取/FCOLOR=243> <含：/FCOLOR=249> <80万元宝/FCOLOR=250>+<1500江山币/FCOLOR=242>+<圣·轩辕神甲(分职业)/FCOLOR=249>^^/FCOLOR=150>    \
+<--------------------------------------------------------------------------/AUTOCOLOR=91>\
+<提示：开启完全部礼包，共可以获得158万元宝！具体请查看介绍！/FCOLOR=249>  <查看礼包介绍/@下一页> \
+<为感谢新老玩家厚爱，100积分新增1.2倍回收，300积分1.3倍爆率，达到积分小退生效！/FCOLOR=250>\
+#elseACT
+OPENMERCHANTBIGDLG 1  317 0 0 0 0 0
+#elsesay
+<Img:2:1:434:-6/@EXIT>\ \
+<>                <1.76帝国霸业/FCOLOR=254> —  <高清复古/FCOLOR=254> — <充值礼包/FCOLOR=254>    <1大米 = 10颗江山币/FCOLOR=70>       \
+<--------------------------------------------------------------------------/AUTOCOLOR=91>\
+<【兑换礼包一】|250#加每日充值回馈共获得18万元宝/@222> <充值满100领取/FCOLOR=243>  <含：/FCOLOR=249> <03万元宝/FCOLOR=250>+<龙卫LV2/FCOLOR=242>+<4.0倍泡点/FCOLOR=254>+<(新手大礼包)|70#新手大礼包：^250#  ^249#武学秘籍50张！^250#超级祝福油*2^250#功勋令中量^250# ^249#赠送血怒神兵^251#前期打怪利器，起步更快，事半功倍！^250# ^249#赠送运3神链^251#幸运+3，配合血怒神兵发挥最佳伤害！^250# ^251#获得1.2倍回收^250#回收元宝1.2倍加成，经济快人一步！^250# ^249#获得江山富二代封号^242#永久获得攻击BUFF^242#攻魔道2-5^242#头顶封号，身份象征！^^/FCOLOR=150>       \ 
+<--------------------------------------------------------------------------/AUTOCOLOR=91>\
+<【兑换礼包二】/@333> <充值满200领取/FCOLOR=243>  <含：/FCOLOR=249> <12万元宝/FCOLOR=250>+<龙卫LV3/FCOLOR=242>+<5.0倍泡点/FCOLOR=254>+<(超值大礼包)|70#超值大礼包：^250# ^249#武学秘籍50张！^250# ^250#超级祝福油*2^250#功勋令大量^250# ^251#获得特殊：三清魂珠、三清勋章、三星宝石^250# ^249#赠送侠客斗笠^251#常在江湖飘，没有一顶拉风的斗笠怎么行？^^/FCOLOR=150>      \ 
+<--------------------------------------------------------------------------/AUTOCOLOR=91>\
+<【兑换礼包三】/@200> <充值满300领取/FCOLOR=243>  <含：/FCOLOR=249> <18万元宝/FCOLOR=250>+<龙卫LV4/FCOLOR=242>+<6.0倍泡点/FCOLOR=254>+<(高级大礼包)|70#高级大礼包：^250# ^249#武学秘籍50张！^250# ^242#魂珠碎片(大)^242#勋章碎片(大)^250#功勋令中量^250# ^251#1.3倍爆率^250#打怪增加1.3倍爆率加成！^250# ^251#龙卫特技：此礼包领取的龙卫附加毒素攻击，打BOSS给力^250# ^249#获得江山高富帅封号^242#永久获得攻击BUFF^242#攻魔道3-7^242#头顶封号，身份象征！^^/FCOLOR=150>       \ 
+<--------------------------------------------------------------------------/AUTOCOLOR=91>\
+<【兑换礼包四】/@500> <充值满500领取/FCOLOR=243>  <含：/FCOLOR=249> <40万元宝/FCOLOR=250>+<龙卫LV5/FCOLOR=242>+<9.0倍泡点/FCOLOR=254>+<(豪华大礼包)|70#豪华大礼包：^250# ^249#武学秘籍50张^250# ^242#魂珠碎片(特)^242#勋章碎片(特)^250#功勋令大量^250# ^253#获得：豪杰斗笠^250# ^251#获得超酷时装：蓝月复古^250# ^249#获得江山大富豪封号^242#永久获得攻击BUFF^242#攻魔道5-9^242#头顶封号，身份象征！^^/FCOLOR=150>        \ 
+<--------------------------------------------------------------------------/AUTOCOLOR=91>\
+<【兑换礼包五】/@1000> <充值满1000领取/FCOLOR=243> <含：/FCOLOR=249> <70万元宝/FCOLOR=250>+<终极龙卫/FCOLOR=242>+<12倍泡点./FCOLOR=254>+<(至尊大礼包)|70#至尊大礼包：^250# ^253#获得：豪杰斗笠^250# ^251#获得武器：王者·神剑(分职业)^^250# ^251#获得神技：战士逐日剑法、道士无极真气、法师灭天火^250# ^249#获得家财万贯封号^242#永久获得攻击BUFF^242#攻魔道7-13^242#头顶封号，身份象征！^^/FCOLOR=150>    \ 
+<--------------------------------------------------------------------------/AUTOCOLOR=91>\
+<提示：开启完全部礼包，共可以获得158万元宝！具体请查看介绍！/FCOLOR=249>  <查看礼包介绍/@下一页> \
+<为感谢新老玩家厚爱，100积分新增1.2倍回收，300积分1.3倍爆率，达到积分小退生效！/FCOLOR=250>\
+
+
+[@2000礼包]
+#IF
+CHECKGAMEGIRD > 1500
+#ACT
+OPENMERCHANTBIGDLG 1  317 0 0 0 0 0
+#SAY
+<Img:2:1:434:-6/@EXIT>\ \   \
+<>                <1.76帝国霸业/FCOLOR=254> —  <高清复古/FCOLOR=254> — <累计充值礼包/FCOLOR=254>\
+<--------------------------------------------------------------------------/AUTOCOLOR=91>\  \
+<>                             <【2000充值大礼】/FCOLOR=251>   <您已累计充值:/SCOLOR=253>< <$GAMEGIRD>元/SCOLOR=70>     \  \ 
+
+<>           <充值积分达到2000免费领取/FCOLOR=243>  <只需要再充值412元即可免费领取！！/FCOLOR=250>\ \ 
+
+<>                        <奖励：/FCOLOR=249> <100万元宝/FCOLOR=250> + <2500江山币/FCOLOR=242> + <时装碎片*188/SCOLOR=70>\  \  \
+
+
+<>                            <开始领取2000充值大礼/@2000> \  \ 
+
+
+[@3000礼包]
+#IF
+CHECKGAMEGIRD > 1999
+#ACT
+OPENMERCHANTBIGDLG 1  317 0 0 0 0 0
+#SAY
+<Img:2:1:434:-6/@EXIT>\ \   \
+<>                <1.76帝国霸业/FCOLOR=254> —  <高清复古/FCOLOR=254> — <累计充值礼包/FCOLOR=254>\
+<--------------------------------------------------------------------------/AUTOCOLOR=91>\  \
+<>                             <您已累计充值:/SCOLOR=253>< <$GAMEGIRD>元/SCOLOR=70>     \  \ 
+
+<> <【2500充值大礼】/FCOLOR=251> <奖励：/FCOLOR=249> <100万元宝/FCOLOR=250> + <3000江山币/FCOLOR=242>\  \
+<> <【3000充值大礼】/FCOLOR=251> <奖励：/FCOLOR=249> <100万元宝/FCOLOR=250> + <3500江山币/FCOLOR=242> + <时装碎片*218/SCOLOR=70>\  \
+<> <注：/FCOLOR=249><领取充值大礼不扣江山币，相当于充值同时获得江山币和海量元宝，非常超值！/FCOLOR=243>\ \   \
+<>                      <领取2500充值大礼/@2500>         <领取3000充值大礼/@3000>\  \ 
+
+[@4000礼包]
+#IF
+CHECKGAMEGIRD > 2999
+#ACT
+OPENMERCHANTBIGDLG 1  317 0 0 0 0 0
+#SAY
+<Img:2:1:434:-6/@EXIT>\ \   \
+<>                <1.76帝国霸业/FCOLOR=254> —  <高清复古/FCOLOR=254> — <累计充值礼包/FCOLOR=254>\
+<--------------------------------------------------------------------------/AUTOCOLOR=91>\  \
+<>                             <您已累计充值:/SCOLOR=253>< <$GAMEGIRD>元/SCOLOR=70>     \  \ 
+
+<【4000充值大礼】/FCOLOR=251> <奖励：/FCOLOR=249> <150万元宝/FCOLOR=250> + <4000江山币/FCOLOR=242> + <神之碎片*50/SCOLOR=70>\  \
+<【5000充值大礼】/FCOLOR=251> <奖励：/FCOLOR=249> <200万元宝/FCOLOR=250> + <8000江山币/FCOLOR=242> + <神之碎片*150/SCOLOR=70> 获得迪拜小土豪称号\  \
+<> <注：/FCOLOR=249><领取充值大礼不扣江山币，相当于充值同时获得江山币和海量元宝，非常超值！/FCOLOR=243>\ \   \
+<>                      <领取4000充值大礼/@4000>         <领取5000充值大礼/@5000>\  \ 
+
+
+
+[@7000礼包]
+#IF
+CHECKGAMEGIRD > 4999
+#ACT
+OPENMERCHANTBIGDLG 1  317 0 0 0 0 0
+#SAY
+<Img:2:1:434:-6/@EXIT>\ \   \
+<>                <1.76帝国霸业/FCOLOR=254> —  <高清复古/FCOLOR=254> — <终极充值大礼包/FCOLOR=254>\
+<--------------------------------------------------------------------------/AUTOCOLOR=91>\  \
+<>                             <您已累计充值:/SCOLOR=253>< <$GAMEGIRD>元/SCOLOR=70>      \  \ 
+
+<>              <充值积分达到积分数免费领取/FCOLOR=243>  <终极礼包，不扣江山币免费领取！！/FCOLOR=250>\ \ 
+
+<【7000充值大礼】/FCOLOR=251> <奖励：/FCOLOR=249> <250万元宝/FCOLOR=250> + <12000江山币/FCOLOR=242> + <神之碎片*200/SCOLOR=70>\  \
+<【10000充值大礼】/FCOLOR=251><奖励：/FCOLOR=249> <400万元宝/FCOLOR=250> + <25000江山币/FCOLOR=242> + <至尊帝王神链/SCOLOR=249><(身份象征，死亡不掉)/SCOLOR=70>\  \   \
+
+<>                      <开始领取7000充值大礼/@7000>         <开始领取10000充值大礼/@10000>\  \ 
+
+
+
+[@下一页]
+#IF
+#ACT
+OPENMERCHANTBIGDLG 1  317 0 0 0 0 0
+#SAY
+<Img:2:1:434:-6/@EXIT>\ \ \
+<> <礼包可以累计开启：/FCOLOR=254> \  \
+<> <如开启过礼包一，再开启礼包二，只需要再充值100元即可！/FCOLOR=70> \ \
+<> <泡点升级不扣除元宝，只需要充值积分达到即可获得高额泡点经验！/FCOLOR=70> \ \
+<> <礼包二+每日回馈共可获得30万元宝    礼包三+每日回馈共可以获得48万元宝/FCOLOR=250> \ \
+<> <礼包四+每日回馈共可获得88万元宝    礼包五+每日回馈共可以获得158万元宝/FCOLOR=250> \ \
+<> <开启完全部礼包，共获得158万元宝，只需要充值积分达到1000元！/FCOLOR=250> \  \
+<>  <提示：礼包赠送物品较多，请保持背包有足够多的空格！/FCOLOR=249>          <返回主页/@main> \
+
+
+
+[@111]
+#IF
+CHECKGAMEGIRD < 10
+#ACT
+MESSAGEBOX \\您的充值金额不足10元，无法领取充值大礼!
+BREAK
+
+
+#IF
+CHECK [430] 0
+CHECKGAMEGIRD > 9
+#ACT
+SET [430] 1
+GIVE 伏魔令牌 5
+GIVE 武学秘籍 5
+GIVE 魂珠碎片(中) 1 
+GIVE 勋章碎片(中) 1 
+GIVE 金钻贵族 1 
+GuildNoticeMsg 251 249 〖首冲大礼〗：恭喜{「<$USERNAME>」|227:0:1}免费领取了价值28888元宝的充值大礼，只需10元，非常超值！
+GuildNoticeMsg 251 249 〖首冲大礼〗：恭喜{「<$USERNAME>」|227:0:1}免费领取了价值28888元宝的充值大礼，只需10元，非常超值！
+break
+#ELSEACT
+MESSAGEBOX \\您的充值金额不足10元，或您已经领取过充值大礼了!
+break
+
+[@222]
+#IF
+CHECKGAMEGIRD < 100
+#ACT
+MESSAGEBOX \\您的充值金额不足100元，无法领取充值大礼!
+BREAK
+
+#IF
+CHECK [431] 0
+CHECKGAMEGIRD > 99
+#ACT
+SET [431] 1
+GAMEGOLD + 30000
+GIVE 武学秘籍 50
+GIVE 血怒神兵 1
+GIVE 幸运三神链 1
+GIVE 超级祝福油  2
+GIVE 功勋令(中)  3
+GIVE 义士斗笠 1
+TAKE 兵卒腰佩 1
+TAKEW 兵卒腰佩 1
+GiveStateItem 校尉腰佩 1 1 1 0 1 1 1 1
+GuildNoticeMsg 251 249 〖礼包兑换〗：恭喜{「<$USERNAME>」|227:0:1}成功兑换礼包一，优惠多多，超值多多！
+GuildNoticeMsg 251 249 〖礼包兑换〗：恭喜{「<$USERNAME>」|227:0:1}成功兑换礼包一，优惠多多，超值多多！
+break
+#ELSEACT
+MESSAGEBOX \\您的充值金额不足，或您已经兑换过此礼包了!
+break
+
+
+[@333]
+#IF
+CHECKGAMEGIRD < 200
+#ACT
+MESSAGEBOX \\您的充值金额不足200元，无法领取充值大礼!
+BREAK
+
+#IF
+CHECK [431] 0
+#ACT
+MESSAGEBOX \\您还没有兑换礼包一，请先兑换礼包一再兑换礼包二!
+BREAK
+
+
+#IF
+CHECK [432] 0
+CHECKGAMEGIRD > 199
+#ACT
+SET [432] 1
+GAMEGOLD + 120000
+GIVE 武学秘籍 50
+GIVE 超级祝福油 2
+GIVE 功勋令(中) 2
+GIVE 功勋令(大) 1
+GIVE 三星宝石 1
+GIVE 三清勋章 1
+GIVE 三清魂珠 1
+GIVE 侠客斗笠 1
+TAKE 校尉腰佩 1
+TAKEW 校尉腰佩 1
+GiveStateItem 统领令牌 1 1 1 0 1 1 1 1
+GuildNoticeMsg 251 249 〖礼包兑换〗：恭喜{「<$USERNAME>」|227:0:1}成功兑换礼包二，优惠多多，超值多多！
+GuildNoticeMsg 251 249 〖礼包兑换〗：恭喜{「<$USERNAME>」|227:0:1}成功兑换礼包二，优惠多多，超值多多！
+break
+#ELSEACT
+MESSAGEBOX \\您的充值金额不足，或您已经兑换过此礼包了!
+break
+
+
+[@200]
+#IF
+CHECKGAMEGIRD < 300
+#ACT
+MESSAGEBOX \\您的充值金额不足300元，无法领取充值大礼!
+BREAK
+
+#IF
+CHECK [432] 0
+#ACT
+MESSAGEBOX \\您还没有兑换礼包二，请先兑换礼包二再兑换礼包三!
+BREAK
+
+
+#IF
+CHECK [433] 0
+CHECKGAMEGIRD > 299
+#ACT
+SET [433] 1
+GAMEGOLD + 180000
+GIVE 武学秘籍 50
+GIVE 魂珠碎片(大) 1 
+GIVE 勋章碎片(大) 1  
+GIVE 功勋令(中) 3
+TAKE 统领令牌 1
+TAKEW 统领令牌 1
+GiveStateItem 神将令牌 1 1 1 0 1 1 1 1
+GuildNoticeMsg 251 249 〖礼包兑换〗：恭喜{「<$USERNAME>」|227:0:1}成功兑换礼包三，优惠多多，超值多多！
+GuildNoticeMsg 251 249 〖礼包兑换〗：恭喜{「<$USERNAME>」|227:0:1}成功兑换礼包三，优惠多多，超值多多！
+break
+#ELSEACT
+MESSAGEBOX \\您的充值金额不足，或您已经兑换过此礼包了!
+break
+
+
+[@500]
+#IF
+CHECKGAMEGIRD < 500
+#ACT
+MESSAGEBOX \\您的充值金额不足500元，无法领取充值大礼!
+BREAK
+
+#IF
+CHECK [433] 0
+#ACT
+MESSAGEBOX \\您还没有兑换礼包三，请先兑换礼包三再兑换礼包四!
+BREAK
+
+#IF
+CHECK [434] 0
+gender Woman
+CHECKGAMEGIRD > 499
+#ACT
+SET [434] 1
+GAMEGOLD + 400000
+GIVE 武学秘籍 50
+GIVE 魂珠碎片(特) 1 
+GIVE 勋章碎片(特) 1  
+GIVE 功勋令(中) 2 
+GIVE 功勋令(大) 1
+GIVE 豪杰斗笠 1
+GIVE 蓝月复古(女) 1
+TAKE 神将令牌 1 
+TAKEW 神将令牌 1
+GiveStateItem 武侯印记 1 1 1 0 1 1 1 1
+GuildNoticeMsg 251 249 〖礼包兑换〗：恭喜{「<$USERNAME>」|227:0:1}成功兑换礼包四，优惠多多，超值多多！
+GuildNoticeMsg 251 249 〖礼包兑换〗：恭喜{「<$USERNAME>」|227:0:1}成功兑换礼包四，优惠多多，超值多多！
+break
+
+
+
+#IF
+CHECK [434] 0
+gender man
+CHECKGAMEGIRD > 499
+#ACT
+SET [434] 1
+GAMEGOLD + 400000
+GIVE 武学秘籍 50
+GIVE 魂珠碎片(特) 1 
+GIVE 勋章碎片(特) 1  
+GIVE 功勋令(中) 2 
+GIVE 功勋令(大) 1
+GIVE 豪杰斗笠 1
+GIVE 蓝月复古(男) 1
+TAKE 神将令牌 1 
+TAKEW 神将令牌 1
+GiveStateItem 武侯印记 1 1 1 0 1 1 1 1
+GuildNoticeMsg 251 249 〖礼包兑换〗：恭喜{「<$USERNAME>」|227:0:1}成功兑换礼包四，优惠多多，超值多多！
+GuildNoticeMsg 251 249 〖礼包兑换〗：恭喜{「<$USERNAME>」|227:0:1}成功兑换礼包四，优惠多多，超值多多！
+break
+#ELSEACT
+MESSAGEBOX \\您的充值金额不足，或您已经兑换过此礼包了!
+break
+
+
+[@1000]
+#IF
+CHECKGAMEGIRD < 1000
+#ACT
+MESSAGEBOX \\您的充值金额不足1000元，无法领取充值大礼!
+BREAK
+
+#IF
+CHECK [434] 0
+#ACT
+MESSAGEBOX \\您还没有兑换礼包四，请先兑换礼包四再兑换礼包五!
+BREAK
+
+#IF
+CHECK [435] 0
+checkjob taoist
+CHECKGAMEGIRD > 999
+#ACT
+SET [435] 1
+GAMEGOLD + 700000
+GIVE 王者·道扇 1
+GIVE 无极真气 1
+TAKE 武侯印记 1 
+TAKEW 武侯印记 1
+GiveStateItem 君王之印 1 1 1 0 1 1 1 1 
+GuildNoticeMsg 251 249 〖礼包兑换〗：恭喜{「<$USERNAME>」|227:0:1}成功兑换礼包五，优惠多多，超值多多！
+GuildNoticeMsg 251 249 〖礼包兑换〗：恭喜{「<$USERNAME>」|227:0:1}成功兑换礼包五，优惠多多，超值多多！
+break
+
+#IF
+CHECK [435] 0
+checkjob warrior
+CHECKGAMEGIRD > 999
+#ACT
+SET [435] 1
+GAMEGOLD + 700000
+GIVE 王者·神剑 1
+GIVE 逐日剑法 1 
+TAKE 武侯印记 1 
+TAKEW 武侯印记 1
+GiveStateItem 君王之印 1 1 1 0 1 1 1 1 
+GuildNoticeMsg 251 249 〖礼包兑换〗：恭喜{「<$USERNAME>」|227:0:1}成功兑换礼包五，优惠多多，超值多多！
+GuildNoticeMsg 251 249 〖礼包兑换〗：恭喜{「<$USERNAME>」|227:0:1}成功兑换礼包五，优惠多多，超值多多！
+break
+
+#IF
+CHECK [435] 0
+checkjob wizard
+CHECKGAMEGIRD > 999
+#ACT
+SET [435] 1
+GAMEGOLD + 700000
+GIVE 圣·轩辕权杖 1
+GIVE 灭天火 1
+TAKE 武侯印记 1 
+TAKEW 武侯印记 1
+GiveStateItem 君王之印 1 1 1 0 1 1 1 1
+GuildNoticeMsg 251 249 〖礼包兑换〗：恭喜{「<$USERNAME>」|227:0:1}成功兑换礼包五，优惠多多，超值多多！
+GuildNoticeMsg 251 249 〖礼包兑换〗：恭喜{「<$USERNAME>」|227:0:1}成功兑换礼包五，优惠多多，超值多多！
+break
+#ELSEACT
+MESSAGEBOX \\您的充值金额不足，或您已经兑换过此礼包了!
+break
+
+
+
+[@1500]
+#IF
+CHECKGAMEGIRD < 1588
+#ACT
+MESSAGEBOX \\您的充值金额不足1588元，无法领取充值大礼!
+BREAK
+
+#IF
+CHECK [435] 0
+#ACT
+MESSAGEBOX \\您还没有兑换礼包五，请先兑换礼包五再领取王者大礼!
+BREAK
+
+#IF
+CHECK [436] 0
+gender man
+checkjob taoist
+CHECKGAMEGIRD > 1587
+#ACT
+SET [436] 1
+GAMEGOLD + 800000
+GAMEDIAMOND + 1500
+GIVE 圣·轩辕道甲(龙) 1
+GuildNoticeMsg 251 249 〖超值大礼〗：恭喜{「<$USERNAME>」|227:0:1}领取了王者大礼，皇图霸业，指日可待！
+break
+
+#IF
+CHECK [436] 0
+gender Woman
+checkjob taoist
+CHECKGAMEGIRD > 1587
+#ACT
+SET [436] 1
+GAMEGOLD + 800000
+GAMEDIAMOND + 1500
+GIVE 王者·道衣(凤) 1
+GuildNoticeMsg 251 249 〖超值大礼〗：恭喜{「<$USERNAME>」|227:0:1}领取了王者大礼，皇图霸业，指日可待！
+break
+
+
+#IF
+CHECK [436] 0
+gender man
+checkjob warrior
+CHECKGAMEGIRD > 1587
+#ACT
+SET [436] 1
+GAMEGOLD + 800000
+GAMEDIAMOND + 1500
+GIVE 王者·战甲(龙) 1  
+GuildNoticeMsg 251 249 〖超值大礼〗：恭喜{「<$USERNAME>」|227:0:1}领取了王者大礼，皇图霸业，指日可待！
+break
+
+#IF
+CHECK [436] 0
+gender Woman
+checkjob warrior
+CHECKGAMEGIRD > 1587
+#ACT
+SET [436] 1
+GAMEGOLD + 800000
+GAMEDIAMOND + 1500
+GIVE 王者·战衣(凤) 1  
+GuildNoticeMsg 251 249 〖超值大礼〗：恭喜{「<$USERNAME>」|227:0:1}领取了王者大礼，皇图霸业，指日可待！
+break
+
+#IF
+CHECK [436] 0
+gender man
+checkjob wizard
+CHECKGAMEGIRD > 1587
+#ACT
+SET [436] 1
+GAMEGOLD + 800000
+GAMEDIAMOND + 1500
+GIVE 圣·轩辕魔甲(龙) 1 
+GuildNoticeMsg 251 249 〖超值大礼〗：恭喜{「<$USERNAME>」|227:0:1}领取了王者大礼，皇图霸业，指日可待！
+break
+
+#IF
+CHECK [436] 0
+gender Woman
+checkjob wizard
+CHECKGAMEGIRD > 1587
+#ACT
+SET [436] 1
+GAMEGOLD + 800000
+GAMEDIAMOND + 1500
+GIVE 王者·魔衣(凤) 1 
+GuildNoticeMsg 251 249 〖超值大礼〗：恭喜{「<$USERNAME>」|227:0:1}领取了王者大礼，皇图霸业，指日可待！
+break
+#ELSEACT
+MESSAGEBOX \\您的充值金额不足1588元，或您已经领取过充值大礼了!
+break
+
+[@2000]
+#IF
+CHECK [437] 0
+CHECKGAMEGIRD > 1999
+#ACT
+SET [437] 1 
+GAMEGOLD + 1000000
+GAMEDIAMOND + 2500
+GIVE 时装碎片 188
+messagebox \\恭喜您成功领取2000元充值大礼！
+GuildNoticeMsg 251 249 〖超值大礼〗：恭喜{「<$USERNAME>」|227:0:1}领取了超值大礼，皇图霸业，指日可待！
+break
+#ELSEACT
+MESSAGEBOX \\您的充值金额不足2000元，或您已经领取过充值大礼了!
+break
+
+[@2500]
+#IF
+CHECK [438] 0
+CHECKGAMEGIRD > 2499
+#ACT
+SET [438] 1 
+GAMEGOLD + 1000000
+GAMEDIAMOND + 3000
+messagebox \\恭喜您成功领取2500元充值大礼！
+GuildNoticeMsg 251 249 〖超值大礼〗：恭喜{「<$USERNAME>」|227:0:1}领取了超值大礼，皇图霸业，指日可待！
+break
+#ELSEACT
+MESSAGEBOX \\您的充值金额不足2500元，或您已经领取过充值大礼了!
+break
+
+[@3000]
+#IF
+CHECK [439] 0
+CHECKGAMEGIRD > 2999
+#ACT
+SET [439] 1 
+GAMEGOLD + 1000000 
+GAMEDIAMOND + 3500
+GIVE 时装碎片 218
+messagebox \\恭喜您成功领取3000元充值大礼！
+GuildNoticeMsg 251 249 〖超值大礼〗：恭喜{「<$USERNAME>」|227:0:1}领取了超值大礼，皇图霸业，指日可待！
+break
+#ELSEACT
+MESSAGEBOX \\您的充值金额不足3000元，或您已经领取过充值大礼了!
+break
+
+
+[@4000]
+#IF
+CHECK [440] 0
+CHECKGAMEGIRD > 3999
+#ACT
+SET [440] 1 
+GAMEGOLD + 1500000 
+GAMEDIAMOND + 4000
+GIVE 神之碎片 50
+messagebox \\恭喜您成功领取4000元充值大礼！
+GuildNoticeMsg 251 249 〖超值大礼〗：恭喜{「<$USERNAME>」|227:0:1}领取了超值大礼，皇图霸业，指日可待！
+break
+#ELSEACT
+MESSAGEBOX \\您的充值金额不足4000元，或您已经领取过充值大礼了!
+break
+
+
+[@5000]
+#IF
+CHECK [441] 0
+CHECKGAMEGIRD > 4999
+#ACT
+SET [441] 1 
+GAMEGOLD + 2000000 
+GAMEDIAMOND + 8000
+GIVE 神之碎片 150
+messagebox \\恭喜您成功领取5000元充值大礼！
+GuildNoticeMsg 251 249 〖超值大礼〗：恭喜{「<$USERNAME>」|227:0:1}领取了超值大礼，皇图霸业，指日可待！
+break
+#ELSEACT
+MESSAGEBOX \\您的充值金额不足5000元，或您已经领取过充值大礼了!
+break
+
+[@7000]
+#IF
+CHECK [442] 0
+CHECKGAMEGIRD > 6999
+#ACT
+SET [442] 1 
+GAMEGOLD + 2500000 
+GAMEDIAMOND + 12000
+GIVE 神之碎片 200
+messagebox \\恭喜您成功领取7000元充值大礼！
+GuildNoticeMsg 251 249 〖超值大礼〗：恭喜{「<$USERNAME>」|227:0:1}领取了超值大礼，皇图霸业，指日可待！
+break
+#ELSEACT
+MESSAGEBOX \\您的充值金额不足7000元，或您已经领取过充值大礼了!
+break
+
+[@10000]
+#IF
+CHECK [443] 0
+CHECKGAMEGIRD > 9999
+#ACT
+SET [443] 1 
+GAMEGOLD + 4000000 
+GAMEDIAMOND + 25000
+GIVE 至尊帝王神链 1
+messagebox \\恭喜您成功领取10000元充值大礼！
+GuildNoticeMsg 251 249 〖超值大礼〗：恭喜{「<$USERNAME>」|227:0:1}领取了超值大礼，皇图霸业，指日可待！
+break
+#ELSEACT
+MESSAGEBOX \\您的充值金额不足10000元，或您已经领取过充值大礼了!
+break

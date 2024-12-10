@@ -1,0 +1,7 @@
+()
+%100
+[@MAIN]
+#IF
+#ACT
+MAPMOVE 3 333 333
+BREAK

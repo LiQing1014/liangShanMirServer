@@ -1,0 +1,233 @@
+[@main]
+#if
+#act
+; OpenMerChantBigDlg	34	21	1	4	0	-30	1	369	13
+#say
+; \ \ \ \ \
+; <>            <开区第2天下午14-16点合区,20点准时攻城/fcolor=251>\ \
+; <>　　　　　            <申请建立行会/@@InPutString13(请输入您要建立的行会名称)>\
+; <>     <行会需要在合区后的19.55之前建立,否则失去攻沙资格/fcolor=249>\
+; <>     <行会需要在合区后的19.55之前建立,否则失去攻沙资格/fcolor=249>\
+; <>\
+; <>\
+
+<Img|width=620|height=300|img=public/bg_npc_01.png|bg=1|scale9r=10|scale9t=10|scale9b=10|reset=1|scale9l=10|move=0>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=60|tipsx=10|tipsy=80|color=251|size=18|text=开区第2天下午14-16点合区,20点准时攻城>
+<Text|a=0|x=32|y=100|tipsx=10|tipsy=80|color=251|size=18|text=申请建立行会|link=@@InPutString13(请输入您要建立的行会名称)>
+<Text|a=0|x=32|y=120|tipsx=10|tipsy=80|color=249|size=18|text=行会需要在合区后的19.55之前建立,否则失去攻沙资格>
+<Text|a=0|x=32|y=140|tipsx=10|tipsy=80|color=249|size=18|text=行会需要在合区后的19.55之前建立,否则失去攻沙资格>
+
+
+
+;<>          <直入皇宫|需要收取神币500/@皇宫>          <沙复活点左/@左侧>           <沙复活点右/@右侧>  \
+[@获取沙城信息]
+#if
+#act
+mov	S$沙奖励信息
+Mov	S$沙城归属
+Mov	S$沙城奖金
+Mov	S$沙城老大
+Mov	S$沙城时间
+GetRandomText ..\Questdiary\一万七网络通服功能\【沙城领取记录】.txt	<$Str(S$沙奖励信息)>	0
+
+#if
+Equal	S$沙奖励信息
+#act
+Mov	S$沙奖励信息	新区攻城:500游戏币　(未领取):-
+
+
+#if
+#act
+ExtractString :	<$Str(S$沙奖励信息)> S$沙城归属	S$沙城奖金	S$沙城老大	S$沙城时间
+
+ 
+
+[@皇宫]
+#IF
+CHECKGamePoint > 499
+#ACT
+GamePoint - 500
+map N0150
+SENDMSG 0 [%s]一路狂飙，操上家伙直冲沙巴克皇宫！
+#ELSEACT
+MESSAGEBOX \\你没有500神币作为车费的话你还是自己跑吧!!！
+break
+
+
+[@右侧]
+#IF
+#ACT
+mapmove j 649 263
+SENDMSG 0 [%s]一路狂飙，操上家伙直冲沙巴克！
+break
+
+[@左侧]
+#IF
+#ACT
+mapmove j 615 297
+SENDMSG 0 [%s]一路狂飙，操上家伙直冲沙巴克！
+break
+
+[@大门]
+#IF
+#ACT
+mapmove j 682   330
+;goto @检测
+SENDMSG 0 [%s]一路狂飙，操上家伙直冲沙大门口！
+break
+
+
+[@瞬间满血]
+#IF
+#ACT
+GuildNoticeMsg 251 253 玩家【<$USERNAME>】瞬间满血。真生性。
+GuildNoticeMsg 254 252 玩家【<$USERNAME>】瞬间满血。真生性。
+GuildNoticeMsg 251 253 玩家【<$USERNAME>】瞬间满血。真生性。
+GuildNoticeMsg 254 252 玩家【<$USERNAME>】瞬间满血。真生性。
+GuildNoticeMsg 251 253 玩家【<$USERNAME>】瞬间满血。真生性。
+GuildNoticeMsg 254 252 玩家【<$USERNAME>】瞬间满血。真生性。
+HUMANHP + 5000000
+HUMANMP + 5000000
+
+
+
+
+[@InPutString13]
+#IF
+HAVEGUILD
+#ACT
+Messagebox	 建会失败！\你已经加入了其他行会！
+BREAK
+
+
+#OR
+CheckContainsText <$str(S13)> 新区攻城
+CheckContainsText <$str(S13)> 老区攻城
+CheckContainsText <$str(S13)> @
+CheckContainsText <$str(S13)> GM
+CheckContainsText <$str(S13)> 管理
+CheckContainsText <$str(S13)> gm
+CheckContainsText <$str(S13)> fu
+CheckContainsText <$str(S13)> FU
+CheckContainsText <$str(S13)> 垃圾
+CheckContainsText <$str(S13)> 比例
+CheckContainsText <$str(S13)> 管理
+CheckContainsText <$str(S13)> 提现
+CheckContainsText <$str(S13)> 习近平
+CheckContainsText <$str(S13)> 共产党
+CheckContainsText <$str(S13)> 习近
+CheckContainsText <$str(S13)> 国民党
+CheckContainsText <$str(S13)> 近平
+CheckContainsText <$str(S13)> 毛主席
+CheckContainsText <$str(S13)> 毛泽东
+CheckContainsText <$str(S13)> 泽东
+CheckContainsText <$str(S13)> 周恩来
+CheckContainsText <$str(S13)> 恩来
+CheckContainsText <$str(S13)> 台独
+CheckContainsText <$str(S13)> 西藏
+CheckContainsText <$str(S13)> 藏独
+CheckContainsText <$str(S13)> 法轮功
+CheckContainsText <$str(S13)> 获奖
+CheckContainsText <$str(S13)> 奖品
+CheckContainsText <$str(S13)> 嫖
+CheckContainsText <$str(S13)> 反动
+CheckContainsText <$str(S13)> 政治
+CheckContainsText <$str(S13)> 色情
+CheckContainsText <$str(S13)> 书记
+CheckContainsText <$str(S13)> 省委
+CheckContainsText <$str(S13)> 市委
+CheckContainsText <$str(S13)> 卍
+CheckContainsText <$str(S13)> 卐
+CheckContainsText <$str(S13)> 　
+CheckContainsText <$str(S13)> 温家宝
+CheckContainsText <$str(S13)> 家宝
+CheckContainsText <$str(S13)> 江泽民
+CheckContainsText <$str(S13)> 泽民
+CheckContainsText <$str(S13)> 李克强
+CheckContainsText <$str(S13)> 克强
+CheckContainsText <$str(S13)> 邓小平
+CheckContainsText <$str(S13)> 小平
+CheckContainsText <$str(S13)> 胡锦涛
+#ACT
+MESSAGEBOX 创建行会失败：信息包含非法字符！
+MOV S12
+BREAK
+
+
+#or
+CheckStringlength <$Str(S13)> > 14
+CheckStringlength <$Str(S13)> <	4
+#act
+Messagebox	建会失败！\您输入的行会名称长度不正确！\请输入2-7个汉字！
+break
+
+#if
+CheckTextlist	..\..\GuildBase\Guildlist.txt	<$Str(S13)>
+#act
+Messagebox	建会失败！\您输入的行会名称“<$Str(S13)>”已存在！请重试！
+break
+
+#IF
+#ACT
+AddGuild <$Str(S13)> <$USERNAME>
+Messagebox	建会成功！\恭喜您成为“<$Str(S13)>”的行会掌门人！\快去招募你的会员吧！
+break
+
+#if
+#act
+Messagebox	建会失败！\您尚未满足建立行会所需的条件！
+
+
+
+[@领取攻城奖励]
+
+
+#if
+Not	ISCASTLEMASTER 
+#act
+Messagebox	领取失败！\您不是沙巴克城主，无权领取！
+break
+
+#if
+EQUAL G256 0
+#act
+Messagebox	领取失败！\沙城奖励已经被领取过了！
+break
+
+#or
+Not	Equal	<$Hour>	22
+Large	<$MINUTE> 	30
+#act
+Messagebox	领取失败！\沙城奖励的领取时间仅限22:00-22:30分之间！
+break
+
+#if
+Equal G255 1
+Equal G256 1
+#act
+Messagebox	恭喜您：领取成功，获取188888战神币！
+DelTextlist	..\Questdiary\一万七网络通服功能\【沙城领取记录】.txt 新区攻城:500游戏币　(未领取):-
+;AddTextListEx	..\Questdiary\一万七网络通服功能\【沙城领取记录】.txt <$GUILDNAME>:500游戏币　(已领取):<$USERNAME>:<$DATETIME> 0
+GamePoint + 188888
+MOV G256 0
+GuildNoticeMsg 251 249 恭喜：沙巴克老大{「<$USERNAME>」|254:0:1}成功领取新区攻城奖励，获得『188888战神币』！
+GuildNoticeMsg 251 249 恭喜：沙巴克老大{「<$USERNAME>」|254:0:1}成功领取新区攻城奖励，获得『188888战神币』！
+GuildNoticeMsg 251 249 恭喜：沙巴克老大{「<$USERNAME>」|254:0:1}成功领取新区攻城奖励，获得『188888战神币』！
+Goto	@main
+break
+#if
+LARGE G255 1
+Equal G256 1
+#act
+Messagebox	恭喜您：领取成功，获取38888战神币！
+;DelTextlist	..\Questdiary\一万七网络通服功能\【沙城领取记录】.txt 老区攻城:100游戏币　(未领取):-
+;AddTextListEx	..\Questdiary\一万七网络通服功能\【沙城领取记录】.txt <$GUILDNAME>:100游戏币　(已领取):<$USERNAME>:<$DATETIME> 0
+GamePoint + 38888
+MOV G256 0
+GuildNoticeMsg 251 249 恭喜：沙巴克老大{「<$USERNAME>」|254:0:1}成功领取老区攻城奖励，获得『38888战神币』！
+GuildNoticeMsg 251 249 恭喜：沙巴克老大{「<$USERNAME>」|254:0:1}成功领取老区攻城奖励，获得『38888战神币』！
+GuildNoticeMsg 251 249 恭喜：沙巴克老大{「<$USERNAME>」|254:0:1}成功领取老区攻城奖励，获得『38888战神币』！
+Goto	@main
+break

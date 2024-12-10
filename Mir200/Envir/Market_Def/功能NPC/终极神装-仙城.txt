@@ -1,0 +1,789 @@
+[@main]
+#IF
+CHECKLEVELEX < 62
+#ACT
+messagebox 你的等级不足62，还需努力修炼!
+break
+
+#IF
+#ACT
+#SAY
+\ \
+<神级的武器和衣服乃是天界重宝，凡人是不配拥有的……/FCOLOR=100>\
+<既然你能遇到我，证明你的实力已经超脱凡界，我将让你成为真正的王者！/FCOLOR=100>\
+<锻造神级剑甲需要找来传说中的“女娲补天神石”，否则不可能成功!!!/FCOLOR=249>\ 
+{-------------------------------------------------------------/FCOLOR=35}\
+<提示：/FCOLOR=249><神级剑甲隐藏属性十分强大,请在游戏中体会!/FCOLOR=250>   <≮/FCOLOR=253><剑甲互换/@互换><≯/FCOLOR=253>\  \
+　　      <≮/FCOLOR=253><锻造神级武器/@神武器><≯/FCOLOR=253>       <≮/FCOLOR=253><锻造神级衣服/@神衣服><≯/FCOLOR=253>\
+
+;============================================================================================================================
+
+[@互换]
+#IF
+#ACT
+#SAY
+\ \
+<神级的武器和衣服乃是天界重宝，凡人是不配拥有的…/FCOLOR=100> <≮/FCOLOR=253><衣服互换/@衣服互换><≯/FCOLOR=253>\
+<我可以帮您把不同职业的神级剑甲进行互换，每次需要收费888大米点！！/FCOLOR=249>\ 
+<------------------------------------------------------------/SCOLOR=83>\
+　<无双·神剑换无双·魔杖/@互换1>   <无双·神剑换无双·道扇/@互换2>\
+<------------------------------------------------------------/SCOLOR=83>\
+　<无双·魔杖换无双·神剑/@互换3>   <无双·魔杖换无双·道扇/@互换4>  \
+<------------------------------------------------------------/SCOLOR=83>\
+　<无双·道扇换无双·神剑/@互换5>   <无双·道扇换无双·魔杖/@互换6>  \
+<------------------------------------------------------------/SCOLOR=83>\
+
+[@衣服互换]
+#IF
+#ACT
+#SAY
+<神级的武器和衣服乃是天界重宝，凡人是不配拥有的………/FCOLOR=100> \
+<我可以帮您把不同职业的神级剑甲进行互换，每次需要收费888大米点！！/FCOLOR=249>\ 
+<------------------------------------------------------------/SCOLOR=83>\
+　<无双·战甲换无双·魔袍/@衣服互换1>   <无双·战甲换无双·道袍/@衣服互换2>\
+　<无双·战衣换无双·魔衣/@衣服互换3>   <无双·战衣换无双·道衣/@衣服互换4>  \
+　<无双·魔袍换无双·战甲/@衣服互换5>   <无双·魔袍换无双·道袍/@衣服互换6>  \
+　<无双·魔衣换无双·战衣/@衣服互换7>   <无双·魔衣换无双·道衣/@衣服互换8>  \
+　<无双·道袍换无双·战甲/@衣服互换9>   <无双·道袍换无双·魔袍/@衣服互换10>  \
+　<无双·道衣换无双·战衣/@衣服互换11>   <无双·道衣换无双·魔衣/@衣服互换12>  \
+<------------------------------------------------------------/SCOLOR=83>\
+
+
+
+[@神武器]
+#IF
+#ACT
+#SAY
+\ \
+<神级的武器乃是天界重宝，凡人是不配拥有的……/FCOLOR=100>\
+<既然你能遇到我，证明你的实力已经超脱凡界，我将让你成为真正的王者！/FCOLOR=100>\
+<锻造神级剑甲需要找来传说中的“女娲补天神石”，否则不可能成功!!!/FCOLOR=249>\ 
+<提示：/FCOLOR=249><神级剑甲隐藏属性十分强大,请在游戏中体会!/FCOLOR=250> \  \
+<------------------------------------------------------------/SCOLOR=83>\
+　  <≮/FCOLOR=253><无双·神剑/@战武器><≯/FCOLOR=253>   <≮/FCOLOR=253><无双·魔杖/@法武器><≯/FCOLOR=253>   <≮/FCOLOR=253><无双·道扇/@道武器>><≯/FCOLOR=253>\
+<------------------------------------------------------------/SCOLOR=83>\
+
+
+
+[@神衣服]
+#IF
+#ACT
+#SAY
+\ \
+<神级的衣服乃是天界重宝，凡人是不配拥有的……/FCOLOR=100>\
+<既然你能遇到我，证明你的实力已经超脱凡界，我将让你成为真正的王者！/FCOLOR=100>\
+<锻造神级剑甲需要找来传说中的“女娲补天神石”，否则不可能成功!!!/FCOLOR=249>\ 
+{-------------------------------------------------------------/FCOLOR=35}\
+<提示：/FCOLOR=249><神级剑甲隐藏属性十分强大,请在游戏中体会!/FCOLOR=250> \  \
+ <≮/FCOLOR=253><无双·战衣服/@战衣服><≯/FCOLOR=253>   <≮/FCOLOR=253><无双·魔衣服/@魔衣服><≯/FCOLOR=253>   <≮/FCOLOR=253><无双·道衣服/@道衣服><≯/FCOLOR=253>\
+
+;============================================================================================================================
+
+
+[@战武器]
+#IF
+#ACT
+#SAY
+<货币打造较为复杂麻烦，女娲补天神石直接打造优惠且方便……/FCOLOR=100>\
+<提示：方式一：为3合1，方式二：为1合1……/FCOLOR=100>\
+<------------------------------------------------------------/SCOLOR=83>\
+<无双·神剑/@屠龙1>  <方式一：/FCOLOR=100><王者·神剑*3/FCOLOR=253>+<点卷*18888/FCOLOR=250>+<元宝*288万/FCOLOR=249>\ \
+<无双·神剑/@屠龙11>  <方式二：/FCOLOR=100><王者·神剑*1/FCOLOR=253>+<女娲补天神石*188/FCOLOR=249>\ \
+
+<提示：选择适合您的一种方式即可.../SCOLOR=250>\
+
+
+[@道武器]
+#IF
+#ACT
+#SAY
+<货币打造较为复杂麻烦，女娲补天神石直接打造优惠且方便……/FCOLOR=100>\
+<提示：方式一：为3合1，方式二：为1合1……/FCOLOR=100>\
+<------------------------------------------------------------/SCOLOR=83>\
+<无双·道扇/@霸者1>  <方式一：/FCOLOR=100><王者·道扇*3/FCOLOR=253>+<点卷*18888/FCOLOR=250>+<元宝*288万/FCOLOR=249>\ \
+<无双·道扇/@霸者11>  <方式二：/FCOLOR=100><王者·道扇*1/FCOLOR=253>+<女娲补天神石*188/FCOLOR=249>\ \
+
+<提示：选择适合您的一种方式即可.../SCOLOR=250>\
+
+
+[@法武器]
+#IF
+#ACT
+#SAY
+<货币打造较为复杂麻烦，女娲补天神石直接打造优惠且方便……/FCOLOR=100>\
+<提示：方式一：为3合1，方式二：为1合1……/FCOLOR=100>\
+<------------------------------------------------------------/SCOLOR=83>\
+<无双·魔杖/@嗜魂1>  <方式一：/FCOLOR=100><圣·轩辕权杖*3/FCOLOR=253>+<点卷*18888/FCOLOR=250>+<元宝*288万/FCOLOR=249>\ \
+<无双·魔杖/@嗜魂11>  <方式二：/FCOLOR=100><圣·轩辕权杖*1/FCOLOR=253>+<女娲补天神石*188/FCOLOR=249>\ \
+
+<提示：选择适合您的一种方式即可.../SCOLOR=250>\
+
+
+
+[@战衣服]
+#IF
+#ACT
+#SAY
+<货币打造较为复杂麻烦，女娲补天神石直接打造优惠且方便……/FCOLOR=100>\
+<提示：方式一：为3合1，方式二：为1合1……/FCOLOR=100>\
+<------------------------------------------------------------/SCOLOR=83>\
+<无双·战甲/@神1>  <方式一：/FCOLOR=100><王者·战甲*3/FCOLOR=253>+<点卷*15888/FCOLOR=250>+<元宝*200万/FCOLOR=249>\
+<无双·战甲/@神11>  <方式二：/FCOLOR=100><王者·战甲*1/FCOLOR=253>+<女娲补天神石*158/FCOLOR=249>\ \
+
+<无双·战衣/@神2>  <方式一：/FCOLOR=100><王者·战衣*3/FCOLOR=253>+<点卷*15888/FCOLOR=250>+<元宝*200万/FCOLOR=249>\
+<无双·战衣/@神22>  <方式二：/FCOLOR=100><王者·战衣*1/FCOLOR=253>+<女娲补天神石*158/FCOLOR=249>\
+<提示：选择适合您的一种方式即可.../SCOLOR=250>\
+
+[@魔衣服]
+#IF
+#ACT
+#SAY
+<货币打造较为复杂麻烦，女娲补天神石直接打造优惠且方便……/FCOLOR=100>\
+<提示：方式一：为3合1，方式二：为1合1……/FCOLOR=100>\
+<------------------------------------------------------------/SCOLOR=83>\
+<无双·魔袍/@神3>  <方式一：/FCOLOR=100><王者·魔袍*3/FCOLOR=253>+<点卷*15888/FCOLOR=250>+<元宝*200万/FCOLOR=249>\
+<无双·魔袍/@神33>  <方式二：/FCOLOR=100><王者·魔袍*1/FCOLOR=253>+<女娲补天神石*158/FCOLOR=249>\ \
+
+<无双·魔衣/@神4>  <方式一：/FCOLOR=100><王者·魔衣*3/FCOLOR=253>+<点卷*15888/FCOLOR=250>+<元宝*200万/FCOLOR=249>\
+<无双·魔衣/@神44>  <方式二：/FCOLOR=100><王者·魔衣*1/FCOLOR=253>+<女娲补天神石*158/FCOLOR=249>\
+<提示：选择适合您的一种方式即可.../SCOLOR=250>\
+
+[@道衣服]
+#IF
+#ACT
+#SAY
+<货币打造较为复杂麻烦，女娲补天神石直接打造优惠且方便……/FCOLOR=100>\
+<提示：方式一：为3合1，方式二：为1合1……/FCOLOR=100>\
+<------------------------------------------------------------/SCOLOR=83>\
+<无双·道袍/@神5>  <方式一：/FCOLOR=100><王者·道袍*3/FCOLOR=253>+<点卷*15888/FCOLOR=250>+<元宝*200万/FCOLOR=249>\
+<无双·道袍/@神55>  <方式二：/FCOLOR=100><王者·道袍*1/FCOLOR=253>+<女娲补天神石*158/FCOLOR=249>\ \
+
+<无双·道衣/@神6>  <方式一：/FCOLOR=100><王者·道衣*3/FCOLOR=253>+<点卷*15888/FCOLOR=250>+<元宝*200万/FCOLOR=249>\
+<无双·道衣/@神66>  <方式二：/FCOLOR=100><王者·道衣*1/FCOLOR=253>+<女娲补天神石*158/FCOLOR=249>\
+<提示：选择适合您的一种方式即可.../SCOLOR=250>\
+
+
+
+
+[@神1]
+#IF
+checkitem 王者·战甲 3
+CHECKGAMEGOLD > 1999999
+CHECKGAMEDIAMOND > 15887
+#ACT
+GAMEGOLD - 2000000
+GAMEDIAMOND - 15888
+take 王者·战甲 3
+GIVE 无双·战甲 1
+GUILDNOTICEMSG 253 0 ぐ恭喜【<$USERNAME>】在（原始天界）成功锻造了{《无双·战甲》|251:0:1}..
+GUILDNOTICEMSG 253 0 ぐ恭喜【<$USERNAME>】在（原始天界）成功锻造了{《无双·战甲》|251:0:1}..
+MESSAGEBOX \　\恭喜你成功锻造了【无双·战甲】...
+break
+#ELSEact
+MESSAGEBOX \　\〖失败〗:您的材料不够,无法进行锻造！
+break
+
+
+
+[@神11]
+#IF
+checkitem 王者·战甲 1
+checkitem 女娲补天神石 158
+#ACT
+take 女娲补天神石 158
+take 王者·战甲 1
+GIVE 无双·战甲 1
+GUILDNOTICEMSG 253 0 ぐ恭喜【<$USERNAME>】在（原始天界）成功锻造了{《无双·战甲》|251:0:1}..
+GUILDNOTICEMSG 253 0 ぐ恭喜【<$USERNAME>】在（原始天界）成功锻造了{《无双·战甲》|251:0:1}..
+MESSAGEBOX \　\恭喜你成功锻造了【无双·战甲】...
+break
+#ELSEact
+MESSAGEBOX \　\〖失败〗:您的材料不够,无法进行锻造！
+break
+
+
+
+
+
+
+[@神2]
+#IF
+checkitem 王者·战衣 3
+CHECKGAMEGOLD > 1999999
+CHECKGAMEDIAMOND > 15887
+#ACT
+GAMEGOLD - 2000000
+GAMEDIAMOND - 15888
+take 王者·战衣 3
+GIVE 无双·战衣 1
+GUILDNOTICEMSG 253 0 ぐ恭喜【<$USERNAME>】在（原始天界）成功锻造了{《无双·战衣》|251:0:1}..
+GUILDNOTICEMSG 253 0 ぐ恭喜【<$USERNAME>】在（原始天界）成功锻造了{《无双·战衣》|251:0:1}..
+MESSAGEBOX \　\恭喜你成功锻造了【无双·战衣】...
+break
+#ELSEact
+MESSAGEBOX \　\〖失败〗:您的材料不够,无法进行锻造！
+break
+
+
+
+[@神22]
+#IF
+checkitem 王者·战衣 1
+checkitem 女娲补天神石 158
+#ACT
+take 女娲补天神石 158
+take 王者·战衣 1
+GIVE 无双·战衣 1
+GUILDNOTICEMSG 253 0 ぐ恭喜【<$USERNAME>】在（原始天界）成功锻造了{《无双·战衣》|251:0:1}..
+GUILDNOTICEMSG 253 0 ぐ恭喜【<$USERNAME>】在（原始天界）成功锻造了{《无双·战衣》|251:0:1}..
+MESSAGEBOX \　\恭喜你成功锻造了【无双·战衣】...
+break
+#ELSEact
+MESSAGEBOX \　\〖失败〗:您的材料不够,无法进行锻造！
+break
+
+
+
+
+
+
+
+[@神4]
+#IF
+checkitem 王者·魔衣 3
+CHECKGAMEGOLD > 1999999
+CHECKGAMEDIAMOND > 15887
+#ACT
+GAMEGOLD - 2000000
+GAMEDIAMOND - 15888
+take 王者·魔衣 3
+GIVE 无双·魔衣 1
+GUILDNOTICEMSG 253 0 ぐ恭喜【<$USERNAME>】在（原始天界）成功锻造了{《无双·魔衣》|251:0:1}..
+GUILDNOTICEMSG 253 0 ぐ恭喜【<$USERNAME>】在（原始天界）成功锻造了{《无双·魔衣》|251:0:1}..
+MESSAGEBOX \　\恭喜你成功锻造了【无双·魔衣】...
+break
+#ELSEact
+MESSAGEBOX \　\〖失败〗:您的材料不够,无法进行锻造！
+break
+
+
+
+[@神44]
+#IF
+checkitem 王者·魔衣 1
+checkitem 女娲补天神石 158
+#ACT
+take 女娲补天神石 158
+take 王者·魔衣 1
+GIVE 无双·魔衣 1
+GUILDNOTICEMSG 253 0 ぐ恭喜【<$USERNAME>】在（原始天界）成功锻造了{《无双·魔衣》|251:0:1}..
+GUILDNOTICEMSG 253 0 ぐ恭喜【<$USERNAME>】在（原始天界）成功锻造了{《无双·魔衣》|251:0:1}..
+MESSAGEBOX \　\恭喜你成功锻造了【无双·魔衣】...
+break
+#ELSEact
+MESSAGEBOX \　\〖失败〗:您的材料不够,无法进行锻造！
+break
+
+
+
+
+[@神3]
+#IF
+checkitem 王者·魔袍 3
+CHECKGAMEGOLD > 1999999
+CHECKGAMEDIAMOND > 15887
+#ACT
+GAMEGOLD - 2000000
+GAMEDIAMOND - 15888
+take 王者·魔袍 3
+GIVE 无双·魔袍 1
+GUILDNOTICEMSG 253 0 ぐ恭喜【<$USERNAME>】在（原始天界）成功锻造了{《无双·魔袍》|251:0:1}..
+GUILDNOTICEMSG 253 0 ぐ恭喜【<$USERNAME>】在（原始天界）成功锻造了{《无双·魔袍》|251:0:1}..
+MESSAGEBOX \　\恭喜你成功锻造了【无双·魔袍】...
+break
+#ELSEact
+MESSAGEBOX \　\〖失败〗:您的材料不够,无法进行锻造！
+break
+
+
+
+[@神33]
+#IF
+checkitem 王者·魔袍 1
+checkitem 女娲补天神石 158
+#ACT
+take 女娲补天神石 158
+take 王者·魔袍 1
+GIVE 无双·魔袍 1
+GUILDNOTICEMSG 253 0 ぐ恭喜【<$USERNAME>】在（原始天界）成功锻造了{《无双·魔袍》|251:0:1}..
+GUILDNOTICEMSG 253 0 ぐ恭喜【<$USERNAME>】在（原始天界）成功锻造了{《无双·魔袍》|251:0:1}..
+MESSAGEBOX \　\恭喜你成功锻造了【无双·魔袍】...
+break
+#ELSEact
+MESSAGEBOX \　\〖失败〗:您的材料不够,无法进行锻造！
+break
+
+
+
+
+[@神5]
+#IF
+checkitem 王者·道袍 3
+CHECKGAMEGOLD > 1999999
+CHECKGAMEDIAMOND > 15887
+#ACT
+GAMEGOLD - 2000000
+GAMEDIAMOND - 15888
+take 王者·道袍 3
+GIVE 无双·道袍 1
+GUILDNOTICEMSG 253 0 ぐ恭喜【<$USERNAME>】在（原始天界）成功锻造了{《无双·道袍》|251:0:1}..
+GUILDNOTICEMSG 253 0 ぐ恭喜【<$USERNAME>】在（原始天界）成功锻造了{《无双·道袍》|251:0:1}..
+MESSAGEBOX \　\恭喜你成功锻造了【无双·道袍】...
+break
+#ELSEact
+MESSAGEBOX \　\〖失败〗:您的材料不够,无法进行锻造！
+break
+
+
+
+[@神55]
+#IF
+checkitem 王者·道袍 1
+checkitem 女娲补天神石 158
+#ACT
+take 女娲补天神石 158
+take 王者·道袍 1
+GIVE 无双·道袍 1
+GUILDNOTICEMSG 253 0 ぐ恭喜【<$USERNAME>】在（原始天界）成功锻造了{《无双·道袍》|251:0:1}..
+GUILDNOTICEMSG 253 0 ぐ恭喜【<$USERNAME>】在（原始天界）成功锻造了{《无双·道袍》|251:0:1}..
+MESSAGEBOX \　\恭喜你成功锻造了【无双·道袍】...
+break
+#ELSEact
+MESSAGEBOX \　\〖失败〗:您的材料不够,无法进行锻造！
+break
+
+
+
+
+
+[@神6]
+#IF
+checkitem 王者·道衣 3
+CHECKGAMEGOLD > 1999999
+CHECKGAMEDIAMOND > 15887
+#ACT
+GAMEGOLD - 2000000
+GAMEDIAMOND - 15888
+take 王者·道衣 3
+GIVE 无双·道衣 1
+GUILDNOTICEMSG 253 0 ぐ恭喜【<$USERNAME>】在（原始天界）成功锻造了{《无双·道衣》|251:0:1}..
+GUILDNOTICEMSG 253 0 ぐ恭喜【<$USERNAME>】在（原始天界）成功锻造了{《无双·道衣》|251:0:1}..
+MESSAGEBOX \　\恭喜你成功锻造了【无双·道衣】...
+break
+#ELSEact
+MESSAGEBOX \　\〖失败〗:您的材料不够,无法进行锻造！
+break
+
+
+
+[@神66]
+#IF
+checkitem 王者·道衣 1
+checkitem 女娲补天神石 158
+#ACT
+take 女娲补天神石 158
+take 王者·道衣 1
+GIVE 无双·道衣 1
+GUILDNOTICEMSG 253 0 ぐ恭喜【<$USERNAME>】在（原始天界）成功锻造了{《无双·道衣》|251:0:1}..
+GUILDNOTICEMSG 253 0 ぐ恭喜【<$USERNAME>】在（原始天界）成功锻造了{《无双·道衣》|251:0:1}..
+MESSAGEBOX \　\恭喜你成功锻造了【无双·道衣】...
+break
+#ELSEact
+MESSAGEBOX \　\〖失败〗:您的材料不够,无法进行锻造！
+break
+
+
+
+
+
+[@屠龙1]
+#IF
+checkitem 王者·神剑 3
+CHECKGAMEGOLD > 2879999
+CHECKGAMEDIAMOND > 18887
+#ACT
+GAMEGOLD - 2880000
+GAMEDIAMOND - 18888
+take 王者·神剑 3
+GIVE 无双·神剑 1
+GUILDNOTICEMSG 253 0 ぐ恭喜【<$USERNAME>】在（原始天界）成功锻造了{《无双·神剑》|251:0:1}..
+GUILDNOTICEMSG 253 0 ぐ恭喜【<$USERNAME>】在（原始天界）成功锻造了{《无双·神剑》|251:0:1}..
+MESSAGEBOX \　\恭喜你成功锻造了【无双·神剑】...
+break
+#ELSEact
+MESSAGEBOX \　\〖失败〗:您的材料不够,无法进行锻造！
+break
+
+
+[@屠龙11]
+#IF
+checkitem 王者·神剑 1
+checkitem 女娲补天神石 188
+#ACT
+take 女娲补天神石 188
+take 王者·神剑 1
+GIVE 无双·神剑 1
+GUILDNOTICEMSG 253 0 ぐ恭喜【<$USERNAME>】在（原始天界）成功锻造了{《无双·神剑》|251:0:1}..
+GUILDNOTICEMSG 253 0 ぐ恭喜【<$USERNAME>】在（原始天界）成功锻造了{《无双·神剑》|251:0:1}..
+MESSAGEBOX \　\恭喜你成功锻造了【无双·神剑】...
+break
+#ELSEact
+MESSAGEBOX \　\〖失败〗:您的材料不够,无法进行锻造！
+break
+
+
+[@嗜魂1]
+#IF
+checkitem 王者·魔杖 3
+CHECKGAMEGOLD > 2879999
+CHECKGAMEDIAMOND > 18887
+#ACT
+GAMEGOLD - 2880000
+GAMEDIAMOND - 18888
+take 王者·魔杖 3
+GIVE 无双·魔杖 1
+GUILDNOTICEMSG 253 0 ぐ恭喜【<$USERNAME>】在（原始天界）成功锻造了{《无双·魔杖》|251:0:1}..
+GUILDNOTICEMSG 253 0 ぐ恭喜【<$USERNAME>】在（原始天界）成功锻造了{《无双·魔杖》|251:0:1}..
+MESSAGEBOX \　\恭喜你成功锻造了【无双·魔杖】...
+break
+#ELSEact
+MESSAGEBOX \　\〖失败〗:您的材料不够,无法进行锻造！
+break
+
+
+
+[@嗜魂11]
+#IF
+checkitem 王者·魔杖 1
+checkitem 女娲补天神石 188
+#ACT
+take 女娲补天神石 188
+take 王者·魔杖 1
+GIVE 无双·魔杖 1
+GUILDNOTICEMSG 253 0 ぐ恭喜【<$USERNAME>】在（原始天界）成功锻造了{《无双·魔杖》|251:0:1}..
+GUILDNOTICEMSG 253 0 ぐ恭喜【<$USERNAME>】在（原始天界）成功锻造了{《无双·魔杖》|251:0:1}..
+MESSAGEBOX \　\恭喜你成功锻造了【无双·魔杖】...
+break
+#ELSEact
+MESSAGEBOX \　\〖失败〗:您的材料不够,无法进行锻造！
+break
+
+
+
+[@霸者1]
+#IF
+checkitem 王者·道扇 3
+CHECKGAMEGOLD > 2879999
+CHECKGAMEDIAMOND > 18887
+#ACT
+GAMEGOLD - 2880000
+GAMEDIAMOND - 18888
+take 王者·道扇 3
+GIVE 无双·道扇 1
+GUILDNOTICEMSG 253 0 ぐ恭喜【<$USERNAME>】在（原始天界）成功锻造了{《无双·道扇》|251:0:1}..
+GUILDNOTICEMSG 253 0 ぐ恭喜【<$USERNAME>】在（原始天界）成功锻造了{《无双·道扇》|251:0:1}..
+MESSAGEBOX \　\恭喜你成功锻造了【无双·道扇】...
+break
+#ELSEact
+MESSAGEBOX \　\〖失败〗:您的材料不够,无法进行锻造！
+break
+
+[@霸者11]
+#IF
+checkitem 王者·道扇 1
+checkitem 女娲补天神石 188
+#ACT
+take 女娲补天神石 188
+take 王者·道扇 1
+GIVE 无双·道扇 1
+GUILDNOTICEMSG 253 0 ぐ恭喜【<$USERNAME>】在（原始天界）成功锻造了{《无双·道扇》|251:0:1}..
+GUILDNOTICEMSG 253 0 ぐ恭喜【<$USERNAME>】在（原始天界）成功锻造了{《无双·道扇》|251:0:1}..
+MESSAGEBOX \　\恭喜你成功锻造了【无双·道扇】...
+break
+#ELSEact
+MESSAGEBOX \　\〖失败〗:您的材料不够,无法进行锻造！
+break
+
+
+
+
+[@衣服互换12]
+#IF
+checkitem 无双·道衣 1
+CHECKGAMEPOINT > 887
+#ACT
+GAMEPOINT - 888
+take 无双·道衣 1
+GIVE 无双·魔衣 1
+GuildNoticeMsg 255 249 ぐ恭喜【<$USERNAME>】在（原始天界）成功将《无双·道衣》互换成了《无双·魔衣》..
+MESSAGEBOX \　\您成功将《无双·道衣》换成了《无双·魔衣》...
+break
+#ELSEact
+MESSAGEBOX \　\〖失败〗:您的条件不足,无法进行互换！
+break
+
+[@衣服互换11]
+#IF
+checkitem 无双·道衣 1
+CHECKGAMEPOINT > 887
+#ACT
+GAMEPOINT - 888
+take 无双·道衣 1
+GIVE 无双·战衣 1
+GuildNoticeMsg 255 249 ぐ恭喜【<$USERNAME>】在（原始天界）成功将《无双·道衣》互换成了《无双·战衣》..
+MESSAGEBOX \　\您成功将《无双·道衣》换成了《无双·战衣》...
+break
+#ELSEact
+MESSAGEBOX \　\〖失败〗:您的条件不足,无法进行互换！
+break
+
+[@衣服互换10]
+#IF
+checkitem 无双·道袍 1
+CHECKGAMEPOINT > 887
+#ACT
+GAMEPOINT - 888
+take 无双·道袍 1
+GIVE 无双·魔袍 1
+GuildNoticeMsg 255 249 ぐ恭喜【<$USERNAME>】在（原始天界）成功将《无双·道袍》互换成了《无双·魔袍》..
+MESSAGEBOX \　\您成功将《无双·道袍》换成了《无双·魔袍》...
+break
+#ELSEact
+MESSAGEBOX \　\〖失败〗:您的条件不足,无法进行互换！
+break
+
+[@衣服互换9]
+#IF
+checkitem 无双·道袍 1
+CHECKGAMEPOINT > 887
+#ACT
+GAMEPOINT - 888
+take 无双·道袍 1
+GIVE 无双·战甲 1
+GuildNoticeMsg 255 249 ぐ恭喜【<$USERNAME>】在（原始天界）成功将《无双·道袍》互换成了《无双·战甲》..
+MESSAGEBOX \　\您成功将《无双·道袍》换成了《无双·战甲》...
+break
+#ELSEact
+MESSAGEBOX \　\〖失败〗:您的条件不足,无法进行互换！
+break
+
+[@衣服互换8]
+#IF
+checkitem 无双·魔衣 1
+CHECKGAMEPOINT > 887
+#ACT
+GAMEPOINT - 888
+take 无双·魔衣 1
+GIVE 无双·道衣 1
+GuildNoticeMsg 255 249 ぐ恭喜【<$USERNAME>】在（原始天界）成功将《无双·魔衣》互换成了《无双·道衣》..
+MESSAGEBOX \　\您成功将《无双·魔衣》换成了《无双·道衣》...
+break
+#ELSEact
+MESSAGEBOX \　\〖失败〗:您的条件不足,无法进行互换！
+break
+
+[@衣服互换7]
+#IF
+checkitem 无双·魔衣 1
+CHECKGAMEPOINT > 887
+#ACT
+GAMEPOINT - 888
+take 无双·魔衣 1
+GIVE 无双·战衣 1
+GuildNoticeMsg 255 249 ぐ恭喜【<$USERNAME>】在（原始天界）成功将《无双·魔衣》互换成了《无双·战衣》..
+MESSAGEBOX \　\您成功将《无双·魔衣》换成了《无双·战衣》...
+break
+#ELSEact
+MESSAGEBOX \　\〖失败〗:您的条件不足,无法进行互换！
+break
+
+[@衣服互换6]
+#IF
+checkitem 无双·魔袍 1
+CHECKGAMEPOINT > 887
+#ACT
+GAMEPOINT - 888
+take 无双·魔袍 1
+GIVE 无双·道袍 1
+GuildNoticeMsg 255 249 ぐ恭喜【<$USERNAME>】在（原始天界）成功将《无双·魔袍》互换成了《无双·道袍》..
+MESSAGEBOX \　\您成功将《无双·魔袍》换成了《无双·道袍》...
+break
+#ELSEact
+MESSAGEBOX \　\〖失败〗:您的条件不足,无法进行互换！
+break
+
+[@衣服互换5]
+#IF
+checkitem 无双·魔袍 1
+CHECKGAMEPOINT > 887
+#ACT
+GAMEPOINT - 888
+take 无双·魔袍 1
+GIVE 无双·战甲 1
+GuildNoticeMsg 255 249 ぐ恭喜【<$USERNAME>】在（原始天界）成功将《无双·魔袍》互换成了《无双·战甲》..
+MESSAGEBOX \　\您成功将《无双·魔袍》换成了《无双·战甲》...
+break
+#ELSEact
+MESSAGEBOX \　\〖失败〗:您的条件不足,无法进行互换！
+break
+
+[@衣服互换4]
+#IF
+checkitem 无双·战衣 1
+CHECKGAMEPOINT > 887
+#ACT
+GAMEPOINT - 888
+take 无双·战衣 1
+GIVE 无双·道衣 1
+GuildNoticeMsg 255 249 ぐ恭喜【<$USERNAME>】在（原始天界）成功将《无双·战衣》互换成了《无双·道衣》..
+MESSAGEBOX \　\您成功将《无双·战衣》换成了《无双·道衣》...
+break
+#ELSEact
+MESSAGEBOX \　\〖失败〗:您的条件不足,无法进行互换！
+break
+
+[@衣服互换3]
+#IF
+checkitem 无双·战衣 1
+CHECKGAMEPOINT > 887
+#ACT
+GAMEPOINT - 888
+take 无双·战衣 1
+GIVE 无双·魔衣 1
+GuildNoticeMsg 255 249 ぐ恭喜【<$USERNAME>】在（原始天界）成功将《无双·战衣》互换成了《无双·魔衣》..
+MESSAGEBOX \　\您成功将《无双·战衣》换成了《无双·魔衣》...
+break
+#ELSEact
+MESSAGEBOX \　\〖失败〗:您的条件不足,无法进行互换！
+break
+
+[@衣服互换2]
+#IF
+checkitem 无双·战甲 1
+CHECKGAMEPOINT > 887
+#ACT
+GAMEPOINT - 888
+take 无双·战甲 1
+GIVE 无双·道袍 1
+GuildNoticeMsg 255 249 ぐ恭喜【<$USERNAME>】在（原始天界）成功将《无双·战甲》互换成了《无双·道袍》..
+MESSAGEBOX \　\您成功将《无双·战甲》换成了《无双·道袍》...
+break
+#ELSEact
+MESSAGEBOX \　\〖失败〗:您的条件不足,无法进行互换！
+break
+
+[@衣服互换1]
+#IF
+checkitem 无双·战甲 1
+CHECKGAMEPOINT > 887
+#ACT
+GAMEPOINT - 888
+take 无双·战甲 1
+GIVE 无双·魔袍 1
+GuildNoticeMsg 255 249 ぐ恭喜【<$USERNAME>】在（原始天界）成功将《无双·战甲》互换成了《无双·魔袍》..
+MESSAGEBOX \　\您成功将《无双·战甲》换成了《无双·魔袍》...
+break
+#ELSEact
+MESSAGEBOX \　\〖失败〗:您的条件不足,无法进行互换！
+break
+
+[@互换6]
+#IF
+checkitem 无双·道扇 1
+CHECKGAMEPOINT > 887
+#ACT
+GAMEPOINT - 888
+take 无双·道扇 1
+GIVE 无双·魔杖 1
+GuildNoticeMsg 255 249 ぐ恭喜【<$USERNAME>】在（原始天界）成功将《无双·道扇》互换成了《无双·魔杖》..
+MESSAGEBOX \　\您成功将《无双·道扇》换成了《无双·魔杖》...
+break
+#ELSEact
+MESSAGEBOX \　\〖失败〗:您的条件不足,无法进行互换！
+break
+
+[@互换5]
+#IF
+checkitem 无双·道扇 1
+CHECKGAMEPOINT > 887
+#ACT
+GAMEPOINT - 888
+take 无双·道扇 1
+GIVE 无双·神剑 1
+GuildNoticeMsg 255 249 ぐ恭喜【<$USERNAME>】在（原始天界）成功将《无双·道扇》互换成了《无双·神剑》..
+MESSAGEBOX \　\您成功将《无双·道扇》换成了《无双·神剑》...
+break
+#ELSEact
+MESSAGEBOX \　\〖失败〗:您的条件不足,无法进行互换！
+break
+
+[@互换4]
+#IF
+checkitem 无双·魔杖 1
+CHECKGAMEPOINT > 887
+#ACT
+GAMEPOINT - 888
+take 无双·魔杖 1
+GIVE 无双·道扇 1
+GuildNoticeMsg 255 249 ぐ恭喜【<$USERNAME>】在（原始天界）成功将《无双·魔杖》互换成了《无双·道扇》..
+MESSAGEBOX \　\您成功将《无双·魔杖》换成了《无双·道扇》...
+break
+#ELSEact
+MESSAGEBOX \　\〖失败〗:您的条件不足,无法进行互换！
+break
+
+[@互换3]
+#IF
+checkitem 无双·魔杖 1
+CHECKGAMEPOINT > 887
+#ACT
+GAMEPOINT - 888
+take 无双·魔杖 1
+GIVE 无双·神剑 1
+GuildNoticeMsg 255 249 ぐ恭喜【<$USERNAME>】在（原始天界）成功将《无双·魔杖》互换成了《无双·神剑》..
+MESSAGEBOX \　\您成功将《无双·魔杖》换成了《无双·神剑》...
+break
+#ELSEact
+MESSAGEBOX \　\〖失败〗:您的条件不足,无法进行互换！
+break
+
+[@互换2]
+#IF
+checkitem 无双·神剑 1
+CHECKGAMEPOINT > 887
+#ACT
+GAMEPOINT - 888
+take 无双·神剑 1
+GIVE 无双·道扇 1
+GuildNoticeMsg 255 249 ぐ恭喜【<$USERNAME>】在（原始天界）成功将《无双·神剑》互换成了《无双·道扇》..
+MESSAGEBOX \　\您成功将《无双·神剑》换成了《无双·道扇》...
+break
+#ELSEact
+MESSAGEBOX \　\〖失败〗:您的条件不足,无法进行互换！
+break
+
+[@互换1]
+#IF
+checkitem 无双·神剑 1
+CHECKGAMEPOINT > 887
+#ACT
+GAMEPOINT - 888
+take 无双·神剑 1
+GIVE 无双·魔杖 1
+GuildNoticeMsg 255 249 ぐ恭喜【<$USERNAME>】在（原始天界）成功将《无双·神剑》互换成了《无双·魔杖》..
+MESSAGEBOX \　\您成功将《无双·神剑》换成了《无双·魔杖》...
+break
+#ELSEact
+MESSAGEBOX \　\〖失败〗:您的条件不足,无法进行互换！
+break
+

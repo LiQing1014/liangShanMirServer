@@ -1,0 +1,548 @@
+
+[@限时奖励]
+{
+#IF
+CHECKLEVELEX > 0
+#ACT
+MOV N$限时奖励行号 0
+GOTO @限时显示界面
+
+[@限时显示界面]
+#IF
+CHECKLEVELEX > 0
+#ACT
+MOV N$限时奖励行号中转 <$STR(N$限时奖励行号)>
+MOV N$限时奖励行号中转1 <$STR(N$限时奖励行号)>
+MOV N$限时奖励行号中转2 <$STR(N$限时奖励行号)>
+MOV N$限时奖励行号中转3 <$STR(N$限时奖励行号)>
+MOV N$限时奖励行号中转4 <$STR(N$限时奖励行号)>
+MOV N$限时奖励行号中转5 <$STR(N$限时奖励行号)>
+MOV N$限时奖励行号中转6 <$STR(N$限时奖励行号)>
+MOV N$限时奖励行号中转7 <$STR(N$限时奖励行号)>
+MOV N$限时奖励行号中转8 <$STR(N$限时奖励行号)>
+MOV N$限时奖励行号中转9 <$STR(N$限时奖励行号)>
+MOV N$限时奖励行号中转10 <$STR(N$限时奖励行号)>
+INC N$限时奖励行号中转1 2
+INC N$限时奖励行号中转2 4
+INC N$限时奖励行号中转3 6
+INC N$限时奖励行号中转4 8
+INC N$限时奖励行号中转5 10
+INC N$限时奖励行号中转6 12
+INC N$限时奖励行号中转7 14
+INC N$限时奖励行号中转8 16
+INC N$限时奖励行号中转9 18
+MOV N$限时奖励显示行号 <$STR(N$限时奖励行号中转)>
+DIV N$限时奖励显示行号 2
+INC N$限时奖励显示行号 1
+MOV N$限时奖励显示行号1 <$STR(N$限时奖励行号中转1)>
+DIV N$限时奖励显示行号1 2
+INC N$限时奖励显示行号1 1
+MOV N$限时奖励显示行号2 <$STR(N$限时奖励行号中转2)>
+DIV N$限时奖励显示行号2 2
+INC N$限时奖励显示行号2 1
+MOV N$限时奖励显示行号3 <$STR(N$限时奖励行号中转3)>
+DIV N$限时奖励显示行号3 2
+INC N$限时奖励显示行号3 1
+MOV N$限时奖励显示行号4 <$STR(N$限时奖励行号中转4)>
+DIV N$限时奖励显示行号4 2
+INC N$限时奖励显示行号4 1
+MOV N$限时奖励显示行号5 <$STR(N$限时奖励行号中转5)>
+DIV N$限时奖励显示行号5 2
+INC N$限时奖励显示行号5 1
+MOV N$限时奖励显示行号6 <$STR(N$限时奖励行号中转6)>
+DIV N$限时奖励显示行号6 2
+INC N$限时奖励显示行号6 1
+MOV N$限时奖励显示行号7 <$STR(N$限时奖励行号中转7)>
+DIV N$限时奖励显示行号7 2
+INC N$限时奖励显示行号7 1
+MOV N$限时奖励显示行号8 <$STR(N$限时奖励行号中转8)>
+DIV N$限时奖励显示行号8 2
+INC N$限时奖励显示行号8 1
+MOV N$限时奖励显示行号9 <$STR(N$限时奖励行号中转9)>
+DIV N$限时奖励显示行号9 2
+INC N$限时奖励显示行号9 1
+MOV S$限时物品中转一
+MOV S$限时物品中转二
+MOV S$限时物品中转三
+MOV S$限时物品中转四
+MOV S$限时物品中转五
+MOV S$限时物品中转六
+MOV S$限时物品中转七
+MOV S$限时物品中转八
+MOV S$限时物品中转九
+MOV S$限时物品中转十
+GetRandomText ..\QuestDiary\全部通用限时\限时奖励\限时参数.txt S$限时物品中转一 <$STR(N$限时奖励行号中转)>
+GetRandomText ..\QuestDiary\全部通用限时\限时奖励\限时参数.txt S$限时物品中转二 <$STR(N$限时奖励行号中转1)>
+GetRandomText ..\QuestDiary\全部通用限时\限时奖励\限时参数.txt S$限时物品中转三 <$STR(N$限时奖励行号中转2)>
+GetRandomText ..\QuestDiary\全部通用限时\限时奖励\限时参数.txt S$限时物品中转四 <$STR(N$限时奖励行号中转3)>
+GetRandomText ..\QuestDiary\全部通用限时\限时奖励\限时参数.txt S$限时物品中转五 <$STR(N$限时奖励行号中转4)>
+GetRandomText ..\QuestDiary\全部通用限时\限时奖励\限时参数.txt S$限时物品中转六 <$STR(N$限时奖励行号中转5)>
+GetRandomText ..\QuestDiary\全部通用限时\限时奖励\限时参数.txt S$限时物品中转七 <$STR(N$限时奖励行号中转6)>
+GetRandomText ..\QuestDiary\全部通用限时\限时奖励\限时参数.txt S$限时物品中转八 <$STR(N$限时奖励行号中转7)>
+GetRandomText ..\QuestDiary\全部通用限时\限时奖励\限时参数.txt S$限时物品中转九 <$STR(N$限时奖励行号中转8)>
+GetRandomText ..\QuestDiary\全部通用限时\限时奖励\限时参数.txt S$限时物品中转十 <$STR(N$限时奖励行号中转9)>
+MOV S$限时物品检测 <$STR(S$限时物品中转十)>
+
+#IF
+CHECKTEXTLIST ..\QuestDiary\全部通用限时\限时奖励\限时变量.txt <$STR(S$限时物品中转一)>
+#ACT
+GetStringPos ..\QuestDiary\全部通用限时\限时奖励\限时变量.TXT <$STR(S$限时物品中转一)>
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时变量.TXT <$STR(N0)> S$领取玩家一
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时变量.TXT <$STR(N0)> S$领取时间一
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时变量.TXT <$STR(N0)> S$领取地点一
+GetStringPos ..\QuestDiary\全部通用限时\限时奖励\限时参数.TXT <$STR(S$限时物品中转一)>
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时参数.TXT <$STR(N0)> S$捡取奖励一
+MOV S$捡取状态一 <$STR(S$领取玩家一)>
+MOV N$状态颜色 249
+MOV S$拾取名额一 {已被领取/SCOLOR=110}
+#ELSEACT
+MOV S$捡取状态一 未领取
+MOV N$状态颜色 250
+MOV S$拾取名额一 {剩余一个/SCOLOR=253}
+MOV S$领取玩家一
+MOV S$领取地点一
+MOV S$领取时间一
+
+#IF
+EQUAL S$限时物品中转一
+#ACT
+MOV S$限时奖励显示一
+#ELSEACT
+GetStringPos ..\QuestDiary\全部通用限时\限时奖励\限时参数.TXT <$STR(S$限时物品中转一)>
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时参数.TXT <$STR(N0)> S$捡取奖励一
+SetStringBlank <$STR(S$限时物品中转一)> 23 1
+SetStringBlank <$STR(S$捡取奖励一)> 14 1
+SetStringBlank <$STR(S$拾取名额一)> 28 1
+MOV S$详细说明一 250#领取玩家：<$STR(S$领取玩家一)>^7#领取时间：<$STR(S$领取时间一)>^7#领取地点：<$STR(S$领取地点一)>
+MOV S$限时奖励显示一 {<$STR(S$限时物品中转一)>/SCOLOR=161}{<$STR(S$捡取奖励一)>/SCOLOR=161}<$STR(S$拾取名额一)>{<$STR(S$捡取状态一)>|<$STR(S$详细说明一)>/SCOLOR=<$STR(N$状态颜色)>}
+
+#IF
+CHECKTEXTLIST ..\QuestDiary\全部通用限时\限时奖励\限时变量.txt <$STR(S$限时物品中转二)>
+#ACT
+GetStringPos ..\QuestDiary\全部通用限时\限时奖励\限时变量.TXT <$STR(S$限时物品中转二)>
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时变量.TXT <$STR(N0)> S$领取玩家二
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时变量.TXT <$STR(N0)> S$领取时间二
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时变量.TXT <$STR(N0)> S$领取地点二
+GetStringPos ..\QuestDiary\全部通用限时\限时奖励\限时参数.TXT <$STR(S$限时物品中转二)>
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时参数.TXT <$STR(N0)> S$捡取奖励二
+MOV S$捡取状态二 <$STR(S$领取玩家二)>
+MOV N$状态颜色 249
+MOV S$拾取名额二 {已被领取/SCOLOR=110}
+#ELSEACT
+MOV S$捡取状态二 未领取
+MOV N$状态颜色 250
+MOV S$拾取名额二 {剩余一个/SCOLOR=253}
+MOV S$领取玩家二
+MOV S$领取地点二
+MOV S$领取时间二
+
+#IF
+EQUAL S$限时物品中转二
+#ACT
+MOV S$限时奖励显示二
+#ELSEACT
+GetStringPos ..\QuestDiary\全部通用限时\限时奖励\限时参数.TXT <$STR(S$限时物品中转二)>
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时参数.TXT <$STR(N0)> S$捡取奖励二
+SetStringBlank <$STR(S$限时物品中转二)> 23 1
+SetStringBlank <$STR(S$捡取奖励二)> 14 1
+SetStringBlank <$STR(S$拾取名额二)> 28 1
+MOV S$详细说明二 250#领取玩家：<$STR(S$领取玩家二)>^7#领取时间：<$STR(S$领取时间二)>^7#领取地点：<$STR(S$领取地点二)>
+MOV S$限时奖励显示二 {<$STR(S$限时物品中转二)>/SCOLOR=161}{<$STR(S$捡取奖励二)>/SCOLOR=161}<$STR(S$拾取名额二)>{<$STR(S$捡取状态二)>|<$STR(S$详细说明二)>/SCOLOR=<$STR(N$状态颜色)>}
+
+
+#IF
+CHECKTEXTLIST ..\QuestDiary\全部通用限时\限时奖励\限时变量.txt <$STR(S$限时物品中转三)>
+#ACT
+GetStringPos ..\QuestDiary\全部通用限时\限时奖励\限时变量.TXT <$STR(S$限时物品中转三)>
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时变量.TXT <$STR(N0)> S$领取玩家三
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时变量.TXT <$STR(N0)> S$领取时间三
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时变量.TXT <$STR(N0)> S$领取地点三
+GetStringPos ..\QuestDiary\全部通用限时\限时奖励\限时参数.TXT <$STR(S$限时物品中转三)>
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时参数.TXT <$STR(N0)> S$捡取奖励三
+MOV S$捡取状态三 <$STR(S$领取玩家三)>
+MOV N$状态颜色 249
+MOV S$拾取名额三 {已被领取/SCOLOR=110}
+#ELSEACT
+MOV S$捡取状态三 未领取
+MOV N$状态颜色 250
+MOV S$拾取名额三 {剩余一个/SCOLOR=253}
+MOV S$领取玩家三
+MOV S$领取地点三
+MOV S$领取时间三
+
+#IF
+EQUAL S$限时物品中转三
+#ACT
+MOV S$限时奖励显示三
+#ELSEACT
+GetStringPos ..\QuestDiary\全部通用限时\限时奖励\限时参数.TXT <$STR(S$限时物品中转三)>
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时参数.TXT <$STR(N0)> S$捡取奖励三
+SetStringBlank <$STR(S$限时物品中转三)> 23 1
+SetStringBlank <$STR(S$捡取奖励三)> 14 1
+SetStringBlank <$STR(S$拾取名额三)> 28 1
+MOV S$详细说明三 250#领取玩家：<$STR(S$领取玩家三)>^7#领取时间：<$STR(S$领取时间三)>^7#领取地点：<$STR(S$领取地点三)>
+MOV S$限时奖励显示三 {<$STR(S$限时物品中转三)>/SCOLOR=161}{<$STR(S$捡取奖励三)>/SCOLOR=161}<$STR(S$拾取名额三)>{<$STR(S$捡取状态三)>|<$STR(S$详细说明三)>/SCOLOR=<$STR(N$状态颜色)>}
+
+#IF
+CHECKTEXTLIST ..\QuestDiary\全部通用限时\限时奖励\限时变量.txt <$STR(S$限时物品中转四)>
+#ACT
+GetStringPos ..\QuestDiary\全部通用限时\限时奖励\限时变量.TXT <$STR(S$限时物品中转四)>
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时变量.TXT <$STR(N0)> S$领取玩家四
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时变量.TXT <$STR(N0)> S$领取时间四
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时变量.TXT <$STR(N0)> S$领取地点四
+GetStringPos ..\QuestDiary\全部通用限时\限时奖励\限时参数.TXT <$STR(S$限时物品中转四)>
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时参数.TXT <$STR(N0)> S$捡取奖励四
+MOV S$捡取状态四 <$STR(S$领取玩家四)>
+MOV N$状态颜色 249
+MOV S$拾取名额四 {已被领取/SCOLOR=110}
+#ELSEACT
+MOV S$捡取状态四 未领取
+MOV N$状态颜色 250
+MOV S$拾取名额四 {剩余一个/SCOLOR=253}
+MOV S$领取玩家四
+MOV S$领取地点四
+MOV S$领取时间四
+
+#IF
+EQUAL S$限时物品中转四
+#ACT
+MOV S$限时奖励显示四
+#ELSEACT
+GetStringPos ..\QuestDiary\全部通用限时\限时奖励\限时参数.TXT <$STR(S$限时物品中转四)>
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时参数.TXT <$STR(N0)> S$捡取奖励四
+SetStringBlank <$STR(S$限时物品中转四)> 23 1
+SetStringBlank <$STR(S$捡取奖励四)> 14 1
+SetStringBlank <$STR(S$拾取名额四)> 28 1
+MOV S$详细说明四 250#领取玩家：<$STR(S$领取玩家四)>^7#领取时间：<$STR(S$领取时间四)>^7#领取地点：<$STR(S$领取地点四)>
+MOV S$限时奖励显示四 {<$STR(S$限时物品中转四)>/SCOLOR=161}{<$STR(S$捡取奖励四)>/SCOLOR=161}<$STR(S$拾取名额四)>{<$STR(S$捡取状态四)>|<$STR(S$详细说明四)>/SCOLOR=<$STR(N$状态颜色)>}
+
+
+
+#IF
+CHECKTEXTLIST ..\QuestDiary\全部通用限时\限时奖励\限时变量.txt <$STR(S$限时物品中转五)>
+#ACT
+GetStringPos ..\QuestDiary\全部通用限时\限时奖励\限时变量.TXT <$STR(S$限时物品中转五)>
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时变量.TXT <$STR(N0)> S$领取玩家五
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时变量.TXT <$STR(N0)> S$领取时间五
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时变量.TXT <$STR(N0)> S$领取地点五
+GetStringPos ..\QuestDiary\全部通用限时\限时奖励\限时参数.TXT <$STR(S$限时物品中转五)>
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时参数.TXT <$STR(N0)> S$捡取奖励五
+MOV S$捡取状态五 <$STR(S$领取玩家五)>
+MOV N$状态颜色 249
+MOV S$拾取名额五 {已被领取/SCOLOR=110}
+#ELSEACT
+MOV S$捡取状态五 未领取
+MOV N$状态颜色 250
+MOV S$拾取名额五 {剩余一个/SCOLOR=253}
+MOV S$领取玩家五
+MOV S$领取地点五
+MOV S$领取时间五
+
+#IF
+EQUAL S$限时物品中转五
+#ACT
+MOV S$限时奖励显示五
+#ELSEACT
+GetStringPos ..\QuestDiary\全部通用限时\限时奖励\限时参数.TXT <$STR(S$限时物品中转五)>
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时参数.TXT <$STR(N0)> S$捡取奖励五
+SetStringBlank <$STR(S$限时物品中转五)> 23 1
+SetStringBlank <$STR(S$捡取奖励五)> 14 1
+SetStringBlank <$STR(S$拾取名额五)> 28 1
+MOV S$详细说明五 250#领取玩家：<$STR(S$领取玩家五)>^7#领取时间：<$STR(S$领取时间五)>^7#领取地点：<$STR(S$领取地点五)>
+MOV S$限时奖励显示五 {<$STR(S$限时物品中转五)>/SCOLOR=161}{<$STR(S$捡取奖励五)>/SCOLOR=161}<$STR(S$拾取名额五)>{<$STR(S$捡取状态五)>|<$STR(S$详细说明五)>/SCOLOR=<$STR(N$状态颜色)>}
+
+#IF
+CHECKTEXTLIST ..\QuestDiary\全部通用限时\限时奖励\限时变量.txt <$STR(S$限时物品中转六)>
+#ACT
+GetStringPos ..\QuestDiary\全部通用限时\限时奖励\限时变量.TXT <$STR(S$限时物品中转六)>
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时变量.TXT <$STR(N0)> S$领取玩家六
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时变量.TXT <$STR(N0)> S$领取时间六
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时变量.TXT <$STR(N0)> S$领取地点六
+GetStringPos ..\QuestDiary\全部通用限时\限时奖励\限时参数.TXT <$STR(S$限时物品中转六)>
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时参数.TXT <$STR(N0)> S$捡取奖励六
+MOV S$捡取状态六 <$STR(S$领取玩家六)>
+MOV N$状态颜色 249
+MOV S$拾取名额六 {已被领取/SCOLOR=110}
+#ELSEACT
+MOV S$捡取状态六 未领取
+MOV N$状态颜色 250
+MOV S$拾取名额六 {剩余一个/SCOLOR=253}
+MOV S$领取玩家六
+MOV S$领取地点六
+MOV S$领取时间六
+
+#IF
+EQUAL S$限时物品中转六
+#ACT
+MOV S$限时奖励显示六
+#ELSEACT
+GetStringPos ..\QuestDiary\全部通用限时\限时奖励\限时参数.TXT <$STR(S$限时物品中转六)>
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时参数.TXT <$STR(N0)> S$捡取奖励六
+SetStringBlank <$STR(S$限时物品中转六)> 23 1
+SetStringBlank <$STR(S$捡取奖励六)> 14 1
+SetStringBlank <$STR(S$拾取名额六)> 28 1
+MOV S$详细说明六 250#领取玩家：<$STR(S$领取玩家六)>^7#领取时间：<$STR(S$领取时间六)>^7#领取地点：<$STR(S$领取地点六)>
+MOV S$限时奖励显示六 {<$STR(S$限时物品中转六)>/SCOLOR=161}{<$STR(S$捡取奖励六)>/SCOLOR=161}<$STR(S$拾取名额六)>{<$STR(S$捡取状态六)>|<$STR(S$详细说明六)>/SCOLOR=<$STR(N$状态颜色)>}
+
+
+#IF
+CHECKTEXTLIST ..\QuestDiary\全部通用限时\限时奖励\限时变量.txt <$STR(S$限时物品中转七)>
+#ACT
+GetStringPos ..\QuestDiary\全部通用限时\限时奖励\限时变量.TXT <$STR(S$限时物品中转七)>
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时变量.TXT <$STR(N0)> S$领取玩家七
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时变量.TXT <$STR(N0)> S$领取时间七
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时变量.TXT <$STR(N0)> S$领取地点七
+GetStringPos ..\QuestDiary\全部通用限时\限时奖励\限时参数.TXT <$STR(S$限时物品中转七)>
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时参数.TXT <$STR(N0)> S$捡取奖励七
+MOV S$捡取状态七 <$STR(S$领取玩家七)>
+MOV N$状态颜色 249
+MOV S$拾取名额七 {已被领取/SCOLOR=110}
+#ELSEACT
+MOV S$捡取状态七 未领取
+MOV N$状态颜色 250
+MOV S$拾取名额七 {剩余一个/SCOLOR=253}
+MOV S$领取玩家七
+MOV S$领取地点七
+MOV S$领取时间七
+
+#IF
+EQUAL S$限时物品中转七
+#ACT
+MOV S$限时奖励显示七
+#ELSEACT
+GetStringPos ..\QuestDiary\全部通用限时\限时奖励\限时参数.TXT <$STR(S$限时物品中转七)>
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时参数.TXT <$STR(N0)> S$捡取奖励七
+SetStringBlank <$STR(S$限时物品中转七)> 23 1
+SetStringBlank <$STR(S$捡取奖励七)> 14 1
+SetStringBlank <$STR(S$拾取名额七)> 28 1
+MOV S$详细说明七 250#领取玩家：<$STR(S$领取玩家七)>^7#领取时间：<$STR(S$领取时间七)>^7#领取地点：<$STR(S$领取地点七)>
+MOV S$限时奖励显示七 {<$STR(S$限时物品中转七)>/SCOLOR=161}{<$STR(S$捡取奖励七)>/SCOLOR=161}<$STR(S$拾取名额七)>{<$STR(S$捡取状态七)>|<$STR(S$详细说明七)>/SCOLOR=<$STR(N$状态颜色)>}
+
+#IF
+CHECKTEXTLIST ..\QuestDiary\全部通用限时\限时奖励\限时变量.txt <$STR(S$限时物品中转八)>
+#ACT
+GetStringPos ..\QuestDiary\全部通用限时\限时奖励\限时变量.TXT <$STR(S$限时物品中转八)>
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时变量.TXT <$STR(N0)> S$领取玩家八
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时变量.TXT <$STR(N0)> S$领取时间八
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时变量.TXT <$STR(N0)> S$领取地点八
+GetStringPos ..\QuestDiary\全部通用限时\限时奖励\限时参数.TXT <$STR(S$限时物品中转八)>
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时参数.TXT <$STR(N0)> S$捡取奖励八
+MOV S$捡取状态八 <$STR(S$领取玩家八)>
+MOV N$状态颜色 249
+MOV S$拾取名额八 {已被领取/SCOLOR=110}
+#ELSEACT
+MOV S$捡取状态八 未领取
+MOV N$状态颜色 250
+MOV S$拾取名额八 {剩余一个/SCOLOR=253}
+MOV S$领取玩家八
+MOV S$领取地点八
+MOV S$领取时间八
+
+#IF
+EQUAL S$限时物品中转八
+#ACT
+MOV S$限时奖励显示八
+#ELSEACT
+GetStringPos ..\QuestDiary\全部通用限时\限时奖励\限时参数.TXT <$STR(S$限时物品中转八)>
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时参数.TXT <$STR(N0)> S$捡取奖励八
+SetStringBlank <$STR(S$限时物品中转八)> 23 1
+SetStringBlank <$STR(S$捡取奖励八)> 14 1
+SetStringBlank <$STR(S$拾取名额八)> 28 1
+MOV S$详细说明八 250#领取玩家：<$STR(S$领取玩家八)>^7#领取时间：<$STR(S$领取时间八)>^7#领取地点：<$STR(S$领取地点八)>
+MOV S$限时奖励显示八 {<$STR(S$限时物品中转八)>/SCOLOR=161}{<$STR(S$捡取奖励八)>/SCOLOR=161}<$STR(S$拾取名额八)>{<$STR(S$捡取状态八)>|<$STR(S$详细说明八)>/SCOLOR=<$STR(N$状态颜色)>}
+
+
+#IF
+CHECKTEXTLIST ..\QuestDiary\全部通用限时\限时奖励\限时变量.txt <$STR(S$限时物品中转九)>
+#ACT
+GetStringPos ..\QuestDiary\全部通用限时\限时奖励\限时变量.TXT <$STR(S$限时物品中转九)>
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时变量.TXT <$STR(N0)> S$领取玩家九
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时变量.TXT <$STR(N0)> S$领取时间九
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时变量.TXT <$STR(N0)> S$领取地点九
+GetStringPos ..\QuestDiary\全部通用限时\限时奖励\限时参数.TXT <$STR(S$限时物品中转九)>
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时参数.TXT <$STR(N0)> S$捡取奖励九
+MOV S$捡取状态九 <$STR(S$领取玩家九)>
+MOV N$状态颜色 249
+MOV S$拾取名额九 {已被领取/SCOLOR=110}
+#ELSEACT
+MOV S$捡取状态九 未领取
+MOV N$状态颜色 250
+MOV S$拾取名额九 {剩余一个/SCOLOR=253}
+MOV S$领取玩家九
+MOV S$领取地点九
+MOV S$领取时间九
+
+#IF
+EQUAL S$限时物品中转九
+#ACT
+MOV S$限时奖励显示九
+#ELSEACT
+GetStringPos ..\QuestDiary\全部通用限时\限时奖励\限时参数.TXT <$STR(S$限时物品中转九)>
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时参数.TXT <$STR(N0)> S$捡取奖励九
+SetStringBlank <$STR(S$限时物品中转九)> 23 1
+SetStringBlank <$STR(S$捡取奖励九)> 14 1
+SetStringBlank <$STR(S$拾取名额九)> 28 1
+MOV S$详细说明九 250#领取玩家：<$STR(S$领取玩家九)>^7#领取时间：<$STR(S$领取时间九)>^7#领取地点：<$STR(S$领取地点九)>
+MOV S$限时奖励显示九 {<$STR(S$限时物品中转九)>/SCOLOR=161}{<$STR(S$捡取奖励九)>/SCOLOR=161}<$STR(S$拾取名额九)>{<$STR(S$捡取状态九)>|<$STR(S$详细说明九)>/SCOLOR=<$STR(N$状态颜色)>}
+
+#IF
+CHECKTEXTLIST ..\QuestDiary\全部通用限时\限时奖励\限时变量.txt <$STR(S$限时物品中转十)>
+#ACT
+GetStringPos ..\QuestDiary\全部通用限时\限时奖励\限时变量.TXT <$STR(S$限时物品中转十)>
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时变量.TXT <$STR(N0)> S$领取玩家十
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时变量.TXT <$STR(N0)> S$领取时间十
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时变量.TXT <$STR(N0)> S$领取地点十
+GetStringPos ..\QuestDiary\全部通用限时\限时奖励\限时参数.TXT <$STR(S$限时物品中转十)>
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时参数.TXT <$STR(N0)> S$捡取奖励十
+MOV S$捡取状态十 <$STR(S$领取玩家十)>
+MOV N$状态颜色 249
+MOV S$拾取名额十 {已被领取/SCOLOR=110}
+#ELSEACT
+MOV S$捡取状态十 未领取
+MOV N$状态颜色 250
+MOV S$拾取名额十 {剩余一个/SCOLOR=253}
+MOV S$领取玩家十
+MOV S$领取地点十
+MOV S$领取时间十
+
+#IF
+EQUAL S$限时物品中转十
+#ACT
+MOV S$限时奖励显示十
+#ELSEACT
+GetStringPos ..\QuestDiary\全部通用限时\限时奖励\限时参数.TXT <$STR(S$限时物品中转十)>
+INC N0 1
+GetListString ..\QuestDiary\全部通用限时\限时奖励\限时参数.TXT <$STR(N0)> S$捡取奖励十
+SetStringBlank <$STR(S$限时物品中转十)> 23 1
+SetStringBlank <$STR(S$捡取奖励十)> 14 1
+SetStringBlank <$STR(S$拾取名额十)> 28 1
+MOV S$详细说明十 250#领取玩家：<$STR(S$领取玩家十)>^7#领取时间：<$STR(S$领取时间十)>^7#领取地点：<$STR(S$领取地点十)>
+MOV S$限时奖励显示十 {<$STR(S$限时物品中转十)>/SCOLOR=161}{<$STR(S$捡取奖励十)>/SCOLOR=161}<$STR(S$拾取名额十)>{<$STR(S$捡取状态十)>|<$STR(S$详细说明十)>/SCOLOR=<$STR(N$状态颜色)>}
+
+#IF
+SMALL G170 86400
+#ACT
+MOV N$开区倒计时秒 86400
+DEC N$开区倒计时秒 <$STR(G170)>
+#ELSEACT
+MOV N$开区倒计时秒 0
+
+#IF
+CHECKLEVELEX > 0
+#ACT
+close
+OPENMERCHANTBIGDLG 1 562 1 4 0 0 1 440 0
+MOV S$限时奖励显示行号 <$STR(N$限时奖励显示行号)>
+MOV S$限时奖励显示行号1 <$STR(N$限时奖励显示行号1)>
+MOV S$限时奖励显示行号2 <$STR(N$限时奖励显示行号2)>
+MOV S$限时奖励显示行号3 <$STR(N$限时奖励显示行号3)>
+MOV S$限时奖励显示行号4 <$STR(N$限时奖励显示行号4)>
+MOV S$限时奖励显示行号5 <$STR(N$限时奖励显示行号5)>
+MOV S$限时奖励显示行号6 <$STR(N$限时奖励显示行号6)>
+MOV S$限时奖励显示行号7 <$STR(N$限时奖励显示行号7)>
+MOV S$限时奖励显示行号8 <$STR(N$限时奖励显示行号8)>
+MOV S$限时奖励显示行号9 <$STR(N$限时奖励显示行号9)>
+SetStringBlank <$STR(S$限时奖励显示行号)> 4 1
+SetStringBlank <$STR(S$限时奖励显示行号1)> 4 1
+SetStringBlank <$STR(S$限时奖励显示行号2)> 4 1
+SetStringBlank <$STR(S$限时奖励显示行号3)> 4 1
+SetStringBlank <$STR(S$限时奖励显示行号4)> 4 1
+SetStringBlank <$STR(S$限时奖励显示行号5)> 4 1
+SetStringBlank <$STR(S$限时奖励显示行号6)> 4 1
+SetStringBlank <$STR(S$限时奖励显示行号7)> 4 1
+SetStringBlank <$STR(S$限时奖励显示行号8)> 4 1
+SetStringBlank <$STR(S$限时奖励显示行号9)> 4 1
+#SAY
+\ 
+<>     <蓝月复古  经典复古  公平公正，公益绿色，独家来袭，等你来战/AUTOCOLOR=254>\ \ 
+<>     <全         区         限         时         奖         励/AUTOCOLOR=250> \ \ 
+ \ 
+<NO.<$STR(S$限时奖励显示行号)>/FCOLOR=230><$STR(S$限时奖励显示一)>\ \
+<NO.<$STR(S$限时奖励显示行号1)>/FCOLOR=230><$STR(S$限时奖励显示二)>\ \
+<NO.<$STR(S$限时奖励显示行号2)>/FCOLOR=230><$STR(S$限时奖励显示三)>\ \
+<NO.<$STR(S$限时奖励显示行号3)>/FCOLOR=230><$STR(S$限时奖励显示四)>\ \
+<NO.<$STR(S$限时奖励显示行号4)>/FCOLOR=230><$STR(S$限时奖励显示五)>\ \
+<NO.<$STR(S$限时奖励显示行号5)>/FCOLOR=230><$STR(S$限时奖励显示六)>\ \
+<NO.<$STR(S$限时奖励显示行号6)>/FCOLOR=230><$STR(S$限时奖励显示七)>\ \
+<NO.<$STR(S$限时奖励显示行号7)>/FCOLOR=230><$STR(S$限时奖励显示八)>\ \
+<NO.<$STR(S$限时奖励显示行号8)>/FCOLOR=230><$STR(S$限时奖励显示九)>\ \
+<NO.<$STR(S$限时奖励显示行号9)>/FCOLOR=230><$STR(S$限时奖励显示十)>\ \ 
+ \   　 <上一页/@限时上一页>           <下一页/@限时下一页>                    <查看首杀奖励/@首杀>\ 
+
+
+[@限时上一页]
+#IF
+EQUAL N$限时奖励行号 0
+#ACT
+MESSAGEBOX 当前已经是第一页！！
+BREAK
+#ELSEACT
+DEC N$限时奖励行号 20
+GOTO @限时显示界面
+BREAK
+
+[@限时下一页]
+#IF
+EQUAL S$限时物品检测
+#ACT
+MESSAGEBOX 当前已经是最后一页！！
+BREAK
+#ELSEACT
+INC N$限时奖励行号 20
+GOTO @限时显示界面
+BREAK
+
+[@首杀]
+#IF
+#ACT
+#CALL [\全部通用限时\限时首杀.txt] @首杀奖励
+}

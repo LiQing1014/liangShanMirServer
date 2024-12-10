@@ -1,0 +1,780 @@
+()
+%100
+[@main]
+#IF
+CHECKLEVELEX > 54
+#ACT
+OPENMERCHANTBIGDLG 1  315 1 0 0 0 0
+#SAY
+<IMG:19:1:582:20/@exit>\ \ \ \ \ \
+<>                                                                    <时装彰显独特个性，欢迎选购!/FCOLOR=251>\ \
+<>                                                                   <1./FCOLOR=254> <时装只加少量属性，不变态/FCOLOR=70>  \
+<>                                                                   <2./FCOLOR=254> <时装可使用江山币购买，部/FCOLOR=250>\
+<>                                                                      <分时装可使用碎片合成！/FCOLOR=250>\
+<>                                                                   <3./FCOLOR=254> <各种时装样式不同但属性一样/FCOLOR=253>\
+<>                                                                   <4./FCOLOR=254> <时装碎片只有神龙帝国爆出/FCOLOR=254>\ \ \ \ \ 
+<>                                                                    <段誉王子(男)/@11>  <大理郡主(女)/@12>\  
+<>                                                                    <凌霜锦袍(男)/@31>  <凌霜锦袍(女)/@32>\   
+<>                                                                    <蓝月复古(男)/@21>  <蓝月复古(女)/@22>\ \
+<>                                                                    <皇族锦袍(男)/@41>  <皇族锦袍(女)/@42>\
+<>                                                                    <少林武僧(男)/@51>  <峨眉芷若(女)/@52>\ \
+<>                                                                    <进阶圣时装/@圣时装><Hot~/FCOLOR=249> <进阶神时装/@神时装><Hot~/FCOLOR=249>\ 
+<PlayImg:11:340:10:180:0:-397:0>\
+#elseACT
+OPENMERCHANTBIGDLG 1  315 1 0 0 0 0
+#elsesay
+<IMG:19:1:582:20/@exit>\ \ \ \ \ \
+<>                                                                    <时装彰显独特个性，欢迎选购!/FCOLOR=251>\ \
+<>                                                                   <1./FCOLOR=254> <时装只加少量属性，不变态/FCOLOR=70>  \
+<>                                                                   <2./FCOLOR=254> <时装可使用江山币购买，部/FCOLOR=250>\
+<>                                                                      <分时装可使用碎片合成！/FCOLOR=250>\
+<>                                                                   <3./FCOLOR=254> <各种时装样式不同但属性一样/FCOLOR=253>\
+<>                                                                   <4./FCOLOR=254> <时装碎片只有神龙帝国爆出/FCOLOR=254>\ \ \ \ \
+<>                                                                    <大理段誉(男)/@11>  <大理郡主(女)/@12>\  \
+<>                                                                    <凌霜锦袍(男)/@31>  <凌霜锦袍(女)/@32>\  \ 
+<>                                                                    <蓝月复古(男)/@21>  <蓝月复古(女)/@22>\ \
+<>                                                                    <皇族锦袍(男)/@41>  <皇族锦袍(女)/@42>\
+<>                                                                    <少林武僧(男)/@51>  <峨眉芷若(女)/@52>\
+<PlayImg:11:340:10:180:0:-400:0>\
+[@41]　 
+#IF
+#ACT
+OPENMERCHANTBIGDLG 1  315 1 0 0 0 0
+#SAY
+<IMG:19:1:582:20/@exit>\ \ \ \ \ \
+<>                                                                   <时装名称：/FCOLOR=249><皇族锦袍(男)/FCOLOR=251>\ \
+<>                                                                   <1./FCOLOR=254> <时装只加少量属性，不变态/FCOLOR=70>  \
+<>                                                                   <2./FCOLOR=254> <时装可使用江山币购买，部/FCOLOR=250>\
+<>                                                                      <分时装可使用碎片合成！/FCOLOR=250>\
+<>                                                                   <3./FCOLOR=254> <各种时装样式不同但属性一样/FCOLOR=253>\
+<>                                                                   <4./FCOLOR=254> <时装碎片只有神龙帝国爆出/FCOLOR=254>\ \ \ \ \ \ \
+<>                                                                    <√·购买时装/@购买时装41><(需1680江山币)/FCOLOR=250>\  \
+<>                                                                    <√·兑换时装/@合成时装41><(可使用蓝月复古兑换)/FCOLOR=250>\  \  \
+<>                                                                                           <返回/@main>\
+<IMG:420:11:-17:-330>\
+[@42]　 
+#IF
+#ACT
+OPENMERCHANTBIGDLG 1  315 1 0 0 0 0
+#SAY
+<IMG:19:1:582:20/@exit>\ \ \ \ \ \
+<>                                                                   <时装名称：/FCOLOR=249><皇族锦袍(女)/FCOLOR=251>\ \
+<>                                                                   <1./FCOLOR=254> <时装只加少量属性，不变态/FCOLOR=70>  \
+<>                                                                   <2./FCOLOR=254> <时装可使用江山币购买，部/FCOLOR=250>\
+<>                                                                      <分时装可使用碎片合成！/FCOLOR=250>\
+<>                                                                   <3./FCOLOR=254> <各种时装样式不同但属性一样/FCOLOR=253>\
+<>                                                                   <4./FCOLOR=254> <时装碎片只有神龙帝国爆出/FCOLOR=254>\ \ \ \ \ \ \
+<>                                                                    <√·购买时装/@购买时装42><(需1680江山币)/FCOLOR=250>\  \
+<>                                                                    <√·兑换时装/@合成时装42><(可使用蓝月复古兑换)/FCOLOR=250>\  \  \
+<>                                                                                           <返回/@main>\
+<IMG:430:11:-12:-330>\
+[@51]　 
+#IF
+#ACT
+OPENMERCHANTBIGDLG 1  315 1 0 0 0 0
+#SAY
+<IMG:19:1:582:20/@exit>\ \ \ \ \ \
+<>                                                                   <时装名称：/FCOLOR=249><少林武僧(男)/FCOLOR=251>\ \
+<>                                                                   <1./FCOLOR=254> <时装只加少量属性，不变态/FCOLOR=70>  \
+<>                                                                   <2./FCOLOR=254> <时装可使用江山币购买，部/FCOLOR=250>\
+<>                                                                      <分时装可使用碎片合成！/FCOLOR=250>\
+<>                                                                   <3./FCOLOR=254> <各种时装样式不同但属性一样/FCOLOR=253>\
+<>                                                                   <4./FCOLOR=254> <时装碎片只有神龙帝国爆出/FCOLOR=254>\ \ \ \ \ \ \
+<>                                                                    <√·购买时装/@购买时装51><(需1680江山币)/FCOLOR=250>\  \
+<>                                                                    <√·兑换时装/@合成时装51><(可使用蓝月复古兑换)/FCOLOR=250>\  \  \
+<>                                                                                           <返回/@main>\
+<IMG:440:11:30:-280>\
+[@52]　 
+#IF
+#ACT
+OPENMERCHANTBIGDLG 1  315 1 0 0 0 0
+#SAY
+<IMG:19:1:582:20/@exit>\ \ \ \ \ \
+<>                                                                   <时装名称：/FCOLOR=249><峨眉芷若(女)/FCOLOR=251>\ \
+<>                                                                   <1./FCOLOR=254> <时装只加少量属性，不变态/FCOLOR=70>  \
+<>                                                                   <2./FCOLOR=254> <时装可使用江山币购买，部/FCOLOR=250>\
+<>                                                                      <分时装可使用碎片合成！/FCOLOR=250>\
+<>                                                                   <3./FCOLOR=254> <各种时装样式不同但属性一样/FCOLOR=253>\
+<>                                                                   <4./FCOLOR=254> <时装碎片只有神龙帝国爆出/FCOLOR=254>\ \ \ \ \ \ \
+<>                                                                    <√·购买时装/@购买时装52><(需1680江山币)/FCOLOR=250>\  \
+<>                                                                    <√·兑换时装/@合成时装52><(可使用蓝月复古兑换)/FCOLOR=250>\  \  \
+<>                                                                                           <返回/@main>\
+<IMG:450:11:15:-300>\
+[@11]　 
+#IF
+#ACT
+OPENMERCHANTBIGDLG 1  315 1 0 0 0 0
+#SAY
+<IMG:19:1:582:20/@exit>\ \ \ \ \ \
+<>                                                                   <时装名称：/FCOLOR=249><段誉王子(男)/FCOLOR=251>\ \
+<>                                                                   <1./FCOLOR=254> <时装只加少量属性，不变态/FCOLOR=70>  \
+<>                                                                   <2./FCOLOR=254> <时装可使用江山币购买，部/FCOLOR=250>\
+<>                                                                      <分时装可使用碎片合成！/FCOLOR=250>\
+<>                                                                   <3./FCOLOR=254> <各种时装样式不同但属性一样/FCOLOR=253>\
+<>                                                                   <4./FCOLOR=254> <时装碎片只有神龙帝国爆出/FCOLOR=254>\ \ \ \ \ \ \
+<>                                                                    <√·购买时装/@购买时装11><(需880江山币)/FCOLOR=250>\  \
+<>                                                                    <√·合成时装/@合成时装11><(需128时装碎片)/FCOLOR=250>\  \  \
+<>                                                                                           <返回/@main>\
+<IMG:459:8:-68:-310>\
+[@12]　 
+#IF
+#ACT
+OPENMERCHANTBIGDLG 1  315 1 0 0 0 0
+#SAY
+<IMG:19:1:582:20/@exit>\ \ \ \ \ \
+<>                                                                   <时装名称：/FCOLOR=249><大理郡主(女)/FCOLOR=251>\ \
+<>                                                                   <1./FCOLOR=254> <时装只加少量属性，不变态/FCOLOR=70>  \
+<>                                                                   <2./FCOLOR=254> <时装可使用江山币购买，部/FCOLOR=250>\
+<>                                                                      <分时装可使用碎片合成！/FCOLOR=250>\
+<>                                                                   <3./FCOLOR=254> <各种时装样式不同但属性一样/FCOLOR=253>\
+<>                                                                   <4./FCOLOR=254> <时装碎片只有神龙帝国爆出/FCOLOR=254>\ \ \ \ \ \ \
+<>                                                                    <√·购买时装/@购买时装12><(需880江山币)/FCOLOR=250>\  \
+<>                                                                    <√·合成时装/@合成时装12><(需128时装碎片)/FCOLOR=250>\  \  \
+<>                                                                                           <返回/@main>\
+<IMG:460:8:-53:-320>\
+[@21]　 
+#IF
+#ACT
+OPENMERCHANTBIGDLG 1  315 1 0 0 0 0
+#SAY
+<IMG:19:1:582:20/@exit>\ \ \ \ \ \
+<>                                                                   <时装名称：/FCOLOR=249><蓝月复古(男)/FCOLOR=251>\ \
+<>                                                                   <1./FCOLOR=254> <时装只加少量属性，不变态/FCOLOR=70>  \
+<>                                                                   <2./FCOLOR=254> <时装可使用江山币购买，部/FCOLOR=250>\
+<>                                                                      <分时装可使用碎片合成！/FCOLOR=250>\
+<>                                                                   <3./FCOLOR=254> <各种时装样式不同但属性一样/FCOLOR=253>\
+<>                                                                   <4./FCOLOR=254> <时装碎片只有神龙帝国爆出/FCOLOR=254>\ \ \ \ \ \ 
+<>                                                                      <√·购买时装/@购买时装21><(需1680江山币)/FCOLOR=250>\  \   \
+<>                                                                   <提示：/FCOLOR=249><此套时装不支持合成，各/FCOLOR=254>\
+<>                                                                   <种时装样式不同但属性完全相同！/FCOLOR=254>\  \
+<>                                                                                           <返回/@main>\
+<IMG:340:11:0:-403>\
+[@22]　 
+#IF
+#ACT
+OPENMERCHANTBIGDLG 1  315 1 0 0 0 0
+#SAY
+<IMG:19:1:582:20/@exit>\ \ \ \ \ \
+<>                                                                   <时装名称：/FCOLOR=249><蓝月复古(女)/FCOLOR=251>\ \
+<>                                                                   <1./FCOLOR=254> <时装只加少量属性，不变态/FCOLOR=70>  \
+<>                                                                   <2./FCOLOR=254> <时装可使用江山币购买，部/FCOLOR=250>\
+<>                                                                      <分时装可使用碎片合成！/FCOLOR=250>\
+<>                                                                   <3./FCOLOR=254> <各种时装样式不同但属性一样/FCOLOR=253>\
+<>                                                                   <4./FCOLOR=254> <时装碎片只有神龙帝国爆出/FCOLOR=254>\ \ \ \ \ \ 
+<>                                                                      <√·购买时装/@购买时装22><(需1680江山币)/FCOLOR=250>\  \   \
+<>                                                                   <提示：/FCOLOR=249><此套时装不支持合成，各/FCOLOR=254>\
+<>                                                                   <种时装样式不同但属性完全相同！/FCOLOR=254>\  \
+<>                                                                                           <返回/@main>\
+<IMG:307:11:65:-388>\
+[@31]　 
+#IF
+#ACT
+OPENMERCHANTBIGDLG 1  315 1 0 0 0 0
+#SAY
+<IMG:19:1:582:20/@exit>\ \ \ \ \ \
+<>                                                                   <时装名称：/FCOLOR=249><凌霜锦袍(男)/FCOLOR=251>\ \
+<>                                                                   <1./FCOLOR=254> <时装只加少量属性，不变态/FCOLOR=70>  \
+<>                                                                   <2./FCOLOR=254> <时装可使用江山币购买，部/FCOLOR=250>\
+<>                                                                      <分时装可使用碎片合成！/FCOLOR=250>\
+<>                                                                   <3./FCOLOR=254> <各种时装样式不同但属性一样/FCOLOR=253>\
+<>                                                                   <4./FCOLOR=254> <时装碎片只有神龙帝国爆出/FCOLOR=254>\ \ \ \ \ \ 
+<>                                                                      <√·购买时装/@购买时装31><(需1280江山币)/FCOLOR=250>\  \   \
+<>                                                                   <提示：/FCOLOR=249><此套时装不支持合成，各/FCOLOR=254>\
+<>                                                                   <种时装样式不同但属性完全相同！/FCOLOR=254>\  \
+<>                                                                                           <返回/@main>\
+<IMG:400:11:-22:-280>\
+[@32]　 
+#IF
+#ACT
+OPENMERCHANTBIGDLG 1  315 1 0 0 0 0
+#SAY
+<IMG:19:1:582:20/@exit>\ \ \ \ \ \
+<>                                                                   <时装名称：/FCOLOR=249><凌霜锦袍(女)/FCOLOR=251>\ \
+<>                                                                   <1./FCOLOR=254> <时装只加少量属性，不变态/FCOLOR=70>  \
+<>                                                                   <2./FCOLOR=254> <时装可使用江山币购买，部/FCOLOR=250>\
+<>                                                                      <分时装可使用碎片合成！/FCOLOR=250>\
+<>                                                                   <3./FCOLOR=254> <各种时装样式不同但属性一样/FCOLOR=253>\
+<>                                                                   <4./FCOLOR=254> <时装碎片只有神龙帝国爆出/FCOLOR=254>\ \ \ \ \ \ 
+<>                                                                      <√·购买时装/@购买时装32><(需1280江山币)/FCOLOR=250>\  \   \
+<>                                                                   <提示：/FCOLOR=249><此套时装不支持合成，各/FCOLOR=254>\
+<>                                                                   <种时装样式不同但属性完全相同！/FCOLOR=254>\  \
+<>                                                                                           <返回/@main>\
+<IMG:410:11:-22:-280>\
+[@购买时装41]
+#if
+CHECKGAMEDIAMOND > 1679
+#act
+GAMEDIAMOND - 1680
+give 皇族锦袍(男) 1
+SendMsg 0 {老裁缝ぐ|151:0:1}：恭喜玩家{[%s]|227:0:1}成功购买时装：{[皇族锦袍(男)]|250:0:1}，玩的就是个性!!
+SendCenterMsg 249 251 恭喜玩家〖<$USERNAME>〗成功购买时装：皇族锦袍(男)，玩的就是个性!! 1 10
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+      
+[@合成时装41]
+#if
+checkitem 蓝月复古(男) 1
+#act
+take 蓝月复古(男) 1
+give 皇族锦袍(男) 1
+SendMsg 0 {老裁缝ぐ|151:0:1}：恭喜玩家{[%s]|227:0:1}使用大圣时装成功兑换：{[皇族锦袍(男)]|250:0:1}!!
+SendCenterMsg 249 251 恭喜玩家〖<$USERNAME>〗使用大圣时装成功兑换：皇族锦袍(男)!! 1 10
+break
+#ELSEACT
+messagebox 您背包里没有蓝月复古(男)!
+break
+[@购买时装42]
+#if
+CHECKGAMEDIAMOND > 1679
+#act
+GAMEDIAMOND - 1680
+give 皇族锦袍(女) 1
+SendMsg 0 {老裁缝ぐ|151:0:1}：恭喜玩家{[%s]|227:0:1}成功购买时装：{[皇族锦袍(女)]|250:0:1}，玩的就是个性!!
+SendCenterMsg 249 251 恭喜玩家〖<$USERNAME>〗成功购买时装：皇族锦袍(女)，玩的就是个性!! 1 10
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+      
+[@合成时装42]
+#if
+checkitem 蓝月复古(女) 1
+#act
+take 蓝月复古(女) 1
+give 皇族锦袍(女) 1
+SendMsg 0 {老裁缝ぐ|151:0:1}：恭喜玩家{[%s]|227:0:1}使用大圣时装成功兑换：{[皇族锦袍(女)]|250:0:1}!!
+SendCenterMsg 249 251 恭喜玩家〖<$USERNAME>〗使用大圣时装成功兑换：皇族锦袍(女)!! 1 10
+break
+#ELSEACT
+messagebox 您背包里没有蓝月复古(女)!
+break
+[@购买时装51]
+#if
+CHECKGAMEDIAMOND > 1679
+#act
+GAMEDIAMOND - 1680
+give 少林武僧(男) 1
+SendMsg 0 {老裁缝ぐ|151:0:1}：恭喜玩家{[%s]|227:0:1}成功购买时装：{[少林武僧(男)]|250:0:1}，玩的就是个性!!
+SendCenterMsg 249 251 恭喜玩家〖<$USERNAME>〗成功购买时装：少林武僧(男)，玩的就是个性!! 1 10
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+      
+[@合成时装51]
+#if
+checkitem 蓝月复古(男) 1
+#act
+take 蓝月复古(男) 1
+give 少林武僧(男) 1
+SendMsg 0 {老裁缝ぐ|151:0:1}：恭喜玩家{[%s]|227:0:1}使用大圣时装成功兑换：{[少林武僧(男)]|250:0:1}!!
+SendCenterMsg 249 251 恭喜玩家〖<$USERNAME>〗使用大圣时装成功兑换：少林武僧(男)!! 1 10
+break
+#ELSEACT
+messagebox 您背包里没有蓝月复古(男)!
+break
+[@购买时装52]
+#if
+CHECKGAMEDIAMOND > 1679
+#act
+GAMEDIAMOND - 1680
+give 峨眉芷若(女) 1
+SendMsg 0 {老裁缝ぐ|151:0:1}：恭喜玩家{[%s]|227:0:1}成功购买时装：{[峨眉芷若(女)]|250:0:1}，玩的就是个性!!
+SendCenterMsg 249 251 恭喜玩家〖<$USERNAME>〗成功购买时装：峨眉芷若(女)，玩的就是个性!! 1 10
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+      
+[@合成时装52]
+#if
+checkitem 蓝月复古(女) 1
+#act
+take 蓝月复古(女) 1
+give 峨眉芷若(女) 1
+SendMsg 0 {老裁缝ぐ|151:0:1}：恭喜玩家{[%s]|227:0:1}使用大圣时装成功兑换：{[峨眉芷若(女)]|250:0:1}!!
+SendCenterMsg 249 251 恭喜玩家〖<$USERNAME>〗使用大圣时装成功兑换：峨眉芷若(女)!! 1 10
+break
+#ELSEACT
+messagebox 您背包里没有蓝月复古(女)!
+break
+[@购买时装11]
+#if
+CHECKGAMEDIAMOND > 879
+#act
+GAMEDIAMOND - 880
+give 段誉王子(男) 1
+SendMsg 0 {老裁缝ぐ|151:0:1}：恭喜玩家{[%s]|227:0:1}成功购买时装：{[段誉王子(男)]|250:0:1}，玩的就是个性!!
+SendCenterMsg 249 251 恭喜玩家〖<$USERNAME>〗成功购买时装：段誉王子(男)，玩的就是个性!! 1 10
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+      
+[@合成时装11]
+#if
+checkitem 时装碎片 128
+#act
+take 时装碎片 128
+give 段誉王子(男) 1
+SendMsg 0 {老裁缝ぐ|151:0:1}：恭喜玩家{[%s]|227:0:1}使用时装碎片免费合成时装：{[段誉王子(男)]|250:0:1}!!
+SendCenterMsg 249 251 恭喜玩家〖<$USERNAME>〗使用时装碎片免费合成时装：段誉王子(男)!! 1 10
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+[@购买时装12]
+#if
+CHECKGAMEDIAMOND > 879
+#act
+GAMEDIAMOND - 880
+give 大理郡主(女) 1
+SendMsg 0 {老裁缝ぐ|151:0:1}：恭喜玩家{[%s]|227:0:1}成功购买时装：{[大理郡主(女)]|250:0:1}，玩的就是个性!!
+SendCenterMsg 249 251 恭喜玩家〖<$USERNAME>〗成功购买时装：大理郡主(女)，玩的就是个性!! 1 10
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+      
+[@合成时装12]
+#if
+checkitem 时装碎片 128
+#act
+take 时装碎片 128
+give 大理郡主(女) 1
+SendMsg 0 {老裁缝ぐ|151:0:1}：恭喜玩家{[%s]|227:0:1}使用时装碎片免费合成时装：{[大理郡主(女)]|250:0:1}!!
+SendCenterMsg 249 251 恭喜玩家〖<$USERNAME>〗使用时装碎片免费合成时装：大理郡主(女)!! 1 10
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+[@购买时装21]
+#if
+CHECKGAMEDIAMOND > 1679
+#act
+GAMEDIAMOND - 1680
+give 蓝月复古(男) 1
+SendMsg 0 {老裁缝ぐ|151:0:1}：恭喜玩家{[%s]|227:0:1}成功购买时装：{[蓝月复古(男)]|250:0:1}，玩的就是个性!!
+SendCenterMsg 249 251 恭喜玩家〖<$USERNAME>〗成功购买时装：蓝月复古(男)，玩的就是个性!! 1 10
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+[@购买时装22]
+#if
+CHECKGAMEDIAMOND > 1679
+#act
+GAMEDIAMOND - 1680
+give 蓝月复古(女) 1
+SendMsg 0 {老裁缝ぐ|151:0:1}：恭喜玩家{[%s]|227:0:1}成功购买时装：{[蓝月复古(女)]|250:0:1}，玩的就是个性!!
+SendCenterMsg 249 251 恭喜玩家〖<$USERNAME>〗成功购买时装：蓝月复古(女)，玩的就是个性!! 1 10
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+[@购买时装31]
+#if
+CHECKGAMEDIAMOND > 1279
+#act
+GAMEDIAMOND - 1280
+give 凌霜锦袍(男) 1
+SendMsg 0 {老裁缝ぐ|151:0:1}：恭喜玩家{[%s]|227:0:1}成功购买时装：{[凌霜锦袍(男)]|250:0:1}，玩的就是个性!!
+SendCenterMsg 249 251 恭喜玩家〖<$USERNAME>〗成功购买时装：凌霜锦袍(男)，玩的就是个性!! 1 10
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+[@购买时装32]
+#if
+CHECKGAMEDIAMOND > 1279
+#act
+GAMEDIAMOND - 1280
+give 凌霜锦袍(女) 1
+SendMsg 0 {老裁缝ぐ|151:0:1}：恭喜玩家{[%s]|227:0:1}成功购买时装：{[凌霜锦袍(女)]|250:0:1}，玩的就是个性!!
+SendCenterMsg 249 251 恭喜玩家〖<$USERNAME>〗成功购买时装：凌霜锦袍(女)，玩的就是个性!! 1 10
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+[@圣时装]
+#IF
+#ACT
+close
+#SAY
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>         <1.76帝国霸业/FCOLOR=254> —  <高清复古/FCOLOR=254> — <时装进阶系统/FCOLOR=254>       \
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>  <进阶圣时装，需要条件：/FCOLOR=70><2件相同时装+99个时装碎片+2000颗江山币./FCOLOR=250>\ 
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>   <圣·段誉王子(男)/@圣1>   <圣·凌霜锦袍(男)/@圣2>   <圣·蓝月复古(男)/@圣3>\ 
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>   <圣·大理郡主(女)/@圣4>   <圣·凌霜锦袍(女)/@圣5>   <圣·蓝月复古(女)/@圣6>\ 
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>                                            <下一页/@圣时装1>    <返回/@main>  \
+[@圣时装1]
+#IF
+#ACT
+close
+#SAY
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>         <1.76帝国霸业/FCOLOR=254> —  <高清复古/FCOLOR=254> — <时装进阶系统/FCOLOR=254>       \
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>  <进阶圣时装，需要条件：/FCOLOR=70><2件相同时装+99个时装碎片+2000颗江山币./FCOLOR=250>\ 
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>          <圣·皇族锦袍(男)/@圣7>        <圣·少林武僧(男)/@圣8>\ 
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>          <圣·皇族锦袍(女)/@圣9>        <圣·峨眉芷若(女)/@圣10>\ 
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>                                                <返回上一页/@圣时装>  \
+[@圣7]
+#if
+checkitem 时装碎片 99
+checkitem 皇族锦袍(男) 2
+CHECKGAMEDIAMOND > 1999
+#act
+take 时装碎片 99
+take 皇族锦袍(男) 2
+GAMEDIAMOND - 2000
+give 圣·皇族锦袍(男) 1
+messagebox \\恭喜您成功进阶圣时装！
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功将“皇族锦袍(男)”进阶成为：圣·皇族锦袍(男)
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+[@圣8]
+#if
+checkitem 时装碎片 99
+checkitem 少林武僧(男) 2
+CHECKGAMEDIAMOND > 1999
+#act
+take 时装碎片 99
+take 少林武僧(男) 2
+GAMEDIAMOND - 2000
+give 圣·少林武僧(男) 1
+messagebox \\恭喜您成功进阶圣时装！
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功将“少林武僧(男)”进阶成为：圣·少林武僧(男)
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+[@圣9]
+#if
+checkitem 时装碎片 99
+checkitem 皇族锦袍(女) 2
+CHECKGAMEDIAMOND > 1999
+#act
+take 时装碎片 99
+take 皇族锦袍(女) 2
+GAMEDIAMOND - 2000
+give 圣·皇族锦袍(女) 1
+messagebox \\恭喜您成功进阶圣时装！
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功将“皇族锦袍(女)”进阶成为：圣·皇族锦袍(女)
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+[@圣10]
+#if
+checkitem 时装碎片 99
+checkitem 峨眉芷若(女) 2
+CHECKGAMEDIAMOND > 1999
+#act
+take 时装碎片 99
+take 峨眉芷若(女) 2
+GAMEDIAMOND - 2000
+give 圣·峨眉芷若(女) 1
+messagebox \\恭喜您成功进阶圣时装！
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功将“峨眉芷若(女)”进阶成为：圣·峨眉芷若(女)
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+[@圣1]
+#if
+checkitem 时装碎片 99
+checkitem 段誉王子(男) 2
+CHECKGAMEDIAMOND > 1999
+#act
+take 时装碎片 99
+take 段誉王子(男) 2
+GAMEDIAMOND - 2000
+give 圣·段誉王子(男) 1
+messagebox \\恭喜您成功进阶圣时装！
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功将“段誉王子(男)”进阶成为：圣·段誉王子(男)
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+[@圣4]
+#if
+checkitem 时装碎片 99
+checkitem 大理郡主(女) 2
+CHECKGAMEDIAMOND > 1999
+#act
+take 时装碎片 99
+take 大理郡主(女) 2
+GAMEDIAMOND - 2000
+give 圣·大理郡主(女) 1
+messagebox \\恭喜您成功进阶圣时装！
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功将“大理郡主(女)”进阶成为：圣·大理郡主(女)
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+[@圣2]
+#if
+checkitem 时装碎片 99
+checkitem 凌霜锦袍(男) 2
+CHECKGAMEDIAMOND > 1999
+#act
+take 时装碎片 99
+take 凌霜锦袍(男) 2
+GAMEDIAMOND - 2000
+give 圣·凌霜锦袍(男) 1
+messagebox \\恭喜您成功进阶圣时装！
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功将“我爱世界杯(男)”进阶成为：圣·凌霜锦袍(男)
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+[@圣5]
+#if
+checkitem 时装碎片 99
+checkitem 凌霜锦袍(女) 2
+CHECKGAMEDIAMOND > 1999
+#act
+take 时装碎片 99
+take 凌霜锦袍(女) 2
+GAMEDIAMOND - 2000
+give 圣·凌霜锦袍(女) 1
+messagebox \\恭喜您成功进阶圣时装！
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功将“我爱世界杯(女)”进阶成为：圣·凌霜锦袍(女)
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+[@圣3]
+#if
+checkitem 时装碎片 99
+checkitem 蓝月复古(男) 2
+CHECKGAMEDIAMOND > 1999
+#act
+take 时装碎片 99
+take 蓝月复古(男) 2
+GAMEDIAMOND - 2000
+give 圣·蓝月复古(男) 1
+messagebox \\恭喜您成功进阶圣时装！
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功将“蓝月复古(男)”进阶成为：圣·蓝月复古(男)
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+[@圣6]
+#if
+checkitem 时装碎片 99
+checkitem 蓝月复古(女) 2
+CHECKGAMEDIAMOND > 1999
+#act
+take 时装碎片 99
+take 蓝月复古(女) 2
+GAMEDIAMOND - 2000
+give 圣·蓝月复古(女) 1
+messagebox \\恭喜您成功进阶圣时装！
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功将“蓝月复古(女)”进阶成为：圣·蓝月复古(女)
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+[@神时装]
+#IF
+#ACT
+close
+#SAY
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>         <1.76帝国霸业/FCOLOR=254> —  <高清复古/FCOLOR=254> — <时装进阶系统/FCOLOR=254>       \
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>  <进阶神时装，需要条件：/FCOLOR=70><2件相同圣时装+199个时装碎片+5000颗江山币./FCOLOR=250>\ 
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>   <神·段誉王子(男)/@神1>   <神·凌霜锦袍(男)/@神2>   <神·蓝月复古(男)/@神3>\ 
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>   <神·大理郡主(女)/@神4>   <神·凌霜锦袍(女)/@神5>   <神·蓝月复古(女)/@神6>\ 
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>                                            <下一页/@神时装1>    <返回/@main>  \
+[@神时装1]
+#IF
+#ACT
+close
+#SAY
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>         <1.76帝国霸业/FCOLOR=254> —  <高清复古/FCOLOR=254> — <时装进阶系统/FCOLOR=254>       \
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>  <进阶神时装，需要条件：/FCOLOR=70><2件相同圣时装+199个时装碎片+5000颗江山币./FCOLOR=250>\ 
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>          <神·皇族锦袍(男)/@神7>        <神·少林武僧(男)/@神8>\ 
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>          <神·皇族锦袍(女)/@神9>        <神·峨眉芷若(女)/@神10>\ 
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>                                                <返回上一页/@神时装>  \
+[@神7]
+#if
+checkitem 时装碎片 199
+checkitem 圣·皇族锦袍(男) 2
+CHECKGAMEDIAMOND > 4999
+#act
+take 时装碎片 199
+take 圣·皇族锦袍(男) 2
+GAMEDIAMOND - 5000
+give 神·皇族锦袍(男) 1
+messagebox \\恭喜您成功进阶神时装！
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功将“圣·皇族锦袍(男)”进阶成为：神·皇族锦袍(男)
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+[@神8]
+#if
+checkitem 时装碎片 199
+checkitem 圣·少林武僧(男) 2
+CHECKGAMEDIAMOND > 4999
+#act
+take 时装碎片 199
+take 圣·少林武僧(男) 2
+GAMEDIAMOND - 5000
+give 神·少林武僧(男) 1
+messagebox \\恭喜您成功进阶神时装！
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功将“圣·少林武僧(男)”进阶成为：神·少林武僧(男)
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+[@神9]
+#if
+checkitem 时装碎片 199
+checkitem 圣·皇族锦袍(女) 2
+CHECKGAMEDIAMOND > 4999
+#act
+take 时装碎片 199
+take 圣·皇族锦袍(女) 2
+GAMEDIAMOND - 5000
+give 神·皇族锦袍(女) 1
+messagebox \\恭喜您成功进阶神时装！
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功将“圣·皇族锦袍(女)”进阶成为：神·皇族锦袍(女)
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+[@神10]
+#if
+checkitem 时装碎片 199
+checkitem 圣·峨眉芷若(女) 2
+CHECKGAMEDIAMOND > 4999
+#act
+take 时装碎片 199
+take 圣·峨眉芷若(女) 2
+GAMEDIAMOND - 5000
+give 神·峨眉芷若(女) 1
+messagebox \\恭喜您成功进阶神时装！
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功将“圣·峨眉芷若(女)”进阶成为：神·峨眉芷若(女)
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+[@神1]
+#if
+checkitem 时装碎片 199
+checkitem 圣·段誉王子(男) 2
+CHECKGAMEDIAMOND > 4999
+#act
+take 时装碎片 199
+take 圣·段誉王子(男) 2
+GAMEDIAMOND - 5000
+give 神·段誉王子(男) 1
+messagebox \\恭喜您成功进阶神时装！
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功将“圣·段誉王子(男)”进阶成为：神·段誉王子(男)
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+[@神4]
+#if
+checkitem 时装碎片 199
+checkitem 圣·大理郡主(女) 2
+CHECKGAMEDIAMOND > 4999
+#act
+take 时装碎片 199
+take 圣·大理郡主(女) 2
+GAMEDIAMOND - 5000
+give 神·大理郡主(女) 1
+messagebox \\恭喜您成功进阶神时装！
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功将“圣·大理郡主(女)”进阶成为：神·大理郡主(女)
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+[@神2]
+#if
+checkitem 时装碎片 199
+checkitem 圣·凌霜锦袍(男) 2
+CHECKGAMEDIAMOND > 4999
+#act
+take 时装碎片 199
+take 圣·凌霜锦袍(男) 2
+GAMEDIAMOND - 5000
+give 神·凌霜锦袍(男) 1
+messagebox \\恭喜您成功进阶神时装！
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功将“圣·凌霜锦袍(男)”进阶成为：神·凌霜锦袍(男)
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+[@神5]
+#if
+checkitem 时装碎片 199
+checkitem 圣·凌霜锦袍(女) 2
+CHECKGAMEDIAMOND > 4999
+#act
+take 时装碎片 199
+take 圣·凌霜锦袍(女) 2
+GAMEDIAMOND - 5000
+give 神·凌霜锦袍(女) 1
+messagebox \\恭喜您成功进阶神时装！
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功将“圣·凌霜锦袍(女)”进阶成为：神·凌霜锦袍(女)
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+[@神3]
+#if
+checkitem 时装碎片 199
+checkitem 圣·蓝月复古(男) 2
+CHECKGAMEDIAMOND > 4999
+#act
+take 时装碎片 199
+take 圣·蓝月复古(男) 2
+GAMEDIAMOND - 5000
+give 神·蓝月复古(男) 1
+messagebox \\恭喜您成功进阶神时装！
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功将“圣·蓝月复古(男)”进阶成为：神·蓝月复古(男)
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+[@神6]
+#if
+checkitem 时装碎片 199
+checkitem 圣·蓝月复古(女) 2
+CHECKGAMEDIAMOND > 4999
+#act
+take 时装碎片 199
+take 圣·蓝月复古(女) 2
+GAMEDIAMOND - 5000
+give 神·蓝月复古(女) 1
+messagebox \\恭喜您成功进阶圣时装！
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功将“圣·蓝月复古(女)”进阶成为：神·蓝月复古(女)
+break
+#ELSEACT
+messagebox 您的条件不足!
+break

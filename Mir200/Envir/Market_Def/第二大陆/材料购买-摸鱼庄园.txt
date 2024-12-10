@@ -1,0 +1,214 @@
+[@main]
+
+#IF
+#ACT
+
+
+getdbitemfieldvalue 梦想神石	Idx	N$材料Idx1
+getdbitemfieldvalue 极品星石	Idx	N$材料Idx2
+
+MOV	S$材料展示1	 <ItemShow:<$Str(N$材料Idx1)>:0:150:-143:1>
+MOV	S$材料展示2	 <ItemShow:<$Str(N$材料Idx2)>:0:150:-143:1>
+MOV	S$材料展示3	 <ItemShow:<$Str(N$材料Idx3)>:0:0:-203:1>
+
+close
+#say
+; <>\ \ 
+; <>    <合成梦想神石|251#合成条件^-^250#需要100个魔法神石=1个梦想神石^-^161#包袱材料大于10000合成100^-^161#包袱材料大于1000合成10/@合成梦想神石>      <合成条件:/SCOLOR=250><需要100个魔法神石=1个梦想神石/SCOLOR=254> \  \
+; <>\ \  \ \
+; <>                       <购买梦想神石|249#购买价格^250#10大米*1个/@@InPutInteger32(注意：1大米=1个梦想神石，请输入购买数量，1-5000数值之间)>
+; <>        <购买极品星石|249#购买价格^250#50大米*1个/@@InPutInteger33(注意：50大米=1个极品星石，请输入购买数量，1-5000数值之间)>
+
+; \     
+
+; \  \ \                    \
+; \                                               \ \ 
+; \   
+; \<$STR(S$材料展示1)>             <$STR(S$材料展示2)>    \ \ \    \ 
+
+
+<Img|width=620|height=300|scale9t=10|scale9l=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|reset=1|esc=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32.0|y=36.0|tipsx=10|tipsy=80|color=251|size=16|251#合成条件^-^250#需要100个魔法神石=1个梦想神石^-^161#包袱材料大于10000合成100^-^161#包袱材料大于1000合成10|text=合成梦想神石|link=@合成梦想神石>
+<Text|a=0|x=1363|y=100|tipsx=10|tipsy=80|color=250|size=16|text=合成条件:>
+<Text|a=0|x=1462|y=100|tipsx=10|tipsy=80|color=254|size=16|text=需要100个魔法神石=1个梦想神石>
+
+; <Text|a=0|x=32|y=420|tipsx=10|tipsy=80|color=255|size=16|text=<$STR(S$材料展示1)><$STR(S$材料展示2)>>
+<RText|x=193.0|y=37.0|color=253|size=16|text=<合成条件：/FCOLOR=255><需要100个魔法神石=1个梦想神石/FCOLOR=254>>
+<ItemShow|x=204.0|y=92.0|width=70|height=70|itemid=<$STR(N$材料Idx1)>|itemcount=1|showtips=1|bgtype=1>
+<ItemShow|x=402.0|y=89.0|width=70|height=70|itemid=<$STR(N$材料Idx2)>|itemcount=1|showtips=1|bgtype=1>
+<Img|x=180.0|y=170.0|width=120|esc=0|img=public/1900000668.png>
+<Img|x=376.0|y=171.0|width=120|esc=0|img=public/1900000668.png>
+<Input|x=180.0|y=170.0|width=120|height=31|color=255|type=0|inputid=1|size=16>
+<Input|x=376.0|y=170.0|width=120|height=31|color=255|type=0|inputid=2|size=16>
+<Button|x=188.0|y=228.0|nimg=public/1900000612.png|color=250|size=16|submitInput=1|text=购买梦想神石|link=@购买梦想神石>
+<Button|x=385.0|y=228.0|size=16|nimg=public/1900000612.png|color=250|submitInput=2|text=购买极品星石|link=@购买极品星石>
+
+
+
+
+[@购买极品星石]
+#act
+sendmsg 9 <$NPCINPUT(2)>
+
+#or
+EQUAL <$NPCINPUT(2)>
+EQUAL <$NPCINPUT(2)> 0
+large <$NPCINPUT(2)> 5000
+#act
+MOV <$NPCINPUT(2)> 0
+goto @main
+messagebox \\请输入购买1000内数字.不能为空或者0！
+BREAK
+
+
+
+
+#IF
+NOT CHECKBAGSIZE  12
+#ACT
+MESSAGEBOX [失败]:\　\　　　　　　您的“包袱位置”不足“12个”空位置！
+break
+
+
+#IF
+#ACT
+MOV S$给材料 极品星石
+MOV N65 <$NPCINPUT(2)>
+MUL N65 50
+MOV N66 <$NPCINPUT(2)>
+MUL N66 1
+
+
+#IF
+CHECKGAMEPOINT < <$STR(N65)>
+#ACT
+messagebox \\对不起，您包袱里的大米不够<$STR(N65)>，无法购买！！
+BREAK
+
+
+
+
+#or
+CHECKGAMEPOINT > <$STR(N65)>
+CHECKGAMEPOINT = <$STR(N65)>
+#ACT
+GAMEPOINT - <$STR(N65)>
+GiveStateItem <$Str(S$给材料)> 1 1 0 0 1 1 0 <$STR(N66)>
+MessageBox \\恭喜您，用<$STR(N65)>大米购买获得：(<$STR(N66)>)个<$Str(S$给材料)>
+goto @main
+break
+
+
+[@购买梦想神石]
+
+#or
+EQUAL <$NPCINPUT(1)>
+EQUAL <$NPCINPUT(1)> 0
+large <$NPCINPUT(1)> 5000
+#act
+MOV <$NPCINPUT(1)> 0
+goto @main
+messagebox \\请输入购买1000内数字.不能为空或者0！
+BREAK
+
+
+
+
+#IF
+NOT CHECKBAGSIZE  12
+#ACT
+MESSAGEBOX [失败]:\　\　　　　　　您的“包袱位置”不足“12个”空位置！
+break
+
+
+#IF
+#ACT
+MOV S$给材料 梦想神石
+MOV N65 <$NPCINPUT(1)>
+MUL N65 10
+MOV N66 <$NPCINPUT(1)>
+MUL N66 1
+
+
+#IF
+CHECKGAMEPOINT < <$STR(N65)>
+#ACT
+messagebox \\对不起，您包袱里的大米不够<$STR(N65)>，无法购买！！
+BREAK
+
+
+
+
+#or
+CHECKGAMEPOINT > <$STR(N65)>
+CHECKGAMEPOINT = <$STR(N65)>
+#ACT
+GAMEPOINT - <$STR(N65)>
+GiveStateItem <$Str(S$给材料)> 1 1 0 0 1 1 0 <$STR(N66)>
+MessageBox \\恭喜您，用<$STR(N65)>大米购买获得：(<$STR(N66)>)个<$Str(S$给材料)>
+goto @main
+break
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@合成梦想神石]
+
+#if
+NOT checkitem 魔法神石 100
+#act
+messagebox \　\合成失败\　\您的包袱里面没有100个魔法神石
+break
+
+
+
+#if
+checkitem 魔法神石 10000
+#act
+take 魔法神石 10000
+GIVE 梦想神石 100
+
+
+
+#if
+checkitem 魔法神石 1000
+#act
+take 魔法神石 1000
+GIVE 梦想神石 10
+
+
+
+#if
+checkitem 魔法神石 100
+#act
+take 魔法神石 100
+GIVE 梦想神石 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

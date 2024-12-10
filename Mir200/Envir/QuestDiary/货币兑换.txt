@@ -1,0 +1,550 @@
+[@货币兑换]
+{
+
+;============================================================================
+
+#if
+#ACT
+MOV S$材料A1 魔法神石
+MOV S$材料A2 2亿经验卷
+
+
+
+
+close
+getdbitemfieldvalue 魔法神石	Idx	N$材料Idx1
+getdbitemfieldvalue 2亿经验卷	Idx	N$材料Idx2
+getdbitemfieldvalue 2亿经验卷	Idx	N$材料Idx3
+
+
+
+MOV	S$材料展示1	 <ItemShow:<$Str(N$材料Idx1)>:0:75:-153:1>
+MOV	S$材料展示2	 <ItemShow:<$Str(N$材料Idx2)>:0:150:-153:1>
+MOV	S$材料展示3	 <ItemShow:<$Str(N$材料Idx3)>:0:150:-153:1>
+MOV	S$材料展示4	 <ItemShow:<$Str(N$材料Idx4)>:0:0:-203:1>
+MOV	S$材料展示5	 <ItemShow:<$Str(N$材料Idx5)>:0:0:-203:1>
+MOV	S$材料展示6	 <ItemShow:<$Str(N$材料Idx6)>:0:0:-203:1>
+
+
+MOV S$设置数量1 <$STR(N28)>
+SetStringBlank S$设置数量1 7 1
+#Say
+; \  \   
+; \  <大米兑换元宝|249#兑换比例：^-^250#1大米=2000元宝/@@InPutInteger51(请您输入大米兑换的数量，注意：1大米=2000元宝，1-100000数值之间)>  {兑换比例：/FCOLOR=161} {1大米=2000元宝/FCOLOR=161}            \ \
+                                     
+; \  \ \ \  \ 
+; \          <购买魔法神石|249#购买价格^250#1点大米*1个/@@InPutInteger28(注意：1点大米=1个魔法神石，请输入大米数量，1-20000数值之间)>
+; <>       <购买2亿经验卷|249#购买价格^250#40点大米*1个/@@InPutInteger31(注意：40点大米=1个2亿经验卷，请输入购买数量，1-100数值之间)>      \ 
+
+; \  \ \                    \
+; \                                               \ \ 
+; \   
+; \<$STR(S$材料展示1)><$STR(S$材料展示3)>       \ \ \    \ 
+; \                    \ \ \ \ 
+
+<Img|width=620|height=300|reset=1|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|scale9l=10>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=31.0|y=57.0|tipsx=10|tipsy=80|color=251|size=16|text=大米兑换元宝>
+<Text|a=0|x=159.0|y=57.0|tipsx=10|tipsy=80|color=161|size=16|text=兑换比例：1大米=2000元宝>
+; <Text|a=0|x=269.0|y=57.0|tipsx=10|tipsy=80|color=161|size=16|text=1大米=2000元宝>
+<Text|a=0|x=32.0|y=116.0|tipsx=10|tipsy=80|color=251|size=16|text=购买魔法神石>
+<Text|a=0|x=159.0|y=116.0|tipsx=10|tipsy=80|color=161|size=16|text=购买比例：1大米=1个魔法神石>
+<Text|a=0|x=31.0|y=173.0|tipsx=10|tipsy=80|color=251|size=16|text=购买2亿经验卷>
+<Text|a=0|x=159.0|y=173.0|tipsx=10|tipsy=80|color=161|size=16|text=购买比例：40大米=1个2亿经验卷>
+<Input|x=406.0|y=55.0|width=100|height=25|color=255|type=0|size=16|inputid=1>
+<Input|x=409.0|y=116.0|width=100|height=25|color=255|type=0|size=16|inputid=2>
+<Input|x=406.0|y=172.0|width=100|height=25|color=255|type=0|size=16|inputid=3>
+<Button|x=524.0|y=50.0|color=250|size=16|nimg=public/1900000611.png|submitInput=1|text=兑换|link=@兑换元宝>
+<Button|x=524.0|y=116.0|color=250|size=16|nimg=public/1900000611.png|submitInput=2|text=购买|link=@购买魔法神石>
+<Button|x=524.0|y=172.0|color=250|size=16|nimg=public/1900000611.png|submitInput=3|text=购买|link=@购买经验券>
+
+
+
+[@清理包裹]
+#IF
+#ACT
+MESSAGEBOX 您确定要清空包袱里面所有的装备材料物品吗？\\请将重要的装备材料物品先存放到仓库\\清理以后官方将不负责找回，请先慎重考虑清楚\\如果点错请按取消 @确认 @取消
+[@确认]
+#act
+Gmexecute 清理垃圾 <$USERNAME>
+
+
+
+[@兑换元宝]
+#or
+equal <$NPCINPUT(1)>
+large <$NPCINPUT(1)> 10000
+#act
+sendmsg 9 <font color='#00FF00'>请输入10000以内的数量</font>
+break
+
+#if
+checkgamepoint ? <$NPCINPUT(1)>
+#elseact
+sendmsg 9 <font color='#00FF00'>大米不足[<$NPCINPUT(1)>]</font>
+break
+
+#if
+#act
+formulation <$NPCINPUT(1)>*2000 n$给元宝数
+money 元宝 + <$STR(n$给元宝数)>
+gamepoint - <$NPCINPUT(1)>
+
+[@购买魔法神石]
+#or
+equal <$NPCINPUT(2)>
+large <$NPCINPUT(2)> 20000
+#act
+sendmsg 9 <font color='#00FF00'>请输入20000以内的数量</font>
+break
+
+#if
+checkgamepoint ? <$NPCINPUT(2)>
+#elseact
+sendmsg 9 <font color='#00FF00'>大米不足[<$NPCINPUT(2)>]</font>
+break
+
+#if
+#act
+give 魔法神石 <$NPCINPUT(2)>
+gamepoint - <$NPCINPUT(2)>
+
+[@购买经验券]
+#or
+equal <$NPCINPUT(3)>
+large <$NPCINPUT(3)> 100
+#act
+sendmsg 9 <font color='#00FF00'>请输入100以内的数量</font>
+break
+
+#if
+checkgamepoint ? <$NPCINPUT(3)>
+#elseact
+sendmsg 9 <font color='#00FF00'>大米不足[<$NPCINPUT(3)>]</font>
+break
+
+#if
+#act
+
+formulation <$NPCINPUT(3)>*40 n$扣除大米数
+
+give 2亿经验卷 <$NPCINPUT(3)>
+gamepoint - <$STR(n$扣除大米数)>
+
+
+[@InPutInteger31]
+
+#IF
+NOT CHECKBAGSIZE  <$STR(N31)>
+#ACT
+MESSAGEBOX [失败]:\　\　　　　　　您的“包袱位置”不足“<$STR(N31)>个”空位置！
+break
+
+
+
+#or
+EQUAL N31
+EQUAL N31 0
+large N31 100
+#act
+MOV N31 0
+goto @货币兑换
+messagebox \\请输入购买100内数字.不能为空或者0！
+BREAK
+
+
+
+#IF
+NOT CheckBagSize <$STR(N31)>
+#ACT
+MessageBox 对不起，您的背包必须有<$STR(N31)>个以上的空格才能购买
+BREAK
+
+
+#IF
+#ACT
+MOV S$给材料 2亿经验卷
+MOV N65 <$STR(N31)>
+MUL N65 40
+MOV N66 <$STR(N31)>
+MUL N66 1
+
+
+#IF
+CHECKGAMEPOINT < <$STR(N65)>
+#ACT
+messagebox \\对不起，您包袱里的大米不够<$STR(N65)>，无法购买！！
+BREAK
+
+
+
+
+#or
+CHECKGAMEPOINT > <$STR(N65)>
+CHECKGAMEPOINT = <$STR(N65)>
+#ACT
+GAMEPOINT - <$STR(N65)>
+GiveStateItem <$Str(S$给材料)> 1 1 0 0 1 1 0 <$STR(N66)>
+MessageBox \\恭喜您，用<$STR(N65)>大米购买获得：(<$STR(N66)>)个<$Str(S$给材料)>
+goto @货币兑换
+break
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@InPutInteger28]
+
+#or
+EQUAL N28
+EQUAL N28 0
+large N28 20000
+#act
+MOV N28 0
+goto @货币兑换
+messagebox \\请输入购买2万内数字.不能为空或者0！
+BREAK
+
+
+#IF
+NOT CHECKBAGSIZE  12
+#ACT
+MESSAGEBOX [失败]:\　\　　　　　　您的“包袱位置”不足“12个”空位置！
+break
+
+
+
+#IF
+#ACT
+MOV S$给材料 魔法神石
+MOV N65 <$STR(N28)>
+MUL N65 1
+MOV N66 <$STR(N28)>
+MUL N66 1
+
+
+#IF
+CHECKGAMEPOINT < <$STR(N65)>
+#ACT
+messagebox \\对不起，您包袱里的大米不够<$STR(N65)>，无法购买！！
+BREAK
+
+
+
+
+#or
+CHECKGAMEPOINT > <$STR(N65)>
+CHECKGAMEPOINT = <$STR(N65)>
+#ACT
+GAMEPOINT - <$STR(N65)>
+GiveStateItem <$Str(S$给材料)> 1 1 0 0 1 1 0 <$STR(N66)>
+MessageBox \\恭喜您，用<$STR(N65)>大米购买获得：(<$STR(N66)>)个<$Str(S$给材料)>
+goto @货币兑换
+break
+
+
+
+
+[@InPutInteger53]
+
+#or
+EQUAL N53
+EQUAL N53 0
+large N53 10000
+#act
+messagebox \\请输入1万内数字.不能为空或者0！
+BREAK
+
+
+
+#IF
+#ACT
+MOV N73 <$STR(N53)>
+MUL N73 5
+
+MOV N74 <$STR(N53)>
+MUL N74 1
+
+
+#IF
+CHECKGAMEPOINT < <$STR(N74)>
+#ACT
+MESSAGEBOX \\\您的大米不足<$STR(N74)>个
+break
+
+
+
+#or
+CHECKGAMEPOINT = N74
+CHECKGAMEPOINT > N74
+#ACT
+GAMEPOINT -  <$STR(N74)>
+GAMEDIAMOND + <$STR(N73)>
+MessageBox \\恭喜您，用<$STR(N74)>大米兑换获得：<$STR(N73)>个点卷
+goto @货币兑换
+break
+#elseact
+MessageBox \\兑换失败：\\1.请检查您的账号上是否有<$STR(N73)>个大米\\
+break
+
+
+
+
+
+
+[@InPutInteger52]
+
+#or
+EQUAL N52
+EQUAL N52 0
+large N52 500000
+#act
+messagebox \\请输入50万内数字.不能为空或者0！
+BREAK
+
+
+
+#IF
+#ACT
+MOV N73 <$STR(N52)>
+MUL N73 100
+
+MOV N74 <$STR(N52)>
+MUL N74 1
+
+
+#IF
+CHECKGAMEGOLD < <$STR(N73)>
+#ACT
+MESSAGEBOX \\\您的元宝不足<$STR(N73)>个
+break
+
+
+
+#or
+CHECKGAMEGOLD = N73
+CHECKGAMEGOLD > N73
+#ACT
+GAMEGOLD -  <$STR(N73)>
+GAMEDIAMOND + <$STR(N74)>
+MessageBox \\恭喜您，用<$STR(N73)>元宝兑换获得：<$STR(N74)>个银子
+goto @货币兑换
+break
+#elseact
+MessageBox \\兑换失败：\\1.请检查您的账号上是否有<$STR(N73)>个元宝\\
+break
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@InPutInteger51]
+
+#or
+EQUAL N51
+EQUAL N51 0
+large N51 100000
+#act
+messagebox \\请输入10万内数字.不能为空或者0！
+BREAK
+
+
+
+#IF
+#ACT
+MOV N73 <$STR(N51)>
+MUL N73 2000
+
+MOV N74 <$STR(N51)>
+MUL N74 1
+
+
+#IF
+CHECKGAMEPOINT < <$STR(N74)>
+#ACT
+MESSAGEBOX \\\您的大米不足<$STR(N74)>个
+break
+
+
+
+#or
+CHECKGAMEPOINT = N74
+CHECKGAMEPOINT > N74
+#ACT
+GAMEPOINT -  <$STR(N74)>
+GAMEGOLD + <$STR(N73)>
+MessageBox \\恭喜您，用<$STR(N74)>大米兑换获得：<$STR(N73)>个元宝
+goto @货币兑换
+break
+#elseact
+MessageBox \\兑换失败：\\1.请检查您的账号上是否有<$STR(N74)>点大米\\
+break
+
+
+
+
+
+
+
+
+
+[@InPutInteger27]
+
+#or
+EQUAL N27
+EQUAL N27 0
+small N27 100
+large N27 500000
+#act
+messagebox \\请输入100-50万之间的数字.不能为空或者0！
+BREAK
+
+
+
+#IF
+#ACT
+MOV N73 <$STR(N27)>
+MUL N73 10000
+
+MOV N74 <$STR(N27)>
+MUL N74 1
+
+
+#IF
+CHECKGAMEGOLD < <$STR(N74)>
+#ACT
+MESSAGEBOX \\\您的元宝不足<$STR(N74)>
+break
+
+
+
+#or
+CHECKGAMEGOLD = N74
+CHECKGAMEGOLD > N74
+#ACT
+GAMEGOLD -  <$STR(N74)>
+give 金币 <$STR(N73)>
+MessageBox \\恭喜您，用<$STR(N74)>元宝兑换获得：<$STR(N73)>金币
+goto @货币兑换
+break
+#elseact
+MessageBox \\兑换失败：\\1.请检查您的账号上是否有<$STR(N74)>个元宝\\
+break
+
+
+
+
+
+
+
+
+[@InPutInteger23]
+
+#or
+EQUAL N23
+EQUAL N23 0
+small N23 100
+large N23 3000
+#act
+messagebox \\请输入100-3000之间的数字.不能为空或者0！
+BREAK
+
+
+
+#IF
+#ACT
+MOV N73 <$STR(N23)>
+MUL N73 50000
+
+MOV N74 <$STR(N23)>
+MUL N74 1
+
+
+#IF
+not checkgold <$STR(N73)>
+#ACT
+MESSAGEBOX \\\对不起，您的金币不足<$STR(N73)>，无法兑换<$STR(N74)>元宝
+break
+
+
+
+#if
+checkgold <$STR(N73)>
+#ACT
+GAMEGOLD +  <$STR(N74)>
+take 金币 <$STR(N73)>
+MessageBox \\恭喜您，用<$STR(N73)>金币兑换获得：<$STR(N74)>元宝
+goto @货币兑换
+break
+#elseact
+MessageBox \\兑换失败：\\1.请检查您的账号上是否有<$STR(N73)>个金币\\
+break
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+

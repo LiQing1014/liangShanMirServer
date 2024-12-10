@@ -1,0 +1,250 @@
+[@youxi说明]
+{
+#IF
+#ACT
+OPENMERCHANTBIGDLG 1  0 1 0 0 0 0
+#SAY
+<> <您的赞助点数量：/SCOLOR=222> {<$GAMEGLORY>点/SCOLOR=70} <本服所有装备、材料均可爆出，散人也可终极！/SCOLOR=222>\  \
+<充值20赞助点可领取/FCOLOR=253>  <青铜赞助大使/FCOLOR=94> <点击查看赞助福利|239#青铜赞助大使^254#获得1.1倍打怪经验！^254#赠送金钻贵族，永久在线回收，会员功能多多^254#赠送技能：战士开天斩、道士飓风破、法师流星火雨^253#本服技能威力惊人，让您的战力更进一步/FCOLOR=250>  <领取赞助称号/@青铜> \   \
+
+
+
+<充值50赞助点可领取/FCOLOR=253>  <白银赞助大使/FCOLOR=94> <点击查看赞助福利|239#白银赞助大使^254#获得1.2倍打怪经验！^ 254#赠送超级祝福油*5^ 254#赠送元宝*3000颗^ 254#赠送上古兵书*10^ 253#赠送幸运+10蓝玫瑰，前期打怪利器，起步更快，事半功倍！/FCOLOR=250>  <领取赞助称号/@白银> \   \
+
+<充值100赞助点可领取/FCOLOR=253> <黄金赞助大使/FCOLOR=94> <点击查看赞助福利|239#黄金赞助大使^254#获得1.3倍打怪经验！^254#赠送勋章碎片(大)*10^ 253#赠送1.2倍回收，回收元宝1.2倍加成，经济快人一步！！/FCOLOR=250>  <领取赞助称号/@黄金> \   \
+
+<充值300赞助点可领取/FCOLOR=253> <铂金赞助大使/FCOLOR=94> <点击查看赞助福利|239#钻石赞助大使^254#获得1.5倍打怪经验！^254#赠送勋章碎片(大)*10！^253#赠送称号证明*150张！^ 253#获得1.3倍真实爆率加成！/FCOLOR=250>  <领取赞助称号/@钻石> \   \
+
+
+
+<充值500赞助点可领取/FCOLOR=253> <钻石赞助大使/FCOLOR=94> <点击查看赞助福利|239#至尊赞助大使^254#获得1.8倍打怪经验！^254#赠送魂珠碎片(特)*10！^249#获得上古神技：战士逐日剑法、道士无极真气、法师灭天火！！！^253#说明：此三种神技也可通过打BOSS爆出，本服主打BOSS，BOSS爆一切！/FCOLOR=250>  <领取赞助称号/@至尊> \   \
+
+
+<提示：/FCOLOR=249><1.充值回馈为累计叠加，只需要充值数量达到即可免费领取！/FCOLOR=249>\
+<>      <2.本服主打BOSS，一切装备靠爆，后期地图BOSS众多，有时间就有一切！/FCOLOR=249>  \
+<IMGEX:1:1:19:3:412:-237/@EXIT> \
+
+
+
+
+
+[@转换]
+#IF
+#ACT
+OPENMERCHANTBIGDLG 1  0 1 0 0 0 0
+#SAY
+<IMGEX:1:1:19:3:412:-13/@EXIT>\ 
+<【/SCOLOR=250><账号保值系统/SCOLOR=244><】/SCOLOR=250> <本服所有装备、材料均可爆出，散人也可终极！/SCOLOR=249>\  \
+<说明：/SCOLOR=70><赞助点300起转，新区充值一半赞助点获得全额转区，举例如下！/SCOLOR=254>\  \
+<> <1、300点赞助账号转区，新区充值150赞助点，获得300充值金额！/SCOLOR=253>\   \
+
+<> <2、500点赞助账号转区，新区充值250赞助点，获得500充值金额！/SCOLOR=249>\   \
+
+<> <此处为举例说明、以此类推！每个角色限制一个转区名额！/FCOLOR=151>\   \
+
+
+<友情提示：/FCOLOR=249><游戏中打出红包获得的赞助点，同样享受转区福利！/FCOLOR=249>  \
+
+
+
+[@白银]
+#IF
+CHECKGAMEGLORY < 50
+#ACT
+MESSAGEBOX \\您的赞助点不足50点，无法领取白银赞助大使!
+BREAK
+
+#IF
+CHECK [431] 0
+#ACT
+MESSAGEBOX \\您还没有领取上一级赞助，请依次领取!
+BREAK
+
+#IF
+CHECK [432] 0
+CHECKGAMEGLORY > 49
+#ACT
+SET [432] 1
+GIVE 超级祝福油 5
+GIVE 首充蓝玫瑰 1
+GiveStateItem 上古兵书 1 1 1 1 1 1 1 10
+GAMEGOLD + 3000
+GuildNoticeMsg 251 249 〖赞助大使〗：恭喜玩家{「<$USERNAME>」|227:0:1}成功领取『白银赞助大使』！
+GuildNoticeMsg 251 249 〖赞助大使〗：恭喜玩家{「<$USERNAME>」|227:0:1}成功领取『白银赞助大使』！
+break
+#ELSEACT
+MESSAGEBOX \\您的赞助点不足，或您已经领取过此赞助了!
+break
+
+
+[@黄金]
+#IF
+CHECKGAMEGLORY < 100
+#ACT
+MESSAGEBOX \\您的赞助点不足100点，无法领取黄金赞助大使!
+BREAK
+
+#IF
+CHECK [432] 0
+#ACT
+MESSAGEBOX \\您还没有领取上一级赞助，请依次领取!
+BREAK
+
+#IF
+CHECK [433] 0
+CHECKGAMEGLORY > 99
+#ACT
+SET [433] 1
+GiveStateItem 勋章碎片(大) 1 1 1 1 1 1 1 10
+GuildNoticeMsg 251 249 〖赞助大使〗：恭喜玩家{「<$USERNAME>」|227:0:1}成功领取『黄金赞助大使』！
+GuildNoticeMsg 251 249 〖赞助大使〗：恭喜玩家{「<$USERNAME>」|227:0:1}成功领取『黄金赞助大使』！
+break
+#ELSEACT
+MESSAGEBOX \\您的赞助点不足，或您已经领取过此赞助了!
+break
+
+[@钻石]
+#IF
+CHECKGAMEGLORY < 300
+#ACT
+MESSAGEBOX \\您的赞助点不足300点，无法领取钻石赞助大使!
+BREAK
+
+#IF
+CHECK [433] 0
+#ACT
+MESSAGEBOX \\您还没有领取上一级赞助，请依次领取!
+BREAK
+
+#IF
+CHECK [434] 0
+CHECKGAMEGLORY > 299
+#ACT
+SET [434] 1
+GiveStateItem 勋章碎片(大) 1 1 1 1 1 1 1 10
+GiveStateItem 称号证明 1 1 1 1 1 1 1 150
+GuildNoticeMsg 251 249 〖赞助大使〗：恭喜玩家{「<$USERNAME>」|227:0:1}成功领取『铂金赞助大使』！
+GuildNoticeMsg 251 249 〖赞助大使〗：恭喜玩家{「<$USERNAME>」|227:0:1}成功领取『铂金赞助大使』！
+break
+#ELSEACT
+MESSAGEBOX \\您的赞助点不足，或您已经领取过此赞助了!
+break
+
+[@赠送转生]
+#IF
+CHECKRENEWLEVEL = 0
+#ACT
+RENEWLEVEL 3 0 0
+
+#IF
+CHECKRENEWLEVEL = 1
+#ACT
+RENEWLEVEL 2 0 0
+
+#IF
+CHECKRENEWLEVEL = 2
+#ACT
+RENEWLEVEL 1 0 0
+
+
+[@青铜]
+#IF
+CHECKGAMEGLORY < 20
+#ACT
+MESSAGEBOX \\您的赞助点不足20点，无法领取青铜赞助大使!
+BREAK
+
+#IF
+CHECK [431] 0
+checkjob taoist
+CHECKGAMEGLORY > 19
+#ACT
+SET [431] 1
+GiveStateItem 金钻贵族 1 1 1 0 1 1 1 1
+GIVE 飓风破 1
+GuildNoticeMsg 251 249 〖赞助大使〗：恭喜玩家{「<$USERNAME>」|227:0:1}成功领取『青铜赞助大使』！
+GuildNoticeMsg 251 249 〖赞助大使〗：恭喜玩家{「<$USERNAME>」|227:0:1}成功领取『青铜赞助大使』！
+break
+
+#IF
+CHECK [431] 0
+checkjob warrior
+CHECKGAMEGLORY > 19
+#ACT
+GiveStateItem 金钻贵族 1 1 1 0 1 1 1 1
+SET [431] 1
+GIVE 开天斩 1 
+GuildNoticeMsg 251 249 〖赞助大使〗：恭喜玩家{「<$USERNAME>」|227:0:1}成功领取『青铜赞助大使』！
+GuildNoticeMsg 251 249 〖赞助大使〗：恭喜玩家{「<$USERNAME>」|227:0:1}成功领取『青铜赞助大使』！
+break
+
+#IF
+CHECK [431] 0
+checkjob wizard
+CHECKGAMEGLORY > 19
+#ACT
+GiveStateItem 金钻贵族 1 1 1 0 1 1 1 1
+SET [431] 1
+GIVE 流星火雨 1
+GuildNoticeMsg 251 249 〖赞助大使〗：恭喜玩家{「<$USERNAME>」|227:0:1}成功领取『青铜赞助大使』！
+GuildNoticeMsg 251 249 〖赞助大使〗：恭喜玩家{「<$USERNAME>」|227:0:1}成功领取『青铜赞助大使』！
+break
+#ELSEACT
+MESSAGEBOX \\您的赞助点不足，或您已经领取过此赞助了!
+break
+
+
+[@至尊]
+#IF
+CHECKGAMEGLORY < 500
+#ACT
+MESSAGEBOX \\您的赞助点不足500点，无法领取钻石赞助大使!
+BREAK
+
+#IF
+CHECK [434] 0
+#ACT
+MESSAGEBOX \\您还没有领取上一级赞助，请依次领取!
+BREAK
+
+#IF
+CHECK [435] 0
+checkjob taoist
+CHECKGAMEGLORY > 499
+#ACT
+SET [435] 1
+GiveStateItem 魂珠碎片(特) 1 1 1 1 1 1 1 10
+GiveStateItem 无极真气 1 1 1 1 1 1 1 1
+GuildNoticeMsg 251 249 〖赞助大使〗：恭喜玩家{「<$USERNAME>」|227:0:1}成功领取『钻石赞助大使』！
+GuildNoticeMsg 251 249 〖赞助大使〗：恭喜玩家{「<$USERNAME>」|227:0:1}成功领取『钻石赞助大使』！
+break
+
+#IF
+CHECK [435] 0
+checkjob warrior
+CHECKGAMEGLORY > 499
+#ACT
+SET [435] 1
+GiveStateItem 魂珠碎片(特) 1 1 1 1 1 1 1 10
+GiveStateItem 逐日剑法 1 1 1 1 1 1 1 1
+GuildNoticeMsg 251 249 〖赞助大使〗：恭喜玩家{「<$USERNAME>」|227:0:1}成功领取『钻石赞助大使』！
+GuildNoticeMsg 251 249 〖赞助大使〗：恭喜玩家{「<$USERNAME>」|227:0:1}成功领取『钻石赞助大使』！
+break
+
+#IF
+CHECK [435] 0
+checkjob wizard
+CHECKGAMEGLORY > 499
+#ACT
+SET [435] 1
+GiveStateItem 魂珠碎片(特) 1 1 1 1 1 1 1 10
+GiveStateItem 灭天火 1 1 1 1 1 1 1 1
+GuildNoticeMsg 251 249 〖赞助大使〗：恭喜玩家{「<$USERNAME>」|227:0:1}成功领取『钻石赞助大使』！
+GuildNoticeMsg 251 249 〖赞助大使〗：恭喜玩家{「<$USERNAME>」|227:0:1}成功领取『钻石赞助大使』！
+break
+#ELSEACT
+MESSAGEBOX \\您的赞助点不足，或您已经领取过此赞助了!
+break
+
+
+}

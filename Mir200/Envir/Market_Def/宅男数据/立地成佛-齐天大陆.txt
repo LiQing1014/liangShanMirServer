@@ -1,0 +1,32 @@
+[@main]
+
+
+#IF
+Checkrenewlevel < 30
+#ACT
+MESSAGEBOX 对不起，您当前的转生不够，请先30转生在来！
+BREAK
+
+
+#IF
+CHECKLEVELEX < 75
+#ACT
+MESSAGEBOX 对不起，您当前的等级不够，请75级以后在来！
+BREAK
+
+
+#IF
+CheckitemW 主宰境
+#ACT
+#ELSEACT
+MESSAGEBOX 对不起，请佩戴主宰境进入！
+BREAK
+
+
+#IF
+#ACT
+Map AA44
+SENDMSG 0 {[地图公告]:|151:0:1}江湖少侠「{<$USERNAME>|250:0:1}」成功进入地图:{「<$MapTitle>」|254:0:1}打宝
+break
+
+

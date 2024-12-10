@@ -1,0 +1,350 @@
+[@会员服务]
+{
+
+#IF
+check [152] 1
+#ACT
+MOV S$吃金币状态 <关闭自动吃材料|253#点击关闭/@吃金币关闭> 
+MOV S$吃金币信息 <当前状态:/SCOLOR=7><已开启/SCOLOR=250> 
+
+
+#IF
+check [152] 0
+#ACT
+MOV S$吃金币状态 <开启自动吃材料|253#点击开启/@吃金币开启> 
+MOV S$吃金币信息 <当前状态:/SCOLOR=7><已关闭/SCOLOR=249> 
+
+#IF
+check [151] 1
+#ACT
+MOV S$吃元宝状态 <关闭自动吃元宝|253#点击关闭/@吃元宝关闭> 
+MOV S$吃元宝信息 <当前状态:/SCOLOR=7><已开启/SCOLOR=250> 
+
+
+#IF
+check [151] 0
+#ACT
+MOV S$吃元宝状态 <开启自动吃元宝|253#点击开启/@吃元宝开启> 
+MOV S$吃元宝信息 <当前状态:/SCOLOR=7><已关闭/SCOLOR=249> 
+
+#IF
+#ACT
+OPENMERCHANTBIGDLG 1 8 0 0 0 0 0
+#say
+<ImgEx:1:5:5:6:392:-16/@EXIT>
+<【贵族接待员】/FCOLOR=70> <Hot~/FCOLOR=249>  <尊贵的“/SCOLOR=87><VIP会员/SCOLOR=70><”请使用以下特权：/SCOLOR=87>\
+<Img:17:1:0:16>　\
+　　    <贵族特权：/SCOLOR=145>随身仓库，无限洗红，免费特修等福利！\ 
+　　    <会员说明：/SCOLOR=145>使用“金钻贵族”证明加入，永久享受服务！\
+　　    <友情提示：/SCOLOR=145>金币=金币，满500可提现！ <您当前金币：/SCOLOR=249><$GOLDCOUNT>\
+<--------------------------------------------------------------/AUTOCOLOR=91>\  \
+
+<「/SCOLOR=103><嗜血狂暴|253#开启需要80金币/@回收啊><」　　「/SCOLOR=103><无限洗红/@无限洗红><」　　「/SCOLOR=103><经验使者/@经验><」　　「/SCOLOR=103><点卷提取/@点卷提取><」/SCOLOR=103>\  \
+<「/SCOLOR=103><随身仓库/@storage><」　　「/SCOLOR=103><免费特修/@免费特修><」　　「/SCOLOR=103><轩辕分解|253#一个轩辕首饰可分解三颗轩辕精铁/@会员买药><」　　「/SCOLOR=103><黑市商人/@购买精魄><」/SCOLOR=103>\  \ 
+<--------------------------------------------------------------/AUTOCOLOR=91>\
+<$STR(S$吃金币状态)> <$STR(S$吃金币信息)>   <$STR(S$吃元宝状态)> <$STR(S$吃元宝信息)> \ 
+<温馨提示：/SCOLOR=249><更多功能我们会陆续更新！/SCOLOR=239> <购买1个苹果|250#购买需1500元宝/@购买苹果>   <购买5个苹果|250#购买需7500元宝/@购买5苹果> 
+
+
+　
+
+[@点卷提取]
+#if
+#ACT
+close
+#SAY
+ 　 
+<货币商人：/SCOLOR=253><为方便玩家交易点卷，特开通点卷提取业务！/SCOLOR=249>\
+<--------------------------------------------------------------/AUTOCOLOR=91>\ \
+　              <免费提取点卷，不需要支付任何费用/SCOLOR=249>\ \
+
+<点卷批量取出：/SCOLOR=250>  <取出100点卷/@100点卷>　  <取出500点卷/@500点卷>　  <取出1000点卷/@1000点卷>　 \
+
+<--------------------------------------------------------------/AUTOCOLOR=91>\ \
+
+　                                                   <返回上页/@会员服务>  \
+
+
+
+[@100点卷]
+#IF
+CHECKGAMEDIAMOND > 99
+#ACT
+GAMEDIAMOND - 100
+give 100点卷 1
+SENDMSG 7 恭喜你，提取成功！
+BREAK
+#ELSEACT
+MESSAGEBOX [失败]:您的点卷数量不足!
+BREAK
+
+[@500点卷]
+#IF
+CHECKGAMEDIAMOND > 499
+#ACT
+GAMEDIAMOND - 500
+give 500点卷 1
+SENDMSG 7 恭喜你，提取成功！
+BREAK
+#ELSEACT
+MESSAGEBOX [失败]:您的点卷数量不足!
+BREAK
+
+[@1000点卷]
+#IF
+CHECKGAMEDIAMOND > 999
+#ACT
+GAMEDIAMOND - 1000
+give 1000点卷 1
+SENDMSG 7 恭喜你，提取成功！
+BREAK
+#ELSEACT
+MESSAGEBOX [失败]:您的点卷数量不足!
+BREAK
+
+[@关闭1]
+#IF
+#ACT
+SET [153] 1
+FILTERGLOBALMSG 1
+goto @会员服务
+MESSAGEBOX 已关闭所有提示信息
+BREAK
+
+[@开启]
+#IF
+#ACT
+SET [153] 0
+FILTERGLOBALMSG 0
+goto @会员服务
+MESSAGEBOX 已开启所有提示信息
+BREAK
+
+
+
+
+[@会员买药]
+#IF
+#ACT
+MOV N11 0
+MOV N12 0
+
+
+#IF
+CHECKLEVELEX > 1
+#ACT
+TakeBagItem 轩辕战盔|轩辕战链|轩辕战镯|轩辕战戒|轩辕战靴|轩辕战带|轩辕魔盔|轩辕魔链|轩辕魔镯|轩辕魔戒|轩辕魔靴|轩辕魔带|轩辕道盔|轩辕道链|轩辕道镯|轩辕道戒|轩辕道靴|轩辕道带 46 0 0 0 0 N11 0
+
+
+#IF
+large N11 > 0
+#ACT
+MUL N12 N11 3
+GIVE 轩辕精铁 N12
+SENDMSG 7 分解成功，获得<$STR(N12)>颗轩辕精铁！
+SENDMSG 0 〖<$USERNAME>〗分解轩辕首饰成功，获得<$STR(N12)>颗轩辕精铁！
+break
+
+
+
+[@回收啊]
+#or
+CHECK [169] 1
+CHECK [168] 1
+#act
+MESSAGEBOX 你已经开启此功能了，请不要重复开启！！
+break
+
+
+#IF
+CHECKGOLD 80
+#Act
+take 金币 80
+CONFERTITLE 嗜血狂暴
+SET [169] 1
+#CALL [\游戏登陆\狂暴顶戴.txt] @狂暴顶戴
+GuildNoticeMsg 255 249 恭喜〖%s〗开启了“嗜血狂暴”状态获得神圣的上古力量!!!
+GuildNoticeMsg 255 249 恭喜〖%s〗开启了“嗜血狂暴”状态获得神圣的上古力量!!!
+#ELSEACT
+MESSAGEBOX 对不起，你的金币不足！
+break
+
+[@经验]
+#if
+#ACT
+#CALL [按钮\高级经验.txt] @高级经验
+
+
+[@购买精魄]
+#if
+#ACT
+close
+#SAY
+　\ 
+　<5点功勋卷*1/@购买10点> <1000元宝/SCOLOR=250>            <25点功勋卷*1/@购买50点> <5000元宝/SCOLOR=250>\ \ 
+　<魂珠碎片(大)*1/@购买2> <2400元宝/SCOLOR=250>         <勋章碎片(大)*1/@购买112> <2400元宝/SCOLOR=250>\ \ 
+　<魂珠碎片(特)*1/@购买3> <7200元宝/SCOLOR=250>         <勋章碎片(特)*1/@购买113> <7200元宝/SCOLOR=250>\ \ 
+
+
+\
+<温馨提示：/SCOLOR=249><中高级地图小怪爆出魂珠碎片和勋章碎片/SCOLOR=255>     <返回首页/@会员服务>  \
+
+[@购买5苹果]
+#IF
+CHECKGAMEGOLD > 7499
+#ACT
+GAMEGOLD - 7500
+give 苹果 5
+SENDMSG 6 购买成功，获得5个苹果
+BREAK
+#ELSEACT
+MESSAGEBOX [失败]:您的元宝不足!
+
+[@购买苹果]
+#IF
+CHECKGAMEGOLD > 1499
+#ACT
+GAMEGOLD - 1500
+give 苹果 1
+SENDMSG 6 购买成功，获得1个苹果
+BREAK
+#ELSEACT
+MESSAGEBOX [失败]:您的元宝不足!
+
+[@购买10点]
+#IF
+CHECKGAMEGOLD > 999
+#ACT
+GAMEGOLD - 1000
+give 5点功勋卷 1
+SENDMSG 6 购买成功，5点功勋卷
+BREAK
+#ELSEACT
+MESSAGEBOX [失败]:您的元宝不足!
+
+[@购买50点]
+#IF
+CHECKGAMEGOLD > 4999
+#ACT
+GAMEGOLD - 5000
+give 25点功勋卷 1
+SENDMSG 6 购买成功，25点功勋卷
+BREAK
+#ELSEACT
+MESSAGEBOX [失败]:您的元宝不足!
+
+[@购买2]
+#IF
+CHECKGAMEGOLD > 2399
+#ACT
+GAMEGOLD - 2400
+give 魂珠碎片(大) 1
+SENDMSG 6 购买成功，获得魂珠碎片(大)
+BREAK
+#ELSEACT
+MESSAGEBOX [失败]:您的元宝不足!
+
+[@购买3]
+#IF
+CHECKGAMEGOLD > 7199
+#ACT
+GAMEGOLD - 7200
+give 魂珠碎片(特) 1
+SENDMSG 6 购买成功，获得魂珠碎片(特)
+BREAK
+#ELSEACT
+MESSAGEBOX [失败]:您的元宝不足!
+
+[@购买111]
+#IF
+CHECKGAMEGOLD > 799
+#ACT
+GAMEGOLD - 800
+give 勋章碎片(中) 1
+SENDMSG 6 购买成功，获得勋章碎片(中)
+BREAK
+#ELSEACT
+MESSAGEBOX [失败]:您的元宝不足!
+
+[@购买112]
+#IF
+CHECKGAMEGOLD > 2399
+#ACT
+GAMEGOLD - 2400
+give 勋章碎片(大) 1
+SENDMSG 6 购买成功，获得勋章碎片(大)
+BREAK
+#ELSEACT
+MESSAGEBOX [失败]:您的元宝不足!
+
+[@购买113]
+#IF
+CHECKGAMEGOLD > 7199
+#ACT
+GAMEGOLD - 7200
+give 勋章碎片(特) 1
+SENDMSG 6 购买成功，获得勋章碎片(特)
+BREAK
+#ELSEACT
+MESSAGEBOX [失败]:您的元宝不足!
+
+
+
+[@会员神力]
+#IF
+CHECKNAMELIST ..\QuestDiary\每日清理\会员神力.txt
+#ACT
+MESSAGEBOX 你已经领取过了,请明天再来!
+BREAK
+
+#IF
+check [100] 1
+#ACT
+GAMEGLORY + 10
+messagebox \\[会员服务]：恭喜您领取了每日10荣誉值奖励
+AddNAMELIST ..\QuestDiary\每日清理\会员神力.txt
+BREAK
+
+[@免费特修]
+#IF
+check [100] 1
+#ACT
+ACTREPAIRALL
+SENDMSG 6 你身上的装备全部特修好了
+break
+
+[@每日奖励]
+#IF
+CHECKNAMELIST ..\QuestDiary\每日清理\每日奖励.txt
+#ACT
+MESSAGEBOX \\你已经领取过了,请明天再来!
+BREAK
+
+#IF
+check [100] 1
+#ACT
+GAMEGOLD + 500
+messagebox \\[会员服务]：恭喜您领取了每日500元宝奖励
+AddNAMELIST ..\QuestDiary\每日清理\每日奖励.txt
+BREAK
+
+[@无限洗红]
+#IF
+check [100] 1
+CHECKPKPOINTEX  < 100
+#ACT
+MESSAGEBOX \\你都没红名，别开玩笑行吗？
+break
+
+#IF
+check [100] 1
+#ACT
+CHANGEPKPOINT = 0
+SENDMSG 6 你的PK点数已经清除.
+break
+
+
+
+
+
+}

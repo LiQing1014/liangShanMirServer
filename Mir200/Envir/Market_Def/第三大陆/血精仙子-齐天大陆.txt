@@ -1,0 +1,417 @@
+[@Main]
+
+#IF
+#ACT
+close
+;OPENMERCHANTBIGDLG 1 557 1 4 0 0 1 400 0
+#SAY
+; <血石使者/SCOLOR=154> <New/SCOLOR=249>\ 
+; <>  <天命人，希望你能更深沉、勇敢，能充满战士的魄力和英雄的勇气/SCOLOR=230>\
+; <在这个动荡不安的世界，期待着被探索与恢复..../SCOLOR=230>\  \
+; <[武神血石]|250#每秒恢复400HPMP/@无用>        <属性：><每秒恢复400HPMP/AUTOCOLOR=250>   <材料打造|250#打造条件：^-^254#1.悟空宝石*10^-^251#2.元宝*600W^-^250#3.魔龙血石*1/@元宝武神血石>   <大米打造|250#打造条件：^-^253#1.大米*1200^-^250#2.魔龙血石*1/@大米武神血石>\ 
+; <[轩辕血石]|250#每秒恢复450HPMP/@无用>        <属性：><每秒恢复450HPMP/AUTOCOLOR=250>   <材料打造|250#打造条件：^-^254#1.悟空宝石*20^-^251#2.元宝*700W^-^250#3.武神血石*1/@元宝轩辕血石>   <大米打造|250#打造条件：^-^253#1.大米*1400^-^250#2.武神血石*1/@大米轩辕血石>\ 
+; <[圣·轩辕血石]|250#每秒恢复500HPMP/@无用>    <属性：><每秒恢复500HPMP/AUTOCOLOR=250>   <材料打造|250#打造条件：^-^254#1.悟空宝石*30^-^251#2.元宝*800W^-^250#3.轩辕血石*1/@元宝圣·轩辕血石>   <大米打造|250#打造条件：^-^253#1.大米*1600^-^250#2.轩辕血石*1/@大米圣·轩辕血石>\ 
+; <[神·轩辕血石]|250#每秒恢复550HPMP/@无用>    <属性：><每秒恢复550HPMP/AUTOCOLOR=250>   <材料打造|250#打造条件：^-^254#1.悟空宝石*40^-^251#2.元宝*900W^-^250#3.圣·轩辕血石*1/@元宝神·轩辕血石>   <大米打造|250#打造条件：^-^253#1.大米*1800^-^250#2.圣·轩辕血石*1/@大米神·轩辕血石>\ 
+; <[蓝月复古·血石]|250#每秒恢复600HPMP/@无用>  <属性：><每秒恢复600HPMP/AUTOCOLOR=250>   <材料打造|250#打造条件：^-^254#1.悟空宝石*50^-^251#2.元宝*1000W^-^250#3.神·轩辕血石*1/@元宝蓝月复古·血石>   <大米打造|250#打造条件：^-^253#1.大米*2000^-^250#2.神·轩辕血石*1/@大米蓝月复古·血石>\ 
+
+
+<Img|width=620|height=300|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|reset=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=23.0|y=25.0|tipsx=10|tipsy=80|color=154|size=18|text=血石使者>
+<Text|a=0|x=111.0|y=25.0|tipsx=10|tipsy=80|color=249|size=18|text=New>
+<Text|a=0|x=23.0|y=45.0|tipsx=10|tipsy=80|color=230|size=18|text=天命人，希望你能更深沉、勇敢，能充满战士的魄力和英雄的勇气>
+<Text|a=0|x=23.0|y=65.0|tipsx=10|tipsy=80|color=230|size=18|text=在这个动荡不安的世界，期待着被探索与恢复....>
+<Text|a=0|x=23.0|y=105.0|tipsx=10|tipsy=80|color=251|size=18|text=[武神血石]|link=@无用>
+<RText|a=0|x=150.0|y=105.0|tipsx=10|tipsy=80|color=250|size=18|text=<属性：/FCOLOR=249>每秒恢复400HPMP>
+<Text|a=0|x=398.0|y=105.0|tipsx=10|tipsy=80|color=251|size=18|text=材料打造|link=@元宝武神血石>
+<Text|a=0|x=500.0|y=105.0|tipsx=10|tipsy=80|color=251|size=18|text=大米打造|link=@大米武神血石>
+<Text|a=0|x=23.0|y=125.0|tipsx=10|tipsy=80|color=251|size=18|text=[轩辕血石]|link=@无用>
+<RText|a=0|x=150.0|y=125.0|tipsx=10|tipsy=80|color=250|size=18|text=<属性：/FCOLOR=249>每秒恢复450HPMP>
+<Text|a=0|x=398.0|y=125.0|tipsx=10|tipsy=80|color=251|size=18|text=材料打造|link=@元宝轩辕血石>
+<Text|a=0|x=500.0|y=125.0|tipsx=10|tipsy=80|color=251|size=18|text=大米打造|link=@大米轩辕血石>
+<Text|a=0|x=23.0|y=145.0|tipsx=10|tipsy=80|color=251|size=18|text=[圣·轩辕血石]|link=@无用>
+<RText|a=0|x=150.0|y=145.0|tipsx=10|tipsy=80|color=250|size=18|text=<属性：/FCOLOR=249>每秒恢复500HPMP>
+<Text|a=0|x=398.0|y=145.0|tipsx=10|tipsy=80|color=251|size=18|text=材料打造|link=@元宝圣·轩辕血石>
+<Text|a=0|x=500.0|y=145.0|tipsx=10|tipsy=80|color=251|size=18|text=大米打造|link=@大米圣·轩辕血石>
+<Text|a=0|x=23.0|y=165.0|tipsx=10|tipsy=80|color=251|size=18|text=[神·轩辕血石]|link=@无用>
+<RText|a=0|x=150.0|y=165.0|tipsx=10|tipsy=80|color=250|size=18|text=<属性：/FCOLOR=249>每秒恢复550HPMP>
+<Text|a=0|x=398.0|y=165.0|tipsx=10|tipsy=80|color=251|size=18|text=材料打造|link=@元宝神·轩辕血石>
+<Text|a=0|x=500.0|y=165.0|tipsx=10|tipsy=80|color=251|size=18|text=大米打造|link=@大米神·轩辕血石>
+<Text|a=0|x=23.0|y=185.0|tipsx=10|tipsy=80|color=251|size=18|text=[蓝月复古·血石]|link=@无用>
+<RText|a=0|x=150.0|y=185.0|tipsx=10|tipsy=80|color=250|size=18|text=<属性：/FCOLOR=249>每秒恢复600HPMP>
+<Text|a=0|x=398.0|y=185.0|tipsx=10|tipsy=80|color=251|size=18|text=材料打造|link=@元宝蓝月复古·血石>
+<Text|a=0|x=500.0|y=185.0|tipsx=10|tipsy=80|color=251|size=18|text=大米打造|link=@大米蓝月复古·血石>
+
+
+[@元宝蓝月复古·血石]
+
+#IF
+CHECKGAMEGOLD < 10000000
+#ACT
+MESSAGEBOX 对不起，您的账户上元宝不足10000000个，请好好检查！
+break
+
+#IF
+NOT CHECKITEM 悟空宝石 50
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有50个悟空宝石，无法打造！
+break
+
+
+
+
+#IF
+NOT CHECKITEM 神·轩辕血石 1
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有1个神·轩辕血石，无法打造！
+break
+
+
+
+
+#IF
+#Act
+GAMEGOLD - 10000000
+TAKE 悟空宝石 50
+TAKE 神·轩辕血石 1
+Give 蓝月复古·血石 1
+SendCenterMsg 250 0 【提示】：恭喜您成功打造一个【蓝月复古·血石】 0 3
+Break
+
+
+
+
+[@元宝神·轩辕血石]
+
+#IF
+CHECKGAMEGOLD < 9000000
+#ACT
+MESSAGEBOX 对不起，您的账户上元宝不足9000000个，请好好检查！
+break
+
+#IF
+NOT CHECKITEM 悟空宝石 40
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有40个悟空宝石，无法打造！
+break
+
+
+
+
+#IF
+NOT CHECKITEM 圣·轩辕血石 1
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有1个圣·轩辕血石，无法打造！
+break
+
+
+
+
+#IF
+#Act
+GAMEGOLD - 9000000
+TAKE 悟空宝石 40
+TAKE 圣·轩辕血石 1
+Give 神·轩辕血石 1
+SendCenterMsg 250 0 【提示】：恭喜您成功打造一个【神·轩辕血石】 0 3
+Break
+
+
+
+
+
+
+
+[@元宝圣·轩辕血石]
+
+#IF
+CHECKGAMEGOLD < 8000000
+#ACT
+MESSAGEBOX 对不起，您的账户上元宝不足8000000个，请好好检查！
+break
+
+#IF
+NOT CHECKITEM 悟空宝石 30
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有30个悟空宝石，无法打造！
+break
+
+
+
+
+#IF
+NOT CHECKITEM 轩辕血石 1
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有1个轩辕血石，无法打造！
+break
+
+
+
+
+#IF
+#Act
+GAMEGOLD - 8000000
+TAKE 悟空宝石 30
+TAKE 轩辕血石 1
+Give 圣·轩辕血石 1
+SendCenterMsg 250 0 【提示】：恭喜您成功打造一个【圣·轩辕血石】 0 3
+Break
+
+
+
+
+
+
+
+
+[@元宝轩辕血石]
+
+#IF
+CHECKGAMEGOLD < 7000000
+#ACT
+MESSAGEBOX 对不起，您的账户上元宝不足7000000个，请好好检查！
+break
+
+#IF
+NOT CHECKITEM 悟空宝石 20
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有20个悟空宝石，无法打造！
+break
+
+
+
+
+#IF
+NOT CHECKITEM 武神血石 1
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有1个武神血石，无法打造！
+break
+
+
+
+
+#IF
+#Act
+GAMEGOLD - 7000000
+TAKE 悟空宝石 20
+TAKE 武神血石 1
+Give 轩辕血石 1
+SendCenterMsg 250 0 【提示】：恭喜您成功打造一个【轩辕血石】 0 3
+Break
+
+
+
+
+
+
+
+
+
+
+[@元宝武神血石]
+
+#IF
+CHECKGAMEGOLD < 6000000
+#ACT
+MESSAGEBOX 对不起，您的账户上元宝不足6000000个，请好好检查！
+break
+
+#IF
+NOT CHECKITEM 魔龙血石 1
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有1个魔龙血石，无法打造！
+break
+
+#IF
+NOT CHECKITEM 悟空宝石 10
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有10个悟空宝石，无法打造！
+break
+
+
+
+
+#IF
+#Act
+GAMEGOLD - 6000000
+TAKE 悟空宝石 10
+TAKE 魔龙血石 1
+Give 武神血石 1
+SendCenterMsg 250 0 【提示】：恭喜您成功打造一个【武神血石】 0 3
+Break
+
+
+
+
+[@大米蓝月复古·血石]
+
+#IF
+CHECKGAMEPOINT < 2000
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足2000点，请好好检查！
+break
+
+
+
+
+#IF
+NOT CHECKITEM 神·轩辕血石 1
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有1个神·轩辕血石，无法打造！
+break
+
+
+
+
+#IF
+#Act
+GAMEPOINT - 2000
+TAKE 神·轩辕血石 1
+Give 蓝月复古·血石 1
+SendCenterMsg 250 0 【提示】：恭喜您成功打造一个【蓝月复古·血石】 0 3
+Break
+
+
+
+
+[@大米神·轩辕血石]
+
+#IF
+CHECKGAMEPOINT < 1800
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足1800点，请好好检查！
+break
+
+
+
+#IF
+NOT CHECKITEM 圣·轩辕血石 1
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有1个圣·轩辕血石，无法打造！
+break
+
+
+
+
+#IF
+#Act
+GAMEPOINT - 1800
+TAKE 圣·轩辕血石 1
+Give 神·轩辕血石 1
+SendCenterMsg 250 0 【提示】：恭喜您成功打造一个【神·轩辕血石】 0 3
+Break
+
+
+
+
+
+
+
+[@大米圣·轩辕血石]
+
+
+#IF
+CHECKGAMEPOINT < 1600
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足1600点，请好好检查！
+break
+
+
+
+
+#IF
+NOT CHECKITEM 轩辕血石 1
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有1个轩辕血石，无法打造！
+break
+
+
+
+
+#IF
+#Act
+GAMEPOINT - 1600
+TAKE 轩辕血石 1
+Give 圣·轩辕血石 1
+SendCenterMsg 250 0 【提示】：恭喜您成功打造一个【圣·轩辕血石】 0 3
+Break
+
+
+
+
+
+
+
+
+[@大米轩辕血石]
+
+#IF
+CHECKGAMEPOINT < 1400
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足1400点，请好好检查！
+break
+
+
+
+
+#IF
+NOT CHECKITEM 武神血石 1
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有1个武神血石，无法打造！
+break
+
+
+
+
+#IF
+#Act
+GAMEPOINT - 1400
+TAKE 武神血石 1
+Give 轩辕血石 1
+SendCenterMsg 250 0 【提示】：恭喜您成功打造一个【轩辕血石】 0 3
+Break
+
+
+
+
+
+
+
+
+
+
+[@大米武神血石]
+
+#IF
+CHECKGAMEPOINT < 1200
+#ACT
+MESSAGEBOX 对不起，您的账户上大米不足1200点，请好好检查！
+break
+
+
+
+#IF
+NOT CHECKITEM 魔龙血石 1
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有1个魔龙血石，无法打造！
+break
+
+
+
+
+
+
+#IF
+#Act
+GAMEPOINT - 1200
+TAKE 魔龙血石 1
+Give 武神血石 1
+SendCenterMsg 250 0 【提示】：恭喜您成功打造一个【武神血石】 0 3
+Break
+
+
+
+
+
+

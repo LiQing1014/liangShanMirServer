@@ -1,0 +1,368 @@
+[@杀怪触发]
+{
+
+
+#IF
+CHECKLEVELEX < 100
+#ACT
+CHANGECUSTOMITEMPROGRESSBARVALUE 16 0 0 + 1
+
+#IF
+CHECKLEVELEX > 99
+#ACT
+CHANGECUSTOMITEMPROGRESSBARVALUE 16 0 0 + 2
+
+#OR
+CHECKTEXTLIST ..\QuestDiary\全部通用限时\刀魂\杀怪触发\BOSS名单.txt <$KILLMONNAME>
+#ACT
+CHANGECUSTOMITEMPROGRESSBARVALUE 16 0 0 + 20
+
+#IF
+#ACT
+MOVR N98 1 10
+CHANGECUSTOMITEMPROGRESSBARVALUE 15 0 0 + <$STR(n98)>
+
+
+
+
+#IF
+checkitemw 嘟嘟神盾 1
+#ACT
+CHANGECustomItemProgressbar 16 0 0 1
+CHANGECustomItemProgressbar 16 0 1 盾气值
+CHANGECustomItemProgressbar 16 0 2 103
+CHANGECustomItemProgressbar 16 0 3 1
+CHANGECustomItemProgressbar 16 0 4 2
+CHANGECustomItemProgressbarValue 16 0 1 = 1000
+UpDateBoxItem 0
+
+
+
+
+#IF
+CheckBagSize 5
+checkitemw 嘟嘟神盾 1
+CHECKCUSTOMITEMPROGRESSBARVALUE 16 0 0 > 999
+#ACT
+takew 嘟嘟神盾 1
+GIVE 嘟嘟神盾·Lv1 1
+AutoTakeOnItem 嘟嘟神盾·Lv1 16
+GOTO @给予1
+BREAK
+
+#IF
+CheckBagSize 5
+checkitemw 嘟嘟神盾·Lv1 1
+CHECKCUSTOMITEMPROGRESSBARVALUE 16 0 0 > 1499
+#ACT
+takew 嘟嘟神盾·Lv1 1
+GIVE 嘟嘟神盾·Lv2 1
+AutoTakeOnItem 嘟嘟神盾·Lv2 16
+GOTO @给予2
+BREAK
+
+#IF
+CheckBagSize 5
+checkitemw 嘟嘟神盾·Lv2 1
+CHECKCUSTOMITEMPROGRESSBARVALUE 16 0 0 > 1999
+#ACT
+takew 嘟嘟神盾·Lv2 1
+GIVE 嘟嘟神盾·Lv3 1
+AutoTakeOnItem 嘟嘟神盾·Lv3 16
+GOTO @给予3
+BREAK
+
+#IF
+CheckBagSize 5
+checkitemw 嘟嘟神盾·Lv3 1
+CHECKCUSTOMITEMPROGRESSBARVALUE 16 0 0 > 2999
+#ACT
+takew 嘟嘟神盾·Lv3 1
+GIVE 嘟嘟神盾·Lv4 1
+AutoTakeOnItem 嘟嘟神盾·Lv4 16
+GOTO @给予4
+BREAK
+
+#IF
+CheckBagSize 5
+checkitemw 嘟嘟神盾·Lv4 1
+CHECKCUSTOMITEMPROGRESSBARVALUE 16 0 0 > 3999
+#ACT
+takew 嘟嘟神盾·Lv4 1
+GIVE 嘟嘟神盾·Lv5 1
+AutoTakeOnItem 嘟嘟神盾·Lv5 16
+GOTO @给予5
+BREAK
+
+#IF
+CheckBagSize 5
+checkitemw 嘟嘟神盾·Lv5 1
+CHECKCUSTOMITEMPROGRESSBARVALUE 16 0 0 > 4999
+#ACT
+takew 嘟嘟神盾·Lv5 1
+GIVE 嘟嘟神盾·Lv6 1
+AutoTakeOnItem 嘟嘟神盾·Lv6 16
+GOTO @给予6
+BREAK
+
+#IF
+CheckBagSize 5
+checkitemw 嘟嘟神盾·Lv6 1
+CHECKCUSTOMITEMPROGRESSBARVALUE 16 0 0 > 5999
+#ACT
+takew 嘟嘟神盾·Lv6 1
+GIVE 嘟嘟神盾·Lv7 1
+AutoTakeOnItem 嘟嘟神盾·Lv7 16
+GOTO @给予7
+BREAK
+
+#IF
+CheckBagSize 5
+checkitemw 嘟嘟神盾·Lv7 1
+CHECKCUSTOMITEMPROGRESSBARVALUE 16 0 0 > 7999
+#ACT
+takew 嘟嘟神盾·Lv7 1
+GIVE 嘟嘟神盾·Lv8 1
+AutoTakeOnItem 嘟嘟神盾·Lv8 16
+GOTO @给予8
+BREAK
+
+#IF
+CheckBagSize 5
+checkitemw 嘟嘟神盾·Lv8 1
+CHECKCUSTOMITEMPROGRESSBARVALUE 16 0 0 > 9999
+#ACT
+takew 嘟嘟神盾·Lv8 1
+GIVE 嘟嘟神盾·Lv9 1
+AutoTakeOnItem 嘟嘟神盾·Lv9 16
+GOTO @给予9
+BREAK
+
+
+#IF
+CheckBagSize 5
+checkitemw 嘟嘟神盾·Lv9 1
+CHECKCUSTOMITEMPROGRESSBARVALUE 16 0 0 > 19999
+#ACT
+takew 嘟嘟神盾·Lv9 1
+GIVE 嘟嘟神盾·Lv10 1
+AutoTakeOnItem 嘟嘟神盾·Lv10 16
+GOTO @给予10
+BREAK
+
+#IF
+CheckBagSize 5
+checkitemw 嘟嘟神盾·Lv10 1
+CHECKCUSTOMITEMPROGRESSBARVALUE 16 0 0 > 29999
+#ACT
+takew 嘟嘟神盾·Lv10 1
+GIVE 嘟嘟神盾·Lv11 1
+AutoTakeOnItem 嘟嘟神盾·Lv11 16
+GOTO @给予11
+BREAK
+
+#IF
+CheckBagSize 5
+checkitemw 嘟嘟神盾·Lv11 1
+CHECKCUSTOMITEMPROGRESSBARVALUE 16 0 0 > 39999
+#ACT
+takew 嘟嘟神盾·Lv11 1
+GIVE 嘟嘟神盾·Lv12 1
+AutoTakeOnItem 嘟嘟神盾·Lv12 16
+GOTO @给予12
+BREAK
+
+#IF
+CheckBagSize 5
+checkitemw 嘟嘟神盾·Lv12 1
+CHECKCUSTOMITEMPROGRESSBARVALUE 16 0 0 > 49999
+#ACT
+takew 嘟嘟神盾·Lv12 1
+GIVE 嘟嘟神盾·Lv13 1
+AutoTakeOnItem 嘟嘟神盾·Lv13 16
+GOTO @给予13
+BREAK
+
+#IF
+CheckBagSize 5
+checkitemw 嘟嘟神盾·Lv13 1
+CHECKCUSTOMITEMPROGRESSBARVALUE 16 0 0 > 59999
+#ACT
+takew 嘟嘟神盾·Lv13 1
+GIVE 嘟嘟神盾·Lv14 1
+AutoTakeOnItem 嘟嘟神盾·Lv14 16
+GOTO @给予14
+BREAK
+
+
+#IF
+CheckBagSize 5
+checkitemw 嘟嘟神盾·Lv14 1
+CHECKCUSTOMITEMPROGRESSBARVALUE 16 0 0 > 69999
+#ACT
+takew 嘟嘟神盾·Lv14 1
+GIVE 嘟嘟神盾·终极 1
+AutoTakeOnItem 嘟嘟神盾·终极 16
+BREAK
+
+
+[@给予1]
+#IF
+#ACT
+CHANGECustomItemProgressbar 16 0 0 1
+CHANGECustomItemProgressbar 16 0 1 盾气值
+CHANGECustomItemProgressbar 16 0 2 103
+CHANGECustomItemProgressbar 16 0 3 1
+CHANGECustomItemProgressbar 16 0 4 2
+CHANGECustomItemProgressbarValue 16 0 1 = 1500
+UpDateBoxItem 0
+
+
+[@给予2]
+#IF
+#ACT
+CHANGECustomItemProgressbar 16 0 0 1
+CHANGECustomItemProgressbar 16 0 1 盾气值
+CHANGECustomItemProgressbar 16 0 2 103
+CHANGECustomItemProgressbar 16 0 3 1
+CHANGECustomItemProgressbar 16 0 4 2
+CHANGECustomItemProgressbarValue 16 0 1 = 2000
+UpDateBoxItem 0
+
+
+[@给予3]
+#IF
+#ACT
+CHANGECustomItemProgressbar 16 0 0 1
+CHANGECustomItemProgressbar 16 0 1 盾气值
+CHANGECustomItemProgressbar 16 0 2 103
+CHANGECustomItemProgressbar 16 0 3 1
+CHANGECustomItemProgressbar 16 0 4 2
+CHANGECustomItemProgressbarValue 16 0 1 = 3000
+UpDateBoxItem 0
+
+[@给予4]
+#IF
+#ACT
+CHANGECustomItemProgressbar 16 0 0 1
+CHANGECustomItemProgressbar 16 0 1 盾气值
+CHANGECustomItemProgressbar 16 0 2 103
+CHANGECustomItemProgressbar 16 0 3 1
+CHANGECustomItemProgressbar 16 0 4 2
+CHANGECustomItemProgressbarValue 16 0 1 = 4000
+UpDateBoxItem 0
+
+[@给予5]
+#IF
+#ACT
+CHANGECustomItemProgressbar 16 0 0 1
+CHANGECustomItemProgressbar 16 0 1 盾气值
+CHANGECustomItemProgressbar 16 0 2 103
+CHANGECustomItemProgressbar 16 0 3 1
+CHANGECustomItemProgressbar 16 0 4 2
+CHANGECustomItemProgressbarValue 16 0 1 = 5000
+UpDateBoxItem 0
+
+[@给予6]
+#IF
+#ACT
+CHANGECustomItemProgressbar 16 0 0 1
+CHANGECustomItemProgressbar 16 0 1 盾气值
+CHANGECustomItemProgressbar 16 0 2 103
+CHANGECustomItemProgressbar 16 0 3 1
+CHANGECustomItemProgressbar 16 0 4 2
+CHANGECustomItemProgressbarValue 16 0 1 = 6000
+UpDateBoxItem 0
+
+[@给予7]
+#IF
+#ACT
+CHANGECustomItemProgressbar 16 0 0 1
+CHANGECustomItemProgressbar 16 0 1 盾气值
+CHANGECustomItemProgressbar 16 0 2 103
+CHANGECustomItemProgressbar 16 0 3 1
+CHANGECustomItemProgressbar 16 0 4 2
+CHANGECustomItemProgressbarValue 16 0 1 = 8000
+UpDateBoxItem 0
+
+[@给予8]
+#IF
+#ACT
+CHANGECustomItemProgressbar 16 0 0 1
+CHANGECustomItemProgressbar 16 0 1 盾气值
+CHANGECustomItemProgressbar 16 0 2 103
+CHANGECustomItemProgressbar 16 0 3 1
+CHANGECustomItemProgressbar 16 0 4 2
+CHANGECustomItemProgressbarValue 16 0 1 = 10000
+UpDateBoxItem 0
+
+[@给予9]
+#IF
+#ACT
+CHANGECustomItemProgressbar 16 0 0 1
+CHANGECustomItemProgressbar 16 0 1 盾气值
+CHANGECustomItemProgressbar 16 0 2 103
+CHANGECustomItemProgressbar 16 0 3 1
+CHANGECustomItemProgressbar 16 0 4 2
+CHANGECustomItemProgressbarValue 16 0 1 = 20000
+UpDateBoxItem 0
+
+[@给予10]
+#IF
+#ACT
+CHANGECustomItemProgressbar 16 0 0 1
+CHANGECustomItemProgressbar 16 0 1 盾气值
+CHANGECustomItemProgressbar 16 0 2 103
+CHANGECustomItemProgressbar 16 0 3 1
+CHANGECustomItemProgressbar 16 0 4 2
+CHANGECustomItemProgressbarValue 16 0 1 = 30000
+UpDateBoxItem 0
+
+
+[@给予11]
+#IF
+#ACT
+CHANGECustomItemProgressbar 16 0 0 1
+CHANGECustomItemProgressbar 16 0 1 盾气值
+CHANGECustomItemProgressbar 16 0 2 103
+CHANGECustomItemProgressbar 16 0 3 1
+CHANGECustomItemProgressbar 16 0 4 2
+CHANGECustomItemProgressbarValue 16 0 1 = 40000
+UpDateBoxItem 0
+
+
+[@给予12]
+#IF
+#ACT
+CHANGECustomItemProgressbar 16 0 0 1
+CHANGECustomItemProgressbar 16 0 1 盾气值
+CHANGECustomItemProgressbar 16 0 2 103
+CHANGECustomItemProgressbar 16 0 3 1
+CHANGECustomItemProgressbar 16 0 4 2
+CHANGECustomItemProgressbarValue 16 0 1 = 50000
+UpDateBoxItem 0
+
+[@给予13]
+#IF
+#ACT
+CHANGECustomItemProgressbar 16 0 0 1
+CHANGECustomItemProgressbar 16 0 1 盾气值
+CHANGECustomItemProgressbar 16 0 2 103
+CHANGECustomItemProgressbar 16 0 3 1
+CHANGECustomItemProgressbar 16 0 4 2
+CHANGECustomItemProgressbarValue 16 0 1 = 60000
+UpDateBoxItem 0
+
+[@给予14]
+#IF
+#ACT
+CHANGECustomItemProgressbar 16 0 0 1
+CHANGECustomItemProgressbar 16 0 1 盾气值
+CHANGECustomItemProgressbar 16 0 2 103
+CHANGECustomItemProgressbar 16 0 3 1
+CHANGECustomItemProgressbar 16 0 4 2
+CHANGECustomItemProgressbarValue 16 0 1 = 70000
+UpDateBoxItem 0
+
+
+}

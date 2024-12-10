@@ -1,0 +1,171 @@
+[@main]
+#act
+close
+#say
+<武学宗师/SCOLOR=154>\
+　　<我的一生都在追求无穷的力量，提升自生潜力才是重要的生存法则！/SCOLOR=87>\ 
+上古时代遗留的<“秘籍残页”>,隐藏着无穷的奥秘,传说拥有秘籍残页可\
+将自身技能强化升华，使武者能发挥出超越自身的攻击力… <护体神盾/@上古技能合成>\ 
+　  <开 天 斩/@开天斩> → <合成条件: (２０张秘籍残页 + ５０００元宝)/SCOLOR=145>\　　\ 
+　  <流星火雨/@流星火雨> → <合成条件: (２０张秘籍残页 + ５０００元宝)/SCOLOR=147>\ 　　\  
+　  <群体施毒/@群体施毒> → <合成条件: (２０张秘籍残页 + ５０００元宝)/SCOLOR=147>\　　\ 
+
+
+
+
+
+[@上古技能合成]
+#or
+CHECKJOB warrior
+CHECKJOB wizard 
+#ACT
+close
+#SAY
+<武学宗师/SCOLOR=154>\
+　　<我的一生都在追求无穷的力量，提升自生潜力才是重要的生存法则！/SCOLOR=87>\ 
+上古时代遗留的<“秘籍残页”>,隐藏着无穷的奥秘,传说拥有秘籍残页可\
+将自身技能强化升华，使武者能发挥出超越自身的攻击力……    \  \   \
+　  <修炼护体神盾/@护体神盾> → <需要条件: (３０张秘籍残页 + 188RMB点)/SCOLOR=145>\
+
+#if
+CHECKJOB taoist 
+#ACT
+close
+#SAY
+<武学宗师/SCOLOR=154>\
+　　<我的一生都在追求无穷的力量，提升自生潜力才是重要的生存法则！/SCOLOR=87>\ 
+上古时代遗留的<“秘籍残页”>,隐藏着无穷的奥秘,传说拥有秘籍残页可\
+将自身技能强化升华，使武者能发挥出超越自身的攻击力……    \  \   
+　  <修炼无极真气/@无极真气> → <需要条件: (３０张秘籍残页 + １５０帝国币)/SCOLOR=145>\　　\ 
+　  <修炼护体神盾/@护体神盾> → <需要条件: (３０张秘籍残页 + 188RMB点)/SCOLOR=145>\　
+
+
+
+
+
+ 
+
+[@护体神盾]
+
+
+#IF
+CHECKSKILL 护体神盾 = 3
+#ACT
+SENDMSG 6 您已经学习了此技能，无需重复学习！
+break
+
+#IF
+CHECK [2] 0
+CHECKGAMEPOINT > 187
+checkitem 秘籍残页 30
+#ACT
+SET [2] 1
+GAMEPOINT - 188
+Take 秘籍残页 30
+ADDSKILL 护体神盾 3
+SENDMSG 0 151 58 技能大师ぐ：恭喜玩家「%s」成功修炼<护><体><神><盾>！
+SENDMSG 0 151 58 技能大师ぐ：恭喜玩家「%s」成功修炼<护><体><神><盾>！
+break
+#ELSEACT
+MESSAGEBOX \\修炼失败:原因如下\\　　　　1.您没有"秘籍残页"30张+188RMB点\\　　　　2.请集齐以上材料在来找我吧！
+break
+
+[@无极真气]
+#IF
+CHECKSKILL 无极真气 = 3
+#ACT
+give 无极真气 1
+SENDMSG 6 您已经学习了此技能，不能重复学习！
+break
+
+#if
+checkitem 秘籍残页 30
+CHECKGAMEDIAMOND > 149
+checkjob taoist
+#act
+GAMEDIAMOND - 150
+take 秘籍残页 30
+ADDSKILL 无极真气 3
+SENDMSG 0 151 58 技能大师ぐ：恭喜玩家「%s」成功修炼<无><极><真><气>！
+SENDMSG 0 151 58 技能大师ぐ：恭喜玩家「%s」成功修炼<无><极><真><气>！
+break
+#ELSEACT
+messagebox \\您的材料不足或您不是道士职业！
+break
+
+
+
+
+
+
+
+
+
+
+
+
+[@开天斩]
+#IF
+checkitem 秘籍残页 20
+CHECKGAMEGOLD > 4999
+#ACT
+GAMEGOLD - 5000
+take 秘籍残页 20
+GIVE 开天斩 1
+SendMsg 0 {技能合成|151:0:1}：{%s|227:0:1}使用{[秘籍残页]|154:0:1}成功打造{[开天斩]|250:0:1}
+GOTO @MAIN
+#ELSEACT
+MESSAGEBOX 提示：请检查你的材料是否齐全！
+break
+
+[@流星火雨]
+#IF
+checkitem 秘籍残页 20
+CHECKGAMEGOLD > 4999
+#ACT
+GAMEGOLD - 5000
+take 秘籍残页 20
+GIVE 流星火雨 1
+SendMsg 0 {技能合成|151:0:1}：{%s|227:0:1}使用{[秘籍残页]|154:0:1}成功打造{[流星火雨]|250:0:1}
+GOTO @MAIN
+#ELSEACT
+MESSAGEBOX 提示：请检查你的材料是否齐全！
+break
+
+[@飓风破]
+#IF
+checkitem 秘籍残页 20
+CHECKGAMEGOLD > 4999
+#ACT
+GAMEGOLD - 5000
+take 秘籍残页 20
+GIVE 飓风破 1
+SendMsg 0 {技能合成|151:0:1}：{%s|227:0:1}使用{[秘籍残页]|154:0:1}成功打造{[飓风破]|250:0:1}
+GOTO @MAIN
+#ELSEACT
+MESSAGEBOX 提示：请检查你的材料是否齐全！
+break
+
+[@群体施毒]
+#IF
+checkitem 秘籍残页 20
+CHECKGAMEGOLD > 4999
+#ACT
+GAMEGOLD - 5000
+take 秘籍残页 20
+GIVE 群体施毒术 1
+SendMsg 0 {技能合成|151:0:1}：{%s|227:0:1}使用{[秘籍残页]|154:0:1}成功打造{[群体施毒术]|250:0:1}
+GOTO @MAIN
+#ELSEACT
+MESSAGEBOX 提示：请检查你的材料是否齐全！
+break
+
+;============================================================================================================
+
+
+
+
+
+
+
+

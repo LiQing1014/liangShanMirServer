@@ -1,0 +1,325 @@
+()
+%100
+[@main]
+#IF
+#ACT
+#SAY
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>         <1.76帝国霸业/FCOLOR=254> —  <高清复古/FCOLOR=254> — <货币兑换系统/FCOLOR=254>       \
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>   <游戏中打BOSS或参加活动可获得现金红包，红包兑换和充值一样./FCOLOR=243>\ 
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>   <红包兑换江山币+积分，只要你勤奋，不花钱也可得到赞助封号./FCOLOR=243>\ 
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>         <【每日22:30土城刷新红包树妖，江山币送不停】/FCOLOR=150>\
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>     <兑换江山币/@兑换江山币>     <提取江山币/@提取江山币>           <我要兑换红包/@兑换红包> <New~/FCOLOR=249>          \
+
+[@提取江山币]
+#IF
+CHECKLEVELEX > 51
+#ACT
+#SAY
+<> \
+<>  <为了方便玩家之间交易，特开设江山币提取功能！/FCOLOR=254>  \  
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>             <您可以把身上的江山币提取成对应面额的钱锭/FCOLOR=249>\ 
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>      <提取10江山币/@提取1>         <提取20江山币/@提取2>        <提取50江山币/@提取3>\ 
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>      <提取100江山币/@提取4>        <提取200江山币/@提取5>       <提取500江山币/@提取6>\ 
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>                                                         <返回/@main>
+#ELSEACT
+MESSAGEBOX \\为避免盗版，等级达到52级才能使用此功能！
+break
+[@提取1]
+#IF
+CHECKGAMEDIAMOND > 9
+#ACT
+GAMEDIAMOND - 10
+give 10江山币 1
+SENDMSG 7 [提示]：恭喜您提取成功，获得：10江山币！
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功提取：10江山币！！！
+break
+#ELSEACT
+MESSAGEBOX \\您的江山币不足，无法提取！
+break
+[@提取2]
+#IF
+CHECKGAMEDIAMOND > 19
+#ACT
+GAMEDIAMOND - 20
+give 20江山币 1
+SENDMSG 7 [提示]：恭喜您提取成功，获得：20江山币！
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功提取：20江山币！！！
+break
+#ELSEACT
+MESSAGEBOX \\您的江山币不足，无法提取！
+break
+[@提取3]
+#IF
+CHECKGAMEDIAMOND > 49
+#ACT
+GAMEDIAMOND - 50
+give 50江山币 1
+SENDMSG 7 [提示]：恭喜您提取成功，获得：50江山币！
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功提取：50江山币！！！
+break
+#ELSEACT
+MESSAGEBOX \\您的江山币不足，无法提取！
+break
+[@提取4]
+#IF
+CHECKGAMEDIAMOND > 99
+#ACT
+GAMEDIAMOND - 100
+give 100江山币 1
+SENDMSG 7 [提示]：恭喜您提取成功，获得：100江山币！
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功提取：100江山币！！！
+break
+#ELSEACT
+MESSAGEBOX \\您的江山币不足，无法提取！
+break
+[@提取5]
+#IF
+CHECKGAMEDIAMOND > 199
+#ACT
+GAMEDIAMOND - 200
+give 200江山币 1
+SENDMSG 7 [提示]：恭喜您提取成功，获得：200江山币！
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功提取：200江山币！！！
+break
+#ELSEACT
+MESSAGEBOX \\您的江山币不足，无法提取！
+break
+[@提取6]
+#IF
+CHECKGAMEDIAMOND > 499
+#ACT
+GAMEDIAMOND - 500
+give 500江山币 1
+SENDMSG 7 [提示]：恭喜您提取成功，获得：500江山币！
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功提取：500江山币！！！
+break
+#ELSEACT
+MESSAGEBOX \\您的江山币不足，无法提取！
+break
+
+[@兑换江山币]
+#IF
+CHECKLEVELEX > 51
+#ACT
+#SAY
+<> \
+<>  <您好，背包里的江山币钱锭可以在这里兑换成等额的江山币！/FCOLOR=254>  \  
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>      <兑换1江山币/@兑换1>         <兑换2江山币/@兑换2>        <兑换5江山币/@兑换3>\ 
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>      <兑换10江山币/@兑换4>        <兑换20江山币/@兑换5>       <兑换50江山币/@兑换6>\ 
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>      <兑换100江山币/@兑换7>       <兑换200江山币/@兑换8>      <兑换500江山币/@兑换9>\ 
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>                                                         <返回/@main>
+#ELSEACT
+MESSAGEBOX \\为避免盗版，等级达到52级才能使用此功能！
+break
+[@兑换1]
+#IF
+checkitem 1江山币 1
+#ACT
+take 1江山币 1
+GAMEDIAMOND + 1
+SENDMSG 7 [提示]：恭喜您成功兑换江山币钱锭，获得1江山币！
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功兑换江山币钱锭，获得1江山币！！
+break
+#ELSEACT
+MESSAGEBOX \\您背包里没有对应的江山币钱锭，无法兑换！
+break
+[@兑换2]
+#IF
+checkitem 2江山币 1
+#ACT
+take 2江山币 1
+GAMEDIAMOND + 2
+SENDMSG 7 [提示]：恭喜您成功兑换江山币钱锭，获得2江山币！
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功兑换江山币钱锭，获得2江山币！！
+break
+#ELSEACT
+MESSAGEBOX \\您背包里没有对应的江山币钱锭，无法兑换！
+break
+[@兑换3]
+#IF
+checkitem 5江山币 1
+#ACT
+take 5江山币 1
+GAMEDIAMOND + 5
+SENDMSG 7 [提示]：恭喜您成功兑换江山币钱锭，获得5江山币！
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功兑换江山币钱锭，获得5江山币！！
+break
+#ELSEACT
+MESSAGEBOX \\您背包里没有对应的江山币钱锭，无法兑换！
+break
+[@兑换4]
+#IF
+checkitem 10江山币 1
+#ACT
+take 10江山币 1
+GAMEDIAMOND + 10
+SENDMSG 7 [提示]：恭喜您成功兑换江山币钱锭，获得10江山币！
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功兑换江山币钱锭，获得10江山币！！
+break
+#ELSEACT
+MESSAGEBOX \\您背包里没有对应的江山币钱锭，无法兑换！
+break
+[@兑换5]
+#IF
+checkitem 20江山币 1
+#ACT
+take 20江山币 1
+GAMEDIAMOND + 20
+SENDMSG 7 [提示]：恭喜您成功兑换江山币钱锭，获得20江山币！
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功兑换江山币钱锭，获得20江山币！！
+break
+#ELSEACT
+MESSAGEBOX \\您背包里没有对应的江山币钱锭，无法兑换！
+break
+[@兑换6]
+#IF
+checkitem 50江山币 1
+#ACT
+take 50江山币 1
+GAMEDIAMOND + 50
+SENDMSG 7 [提示]：恭喜您成功兑换江山币钱锭，获得50江山币！
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功兑换江山币钱锭，获得50江山币！！
+break
+#ELSEACT
+MESSAGEBOX \\您背包里没有对应的江山币钱锭，无法兑换！
+break
+[@兑换7]
+#IF
+checkitem 100江山币 1
+#ACT
+take 100江山币 1
+GAMEDIAMOND + 100
+SENDMSG 7 [提示]：恭喜您成功兑换江山币钱锭，获得100江山币！
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功兑换江山币钱锭，获得100江山币！！
+break
+#ELSEACT
+MESSAGEBOX \\您背包里没有对应的江山币钱锭，无法兑换！
+break
+[@兑换8]
+#IF
+checkitem 200江山币 1
+#ACT
+take 200江山币 1
+GAMEDIAMOND + 200
+SENDMSG 7 [提示]：恭喜您成功兑换江山币钱锭，获得200江山币！
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功兑换江山币钱锭，获得200江山币！！
+break
+#ELSEACT
+MESSAGEBOX \\您背包里没有对应的江山币钱锭，无法兑换！
+break
+[@兑换9]
+#IF
+checkitem 500江山币 1
+#ACT
+take 500江山币 1
+GAMEDIAMOND + 500
+SENDMSG 7 [提示]：恭喜您成功兑换江山币钱锭，获得500江山币！
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功兑换江山币钱锭，获得500江山币！！
+break
+#ELSEACT
+MESSAGEBOX \\您背包里没有对应的江山币钱锭，无法兑换！
+break
+
+[@兑换红包]
+#IF
+#ACT
+#SAY
+<>\ 
+<>  <现金红包可兑换成江山币+积分，累计积分可领取赞助大使/FCOLOR=254>   \ \
+<-------------------------------------------------------------/AUTOCOLOR=91>\ 
+<>        <兑换1元红包/@兑换红包1>      <兑换2元红包/@兑换红包2>      <兑换5元红包/@兑换红包5>   \ 
+<-------------------------------------------------------------/AUTOCOLOR=91>\ 
+<>        <兑换10元红包/@兑换红包10>     <兑换30元红包/@兑换红包30>     <兑换100元红包/@兑换红包100>\ 
+<-------------------------------------------------------------/AUTOCOLOR=91>\ 
+<> <提示：现金红包送送送，打BOSS和参加活动都能获得/FCOLOR=249>        <返回/@main> 
+[@兑换红包1]
+#IF
+checkitem 1元红包 1
+#ACT
+take 1元红包 1
+GAMEDIAMOND + 10
+GAMEGIRD + 1
+messagebox \\恭喜您成功兑换1元红包，获得10江山币1积分！
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功兑换现金[1元红包]！
+break
+#ELSEACT
+MESSAGEBOX \\您没有红包，无法兑换！
+break
+[@兑换红包2]
+#IF
+checkitem 2元红包 1
+#ACT
+take 2元红包 1
+GAMEDIAMOND + 20
+GAMEGIRD + 2
+messagebox \\恭喜您成功兑换2元红包，获得20江山币2积分！
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功兑换现金[2元红包]！
+break
+#ELSEACT
+MESSAGEBOX \\您没有红包，无法兑换！
+break
+[@兑换红包5]
+#IF
+checkitem 5元红包 1
+#ACT
+take 5元红包 1
+GAMEDIAMOND + 50
+GAMEGIRD + 5
+messagebox \\恭喜您成功兑换5元红包，获得50江山币5积分！
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功兑换现金[5元红包]！
+break
+#ELSEACT
+MESSAGEBOX \\您没有红包，无法兑换！
+break
+[@兑换红包10]
+#IF
+checkitem 10元红包 1
+#ACT
+take 10元红包 1
+GAMEDIAMOND + 100
+GAMEGIRD + 10
+messagebox \\恭喜您成功兑换10元红包，获得100江山币10积分！
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功兑换现金[10元红包]！
+break
+#ELSEACT
+MESSAGEBOX \\您没有红包，无法兑换！
+break
+[@兑换红包30]
+#IF
+checkitem 30元红包 1
+#ACT
+take 30元红包 1
+GAMEGOLD + 4000
+GAMEDIAMOND + 1
+messagebox \\恭喜您成功兑换30元现金红包！
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功兑换现金[30元红包]！
+break
+#ELSEACT
+MESSAGEBOX \\您没有红包，无法兑换！
+break
+[@兑换红包100]
+#IF
+checkitem 100元红包 1
+#ACT
+take 100元红包 1
+GAMEDIAMOND + 1000
+GAMEGIRD + 100
+messagebox \\恭喜您成功兑换100元现金红包！
+SENDMSG 0 151 58 系统ぐ：恭喜玩家「%s」成功兑换现金[100元红包]！
+break
+#ELSEACT
+MESSAGEBOX \\您没有红包，无法兑换！
+break

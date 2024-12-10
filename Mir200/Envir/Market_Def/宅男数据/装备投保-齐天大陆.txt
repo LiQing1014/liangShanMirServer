@@ -1,0 +1,1041 @@
+
+[@main]
+
+
+#if
+#act
+
+
+
+
+
+
+MOV S$马牌投保 <暂未投保/FCOLOR=230>
+MOV S$勋章投保 <暂未投保/FCOLOR=230>
+MOV S$武器投保 <暂未投保/FCOLOR=230>
+MOV S$衣服投保 <暂未投保/FCOLOR=230>
+MOV S$头盔投保 <暂未投保/FCOLOR=230>
+MOV S$项链投保 <暂未投保/FCOLOR=230>
+MOV S$左戒投保 <暂未投保/FCOLOR=230>
+MOV S$右戒投保 <暂未投保/FCOLOR=230>
+MOV S$左手投保 <暂未投保/FCOLOR=230>
+MOV S$右手投保 <暂未投保/FCOLOR=230>
+MOV S$腰带投保 <暂未投保/FCOLOR=230>
+MOV S$鞋子投保 <暂未投保/FCOLOR=230>
+MOV S$勋章投保 <暂未投保/FCOLOR=230>
+MOV S$护符投保 <暂未投保/FCOLOR=230>
+MOV S$宝石投保 <暂未投保/FCOLOR=230>
+MOV S$斗笠投保 <暂未投保/FCOLOR=230>
+MOV S$军鼓投保 <暂未投保/FCOLOR=230>
+MOV S$马牌投保 <暂未投保/FCOLOR=230>
+MOV S$盾牌投保 <暂未投保/FCOLOR=230>
+MOV S$血石投保 <暂未投保/FCOLOR=230>
+MOV S$时装衣服投保 <暂未投保/FCOLOR=230>
+MOV S$时装武器投保 <暂未投保/FCOLOR=230>
+
+#if
+CHECKINSURANCECOUNT 1 > 0
+#act
+MOV S$武器投保 <已经投保/FCOLOR=250>
+
+
+
+#if
+CHECKINSURANCECOUNT 0 > 0
+#act
+MOV S$衣服投保 <已经投保/FCOLOR=250>
+
+
+#if
+CHECKINSURANCECOUNT 3 > 0
+#act
+MOV S$项链投保 <已经投保/FCOLOR=250>
+
+
+#if
+CHECKINSURANCECOUNT 4 > 0
+#act
+MOV S$头盔投保 <已经投保/FCOLOR=250>
+
+
+
+#if
+CHECKINSURANCECOUNT 5 > 0
+#act
+MOV S$右手投保 <已经投保/FCOLOR=250>
+
+
+
+#if
+CHECKINSURANCECOUNT 6 > 0
+#act
+MOV S$左手投保 <已经投保/FCOLOR=250>
+
+
+#if
+CHECKINSURANCECOUNT 7 > 0
+#act
+MOV S$右戒投保 <已经投保/FCOLOR=250>
+
+
+#if
+CHECKINSURANCECOUNT 8 > 0
+#act
+MOV S$左戒投保 <已经投保/FCOLOR=250>
+
+
+
+#if
+CHECKINSURANCECOUNT 9 > 0
+#act
+MOV S$护符投保 <已经投保/FCOLOR=250>
+
+
+#if
+CHECKINSURANCECOUNT 10 > 0
+#act
+MOV S$腰带投保 <已经投保/FCOLOR=250>
+
+
+
+#if
+CHECKINSURANCECOUNT 11 > 0
+#act
+MOV S$鞋子投保 <已经投保/FCOLOR=250>
+
+
+#if
+CHECKINSURANCECOUNT 12 > 0
+#act
+MOV S$血石投保 <已经投保/FCOLOR=250>
+
+#if
+CHECKINSURANCECOUNT 13 > 0
+#act
+MOV S$斗笠投保 <已经投保/FCOLOR=250>
+
+
+#if
+CHECKINSURANCECOUNT 14 > 0
+#act
+MOV S$军鼓投保 <已经投保/FCOLOR=250>
+
+#if
+CHECKINSURANCECOUNT 2 > 0
+#act
+MOV S$勋章投保 <已经投保/FCOLOR=250>
+
+#if
+CHECKINSURANCECOUNT 15 > 0
+#act
+MOV S$马牌投保 <已经投保/FCOLOR=250>
+
+
+
+#if
+CHECKINSURANCECOUNT 17 > 0
+#act
+MOV S$时装衣服投保 <已经投保/FCOLOR=250>
+
+
+#if
+CHECKINSURANCECOUNT 16 > 0
+#act
+MOV S$盾牌投保 <已经投保/FCOLOR=250>
+
+
+
+
+
+
+
+
+#IF
+#ACT
+close
+MOV S$武器 <$WEAPON>
+MOV S$衣服 <$DRESS>
+MOV S$头盔 <$HELMET>
+MOV S$项链 <$NECKLACE>
+MOV S$左戒 <$RING_R>
+MOV S$右戒 <$RING_L>
+MOV S$左手 <$ARMRING_R>
+MOV S$右手 <$ARMRING_L>
+MOV S$腰带 <$BELT>
+MOV S$鞋子 <$BOOTS>
+MOV S$勋章 <$RIGHTHAND>
+MOV S$护身符 <$BUJUK>
+MOV S$宝石 <$CHARM>
+MOV S$斗笠 <$HAT>
+MOV S$军鼓 <$DRUM>
+MOV S$马牌 <$HORSE>
+MOV S$盾牌 <$SHIELD>
+MOV S$时装衣服 <$SDRESS>
+MOV S$时装武器 <$SWEAPON>
+
+
+
+
+
+OPENMERCHANTBIGDLG 1 562 0 0 0 0 1 440 0
+SetStringBlank  S$武器   16 1           
+SetStringBlank  S$衣服   16 1
+SetStringBlank  S$头盔   16 1
+SetStringBlank  S$项链   16 1
+SetStringBlank  S$左手   16 1
+SetStringBlank  S$右手   16 1
+SetStringBlank  S$左戒   16 1
+SetStringBlank  S$右戒   16 1
+SetStringBlank  S$腰带   16 1
+SetStringBlank  S$鞋子   16 1
+
+SetStringBlank  S$勋章   16 1           
+SetStringBlank  S$护身符   60 1
+SetStringBlank  S$宝石   16 1
+SetStringBlank  S$斗笠   16 1
+SetStringBlank  S$军鼓   16 1
+SetStringBlank  S$马牌   16 1
+SetStringBlank  S$盾牌   16 1
+SetStringBlank  S$时装衣服   16 1
+SetStringBlank  S$时装武器   16 1
+
+
+
+
+
+
+#say
+; <> <∴∵装备投保∵∴/AUTOCOLOR=254,251,168,191,250,70,245,249,253>       <★全新投保系统★/AUTOCOLOR=254,251,168,191,250,70,245,249,253>    <∴∵散人逆袭∵∴/AUTOCOLOR=254,251,168,191,250,70,245,249,253>\
+; <> <-------------------------------------------------------------/AUTOCOLOR=90>\\
+
+; <>    <武器投保|250#投保后装备不暴1次,暴出投保的大米点卷^-^154#50大米卷掉落*10份^-^249#注意：装备上未显示投保信息，请勿投保，切记！/@武器>:{<$STR(S$武器)>/FCOLOR=254} <1000大米/次/FCOLOR=249>      <$STR(S$武器投保)>\  \
+; <>    <衣服投保|250#投保后装备不暴1次,暴出投保的大米点卷^-^154#50大米卷掉落*10份^-^249#注意：装备上未显示投保信息，请勿投保，切记！/@衣服>:{<$STR(S$衣服)>/FCOLOR=254} <1000大米/次/FCOLOR=249>      <$STR(S$衣服投保)>\  \
+; <>    <头盔投保|250#投保后装备不暴1次,暴出投保的大米点卷^-^154#50大米卷掉落*10份^-^249#注意：装备上未显示投保信息，请勿投保，切记！/@头盔>:{<$STR(S$头盔)>/FCOLOR=253} <1000大米/次/FCOLOR=249>      <$STR(S$头盔投保)>\  \
+; <>    <项链投保|250#投保后装备不暴1次,暴出投保的大米点卷^-^154#50大米卷掉落*10份^-^249#注意：装备上未显示投保信息，请勿投保，切记！/@项链>:{<$STR(S$项链)>/FCOLOR=253} <1000大米/次/FCOLOR=249>      <$STR(S$项链投保)>\  \
+; <>    <左手投保|250#投保后装备不暴1次,暴出投保的大米点卷^-^154#50大米卷掉落*10份^-^249#注意：装备上未显示投保信息，请勿投保，切记！/@左手>:{<$STR(S$左手)>/FCOLOR=253} <1000大米/次/FCOLOR=249>      <$STR(S$左手投保)>\  \
+; <>    <右手投保|250#投保后装备不暴1次,暴出投保的大米点卷^-^154#50大米卷掉落*10份^-^249#注意：装备上未显示投保信息，请勿投保，切记！/@右手>:{<$STR(S$右手)>/FCOLOR=253} <1000大米/次/FCOLOR=249>      <$STR(S$右手投保)>\  \
+; <>    <左戒投保|250#投保后装备不暴1次,暴出投保的大米点卷^-^154#50大米卷掉落*10份^-^249#注意：装备上未显示投保信息，请勿投保，切记！/@左戒>:{<$STR(S$左戒)>/FCOLOR=253} <1000大米/次/FCOLOR=249>      <$STR(S$左戒投保)>\  \
+; <>    <右戒投保|250#投保后装备不暴1次,暴出投保的大米点卷^-^154#50大米卷掉落*10份^-^249#注意：装备上未显示投保信息，请勿投保，切记！/@右戒>:{<$STR(S$右戒)>/FCOLOR=253} <1000大米/次/FCOLOR=249>      <$STR(S$右戒投保)>\  \
+; <>    <腰带投保|250#投保后装备不暴1次,暴出投保的大米点卷^-^154#50大米卷掉落*10份^-^249#注意：装备上未显示投保信息，请勿投保，切记！/@腰带>:{<$STR(S$腰带)>/FCOLOR=253} <1000大米/次/FCOLOR=249>      <$STR(S$腰带投保)>\  \
+; <> <-------------------------------------------------------------/AUTOCOLOR=90>\
+; <> <∴∵装备投保∵∴/AUTOCOLOR=254,251,168,191,250,70,245,249,253>       <★全新投保系统★/AUTOCOLOR=254,251,168,191,250,70,245,249,253>    <∴∵散人逆袭∵∴/AUTOCOLOR=254,251,168,191,250,70,245,249,253>\
+; <> <-------------------------------------------------------------/AUTOCOLOR=90>\\
+; \                                          <投保下一页/@下一页>\
+
+<Img|x=0.0|y=0.0|width=620|height=440|scale9r=10|scale9l=10|bg=1|scale9b=10|reset=1|move=0|img=public/bg_npc_01.png|scale9t=10>
+<Layout|x=597.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=619.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=21.0|y=15.0|tipsx=10|tipsy=80|color=254,251,168,191,250,70,245,249,253|size=16|text=∴∵装备投保∵∴>
+<Text|a=0|x=197.0|y=15.0|tipsx=10|tipsy=80|color=254,251,168,191,250,70,245,249,253|size=16|text=★全新投保系统★>
+<Text|a=0|x=373.0|y=15.0|tipsx=10|tipsy=80|color=254,251,168,191,250,70,245,249,253|size=16|text=∴∵散人逆袭∵∴>
+<Text|a=0|x=21.0|y=35.0|tipsx=10|tipsy=80|color=90|size=16|text=------------------------------------------------------------->
+<Text|a=0|x=21.0|y=56.0|tipsx=10|tipsy=80|color=251|size=16|text=武器投保：<$STR(S$武器)>>
+<Text|a=0|x=480.0|y=56.0|tipsx=10|tipsy=80|color=255|size=16|text=武器投保|link=@武器>
+<Text|a=0|x=250.0|y=56.0|tipsx=10|tipsy=80|color=249|size=16|text=1000大米/次>
+<RText|a=0|x=380.0|y=56.0|tipsx=10|tipsy=80|color=255|size=16|text=<$STR(S$武器投保)>>
+<Text|a=0|x=21.0|y=85.0|tipsx=10|tipsy=80|color=251|size=16|text=衣服投保：<$str(S$衣服)>>
+<Text|a=0|x=480.0|y=85.0|tipsx=10|tipsy=80|color=255|size=16|text=衣服投保|link=@衣服>
+<Text|a=0|x=250.0|y=85.0|tipsx=10|tipsy=80|color=249|size=16|text=1000大米/次>
+<RText|a=0|x=380.0|y=85.0|tipsx=10|tipsy=80|color=255|size=16|text=<$STR(S$衣服投保)>>
+<Text|a=0|x=21.0|y=116.0|tipsx=10|tipsy=80|color=251|size=16|text=头盔投保：<$str(S$头盔)>>
+<Text|a=0|x=480.0|y=116.0|tipsx=10|tipsy=80|color=255|size=16|text=头盔投保|link=@头盔>
+<Text|a=0|x=250.0|y=116.0|tipsx=10|tipsy=80|color=249|size=16|text=1000大米/次>
+<RText|a=0|x=380.0|y=116.0|tipsx=10|tipsy=80|color=255|size=16|text=<$STR(S$头盔投保)>>
+<Text|a=0|x=21.0|y=148.0|tipsx=10|tipsy=80|color=251|size=16|text=项链投保：<$str(S$项链)>>
+<Text|a=0|x=480.0|y=148.0|tipsx=10|tipsy=80|color=255|size=16|text=项链投保|link=@项链>
+<Text|a=0|x=250.0|y=148.0|tipsx=10|tipsy=80|color=249|size=16|text=1000大米/次>
+<RText|a=0|x=380.0|y=148.0|tipsx=10|tipsy=80|color=255|size=16|text=<$STR(S$项链投保)>>
+<Text|a=0|x=21.0|y=181.0|tipsx=10|tipsy=80|color=251|size=16|text=左手投保：<$str(S$左手)>>
+<Text|a=0|x=480.0|y=181.0|tipsx=10|tipsy=80|color=255|size=16|text=左手投保|link=@左手>
+<Text|a=0|x=250.0|y=181.0|tipsx=10|tipsy=80|color=249|size=16|text=1000大米/次>
+<RText|a=0|x=380.0|y=181.0|tipsx=10|tipsy=80|color=255|size=16|text=<$STR(S$左手投保)>>
+<Text|a=0|x=21.0|y=213.0|tipsx=10|tipsy=80|color=251|size=16|text=右手投保：<$str(S$右手)>>
+<Text|a=0|x=480.0|y=213.0|tipsx=10|tipsy=80|color=255|size=16|text=右手投保|link=@右手>
+<Text|a=0|x=250.0|y=213.0|tipsx=10|tipsy=80|color=249|size=16|text=1000大米/次>
+<RText|a=0|x=380.0|y=213.0|tipsx=10|tipsy=80|color=255|size=16|text=<$STR(S$右手投保)>>
+<Text|a=0|x=21.0|y=248.0|tipsx=10|tipsy=80|color=251|size=16|text=左戒投保：<$str(S$左戒)>>
+<Text|a=0|x=480.0|y=248.0|tipsx=10|tipsy=80|color=255|size=16|text=左戒投保|link=@左戒>
+<Text|a=0|x=250.0|y=248.0|tipsx=10|tipsy=80|color=249|size=16|text=1000大米/次>
+<RText|a=0|x=380.0|y=248.0|tipsx=10|tipsy=80|color=255|size=16|text=<$STR(S$左戒投保)>>
+<Text|a=0|x=21.0|y=282.0|tipsx=10|tipsy=80|color=251|size=16|text=右戒投保：<$str(S$右戒)>>
+<Text|a=0|x=480.0|y=282.0|tipsx=10|tipsy=80|color=255|size=16|text=右戒投保|link=@右戒>
+<Text|a=0|x=250.0|y=282.0|tipsx=10|tipsy=80|color=249|size=16|text=1000大米/次>
+<RText|a=0|x=380.0|y=282.0|tipsx=10|tipsy=80|color=255|size=16|text=<$STR(S$右戒投保)>>
+<Text|a=0|x=21.0|y=316.0|tipsx=10|tipsy=80|color=251|size=16|text=腰带投保：<$str(S$腰带)>>
+<Text|a=0|x=480.0|y=316.0|tipsx=10|tipsy=80|color=255|size=16|text=腰带投保|link=@腰带>
+<Text|a=0|x=250.0|y=316.0|tipsx=10|tipsy=80|color=249|size=16|text=1000大米/次>
+<RText|a=0|x=380.0|y=316.0|tipsx=10|tipsy=80|color=255|size=16|text=<$STR(S$腰带投保)>>
+<Text|a=0|x=21.0|y=340.0|tipsx=10|tipsy=80|color=90|size=16|text=------------------------------------------------------------->
+<Text|a=0|x=21.0|y=360.0|tipsx=10|tipsy=80|color=254,251,168,191,250,70,245,249,253|size=16|text=∴∵装备投保∵∴>
+<Text|a=0|x=197.0|y=360.0|tipsx=10|tipsy=80|color=254,251,168,191,250,70,245,249,253|size=16|text=★全新投保系统★>
+<Text|a=0|x=373.0|y=360.0|tipsx=10|tipsy=80|color=254,251,168,191,250,70,245,249,253|size=16|text=∴∵散人逆袭∵∴>
+<Text|a=0|x=21.0|y=380.0|tipsx=10|tipsy=80|color=90|size=16|text=------------------------------------------------------------->
+<Text|a=0|x=75.0|y=400.0|tipsx=10|tipsy=80|color=251|size=16|text=投保下一页|link=@下一页>
+
+
+[@下一页]
+#if
+#act
+MOV S$马牌投保 <暂未投保/FCOLOR=230>
+MOV S$勋章投保 <暂未投保/FCOLOR=230>
+MOV S$武器投保 <暂未投保/FCOLOR=230>
+MOV S$衣服投保 <暂未投保/FCOLOR=230>
+MOV S$头盔投保 <暂未投保/FCOLOR=230>
+MOV S$项链投保 <暂未投保/FCOLOR=230>
+MOV S$左戒投保 <暂未投保/FCOLOR=230>
+MOV S$右戒投保 <暂未投保/FCOLOR=230>
+MOV S$左手投保 <暂未投保/FCOLOR=230>
+MOV S$右手投保 <暂未投保/FCOLOR=230>
+MOV S$腰带投保 <暂未投保/FCOLOR=230>
+MOV S$鞋子投保 <暂未投保/FCOLOR=230>
+MOV S$勋章投保 <暂未投保/FCOLOR=230>
+MOV S$护符投保 <暂未投保/FCOLOR=230>
+MOV S$宝石投保 <暂未投保/FCOLOR=230>
+MOV S$斗笠投保 <暂未投保/FCOLOR=230>
+MOV S$军鼓投保 <暂未投保/FCOLOR=230>
+MOV S$马牌投保 <暂未投保/FCOLOR=230>
+MOV S$盾牌投保 <暂未投保/FCOLOR=230>
+MOV S$时装衣服投保 <暂未投保/FCOLOR=230>
+MOV S$时装武器投保 <暂未投保/FCOLOR=230>
+
+#if
+CHECKINSURANCECOUNT 1 > 0
+#act
+MOV S$武器投保 <已经投保/FCOLOR=250>
+
+
+
+#if
+CHECKINSURANCECOUNT 0 > 0
+#act
+MOV S$衣服投保 <已经投保/FCOLOR=250>
+
+
+#if
+CHECKINSURANCECOUNT 3 > 0
+#act
+MOV S$项链投保 <已经投保/FCOLOR=250>
+
+
+#if
+CHECKINSURANCECOUNT 4 > 0
+#act
+MOV S$头盔投保 <已经投保/FCOLOR=250>
+
+
+
+#if
+CHECKINSURANCECOUNT 5 > 0
+#act
+MOV S$右手投保 <已经投保/FCOLOR=250>
+
+
+
+#if
+CHECKINSURANCECOUNT 6 > 0
+#act
+MOV S$左手投保 <已经投保/FCOLOR=250>
+
+
+#if
+CHECKINSURANCECOUNT 7 > 0
+#act
+MOV S$右戒投保 <已经投保/FCOLOR=250>
+
+
+#if
+CHECKINSURANCECOUNT 8 > 0
+#act
+MOV S$左戒投保 <已经投保/FCOLOR=250>
+
+
+
+#if
+CHECKINSURANCECOUNT 9 > 0
+#act
+MOV S$护符投保 <已经投保/FCOLOR=250>
+
+
+#if
+CHECKINSURANCECOUNT 10 > 0
+#act
+MOV S$腰带投保 <已经投保/FCOLOR=250>
+
+
+
+#if
+CHECKINSURANCECOUNT 11 > 0
+#act
+MOV S$鞋子投保 <已经投保/FCOLOR=250>
+
+
+#if
+CHECKINSURANCECOUNT 12 > 0
+#act
+MOV S$血石投保 <已经投保/FCOLOR=250>
+
+#if
+CHECKINSURANCECOUNT 13 > 0
+#act
+MOV S$斗笠投保 <已经投保/FCOLOR=250>
+
+
+#if
+CHECKINSURANCECOUNT 14 > 0
+#act
+MOV S$军鼓投保 <已经投保/FCOLOR=250>
+
+#if
+CHECKINSURANCECOUNT 2 > 0
+#act
+MOV S$勋章投保 <已经投保/FCOLOR=250>
+
+#if
+CHECKINSURANCECOUNT 15 > 0
+#act
+MOV S$马牌投保 <已经投保/FCOLOR=250>
+
+
+
+#if
+CHECKINSURANCECOUNT 17 > 0
+#act
+MOV S$时装衣服投保 <已经投保/FCOLOR=250>
+
+
+#if
+CHECKINSURANCECOUNT 16 > 0
+#act
+MOV S$盾牌投保 <已经投保/FCOLOR=250>
+
+
+
+
+#IF
+#ACT
+MOV S$勋章 <$RIGHTHAND>
+MOV S$护身符 <$BUJUK>
+MOV S$宝石 <$CHARM>
+MOV S$斗笠 <$HAT>
+MOV S$军鼓 <$DRUM>
+MOV S$马牌 <$HORSE>
+MOV S$盾牌 <$SHIELD>
+MOV S$时装衣服 <$SDRESS>
+MOV S$时装武器 <$SWEAPON>
+
+
+close
+
+
+OPENMERCHANTBIGDLG 1 562 0 0 0 0 1 440 0
+SetStringBlank  S$勋章   16 1           
+SetStringBlank  S$护身符   16 1
+SetStringBlank  S$宝石   16 1
+SetStringBlank  S$斗笠   16 1
+SetStringBlank  S$军鼓   16 1
+SetStringBlank  S$马牌   16 1
+SetStringBlank  S$盾牌   16 1
+SetStringBlank  S$时装衣服   16 1
+SetStringBlank  S$时装武器   16 1
+
+
+#say
+; <> <∴∵装备投保∵∴/AUTOCOLOR=254,251,168,191,250,70,245,249,253>       <★全新投保系统★/AUTOCOLOR=254,251,168,191,250,70,245,249,253>    <∴∵散人逆袭∵∴/AUTOCOLOR=254,251,168,191,250,70,245,249,253>\
+; <> <-------------------------------------------------------------/AUTOCOLOR=90>\\
+; <>    <鞋子投保|250#投保后装备不暴1次,暴出投保的大米点卷^-^154#50大米卷掉落*10份^-^249#注意：装备上未显示投保信息，请勿投保，切记！/@鞋子>:{<$STR(S$鞋子)>/FCOLOR=253} <1000大米/次/FCOLOR=249>      <$STR(S$鞋子投保)>\  \
+; <>    <勋章投保|250#投保后装备不暴1次,暴出投保的大米点卷^-^154#50大米卷掉落*10份^-^249#注意：装备上未显示投保信息，请勿投保，切记！/@勋章>:{<$STR(S$勋章)>/FCOLOR=253} <1000大米/次/FCOLOR=249>      <$STR(S$勋章投保)>\  \
+; ;<>    <马牌投保|250#投保后装备不暴1次,暴出投保的大米点卷^-^154#50大米卷掉落*10份^-^249#注意：装备上未显示投保信息，请勿投保，切记！/@马牌>:{<$STR(S$马牌)>/FCOLOR=254} <1000大米/次/FCOLOR=249>      <$STR(S$马牌投保)>\  \
+; ;<>    <护符投保|250#投保后装备不暴1次,暴出投保的大米点卷^-^154#50大米卷掉落*10份^-^249#注意：装备上未显示投保信息，请勿投保，切记！/@护身符>:{<$STR(S$护身符)>/FCOLOR=254} <1000大米/次/FCOLOR=249>      <$STR(S$护符投保)>\  \
+; <>    <血石投保|250#投保后装备不暴1次,暴出投保的大米点卷^-^154#50大米卷掉落*10份^-^249#注意：装备上未显示投保信息，请勿投保，切记！/@宝石>:{<$STR(S$宝石)>/FCOLOR=253} <1000大米/次/FCOLOR=249>      <$STR(S$血石投保)>\  \
+; <>    <斗笠投保|250#投保后装备不暴1次,暴出投保的大米点卷^-^154#50大米卷掉落*10份^-^249#注意：装备上未显示投保信息，请勿投保，切记！/@斗笠>:{<$STR(S$斗笠)>/FCOLOR=253} <1000大米/次/FCOLOR=249>      <$STR(S$斗笠投保)>\  \
+; ;<>    <军鼓投保|250#投保后装备不暴1次,暴出投保的大米点卷^-^154#50大米卷掉落*10份^-^249#注意：装备上未显示投保信息，请勿投保，切记！/@军鼓>:{<$STR(S$军鼓)>/FCOLOR=253} <1000大米/次/FCOLOR=249>      <$STR(S$军鼓投保)>\  \
+; ;<>    <盾牌投保|250#投保后装备不暴1次,暴出投保的大米点卷^-^154#50大米卷掉落*10份^-^249#注意：装备上未显示投保信息，请勿投保，切记！/@盾牌>:{<$STR(S$盾牌)>/FCOLOR=253} <1000大米/次/FCOLOR=249>      <$STR(S$盾牌投保)>\  \
+; ;<>    <时装衣服|250#投保后装备不暴1次,暴出投保的大米点卷^-^154#50大米卷掉落*10份^-^249#注意：装备上未显示投保信息，请勿投保，切记！/@时装衣服>:{<$STR(S$时装衣服)>/FCOLOR=254} <1000大米/次/FCOLOR=249>      <$STR(S$时装衣服投保)>\  \
+; <> <-------------------------------------------------------------/AUTOCOLOR=90>\
+; <> <∴∵装备投保∵∴/AUTOCOLOR=254,251,168,191,250,70,245,249,253>       <★全新投保系统★/AUTOCOLOR=254,251,168,191,250,70,245,249,253>    <∴∵散人逆袭∵∴/AUTOCOLOR=254,251,168,191,250,70,245,249,253>\
+; <> <-------------------------------------------------------------/AUTOCOLOR=90>\ \ \ \
+; \                                          <投保上一页/@main>\
+
+
+
+<Img|x=0.0|y=0.0|width=620|height=440|scale9r=10|scale9l=10|bg=1|scale9b=10|reset=1|move=0|img=public/bg_npc_01.png|scale9t=10>
+<Layout|x=597.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=619.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=21.0|y=15.0|tipsx=10|tipsy=80|color=254,251,168,191,250,70,245,249,253|size=16|text=∴∵装备投保∵∴>
+<Text|a=0|x=197.0|y=15.0|tipsx=10|tipsy=80|color=254,251,168,191,250,70,245,249,253|size=16|text=★全新投保系统★>
+<Text|a=0|x=373.0|y=15.0|tipsx=10|tipsy=80|color=254,251,168,191,250,70,245,249,253|size=16|text=∴∵散人逆袭∵∴>
+<Text|a=0|x=21.0|y=35.0|tipsx=10|tipsy=80|color=90|size=16|text=------------------------------------------------------------->
+<Text|a=0|x=21.0|y=56.0|tipsx=10|tipsy=80|color=251|size=16|text=鞋子投保：<$STR(S$鞋子)>>
+<Text|a=0|x=480.0|y=56.0|tipsx=10|tipsy=80|color=255|size=16|text=鞋子投保|link=@鞋子>
+<Text|a=0|x=250.0|y=56.0|tipsx=10|tipsy=80|color=249|size=16|text=1000大米/次>
+<RText|a=0|x=380.0|y=56.0|tipsx=10|tipsy=80|color=255|size=16|text=<$STR(S$鞋子投保)>>
+<Text|a=0|x=21.0|y=85.0|tipsx=10|tipsy=80|color=251|size=16|text=勋章投保：<$str(S$勋章)>>
+<Text|a=0|x=480.0|y=85.0|tipsx=10|tipsy=80|color=255|size=16|text=勋章投保|link=@勋章>
+<Text|a=0|x=250.0|y=85.0|tipsx=10|tipsy=80|color=249|size=16|text=1000大米/次>
+<RText|a=0|x=380.0|y=85.0|tipsx=10|tipsy=80|color=255|size=16|text=<$STR(S$勋章投保)>>
+<Text|a=0|x=21.0|y=116.0|tipsx=10|tipsy=80|color=251|size=16|text=血石投保：<$str(S$宝石)>>
+<Text|a=0|x=480.0|y=116.0|tipsx=10|tipsy=80|color=255|size=16|text=血石投保|link=@宝石>
+<Text|a=0|x=250.0|y=116.0|tipsx=10|tipsy=80|color=249|size=16|text=1000大米/次>
+<RText|a=0|x=380.0|y=116.0|tipsx=10|tipsy=80|color=255|size=16|text=<$STR(S$血石投保)>>
+<Text|a=0|x=21.0|y=148.0|tipsx=10|tipsy=80|color=251|size=16|text=斗笠投保：<$str(S$斗笠)>>
+<Text|a=0|x=480.0|y=148.0|tipsx=10|tipsy=80|color=255|size=16|text=斗笠投保|link=@斗笠>
+<Text|a=0|x=250.0|y=148.0|tipsx=10|tipsy=80|color=249|size=16|text=1000大米/次>
+<RText|a=0|x=380.0|y=148.0|tipsx=10|tipsy=80|color=255|size=16|text=<$STR(S$斗笠投保)>>
+<Text|a=0|x=21.0|y=340.0|tipsx=10|tipsy=80|color=90|size=16|text=------------------------------------------------------------->
+<Text|a=0|x=21.0|y=360.0|tipsx=10|tipsy=80|color=254,251,168,191,250,70,245,249,253|size=16|text=∴∵装备投保∵∴>
+<Text|a=0|x=197.0|y=360.0|tipsx=10|tipsy=80|color=254,251,168,191,250,70,245,249,253|size=16|text=★全新投保系统★>
+<Text|a=0|x=373.0|y=360.0|tipsx=10|tipsy=80|color=254,251,168,191,250,70,245,249,253|size=16|text=∴∵散人逆袭∵∴>
+<Text|a=0|x=21.0|y=380.0|tipsx=10|tipsy=80|color=90|size=16|text=------------------------------------------------------------->
+<Text|a=0|x=75.0|y=400.0|tipsx=10|tipsy=80|color=251|size=16|text=投保上一页|link=@main>
+
+
+
+[@勋章]
+
+
+
+#if
+not CHECKUSEITEM 2
+#act
+MESSAGEBOX 您没有佩勋章，无法投保！
+BREAK
+
+
+#if
+CHECKINSURANCECOUNT 2 > 0
+#act
+MESSAGEBOX 已经投保过了，无需再投！
+BREAK
+
+#if
+CHECKgamepoint > 999
+#act
+gamepoint - 1000
+CHANGEINSURANCECOUNT 2 + 1
+GOTO @下一页
+GuildNoticeMsg 254 0 【投保提示】：[<$USERNAME>]给勋章投保了，可免爆一次！
+#elseact
+MESSAGEBOX 对不起，您包袱里面的大米点不足，无法投保！
+BREAK
+
+
+
+[@时装武器]
+#if
+not CHECKUSEITEM 18
+#act
+MESSAGEBOX 您没有佩时装武器，无法投保！
+BREAK
+
+
+#if
+CHECKINSURANCECOUNT 18 > 0
+#act
+MESSAGEBOX 已经投保过了，无需再投！
+BREAK
+
+#if
+CHECKgamepoint > 999
+#act
+gamepoint - 1000
+CHANGEINSURANCECOUNT 18 + 1
+GOTO @下一页
+GuildNoticeMsg 254 0 【投保提示】：[<$USERNAME>]给时装武器投保了，可免爆一次！
+#elseact
+MESSAGEBOX 对不起，您包袱里面的大米点不足，无法投保！
+BREAK
+
+
+
+
+
+
+[@时装衣服]
+#if
+not CHECKUSEITEM 17
+#act
+MESSAGEBOX 您没有佩时装衣服，无法投保！
+BREAK
+
+
+#if
+CHECKINSURANCECOUNT 17 > 0
+#act
+MESSAGEBOX 已经投保过了，无需再投！
+BREAK
+
+#if
+CHECKgamepoint > 999
+#act
+gamepoint - 1000
+CHANGEINSURANCECOUNT 17 + 1
+GOTO @下一页
+GuildNoticeMsg 254 0 【投保提示】：[<$USERNAME>]给时装衣服投保了，可免爆一次！
+#elseact
+MESSAGEBOX 对不起，您包袱里面的大米点不足，无法投保！
+BREAK
+
+
+
+
+
+
+
+
+
+
+[@盾牌]
+#if
+not CHECKUSEITEM 16
+#act
+MESSAGEBOX 您没有佩盾牌，无法投保！
+BREAK
+
+
+#if
+CHECKINSURANCECOUNT 16 > 0
+#act
+MESSAGEBOX 已经投保过了，无需再投！
+BREAK
+
+#if
+CHECKgamepoint > 999
+#act
+gamepoint - 1000
+CHANGEINSURANCECOUNT 16 + 1
+GOTO @下一页
+GuildNoticeMsg 254 0 【投保提示】：[<$USERNAME>]给盾牌投保了，可免爆一次！
+#elseact
+MESSAGEBOX 对不起，您包袱里面的大米点不足，无法投保！
+BREAK
+
+
+
+
+
+
+
+[@马牌]
+#if
+not CHECKUSEITEM 15
+#act
+MESSAGEBOX 您没有佩马牌，无法投保！
+BREAK
+
+
+#if
+CHECKINSURANCECOUNT 15 > 0
+#act
+MESSAGEBOX 已经投保过了，无需再投！
+BREAK
+
+#if
+CHECKgamepoint > 999
+#act
+gamepoint - 1000
+CHANGEINSURANCECOUNT 15 + 1
+GOTO @下一页
+GuildNoticeMsg 254 0 【投保提示】：[<$USERNAME>]给马牌投保了，可免爆一次！
+#elseact
+MESSAGEBOX 对不起，您包袱里面的大米点不足，无法投保！
+BREAK
+
+
+
+
+
+
+
+
+
+[@军鼓]
+#if
+not CHECKUSEITEM 14
+#act
+MESSAGEBOX 您没有佩军鼓，无法投保！
+BREAK
+
+
+#if
+CHECKINSURANCECOUNT 14 > 0
+#act
+MESSAGEBOX 已经投保过了，无需再投！
+BREAK
+
+#if
+CHECKgamepoint > 999
+#act
+gamepoint - 1000
+CHANGEINSURANCECOUNT 14 + 1
+GOTO @下一页
+GuildNoticeMsg 254 0 【投保提示】：[<$USERNAME>]给军鼓投保了，可免爆一次！
+#elseact
+MESSAGEBOX 对不起，您包袱里面的大米点不足，无法投保！
+BREAK
+
+
+
+
+
+
+[@斗笠]
+#if
+not CHECKUSEITEM 13
+#act
+MESSAGEBOX 您没有佩斗笠，无法投保！
+BREAK
+
+
+#if
+CHECKINSURANCECOUNT 13 > 0
+#act
+MESSAGEBOX 已经投保过了，无需再投！
+BREAK
+
+#if
+CHECKgamepoint > 999
+#act
+gamepoint - 1000
+CHANGEINSURANCECOUNT 13 + 1
+GOTO @下一页
+GuildNoticeMsg 254 0 【投保提示】：[<$USERNAME>]给斗笠投保了，可免爆一次！
+#elseact
+MESSAGEBOX 对不起，您包袱里面的大米点不足，无法投保！
+BREAK
+
+
+
+
+[@宝石]
+#if
+not CHECKUSEITEM 12
+#act
+MESSAGEBOX 您没有佩血石，无法投保！
+BREAK
+
+
+#if
+CHECKINSURANCECOUNT 12 > 0
+#act
+MESSAGEBOX 已经投保过了，无需再投！
+BREAK
+
+#if
+CHECKgamepoint > 999
+#act
+gamepoint - 1000
+CHANGEINSURANCECOUNT 12 + 1
+GOTO @下一页
+GuildNoticeMsg 254 0 【投保提示】：[<$USERNAME>]给血石投保了，可免爆一次！
+#elseact
+MESSAGEBOX 对不起，您包袱里面的大米点不足，无法投保！
+BREAK
+
+
+
+
+
+
+
+[@鞋子]
+#if
+not CHECKUSEITEM 11
+#act
+MESSAGEBOX 您没有佩带鞋，无法投保！
+BREAK
+
+
+#if
+CHECKINSURANCECOUNT 11 > 0
+#act
+MESSAGEBOX 已经投保过了，无需再投！
+BREAK
+
+#if
+CHECKgamepoint > 999
+#act
+gamepoint - 1000
+CHANGEINSURANCECOUNT 11 + 1
+GOTO @下一页
+GuildNoticeMsg 254 0 【投保提示】：[<$USERNAME>]给鞋子投保了，可免爆一次！
+#elseact
+MESSAGEBOX 对不起，您包袱里面的大米点不足，无法投保！
+BREAK
+
+
+
+
+[@腰带]
+#if
+not CHECKUSEITEM 10
+#act
+MESSAGEBOX 您没有佩带腰带，无法投保！
+BREAK
+
+
+#if
+CHECKINSURANCECOUNT 10 > 0
+#act
+MESSAGEBOX 已经投保过了，无需再投！
+BREAK
+
+#if
+CHECKgamepoint > 999
+#act
+gamepoint - 1000
+CHANGEINSURANCECOUNT 10 + 1
+GOTO @下一页
+GuildNoticeMsg 254 0 【投保提示】：[<$USERNAME>]给腰带投保了，可免爆一次！
+#elseact
+MESSAGEBOX 对不起，您包袱里面的大米点不足，无法投保！
+BREAK
+
+
+
+
+
+[@护身符]
+#if
+not CHECKUSEITEM 9
+#act
+MESSAGEBOX 您没有佩带灵珠，无法投保！
+BREAK
+
+
+#if
+CHECKINSURANCECOUNT 9 > 0
+#act
+MESSAGEBOX 已经投保过了，无需再投！
+BREAK
+
+#if
+CHECKgamepoint > 999
+#act
+gamepoint - 1000
+CHANGEINSURANCECOUNT 9 + 1
+GOTO @下一页
+GuildNoticeMsg 254 0 【投保提示】：[<$USERNAME>]给灵珠投保了，可免爆一次！
+#elseact
+MESSAGEBOX 对不起，您包袱里面的大米点不足，无法投保！
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+[@右戒]
+#if
+not CHECKUSEITEM 7
+#act
+MESSAGEBOX 您没有佩带右戒，无法投保！
+BREAK
+
+
+#if
+CHECKINSURANCECOUNT 7 > 0
+#act
+MESSAGEBOX 已经投保过了，无需再投！
+BREAK
+
+#if
+CHECKgamepoint > 999
+#act
+gamepoint - 1000
+CHANGEINSURANCECOUNT 7 + 1
+GOTO @main
+GuildNoticeMsg 254 0 【投保提示】：[<$USERNAME>]给右戒投保了，可免爆一次！
+#elseact
+MESSAGEBOX 对不起，您包袱里面的大米点不足，无法投保！
+BREAK
+
+
+
+
+[@左戒]
+#if
+not CHECKUSEITEM 8
+#act
+MESSAGEBOX 您没有佩带左戒，无法投保！
+BREAK
+
+
+#if
+CHECKINSURANCECOUNT 8 > 0
+#act
+MESSAGEBOX 已经投保过了，无需再投！
+BREAK
+
+#if
+CHECKgamepoint > 999
+#act
+gamepoint - 1000
+CHANGEINSURANCECOUNT 8 + 1
+GOTO @main
+GuildNoticeMsg 254 0 【投保提示】：[<$USERNAME>]给左戒投保了，可免爆一次！
+#elseact
+MESSAGEBOX 对不起，您包袱里面的大米点不足，无法投保！
+BREAK
+
+
+[@右手]
+#if
+not CHECKUSEITEM 5
+#act
+MESSAGEBOX 您没有佩带右手，无法投保！
+BREAK
+
+
+#if
+CHECKINSURANCECOUNT 5 > 0
+#act
+MESSAGEBOX 已经投保过了，无需再投！
+BREAK
+
+#if
+CHECKgamepoint > 999
+#act
+gamepoint - 1000
+CHANGEINSURANCECOUNT 5 + 1
+GOTO @main
+GuildNoticeMsg 254 0 【投保提示】：[<$USERNAME>]给右手投保了，可免爆一次！
+#elseact
+MESSAGEBOX 对不起，您包袱里面的大米点不足，无法投保！
+BREAK
+
+
+[@左手]
+#if
+not CHECKUSEITEM 6
+#act
+MESSAGEBOX 您没有佩带左手，无法投保！
+BREAK
+
+
+#if
+CHECKINSURANCECOUNT 6 > 0
+#act
+MESSAGEBOX 已经投保过了，无需再投！
+BREAK
+
+#if
+CHECKgamepoint > 999
+#act
+gamepoint - 1000
+CHANGEINSURANCECOUNT 6 + 1
+GOTO @main
+GuildNoticeMsg 254 0 【投保提示】：[<$USERNAME>]给左手投保了，可免爆一次！
+#elseact
+MESSAGEBOX 对不起，您包袱里面的大米点不足，无法投保！
+BREAK
+
+
+[@头盔]
+#if
+not CHECKUSEITEM 4
+#act
+MESSAGEBOX 您没有佩带头盔，无法投保！
+BREAK
+
+
+#if
+CHECKINSURANCECOUNT 4 > 0
+#act
+MESSAGEBOX 已经投保过了，无需再投！
+BREAK
+
+#if
+CHECKgamepoint > 999
+#act
+gamepoint - 1000
+CHANGEINSURANCECOUNT 4 + 1
+GOTO @main
+GuildNoticeMsg 254 0 【投保提示】：[<$USERNAME>]给头盔投保了，可免爆一次！
+#elseact
+MESSAGEBOX 对不起，您包袱里面的大米点不足，无法投保！
+BREAK
+
+
+[@项链]
+#if
+not CHECKUSEITEM 3
+#act
+MESSAGEBOX 您没有佩带项链，无法投保！
+BREAK
+
+
+#if
+CHECKINSURANCECOUNT 3 > 0
+#act
+MESSAGEBOX 已经投保过了，无需再投！
+BREAK
+
+#if
+CHECKgamepoint > 999
+#act
+gamepoint - 1000
+CHANGEINSURANCECOUNT 3 + 1
+GOTO @main
+GuildNoticeMsg 254 0 【投保提示】：[<$USERNAME>]给项链投保了，可免爆一次！
+#elseact
+MESSAGEBOX 对不起，您包袱里面的大米点不足，无法投保！
+BREAK
+
+
+[@衣服]
+
+#if
+not CHECKUSEITEM 0
+#act
+MESSAGEBOX 您没有佩带衣服，无法投保！
+BREAK
+
+#if
+CHECKINSURANCECOUNT 0 > 0
+#act
+MESSAGEBOX 已经投保过了，无需再投！
+BREAK
+
+#if
+CHECKgamepoint > 999
+#act
+gamepoint - 1000
+CHANGEINSURANCECOUNT 0 + 1
+GOTO @main
+GuildNoticeMsg 254 0 【投保提示】：[<$USERNAME>]给衣服投保了，衣服可免爆一次！
+#elseact
+MESSAGEBOX 对不起，您包袱里面的大米点不足，无法投保！
+BREAK
+
+[@武器]
+
+#if
+not CHECKUSEITEM 1
+#act
+MESSAGEBOX 您没有佩带武器，无法投保！
+BREAK
+
+
+#if
+CHECKINSURANCECOUNT 1 > 0
+#act
+MESSAGEBOX 已经投保过了，无需再投！
+BREAK
+
+#if
+CHECKgamepoint > 999
+#act
+gamepoint - 1000
+CHANGEINSURANCECOUNT 1 + 1
+GOTO @main
+GuildNoticeMsg 254 0 【投保提示】：[<$USERNAME>]给武器投保了，武器可免爆一次！
+#elseact
+MESSAGEBOX 对不起，您包袱里面的大米点不足，无法投保！
+BREAK
+
+

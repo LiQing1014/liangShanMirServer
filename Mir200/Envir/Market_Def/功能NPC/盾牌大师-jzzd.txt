@@ -1,0 +1,136 @@
+[@main]
+#IF
+#ACT
+#SAY
+<大侠您好，很高兴见到你! 我可以帮你把护盾精华锻造成护卫之盾！/SCOLOR=249>\
+<锻造的护盾品级越高，属性就会越强大/SCOLOR=249> \ \
+<人在江湖飘，哪有不挨刀？有一个强力护盾是非常非常重要的！/SCOLOR=250>\ \
+
+<护盾/SCOLOR=70> 需要：护盾精华+元宝，增强防御和生命力\
+
+<护盾精华靠打，第二大陆各大地图小怪或BOSS爆出！/SCOLOR=254>\ \
+
+<>                        <查看锻造详情.../@四象勋章>\
+
+[@四象勋章]
+#IF
+#ACT
+OPENMERCHANTBIGDLG 1 8 0 0 0 0 0
+#SAY
+\ \ \
+<衍天之盾/SCOLOR=243>  <锻造要求：/SCOLOR=19> <护盾精华*30 /SCOLOR=250>                  <点击锻造/@勋章1>\ 
+<逆炎之盾/SCOLOR=243>  <锻造要求：/SCOLOR=19> <衍天之盾*2个+20000元宝/SCOLOR=250>        <点击锻造/@勋章2>\
+<承影之盾/SCOLOR=243>  <锻造要求：/SCOLOR=19> <逆炎之盾*2个+40000元宝/SCOLOR=250>        <点击锻造/@勋章3>\
+<御龙之盾/SCOLOR=243>  <锻造要求：/SCOLOR=19> <承影之盾*2个+60000元宝/SCOLOR=250>        <点击锻造/@勋章4>\
+<麒 麟 臂/SCOLOR=253>  <锻造要求：/SCOLOR=19> <御龙之盾*2个+10万元宝/SCOLOR=250>         <点击锻造/@勋章5>\
+<>     <ItemShow:645:0:1:1:1> \ \ \
+<提示：/SCOLOR=254><麒麟臂/SCOLOR=249><乃上古遗留之物，传说非神级强者不能驾驭！/SCOLOR=253>\
+<大哥如果没时间打，可以直接兑换护盾精华，选择适合您的方式即可.../SCOLOR=250>\ \
+<>     <兑换护盾精华*1|250#兑换 护盾精华*1个 需要大米*2点/@购买精华1>   <兑换护盾精华*10|251#兑换 护盾精华*10个 需要大米*20点/@购买精华2>   <兑换护盾精华*100|253#兑换 护盾精华*100个 需要大米*200点/@购买精华3>
+
+
+[@购买精华3]
+#IF
+CHECKGAMEPOINT > 199
+#ACT
+GAMEPOINT - 200
+give 护盾精华 100
+SENDMSG 6 成功购买护盾精华*100!
+BREAK
+#ELSEACT
+MESSAGEBOX [购买失败]:大米点不足!
+
+
+[@购买精华2]
+#IF
+CHECKGAMEPOINT > 19
+#ACT
+GAMEPOINT - 20
+give 护盾精华 10
+SENDMSG 6 成功购买护盾精华*10!
+BREAK
+#ELSEACT
+MESSAGEBOX [购买失败]:大米点不足!
+
+[@购买精华1]
+#IF
+CHECKGAMEPOINT > 1
+#ACT
+GAMEPOINT - 2
+give 护盾精华 1
+SENDMSG 6 成功购买护盾精华*1!
+BREAK
+#ELSEACT
+MESSAGEBOX [购买失败]:大米点不足!
+
+[@勋章1]
+#IF
+checkitem 护盾精华 30
+#ACT
+take 护盾精华 30
+give 衍天之盾 1
+SENDMSG 0 恭喜玩家[<$USERNAME>]在护盾大师处打造出衍天之盾!
+BREAK
+#ELSEACT
+MESSAGEBOX [锻造失败]:您的材料或条件不足!
+
+[@勋章2]
+#IF
+CHECKGAMEGOLD > 19999
+checkitem 衍天之盾 2
+#ACT
+GAMEGOLD - 20000
+take 衍天之盾 2
+give 逆炎之盾 1
+SENDMSG 0 恭喜玩家[<$USERNAME>]在护盾大师处打造出逆炎之盾!
+BREAK
+#ELSEACT
+MESSAGEBOX [锻造失败]:您的材料或条件不足!
+
+[@勋章3]
+#IF
+CHECKGAMEGOLD > 39999
+checkitem 逆炎之盾 2
+#ACT
+GAMEGOLD - 40000
+take 逆炎之盾 2
+give 承影之盾 1
+SENDMSG 0 恭喜玩家[<$USERNAME>]在护盾大师处打造出承影之盾!
+BREAK
+#ELSEACT
+MESSAGEBOX [锻造失败]:您的材料或条件不足!
+
+[@勋章4]
+#IF
+CHECKGAMEGOLD > 59999
+checkitem 承影之盾 2
+#ACT
+GAMEGOLD - 60000
+take 承影之盾 2
+give 御龙之盾 1
+SENDMSG 0 恭喜玩家[<$USERNAME>]在护盾大师处打造出御龙之盾!
+BREAK
+#ELSEACT
+MESSAGEBOX [锻造失败]:您的材料或条件不足!
+
+[@勋章5]
+#IF
+checkitem 御龙之盾 2
+CHECKGAMEGOLD > 99999
+#act
+GAMEGOLD - 100000
+take 御龙之盾 2
+give 麒麟臂 1
+SENDMSG 0 恭喜玩家[<$USERNAME>]在成功打造出上古之物：麒麟臂!
+BREAK
+#ELSEACT
+MESSAGEBOX [锻造失败]:您的材料或条件不足!
+
+
+
+
+
+
+
+
+

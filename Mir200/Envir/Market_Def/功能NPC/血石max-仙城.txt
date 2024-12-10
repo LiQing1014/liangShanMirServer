@@ -1,0 +1,52 @@
+[@Main]
+
+#IF
+CheckItem 血玉Lv.5
+#Act
+#ELSEACT
+MESSAGEBOX [提示]:请先把【血玉Lv.5】放在背包!
+BREAK
+
+
+#IF
+#Act
+close
+#Say
+<┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄/FCOLOR=10>\
+　　　<本服无吃药玩法，只能通过血玉回复，让PK变的更过瘾./FCOLOR=250>　　　　 \
+<┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄/FCOLOR=10>\
+<>                        <ItemShow:619:0:1:1>\ \ \
+<≮/FCOLOR=249><至尊·血玉/FCOLOR=222><≯/FCOLOR=249>  <佩带·每秒恢复 →/FCOLOR=254>    <180HP、MP/FCOLOR=249>    <货币合成|243#物品:血玉Lv5*2^250#费用:元宝*88万+点卷*3888^254#一次合成·终生使用/@Wyhc>　\　\
+
+<≮/FCOLOR=249><至尊·血玉/FCOLOR=222><≯/FCOLOR=249>  <佩带·每秒恢复 →/FCOLOR=254>    <180HP、MP/FCOLOR=249>    <直接合成|243#物品:血玉Lv5*2^250#费用:大米点*888^254#一次合成·终生使用/@Wyhc06x>　　\
+
+[@Wyhc06x]
+#IF
+CHECKGAMEPOINT > 887
+CheckItem 血玉Lv.5 2
+#Act
+GAMEPOINT - 888
+TAKE 血玉Lv.5 2
+Give 至尊血玉 1
+Sendmsg 1 『<$Username>』在[血玉合成]处购合成了『至尊血玉』.！
+Break
+#ElseSay
+请检查材料..\　\需要：2个血玉Lv5 + 888大米点.
+
+
+
+
+[@Wyhc]
+#IF
+CHECKGAMEGOLD > 879999
+CHECKGAMEDIAMOND > 3887
+CheckItem 血玉Lv.5 2
+#Act
+GAMEGOLD - 880000
+GAMEDIAMOND - 3888
+TAKE 血玉Lv.5 2
+Give 至尊血玉 1
+Sendmsg 1 『<$Username>』在[血玉合成]处购合成了『至尊血玉』.！
+Break
+#ElseSay
+请检查材料..\　\需要：2个血玉Lv5 + 对应的货币，请检查清楚后在来.

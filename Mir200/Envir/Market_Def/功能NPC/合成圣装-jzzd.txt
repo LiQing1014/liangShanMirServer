@@ -1,0 +1,465 @@
+[@main]
+#IF
+#ACT
+#SAY
+圣阶装备乃是夺天地造化而成，想要炼制成功可不是一件容易事儿！\
+既然今天你碰巧遇到老夫，我就破例让你见识一下老夫的手艺吧！ \ 
+想锻造圣阶武器？需要找来<“赤炎石”/SCOLOR=249>加一些材料才能锻造！\  \   \ 
+
+<>          <锻造，圣阶武器/@圣阶武器>            <锻造，圣阶衣服/@圣阶衣服>\  \  \
+
+
+<提示：/SCOLOR=249><赤炎石可以打怪爆出装备来分解哦...>   <赤炎石兑换.../@石头>
+
+
+[@石头]
+\ \
+赤炎石可以打怪爆出圣阶装备来分解石头哟！\
+也可以打怪爆出轩辕装备分解天之神铁后合成赤炎石！\
+想要快速获得石头你也可以通过下面快速购买也行\
+选择一种适合您的方式即可...\ \
+
+<购买1颗赤炎石|1颗赤炎石需要20大米/@购买赤炎石1>         <购买5颗赤焰石|5颗赤炎石需要99大米/@购买赤炎石5>         <合成赤炎石|253#天之神铁*10个可兑换赤炎石*1颗/@合成赤炎>\\
+
+
+[@圣阶武器]
+圣阶装备乃是夺天地造化而成，想要炼制成功可不是一件容易事儿！\
+既然今天你碰巧遇到老夫，我就破例让你见识一下老夫的手艺吧！ \ 
+想锻造圣阶武器？需要找来<“赤炎石”/SCOLOR=249>加一些材料才能锻造！ \  \ \
+
+<> <锻造王者·神剑/@LV01>     <锻造圣·轩辕权杖/@LV02>     <锻造王者·道扇/@LV03>  \ \ \
+
+
+<提示：/SCOLOR=249><赤炎石可以打怪爆出装备来分解哦.../SCOLOR=250> \
+
+[@LV01]
+<圣阶武器乃是夺天地造化而成，想要炼制成功可不是一件容易事儿！/SCOLOR=147>\
+<既然今天你碰巧遇到老夫，我就破例让你见识一下老夫的手艺吧！/SCOLOR=145> \ 
+<想锻造圣阶武器？那你需要找来同职业轩辕武器加一些材料才能锻造！/SCOLOR=249> \ 
+
+<王者·神剑配方①/@LV011>  <需：轩辕神剑*1+1088大米点/SCOLOR=70>\  \ 
+
+<王者·神剑配方②/@LV012>  <需：轩辕神剑*3+点卷*2888+赤炎石*10颗/SCOLOR=70>\ \
+
+<提示：/SCOLOR=249><轩辕神剑可以在土城庄园交易市场进行合成！！/SCOLOR=250> \
+<提示：/SCOLOR=249><两种打造方式，选择一种适合您的方式即可！/SCOLOR=250> \
+
+[@LV02]
+<圣阶武器乃是夺天地造化而成，想要炼制成功可不是一件容易事儿！/SCOLOR=147>\
+<既然今天你碰巧遇到老夫，我就破例让你见识一下老夫的手艺吧！/SCOLOR=145> \ 
+<想锻造圣阶武器？那你需要找来同职业轩辕武器加一些材料才能锻造！/SCOLOR=249> \
+
+<圣·轩辕权杖配方①/@LV021>  <需：轩辕魔剑*1+1088大米点/SCOLOR=70>\  \ 
+
+<圣·轩辕权杖配方②/@LV022>  <需：轩辕魔剑*3+点卷*2888+赤炎石*10颗/SCOLOR=70>\ \
+
+<提示：/SCOLOR=249><轩辕神剑可以在土城庄园交易市场进行合成！！/SCOLOR=250> \
+<提示：/SCOLOR=249><两种打造方式，选择一种适合您的方式即可！！/SCOLOR=250> \
+
+[@LV03]
+<圣阶武器乃是夺天地造化而成，想要炼制成功可不是一件容易事儿！/SCOLOR=147>\
+<既然今天你碰巧遇到老夫，我就破例让你见识一下老夫的手艺吧！/SCOLOR=145> \ 
+<想锻造圣阶武器？那你需要找来同职业轩辕武器加一些材料才能锻造！/SCOLOR=249> \
+
+<王者·道扇配方①/@LV031>  <需：轩辕道剑*1+1088大米点/SCOLOR=70>\  \ 
+
+<王者·道扇配方②/@LV032>  <需：轩辕道剑*3+点卷*2888+赤炎石*10颗/SCOLOR=70>\ \
+
+<提示：/SCOLOR=249><轩辕神剑可以在土城庄园交易市场进行合成！！/SCOLOR=250> \
+<提示：/SCOLOR=249><两种打造方式，选择一种适合您的方式即可！！/SCOLOR=250> \
+
+
+
+[@圣阶衣服]
+圣阶装备乃是夺天地造化而成，想要炼制成功可不是一件容易事儿！\
+既然今天你碰巧遇到老夫，我就破例让你见识一下老夫的手艺吧！ \ 
+想锻造圣阶衣服？需要找来<“赤炎石”/SCOLOR=249>加一些材料才能锻造！ \    \
+
+<> <锻造王者·战甲/@11>     <锻造王者·魔袍/@33>     <锻造王者·道袍/@55>  \ \
+<> <锻造王者·战衣/@22>     <锻造王者·魔衣/@44>     <锻造王者·道衣/@66>  \ \
+
+
+<提示：/SCOLOR=249><赤炎石BOSS可以爆出，红色系列BOSS爆率较高！/SCOLOR=250> \
+
+[@66]
+圣阶装备乃是夺天地造化而成，想要炼制成功可不是一件容易事儿！\
+既然今天你碰巧遇到老夫，我就破例让你见识一下老夫的手艺吧！ \ 
+想锻造圣阶衣服？需要找来<“赤炎石”/SCOLOR=249>加一些材料才能锻造！ \    \ 
+
+<王者·道衣配方①/@661>  <需：轩辕道衣*1+888大米点/SCOLOR=70>\  \ 
+
+<王者·道衣配方②/@662>  <需：轩辕道衣*3+点卷*2088+赤炎石*10颗/SCOLOR=70>\  \ 
+
+<提示：/SCOLOR=249><两种打造方式，选择一种适合您的方式即可！/SCOLOR=250> \
+
+[@55]
+圣阶装备乃是夺天地造化而成，想要炼制成功可不是一件容易事儿！\
+既然今天你碰巧遇到老夫，我就破例让你见识一下老夫的手艺吧！ \ 
+想锻造圣阶衣服？需要找来<“赤炎石”/SCOLOR=249>加一些材料才能锻造！ \    \ 
+
+<王者·道袍配方①/@551>  <需：轩辕道袍*1++888大米点/SCOLOR=70>\  \ 
+
+<王者·道袍配方②/@552>  <需：轩辕道袍*3+点卷*2088+赤炎石*10颗/SCOLOR=70>\  \ 
+
+<提示：/SCOLOR=249><两种打造方式，轩辕衣服可以在土庄园交易市场进行合成！/SCOLOR=250> \
+
+[@44]
+圣阶装备乃是夺天地造化而成，想要炼制成功可不是一件容易事儿！\
+既然今天你碰巧遇到老夫，我就破例让你见识一下老夫的手艺吧！ \ 
+想锻造圣阶衣服？需要找来<“赤炎石”/SCOLOR=249>加一些材料才能锻造！ \    \ 
+
+<王者·魔衣配方①/@441>  <需：轩辕魔衣*1+888大米点/SCOLOR=70>\  \ 
+
+<王者·魔衣配方②/@442>  <需：轩辕魔衣*3+点卷*2088+赤炎石*10颗/SCOLOR=70>\  \ 
+
+<提示：/SCOLOR=249><两种打造方式，轩辕衣服可以在土庄园交易市场进行合成！/SCOLOR=250> \
+
+[@33]
+圣阶装备乃是夺天地造化而成，想要炼制成功可不是一件容易事儿！\
+既然今天你碰巧遇到老夫，我就破例让你见识一下老夫的手艺吧！ \ 
+想锻造圣阶衣服？需要找来<“赤炎石”/SCOLOR=249>加一些材料才能锻造！ \    \ 
+
+<王者·魔袍配方①/@331>  <需：轩辕魔袍*1+888大米点/SCOLOR=70>\  \ 
+
+<王者·魔袍配方②/@332>  <需：轩辕魔袍*3+点卷*2088+赤炎石*10颗/SCOLOR=70>\  \ 
+
+<提示：/SCOLOR=249><两种打造方式，轩辕衣服可以在土庄园交易市场进行合成！/SCOLOR=250> \
+
+
+[@11]
+圣阶装备乃是夺天地造化而成，想要炼制成功可不是一件容易事儿！\
+既然今天你碰巧遇到老夫，我就破例让你见识一下老夫的手艺吧！ \ 
+想锻造圣阶衣服？需要找来<“赤炎石”/SCOLOR=249>加一些材料才能锻造！ \    \ 
+
+<王者·战甲配方①/@111>  <需：轩辕战甲*1+888大米点/SCOLOR=70>\  \ 
+
+<王者·战甲配方②/@112>  <需：轩辕战甲*3+点卷*2088+赤炎石*10颗/SCOLOR=70>\  \ 
+
+<提示：/SCOLOR=249><两种打造方式，轩辕衣服可以在土庄园交易市场进行合成！/SCOLOR=250> \
+
+
+[@22]
+圣阶装备乃是夺天地造化而成，想要炼制成功可不是一件容易事儿！\
+既然今天你碰巧遇到老夫，我就破例让你见识一下老夫的手艺吧！ \ 
+想锻造圣阶衣服？需要找来<“赤炎石”/SCOLOR=249>加一些材料才能锻造！ \    \ 
+
+<王者·战衣配方/@221>  <需：轩辕战衣*1+888大米点/SCOLOR=70>\  \ 
+
+<王者·战衣配方/@222>  <需：轩辕战衣*3+点卷*2088+赤炎石*10颗/SCOLOR=70>\  \ 
+
+<提示：/SCOLOR=249><两种打造方式，轩辕衣服可以在土庄园交易市场进行合成！/SCOLOR=250> \
+
+
+
+[@合成赤炎]
+#IF
+checkitem 天之神铁 10
+#ACT
+take 天之神铁 10
+GIVE 赤炎石 1
+SENDMSG 6 恭喜您，用天之神铁*10个成功兑换赤炎石*1颗!
+BREAK
+#ELSEACT
+MESSAGEBOX [兑换失败]:材料不足!
+
+[@购买赤炎石1]
+#IF
+CHECKGAMEPOINT > 19
+#ACT
+GAMEPOINT - 20
+give 赤炎石 1
+SENDMSG 6 成功购买赤炎石*1!
+BREAK
+#ELSEACT
+MESSAGEBOX [购买失败]:大米点不足!
+
+[@购买赤炎石5]
+#IF
+CHECKGAMEPOINT > 98
+#ACT
+GAMEPOINT - 99
+give 赤炎石 5
+SENDMSG 6 成功购买赤炎石*5!
+BREAK
+#ELSEACT
+MESSAGEBOX [购买失败]:大米点不足!
+
+
+
+
+
+[@LV011]
+#if
+checkitem 轩辕神剑 1
+CHECKGAMEPOINT > 1087
+#ACT
+GAMEPOINT - 1088
+take 轩辕神剑 1
+give 王者·神剑 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出：【王者·神剑】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+[@LV012]
+#if
+checkitem 赤炎石 10
+checkitem 轩辕神剑 3
+CHECKGAMEDIAMOND > 2887
+#ACT
+GAMEDIAMOND - 2888
+take 轩辕神剑 3
+take 赤炎石 10
+give 王者·神剑 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出：【王者·神剑】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+[@LV022]
+#if
+checkitem 赤炎石 10
+checkitem 轩辕魔剑 3
+CHECKGAMEDIAMOND > 2887
+#ACT
+GAMEDIAMOND - 2888
+take 轩辕魔剑 3
+take 赤炎石 10
+give 王者·魔杖 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出：【王者·魔杖】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+[@LV021]
+#if
+checkitem 轩辕魔剑 1
+CHECKGAMEPOINT > 1087
+#ACT
+GAMEPOINT - 1088
+take 轩辕魔剑 1
+give 王者·魔杖 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出：【王者·魔杖】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+[@LV032]
+#if
+checkitem 赤炎石 10
+checkitem 轩辕道剑 3
+CHECKGAMEDIAMOND > 2887
+#ACT
+GAMEDIAMOND - 2888
+take 轩辕道剑 3
+take 赤炎石 10
+give 王者·道扇 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出：【王者·道扇】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+
+[@LV031]
+#if
+checkitem 轩辕道剑 1
+CHECKGAMEPOINT > 1087
+#ACT
+GAMEPOINT - 1088
+take 轩辕道剑 1
+give 王者·道扇 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出：【王者·道扇】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+
+[@112]
+#if
+checkitem 赤炎石 10
+checkitem 轩辕战甲 3
+CHECKGAMEDIAMOND > 2087
+#ACT
+GAMEDIAMOND - 2088
+take 轩辕战甲 3
+take 赤炎石 10
+give 王者·战甲 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出：【王者·战甲】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+
+[@111]
+#if
+checkitem 轩辕战甲 1
+CHECKGAMEPOINT > 887
+#ACT
+GAMEPOINT - 888
+take 轩辕战甲 1
+give 王者·战甲 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出：【王者·战甲】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+[@222]
+#if
+checkitem 赤炎石 10
+checkitem 轩辕战衣 3
+CHECKGAMEDIAMOND > 2087
+#ACT
+GAMEDIAMOND - 2088
+take 轩辕战衣 3
+take 赤炎石 10
+give 王者·战衣 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出：【王者·战衣】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+[@221]
+#if
+checkitem 轩辕战衣 1
+CHECKGAMEPOINT > 887
+#ACT
+GAMEPOINT - 888
+take 轩辕战衣 1
+give 王者·战衣 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出：【王者·战衣】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+[@332]
+#if
+checkitem 赤炎石 10
+checkitem 轩辕魔袍 3
+CHECKGAMEDIAMOND > 2087
+#ACT
+GAMEDIAMOND - 2088
+take 轩辕魔袍 3
+take 赤炎石 10
+give 王者·魔袍 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出：【王者·魔袍】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+[@331]
+#if
+checkitem 轩辕魔袍 1
+CHECKGAMEPOINT > 887
+#ACT
+GAMEPOINT - 888
+take 轩辕魔袍 1
+give 王者·魔袍 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出：【王者·魔袍】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+[@442]
+#if
+checkitem 赤炎石 10
+checkitem 轩辕魔衣 3
+CHECKGAMEDIAMOND > 2087
+#ACT
+GAMEDIAMOND - 2088
+take 轩辕魔衣 3
+take 赤炎石 10
+give 王者·魔衣 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出：【王者·魔衣】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+[@441]
+#if
+checkitem 轩辕魔衣 1
+CHECKGAMEPOINT > 887
+#ACT
+GAMEPOINT - 888
+take 轩辕魔衣 1
+give 王者·魔衣 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出：【王者·魔衣】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+[@552]
+#if
+checkitem 赤炎石 10
+checkitem 轩辕道袍 3
+CHECKGAMEDIAMOND > 2087
+#ACT
+GAMEDIAMOND - 2088
+take 轩辕道袍 3
+take 赤炎石 10
+give 王者·道袍 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出：【王者·道袍】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+[@551]
+#if
+checkitem 轩辕道袍 1
+CHECKGAMEPOINT > 887
+#ACT
+GAMEPOINT - 888
+take 轩辕道袍 1
+give 王者·道袍 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出：【王者·道袍】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+[@662]
+#if
+checkitem 赤炎石 10
+checkitem 轩辕道衣 3
+CHECKGAMEDIAMOND > 2087
+#ACT
+GAMEDIAMOND - 2088
+take 轩辕道衣 3
+take 赤炎石 10
+give 王者·道衣 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出：【王者·道衣】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+[@661]
+#if
+checkitem 轩辕道衣 1
+CHECKGAMEPOINT > 887
+#ACT
+GAMEPOINT - 888
+take 轩辕道衣 1
+give 王者·道衣 1
+GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出：【王者·道衣】
+break
+#ELSEACT
+messagebox 您的条件不足!
+break
+
+
+

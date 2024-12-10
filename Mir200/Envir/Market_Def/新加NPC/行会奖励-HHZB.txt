@@ -1,0 +1,23 @@
+[@MAIN]
+#IF
+HOUR 18 18
+MIN  31 59
+#ACT
+GOTO @MAIN1
+#ELSEACT
+MESSAGEBOX \对不起领奖时间还没到或者已过期\\领奖时间：18:31-19:00-过时不候\\最终获胜行会每人可领取奖励：3888元宝\\
+BREAK
+
+[@MAIN1]
+#IF
+HOUR 18 18
+MIN  31 59
+MapHumIsSameGuild 1
+#ACT
+MAPMOVE 3 330 330
+GAMEGOLD + 3888
+SENDMSG 7 [提示]：元宝增加3888个.您当前的元宝为：<$GAMEGOLD>个！
+SendMsg 0 {行会争霸ぐ|151:0:1}：恭喜{[<$GUILDNAME>]|254:0:1}行会成员「{%s|227:0:1}」在行会争霸中获得胜利，领取{[3888元宝]|223:0:1}的奖励！
+#ELSEACT
+MESSAGEBOX \\对不起，胜负未分！地图内还有其他行会对手！\\请先把其他行会对手都放倒在地了再来找我吧！\\
+BREAK

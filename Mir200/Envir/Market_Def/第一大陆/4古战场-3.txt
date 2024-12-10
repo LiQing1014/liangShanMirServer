@@ -1,0 +1,38 @@
+[@main]
+#IF
+NOT EQUAL A147 
+#ACT
+MESSAGEBOX 为防止玩家攻沙期间不参与沙巴克激情，每晚21-22点停止进一切地图\【请玩家理解，传奇本生就是个激情的游戏，不要失去了他的意义】！！
+BREAK
+
+
+#IF
+NOT EQUAL A147 关闭打怪入口
+#act
+close
+#say
+<本服严禁外挂、脱机等辅助。/SCOLOR=249>\
+<一旦发现使用，直接删除角色，不给予任何警告的机会！/SCOLOR=249>\ \
+<做为帝国复古的特色地图，适合中级玩家打宝发育。/SCOLOR=250>\ \
+本地图总共二层,小怪8分钟，15分钟刷新BOSS\ \
+<进入古战场/@进入奴隶> <(需要：40级+200元宝)/SCOLOR=253>\ \
+
+
+[@进入奴隶]
+#IF
+NOT EQUAL A147 
+#ACT
+MESSAGEBOX 为防止玩家攻沙期间不参与沙巴克激情，每晚21-22点停止进一切地图\【请玩家理解，传奇本生就是个激情的游戏，不要失去了他的意义】！！
+BREAK
+
+#IF
+CHECKLEVELEX > 39
+CHECKGAMEGOLD > 199
+#ACT
+GAMEGOLD - 200
+mapmove GZC1 34 31
+GuildNoticeMsg 255 249 (*)【%s】进入了%m。
+break
+#ELSEACT
+MESSAGEBOX 需要40级+200元宝能够进入。
+break

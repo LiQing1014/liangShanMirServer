@@ -1,0 +1,65 @@
+[@main]
+┌─┬─────────────────────────┐\
+│<COLOR=clFuchsia 玛>│<COLOR=clAqua 地图介绍:><COLOR=clLime 地图刷人型BOSS，是打装备，练级.的好去处！>│\
+│<COLOR=clFuchsia 雅>├─────────────────────────┤\
+│★│<COLOR=clAqua 刷新时间:><COLOR=CLYELLOW 小怪每10分钟刷新一次.大怪每60分钟刷新一次>│\
+│<COLOR=clFuchsia 圣>│<COLOR=clAqua 可爆物品:><COLOR=CLYELLOW 祖玛装备，赤月装备，六新衣服，屠龙级武器~>│\
+│<COLOR=clFuchsia 城>│<COLOR=clAqua 进入条件:><COLOR=CLYELLOW 身上携带≧灵符100张.！><COLOR=clRed (散人练级打宝之地)~>│\
+├─┴─────────────────────────┤\
+│      『<进入玛雅圣城/@wlsz88>』          『<元宝兑换灵符/@ybdhlf>』      │\
+└───────────────────────────┘\
+
+[@wlsz88]
+#IF
+CHECKGAMEGIRD > 99
+#ACT
+MAPMOVE HERO1 220 214
+KillScTimer 8
+SetScTimer 7 2
+SENDMSG 0 [玛雅圣城]勇士“%s”免费进入[玛雅圣城]，练级寻宝去了！ 251 0
+break
+#ELSEACT
+MessageBox 请携带100张灵符，否则无法进入！
+
+[@ybdhlf]
+<玛雅圣城>乃上古神地，仙灵聚集于此,你等凡人自然无法正常驾驭！\
+地图内每2秒HP降100点.如果你有足够的灵符便能护体免受失血之疼！\
+开启灵气护体后每2秒扣除1张灵符HP不减.若无灵符每秒HP将-100点！\ \
+
+你好：<$SERVERNAME>！你当前共计拥有[<$GAMEGIRD>]张灵符！\
+兑换灵符价格为1:1即1元宝可兑换1张灵符，请选择元宝所兑的灵符！\ \
+
+<100元宝兑换100张灵符/@100hy>    <500元宝兑换520张/@500hy>    <800元宝兑换888张/@800hy>\
+
+[@800hy]
+#IF
+CHECKGAMEGOLD > 799
+#ACT
+GAMEGOLD - 800
+GAMEGIRD + 888
+SENDMSG 0 提示『%s』，在[玛雅圣城]NPC处，使用800元宝兑换了888张灵符！ 252 255
+break
+#ELSEACT
+MessageBox 你的元宝不足:800个，无法兑换！
+
+[@500hy]
+#IF
+CHECKGAMEGOLD > 499
+#ACT
+GAMEGOLD - 500
+GAMEGIRD + 520
+SENDMSG 0 提示『%s』，在[玛雅圣城]NPC处，使用500元宝兑换了520张灵符！ 252 255
+break
+#ELSEACT
+MessageBox 你的元宝不足:500个，无法兑换！
+
+[@100hy]
+#IF
+CHECKGAMEGOLD > 99
+#ACT
+GAMEGOLD - 100
+GAMEGIRD + 100
+SENDMSG 0 提示『%s』，在[玛雅圣城]NPC处，使用100元宝兑换了100张灵符！ 252 255
+break
+#ELSEACT
+MessageBox 你的元宝不足:100个，无法兑换！

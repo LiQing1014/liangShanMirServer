@@ -1,0 +1,55 @@
+[@main]
+#IF
+#ACT
+close
+#say
+; <               ★    黑    ★    风    ★   山/AUTOCOLOR=253,249,251,252>    　   \
+; <观音院正南二十里远近，有座黑风山，山中有一个黑风洞，洞中有一个/scolor=161>    　   \
+; <妖精，正在睡醒翻身,原来是一头大黑熊..../scolor=161>    　 \ 
+; <-------------------------------------------------------------/AUTOCOLOR=255,249,250,254>    　   \
+; <><主要怪物:/FCOLOR=250><灵虚子、金池长老、黑风大王BOSS系列怪物/FCOLOR=161>\
+; <><地图爆率:/FCOLOR=251><武神、轩辕系列/FCOLOR=22>\
+; <><进入条件:/FCOLOR=249><67级/FCOLOR=254> + <22转/FCOLOR=253>\ \
+; \                  <进入黑风山地图|249#进入条件：^-^250#1.人物等级达到67级^-^250#2.人物转生22转/@进入黑风山>             \ 
+
+<Img|width=530|height=250|reset=1|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|scale9l=10>
+<Layout|x=501.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=530.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=18.0|y=18.0|tipsx=10|tipsy=80|color=253,249,251,252|size=16|text=★    黑    ★    风    ★   山>
+<Text|a=0|x=18.0|y=47.0|tipsx=10|tipsy=80|color=161|size=16|text=观音院正南二十里远近，有座黑风山，山中有一个黑风洞，洞中有一个>
+<Text|a=0|x=18.0|y=71.0|tipsx=10|tipsy=80|color=161|size=16|text=妖精，正在睡醒翻身,原来是一头大黑熊....>
+<Text|a=0|x=18.0|y=91.0|tipsx=10|tipsy=80|color=255,249,250,254|size=16|text=------------------------------------------------------------->
+<Text|a=0|x=18.0|y=111.0|tipsx=10|tipsy=80|color=250|size=16|text=主要怪物:>
+<Text|a=0|x=117.0|y=111.0|tipsx=10|tipsy=80|color=161|size=16|text=灵虚子、金池长老、黑风大王BOSS系列怪物>
+<Text|a=0|x=18.0|y=131.0|tipsx=10|tipsy=80|color=251|size=16|text=地图爆率:>
+<Text|a=0|x=117.0|y=131.0|tipsx=10|tipsy=80|color=22|size=16|text=武神、轩辕系列>
+<Text|a=0|x=18.0|y=151.0|tipsx=10|tipsy=80|color=249|size=16|text=进入条件:>
+<RText|a=0|x=117.0|y=151.0|tipsx=10|tipsy=80|color=254|size=16|text=67级 + <22转/FCOLOR=253>>
+<Text|a=0|x=18.0|y=211.0|tipsx=10|tipsy=80|color=251|size=16|text=进入花果山地图|link=@进入黑风山>
+
+[@进入黑风山]
+
+#IF
+CHECKRENEWLEVEL < 22
+#ACT
+messagebox 对不起，您当前转生等级没有22转，无法进入该地图
+break
+
+#IF
+CHECKLEVELEX < 67
+#ACT
+messagebox 对不起，您的等级不足67级，无法进入该地图！
+break
+
+
+
+
+#IF
+#ACT
+map 黑风山
+SENDMSG 0 玩家{『<$USERNAME>』|250:0}闯入{『<$MapTitle>』|70:0}去打顶级装备了！
+
+
+
+
+

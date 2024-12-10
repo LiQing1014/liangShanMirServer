@@ -1,0 +1,448 @@
+[@main]
+传说世间有一种特殊的宝石，外表五彩斑斓，光彩夺目，但在其中\     
+却蕴藏着天地间最纯粹的能量，拥有着毁灭天地的破坏力！上古人\
+类强者无意间发现用自身内力可调动宝石能量为其使用，尽管只能\   
+激活宝石1%的能量，也足以傲视大陆……\ \ 
+
+<宝石进阶说明：/FCOLOR=70><高阶宝石可以使用两颗低一级的宝石进阶!/FCOLOR=253> \   \      
+<友情提示：/FCOLOR=249><二大陆所有地图小怪低几率爆出宝石，BOSS高几率爆出宝石!/FCOLOR=250> \  
+
+<>            <开始宝石进阶/@宝石进阶>         <宝石快速兑换|快速购买宝石/@宝石购买>            \   
+
+
+
+[@宝石购买]
+#IF
+#ACT
+close
+#SAY
+<>
+<----------------------------元宝购买-------------------------/AUTOCOLOR=253>\ \
+<>      <购买二星宝石|购买2星宝石需要15000元宝/@购买二星宝石2>       <购买三星宝石|购买3星宝石需要4万元宝/@购买三星宝石3>      <购买四星宝石|购买4星宝石需要10万元宝/@购买四星宝石4>\ \  
+
+<----------大米购买----------大米购买----------大米购买----------/AUTOCOLOR=250>\ \
+<>      <购买二星宝石|购买2星宝石需要大米*15/@购买二星宝石22>       <购买三星宝石|购买3星宝石需要大米*39/@购买三星宝石33>      <购买四星宝石|购买3星宝石需要大米*99/@购买四星宝石44>\ \  
+
+
+<><需背包有宝石方可激活进阶界面，宝石在BOSS身上有几率掉落！/SCOLOR=250> <返回/@main>
+
+
+[@购买二星宝石2]
+#IF
+CHECKGAMEGOLD > 14999
+#ACT
+GAMEGOLD - 15000
+give 二星宝石 1
+SENDMSG 6 成功购买二星宝石*1!
+BREAK
+#ELSEACT
+MESSAGEBOX [购买失败]:元宝不足!
+
+[@购买三星宝石3]
+#IF
+CHECKGAMEGOLD > 39999
+#ACT
+GAMEGOLD - 40000
+give 三星宝石 1
+SENDMSG 6 成功购买三星宝石*1!
+BREAK
+#ELSEACT
+MESSAGEBOX [购买失败]:元宝不足!
+
+[@购买四星宝石4]
+#IF
+CHECKGAMEGOLD > 99999
+#ACT
+GAMEGOLD - 100000
+give 四星宝石 1
+SENDMSG 6 成功购买四星宝石*1!
+BREAK
+#ELSEACT
+MESSAGEBOX [购买失败]:大米不足!
+
+
+[@购买二星宝石22]
+#IF
+CHECKGAMEPOINT > 14
+#ACT
+GAMEPOINT - 15
+give 二星宝石 1
+SENDMSG 6 成功购买二星宝石*1!
+BREAK
+#ELSEACT
+MESSAGEBOX [购买失败]:大米不足!
+
+[@购买三星宝石33]
+#IF
+CHECKGAMEPOINT > 38
+#ACT
+GAMEPOINT - 39
+give 三星宝石 1
+SENDMSG 6 成功购买三星宝石*1!
+BREAK
+#ELSEACT
+MESSAGEBOX [购买失败]:大米不足!
+
+[@购买四星宝石44]
+#IF
+CHECKGAMEPOINT > 98
+#ACT
+GAMEPOINT - 99
+give 四星宝石 1
+SENDMSG 6 成功购买四星宝石*1!
+BREAK
+#ELSEACT
+MESSAGEBOX [购买失败]:大米不足!
+
+
+[@宝石进阶]
+#IF
+#ACT
+close
+#SAY
+<> \
+<>  <1-7级宝石需要两颗低一级的宝石进阶，合成为二合一！/SCOLOR=249>\
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>      <进阶二星宝石/@二星宝石>       <进阶三星宝石/@三星宝石>      <进阶四星宝石/@四星宝石>\ 
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>      <进阶五星宝石/@五星宝石>       <进阶六星宝石/@六星宝石>      <进阶七星宝石/@七星宝石>\ 
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+
+<><需背包有宝石方可激活进阶界面，宝石在BOSS身上有几率掉落！/SCOLOR=250> <返回/@main>
+
+
+[@二星宝石]
+#IF
+checkitem 一星宝石 1 
+#ACT
+OPENMERCHANTBIGDLG 1  191 1 0 0 0 0
+#SAY
+<IMGEX:1:213:214:215:375:-5/@exit>\  \
+<宝石进阶：/FCOLOR=70><宝石蕴含天地间最狂暴的能量，需要两颗低一级的宝石进阶！/FCOLOR=250> \
+<ItemShow:630:0:78:78>   <ItemShow:631:0:232:78>\  \ \ \ \ 
+
+<>\  \  \  \ \ \ \
+
+<>           <进阶要求：/FCOLOR=249><一星宝石*2颗+15点卷/FCOLOR=89> \  \
+<>           <进阶说明：/FCOLOR=249><成功几率100%/FCOLOR=89>\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@提升bs2> 
+<>                                                          <返回/@宝石进阶>\
+<PlayImg:2:0:10:80:-107:-395:0><PlayImg:2:10:10:80:-298:-395:0>
+#ELSEACT
+messagebox 您的背包里没有一星宝石，无法查看!
+
+
+[@三星宝石]
+#IF
+checkitem 二星宝石 1 
+#ACT
+OPENMERCHANTBIGDLG 1  191 1 0 0 0 0
+#SAY
+<IMGEX:1:213:214:215:375:-5/@exit>\  \
+<宝石进阶：/FCOLOR=70><宝石蕴含天地间最狂暴的能量，需要两颗低一级的宝石进阶！/FCOLOR=250> \
+<ItemShow:631:0:78:78>   <ItemShow:632:0:232:78>\  \ \ \ \ 
+
+<>\  \  \  \ \ \ \
+
+<>           <进阶要求：/FCOLOR=249><二星宝石*2颗+30点卷/FCOLOR=89> \  \
+<>           <进阶说明：/FCOLOR=249><成功几率100%/FCOLOR=89>\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@提升bs3>                                     \ 
+<>                                                          <返回/@宝石进阶>\
+<PlayImg:2:0:10:80:-107:-395:0><PlayImg:2:10:10:80:-298:-395:0>
+#ELSEACT
+messagebox 您的背包里没有二星宝石，无法查看!
+
+
+[@四星宝石]
+#IF
+checkitem 三星宝石 1 
+#ACT
+OPENMERCHANTBIGDLG 1  191 1 0 0 0 0
+#SAY
+<IMGEX:1:213:214:215:375:-5/@exit>\  \
+<宝石进阶：/FCOLOR=70><宝石蕴含天地间最狂暴的能量，需要两颗低一级的宝石进阶！/FCOLOR=250> \
+<ItemShow:632:0:78:78>   <ItemShow:633:0:232:78>\  \ \ \ \ 
+
+<>\  \  \  \ \ \ \
+
+<>           <进阶要求：/FCOLOR=249><三星宝石*2颗+60点卷/FCOLOR=89> \  \
+<>           <进阶说明：/FCOLOR=249><成功几率100%/FCOLOR=89>\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@提升bs4>                                     \ 
+<>                                                          <返回/@宝石进阶>\
+<PlayImg:2:0:10:80:-107:-395:0><PlayImg:2:10:10:80:-298:-395:0> 
+#ELSEACT
+messagebox 您的背包里没有三星宝石，无法查看!
+
+
+
+[@五星宝石]
+#IF
+checkitem 四星宝石 1 
+#ACT
+OPENMERCHANTBIGDLG 1  191 1 0 0 0 0
+#SAY
+<IMGEX:1:213:214:215:375:-5/@exit>\  \
+<宝石进阶：/FCOLOR=70><宝石蕴含天地间最狂暴的能量，需要两颗低一级的宝石进阶！/FCOLOR=250> \
+<ItemShow:633:0:78:78>   <ItemShow:634:0:232:78>\  \ \ \ \ 
+
+<>\  \  \  \ \ \ \
+
+<>           <进阶要求：/FCOLOR=249><四星宝石*2颗+120点卷/FCOLOR=89> \  \
+<>           <进阶说明：/FCOLOR=249><成功几率100%/FCOLOR=89>\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@提升bs5>                                     \ 
+<>                                                          <返回/@宝石进阶>\
+<PlayImg:2:0:10:80:-107:-395:0><PlayImg:2:10:10:80:-298:-395:0>  
+#ELSEACT
+messagebox 您的背包里没有四星宝石，无法查看!
+
+[@六星宝石]
+#IF
+checkitem 五星宝石 1 
+#ACT
+OPENMERCHANTBIGDLG 1  191 1 0 0 0 0
+#SAY
+<IMGEX:1:213:214:215:375:-5/@exit>\  \
+<宝石进阶：/FCOLOR=70><宝石蕴含天地间最狂暴的能量，需要两颗低一级的宝石进阶！/FCOLOR=250> \
+<ItemShow:634:0:78:78>   <ItemShow:635:0:232:78>\  \ \ \ \ 
+
+<>\  \  \  \ \ \ \
+
+<>           <进阶要求：/FCOLOR=249><五星宝石*2颗+240点卷/FCOLOR=89> \  \
+<>           <进阶说明：/FCOLOR=249><成功几率100%/FCOLOR=89>\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@提升bs6>                                     \ 
+<>                                                          <返回/@宝石进阶>\
+<PlayImg:2:0:10:80:-107:-395:0><PlayImg:2:10:10:80:-298:-395:0>  
+#ELSEACT
+messagebox 您的背包里没有五星宝石，无法查看!
+
+
+[@七星宝石]
+#IF
+checkitem 六星宝石 1 
+#ACT
+OPENMERCHANTBIGDLG 1  191 1 0 0 0 0
+#SAY
+<IMGEX:1:213:214:215:375:-5/@exit>\  \
+<宝石进阶：/FCOLOR=70><宝石蕴含天地间最狂暴的能量，需要两颗低一级的宝石进阶！/FCOLOR=250> \
+<ItemShow:635:0:78:78>   <ItemShow:636:0:232:78>\  \ \ \ \ 
+
+<>\  \  \  \ \ \ \
+
+<>           <进阶要求：/FCOLOR=249><六星宝石*2颗+480点卷/FCOLOR=89> \  \
+<>           <进阶说明：/FCOLOR=249><成功几率100%/FCOLOR=89>\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@提升bs7>                                     \ 
+<>                                                          <返回/@宝石进阶>\
+<PlayImg:2:0:10:80:-107:-395:0><PlayImg:2:10:10:80:-298:-395:0>   
+#ELSEACT
+messagebox 您的背包里没有六星宝石，无法查看!
+
+
+[@八星宝石]
+#IF
+checkitem 七星宝石 1 
+#ACT
+OPENMERCHANTBIGDLG 1  191 1 0 0 0 0
+#SAY
+<IMGEX:1:213:214:215:375:-5/@exit>\  \
+<宝石进阶：/FCOLOR=70><宝石蕴含天地间最狂暴的能量，需要两颗低一级的宝石进阶！/FCOLOR=250> \
+<ItemShow:636:0:78:78>   <ItemShow:637:0:232:78>\  \ \ \ \ 
+
+<>\  \  \  \ \ \ \
+
+<>           <进阶要求：/FCOLOR=249><七星宝石*1颗+300点卷/FCOLOR=89> \  \
+<>           <进阶说明：/FCOLOR=249><成功几率100%/FCOLOR=89>\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@提升bs8>                                     \ 
+<>                                                          <返回/@宝石进阶>\
+<PlayImg:2:0:10:80:-107:-395:0><PlayImg:2:10:10:80:-298:-395:0>     
+#ELSEACT
+messagebox 您的背包里没有七星宝石，无法查看!
+
+[@九星宝石]
+#IF
+checkitem 八星宝石 1 
+#ACT
+OPENMERCHANTBIGDLG 1  191 1 0 0 0 0
+#SAY
+<IMGEX:1:213:214:215:375:-5/@exit>\  \
+<宝石进阶：/FCOLOR=70><宝石蕴含天地间最狂暴的能量，需要两颗低一级的宝石进阶！/FCOLOR=250> \
+<ItemShow:637:0:78:78>   <ItemShow:638:0:232:78>\  \ \ \ \ 
+
+<>\  \  \  \ \ \ \
+
+<>           <进阶要求：/FCOLOR=249><八星宝石*1颗+888点卷/FCOLOR=89> \  \
+<>           <进阶说明：/FCOLOR=249><成功几率100%/FCOLOR=89>\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@提升bs9>                                     \ 
+<>                                                          <返回/@宝石进阶>\
+<PlayImg:2:0:10:80:-107:-395:0><PlayImg:2:10:10:80:-298:-395:0>   
+#ELSEACT
+messagebox 您的背包里没有八星宝石，无法查看!
+
+[@至尊宝石]
+#IF
+checkitem 九星宝石 1 
+#ACT
+OPENMERCHANTBIGDLG 1  191 1 0 0 0 0
+#SAY
+<IMGEX:1:213:214:215:375:-5/@exit>\  \
+<宝石进阶：/FCOLOR=70><宝石蕴含天地间最狂暴的能量，需要两颗低一级的宝石进阶！/FCOLOR=250> \
+<ItemShow:638:0:78:78>   <ItemShow:639:0:231:78>\  \ \ \ \ 
+
+<>\  \  \  \ \ \ \
+
+<>           <进阶要求：/FCOLOR=249><九星宝石*1颗+1000点卷+女娲补天神石*10/FCOLOR=89> \  \
+<>           <进阶说明：/FCOLOR=249><成功几率100%/FCOLOR=89>\   \
+<IMG:207:1:158:-2><IMG:208:1:101:3/@提升bs10>                                     \ 
+<>                                                          <返回/@宝石进阶>\
+<PlayImg:2:0:10:80:-107:-395:0><PlayImg:2:10:10:80:-298:-395:0>    
+#ELSEACT
+messagebox 您的背包里没有九星宝石，无法查看!
+
+
+
+
+[@提升bs2]
+#IF
+checkitem 一星宝石 2
+CHECKGAMEDIAMOND > 14
+#act
+GAMEDIAMOND - 15
+take 一星宝石 2
+give 二星宝石 1
+messagebox \\恭喜您进阶宝石成功！！！
+SENDMSG 0 神龙长老ぐ：恭喜玩家「%s」进阶宝石成功，获得：二星宝石！
+BREAK
+#ELSEACT
+MESSAGEBOX [进阶失败]:您的材料或条件不足!
+break
+
+
+[@提升bs3]
+#IF
+checkitem 二星宝石 2
+CHECKGAMEDIAMOND > 29
+#act
+GAMEDIAMOND - 30
+take 二星宝石 2
+give 三星宝石 1
+messagebox \\恭喜您进阶宝石成功！！！
+SENDMSG 0 神龙长老ぐ：恭喜玩家「%s」进阶宝石成功，获得：三星宝石！ 
+BREAK
+#ELSEACT
+MESSAGEBOX [进阶失败]:您的材料或条件不足!
+break
+
+
+[@提升bs4]
+#IF
+checkitem 三星宝石 2
+CHECKGAMEDIAMOND > 59
+#act
+GAMEDIAMOND - 60
+take 三星宝石 2
+give 四星宝石 1
+messagebox \\恭喜您进阶宝石成功！！！
+SENDMSG 0 神龙长老ぐ：恭喜玩家「%s」进阶宝石成功，获得：四星宝石！
+BREAK
+#ELSEACT
+MESSAGEBOX [进阶失败]:您的材料或条件不足!
+break
+
+
+[@提升bs5]
+#IF
+checkitem 四星宝石 2
+CHECKGAMEDIAMOND > 119
+#act
+GAMEDIAMOND - 120
+take 四星宝石 2
+give 五星宝石 1
+messagebox \\恭喜您进阶宝石成功！！！
+SENDMSG 0 神龙长老ぐ：恭喜玩家「%s」进阶宝石成功，获得：五星宝石！
+BREAK
+#ELSEACT
+MESSAGEBOX [进阶失败]:您的材料或条件不足!
+break
+
+
+[@提升bs6]
+#IF
+checkitem 五星宝石 2
+CHECKGAMEDIAMOND > 239
+#act
+GAMEDIAMOND - 240
+take 五星宝石 2
+give 六星宝石 1
+messagebox \\恭喜您进阶宝石成功！！！
+SENDMSG 0 神龙长老ぐ：恭喜玩家「%s」进阶宝石成功，获得：六星宝石！ 
+BREAK
+#ELSEACT
+MESSAGEBOX [进阶失败]:您的材料或条件不足!
+break
+
+
+[@提升bs7]
+#IF
+checkitem 六星宝石 2
+CHECKGAMEDIAMOND > 479
+#act
+GAMEDIAMOND - 480
+take 六星宝石 2
+give 七星宝石 1
+messagebox \\恭喜您进阶宝石成功！！！
+SENDMSG 0 神龙长老ぐ：恭喜玩家「%s」进阶宝石成功，获得：七星宝石！
+BREAK
+#ELSEACT
+MESSAGEBOX [进阶失败]:您的材料或条件不足!
+break
+
+
+[@提升bs8]
+#IF
+checkitem 七星宝石 1
+CHECKGAMEDIAMOND > 299
+#act
+GAMEDIAMOND - 300
+take 七星宝石 1
+give 八星宝石 1
+messagebox \\恭喜您进阶宝石成功！！！
+SENDMSG 0 神龙长老ぐ：恭喜玩家「%s」进阶宝石成功，获得：八星宝石！
+BREAK
+#ELSEACT
+MESSAGEBOX [进阶失败]:您的材料或条件不足!
+break
+
+
+
+[@提升bs9]
+#IF
+checkitem 八星宝石 1
+CHECKGAMEDIAMOND > 887
+#act
+GAMEDIAMOND - 888
+take 八星宝石 1
+give 九星宝石 1
+messagebox \\恭喜您进阶宝石成功！！！
+SENDMSG 0 神龙长老ぐ：恭喜玩家「%s」进阶宝石成功，获得：九星宝石！
+BREAK
+#ELSEACT
+MESSAGEBOX [进阶失败]:您的材料或条件不足!
+break
+
+
+
+[@提升bs10]
+#IF
+checkitem 九星宝石 1
+checkitem 女娲补天神石 10
+CHECKGAMEDIAMOND > 999
+#act
+GAMEDIAMOND - 1000
+take 女娲补天神石 10
+take 九星宝石 1
+give 至尊宝石 1
+messagebox \\恭喜您进阶宝石成功！！！
+SENDMSG 0 神龙长老ぐ：恭喜玩家「%s」进阶宝石成功，获得：至尊宝石！
+BREAK
+#ELSEACT
+MESSAGEBOX [进阶失败]:您的材料或条件不足!
+break

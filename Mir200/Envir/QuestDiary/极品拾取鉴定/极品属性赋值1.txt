@@ -1,0 +1,737 @@
+[@战士极品赋值1]
+{
+
+
+
+
+
+#IF
+#ACT
+ESPGetItemFieldValue <$STR(N$装备分类)> NAME <$STR(S$身上装备名字)>
+; mov S$身上装备名字 <$USEITEMNAME[<$STR(N$锻造极品位置)>]> 
+
+
+#IF
+CheckTextlist ..\QuestDiary\极品拾取鉴定\战士装备.txt <$STR(S$身上装备名字)>
+CheckItemAddValue <$STR(N$装备分类)> 0 > 4
+#ACT
+GetStringPos ..\QuestDiary\极品拾取鉴定\战士装备.txt <$STR(S$身上装备名字)>
+INC N0 1
+GetListString ..\QuestDiary\极品拾取鉴定\战士装备.txt <$STR(N0)> S$属性类型 S$鉴定上限
+
+
+
+
+#IF
+CheckTextlist ..\QuestDiary\极品拾取鉴定\战士装备.txt <$STR(S$身上装备名字)>
+CheckItemAddValue <$STR(N$装备分类)> 2 > 2
+#ACT
+GetStringPos ..\QuestDiary\极品拾取鉴定\战士装备.txt <$STR(S$身上装备名字)>
+INC N0 1
+GetListString ..\QuestDiary\极品拾取鉴定\战士装备.txt <$STR(N0)> S$属性类型 S$鉴定上限
+
+
+
+
+
+
+
+
+
+
+
+
+#IF
+CheckItemAddValue <$STR(N$装备分类)> 0 > <$STR(S$鉴定上限)>
+#ACT
+CHANGEITEMADDVALUE <$STR(N$装备分类)> 0 = <$STR(S$鉴定上限)>
+
+#IF
+CheckItemAddValue <$STR(N$装备分类)> 1 > <$STR(S$鉴定上限)>
+#ACT
+CHANGEITEMADDVALUE <$STR(N$装备分类)> 1 = <$STR(S$鉴定上限)>
+
+#IF
+CheckItemAddValue <$STR(N$装备分类)> 2 > <$STR(S$鉴定上限)>
+#ACT
+CHANGEITEMADDVALUE <$STR(N$装备分类)> 2 = <$STR(S$鉴定上限)>
+
+#IF
+CheckItemAddValue <$STR(N$装备分类)> 3 > <$STR(S$鉴定上限)>
+#ACT
+CHANGEITEMADDVALUE <$STR(N$装备分类)> 3 = <$STR(S$鉴定上限)>
+
+
+#IF
+CheckItemAddValue <$STR(N$装备分类)> 4 > <$STR(S$鉴定上限)>
+#ACT
+CHANGEITEMADDVALUE <$STR(N$装备分类)> 4 = <$STR(S$鉴定上限)>
+
+
+#IF
+#ACT
+MOV N$给予属性 0
+MOV N$检查属性1  3
+MOV N$检查属性2  4
+MOV N$检查属性3  5
+MOV N$检查属性4  6
+MOV N$检查属性5  7
+MOV N$检查属性6  8
+MOV N$检查属性7  9
+MOV N$检查属性8  10
+MOV N$检查属性9  11
+MOV N$检查属性10 12
+INC N$检查属性1  <$STR(N$给予点数)>
+INC N$检查属性2  <$STR(N$给予点数)>
+INC N$检查属性3  <$STR(N$给予点数)>
+INC N$检查属性4  <$STR(N$给予点数)>
+INC N$检查属性5  <$STR(N$给予点数)>
+INC N$检查属性6  <$STR(N$给予点数)>
+INC N$检查属性7  <$STR(N$给予点数)>
+INC N$检查属性8  <$STR(N$给予点数)>
+INC N$检查属性9  <$STR(N$给予点数)>
+INC N$检查属性10 <$STR(N$给予点数)>
+;SENDMSG 5 你当前装备位置：<$STR(N$属性位置)>：检查属性<$STR(N$检查属性1)>,鉴定上限<$STR(S$鉴定上限)>
+
+
+
+
+
+
+
+
+
+#IF
+CheckItemAddValue <$STR(N$装备分类)> <$STR(N$属性位置)> = <$STR(N$检查属性1)> 
+EQUAL S$属性类型 攻击
+#ACT
+MOV N$给予属性 1
+
+
+
+#IF
+CheckItemAddValue <$STR(N$装备分类)> <$STR(N$属性位置)> = <$STR(N$检查属性2)>
+EQUAL S$属性类型 攻击
+#ACT
+MOV N$给予属性 2
+
+
+#IF
+CheckItemAddValue <$STR(N$装备分类)> <$STR(N$属性位置)> = <$STR(N$检查属性3)>
+EQUAL S$属性类型 攻击
+#ACT
+MOV N$给予属性 3
+
+
+#IF
+CheckItemAddValue <$STR(N$装备分类)> <$STR(N$属性位置)> = <$STR(N$检查属性4)>
+EQUAL S$属性类型 攻击
+#ACT
+MOV N$给予属性 4
+
+
+#IF
+CheckItemAddValue <$STR(N$装备分类)> <$STR(N$属性位置)> = <$STR(N$检查属性5)>
+EQUAL S$属性类型 攻击
+#ACT
+MOV N$给予属性 5
+
+
+#IF
+CheckItemAddValue <$STR(N$装备分类)> <$STR(N$属性位置)> = <$STR(N$检查属性6)>
+EQUAL S$属性类型 攻击
+#ACT
+MOV N$给予属性 6
+
+
+
+#IF
+CheckItemAddValue <$STR(N$装备分类)> <$STR(N$属性位置)> = <$STR(N$检查属性7)>
+EQUAL S$属性类型 攻击
+#ACT
+MOV N$给予属性 7
+
+#IF
+CheckItemAddValue <$STR(N$装备分类)> <$STR(N$属性位置)> = <$STR(N$检查属性8)>
+EQUAL S$属性类型 攻击
+#ACT
+MOV N$给予属性 8
+
+#IF
+CheckItemAddValue <$STR(N$装备分类)> <$STR(N$属性位置)> = <$STR(N$检查属性9)>
+EQUAL S$属性类型 攻击
+#ACT
+MOV N$给予属性 9
+
+
+#IF
+CheckItemAddValue <$STR(N$装备分类)> <$STR(N$属性位置)> = <$STR(N$检查属性10)>
+EQUAL S$属性类型 攻击
+#ACT
+MOV N$给予属性 10
+
+
+
+
+#IF
+EQUAL S$属性类型 攻击
+CheckItemAddValue <$STR(N$装备分类)> <$STR(N$属性位置)> > <$STR(S$鉴定上限)>
+#ACT
+CHANGEITEMADDVALUE <$STR(N$装备分类)> <$STR(N$属性位置)> = <$STR(S$鉴定上限)>
+CHANGEITEMUPGRADECOUNT <$STR(N$装备分类)> = <$STR(N$给予属性)>
+CHANGECUSTOMITEMTEXT <$STR(N$装备分类)> [极品觉醒]
+CHANGECUSTOMITEMTEXTCOLOR <$STR(N$装备分类)> 103
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 1 0 22
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 1 1 15
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 1 2 1
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 1 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$装备分类)> 1 = <$STR(N$给予属性)>
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 2 0 19
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 2 1 16
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 2 2 2
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 2 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$装备分类)> 2 = <$STR(N$给予属性)>
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 3 0 246
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 3 1 17
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 3 2 3
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 3 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$装备分类)> 3 = <$STR(S$鉴定上限)>
+SetUpgradeItem 6
+UpDateBoxItem 6
+SENDUPGRADEITEM
+break
+
+
+
+
+
+
+#IF
+EQUAL S$属性类型 攻击
+LARGE N$给予属性 0
+#ACT
+CHANGEITEMUPGRADECOUNT <$STR(N$装备分类)> = <$STR(N$给予属性)>
+CHANGECUSTOMITEMTEXT <$STR(N$装备分类)> [极品觉醒]
+CHANGECUSTOMITEMTEXTCOLOR <$STR(N$装备分类)> 103
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 1 0 22
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 1 1 15
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 1 2 1
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 1 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$装备分类)> 1 = <$STR(N$给予属性)>
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 2 0 19
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 2 1 16
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 2 2 2
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 2 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$装备分类)> 2 = <$STR(N$给予属性)>
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 3 0 246
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 3 1 17
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 3 2 3
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 3 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$装备分类)> 3 = <$STR(S$鉴定上限)>
+SetUpgradeItem 6
+UpDateBoxItem 6
+SENDUPGRADEITEM
+break
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@法师极品赋值1]
+
+
+
+#IF
+#ACT
+ESPGetItemFieldValue <$STR(N$装备分类)> NAME <$STR(S$身上装备名字)>
+
+
+
+
+
+
+#IF
+CheckTextlist ..\QuestDiary\极品拾取鉴定\法师装备.txt <$STR(S$身上装备名字)>
+CheckItemAddValue <$STR(N$装备分类)> 1 > 4
+#ACT
+GetStringPos ..\QuestDiary\极品拾取鉴定\法师装备.txt <$STR(S$身上装备名字)>
+INC N0 1
+GetListString ..\QuestDiary\极品拾取鉴定\法师装备.txt <$STR(N0)> S$属性类型 S$鉴定上限
+
+
+
+
+
+#IF
+CheckTextlist ..\QuestDiary\极品拾取鉴定\法师装备.txt <$STR(S$身上装备名字)>
+CheckItemAddValue <$STR(N$装备分类)> 3 > 2
+#ACT
+GetStringPos ..\QuestDiary\极品拾取鉴定\法师装备.txt <$STR(S$身上装备名字)>
+INC N0 1
+GetListString ..\QuestDiary\极品拾取鉴定\法师装备.txt <$STR(N0)> S$属性类型 S$鉴定上限
+
+
+
+
+
+
+
+
+#IF
+CheckItemAddValue <$STR(N$装备分类)> 0 > <$STR(S$鉴定上限)>
+#ACT
+CHANGEITEMADDVALUE <$STR(N$装备分类)> 0 = <$STR(S$鉴定上限)>
+
+#IF
+CheckItemAddValue <$STR(N$装备分类)> 1 > <$STR(S$鉴定上限)>
+#ACT
+CHANGEITEMADDVALUE <$STR(N$装备分类)> 1 = <$STR(S$鉴定上限)>
+
+#IF
+CheckItemAddValue <$STR(N$装备分类)> 2 > <$STR(S$鉴定上限)>
+#ACT
+CHANGEITEMADDVALUE <$STR(N$装备分类)> 2 = <$STR(S$鉴定上限)>
+
+#IF
+CheckItemAddValue <$STR(N$装备分类)> 3 > <$STR(S$鉴定上限)>
+#ACT
+CHANGEITEMADDVALUE <$STR(N$装备分类)> 3 = <$STR(S$鉴定上限)>
+
+
+#IF
+CheckItemAddValue <$STR(N$装备分类)> 4 > <$STR(S$鉴定上限)>
+#ACT
+CHANGEITEMADDVALUE <$STR(N$装备分类)> 4 = <$STR(S$鉴定上限)>
+
+
+
+#IF
+#ACT
+MOV N$给予属性 0
+MOV N$检查属性1  3
+MOV N$检查属性2  4
+MOV N$检查属性3  5
+MOV N$检查属性4  6
+MOV N$检查属性5  7
+MOV N$检查属性6  8
+MOV N$检查属性7  9
+MOV N$检查属性8  10
+MOV N$检查属性9  11
+MOV N$检查属性10 12
+INC N$检查属性1  <$STR(N$给予点数)>
+INC N$检查属性2  <$STR(N$给予点数)>
+INC N$检查属性3  <$STR(N$给予点数)>
+INC N$检查属性4  <$STR(N$给予点数)>
+INC N$检查属性5  <$STR(N$给予点数)>
+INC N$检查属性6  <$STR(N$给予点数)>
+INC N$检查属性7  <$STR(N$给予点数)>
+INC N$检查属性8  <$STR(N$给予点数)>
+INC N$检查属性9  <$STR(N$给予点数)>
+INC N$检查属性10 <$STR(N$给予点数)>
+;SENDMSG 5 你当前装备位置：<$STR(N$属性位置)>：检查属性<$STR(N$检查属性1)>
+
+
+
+
+
+
+
+
+
+#IF
+CheckItemAddValue <$STR(N$装备分类)> <$STR(N$属性位置)> = <$STR(N$检查属性1)> 
+EQUAL S$属性类型 魔法
+#ACT
+MOV N$给予属性 1
+
+
+
+#IF
+CheckItemAddValue <$STR(N$装备分类)> <$STR(N$属性位置)> = <$STR(N$检查属性2)>
+EQUAL S$属性类型 魔法
+#ACT
+MOV N$给予属性 2
+
+
+#IF
+CheckItemAddValue <$STR(N$装备分类)> <$STR(N$属性位置)> = <$STR(N$检查属性3)>
+EQUAL S$属性类型 魔法
+#ACT
+MOV N$给予属性 3
+
+
+#IF
+CheckItemAddValue <$STR(N$装备分类)> <$STR(N$属性位置)> = <$STR(N$检查属性4)>
+EQUAL S$属性类型 魔法
+#ACT
+MOV N$给予属性 4
+
+
+#IF
+CheckItemAddValue <$STR(N$装备分类)> <$STR(N$属性位置)> = <$STR(N$检查属性5)>
+EQUAL S$属性类型 魔法
+#ACT
+MOV N$给予属性 5
+
+
+#IF
+CheckItemAddValue <$STR(N$装备分类)> <$STR(N$属性位置)> = <$STR(N$检查属性6)>
+EQUAL S$属性类型 魔法
+#ACT
+MOV N$给予属性 6
+
+
+
+#IF
+CheckItemAddValue <$STR(N$装备分类)> <$STR(N$属性位置)> = <$STR(N$检查属性7)>
+EQUAL S$属性类型 魔法
+#ACT
+MOV N$给予属性 7
+
+#IF
+CheckItemAddValue <$STR(N$装备分类)> <$STR(N$属性位置)> = <$STR(N$检查属性8)>
+EQUAL S$属性类型 魔法
+#ACT
+MOV N$给予属性 8
+
+#IF
+CheckItemAddValue <$STR(N$装备分类)> <$STR(N$属性位置)> = <$STR(N$检查属性9)>
+EQUAL S$属性类型 魔法
+#ACT
+MOV N$给予属性 9
+
+
+#IF
+CheckItemAddValue <$STR(N$装备分类)> <$STR(N$属性位置)> = <$STR(N$检查属性10)>
+EQUAL S$属性类型 魔法
+#ACT
+MOV N$给予属性 10
+
+
+
+
+
+
+
+#IF
+EQUAL S$属性类型 魔法
+CheckItemAddValue <$STR(N$装备分类)> <$STR(N$属性位置)> > <$STR(S$鉴定上限)>
+#ACT
+CHANGEITEMADDVALUE <$STR(N$装备分类)> <$STR(N$属性位置)> = <$STR(S$鉴定上限)>
+CHANGEITEMUPGRADECOUNT <$STR(N$装备分类)> = <$STR(N$给予属性)>
+CHANGECUSTOMITEMTEXT <$STR(N$装备分类)> [极品觉醒]
+CHANGECUSTOMITEMTEXTCOLOR <$STR(N$装备分类)> 103
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 1 0 22
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 1 1 15
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 1 2 1
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 1 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$装备分类)> 1 = <$STR(N$给予属性)>
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 2 0 19
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 2 1 16
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 2 2 2
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 2 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$装备分类)> 2 = <$STR(N$给予属性)>
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 3 0 246
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 3 1 17
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 3 2 3
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 3 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$装备分类)> 3 = <$STR(S$鉴定上限)>
+SetUpgradeItem 6
+UpDateBoxItem 6
+SENDUPGRADEITEM
+
+break
+
+
+
+#IF
+EQUAL S$属性类型 魔法
+LARGE N$给予属性 0
+#ACT
+CHANGEITEMUPGRADECOUNT <$STR(N$装备分类)> = <$STR(N$给予属性)>
+CHANGECUSTOMITEMTEXT <$STR(N$装备分类)> [极品觉醒]
+CHANGECUSTOMITEMTEXTCOLOR <$STR(N$装备分类)> 103
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 1 0 22
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 1 1 15
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 1 2 1
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 1 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$装备分类)> 1 = <$STR(N$给予属性)>
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 2 0 19
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 2 1 16
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 2 2 2
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 2 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$装备分类)> 2 = <$STR(N$给予属性)>
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 3 0 246
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 3 1 17
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 3 2 3
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 3 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$装备分类)> 3 = <$STR(S$鉴定上限)>
+SetUpgradeItem 6
+UpDateBoxItem 6
+SENDUPGRADEITEM
+break
+
+
+
+
+
+
+
+
+
+
+[@道士极品赋值1]
+
+
+
+#IF
+#ACT
+ESPGetItemFieldValue <$STR(N$装备分类)> NAME <$STR(S$身上装备名字)>
+
+
+
+
+
+
+
+#IF
+CheckTextlist ..\QuestDiary\极品拾取鉴定\道士装备.txt <$STR(S$身上装备名字)>
+CheckItemAddValue <$STR(N$装备分类)> 2 > 4
+#ACT
+GetStringPos ..\QuestDiary\极品拾取鉴定\道士装备.txt <$STR(S$身上装备名字)>
+INC N0 1
+GetListString ..\QuestDiary\极品拾取鉴定\道士装备.txt <$STR(N0)> S$属性类型 S$鉴定上限
+
+
+
+
+#IF
+CheckTextlist ..\QuestDiary\极品拾取鉴定\道士装备.txt <$STR(S$身上装备名字)>
+CheckItemAddValue <$STR(N$装备分类)> 4 > 2
+#ACT
+GetStringPos ..\QuestDiary\极品拾取鉴定\道士装备.txt <$STR(S$身上装备名字)>
+INC N0 1
+GetListString ..\QuestDiary\极品拾取鉴定\道士装备.txt <$STR(N0)> S$属性类型 S$鉴定上限
+
+
+
+
+
+
+
+#IF
+CheckItemAddValue <$STR(N$装备分类)> 0 > <$STR(S$鉴定上限)>
+#ACT
+CHANGEITEMADDVALUE <$STR(N$装备分类)> 0 = <$STR(S$鉴定上限)>
+
+#IF
+CheckItemAddValue <$STR(N$装备分类)> 1 > <$STR(S$鉴定上限)>
+#ACT
+CHANGEITEMADDVALUE <$STR(N$装备分类)> 1 = <$STR(S$鉴定上限)>
+
+#IF
+CheckItemAddValue <$STR(N$装备分类)> 2 > <$STR(S$鉴定上限)>
+#ACT
+CHANGEITEMADDVALUE <$STR(N$装备分类)> 2 = <$STR(S$鉴定上限)>
+
+#IF
+CheckItemAddValue <$STR(N$装备分类)> 3 > <$STR(S$鉴定上限)>
+#ACT
+CHANGEITEMADDVALUE <$STR(N$装备分类)> 3 = <$STR(S$鉴定上限)>
+
+
+#IF
+CheckItemAddValue <$STR(N$装备分类)> 4 > <$STR(S$鉴定上限)>
+#ACT
+CHANGEITEMADDVALUE <$STR(N$装备分类)> 4 = <$STR(S$鉴定上限)>
+
+
+#IF
+#ACT
+MOV N$给予属性 0
+MOV N$检查属性1  3
+MOV N$检查属性2  4
+MOV N$检查属性3  5
+MOV N$检查属性4  6
+MOV N$检查属性5  7
+MOV N$检查属性6  8
+MOV N$检查属性7  9
+MOV N$检查属性8  10
+MOV N$检查属性9  11
+MOV N$检查属性10 12
+INC N$检查属性1  <$STR(N$给予点数)>
+INC N$检查属性2  <$STR(N$给予点数)>
+INC N$检查属性3  <$STR(N$给予点数)>
+INC N$检查属性4  <$STR(N$给予点数)>
+INC N$检查属性5  <$STR(N$给予点数)>
+INC N$检查属性6  <$STR(N$给予点数)>
+INC N$检查属性7  <$STR(N$给予点数)>
+INC N$检查属性8  <$STR(N$给予点数)>
+INC N$检查属性9  <$STR(N$给予点数)>
+INC N$检查属性10 <$STR(N$给予点数)>
+;SENDMSG 5 你当前装备位置：<$STR(N$属性位置)>：检查属性<$STR(N$检查属性1)>,鉴定上限<$STR(S$鉴定上限)>
+
+
+
+
+
+
+
+
+
+#IF
+CheckItemAddValue <$STR(N$装备分类)> <$STR(N$属性位置)> = <$STR(N$检查属性1)> 
+EQUAL S$属性类型 道术
+#ACT
+MOV N$给予属性 1
+
+
+
+#IF
+CheckItemAddValue <$STR(N$装备分类)> <$STR(N$属性位置)> = <$STR(N$检查属性2)>
+EQUAL S$属性类型 道术
+#ACT
+MOV N$给予属性 2
+
+
+#IF
+CheckItemAddValue <$STR(N$装备分类)> <$STR(N$属性位置)> = <$STR(N$检查属性3)>
+EQUAL S$属性类型 道术
+#ACT
+MOV N$给予属性 3
+
+
+#IF
+CheckItemAddValue <$STR(N$装备分类)> <$STR(N$属性位置)> = <$STR(N$检查属性4)>
+EQUAL S$属性类型 道术
+#ACT
+MOV N$给予属性 4
+
+
+#IF
+CheckItemAddValue <$STR(N$装备分类)> <$STR(N$属性位置)> = <$STR(N$检查属性5)>
+EQUAL S$属性类型 道术
+#ACT
+MOV N$给予属性 5
+
+
+#IF
+CheckItemAddValue <$STR(N$装备分类)> <$STR(N$属性位置)> = <$STR(N$检查属性6)>
+EQUAL S$属性类型 道术
+#ACT
+MOV N$给予属性 6
+
+
+
+#IF
+CheckItemAddValue <$STR(N$装备分类)> <$STR(N$属性位置)> = <$STR(N$检查属性7)>
+EQUAL S$属性类型 道术
+#ACT
+MOV N$给予属性 7
+
+#IF
+CheckItemAddValue <$STR(N$装备分类)> <$STR(N$属性位置)> = <$STR(N$检查属性8)>
+EQUAL S$属性类型 道术
+#ACT
+MOV N$给予属性 8
+
+#IF
+CheckItemAddValue <$STR(N$装备分类)> <$STR(N$属性位置)> = <$STR(N$检查属性9)>
+EQUAL S$属性类型 道术
+#ACT
+MOV N$给予属性 9
+
+
+#IF
+CheckItemAddValue <$STR(N$装备分类)> <$STR(N$属性位置)> = <$STR(N$检查属性10)>
+EQUAL S$属性类型 道术
+#ACT
+MOV N$给予属性 10
+
+
+
+
+
+
+#IF
+EQUAL S$属性类型 道术
+CheckItemAddValue <$STR(N$装备分类)> <$STR(N$属性位置)> > <$STR(S$鉴定上限)>
+#ACT
+CHANGEITEMADDVALUE <$STR(N$装备分类)> <$STR(N$属性位置)> = <$STR(S$鉴定上限)>
+CHANGEITEMUPGRADECOUNT <$STR(N$装备分类)> = <$STR(N$给予属性)>
+CHANGECUSTOMITEMTEXT <$STR(N$装备分类)> [极品觉醒]
+CHANGECUSTOMITEMTEXTCOLOR <$STR(N$装备分类)> 103
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 1 0 22
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 1 1 15
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 1 2 1
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 1 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$装备分类)> 1 = <$STR(N$给予属性)>
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 2 0 19
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 2 1 16
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 2 2 2
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 2 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$装备分类)> 2 = <$STR(N$给予属性)>
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 3 0 246
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 3 1 17
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 3 2 3
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 3 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$装备分类)> 3 = <$STR(S$鉴定上限)>
+SetUpgradeItem 6
+UpDateBoxItem 6
+SENDUPGRADEITEM
+
+break
+
+
+
+#IF
+EQUAL S$属性类型 道术
+LARGE N$给予属性 0
+#ACT
+CHANGEITEMUPGRADECOUNT <$STR(N$装备分类)> = <$STR(N$给予属性)>
+CHANGECUSTOMITEMTEXT <$STR(N$装备分类)> [极品觉醒]
+CHANGECUSTOMITEMTEXTCOLOR <$STR(N$装备分类)> 103
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 1 0 22
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 1 1 15
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 1 2 1
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 1 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$装备分类)> 1 = <$STR(N$给予属性)>
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 2 0 19
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 2 1 16
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 2 2 2
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 2 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$装备分类)> 2 = <$STR(N$给予属性)>
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 3 0 246
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 3 1 17
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 3 2 3
+CHANGECUSTOMITEMABIL <$STR(N$装备分类)> 3 3 0
+CHANGECUSTOMITEMVALUE <$STR(N$装备分类)> 3 = <$STR(S$鉴定上限)>
+SetUpgradeItem 6
+UpDateBoxItem 6
+SENDUPGRADEITEM
+break
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

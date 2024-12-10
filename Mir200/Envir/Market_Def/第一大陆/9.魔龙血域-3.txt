@@ -1,0 +1,73 @@
+[@main]
+#IF
+#ACT
+close
+#say
+; \  \ 
+; <><Hot~/SCOLOR=250> <◇◆/SCOLOR=22>  <1.76独家复古绿色公益三职业传奇欢迎您/AUTOCOLOR=161,250,251,254,249>  <◆◇/SCOLOR=22>\
+; <> <------------------------------------------------------------/SCOLOR=13>\
+
+; <> <主要怪物:/FCOLOR=7><魔龙血蛙，魔龙射手，魔龙力士,魔龙树妖,魔龙教主[BOSS]/AUTOCOLOR=161,250,251>\
+; <> <挑战难度:/FCOLOR=7><★/FCOLOR=22><★/FCOLOR=22><★/FCOLOR=22><★/FCOLOR=22><★/FCOLOR=22><★/FCOLOR=22><★/FCOLOR=22>\
+; <> <地图爆率:/FCOLOR=7><赤月.黄金武神系列装备,BOSS必掉材料/FCOLOR=100>\
+; <> <进入条件:/FCOLOR=7><50级/SCOLOR=250> <爆出：赤月、黄金、武神系列./SCOLOR=145>\
+; <------------------------------------------------------------/SCOLOR=13>\ 
+; \           <进入魔龙血域A线/@进入魔龙血域>              <进入魔龙血域B线/@进入魔龙血域A>\ 
+
+<Img|width=530|height=250|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|reset=1>
+<Layout|x=502.0|y=0.0|width=80|height=80|link=@exit>
+<Button|x=530.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=17.0|y=36.0|tipsx=10|tipsy=80|color=250|size=16|text=Hot~>
+<Text|a=0|x=61.0|y=36.0|tipsx=10|tipsy=80|color=22|size=16|text=◇◆>
+<Text|a=0|x=105.0|y=36.0|tipsx=10|tipsy=80|color=161,250,251,254,249|size=16|text=1.76独家复古绿色公益三职业传奇欢迎您>
+<Text|a=0|x=410.0|y=36.0|tipsx=10|tipsy=80|color=22|size=16|text=◆◇>
+<Text|a=0|x=17.0|y=56.0|tipsx=10|tipsy=80|color=13|size=16|text=------------------------------------------------------------------------------>
+<Text|a=0|x=17.0|y=76.0|tipsx=10|tipsy=80|color=7|size=16|text=主要怪物:>
+<Text|a=0|x=95.0|y=76.0|tipsx=10|tipsy=80|color=230|size=16|text=魔龙血蛙，魔龙射手，魔龙力士,魔龙树妖,魔龙教主[BOSS]>
+<Text|a=0|x=17.0|y=96.0|tipsx=10|tipsy=80|color=7|size=16|text=挑战难度:>
+<Text|a=0|x=95.0|y=96.0|tipsx=10|tipsy=80|color=22|size=16|text=★★★★★★★>
+<Text|a=0|x=17.0|y=116.0|tipsx=10|tipsy=80|color=7|size=16|text=地图爆率:>
+<Text|a=0|x=95.0|y=116.0|tipsx=10|tipsy=80|color=100|size=16|text=赤月.黄金武神系列装备,BOSS必掉材料>
+<Text|a=0|x=17.0|y=136.0|tipsx=10|tipsy=80|color=7|size=16|text=进入条件:>
+<RText|a=0|x=95.0|y=136.0|tipsx=10|tipsy=80|color=145|size=16|text=<50级/FCOLOR=250>    爆出：赤月、黄金、武神系列.>
+<Text|a=0|x=17.0|y=156.0|tipsx=10|tipsy=80|color=13|size=16|text=------------------------------------------------------------------------------>
+<Text|a=0|x=17.0|y=196.0|tipsx=10|tipsy=80|color=251|size=16|text=我要进入A线|link=@进入魔龙血域>
+<Text|a=0|x=138.0|y=196.0|tipsx=10|tipsy=80|color=251|size=16|text=我要进入B线|link=@进入魔龙血域A>
+
+[@进入魔龙血域A]
+
+#IF
+CHECKLEVELEX < 50
+#ACT
+messagebox 对不起，您的等级不足50级，无法进入该地图！
+break
+
+#IF
+#ACT
+map 魔龙血域A
+GuildNoticeMsg 255 249 (*)【%s】进入了[%m]
+BREAK
+
+
+
+
+[@进入魔龙血域]
+
+#IF
+CHECKLEVELEX < 50
+#ACT
+messagebox 对不起，您的等级不足50级，无法进入该地图！
+break
+
+#IF
+#ACT
+map 魔龙血域
+GuildNoticeMsg 255 249 (*)【%s】进入了[%m]
+BREAK
+
+
+
+
+[@回去]
+#act
+mapmove 3 330 330

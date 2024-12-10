@@ -1,0 +1,2107 @@
+[@main]
+
+#IF
+#ACT
+
+getdbitemfieldvalue 灵阶·子鼠	Idx	N$生肖Idx1
+getdbitemfieldvalue 灵阶·丑牛	Idx	N$生肖Idx2
+getdbitemfieldvalue 灵阶·寅虎	Idx	N$生肖Idx3
+getdbitemfieldvalue 灵阶·卯兔	Idx	N$生肖Idx4
+getdbitemfieldvalue 灵阶·辰龙	Idx	N$生肖Idx5
+getdbitemfieldvalue 灵阶·巳蛇	Idx	N$生肖Idx6
+getdbitemfieldvalue 灵阶·午马	Idx	N$生肖Idx7
+getdbitemfieldvalue 灵阶·未羊	Idx	N$生肖Idx8
+getdbitemfieldvalue 灵阶·申猴	Idx	N$生肖Idx9
+getdbitemfieldvalue 灵阶·酉鸡	Idx	N$生肖Idx10
+getdbitemfieldvalue 灵阶·戌狗	Idx	N$生肖Idx11
+getdbitemfieldvalue 灵阶·亥猪	Idx	N$生肖Idx12
+
+MOV	S$生肖展示1	 <ItemShow:<$Str(N$生肖Idx1)>:0:0:-10:1>
+MOV	S$生肖展示2	 <ItemShow:<$Str(N$生肖Idx2)>:0:40:-10:1>
+MOV	S$生肖展示3	 <ItemShow:<$Str(N$生肖Idx3)>:0:80:-10:1>
+MOV	S$生肖展示4	 <ItemShow:<$Str(N$生肖Idx4)>:0:110:-10:1>
+MOV	S$生肖展示5	 <ItemShow:<$Str(N$生肖Idx5)>:0:0:-10:1>
+MOV	S$生肖展示6	 <ItemShow:<$Str(N$生肖Idx6)>:0:40:-10:1>
+MOV	S$生肖展示7	 <ItemShow:<$Str(N$生肖Idx7)>:0:80:-10:1>
+MOV	S$生肖展示8	 <ItemShow:<$Str(N$生肖Idx8)>:0:110:-10:1>
+MOV	S$生肖展示9	 <ItemShow:<$Str(N$生肖Idx9)>:0:0:-10:1>
+MOV	S$生肖展示10	 <ItemShow:<$Str(N$生肖Idx10)>:0:40:-10:1>
+MOV	S$生肖展示11	 <ItemShow:<$Str(N$生肖Idx11)>:0:80:-10:1>
+MOV	S$生肖展示12	 <ItemShow:<$Str(N$生肖Idx12)>:0:110:-10:1>
+
+
+MOV S$生肖A1 灵阶·子鼠
+MOV S$生肖A2 灵阶·丑牛
+MOV S$生肖A3 灵阶·寅虎
+MOV S$生肖A4 灵阶·卯兔
+MOV S$生肖A5 灵阶·辰龙
+MOV S$生肖A6 灵阶·巳蛇
+MOV S$生肖A7 灵阶·午马
+MOV S$生肖A8 灵阶·未羊
+MOV S$生肖A9 灵阶·申猴
+MOV S$生肖A10 灵阶·酉鸡
+MOV S$生肖A11 灵阶·戌狗
+MOV S$生肖A12 灵阶·亥猪
+MOV S$生肖A货币 5W元宝
+MOV N$生肖A货币 50000
+MOV S$生肖A材料 魔法神石
+MOV N$生肖A材料 50
+MOV N$生肖A合成数量 5
+
+
+
+MOV S$打造子鼠 <打造子鼠|249#打造条件：^-^250#①：人阶生肖随意*5件^-^168#②：<$STR(S$生肖A材料)>*<$STR(N$生肖A材料)>^-^151#③：<$STR(S$生肖A货币)>/@打造子鼠1>
+MOV S$打造丑牛 <打造丑牛|249#打造条件：^-^250#①：人阶生肖随意*5件^-^168#②：<$STR(S$生肖A材料)>*<$STR(N$生肖A材料)>^-^151#③：<$STR(S$生肖A货币)>/@打造丑牛1>
+MOV S$打造寅虎 <打造寅虎|249#打造条件：^-^250#①：人阶生肖随意*5件^-^168#②：<$STR(S$生肖A材料)>*<$STR(N$生肖A材料)>^-^151#③：<$STR(S$生肖A货币)>/@打造寅虎1>
+MOV S$打造卯兔 <打造卯兔|249#打造条件：^-^250#①：人阶生肖随意*5件^-^168#②：<$STR(S$生肖A材料)>*<$STR(N$生肖A材料)>^-^151#③：<$STR(S$生肖A货币)>/@打造卯兔1>
+MOV S$打造辰龙 <打造辰龙|249#打造条件：^-^250#①：人阶生肖随意*5件^-^168#②：<$STR(S$生肖A材料)>*<$STR(N$生肖A材料)>^-^151#③：<$STR(S$生肖A货币)>/@打造辰龙1>
+MOV S$打造巳蛇 <打造巳蛇|249#打造条件：^-^250#①：人阶生肖随意*5件^-^168#②：<$STR(S$生肖A材料)>*<$STR(N$生肖A材料)>^-^151#③：<$STR(S$生肖A货币)>/@打造巳蛇1>
+MOV S$打造午马 <打造午马|249#打造条件：^-^250#①：人阶生肖随意*5件^-^168#②：<$STR(S$生肖A材料)>*<$STR(N$生肖A材料)>^-^151#③：<$STR(S$生肖A货币)>/@打造午马1>
+MOV S$打造未羊 <打造未羊|249#打造条件：^-^250#①：人阶生肖随意*5件^-^168#②：<$STR(S$生肖A材料)>*<$STR(N$生肖A材料)>^-^151#③：<$STR(S$生肖A货币)>/@打造未羊1>
+MOV S$打造申猴 <打造申猴|249#打造条件：^-^250#①：人阶生肖随意*5件^-^168#②：<$STR(S$生肖A材料)>*<$STR(N$生肖A材料)>^-^151#③：<$STR(S$生肖A货币)>/@打造申猴1>
+MOV S$打造酉鸡 <打造酉鸡|249#打造条件：^-^250#①：人阶生肖随意*5件^-^168#②：<$STR(S$生肖A材料)>*<$STR(N$生肖A材料)>^-^151#③：<$STR(S$生肖A货币)>/@打造酉鸡1>
+MOV S$打造戌狗 <打造戌狗|249#打造条件：^-^250#①：人阶生肖随意*5件^-^168#②：<$STR(S$生肖A材料)>*<$STR(N$生肖A材料)>^-^151#③：<$STR(S$生肖A货币)>/@打造戌狗1>
+MOV S$打造亥猪 <打造亥猪|249#打造条件：^-^250#①：人阶生肖随意*5件^-^168#②：<$STR(S$生肖A材料)>*<$STR(N$生肖A材料)>^-^151#③：<$STR(S$生肖A货币)>/@打造亥猪1>
+
+
+close
+OPENMERCHANTBIGDLG 1 560 1 4 0 0 1 400 0
+#say
+; \ 
+; <>         <Hot~/SCOLOR=253> <◇◆/SCOLOR=22>  <十   二   生   肖   打  造 /AUTOCOLOR=250,255,251,253,249,230>  <◆◇/SCOLOR=22>\ \
+; \ 
+; \   <$Str(S$生肖展示1)>   <$Str(S$生肖展示2)>   <$Str(S$生肖展示3)>   <$Str(S$生肖展示4)>\ \  \ 
+; \   <$Str(S$打造子鼠)>         <$Str(S$打造丑牛)>        <$Str(S$打造寅虎)>       <$Str(S$打造卯兔)>\ \ \
+
+
+; \   <$Str(S$生肖展示5)>   <$Str(S$生肖展示6)>   <$Str(S$生肖展示7)>   <$Str(S$生肖展示8)>\ \  \ 
+; \   <$Str(S$打造辰龙)>         <$Str(S$打造巳蛇)>        <$Str(S$打造午马)>       <$Str(S$打造未羊)>\ \ \
+
+
+; \   <$Str(S$生肖展示9)>   <$Str(S$生肖展示10)>   <$Str(S$生肖展示11)>   <$Str(S$生肖展示12)>\ \  \ 
+; \   <$Str(S$打造申猴)>         <$Str(S$打造酉鸡)>        <$Str(S$打造戌狗)>       <$Str(S$打造亥猪)>\ \ 
+; \    <抽奖生肖|253#10大米抽一次^-^161#随机抽取人阶、灵阶、地阶生肖/@大米生肖抽奖>      <快速抽奖|253#抽10次^-^161#随机抽取人阶、灵阶、地阶生肖/@抽奖10次>         <打造下一页/@打造下一页>
+
+
+; <Img|width=620|height=300|img=public/bg_npc_04.jpg|bg=1|scale9r=10|scale9t=10|scale9b=10|reset=1|scale9l=10|move=0>
+; <Layout|x=597|y=3|width=80|height=80|link=@exit>
+; <Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+; <Text|a=0|x=32|y=80|tips=|tipsx=10|tipsy=80|color=253|size=18|text=Hot~>
+; <Text|a=0|x=76|y=80|tips=|tipsx=10|tipsy=80|color=22|size=18|text=◇◆>
+; <Text|a=0|x=120|y=80|tips=|tipsx=10|tipsy=80|color=250,255,251,253,249,230|size=18|text=十   二   生   肖   打  造 >
+; <Text|a=0|x=406|y=80|tips=|tipsx=10|tipsy=80|color=22|size=18|text=◆◇>
+; <Text|a=0|x=32|y=160|tipsx=10|tipsy=80|color=255|size=18|text=   <$Str(S$生肖展示1)>   <$Str(S$生肖展示2)>   <$Str(S$生肖展示3)>   <$Str(S$生肖展示4)>>
+; <Text|a=0|x=32|y=240|tipsx=10|tipsy=80|color=255|size=18|text=   <$Str(S$打造子鼠)>         <$Str(S$打造丑牛)>        <$Str(S$打造寅虎)>       <$Str(S$打造卯兔)>>
+; <Text|a=0|x=32|y=320|tipsx=10|tipsy=80|color=255|size=18|text=   <$Str(S$生肖展示5)>   <$Str(S$生肖展示6)>   <$Str(S$生肖展示7)>   <$Str(S$生肖展示8)>>
+; <Text|a=0|x=32|y=400|tipsx=10|tipsy=80|color=255|size=18|text=   <$Str(S$打造辰龙)>         <$Str(S$打造巳蛇)>        <$Str(S$打造午马)>       <$Str(S$打造未羊)>>
+; <Text|a=0|x=32|y=480|tipsx=10|tipsy=80|color=255|size=18|text=   <$Str(S$生肖展示9)>   <$Str(S$生肖展示10)>   <$Str(S$生肖展示11)>   <$Str(S$生肖展示12)>>
+; <Text|a=0|x=32|y=560|tipsx=10|tipsy=80|color=255|size=18|text=   <$Str(S$打造申猴)>         <$Str(S$打造酉鸡)>        <$Str(S$打造戌狗)>       <$Str(S$打造亥猪)>>
+; <Text|a=0|x=32|y=620|tipsx=10|tipsy=80|color=251|size=18|text=抽奖生肖|253#10大米抽一次^-^161#随机抽取人阶、灵阶、地阶生肖|link=@大米生肖抽奖>
+; <Text|a=0|x=692|y=620|tipsx=10|tipsy=80|color=251|size=18|text=快速抽奖|253#抽10次^-^161#随机抽取人阶、灵阶、地阶生肖|link=@抽奖10次>
+; <Text|a=0|x=1286|y=620|tipsx=10|tipsy=80|color=251|size=18|text=打造下一页|link=@打造下一页>
+
+<Img|x=-4.0|y=0.0|width=400|height=400|img=public/bg_npc_04.jpg|scale9t=10|move=0|loadDelay=1|reset=1|scale9l=10|scale9b=10|show=4|bg=1|scale9r=10|esc=1>
+<Layout|x=369.0|y=-20.0|width=80|height=80|link=@exit>
+<Button|x=395.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<ItemShow|x=16|y=22.0|width=70|height=70|itemid=<$STR(N$生肖Idx1)>|itemcount=1|showtips=1|bgtype=1>
+<ItemShow|x=113|y=22.0|width=70|height=70|itemid=<$STR(N$生肖Idx2)>|itemcount=1|showtips=1|bgtype=1>
+<ItemShow|x=210|y=22.0|width=70|height=70|itemid=<$STR(N$生肖Idx3)>|itemcount=1|showtips=1|bgtype=1>
+<ItemShow|x=307|y=22.0|width=70|height=70|itemid=<$STR(N$生肖Idx4)>|itemcount=1|showtips=1|bgtype=1>
+<ItemShow|x=16.0|y=122.0|width=70|height=70|itemid=<$STR(N$生肖Idx5)>|itemcount=1|showtips=1|bgtype=1>
+<ItemShow|x=113.0|y=122.0|width=70|height=70|itemid=<$STR(N$生肖Idx6)>|itemcount=1|showtips=1|bgtype=1>
+<ItemShow|x=210.0|y=122.0|width=70|height=70|itemid=<$STR(N$生肖Idx7)>|itemcount=1|showtips=1|bgtype=1>
+<ItemShow|x=307.0|y=122.0|width=70|height=70|itemid=<$STR(N$生肖Idx8)>|itemcount=1|showtips=1|bgtype=1>
+<ItemShow|x=16.0|y=226.0|width=70|height=70|itemid=<$STR(N$生肖Idx9)>|itemcount=1|showtips=1|bgtype=1>
+<ItemShow|x=113.0|y=226.0|width=70|height=70|itemid=<$STR(N$生肖Idx10)>|itemcount=1|showtips=1|bgtype=1>
+<ItemShow|x=210.0|y=226.0|width=70|height=70|itemid=<$STR(N$生肖Idx11)>|itemcount=1|showtips=1|bgtype=1>
+<ItemShow|x=307.0|y=226.0|width=70|height=70|itemid=<$STR(N$生肖Idx12)>|itemcount=1|showtips=1|bgtype=1>
+<Button|x=16.0|y=350.0|nimg=public/1900000611.png|color=250|size=16|text=抽奖生肖|link=@大米生肖抽奖>
+<Button|x=136.0|y=349.0|nimg=public/1900000611.png|color=250|size=16|text=快速抽奖|link=@抽奖10次>
+<Button|x=263.0|y=348.0|nimg=public/1900000611.png|color=250|size=16|text=下一页|link=@打造下一页>
+<Button|x=12|y=87.0|nimg=public/1900000611.png|color=250|size=18|text=锻造|link=@打造子鼠1>
+<Button|x=109|y=87.0|nimg=public/1900000611.png|color=250|size=18|text=锻造|link=@打造丑牛1>
+<Button|x=206|y=87.0|nimg=public/1900000611.png|color=250|size=18|text=锻造|link=@打造寅虎1>
+<Button|x=303|y=87.0|nimg=public/1900000611.png|color=250|size=18|text=锻造|link=@打造卯兔1>
+<Button|x=12.0|y=187.0|nimg=public/1900000611.png|color=250|size=18|text=锻造|link=@打造辰龙1>
+<Button|x=109.0|y=187.0|nimg=public/1900000611.png|color=250|size=18|text=锻造|link=@打造巳蛇1>
+<Button|x=206.0|y=187.0|nimg=public/1900000611.png|color=250|size=18|text=锻造|link=@打造午马1>
+<Button|x=303.0|y=187.0|nimg=public/1900000611.png|color=250|size=18|text=锻造|link=@打造未羊1>
+<Button|x=12.0|y=291.0|nimg=public/1900000611.png|color=250|size=18|text=锻造|link=@打造申猴1>
+<Button|x=109.0|y=291.0|nimg=public/1900000611.png|color=250|size=18|text=锻造|link=@打造酉鸡1>
+<Button|x=206.0|y=291.0|nimg=public/1900000611.png|color=250|size=18|text=锻造|link=@打造戌狗1>
+<Button|x=303.0|y=291.0|nimg=public/1900000611.png|color=250|size=18|text=锻造|link=@打造亥猪1>
+<Button|x=347.0|y=346.0|color=255|size=18|nimg=public/1900001024.png|tips={打造条件：/FCOLOR=249}^{①：人阶生肖随意*5件/FCOLOR=250}^{②：<$STR(S$生肖A材料)>*<$STR(N$生肖A材料)>/FCOLOR=168}^{③：<$STR(S$生肖A货币)>/FCOLOR=151}>
+
+
+[@抽奖10次] 
+
+#IF
+#ACT 
+; ESPLoopgoto @大米生肖抽奖 10
+
+while n$循环序列 < 10
+goto @大米生肖抽奖
+inc n$循环序列 1
+endwhile
+
+
+[@大米生肖抽奖]
+
+#IF
+NOT CHECKBAGSIZE  6
+#ACT
+MESSAGEBOX [失败]:\　\　　　　　　您的“包袱位置”不足“6个”空位置！
+break
+
+#IF
+CHECKGAMEPOINT < 10
+#ACT
+MESSAGEBOX 对不起，您当前账户大米不足10点，请及时充值！
+BREAK
+
+#IF
+#ACT
+GAMEPOINT - 10
+GetRandomText ..\QuestDiary\全部通用限时\1级抽奖生肖.txt S$随机给生肖奖励
+GIVE <$Str(S$随机给生肖奖励)> 1
+SendCenterMsg 253 0 恭喜您，成功通过抽奖获得：<$Str(S$随机给生肖奖励)> 0 3
+ESPSendMoveCenterMsg {恭喜您|250}生肖抽奖中：{<$Str(S$随机给生肖奖励)>|253} 161 0 0 300 5000 0 0  
+BREAK
+
+
+[@打造亥猪1]
+
+
+#IF
+NOT CHECKBAGSIZE  12
+#ACT
+MESSAGEBOX [失败]:\　\　　　　　　您的“包袱位置”不足“12个”空位置！
+break
+
+
+#IF
+CHECKGAMEGOLD < <$STR(N$生肖A货币)>
+#ACT
+MESSAGEBOX 对不起，您的账户上元宝不足<$STR(N$生肖A货币)>个，无法打造！
+break
+
+#IF
+NOT CHECKITEM <$STR(S$生肖A材料)> <$STR(N$生肖A材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$生肖A材料)>不够<$STR(N$生肖A材料)>个，无法打造
+break
+
+
+#IF
+#ACT
+getbagitemcount 人阶·子鼠 N1
+getbagitemcount 人阶·丑牛 N2
+getbagitemcount 人阶·寅虎 N3
+getbagitemcount 人阶·卯兔 N4
+getbagitemcount 人阶·辰龙 N5
+getbagitemcount 人阶·巳蛇 N6
+getbagitemcount 人阶·午马 N7
+getbagitemcount 人阶·未羊 N8
+getbagitemcount 人阶·申猴 N9
+getbagitemcount 人阶·酉鸡 N10
+getbagitemcount 人阶·戌狗 N11
+getbagitemcount 人阶·亥猪 N12
+MOV N$一级生肖数量 0
+INC N$一级生肖数量 <$STR(N1)>
+INC N$一级生肖数量 <$STR(N2)>
+INC N$一级生肖数量 <$STR(N3)>
+INC N$一级生肖数量 <$STR(N4)>
+INC N$一级生肖数量 <$STR(N5)>
+INC N$一级生肖数量 <$STR(N6)>
+INC N$一级生肖数量 <$STR(N7)>
+INC N$一级生肖数量 <$STR(N8)>
+INC N$一级生肖数量 <$STR(N9)>
+INC N$一级生肖数量 <$STR(N10)>
+INC N$一级生肖数量 <$STR(N11)>
+INC N$一级生肖数量 <$STR(N12)>
+
+
+#IF
+SMALL N$一级生肖数量 5
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有5件人阶生肖，无法打造！
+BREAK
+
+#IF
+#ACT
+TAKE <$STR(S$生肖A材料)> <$STR(N$生肖A材料)>
+GAMEGOLD - <$STR(N$生肖A货币)>
+TakeBagItem 人阶·子鼠|人阶·丑牛|人阶·寅虎|人阶·卯兔|人阶·辰龙|人阶·巳蛇|人阶·午马|人阶·未羊|人阶·申猴|人阶·酉鸡|人阶·戌狗|人阶·亥猪| 5 0 0 0 0 N55 0
+
+
+GIVE <$STR(S$生肖A12)> 1
+MESSAGEBOX 恭喜您，成功打造一件：<$STR(S$生肖A12)>
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@打造戌狗1]
+
+#IF
+NOT CHECKBAGSIZE  12
+#ACT
+MESSAGEBOX [失败]:\　\　　　　　　您的“包袱位置”不足“12个”空位置！
+break
+
+
+#IF
+CHECKGAMEGOLD < <$STR(N$生肖A货币)>
+#ACT
+MESSAGEBOX 对不起，您的账户上元宝不足<$STR(N$生肖A货币)>个，无法打造！
+break
+
+#IF
+NOT CHECKITEM <$STR(S$生肖A材料)> <$STR(N$生肖A材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$生肖A材料)>不够<$STR(N$生肖A材料)>个，无法打造
+break
+
+
+#IF
+#ACT
+getbagitemcount 人阶·子鼠 N1
+getbagitemcount 人阶·丑牛 N2
+getbagitemcount 人阶·寅虎 N3
+getbagitemcount 人阶·卯兔 N4
+getbagitemcount 人阶·辰龙 N5
+getbagitemcount 人阶·巳蛇 N6
+getbagitemcount 人阶·午马 N7
+getbagitemcount 人阶·未羊 N8
+getbagitemcount 人阶·申猴 N9
+getbagitemcount 人阶·酉鸡 N10
+getbagitemcount 人阶·戌狗 N11
+getbagitemcount 人阶·亥猪 N12
+MOV N$一级生肖数量 0
+INC N$一级生肖数量 <$STR(N1)>
+INC N$一级生肖数量 <$STR(N2)>
+INC N$一级生肖数量 <$STR(N3)>
+INC N$一级生肖数量 <$STR(N4)>
+INC N$一级生肖数量 <$STR(N5)>
+INC N$一级生肖数量 <$STR(N6)>
+INC N$一级生肖数量 <$STR(N7)>
+INC N$一级生肖数量 <$STR(N8)>
+INC N$一级生肖数量 <$STR(N9)>
+INC N$一级生肖数量 <$STR(N10)>
+INC N$一级生肖数量 <$STR(N11)>
+INC N$一级生肖数量 <$STR(N12)>
+
+
+#IF
+SMALL N$一级生肖数量 5
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有5件人阶生肖，无法打造！
+BREAK
+
+#IF
+#ACT
+TAKE <$STR(S$生肖A材料)> <$STR(N$生肖A材料)>
+GAMEGOLD - <$STR(N$生肖A货币)>
+TakeBagItem 人阶·子鼠|人阶·丑牛|人阶·寅虎|人阶·卯兔|人阶·辰龙|人阶·巳蛇|人阶·午马|人阶·未羊|人阶·申猴|人阶·酉鸡|人阶·戌狗|人阶·亥猪| 5 0 0 0 0 N55 0
+
+GIVE <$STR(S$生肖A11)> 1
+MESSAGEBOX 恭喜您，成功打造一件：<$STR(S$生肖A11)>
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@打造酉鸡1]
+
+#IF
+NOT CHECKBAGSIZE  12
+#ACT
+MESSAGEBOX [失败]:\　\　　　　　　您的“包袱位置”不足“12个”空位置！
+break
+
+
+#IF
+CHECKGAMEGOLD < <$STR(N$生肖A货币)>
+#ACT
+MESSAGEBOX 对不起，您的账户上元宝不足<$STR(N$生肖A货币)>个，无法打造！
+break
+
+#IF
+NOT CHECKITEM <$STR(S$生肖A材料)> <$STR(N$生肖A材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$生肖A材料)>不够<$STR(N$生肖A材料)>个，无法打造
+break
+
+
+#IF
+#ACT
+getbagitemcount 人阶·子鼠 N1
+getbagitemcount 人阶·丑牛 N2
+getbagitemcount 人阶·寅虎 N3
+getbagitemcount 人阶·卯兔 N4
+getbagitemcount 人阶·辰龙 N5
+getbagitemcount 人阶·巳蛇 N6
+getbagitemcount 人阶·午马 N7
+getbagitemcount 人阶·未羊 N8
+getbagitemcount 人阶·申猴 N9
+getbagitemcount 人阶·酉鸡 N10
+getbagitemcount 人阶·戌狗 N11
+getbagitemcount 人阶·亥猪 N12
+MOV N$一级生肖数量 0
+INC N$一级生肖数量 <$STR(N1)>
+INC N$一级生肖数量 <$STR(N2)>
+INC N$一级生肖数量 <$STR(N3)>
+INC N$一级生肖数量 <$STR(N4)>
+INC N$一级生肖数量 <$STR(N5)>
+INC N$一级生肖数量 <$STR(N6)>
+INC N$一级生肖数量 <$STR(N7)>
+INC N$一级生肖数量 <$STR(N8)>
+INC N$一级生肖数量 <$STR(N9)>
+INC N$一级生肖数量 <$STR(N10)>
+INC N$一级生肖数量 <$STR(N11)>
+INC N$一级生肖数量 <$STR(N12)>
+
+
+#IF
+SMALL N$一级生肖数量 5
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有5件人阶生肖，无法打造！
+BREAK
+
+#IF
+#ACT
+TAKE <$STR(S$生肖A材料)> <$STR(N$生肖A材料)>
+GAMEGOLD - <$STR(N$生肖A货币)>
+TakeBagItem 人阶·子鼠|人阶·丑牛|人阶·寅虎|人阶·卯兔|人阶·辰龙|人阶·巳蛇|人阶·午马|人阶·未羊|人阶·申猴|人阶·酉鸡|人阶·戌狗|人阶·亥猪| 5 0 0 0 0 N55 0
+
+GIVE <$STR(S$生肖A10)> 1
+MESSAGEBOX 恭喜您，成功打造一件：<$STR(S$生肖A10)>
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@打造申猴1]
+
+#IF
+CHECKGAMEGOLD < <$STR(N$生肖A货币)>
+#ACT
+MESSAGEBOX 对不起，您的账户上元宝不足<$STR(N$生肖A货币)>个，无法打造！
+break
+
+#IF
+NOT CHECKITEM <$STR(S$生肖A材料)> <$STR(N$生肖A材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$生肖A材料)>不够<$STR(N$生肖A材料)>个，无法打造
+break
+
+
+#IF
+#ACT
+getbagitemcount 人阶·子鼠 N1
+getbagitemcount 人阶·丑牛 N2
+getbagitemcount 人阶·寅虎 N3
+getbagitemcount 人阶·卯兔 N4
+getbagitemcount 人阶·辰龙 N5
+getbagitemcount 人阶·巳蛇 N6
+getbagitemcount 人阶·午马 N7
+getbagitemcount 人阶·未羊 N8
+getbagitemcount 人阶·申猴 N9
+getbagitemcount 人阶·酉鸡 N10
+getbagitemcount 人阶·戌狗 N11
+getbagitemcount 人阶·亥猪 N12
+MOV N$一级生肖数量 0
+INC N$一级生肖数量 <$STR(N1)>
+INC N$一级生肖数量 <$STR(N2)>
+INC N$一级生肖数量 <$STR(N3)>
+INC N$一级生肖数量 <$STR(N4)>
+INC N$一级生肖数量 <$STR(N5)>
+INC N$一级生肖数量 <$STR(N6)>
+INC N$一级生肖数量 <$STR(N7)>
+INC N$一级生肖数量 <$STR(N8)>
+INC N$一级生肖数量 <$STR(N9)>
+INC N$一级生肖数量 <$STR(N10)>
+INC N$一级生肖数量 <$STR(N11)>
+INC N$一级生肖数量 <$STR(N12)>
+
+
+#IF
+SMALL N$一级生肖数量 5
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有5件人阶生肖，无法打造！
+BREAK
+
+#IF
+#ACT
+TAKE <$STR(S$生肖A材料)> <$STR(N$生肖A材料)>
+GAMEGOLD - <$STR(N$生肖A货币)>
+TakeBagItem 人阶·子鼠|人阶·丑牛|人阶·寅虎|人阶·卯兔|人阶·辰龙|人阶·巳蛇|人阶·午马|人阶·未羊|人阶·申猴|人阶·酉鸡|人阶·戌狗|人阶·亥猪| 5 0 0 0 0 N55 0
+
+GIVE <$STR(S$生肖A9)> 1
+MESSAGEBOX 恭喜您，成功打造一件：<$STR(S$生肖A9)>
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@打造未羊1]
+
+#IF
+CHECKGAMEGOLD < <$STR(N$生肖A货币)>
+#ACT
+MESSAGEBOX 对不起，您的账户上元宝不足<$STR(N$生肖A货币)>个，无法打造！
+break
+
+#IF
+NOT CHECKITEM <$STR(S$生肖A材料)> <$STR(N$生肖A材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$生肖A材料)>不够<$STR(N$生肖A材料)>个，无法打造
+break
+
+
+#IF
+#ACT
+getbagitemcount 人阶·子鼠 N1
+getbagitemcount 人阶·丑牛 N2
+getbagitemcount 人阶·寅虎 N3
+getbagitemcount 人阶·卯兔 N4
+getbagitemcount 人阶·辰龙 N5
+getbagitemcount 人阶·巳蛇 N6
+getbagitemcount 人阶·午马 N7
+getbagitemcount 人阶·未羊 N8
+getbagitemcount 人阶·申猴 N9
+getbagitemcount 人阶·酉鸡 N10
+getbagitemcount 人阶·戌狗 N11
+getbagitemcount 人阶·亥猪 N12
+MOV N$一级生肖数量 0
+INC N$一级生肖数量 <$STR(N1)>
+INC N$一级生肖数量 <$STR(N2)>
+INC N$一级生肖数量 <$STR(N3)>
+INC N$一级生肖数量 <$STR(N4)>
+INC N$一级生肖数量 <$STR(N5)>
+INC N$一级生肖数量 <$STR(N6)>
+INC N$一级生肖数量 <$STR(N7)>
+INC N$一级生肖数量 <$STR(N8)>
+INC N$一级生肖数量 <$STR(N9)>
+INC N$一级生肖数量 <$STR(N10)>
+INC N$一级生肖数量 <$STR(N11)>
+INC N$一级生肖数量 <$STR(N12)>
+
+
+#IF
+SMALL N$一级生肖数量 5
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有5件人阶生肖，无法打造！
+BREAK
+
+#IF
+#ACT
+TAKE <$STR(S$生肖A材料)> <$STR(N$生肖A材料)>
+GAMEGOLD - <$STR(N$生肖A货币)>
+TakeBagItem 人阶·子鼠|人阶·丑牛|人阶·寅虎|人阶·卯兔|人阶·辰龙|人阶·巳蛇|人阶·午马|人阶·未羊|人阶·申猴|人阶·酉鸡|人阶·戌狗|人阶·亥猪| 5 0 0 0 0 N55 0
+
+GIVE <$STR(S$生肖A8)> 1
+MESSAGEBOX 恭喜您，成功打造一件：<$STR(S$生肖A8)>
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@打造午马1]
+
+#IF
+CHECKGAMEGOLD < <$STR(N$生肖A货币)>
+#ACT
+MESSAGEBOX 对不起，您的账户上元宝不足<$STR(N$生肖A货币)>个，无法打造！
+break
+
+#IF
+NOT CHECKITEM <$STR(S$生肖A材料)> <$STR(N$生肖A材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$生肖A材料)>不够<$STR(N$生肖A材料)>个，无法打造
+break
+
+
+#IF
+#ACT
+getbagitemcount 人阶·子鼠 N1
+getbagitemcount 人阶·丑牛 N2
+getbagitemcount 人阶·寅虎 N3
+getbagitemcount 人阶·卯兔 N4
+getbagitemcount 人阶·辰龙 N5
+getbagitemcount 人阶·巳蛇 N6
+getbagitemcount 人阶·午马 N7
+getbagitemcount 人阶·未羊 N8
+getbagitemcount 人阶·申猴 N9
+getbagitemcount 人阶·酉鸡 N10
+getbagitemcount 人阶·戌狗 N11
+getbagitemcount 人阶·亥猪 N12
+MOV N$一级生肖数量 0
+INC N$一级生肖数量 <$STR(N1)>
+INC N$一级生肖数量 <$STR(N2)>
+INC N$一级生肖数量 <$STR(N3)>
+INC N$一级生肖数量 <$STR(N4)>
+INC N$一级生肖数量 <$STR(N5)>
+INC N$一级生肖数量 <$STR(N6)>
+INC N$一级生肖数量 <$STR(N7)>
+INC N$一级生肖数量 <$STR(N8)>
+INC N$一级生肖数量 <$STR(N9)>
+INC N$一级生肖数量 <$STR(N10)>
+INC N$一级生肖数量 <$STR(N11)>
+INC N$一级生肖数量 <$STR(N12)>
+
+
+#IF
+SMALL N$一级生肖数量 5
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有5件人阶生肖，无法打造！
+BREAK
+
+#IF
+#ACT
+TAKE <$STR(S$生肖A材料)> <$STR(N$生肖A材料)>
+GAMEGOLD - <$STR(N$生肖A货币)>
+TakeBagItem 人阶·子鼠|人阶·丑牛|人阶·寅虎|人阶·卯兔|人阶·辰龙|人阶·巳蛇|人阶·午马|人阶·未羊|人阶·申猴|人阶·酉鸡|人阶·戌狗|人阶·亥猪| 5 0 0 0 0 N55 0
+
+GIVE <$STR(S$生肖A7)> 1
+MESSAGEBOX 恭喜您，成功打造一件：<$STR(S$生肖A7)>
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@打造巳蛇1]
+
+#IF
+CHECKGAMEGOLD < <$STR(N$生肖A货币)>
+#ACT
+MESSAGEBOX 对不起，您的账户上元宝不足<$STR(N$生肖A货币)>个，无法打造！
+break
+
+#IF
+NOT CHECKITEM <$STR(S$生肖A材料)> <$STR(N$生肖A材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$生肖A材料)>不够<$STR(N$生肖A材料)>个，无法打造
+break
+
+
+#IF
+#ACT
+getbagitemcount 人阶·子鼠 N1
+getbagitemcount 人阶·丑牛 N2
+getbagitemcount 人阶·寅虎 N3
+getbagitemcount 人阶·卯兔 N4
+getbagitemcount 人阶·辰龙 N5
+getbagitemcount 人阶·巳蛇 N6
+getbagitemcount 人阶·午马 N7
+getbagitemcount 人阶·未羊 N8
+getbagitemcount 人阶·申猴 N9
+getbagitemcount 人阶·酉鸡 N10
+getbagitemcount 人阶·戌狗 N11
+getbagitemcount 人阶·亥猪 N12
+MOV N$一级生肖数量 0
+INC N$一级生肖数量 <$STR(N1)>
+INC N$一级生肖数量 <$STR(N2)>
+INC N$一级生肖数量 <$STR(N3)>
+INC N$一级生肖数量 <$STR(N4)>
+INC N$一级生肖数量 <$STR(N5)>
+INC N$一级生肖数量 <$STR(N6)>
+INC N$一级生肖数量 <$STR(N7)>
+INC N$一级生肖数量 <$STR(N8)>
+INC N$一级生肖数量 <$STR(N9)>
+INC N$一级生肖数量 <$STR(N10)>
+INC N$一级生肖数量 <$STR(N11)>
+INC N$一级生肖数量 <$STR(N12)>
+
+
+#IF
+SMALL N$一级生肖数量 5
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有5件人阶生肖，无法打造！
+BREAK
+
+#IF
+#ACT
+TAKE <$STR(S$生肖A材料)> <$STR(N$生肖A材料)>
+GAMEGOLD - <$STR(N$生肖A货币)>
+TakeBagItem 人阶·子鼠|人阶·丑牛|人阶·寅虎|人阶·卯兔|人阶·辰龙|人阶·巳蛇|人阶·午马|人阶·未羊|人阶·申猴|人阶·酉鸡|人阶·戌狗|人阶·亥猪| 5 0 0 0 0 N55 0
+
+GIVE <$STR(S$生肖A6)> 1
+MESSAGEBOX 恭喜您，成功打造一件：<$STR(S$生肖A6)>
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@打造辰龙1]
+
+#IF
+CHECKGAMEGOLD < <$STR(N$生肖A货币)>
+#ACT
+MESSAGEBOX 对不起，您的账户上元宝不足<$STR(N$生肖A货币)>个，无法打造！
+break
+
+#IF
+NOT CHECKITEM <$STR(S$生肖A材料)> <$STR(N$生肖A材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$生肖A材料)>不够<$STR(N$生肖A材料)>个，无法打造
+break
+
+
+#IF
+#ACT
+getbagitemcount 人阶·子鼠 N1
+getbagitemcount 人阶·丑牛 N2
+getbagitemcount 人阶·寅虎 N3
+getbagitemcount 人阶·卯兔 N4
+getbagitemcount 人阶·辰龙 N5
+getbagitemcount 人阶·巳蛇 N6
+getbagitemcount 人阶·午马 N7
+getbagitemcount 人阶·未羊 N8
+getbagitemcount 人阶·申猴 N9
+getbagitemcount 人阶·酉鸡 N10
+getbagitemcount 人阶·戌狗 N11
+getbagitemcount 人阶·亥猪 N12
+MOV N$一级生肖数量 0
+INC N$一级生肖数量 <$STR(N1)>
+INC N$一级生肖数量 <$STR(N2)>
+INC N$一级生肖数量 <$STR(N3)>
+INC N$一级生肖数量 <$STR(N4)>
+INC N$一级生肖数量 <$STR(N5)>
+INC N$一级生肖数量 <$STR(N6)>
+INC N$一级生肖数量 <$STR(N7)>
+INC N$一级生肖数量 <$STR(N8)>
+INC N$一级生肖数量 <$STR(N9)>
+INC N$一级生肖数量 <$STR(N10)>
+INC N$一级生肖数量 <$STR(N11)>
+INC N$一级生肖数量 <$STR(N12)>
+
+
+#IF
+SMALL N$一级生肖数量 5
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有5件人阶生肖，无法打造！
+BREAK
+
+#IF
+#ACT
+TAKE <$STR(S$生肖A材料)> <$STR(N$生肖A材料)>
+GAMEGOLD - <$STR(N$生肖A货币)>
+TakeBagItem 人阶·子鼠|人阶·丑牛|人阶·寅虎|人阶·卯兔|人阶·辰龙|人阶·巳蛇|人阶·午马|人阶·未羊|人阶·申猴|人阶·酉鸡|人阶·戌狗|人阶·亥猪| 5 0 0 0 0 N55 0
+
+GIVE <$STR(S$生肖A5)> 1
+MESSAGEBOX 恭喜您，成功打造一件：<$STR(S$生肖A5)>
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@打造卯兔1]
+
+#IF
+CHECKGAMEGOLD < <$STR(N$生肖A货币)>
+#ACT
+MESSAGEBOX 对不起，您的账户上元宝不足<$STR(N$生肖A货币)>个，无法打造！
+break
+
+#IF
+NOT CHECKITEM <$STR(S$生肖A材料)> <$STR(N$生肖A材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$生肖A材料)>不够<$STR(N$生肖A材料)>个，无法打造
+break
+
+
+#IF
+#ACT
+getbagitemcount 人阶·子鼠 N1
+getbagitemcount 人阶·丑牛 N2
+getbagitemcount 人阶·寅虎 N3
+getbagitemcount 人阶·卯兔 N4
+getbagitemcount 人阶·辰龙 N5
+getbagitemcount 人阶·巳蛇 N6
+getbagitemcount 人阶·午马 N7
+getbagitemcount 人阶·未羊 N8
+getbagitemcount 人阶·申猴 N9
+getbagitemcount 人阶·酉鸡 N10
+getbagitemcount 人阶·戌狗 N11
+getbagitemcount 人阶·亥猪 N12
+MOV N$一级生肖数量 0
+INC N$一级生肖数量 <$STR(N1)>
+INC N$一级生肖数量 <$STR(N2)>
+INC N$一级生肖数量 <$STR(N3)>
+INC N$一级生肖数量 <$STR(N4)>
+INC N$一级生肖数量 <$STR(N5)>
+INC N$一级生肖数量 <$STR(N6)>
+INC N$一级生肖数量 <$STR(N7)>
+INC N$一级生肖数量 <$STR(N8)>
+INC N$一级生肖数量 <$STR(N9)>
+INC N$一级生肖数量 <$STR(N10)>
+INC N$一级生肖数量 <$STR(N11)>
+INC N$一级生肖数量 <$STR(N12)>
+
+
+#IF
+SMALL N$一级生肖数量 5
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有5件人阶生肖，无法打造！
+BREAK
+
+#IF
+#ACT
+TAKE <$STR(S$生肖A材料)> <$STR(N$生肖A材料)>
+GAMEGOLD - <$STR(N$生肖A货币)>
+TakeBagItem 人阶·子鼠|人阶·丑牛|人阶·寅虎|人阶·卯兔|人阶·辰龙|人阶·巳蛇|人阶·午马|人阶·未羊|人阶·申猴|人阶·酉鸡|人阶·戌狗|人阶·亥猪| 5 0 0 0 0 N55 0
+
+GIVE <$STR(S$生肖A4)> 1
+MESSAGEBOX 恭喜您，成功打造一件：<$STR(S$生肖A4)>
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@打造寅虎1]
+
+#IF
+CHECKGAMEGOLD < <$STR(N$生肖A货币)>
+#ACT
+MESSAGEBOX 对不起，您的账户上元宝不足<$STR(N$生肖A货币)>个，无法打造！
+break
+
+#IF
+NOT CHECKITEM <$STR(S$生肖A材料)> <$STR(N$生肖A材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$生肖A材料)>不够<$STR(N$生肖A材料)>个，无法打造
+break
+
+
+#IF
+#ACT
+getbagitemcount 人阶·子鼠 N1
+getbagitemcount 人阶·丑牛 N2
+getbagitemcount 人阶·寅虎 N3
+getbagitemcount 人阶·卯兔 N4
+getbagitemcount 人阶·辰龙 N5
+getbagitemcount 人阶·巳蛇 N6
+getbagitemcount 人阶·午马 N7
+getbagitemcount 人阶·未羊 N8
+getbagitemcount 人阶·申猴 N9
+getbagitemcount 人阶·酉鸡 N10
+getbagitemcount 人阶·戌狗 N11
+getbagitemcount 人阶·亥猪 N12
+MOV N$一级生肖数量 0
+INC N$一级生肖数量 <$STR(N1)>
+INC N$一级生肖数量 <$STR(N2)>
+INC N$一级生肖数量 <$STR(N3)>
+INC N$一级生肖数量 <$STR(N4)>
+INC N$一级生肖数量 <$STR(N5)>
+INC N$一级生肖数量 <$STR(N6)>
+INC N$一级生肖数量 <$STR(N7)>
+INC N$一级生肖数量 <$STR(N8)>
+INC N$一级生肖数量 <$STR(N9)>
+INC N$一级生肖数量 <$STR(N10)>
+INC N$一级生肖数量 <$STR(N11)>
+INC N$一级生肖数量 <$STR(N12)>
+
+
+#IF
+SMALL N$一级生肖数量 5
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有5件人阶生肖，无法打造！
+BREAK
+
+#IF
+#ACT
+TAKE <$STR(S$生肖A材料)> <$STR(N$生肖A材料)>
+GAMEGOLD - <$STR(N$生肖A货币)>
+TakeBagItem 人阶·子鼠|人阶·丑牛|人阶·寅虎|人阶·卯兔|人阶·辰龙|人阶·巳蛇|人阶·午马|人阶·未羊|人阶·申猴|人阶·酉鸡|人阶·戌狗|人阶·亥猪| 5 0 0 0 0 N55 0
+
+GIVE <$STR(S$生肖A3)> 1
+MESSAGEBOX 恭喜您，成功打造一件：<$STR(S$生肖A3)>
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@打造丑牛1]
+
+#IF
+CHECKGAMEGOLD < <$STR(N$生肖A货币)>
+#ACT
+MESSAGEBOX 对不起，您的账户上元宝不足<$STR(N$生肖A货币)>个，无法打造！
+break
+
+#IF
+NOT CHECKITEM <$STR(S$生肖A材料)> <$STR(N$生肖A材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$生肖A材料)>不够<$STR(N$生肖A材料)>个，无法打造
+break
+
+
+#IF
+#ACT
+getbagitemcount 人阶·子鼠 N1
+getbagitemcount 人阶·丑牛 N2
+getbagitemcount 人阶·寅虎 N3
+getbagitemcount 人阶·卯兔 N4
+getbagitemcount 人阶·辰龙 N5
+getbagitemcount 人阶·巳蛇 N6
+getbagitemcount 人阶·午马 N7
+getbagitemcount 人阶·未羊 N8
+getbagitemcount 人阶·申猴 N9
+getbagitemcount 人阶·酉鸡 N10
+getbagitemcount 人阶·戌狗 N11
+getbagitemcount 人阶·亥猪 N12
+MOV N$一级生肖数量 0
+INC N$一级生肖数量 <$STR(N1)>
+INC N$一级生肖数量 <$STR(N2)>
+INC N$一级生肖数量 <$STR(N3)>
+INC N$一级生肖数量 <$STR(N4)>
+INC N$一级生肖数量 <$STR(N5)>
+INC N$一级生肖数量 <$STR(N6)>
+INC N$一级生肖数量 <$STR(N7)>
+INC N$一级生肖数量 <$STR(N8)>
+INC N$一级生肖数量 <$STR(N9)>
+INC N$一级生肖数量 <$STR(N10)>
+INC N$一级生肖数量 <$STR(N11)>
+INC N$一级生肖数量 <$STR(N12)>
+
+
+#IF
+SMALL N$一级生肖数量 5
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有5件人阶生肖，无法打造！
+BREAK
+
+#IF
+#ACT
+TAKE <$STR(S$生肖A材料)> <$STR(N$生肖A材料)>
+GAMEGOLD - <$STR(N$生肖A货币)>
+TakeBagItem 人阶·子鼠|人阶·丑牛|人阶·寅虎|人阶·卯兔|人阶·辰龙|人阶·巳蛇|人阶·午马|人阶·未羊|人阶·申猴|人阶·酉鸡|人阶·戌狗|人阶·亥猪| 5 0 0 0 0 N55 0
+
+GIVE <$STR(S$生肖A2)> 1
+MESSAGEBOX 恭喜您，成功打造一件：<$STR(S$生肖A2)>
+BREAK
+
+
+
+
+
+
+[@打造子鼠1]
+
+#IF
+CHECKGAMEGOLD < <$STR(N$生肖A货币)>
+#ACT
+MESSAGEBOX 对不起，您的账户上元宝不足<$STR(N$生肖A货币)>个，无法打造！
+break
+
+#IF
+NOT CHECKITEM <$STR(S$生肖A材料)> <$STR(N$生肖A材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$生肖A材料)>不够<$STR(N$生肖A材料)>个，无法打造
+break
+
+
+#IF
+#ACT
+getbagitemcount 人阶·子鼠 N1
+getbagitemcount 人阶·丑牛 N2
+getbagitemcount 人阶·寅虎 N3
+getbagitemcount 人阶·卯兔 N4
+getbagitemcount 人阶·辰龙 N5
+getbagitemcount 人阶·巳蛇 N6
+getbagitemcount 人阶·午马 N7
+getbagitemcount 人阶·未羊 N8
+getbagitemcount 人阶·申猴 N9
+getbagitemcount 人阶·酉鸡 N10
+getbagitemcount 人阶·戌狗 N11
+getbagitemcount 人阶·亥猪 N12
+MOV N$一级生肖数量 0
+INC N$一级生肖数量 <$STR(N1)>
+INC N$一级生肖数量 <$STR(N2)>
+INC N$一级生肖数量 <$STR(N3)>
+INC N$一级生肖数量 <$STR(N4)>
+INC N$一级生肖数量 <$STR(N5)>
+INC N$一级生肖数量 <$STR(N6)>
+INC N$一级生肖数量 <$STR(N7)>
+INC N$一级生肖数量 <$STR(N8)>
+INC N$一级生肖数量 <$STR(N9)>
+INC N$一级生肖数量 <$STR(N10)>
+INC N$一级生肖数量 <$STR(N11)>
+INC N$一级生肖数量 <$STR(N12)>
+
+
+#IF
+SMALL N$一级生肖数量 5
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有5件人阶生肖，无法打造！
+BREAK
+
+#IF
+#ACT
+TAKE <$STR(S$生肖A材料)> <$STR(N$生肖A材料)>
+GAMEGOLD - <$STR(N$生肖A货币)>
+TakeBagItem 人阶·子鼠|人阶·丑牛|人阶·寅虎|人阶·卯兔|人阶·辰龙|人阶·巳蛇|人阶·午马|人阶·未羊|人阶·申猴|人阶·酉鸡|人阶·戌狗|人阶·亥猪| 5 0 0 0 0 N55 0
+
+GIVE <$STR(S$生肖A1)> 1
+MESSAGEBOX 恭喜您，成功打造一件：<$STR(S$生肖A1)>
+BREAK
+
+
+
+
+
+
+
+
+
+
+[@打造下一页]
+
+#IF
+#ACT
+
+getdbitemfieldvalue 地阶·子鼠	Idx	N$生肖Idx1
+getdbitemfieldvalue 地阶·丑牛	Idx	N$生肖Idx2
+getdbitemfieldvalue 地阶·寅虎	Idx	N$生肖Idx3
+getdbitemfieldvalue 地阶·卯兔	Idx	N$生肖Idx4
+getdbitemfieldvalue 地阶·辰龙	Idx	N$生肖Idx5
+getdbitemfieldvalue 地阶·巳蛇	Idx	N$生肖Idx6
+getdbitemfieldvalue 地阶·午马	Idx	N$生肖Idx7
+getdbitemfieldvalue 地阶·未羊	Idx	N$生肖Idx8
+getdbitemfieldvalue 地阶·申猴	Idx	N$生肖Idx9
+getdbitemfieldvalue 地阶·酉鸡	Idx	N$生肖Idx10
+getdbitemfieldvalue 地阶·戌狗	Idx	N$生肖Idx11
+getdbitemfieldvalue 地阶·亥猪	Idx	N$生肖Idx12
+
+MOV	S$生肖展示1	 <ItemShow:<$Str(N$生肖Idx1)>:0:0:-10:1>
+MOV	S$生肖展示2	 <ItemShow:<$Str(N$生肖Idx2)>:0:40:-10:1>
+MOV	S$生肖展示3	 <ItemShow:<$Str(N$生肖Idx3)>:0:80:-10:1>
+MOV	S$生肖展示4	 <ItemShow:<$Str(N$生肖Idx4)>:0:110:-10:1>
+MOV	S$生肖展示5	 <ItemShow:<$Str(N$生肖Idx5)>:0:0:-10:1>
+MOV	S$生肖展示6	 <ItemShow:<$Str(N$生肖Idx6)>:0:40:-10:1>
+MOV	S$生肖展示7	 <ItemShow:<$Str(N$生肖Idx7)>:0:80:-10:1>
+MOV	S$生肖展示8	 <ItemShow:<$Str(N$生肖Idx8)>:0:110:-10:1>
+MOV	S$生肖展示9	 <ItemShow:<$Str(N$生肖Idx9)>:0:0:-10:1>
+MOV	S$生肖展示10	 <ItemShow:<$Str(N$生肖Idx10)>:0:40:-10:1>
+MOV	S$生肖展示11	 <ItemShow:<$Str(N$生肖Idx11)>:0:80:-10:1>
+MOV	S$生肖展示12	 <ItemShow:<$Str(N$生肖Idx12)>:0:110:-10:1>
+
+
+MOV S$生肖B1 地阶·子鼠
+MOV S$生肖B2 地阶·丑牛
+MOV S$生肖B3 地阶·寅虎
+MOV S$生肖B4 地阶·卯兔
+MOV S$生肖B5 地阶·辰龙
+MOV S$生肖B6 地阶·巳蛇
+MOV S$生肖B7 地阶·午马
+MOV S$生肖B8 地阶·未羊
+MOV S$生肖B9 地阶·申猴
+MOV S$生肖B10 地阶·酉鸡
+MOV S$生肖B11 地阶·戌狗
+MOV S$生肖B12 地阶·亥猪
+MOV S$生肖B货币 10W元宝
+MOV N$生肖B货币 100000
+MOV S$生肖B材料 魔法神石
+MOV N$生肖B材料 100
+MOV N$生肖B合成数量 5
+
+
+
+MOV S$打造子鼠 <打造子鼠|249#打造条件：^-^250#①：灵阶生肖随意*5件^-^168#②：<$STR(S$生肖B材料)>*<$STR(N$生肖B材料)>^-^151#③：<$STR(S$生肖B货币)>/@打造子鼠A2>
+MOV S$打造丑牛 <打造丑牛|249#打造条件：^-^250#①：灵阶生肖随意*5件^-^168#②：<$STR(S$生肖B材料)>*<$STR(N$生肖B材料)>^-^151#③：<$STR(S$生肖B货币)>/@打造丑牛A2>
+MOV S$打造寅虎 <打造寅虎|249#打造条件：^-^250#①：灵阶生肖随意*5件^-^168#②：<$STR(S$生肖B材料)>*<$STR(N$生肖B材料)>^-^151#③：<$STR(S$生肖B货币)>/@打造寅虎A2>
+MOV S$打造卯兔 <打造卯兔|249#打造条件：^-^250#①：灵阶生肖随意*5件^-^168#②：<$STR(S$生肖B材料)>*<$STR(N$生肖B材料)>^-^151#③：<$STR(S$生肖B货币)>/@打造卯兔A2>
+MOV S$打造辰龙 <打造辰龙|249#打造条件：^-^250#①：灵阶生肖随意*5件^-^168#②：<$STR(S$生肖B材料)>*<$STR(N$生肖B材料)>^-^151#③：<$STR(S$生肖B货币)>/@打造辰龙A2>
+MOV S$打造巳蛇 <打造巳蛇|249#打造条件：^-^250#①：灵阶生肖随意*5件^-^168#②：<$STR(S$生肖B材料)>*<$STR(N$生肖B材料)>^-^151#③：<$STR(S$生肖B货币)>/@打造巳蛇A2>
+MOV S$打造午马 <打造午马|249#打造条件：^-^250#①：灵阶生肖随意*5件^-^168#②：<$STR(S$生肖B材料)>*<$STR(N$生肖B材料)>^-^151#③：<$STR(S$生肖B货币)>/@打造午马A2>
+MOV S$打造未羊 <打造未羊|249#打造条件：^-^250#①：灵阶生肖随意*5件^-^168#②：<$STR(S$生肖B材料)>*<$STR(N$生肖B材料)>^-^151#③：<$STR(S$生肖B货币)>/@打造未羊A2>
+MOV S$打造申猴 <打造申猴|249#打造条件：^-^250#①：灵阶生肖随意*5件^-^168#②：<$STR(S$生肖B材料)>*<$STR(N$生肖B材料)>^-^151#③：<$STR(S$生肖B货币)>/@打造申猴A2>
+MOV S$打造酉鸡 <打造酉鸡|249#打造条件：^-^250#①：灵阶生肖随意*5件^-^168#②：<$STR(S$生肖B材料)>*<$STR(N$生肖B材料)>^-^151#③：<$STR(S$生肖B货币)>/@打造酉鸡A2>
+MOV S$打造戌狗 <打造戌狗|249#打造条件：^-^250#①：灵阶生肖随意*5件^-^168#②：<$STR(S$生肖B材料)>*<$STR(N$生肖B材料)>^-^151#③：<$STR(S$生肖B货币)>/@打造戌狗A2>
+MOV S$打造亥猪 <打造亥猪|249#打造条件：^-^250#①：灵阶生肖随意*5件^-^168#②：<$STR(S$生肖B材料)>*<$STR(N$生肖B材料)>^-^151#③：<$STR(S$生肖B货币)>/@打造亥猪A2>
+
+
+close
+OPENMERCHANTBIGDLG 1 560 1 4 0 0 1 400 0
+#say
+; \ 
+; <>         <Hot~/SCOLOR=253> <◇◆/SCOLOR=22>  <十   二   生   肖   打  造 /AUTOCOLOR=250,255,251,253,249,230>  <◆◇/SCOLOR=22>\ \
+; \ 
+; \   <$Str(S$生肖展示1)>   <$Str(S$生肖展示2)>   <$Str(S$生肖展示3)>   <$Str(S$生肖展示4)>\ \  \ 
+; \   <$Str(S$打造子鼠)>         <$Str(S$打造丑牛)>        <$Str(S$打造寅虎)>       <$Str(S$打造卯兔)>\ \ \
+
+
+; \   <$Str(S$生肖展示5)>   <$Str(S$生肖展示6)>   <$Str(S$生肖展示7)>   <$Str(S$生肖展示8)>\ \  \ 
+; \   <$Str(S$打造辰龙)>         <$Str(S$打造巳蛇)>        <$Str(S$打造午马)>       <$Str(S$打造未羊)>\ \ \
+
+
+; \   <$Str(S$生肖展示9)>   <$Str(S$生肖展示10)>   <$Str(S$生肖展示11)>   <$Str(S$生肖展示12)>\ \  \ 
+; \   <$Str(S$打造申猴)>         <$Str(S$打造酉鸡)>        <$Str(S$打造戌狗)>       <$Str(S$打造亥猪)>\ \ 
+; \    <抽奖生肖|253#10大米抽一次^-^161#随机抽取人阶、灵阶、地阶生肖/@大米生肖抽奖>      <快速抽奖|253#抽10次^-^161#随机抽取人阶、灵阶、地阶生肖/@抽奖10次>         <打造上一页/@MAIN>
+
+
+<Img|x=-4.0|y=0.0|width=400|height=400|img=public/bg_npc_04.jpg|scale9t=10|move=0|loadDelay=1|reset=1|scale9l=10|scale9b=10|show=4|bg=1|scale9r=10|esc=1>
+<Layout|x=369.0|y=-20.0|width=80|height=80|link=@exit>
+<Button|x=395.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<ItemShow|x=16|y=22.0|width=70|height=70|itemid=<$STR(N$生肖Idx1)>|itemcount=1|showtips=1|bgtype=1>
+<ItemShow|x=113|y=22.0|width=70|height=70|itemid=<$STR(N$生肖Idx2)>|itemcount=1|showtips=1|bgtype=1>
+<ItemShow|x=210|y=22.0|width=70|height=70|itemid=<$STR(N$生肖Idx3)>|itemcount=1|showtips=1|bgtype=1>
+<ItemShow|x=307|y=22.0|width=70|height=70|itemid=<$STR(N$生肖Idx4)>|itemcount=1|showtips=1|bgtype=1>
+<ItemShow|x=16.0|y=122.0|width=70|height=70|itemid=<$STR(N$生肖Idx5)>|itemcount=1|showtips=1|bgtype=1>
+<ItemShow|x=113.0|y=122.0|width=70|height=70|itemid=<$STR(N$生肖Idx6)>|itemcount=1|showtips=1|bgtype=1>
+<ItemShow|x=210.0|y=122.0|width=70|height=70|itemid=<$STR(N$生肖Idx7)>|itemcount=1|showtips=1|bgtype=1>
+<ItemShow|x=307.0|y=122.0|width=70|height=70|itemid=<$STR(N$生肖Idx8)>|itemcount=1|showtips=1|bgtype=1>
+<ItemShow|x=16.0|y=226.0|width=70|height=70|itemid=<$STR(N$生肖Idx9)>|itemcount=1|showtips=1|bgtype=1>
+<ItemShow|x=113.0|y=226.0|width=70|height=70|itemid=<$STR(N$生肖Idx10)>|itemcount=1|showtips=1|bgtype=1>
+<ItemShow|x=210.0|y=226.0|width=70|height=70|itemid=<$STR(N$生肖Idx11)>|itemcount=1|showtips=1|bgtype=1>
+<ItemShow|x=307.0|y=226.0|width=70|height=70|itemid=<$STR(N$生肖Idx12)>|itemcount=1|showtips=1|bgtype=1>
+<Button|x=16.0|y=350.0|nimg=public/1900000611.png|color=250|size=16|text=抽奖生肖|link=@大米生肖抽奖>
+<Button|x=136.0|y=349.0|nimg=public/1900000611.png|color=250|size=16|text=快速抽奖|link=@抽奖10次>
+<Button|x=263.0|y=348.0|nimg=public/1900000611.png|color=250|size=16|text=上一页|link=@MAIN>
+<Button|x=12|y=87.0|nimg=public/1900000611.png|color=250|size=18|text=锻造|link=@打造子鼠A2>
+<Button|x=109|y=87.0|nimg=public/1900000611.png|color=250|size=18|text=锻造|link=@打造丑牛A2>
+<Button|x=206|y=87.0|nimg=public/1900000611.png|color=250|size=18|text=锻造|link=@打造寅虎A2>
+<Button|x=303|y=87.0|nimg=public/1900000611.png|color=250|size=18|text=锻造|link=@打造卯兔A2>
+<Button|x=12.0|y=187.0|nimg=public/1900000611.png|color=250|size=18|text=锻造|link=@打造辰龙A2>
+<Button|x=109.0|y=187.0|nimg=public/1900000611.png|color=250|size=18|text=锻造|link=@打造巳蛇A2>
+<Button|x=206.0|y=187.0|nimg=public/1900000611.png|color=250|size=18|text=锻造|link=@打造午马A2>
+<Button|x=303.0|y=187.0|nimg=public/1900000611.png|color=250|size=18|text=锻造|link=@打造未羊A2>
+<Button|x=12.0|y=291.0|nimg=public/1900000611.png|color=250|size=18|text=锻造|link=@打造申猴A2>
+<Button|x=109.0|y=291.0|nimg=public/1900000611.png|color=250|size=18|text=锻造|link=@打造酉鸡A2>
+<Button|x=206.0|y=291.0|nimg=public/1900000611.png|color=250|size=18|text=锻造|link=@打造戌狗A2>
+<Button|x=303.0|y=291.0|nimg=public/1900000611.png|color=250|size=18|text=锻造|link=@打造亥猪A2>
+<Button|x=347.0|y=346.0|color=255|size=18|nimg=public/1900001024.png|tips={打造条件：/FCOLOR=249}^{①：灵阶生肖随意*5件/FCOLOR=250}^{②：<$STR(S$生肖B材料)>*<$STR(N$生肖B材料)>/FCOLOR=168}^{③：<$STR(S$生肖B货币)>/FCOLOR=151}>
+
+
+
+[@打造亥猪A2]
+
+
+#IF
+NOT CHECKBAGSIZE  12
+#ACT
+MESSAGEBOX [失败]:\　\　　　　　　您的“包袱位置”不足“12个”空位置！
+break
+
+
+#IF
+CHECKGAMEGOLD < <$STR(N$生肖B货币)>
+#ACT
+MESSAGEBOX 对不起，您的账户上元宝不足<$STR(N$生肖B货币)>个，无法打造！
+break
+
+#IF
+NOT CHECKITEM <$STR(S$生肖B材料)> <$STR(N$生肖B材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$生肖B材料)>不够<$STR(N$生肖B材料)>个，无法打造
+break
+
+
+#IF
+#ACT
+getbagitemcount 灵阶·子鼠 N1
+getbagitemcount 灵阶·丑牛 N2
+getbagitemcount 灵阶·寅虎 N3
+getbagitemcount 灵阶·卯兔 N4
+getbagitemcount 灵阶·辰龙 N5
+getbagitemcount 灵阶·巳蛇 N6
+getbagitemcount 灵阶·午马 N7
+getbagitemcount 灵阶·未羊 N8
+getbagitemcount 灵阶·申猴 N9
+getbagitemcount 灵阶·酉鸡 N10
+getbagitemcount 灵阶·戌狗 N11
+getbagitemcount 灵阶·亥猪 N12
+MOV N$灵阶生肖数量 0
+INC N$灵阶生肖数量 <$STR(N1)>
+INC N$灵阶生肖数量 <$STR(N2)>
+INC N$灵阶生肖数量 <$STR(N3)>
+INC N$灵阶生肖数量 <$STR(N4)>
+INC N$灵阶生肖数量 <$STR(N5)>
+INC N$灵阶生肖数量 <$STR(N6)>
+INC N$灵阶生肖数量 <$STR(N7)>
+INC N$灵阶生肖数量 <$STR(N8)>
+INC N$灵阶生肖数量 <$STR(N9)>
+INC N$灵阶生肖数量 <$STR(N10)>
+INC N$灵阶生肖数量 <$STR(N11)>
+INC N$灵阶生肖数量 <$STR(N12)>
+
+
+#IF
+SMALL N$灵阶生肖数量 5
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有5件灵阶生肖，无法打造！
+BREAK
+
+#IF
+#ACT
+TAKE <$STR(S$生肖B材料)> <$STR(N$生肖B材料)>
+GAMEGOLD - <$STR(N$生肖B货币)>
+TakeBagItem 灵阶·子鼠|灵阶·丑牛|灵阶·寅虎|灵阶·卯兔|灵阶·辰龙|灵阶·巳蛇|灵阶·午马|灵阶·未羊|灵阶·申猴|灵阶·酉鸡|灵阶·戌狗|灵阶·亥猪| 5 0 0 0 0 N55 0
+
+
+GIVE <$STR(S$生肖B12)> 1
+MESSAGEBOX 恭喜您，成功打造一件：<$STR(S$生肖B12)>
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@打造戌狗A2]
+
+#IF
+NOT CHECKBAGSIZE  12
+#ACT
+MESSAGEBOX [失败]:\　\　　　　　　您的“包袱位置”不足“12个”空位置！
+break
+
+
+#IF
+CHECKGAMEGOLD < <$STR(N$生肖B货币)>
+#ACT
+MESSAGEBOX 对不起，您的账户上元宝不足<$STR(N$生肖B货币)>个，无法打造！
+break
+
+#IF
+NOT CHECKITEM <$STR(S$生肖B材料)> <$STR(N$生肖B材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$生肖B材料)>不够<$STR(N$生肖B材料)>个，无法打造
+break
+
+
+#IF
+#ACT
+getbagitemcount 灵阶·子鼠 N1
+getbagitemcount 灵阶·丑牛 N2
+getbagitemcount 灵阶·寅虎 N3
+getbagitemcount 灵阶·卯兔 N4
+getbagitemcount 灵阶·辰龙 N5
+getbagitemcount 灵阶·巳蛇 N6
+getbagitemcount 灵阶·午马 N7
+getbagitemcount 灵阶·未羊 N8
+getbagitemcount 灵阶·申猴 N9
+getbagitemcount 灵阶·酉鸡 N10
+getbagitemcount 灵阶·戌狗 N11
+getbagitemcount 灵阶·亥猪 N12
+MOV N$灵阶生肖数量 0
+INC N$灵阶生肖数量 <$STR(N1)>
+INC N$灵阶生肖数量 <$STR(N2)>
+INC N$灵阶生肖数量 <$STR(N3)>
+INC N$灵阶生肖数量 <$STR(N4)>
+INC N$灵阶生肖数量 <$STR(N5)>
+INC N$灵阶生肖数量 <$STR(N6)>
+INC N$灵阶生肖数量 <$STR(N7)>
+INC N$灵阶生肖数量 <$STR(N8)>
+INC N$灵阶生肖数量 <$STR(N9)>
+INC N$灵阶生肖数量 <$STR(N10)>
+INC N$灵阶生肖数量 <$STR(N11)>
+INC N$灵阶生肖数量 <$STR(N12)>
+
+
+#IF
+SMALL N$灵阶生肖数量 5
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有5件灵阶生肖，无法打造！
+BREAK
+
+#IF
+#ACT
+TAKE <$STR(S$生肖B材料)> <$STR(N$生肖B材料)>
+GAMEGOLD - <$STR(N$生肖B货币)>
+TakeBagItem 灵阶·子鼠|灵阶·丑牛|灵阶·寅虎|灵阶·卯兔|灵阶·辰龙|灵阶·巳蛇|灵阶·午马|灵阶·未羊|灵阶·申猴|灵阶·酉鸡|灵阶·戌狗|灵阶·亥猪| 5 0 0 0 0 N55 0
+
+GIVE <$STR(S$生肖B11)> 1
+MESSAGEBOX 恭喜您，成功打造一件：<$STR(S$生肖B11)>
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@打造酉鸡A2]
+
+#IF
+NOT CHECKBAGSIZE  12
+#ACT
+MESSAGEBOX [失败]:\　\　　　　　　您的“包袱位置”不足“12个”空位置！
+break
+
+
+#IF
+CHECKGAMEGOLD < <$STR(N$生肖B货币)>
+#ACT
+MESSAGEBOX 对不起，您的账户上元宝不足<$STR(N$生肖B货币)>个，无法打造！
+break
+
+#IF
+NOT CHECKITEM <$STR(S$生肖B材料)> <$STR(N$生肖B材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$生肖B材料)>不够<$STR(N$生肖B材料)>个，无法打造
+break
+
+
+#IF
+#ACT
+getbagitemcount 灵阶·子鼠 N1
+getbagitemcount 灵阶·丑牛 N2
+getbagitemcount 灵阶·寅虎 N3
+getbagitemcount 灵阶·卯兔 N4
+getbagitemcount 灵阶·辰龙 N5
+getbagitemcount 灵阶·巳蛇 N6
+getbagitemcount 灵阶·午马 N7
+getbagitemcount 灵阶·未羊 N8
+getbagitemcount 灵阶·申猴 N9
+getbagitemcount 灵阶·酉鸡 N10
+getbagitemcount 灵阶·戌狗 N11
+getbagitemcount 灵阶·亥猪 N12
+MOV N$灵阶生肖数量 0
+INC N$灵阶生肖数量 <$STR(N1)>
+INC N$灵阶生肖数量 <$STR(N2)>
+INC N$灵阶生肖数量 <$STR(N3)>
+INC N$灵阶生肖数量 <$STR(N4)>
+INC N$灵阶生肖数量 <$STR(N5)>
+INC N$灵阶生肖数量 <$STR(N6)>
+INC N$灵阶生肖数量 <$STR(N7)>
+INC N$灵阶生肖数量 <$STR(N8)>
+INC N$灵阶生肖数量 <$STR(N9)>
+INC N$灵阶生肖数量 <$STR(N10)>
+INC N$灵阶生肖数量 <$STR(N11)>
+INC N$灵阶生肖数量 <$STR(N12)>
+
+
+#IF
+SMALL N$灵阶生肖数量 5
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有5件灵阶生肖，无法打造！
+BREAK
+
+#IF
+#ACT
+TAKE <$STR(S$生肖B材料)> <$STR(N$生肖B材料)>
+GAMEGOLD - <$STR(N$生肖B货币)>
+TakeBagItem 灵阶·子鼠|灵阶·丑牛|灵阶·寅虎|灵阶·卯兔|灵阶·辰龙|灵阶·巳蛇|灵阶·午马|灵阶·未羊|灵阶·申猴|灵阶·酉鸡|灵阶·戌狗|灵阶·亥猪| 5 0 0 0 0 N55 0
+
+GIVE <$STR(S$生肖B10)> 1
+MESSAGEBOX 恭喜您，成功打造一件：<$STR(S$生肖B10)>
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@打造申猴A2]
+
+#IF
+CHECKGAMEGOLD < <$STR(N$生肖B货币)>
+#ACT
+MESSAGEBOX 对不起，您的账户上元宝不足<$STR(N$生肖B货币)>个，无法打造！
+break
+
+#IF
+NOT CHECKITEM <$STR(S$生肖B材料)> <$STR(N$生肖B材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$生肖B材料)>不够<$STR(N$生肖B材料)>个，无法打造
+break
+
+
+#IF
+#ACT
+getbagitemcount 灵阶·子鼠 N1
+getbagitemcount 灵阶·丑牛 N2
+getbagitemcount 灵阶·寅虎 N3
+getbagitemcount 灵阶·卯兔 N4
+getbagitemcount 灵阶·辰龙 N5
+getbagitemcount 灵阶·巳蛇 N6
+getbagitemcount 灵阶·午马 N7
+getbagitemcount 灵阶·未羊 N8
+getbagitemcount 灵阶·申猴 N9
+getbagitemcount 灵阶·酉鸡 N10
+getbagitemcount 灵阶·戌狗 N11
+getbagitemcount 灵阶·亥猪 N12
+MOV N$灵阶生肖数量 0
+INC N$灵阶生肖数量 <$STR(N1)>
+INC N$灵阶生肖数量 <$STR(N2)>
+INC N$灵阶生肖数量 <$STR(N3)>
+INC N$灵阶生肖数量 <$STR(N4)>
+INC N$灵阶生肖数量 <$STR(N5)>
+INC N$灵阶生肖数量 <$STR(N6)>
+INC N$灵阶生肖数量 <$STR(N7)>
+INC N$灵阶生肖数量 <$STR(N8)>
+INC N$灵阶生肖数量 <$STR(N9)>
+INC N$灵阶生肖数量 <$STR(N10)>
+INC N$灵阶生肖数量 <$STR(N11)>
+INC N$灵阶生肖数量 <$STR(N12)>
+
+
+#IF
+SMALL N$灵阶生肖数量 5
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有5件灵阶生肖，无法打造！
+BREAK
+
+#IF
+#ACT
+TAKE <$STR(S$生肖B材料)> <$STR(N$生肖B材料)>
+GAMEGOLD - <$STR(N$生肖B货币)>
+TakeBagItem 灵阶·子鼠|灵阶·丑牛|灵阶·寅虎|灵阶·卯兔|灵阶·辰龙|灵阶·巳蛇|灵阶·午马|灵阶·未羊|灵阶·申猴|灵阶·酉鸡|灵阶·戌狗|灵阶·亥猪| 5 0 0 0 0 N55 0
+
+GIVE <$STR(S$生肖B9)> 1
+MESSAGEBOX 恭喜您，成功打造一件：<$STR(S$生肖B9)>
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@打造未羊A2]
+
+#IF
+CHECKGAMEGOLD < <$STR(N$生肖B货币)>
+#ACT
+MESSAGEBOX 对不起，您的账户上元宝不足<$STR(N$生肖B货币)>个，无法打造！
+break
+
+#IF
+NOT CHECKITEM <$STR(S$生肖B材料)> <$STR(N$生肖B材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$生肖B材料)>不够<$STR(N$生肖B材料)>个，无法打造
+break
+
+
+#IF
+#ACT
+getbagitemcount 灵阶·子鼠 N1
+getbagitemcount 灵阶·丑牛 N2
+getbagitemcount 灵阶·寅虎 N3
+getbagitemcount 灵阶·卯兔 N4
+getbagitemcount 灵阶·辰龙 N5
+getbagitemcount 灵阶·巳蛇 N6
+getbagitemcount 灵阶·午马 N7
+getbagitemcount 灵阶·未羊 N8
+getbagitemcount 灵阶·申猴 N9
+getbagitemcount 灵阶·酉鸡 N10
+getbagitemcount 灵阶·戌狗 N11
+getbagitemcount 灵阶·亥猪 N12
+MOV N$灵阶生肖数量 0
+INC N$灵阶生肖数量 <$STR(N1)>
+INC N$灵阶生肖数量 <$STR(N2)>
+INC N$灵阶生肖数量 <$STR(N3)>
+INC N$灵阶生肖数量 <$STR(N4)>
+INC N$灵阶生肖数量 <$STR(N5)>
+INC N$灵阶生肖数量 <$STR(N6)>
+INC N$灵阶生肖数量 <$STR(N7)>
+INC N$灵阶生肖数量 <$STR(N8)>
+INC N$灵阶生肖数量 <$STR(N9)>
+INC N$灵阶生肖数量 <$STR(N10)>
+INC N$灵阶生肖数量 <$STR(N11)>
+INC N$灵阶生肖数量 <$STR(N12)>
+
+
+#IF
+SMALL N$灵阶生肖数量 5
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有5件灵阶生肖，无法打造！
+BREAK
+
+#IF
+#ACT
+TAKE <$STR(S$生肖B材料)> <$STR(N$生肖B材料)>
+GAMEGOLD - <$STR(N$生肖B货币)>
+TakeBagItem 灵阶·子鼠|灵阶·丑牛|灵阶·寅虎|灵阶·卯兔|灵阶·辰龙|灵阶·巳蛇|灵阶·午马|灵阶·未羊|灵阶·申猴|灵阶·酉鸡|灵阶·戌狗|灵阶·亥猪| 5 0 0 0 0 N55 0
+
+GIVE <$STR(S$生肖B8)> 1
+MESSAGEBOX 恭喜您，成功打造一件：<$STR(S$生肖B8)>
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@打造午马A2]
+
+#IF
+CHECKGAMEGOLD < <$STR(N$生肖B货币)>
+#ACT
+MESSAGEBOX 对不起，您的账户上元宝不足<$STR(N$生肖B货币)>个，无法打造！
+break
+
+#IF
+NOT CHECKITEM <$STR(S$生肖B材料)> <$STR(N$生肖B材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$生肖B材料)>不够<$STR(N$生肖B材料)>个，无法打造
+break
+
+
+#IF
+#ACT
+getbagitemcount 灵阶·子鼠 N1
+getbagitemcount 灵阶·丑牛 N2
+getbagitemcount 灵阶·寅虎 N3
+getbagitemcount 灵阶·卯兔 N4
+getbagitemcount 灵阶·辰龙 N5
+getbagitemcount 灵阶·巳蛇 N6
+getbagitemcount 灵阶·午马 N7
+getbagitemcount 灵阶·未羊 N8
+getbagitemcount 灵阶·申猴 N9
+getbagitemcount 灵阶·酉鸡 N10
+getbagitemcount 灵阶·戌狗 N11
+getbagitemcount 灵阶·亥猪 N12
+MOV N$灵阶生肖数量 0
+INC N$灵阶生肖数量 <$STR(N1)>
+INC N$灵阶生肖数量 <$STR(N2)>
+INC N$灵阶生肖数量 <$STR(N3)>
+INC N$灵阶生肖数量 <$STR(N4)>
+INC N$灵阶生肖数量 <$STR(N5)>
+INC N$灵阶生肖数量 <$STR(N6)>
+INC N$灵阶生肖数量 <$STR(N7)>
+INC N$灵阶生肖数量 <$STR(N8)>
+INC N$灵阶生肖数量 <$STR(N9)>
+INC N$灵阶生肖数量 <$STR(N10)>
+INC N$灵阶生肖数量 <$STR(N11)>
+INC N$灵阶生肖数量 <$STR(N12)>
+
+
+#IF
+SMALL N$灵阶生肖数量 5
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有5件灵阶生肖，无法打造！
+BREAK
+
+#IF
+#ACT
+TAKE <$STR(S$生肖B材料)> <$STR(N$生肖B材料)>
+GAMEGOLD - <$STR(N$生肖B货币)>
+TakeBagItem 灵阶·子鼠|灵阶·丑牛|灵阶·寅虎|灵阶·卯兔|灵阶·辰龙|灵阶·巳蛇|灵阶·午马|灵阶·未羊|灵阶·申猴|灵阶·酉鸡|灵阶·戌狗|灵阶·亥猪| 5 0 0 0 0 N55 0
+
+GIVE <$STR(S$生肖B7)> 1
+MESSAGEBOX 恭喜您，成功打造一件：<$STR(S$生肖B7)>
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@打造巳蛇A2]
+
+#IF
+CHECKGAMEGOLD < <$STR(N$生肖B货币)>
+#ACT
+MESSAGEBOX 对不起，您的账户上元宝不足<$STR(N$生肖B货币)>个，无法打造！
+break
+
+#IF
+NOT CHECKITEM <$STR(S$生肖B材料)> <$STR(N$生肖B材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$生肖B材料)>不够<$STR(N$生肖B材料)>个，无法打造
+break
+
+
+#IF
+#ACT
+getbagitemcount 灵阶·子鼠 N1
+getbagitemcount 灵阶·丑牛 N2
+getbagitemcount 灵阶·寅虎 N3
+getbagitemcount 灵阶·卯兔 N4
+getbagitemcount 灵阶·辰龙 N5
+getbagitemcount 灵阶·巳蛇 N6
+getbagitemcount 灵阶·午马 N7
+getbagitemcount 灵阶·未羊 N8
+getbagitemcount 灵阶·申猴 N9
+getbagitemcount 灵阶·酉鸡 N10
+getbagitemcount 灵阶·戌狗 N11
+getbagitemcount 灵阶·亥猪 N12
+MOV N$灵阶生肖数量 0
+INC N$灵阶生肖数量 <$STR(N1)>
+INC N$灵阶生肖数量 <$STR(N2)>
+INC N$灵阶生肖数量 <$STR(N3)>
+INC N$灵阶生肖数量 <$STR(N4)>
+INC N$灵阶生肖数量 <$STR(N5)>
+INC N$灵阶生肖数量 <$STR(N6)>
+INC N$灵阶生肖数量 <$STR(N7)>
+INC N$灵阶生肖数量 <$STR(N8)>
+INC N$灵阶生肖数量 <$STR(N9)>
+INC N$灵阶生肖数量 <$STR(N10)>
+INC N$灵阶生肖数量 <$STR(N11)>
+INC N$灵阶生肖数量 <$STR(N12)>
+
+
+#IF
+SMALL N$灵阶生肖数量 5
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有5件灵阶生肖，无法打造！
+BREAK
+
+#IF
+#ACT
+TAKE <$STR(S$生肖B材料)> <$STR(N$生肖B材料)>
+GAMEGOLD - <$STR(N$生肖B货币)>
+TakeBagItem 灵阶·子鼠|灵阶·丑牛|灵阶·寅虎|灵阶·卯兔|灵阶·辰龙|灵阶·巳蛇|灵阶·午马|灵阶·未羊|灵阶·申猴|灵阶·酉鸡|灵阶·戌狗|灵阶·亥猪| 5 0 0 0 0 N55 0
+
+GIVE <$STR(S$生肖B6)> 1
+MESSAGEBOX 恭喜您，成功打造一件：<$STR(S$生肖B6)>
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@打造辰龙A2]
+
+#IF
+CHECKGAMEGOLD < <$STR(N$生肖B货币)>
+#ACT
+MESSAGEBOX 对不起，您的账户上元宝不足<$STR(N$生肖B货币)>个，无法打造！
+break
+
+#IF
+NOT CHECKITEM <$STR(S$生肖B材料)> <$STR(N$生肖B材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$生肖B材料)>不够<$STR(N$生肖B材料)>个，无法打造
+break
+
+
+#IF
+#ACT
+getbagitemcount 灵阶·子鼠 N1
+getbagitemcount 灵阶·丑牛 N2
+getbagitemcount 灵阶·寅虎 N3
+getbagitemcount 灵阶·卯兔 N4
+getbagitemcount 灵阶·辰龙 N5
+getbagitemcount 灵阶·巳蛇 N6
+getbagitemcount 灵阶·午马 N7
+getbagitemcount 灵阶·未羊 N8
+getbagitemcount 灵阶·申猴 N9
+getbagitemcount 灵阶·酉鸡 N10
+getbagitemcount 灵阶·戌狗 N11
+getbagitemcount 灵阶·亥猪 N12
+MOV N$灵阶生肖数量 0
+INC N$灵阶生肖数量 <$STR(N1)>
+INC N$灵阶生肖数量 <$STR(N2)>
+INC N$灵阶生肖数量 <$STR(N3)>
+INC N$灵阶生肖数量 <$STR(N4)>
+INC N$灵阶生肖数量 <$STR(N5)>
+INC N$灵阶生肖数量 <$STR(N6)>
+INC N$灵阶生肖数量 <$STR(N7)>
+INC N$灵阶生肖数量 <$STR(N8)>
+INC N$灵阶生肖数量 <$STR(N9)>
+INC N$灵阶生肖数量 <$STR(N10)>
+INC N$灵阶生肖数量 <$STR(N11)>
+INC N$灵阶生肖数量 <$STR(N12)>
+
+
+#IF
+SMALL N$灵阶生肖数量 5
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有5件灵阶生肖，无法打造！
+BREAK
+
+#IF
+#ACT
+TAKE <$STR(S$生肖B材料)> <$STR(N$生肖B材料)>
+GAMEGOLD - <$STR(N$生肖B货币)>
+TakeBagItem 灵阶·子鼠|灵阶·丑牛|灵阶·寅虎|灵阶·卯兔|灵阶·辰龙|灵阶·巳蛇|灵阶·午马|灵阶·未羊|灵阶·申猴|灵阶·酉鸡|灵阶·戌狗|灵阶·亥猪| 5 0 0 0 0 N55 0
+
+GIVE <$STR(S$生肖B5)> 1
+MESSAGEBOX 恭喜您，成功打造一件：<$STR(S$生肖B5)>
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@打造卯兔A2]
+
+#IF
+CHECKGAMEGOLD < <$STR(N$生肖B货币)>
+#ACT
+MESSAGEBOX 对不起，您的账户上元宝不足<$STR(N$生肖B货币)>个，无法打造！
+break
+
+#IF
+NOT CHECKITEM <$STR(S$生肖B材料)> <$STR(N$生肖B材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$生肖B材料)>不够<$STR(N$生肖B材料)>个，无法打造
+break
+
+
+#IF
+#ACT
+getbagitemcount 灵阶·子鼠 N1
+getbagitemcount 灵阶·丑牛 N2
+getbagitemcount 灵阶·寅虎 N3
+getbagitemcount 灵阶·卯兔 N4
+getbagitemcount 灵阶·辰龙 N5
+getbagitemcount 灵阶·巳蛇 N6
+getbagitemcount 灵阶·午马 N7
+getbagitemcount 灵阶·未羊 N8
+getbagitemcount 灵阶·申猴 N9
+getbagitemcount 灵阶·酉鸡 N10
+getbagitemcount 灵阶·戌狗 N11
+getbagitemcount 灵阶·亥猪 N12
+MOV N$灵阶生肖数量 0
+INC N$灵阶生肖数量 <$STR(N1)>
+INC N$灵阶生肖数量 <$STR(N2)>
+INC N$灵阶生肖数量 <$STR(N3)>
+INC N$灵阶生肖数量 <$STR(N4)>
+INC N$灵阶生肖数量 <$STR(N5)>
+INC N$灵阶生肖数量 <$STR(N6)>
+INC N$灵阶生肖数量 <$STR(N7)>
+INC N$灵阶生肖数量 <$STR(N8)>
+INC N$灵阶生肖数量 <$STR(N9)>
+INC N$灵阶生肖数量 <$STR(N10)>
+INC N$灵阶生肖数量 <$STR(N11)>
+INC N$灵阶生肖数量 <$STR(N12)>
+
+
+#IF
+SMALL N$灵阶生肖数量 5
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有5件灵阶生肖，无法打造！
+BREAK
+
+#IF
+#ACT
+TAKE <$STR(S$生肖B材料)> <$STR(N$生肖B材料)>
+GAMEGOLD - <$STR(N$生肖B货币)>
+TakeBagItem 灵阶·子鼠|灵阶·丑牛|灵阶·寅虎|灵阶·卯兔|灵阶·辰龙|灵阶·巳蛇|灵阶·午马|灵阶·未羊|灵阶·申猴|灵阶·酉鸡|灵阶·戌狗|灵阶·亥猪| 5 0 0 0 0 N55 0
+
+GIVE <$STR(S$生肖B4)> 1
+MESSAGEBOX 恭喜您，成功打造一件：<$STR(S$生肖B4)>
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@打造寅虎A2]
+
+#IF
+CHECKGAMEGOLD < <$STR(N$生肖B货币)>
+#ACT
+MESSAGEBOX 对不起，您的账户上元宝不足<$STR(N$生肖B货币)>个，无法打造！
+break
+
+#IF
+NOT CHECKITEM <$STR(S$生肖B材料)> <$STR(N$生肖B材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$生肖B材料)>不够<$STR(N$生肖B材料)>个，无法打造
+break
+
+
+#IF
+#ACT
+getbagitemcount 灵阶·子鼠 N1
+getbagitemcount 灵阶·丑牛 N2
+getbagitemcount 灵阶·寅虎 N3
+getbagitemcount 灵阶·卯兔 N4
+getbagitemcount 灵阶·辰龙 N5
+getbagitemcount 灵阶·巳蛇 N6
+getbagitemcount 灵阶·午马 N7
+getbagitemcount 灵阶·未羊 N8
+getbagitemcount 灵阶·申猴 N9
+getbagitemcount 灵阶·酉鸡 N10
+getbagitemcount 灵阶·戌狗 N11
+getbagitemcount 灵阶·亥猪 N12
+MOV N$灵阶生肖数量 0
+INC N$灵阶生肖数量 <$STR(N1)>
+INC N$灵阶生肖数量 <$STR(N2)>
+INC N$灵阶生肖数量 <$STR(N3)>
+INC N$灵阶生肖数量 <$STR(N4)>
+INC N$灵阶生肖数量 <$STR(N5)>
+INC N$灵阶生肖数量 <$STR(N6)>
+INC N$灵阶生肖数量 <$STR(N7)>
+INC N$灵阶生肖数量 <$STR(N8)>
+INC N$灵阶生肖数量 <$STR(N9)>
+INC N$灵阶生肖数量 <$STR(N10)>
+INC N$灵阶生肖数量 <$STR(N11)>
+INC N$灵阶生肖数量 <$STR(N12)>
+
+
+#IF
+SMALL N$灵阶生肖数量 5
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有5件灵阶生肖，无法打造！
+BREAK
+
+#IF
+#ACT
+TAKE <$STR(S$生肖B材料)> <$STR(N$生肖B材料)>
+GAMEGOLD - <$STR(N$生肖B货币)>
+TakeBagItem 灵阶·子鼠|灵阶·丑牛|灵阶·寅虎|灵阶·卯兔|灵阶·辰龙|灵阶·巳蛇|灵阶·午马|灵阶·未羊|灵阶·申猴|灵阶·酉鸡|灵阶·戌狗|灵阶·亥猪| 5 0 0 0 0 N55 0
+
+GIVE <$STR(S$生肖B3)> 1
+MESSAGEBOX 恭喜您，成功打造一件：<$STR(S$生肖B3)>
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@打造丑牛A2]
+
+#IF
+CHECKGAMEGOLD < <$STR(N$生肖B货币)>
+#ACT
+MESSAGEBOX 对不起，您的账户上元宝不足<$STR(N$生肖B货币)>个，无法打造！
+break
+
+#IF
+NOT CHECKITEM <$STR(S$生肖B材料)> <$STR(N$生肖B材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$生肖B材料)>不够<$STR(N$生肖B材料)>个，无法打造
+break
+
+
+#IF
+#ACT
+getbagitemcount 灵阶·子鼠 N1
+getbagitemcount 灵阶·丑牛 N2
+getbagitemcount 灵阶·寅虎 N3
+getbagitemcount 灵阶·卯兔 N4
+getbagitemcount 灵阶·辰龙 N5
+getbagitemcount 灵阶·巳蛇 N6
+getbagitemcount 灵阶·午马 N7
+getbagitemcount 灵阶·未羊 N8
+getbagitemcount 灵阶·申猴 N9
+getbagitemcount 灵阶·酉鸡 N10
+getbagitemcount 灵阶·戌狗 N11
+getbagitemcount 灵阶·亥猪 N12
+MOV N$灵阶生肖数量 0
+INC N$灵阶生肖数量 <$STR(N1)>
+INC N$灵阶生肖数量 <$STR(N2)>
+INC N$灵阶生肖数量 <$STR(N3)>
+INC N$灵阶生肖数量 <$STR(N4)>
+INC N$灵阶生肖数量 <$STR(N5)>
+INC N$灵阶生肖数量 <$STR(N6)>
+INC N$灵阶生肖数量 <$STR(N7)>
+INC N$灵阶生肖数量 <$STR(N8)>
+INC N$灵阶生肖数量 <$STR(N9)>
+INC N$灵阶生肖数量 <$STR(N10)>
+INC N$灵阶生肖数量 <$STR(N11)>
+INC N$灵阶生肖数量 <$STR(N12)>
+
+
+#IF
+SMALL N$灵阶生肖数量 5
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有5件灵阶生肖，无法打造！
+BREAK
+
+#IF
+#ACT
+TAKE <$STR(S$生肖B材料)> <$STR(N$生肖B材料)>
+GAMEGOLD - <$STR(N$生肖B货币)>
+TakeBagItem 灵阶·子鼠|灵阶·丑牛|灵阶·寅虎|灵阶·卯兔|灵阶·辰龙|灵阶·巳蛇|灵阶·午马|灵阶·未羊|灵阶·申猴|灵阶·酉鸡|灵阶·戌狗|灵阶·亥猪| 5 0 0 0 0 N55 0
+
+GIVE <$STR(S$生肖B2)> 1
+MESSAGEBOX 恭喜您，成功打造一件：<$STR(S$生肖B2)>
+BREAK
+
+
+
+
+
+
+[@打造子鼠A2]
+
+#IF
+CHECKGAMEGOLD < <$STR(N$生肖B货币)>
+#ACT
+MESSAGEBOX 对不起，您的账户上元宝不足<$STR(N$生肖B货币)>个，无法打造！
+break
+
+#IF
+NOT CHECKITEM <$STR(S$生肖B材料)> <$STR(N$生肖B材料)>
+#ACT
+MESSAGEBOX 对不起，您包袱里面的<$STR(S$生肖B材料)>不够<$STR(N$生肖B材料)>个，无法打造
+break
+
+
+#IF
+#ACT
+getbagitemcount 灵阶·子鼠 N1
+getbagitemcount 灵阶·丑牛 N2
+getbagitemcount 灵阶·寅虎 N3
+getbagitemcount 灵阶·卯兔 N4
+getbagitemcount 灵阶·辰龙 N5
+getbagitemcount 灵阶·巳蛇 N6
+getbagitemcount 灵阶·午马 N7
+getbagitemcount 灵阶·未羊 N8
+getbagitemcount 灵阶·申猴 N9
+getbagitemcount 灵阶·酉鸡 N10
+getbagitemcount 灵阶·戌狗 N11
+getbagitemcount 灵阶·亥猪 N12
+MOV N$灵阶生肖数量 0
+INC N$灵阶生肖数量 <$STR(N1)>
+INC N$灵阶生肖数量 <$STR(N2)>
+INC N$灵阶生肖数量 <$STR(N3)>
+INC N$灵阶生肖数量 <$STR(N4)>
+INC N$灵阶生肖数量 <$STR(N5)>
+INC N$灵阶生肖数量 <$STR(N6)>
+INC N$灵阶生肖数量 <$STR(N7)>
+INC N$灵阶生肖数量 <$STR(N8)>
+INC N$灵阶生肖数量 <$STR(N9)>
+INC N$灵阶生肖数量 <$STR(N10)>
+INC N$灵阶生肖数量 <$STR(N11)>
+INC N$灵阶生肖数量 <$STR(N12)>
+
+
+#IF
+SMALL N$灵阶生肖数量 5
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有5件灵阶生肖，无法打造！
+BREAK
+
+#IF
+#ACT
+TAKE <$STR(S$生肖B材料)> <$STR(N$生肖B材料)>
+GAMEGOLD - <$STR(N$生肖B货币)>
+TakeBagItem 灵阶·子鼠|灵阶·丑牛|灵阶·寅虎|灵阶·卯兔|灵阶·辰龙|灵阶·巳蛇|灵阶·午马|灵阶·未羊|灵阶·申猴|灵阶·酉鸡|灵阶·戌狗|灵阶·亥猪| 5 0 0 0 0 N55 0
+
+GIVE <$STR(S$生肖B1)> 1
+MESSAGEBOX 恭喜您，成功打造一件：<$STR(S$生肖B1)>
+BREAK
+
+
+
+
+
+
+
+
+
+
+

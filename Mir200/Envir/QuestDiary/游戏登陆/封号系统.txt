@@ -1,0 +1,778 @@
+[@封号分类]
+{
+
+
+#IF
+#ACT
+MOV S$人物转生显示
+MOV S$人物骰王封号
+MOV S$人物狂暴封号
+MOV S$夺宝达人封号
+MOV S$货币捐献封号
+MOV S$摸鱼排行封号
+MOV S$天下第一封号
+MOV S$武林盟主封号
+MOV S$沙城荣耀
+DEPRIVETITLE 国士无双
+DEPRIVETITLE 绝代佳人
+SetIcon 0 -1
+
+
+
+
+#IF
+CHECK [168] 1
+#Act
+SetIcon 4 1 11000 3 -45 14 0 100
+
+
+#IF
+check [438] 1
+CHECK [440] 1
+#Act
+SetIcon 2 1 315 0 10 30 0 100 0
+
+
+
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A100)>
+#ACT
+MOV S$沙城荣耀 ★★★★★★★沙城★第一名★荣耀★★★★★★★\[<$STR(U16)>点]
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A101)>
+#ACT
+MOV S$沙城荣耀 ★★★★★★沙城★第二名★荣耀★★★★★★\[<$STR(U16)>点]
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A102)>
+#ACT
+MOV S$沙城荣耀 ★★★★★沙城★第三名★荣耀★★★★★\[<$STR(U16)>点]
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A103)>
+#ACT
+MOV S$沙城荣耀 ★★★★沙城★第四名★荣耀★★★★\[<$STR(U16)>点]
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A104)>
+#ACT
+MOV S$沙城荣耀 ★★★沙城★第五名★荣耀★★★\[<$STR(U16)>点]
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A105)>
+#ACT
+MOV S$沙城荣耀 ★★沙城★第六名★荣耀★★\[<$STR(U16)>点]
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A106)>
+#ACT
+MOV S$沙城荣耀 ★★沙城★第07名★荣耀★★\[<$STR(U16)>点]
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A107)>
+#ACT
+MOV S$沙城荣耀 ★★沙城★第08名★荣耀★★\[<$STR(U16)>点]
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A108)>
+#ACT
+MOV S$沙城荣耀 ★★沙城★第09名★荣耀★★\[<$STR(U16)>点]
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A109)>
+#ACT
+MOV S$沙城荣耀 ★★沙城★第10名★荣耀★★\[<$STR(U16)>点]
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A110)>
+#ACT
+MOV S$沙城荣耀 ★★沙城★第11名★荣耀★★\[<$STR(U16)>点]
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A111)>
+#ACT
+MOV S$沙城荣耀 ★★沙城★第12名★荣耀★★\[<$STR(U16)>点]
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A112)>
+#ACT
+MOV S$沙城荣耀 ★★沙城★第13名★荣耀★★\[<$STR(U16)>点]
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A113)>
+#ACT
+MOV S$沙城荣耀 ★★沙城★第14名★荣耀★★\[<$STR(U16)>点]
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A114)>
+#ACT
+MOV S$沙城荣耀 ★★沙城★第15名★荣耀★★\[<$STR(U16)>点]
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A115)>
+#ACT
+MOV S$沙城荣耀 ★★沙城★第16名★荣耀★★\[<$STR(U16)>点]
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A116)>
+#ACT
+MOV S$沙城荣耀 ★★沙城★第17名★荣耀★★\[<$STR(U16)>点]
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A117)>
+#ACT
+MOV S$沙城荣耀 ★★沙城★第18名★荣耀★★\[<$STR(U16)>点]
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A118)>
+#ACT
+MOV S$沙城荣耀 ★★沙城★第19名★荣耀★★\[<$STR(U16)>点]
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A119)>
+#ACT
+MOV S$沙城荣耀 ★★沙城★第20名★荣耀★★\[<$STR(U16)>点]
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A120)>
+#ACT
+MOV S$沙城荣耀 ★★沙城★第21名★荣耀★★\[<$STR(U16)>点]
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A121)>
+#ACT
+MOV S$沙城荣耀 ★★沙城★第22名★荣耀★★\[<$STR(U16)>点]
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A122)>
+#ACT
+MOV S$沙城荣耀 ★★沙城★第23名★荣耀★★\[<$STR(U16)>点]
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A123)>
+#ACT
+MOV S$沙城荣耀 ★★沙城★第24名★荣耀★★\[<$STR(U16)>点]
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A124)>
+#ACT
+MOV S$沙城荣耀 ★★沙城★第25名★荣耀★★\[<$STR(U16)>点]
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A125)>
+#ACT
+MOV S$沙城荣耀 ★★沙城★第26名★荣耀★★\[<$STR(U16)>点]
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A126)>
+#ACT
+MOV S$沙城荣耀 ★★沙城★第27名★荣耀★★\[<$STR(U16)>点]
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A127)>
+#ACT
+MOV S$沙城荣耀 ★★沙城★第28名★荣耀★★\[<$STR(U16)>点]
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A128)>
+#ACT
+MOV S$沙城荣耀 ★★沙城★第29名★荣耀★★\[<$STR(U16)>点]
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A129)>
+#ACT
+MOV S$沙城荣耀 ★★沙城★第30名★荣耀★★\[<$STR(U16)>点]
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A130)>
+#ACT
+MOV S$沙城荣耀 ★★沙城★第31名★荣耀★★\[<$STR(U16)>点]
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A131)>
+#ACT
+MOV S$沙城荣耀 ★★沙城★第32名★荣耀★★\[<$STR(U16)>点]
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A132)>
+#ACT
+MOV S$沙城荣耀 ★★沙城★第33名★荣耀★★\[<$STR(U16)>点]
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A133)>
+#ACT
+MOV S$沙城荣耀 ★★沙城★第34名★荣耀★★\[<$STR(U16)>点]
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A134)>
+#ACT
+MOV S$沙城荣耀 ★★沙城★第35名★荣耀★★\[<$STR(U16)>点]
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A135)>
+#ACT
+MOV S$沙城荣耀 ★★沙城★第36名★荣耀★★\[<$STR(U16)>点]
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A136)>
+#ACT
+MOV S$沙城荣耀 ★★沙城★第37名★荣耀★★\[<$STR(U16)>点]
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A137)>
+#ACT
+MOV S$沙城荣耀 ★★沙城★第38名★荣耀★★\[<$STR(U16)>点]
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A138)>
+#ACT
+MOV S$沙城荣耀 ★★沙城★第39名★荣耀★★\[<$STR(U16)>点]
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A139)>
+#ACT
+MOV S$沙城荣耀 ★★沙城★第40名★荣耀★★\[<$STR(U16)>点]
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A140)>
+#ACT
+MOV S$沙城荣耀 ★★沙城★第41名★荣耀★★\[<$STR(U16)>点]
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A141)>
+#ACT
+MOV S$沙城荣耀 ★★沙城★第42名★荣耀★★\[<$STR(U16)>点]
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A142)>
+#ACT
+MOV S$沙城荣耀 ★★沙城★第43名★荣耀★★\[<$STR(U16)>点]
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A143)>
+#ACT
+MOV S$沙城荣耀 ★★沙城★第44名★荣耀★★\[<$STR(U16)>点]
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A144)>
+#ACT
+MOV S$沙城荣耀 ★★沙城★第45名★荣耀★★\[<$STR(U16)>点]
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A145)>
+#ACT
+MOV S$沙城荣耀 ★★沙城★第46名★荣耀★★\[<$STR(U16)>点]
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A146)>
+#ACT
+MOV S$沙城荣耀 ★★沙城★第47名★荣耀★★\[<$STR(U16)>点]
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A147)>
+#ACT
+MOV S$沙城荣耀 ★★沙城★第48名★荣耀★★\[<$STR(U16)>点]
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A148)>
+#ACT
+MOV S$沙城荣耀 ★★沙城★第49名★荣耀★★\[<$STR(U16)>点]
+
+#IF
+LARGE U16 999
+EQUAL <$USERNAME> <$STR(A149)>
+#ACT
+MOV S$沙城荣耀 ★★沙城★第50名★荣耀★★\[<$STR(U16)>点]
+
+
+
+
+#IF
+EQUAL <$USERNAME> <$STR(A10)>
+#ACT
+MOV S$武林盟主封号 ★★武林★盟主★★
+
+
+
+
+
+#IF
+EQUAL <$USERNAME> <$STR(A60)>
+CHECKTITLE 摸鱼第一·祖师
+#ACT
+MOV S$摸鱼排行封号 ★★★★★摸鱼第一祖师★★★★★
+
+#IF
+EQUAL <$USERNAME> <$STR(A61)>
+CHECKTITLE 摸鱼第二·宗师
+#ACT
+MOV S$摸鱼排行封号 ★★★★摸鱼第二宗师★★★★
+
+
+
+#IF
+EQUAL <$USERNAME> <$STR(A62)>
+CHECKTITLE 摸鱼第三·大神
+#ACT
+MOV S$摸鱼排行封号 ★★★摸鱼第三大神★★★
+
+
+#IF
+EQUAL <$USERNAME> <$STR(A63)>
+CHECKTITLE 摸鱼第四·长老
+#ACT
+MOV S$摸鱼排行封号 ★★摸鱼第四长老★★
+
+#IF
+EQUAL <$USERNAME> <$STR(A64)>
+CHECKTITLE 摸鱼第五·大师
+#ACT
+MOV S$摸鱼排行封号 ★摸鱼第五大师★
+
+#IF
+EQUAL <$USERNAME> <$STR(A65)>
+CHECKTITLE 摸鱼第六·鼻祖
+#ACT
+MOV S$摸鱼排行封号 ★摸鱼第六大师★
+
+#IF
+EQUAL <$USERNAME> <$STR(A66)>
+CHECKTITLE 摸鱼第七·真人
+#ACT
+MOV S$摸鱼排行封号 ★摸鱼第七真人★
+
+
+#IF
+EQUAL <$USERNAME> <$STR(A67)>
+CHECKTITLE 摸鱼第八·高手
+#ACT
+MOV S$摸鱼排行封号 ★摸鱼第八高手★
+
+
+#IF
+EQUAL <$USERNAME> <$STR(A68)>
+CHECKTITLE 摸鱼第九·牛人
+#ACT
+MOV S$摸鱼排行封号 ★摸鱼第九牛人★
+
+
+#IF
+EQUAL <$USERNAME> <$STR(A69)>
+CHECKTITLE 摸鱼第十·专家
+#ACT
+MOV S$摸鱼排行封号 ★摸鱼第十专家★
+
+
+
+
+
+
+
+
+#IF
+EQUAL 冰雪神兽[F级] <$STR(T18)>
+#ACT
+MOV N$宝宝颜色 255
+
+
+#IF
+EQUAL 冰雪神兽[E级] <$STR(T18)>
+#ACT
+MOV N$宝宝颜色 161
+
+
+#IF
+EQUAL 冰雪神兽[D级] <$STR(T18)>
+#ACT
+MOV N$宝宝颜色 3
+
+
+#IF
+EQUAL 冰雪神兽[C级] <$STR(T18)>
+#ACT
+MOV N$宝宝颜色 6
+
+
+#IF
+EQUAL 冰雪神兽[B级] <$STR(T18)>
+#ACT
+MOV N$宝宝颜色 250
+
+#IF
+EQUAL 冰雪神兽[A级] <$STR(T18)>
+#ACT
+MOV N$宝宝颜色 252
+
+
+#IF
+EQUAL 冰雪神兽[S级] <$STR(T18)>
+#ACT
+MOV N$宝宝颜色 251
+
+
+#IF
+EQUAL 冰雪神兽[SS级] <$STR(T18)>
+#ACT
+MOV N$宝宝颜色 70
+
+
+#IF
+EQUAL 冰雪神兽[SSS级] <$STR(T18)>
+#ACT
+MOV N$宝宝颜色 253
+
+#IF
+EQUAL 冰雪神兽[SSSS级] <$STR(T18)>
+#ACT
+MOV N$宝宝颜色 249
+
+#IF
+EQUAL 冰雪神兽[SSSSS级] <$STR(T18)>
+#ACT
+MOV N$宝宝颜色 254
+
+
+
+
+
+
+
+
+#IF
+equal A400 <$USERNAME>
+gender man
+#act
+SetIcon 0 1 523 -5 -40 -10
+MOV S$天下第一封号 ★★★天下第一★★★
+CONFERTITLE 国士无双
+
+#IF
+equal A402 <$USERNAME>
+gender WOMAN
+#act
+SetIcon 0 1 524 -5 -40 -10
+MOV S$天下第一封号 ★★★天下第一★★★
+CONFERTITLE 绝代佳人
+
+
+
+
+#IF
+CHECKRENEWLEVEL > 0
+#ACT
+MOV S$人物转生显示 盟重<$RELEVEL>转
+
+
+
+#IF
+CHECKRENEWLEVEL > 10
+#ACT
+MOV N$摸鱼转生 <$RELEVEL>
+DEC N$摸鱼转生 10
+MOV S$人物转生显示 ★摸鱼<$STR(N$摸鱼转生)>转★
+
+#IF
+CHECKRENEWLEVEL > 20
+#ACT
+MOV N$天命转生 <$RELEVEL>
+DEC N$天命转生 20
+MOV S$人物转生显示 ★★★天命<$STR(N$天命转生)>转★★★
+
+
+#IF
+CHECKRENEWLEVEL < 1
+#ACT
+MOV S$人物转生显示 
+
+
+
+#IF
+LARGE U130 0
+#ACT
+MOV S$人物会员封号 贵族VIP<$STR(U130)>
+
+#IF
+LARGE U130 10
+#ACT
+MOV S$人物会员封号 ☆贵族VIP<$STR(U130)>☆
+
+#IF
+LARGE U130 14
+#ACT
+MOV S$人物会员封号 ☆☆贵族VIP<$STR(U130)>☆☆
+
+#IF
+LARGE U130 19
+#ACT
+MOV S$人物会员封号 ☆☆☆贵族VIP<$STR(U130)>☆☆☆
+
+
+#IF
+CHECKTITLE 夺宝达人
+#ACT
+MOV S$夺宝达人封号 ☆☆夺宝达人☆☆
+
+
+
+#IF
+CHECKTITLE 九品仕郎
+#ACT
+MOV S$巅峰封号 九品仕郎
+
+
+#IF
+CHECKTITLE 八品骑士
+#ACT
+MOV S$巅峰封号 八品骑士
+
+
+
+#IF
+CHECKTITLE 七品前锋
+#ACT
+MOV S$巅峰封号 七品前锋
+
+
+
+#IF
+CHECKTITLE 六品护卫
+#ACT
+MOV S$巅峰封号 六品护卫
+
+
+
+#IF
+CHECKTITLE 五品左领
+#ACT
+MOV S$巅峰封号 五品左领
+
+
+
+#IF
+CHECKTITLE 四品参将
+#ACT
+MOV S$巅峰封号 四品参将
+
+
+
+#IF
+CHECKTITLE 三品大将
+#ACT
+MOV S$巅峰封号 三品大将
+
+
+
+#IF
+CHECKTITLE 二品将军
+#ACT
+MOV S$巅峰封号 二品将军
+
+
+
+#IF
+CHECKTITLE 一品统帅
+#ACT
+MOV S$巅峰封号 一品统帅
+
+
+
+#IF
+CHECKTITLE 风流倜傥
+#ACT
+MOV S$巅峰封号  ※风流倜傥※
+
+
+
+#IF
+CHECKTITLE 飞扬跋扈
+#ACT
+MOV S$巅峰封号  ※飞扬跋扈※
+
+#IF
+CHECKTITLE 不可阻挡
+#ACT
+MOV S$巅峰封号  ↘※不可阻挡※↙
+
+
+#IF
+CHECKTITLE 气宇轩昂
+#ACT
+MOV S$巅峰封号  ↘※气宇轩昂※↙
+
+
+#IF
+CHECKTITLE 义薄云天
+#ACT
+MOV S$巅峰封号  ↘※义薄云天※↙
+
+
+#IF
+CHECKTITLE 气吞山河
+#ACT
+MOV S$巅峰封号  ↘★※气吞山河※★↙
+
+
+#IF
+CHECKTITLE 雄才大略
+#ACT
+MOV S$巅峰封号  ↘★※雄才大略※★↙
+
+
+#IF
+CHECKTITLE 力挽狂澜
+#ACT
+MOV S$巅峰封号  ↘★※力挽狂澜※★↙
+
+
+#IF
+CHECKTITLE 一手遮天
+#ACT
+MOV S$巅峰封号  ↘★※一手遮天※★↙
+
+#IF
+CHECKTITLE 笑傲群雄
+#ACT
+MOV S$巅峰封号  ↘★※笑傲群雄※★↙
+
+#IF
+CHECKTITLE 雄霸天下
+#ACT
+MOV S$巅峰封号  ↘★★※雄霸天下※★★↙
+
+#IF
+CHECKTITLE 无敌天下
+#ACT
+MOV S$巅峰封号  ↘★★※无敌天下※★★↙
+
+#IF
+CHECKTITLE 傲睨万物
+#ACT
+MOV S$巅峰封号  ↘☆★※傲睨万物※★☆↙
+
+#IF
+CHECKTITLE 雄图霸业
+#ACT
+MOV S$巅峰封号  ↘☆★※雄图霸业※★☆↙
+
+#IF
+CHECKTITLE 举世无双
+#ACT
+MOV S$巅峰封号  ↘☆★※举世无双※★☆↙
+
+#IF
+CHECKTITLE 君临天下
+#ACT
+MOV S$巅峰封号  ↘★※☆★※君临天下※★☆※★↙
+
+#IF
+CHECKTITLE 唯我独尊
+#ACT
+MOV S$巅峰封号  ↘★※☆★※唯我独尊※★☆※★↙
+
+#IF
+CHECKTITLE 至高无上
+#ACT
+MOV S$巅峰封号  ↘★※☆★※至高无上※★☆※★↙
+
+#IF
+CHECKTITLE 冰雪之神
+#ACT
+MOV S$巅峰封号 ★★※☆※★↘★※冰雪※之神※★↙★※☆※★★
+
+
+
+
+
+
+#IF
+#ACT
+SETRANKLEVELNAME  %s\<$STR(S$武林盟主封号)>\<$STR(S$摸鱼排行封号)>\<$STR(S$货币捐献封号)>\<$STR(S$天下第一封号)>\<$STR(S$巅峰封号)>\<$STR(S$沙城荣耀)>\<$STR(S$人物会员封号)>\<$STR(S$人物转生显示)>\斩杀<$STR(U40)>人㊣被杀<$STR(U41)>次
+
+
+
+
+
+
+
+#IF
+EQUAL U50 0
+#ACT
+SetIcon 1 -1
+
+
+#IF
+EQUAL U50 1
+#ACT
+SetIcon 1 69 2581 0 -20  10 0 100 0
+
+
+#IF
+EQUAL U50 2
+#ACT
+SetIcon 1 69 2591 0 -43  10 0 100 0
+
+#IF
+EQUAL U50 3
+#ACT
+SetIcon 1 69 2601 0 -43  10 0 100 0
+
+#IF
+EQUAL U50 4
+#ACT
+SetIcon 1 69 2795 0 -63  10 0 100 0
+
+
+
+
+}

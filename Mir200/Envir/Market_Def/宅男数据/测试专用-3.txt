@@ -1,0 +1,74 @@
+[@MAIN]
+#IF
+#act
+#say
+\   \    \ 
+<>       <刷RMB/@aaa>  <活动1/@x1> <活动2/@x2>\  \ 
+
+<>       <等级+1/@d1>  <等级+10/@d2> <称号/@xxx> \
+
+<清理货币/@aaa1> \
+
+[@xxx]
+#IF
+#act
+DEPRIVETITLE ALL
+CONFERTITLE 天魔妖体Lv0
+SET [64] 0
+
+[@d2]
+#IF
+#act
+CHANGELEVEL + 10
+
+
+
+[@d1]
+#IF
+#act
+CHANGELEVEL + 1
+
+
+
+
+
+[@X1]
+#IF
+#act
+GMEXECUTE 开始提问 @触发开区活动1
+ThrowItem hdzd 19 28 10   1rmb卷轴    20|30
+ThrowItem hdzd 19 28 10   刀刀切割1%卷(限时)    2|120
+ThrowItem hdzd 19 28 10   吾『神』辈※图★★★    2|90
+ThrowItem hdzd 25 25 20   10000神晶   2|90
+ThrowItem hdzd 25 25 20   5000神晶    5|60
+ThrowItem hdzd 25 25 20   2000神晶    10|60
+ThrowItem hdzd 25 25 20   1000神晶    20|60
+esp{ 25
+MonGenEx hdzd 19 28 活动boss 10 1 0 249
+esp}
+
+
+
+[@X2]
+#IF
+#ACT
+
+CONFERTITLE 摸鱼达人Lv0
+
+[@aaa1]
+#IF
+#ACT
+GAMEPOINT = 0
+GAMEDIAMOND = 0
+gamegold = 0
+GAMEGIRD = 0
+GAMEGLORY = 0
+
+
+
+
+
+[@aaa]
+#IF
+#ACT
+GAMEPOINT + 100000

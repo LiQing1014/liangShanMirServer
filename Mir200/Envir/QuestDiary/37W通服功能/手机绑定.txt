@@ -1,0 +1,47 @@
+[@绑定手机号码]
+{
+#IF
+#ACT
+MOV S$当前手机号 请输入手机号码获取验证码
+GOTO @开始绑定手机
+
+[@开始绑定手机]
+#IF
+#ACT
+OPENMERCHANTBIGDLG 7 363 0 5 0 0 1 410 5
+#SAY
+\　\　\　\
+< ◆/FCOLOR=70>< ◆/FCOLOR=70>< ◆/FCOLOR=70>< ◆/FCOLOR=70>　< 长/FCOLOR=70>< 期/FCOLOR=70>< 耐/FCOLOR=70>< 玩/FCOLOR=70>< 独/FCOLOR=70>< 家/FCOLOR=70>< 制/FCOLOR=70>< 作/FCOLOR=70>　< ◆/FCOLOR=70>< ◆/FCOLOR=70>< ◆/FCOLOR=70>< ◆/FCOLOR=70>\
+<Img:29:1:-65:0>\
+　　※ < <$STR(S$当前手机号)>/@@InPutString21> ※\
+　　※ < 请输入验证码/@@InPutString22> ※\
+<Img:29:1:-65:0>\
+
+
+[@InPutString21]
+#IF
+提交数据 5 <$STR(S21)>
+#ACT
+MOV S$当前手机号 验证码已发送:<$STR(S21)>
+GOTO @开始绑定手机
+BREAK
+
+
+[@InPutString22]
+#IF
+提交数据 1 <$STR(S22)>
+#ACT
+SET [1] 1
+MOVR P7 16
+INC P7 323
+MOVR P8 16
+INC P8 323
+mapmove 3 <$STR(P7)> <$STR(P8)>
+SetOnTimer 1 1
+GIVE 盟重传送石 1
+GIVE 随机传送石 1
+BREAK
+#ELSEACT
+MESSAGEBOX <$STR(S1)>
+BREAK
+}

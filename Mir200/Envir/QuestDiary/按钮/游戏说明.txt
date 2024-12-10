@@ -1,0 +1,46 @@
+[@youxi说明]
+{
+
+#if
+#act
+messagebox 该功能已禁用。
+break
+
+#if
+#act
+messagebox 该功能已禁用。
+break
+
+#IF
+#ACT
+close
+#SAY
+<>\
+<>                 <【千里传音(全服喊话)】/FCOLOR=254> \ \
+<--------------------------------------------------------------/AUTOCOLOR=91>\
+<> 「<[全服喊话]/@@InPutString88>」　<→/FCOLOR=70>　<功能介绍：/FCOLOR=253>：<喊话每次需要38大米点/FCOLOR=250>\
+<--------------------------------------------------------------/AUTOCOLOR=91>\
+<提示：/FCOLOR=249>喊话禁止辱骂、文明用语！消息于滚动形式播放屏幕中间
+
+[@InPutString88]
+#IF
+CHECKGAMEPOINT > 37
+#act
+GAMEPOINT - 38
+SENDMOVEMSG 0 253 255 240 1 玩家【<$Username>】喊话：{<$STR(S88)>/FCOLOR=254} 1
+#ELSEACT
+MESSAGEBOX 大米点不足！
+BREAK
+
+[@InPutString89]
+#IF
+CHECKGOLD 10
+#act
+take 金币 10
+SENDMOVEMSG 0 253 255 350 1 玩家[<$USERNAME>]说：<$STR(S89)>
+#ELSEACT
+MESSAGEBOX 金币不足！
+BREAK
+
+
+}

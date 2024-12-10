@@ -1,0 +1,56 @@
+[@个人任务数据清理]
+{
+#IF
+#ACt
+MOV A290 暂无行会
+INC G28 1
+MOV G38 0
+MOV G20 0
+GMEXECUTE 开始提问 @幸运十套AAAA
+CLEARNAMELIST ..\QuestDiary\定制脚本\官职奖励\小卒每日奖励.txt
+CLEARNAMELIST ..\QuestDiary\定制脚本\官职奖励\百夫每日奖励.txt
+CLEARNAMELIST ..\QuestDiary\定制脚本\官职奖励\千夫每日奖励.txt
+CLEARNAMELIST ..\QuestDiary\定制脚本\官职奖励\万夫每日奖励.txt
+CLEARNAMELIST ..\QuestDiary\定制脚本\官职奖励\将军每日奖励.txt
+CLEARNAMELIST ..\QuestDiary\定制脚本\官职奖励\山王每日奖励.txt
+CLEARNAMELIST ..\QuestDiary\排行系统\积分排行.txt
+CLEARNAMELIST ..\QuestDiary\排行系统\积分点数.txt
+CLEARNAMELIST ..\QuestDiary\橙子制作\工资.txt
+CLEARNAMELIST ..\QuestDiary\排行系统\积分排行.txt
+CLEARNAMELIST ..\QuestDiary\排行系统\积分排行.txt
+MOV A99 暂无
+MOV A98 暂无
+MOV A97 暂无
+MOV A96 暂无
+MOV A95 暂无
+MOV A94 暂无
+MOV A93 暂无
+MOV A92 暂无
+MOV A91 暂无
+MOV A90 暂无
+MOV G10 0
+MOV G11 0
+MOV G12 0
+MOV G13 0
+MOV G14 0
+MOV G15 0
+MOV G16 0
+MOV G17 0
+MOV G18 0
+MOV G19 0
+MOV A35 暂无\天下第一男战士
+MOV A36 暂无\天下第一女战士
+MOV A37 暂无\天下第一男法师
+MOV A38 暂无\天下第一女法师
+MOV A39 暂无\天下第一男道士
+MOV A40 暂无\天下第一女道士
+CLEARNAMELIST ..\QuestDiary\天下第一\男道士.txt
+CLEARNAMELIST ..\QuestDiary\天下第一\女道士.txt
+CLEARNAMELIST ..\QuestDiary\天下第一\男战士.txt
+CLEARNAMELIST ..\QuestDiary\天下第一\女战士.txt
+CLEARNAMELIST ..\QuestDiary\天下第一\男法师.txt
+CLEARNAMELIST ..\QuestDiary\天下第一\女法师.txt
+SENDMSG 1 ┏╮╱温馨提示^.^
+SENDMSG 1 ╰★╮亲爱的玩家，现在已经是凌晨了
+SENDMSG 1 ╱╰┛游戏虽然好玩，也别忘了是不是该休息
+}

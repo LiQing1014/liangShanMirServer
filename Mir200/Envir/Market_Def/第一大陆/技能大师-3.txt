@@ -1,0 +1,473 @@
+[@MAIN]
+#if
+checkjob warrior
+NOT CHECKSKILL 烈火剑法 > 2
+#ACT
+MOV S80 战士
+MOV S81 烈火剑法
+MOV S82 烈火神石
+MOV S83 1块
+MOV S84 零重
+MOV S85 00％
+#if
+checkjob warrior
+CHECKSKILL 烈火剑法 = 0 1
+#ACT
+MOV S80 战士
+MOV S81 烈火剑法
+MOV S82 烈火神石
+MOV S83 1块
+MOV S84 零重
+MOV S85 00％
+#if
+checkjob warrior
+CHECKSKILL 烈火剑法 = 1 1
+#ACT
+MOV S80 战士
+MOV S81 烈火剑法
+MOV S82 烈火神石
+MOV S83 10块
+MOV S84 一重
+MOV S85 10％
+#if
+checkjob warrior
+CHECKSKILL 烈火剑法 = 2 1
+#ACT
+MOV S80 战士
+MOV S81 烈火剑法
+MOV S82 烈火神石
+MOV S83 20块
+MOV S84 二重
+MOV S85 20％
+#if
+checkjob warrior
+CHECKSKILL 烈火剑法 = 3 1
+#ACT
+MOV S80 战士
+MOV S81 烈火剑法
+MOV S82 烈火神石
+MOV S83 30块
+MOV S84 三重
+MOV S85 30％
+#if
+checkjob warrior
+CHECKSKILL 烈火剑法 = 4 1
+#ACT
+MOV S80 战士
+MOV S81 烈火剑法
+MOV S82 烈火神石
+MOV S83 已满
+MOV S84 四重
+MOV S85 40％
+#if
+checkjob wizard
+NOT CHECKSKILL 冰咆哮 > 2
+#ACT
+MOV S80 法师
+MOV S81 冰咆哮
+MOV S82 咆哮神石
+MOV S83 1块
+MOV S84 零重
+MOV S85 00％
+#if
+checkjob wizard
+CHECKSKILL 冰咆哮 = 0 1
+#ACT
+MOV S80 法师
+MOV S81 冰咆哮
+MOV S82 咆哮神石
+MOV S83 1块
+MOV S84 零重
+MOV S85 00％
+#if
+checkjob wizard
+CHECKSKILL 冰咆哮 = 1 1
+#ACT
+MOV S80 法师
+MOV S81 冰咆哮
+MOV S82 咆哮神石
+MOV S83 10块
+MOV S84 一重
+MOV S85 10％
+#if
+checkjob wizard
+CHECKSKILL 冰咆哮 = 2 1
+#ACT
+MOV S80 法师
+MOV S81 冰咆哮
+MOV S82 咆哮神石
+MOV S83 20块
+MOV S84 二重
+MOV S85 20％
+#if
+checkjob wizard
+CHECKSKILL 冰咆哮 = 3 1
+#ACT
+MOV S80 法师
+MOV S81 冰咆哮
+MOV S82 咆哮神石
+MOV S83 30块
+MOV S84 三重
+MOV S85 30％
+#if
+checkjob wizard
+CHECKSKILL 冰咆哮 = 4 1
+#ACT
+MOV S80 法师
+MOV S81 冰咆哮
+MOV S82 咆哮神石
+MOV S83 已满
+MOV S84 四重
+MOV S85 40％
+#if
+checkjob taoist
+NOT CHECKSKILL 灵魂火符 > 2
+#ACT
+MOV S80 战士
+MOV S81 灵魂火符
+MOV S82 灵魂神石
+MOV S83 1块
+MOV S84 零重
+MOV S85 00％
+#if
+checkjob taoist
+CHECKSKILL 灵魂火符 = 0 1
+#ACT
+MOV S80 战士
+MOV S81 灵魂火符
+MOV S82 灵魂神石
+MOV S83 1块
+MOV S84 零重
+MOV S85 00％
+#if
+checkjob taoist
+CHECKSKILL 灵魂火符 = 1 1
+#ACT
+MOV S80 战士
+MOV S81 灵魂火符
+MOV S82 灵魂神石
+MOV S83 10块
+MOV S84 一重
+MOV S85 10％
+#if
+checkjob taoist
+CHECKSKILL 灵魂火符 = 2 1
+#ACT
+MOV S80 战士
+MOV S81 灵魂火符
+MOV S82 灵魂神石
+MOV S83 20块
+MOV S84 二重
+MOV S85 20％
+#if
+checkjob taoist
+CHECKSKILL 灵魂火符 = 3 1
+#ACT
+MOV S80 战士
+MOV S81 灵魂火符
+MOV S82 灵魂神石
+MOV S83 30块
+MOV S84 三重
+MOV S85 30％
+#if
+checkjob taoist
+CHECKSKILL 灵魂火符 = 4 1
+#ACT
+MOV S80 战士
+MOV S81 灵魂火符
+MOV S82 灵魂神石
+MOV S83 已满
+MOV S84 四重
+MOV S85 40％
+#if
+#SAY
+　 　　  <技能大师/SCOLOR=154><Img:1398:10:-99:-12>   \
+　 　　  <张尊宝/SCOLOR=19> <尊敬的游戏玩家,您好/SCOLOR=151> <〖技能神石可在尸王殿获得〗/SCOLOR=87>\
+<--------------------------------------------------------------/AUTOCOLOR=91>\
+<1、每种职业只可以强化一种技能“<$STR(S80)>”可以强化“<$STR(S81)>”/AUTOCOLOR=147>\
+<2、每种技能最多可以强化四次共“四重”每重威力都会有所提升/AUTOCOLOR=145>\
+3、技能信息：{<$STR(S81)>/AUTOCOLOR=242}    强化等级：{<$STR(S84)>/AUTOCOLOR=151}    提升威力：{<$STR(S85)>/AUTOCOLOR=19}\
+4、强化条件：{<$STR(S82)>/AUTOCOLOR=70} × {<$STR(S83)>/AUTOCOLOR=229}     {(<$STR(S82)>可在尸王殿获得)/AUTOCOLOR=250}\
+<--------------------------------------------------------------/AUTOCOLOR=91>\
+<√开始强化/@开始强化>                                        <关闭对话×/@exit>
+
+[@开始强化]
+#if
+checkjob warrior
+CHECKSKILL 烈火剑法 > 3 1
+#ACT
+messagebox \\您的[烈火剑法]已经强化到四重了，无法再强化！
+break
+#if
+checkjob wizard
+CHECKSKILL 冰咆哮 > 3 1
+#ACT
+messagebox \\您的[冰咆哮]已经强化到四重了，无法再强化！
+break
+#if
+checkjob taoist
+CHECKSKILL 灵魂火符 > 3 1
+#ACT
+messagebox \\您的[灵魂火符]已经强化到四重了，无法再强化！
+break
+#if
+checkjob warrior
+NOT CHECKSKILL 烈火剑法 > 2
+#ACT
+messagebox \\请先将“烈火剑法”练到3级再来找我！
+break
+#if
+checkjob wizard
+NOT CHECKSKILL 冰咆哮 > 2
+#ACT
+messagebox \\请先将“冰咆哮”练到3级再来找我！
+break
+#if
+checkjob taoist
+NOT CHECKSKILL 灵魂火符 > 2
+#ACT
+messagebox \\请先将“灵魂火符”练到3级再来找我！
+break
+#if
+checkjob warrior
+CHECKSKILL 烈火剑法 = 0 1
+#ACT
+GOTO @战士强化1
+break
+#if
+checkjob warrior
+CHECKSKILL 烈火剑法 = 1 1
+#ACT
+GOTO @战士强化2
+break
+#if
+checkjob warrior
+CHECKSKILL 烈火剑法 = 2 1
+#ACT
+GOTO @战士强化3
+break
+#if
+checkjob warrior
+CHECKSKILL 烈火剑法 = 3 1
+#ACT
+GOTO @战士强化4
+break
+#if
+checkjob wizard
+CHECKSKILL 冰咆哮 = 0 1
+#ACT
+GOTO @法师强化1
+break
+#if
+checkjob wizard
+CHECKSKILL 冰咆哮 = 1 1
+#ACT
+GOTO @法师强化2
+break
+#if
+checkjob wizard
+CHECKSKILL 冰咆哮 = 2 1
+#ACT
+GOTO @法师强化3
+break
+#if
+checkjob wizard
+CHECKSKILL 冰咆哮 = 3 1
+#ACT
+GOTO @法师强化4
+break
+#if
+checkjob taoist
+CHECKSKILL 灵魂火符 = 0 1
+#ACT
+GOTO @道士强化1
+break
+#if
+checkjob taoist
+CHECKSKILL 灵魂火符 = 1 1
+#ACT
+GOTO @道士强化2
+break
+#if
+checkjob taoist
+CHECKSKILL 灵魂火符 = 2 1
+#ACT
+GOTO @道士强化3
+break
+#if
+checkjob taoist
+CHECKSKILL 灵魂火符 = 3 1
+#ACT
+GOTO @道士强化4
+break
+
+[@战士强化1]
+#if
+checkjob warrior
+CHECKSKILL 烈火剑法 = 0 1
+CHECKITEM 烈火神石 1
+#ACT
+TAKE 烈火神石 1
+SKILLLEVEL 烈火剑法 = 1 1
+messagebox \\恭喜您成功将“烈火剑法”强化到[第一重]！
+SendMsg 0 {技能大师ぐ|151:0:1}：「{%s|227:0:1}」使用1块{[烈火神石]|70:0:1}成功将{[烈火剑法]|254:0:1}强化到{[第一重]|250:0:1}
+GOTO @MAIN
+#ELSEACT
+messagebox \[强化失败]\\“烈火剑法”强化到[第一重]需要“烈火神石”×1块！\\“烈火神石”可在尸王殿获得！
+break
+[@战士强化2]
+#if
+checkjob warrior
+CHECKSKILL 烈火剑法 = 1 1
+CHECKITEM 烈火神石 10
+#ACT
+TAKE 烈火神石 10
+SKILLLEVEL 烈火剑法 = 2 1
+messagebox \\恭喜您成功将“烈火剑法”强化到[第二重]！
+SendMsg 0 {技能大师ぐ|151:0:1}：「{%s|227:0:1}」使用10块{[烈火神石]|70:0:1}成功将{[烈火剑法]|254:0:1}强化到{[第二重]|250:0:1}
+GOTO @MAIN
+#ELSEACT
+messagebox \[强化失败]\\“烈火剑法”强化到[第二重]需要“烈火神石”×10块！\\“烈火神石”可在尸王殿获得！
+break
+[@战士强化3]
+#if
+checkjob warrior
+CHECKSKILL 烈火剑法 = 2 1
+CHECKITEM 烈火神石 20
+#ACT
+TAKE 烈火神石 20
+SKILLLEVEL 烈火剑法 = 3 1
+messagebox \\恭喜您成功将“烈火剑法”强化到[第三重]！
+SendMsg 0 {技能大师ぐ|151:0:1}：「{%s|227:0:1}」使用20块{[烈火神石]|70:0:1}成功将{[烈火剑法]|254:0:1}强化到{[第三重]|250:0:1}
+GOTO @MAIN
+#ELSEACT
+messagebox \[强化失败]\\“烈火剑法”强化到[第三重]需要“烈火神石”×20块！\\“烈火神石”可在尸王殿获得！
+break
+[@战士强化4]
+#if
+checkjob warrior
+CHECKSKILL 烈火剑法 = 3 1
+CHECKITEM 烈火神石 30
+#ACT
+TAKE 烈火神石 30
+SKILLLEVEL 烈火剑法 = 4 1
+messagebox \\恭喜您成功将“烈火剑法”强化到[第四重]！
+SendMsg 0 {技能大师ぐ|151:0:1}：「{%s|227:0:1}」使用30块{[烈火神石]|70:0:1}成功将{[烈火剑法]|254:0:1}强化到{[第四重]|250:0:1}
+GOTO @MAIN
+#ELSEACT
+messagebox \[强化失败]\\“烈火剑法”强化到[第四重]需要“烈火神石”×30块！\\“烈火神石”可在尸王殿获得！
+break
+
+[@法师强化1]
+#if
+checkjob wizard
+CHECKSKILL 冰咆哮 = 0 1
+CHECKITEM 咆哮神石 1
+#ACT
+TAKE 咆哮神石 1
+SKILLLEVEL 冰咆哮 = 1 1
+messagebox \\恭喜您成功将“冰咆哮”强化到[第一重]！
+SendMsg 0 {技能大师ぐ|151:0:1}：「{%s|227:0:1}」使用1块{[咆哮神石]|70:0:1}成功将{[冰咆哮]|254:0:1}强化到{[第一重]|250:0:1}
+GOTO @MAIN
+#ELSEACT
+messagebox \[强化失败]\\“冰咆哮”强化到[第一重]需要“咆哮神石”×1块！\\“咆哮神石”可在尸王殿获得！
+break
+[@法师强化2]
+#if
+checkjob wizard
+CHECKSKILL 冰咆哮 = 1 1
+CHECKITEM 咆哮神石 10
+#ACT
+TAKE 咆哮神石 10
+SKILLLEVEL 冰咆哮 = 2 1
+messagebox \\恭喜您成功将“冰咆哮”强化到[第二重]！
+SendMsg 0 {技能大师ぐ|151:0:1}：「{%s|227:0:1}」使用10块{[咆哮神石]|70:0:1}成功将{[冰咆哮]|254:0:1}强化到{[第二重]|250:0:1}
+GOTO @MAIN
+#ELSEACT
+messagebox \[强化失败]\\“冰咆哮”强化到[第二重]需要“咆哮神石”×10块！\\“咆哮神石”可在尸王殿获得！
+break
+[@法师强化3]
+#if
+checkjob wizard
+CHECKSKILL 冰咆哮 = 2 1
+CHECKITEM 咆哮神石 20
+#ACT
+TAKE 咆哮神石 20
+SKILLLEVEL 冰咆哮 = 3 1
+messagebox \\恭喜您成功将“冰咆哮”强化到[第三重]！
+SendMsg 0 {技能大师ぐ|151:0:1}：「{%s|227:0:1}」使用20块{[咆哮神石]|70:0:1}成功将{[冰咆哮]|254:0:1}强化到{[第三重]|250:0:1}
+GOTO @MAIN
+#ELSEACT
+messagebox \[强化失败]\\“冰咆哮”强化到[第三重]需要“咆哮神石”×20块！\\“咆哮神石”可在尸王殿获得！
+break
+[@法师强化4]
+#if
+checkjob wizard
+CHECKSKILL 冰咆哮 = 3 1
+CHECKITEM 咆哮神石 30
+#ACT
+TAKE 咆哮神石 30
+SKILLLEVEL 冰咆哮 = 4 1
+messagebox \\恭喜您成功将“冰咆哮”强化到[第四重]！
+SendMsg 0 {技能大师ぐ|151:0:1}：「{%s|227:0:1}」使用30块{[咆哮神石]|70:0:1}成功将{[冰咆哮]|254:0:1}强化到{[第四重]|250:0:1}
+GOTO @MAIN
+#ELSEACT
+messagebox \[强化失败]\\“冰咆哮”强化到[第四重]需要“咆哮神石”×30块！\\“咆哮神石”可在尸王殿获得！
+break
+
+[@道士强化1]
+#if
+checkjob taoist
+CHECKSKILL 灵魂火符 = 0 1
+CHECKITEM 灵魂神石 1
+#ACT
+TAKE 灵魂神石 1
+SKILLLEVEL 灵魂火符 = 1 1
+messagebox \\恭喜您成功将“灵魂火符”强化到[第一重]！
+SendMsg 0 {技能大师ぐ|151:0:1}：「{%s|227:0:1}」使用1块{[灵魂神石]|70:0:1}成功将{[灵魂火符]|254:0:1}强化到{[第一重]|250:0:1}
+GOTO @MAIN
+#ELSEACT
+messagebox \[强化失败]\\“灵魂火符”强化到[第一重]需要“灵魂神石”×1块！\\“灵魂神石”可在尸王殿获得！
+break
+[@道士强化2]
+#if
+checkjob taoist
+CHECKSKILL 灵魂火符 = 1 1
+CHECKITEM 灵魂神石 10
+#ACT
+TAKE 灵魂神石 10
+SKILLLEVEL 灵魂火符 = 2 1
+messagebox \\恭喜您成功将“灵魂火符”强化到[第二重]！
+SendMsg 0 {技能大师ぐ|151:0:1}：「{%s|227:0:1}」使用10块{[灵魂神石]|70:0:1}成功将{[灵魂火符]|254:0:1}强化到{[第二重]|250:0:1}
+GOTO @MAIN
+#ELSEACT
+messagebox \[强化失败]\\“灵魂火符”强化到[第二重]需要“灵魂神石”×10块！\\“灵魂神石”可在尸王殿获得！
+break
+[@道士强化3]
+#if
+checkjob taoist
+CHECKSKILL 灵魂火符 = 2 1
+CHECKITEM 灵魂神石 20
+#ACT
+TAKE 灵魂神石 20
+SKILLLEVEL 灵魂火符 = 3 1
+messagebox \\恭喜您成功将“灵魂火符”强化到[第三重]！
+SendMsg 0 {技能大师ぐ|151:0:1}：「{%s|227:0:1}」使用20块{[灵魂神石]|70:0:1}成功将{[灵魂火符]|254:0:1}强化到{[第三重]|250:0:1}
+GOTO @MAIN
+#ELSEACT
+messagebox \[强化失败]\\“灵魂火符”强化到[第三重]需要“灵魂神石”×20块！\\“灵魂神石”可在尸王殿获得！
+break
+[@道士强化4]
+#if
+checkjob taoist
+CHECKSKILL 灵魂火符 = 3 1
+CHECKITEM 灵魂神石 30
+#ACT
+TAKE 灵魂神石 30
+SKILLLEVEL 灵魂火符 = 4 1
+messagebox \\恭喜您成功将“灵魂火符”强化到[第四重]！
+SendMsg 0 {技能大师ぐ|151:0:1}：「{%s|227:0:1}」使用30块{[灵魂神石]|70:0:1}成功将{[灵魂火符]|254:0:1}强化到{[第四重]|250:0:1}
+GOTO @MAIN
+#ELSEACT
+messagebox \[强化失败]\\“灵魂火符”强化到[第四重]需要“灵魂神石”×30块！\\“灵魂神石”可在尸王殿获得！
+break

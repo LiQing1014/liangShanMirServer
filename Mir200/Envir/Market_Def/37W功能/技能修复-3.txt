@@ -1,0 +1,97 @@
+[@main]
+
+#if
+#act
+close
+#say
+\ \ \ 
+<>     <---------------------------------------------/AUTOCOLOR=12>\
+<>     >\
+<>     \    <没事别瞎点！修复无技能！！/@技能修复>   <没事别瞎点！修复无技能！！/@技能修复>   \
+<>     >\
+<>     \    <没事别瞎点！修复无技能！！/@技能修复>   <没事别瞎点！修复无技能！！/@技能修复>   \
+<>     >\
+<>     <---------------------------------------------/AUTOCOLOR=12>\
+
+
+
+
+
+
+
+
+
+
+
+[@技能修复]
+
+#IF
+not CheckMagicName 基本剑术
+#ACT
+ADDSKILL 基本剑术 3
+SENDMSG 6 技能修复成功！已获得[基本剑术]新手技能！！
+
+
+#IF
+not CheckMagicName 攻杀剑术
+#ACT
+ADDSKILL 攻杀剑术 3
+SENDMSG 6 技能修复成功！已获得[攻杀剑术]新手技能！！
+
+
+#IF
+not CheckMagicName 刺杀剑术
+#ACT
+ADDSKILL 刺杀剑术 3
+SENDMSG 6 技能修复成功！已获得[刺杀剑术]新手技能！！
+
+
+
+#IF
+not CheckMagicName 野蛮冲撞
+#ACT
+ADDSKILL 野蛮冲撞 3
+SENDMSG 6 技能修复成功！已获得[野蛮冲撞]新手技能！！
+
+
+
+#IF
+not CheckMagicName 烈火剑法
+#ACT
+ADDSKILL 烈火剑法 3
+SENDMSG 6 技能修复成功！已获得[烈火剑法]新手技能！！
+
+
+#IF
+not CheckMagicName 召唤神宠
+#ACT
+ADDSKILL 召唤神宠 3
+SENDMSG 6 技能修复成功！已获得[召唤神宠]新手技能！！
+
+
+
+[@WUYONG]
+#IF
+not CheckMagicName 开天斩
+#ACT
+ADDSKILL 开天斩 3
+SENDMSG 6 技能修复成功！已获得[开天斩]新手技能！！
+
+
+
+#IF
+not CheckMagicName 逐日剑法
+#ACT
+ADDSKILL 逐日剑法 3
+SENDMSG 6 技能修复成功！已获得[逐日剑法]新手技能！！
+
+
+
+
+
+
+
+
+
+
+

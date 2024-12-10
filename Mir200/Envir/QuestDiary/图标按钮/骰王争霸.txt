@@ -1,0 +1,677 @@
+[@骰王争霸]
+{
+
+#IF
+#ACT
+CLOSEMERCHANTBIGDLG
+close
+GetListString ..\QuestDiary\数据文件\骰王①.txt 0 S$骰王①①①
+GetListString ..\QuestDiary\数据文件\骰王②.txt 0 S$骰王②②②
+GetListString ..\QuestDiary\数据文件\骰王③.txt 0 S$骰王③③③
+GetListString ..\QuestDiary\数据文件\骰王④.txt 0 S$骰王④④④
+GetListString ..\QuestDiary\数据文件\骰王⑤.txt 0 S$骰王⑤⑤⑤
+GetListString ..\QuestDiary\数据文件\骰王⑥.txt 0 S$骰王⑥⑥⑥
+SetStringBlank <$STR(S$骰王①①①)> 16 1
+SetStringBlank <$STR(S$骰王②②②)> 16 1
+SetStringBlank <$STR(S$骰王③③③)> 16 1
+SetStringBlank <$STR(S$骰王④④④)> 16 1
+SetStringBlank <$STR(S$骰王⑤⑤⑤)> 16 1
+SetStringBlank <$STR(S$骰王⑥⑥⑥)> 16 1
+break
+#SAY
+<骰王①①①/SCOLOR=250><(1.1倍攻击力)/SCOLOR=100> <当前骰王/SCOLOR=254>：<[/SCOLOR=249>{<$STR(S$骰王①①①)>/SCOLOR=253}<]/SCOLOR=249>\
+<骰王②②②/SCOLOR=250><(1.1倍攻击力)/SCOLOR=100> <当前骰王/SCOLOR=254>：<[/SCOLOR=249>{<$STR(S$骰王②②②)>/SCOLOR=253}<]/SCOLOR=249>\
+<骰王③③③/SCOLOR=250><(1.1倍攻击力)/SCOLOR=100> <当前骰王/SCOLOR=254>：<[/SCOLOR=249>{<$STR(S$骰王③③③)>/SCOLOR=253}<]/SCOLOR=249>\
+<骰王④④④/SCOLOR=250><(1.1倍攻击力)/SCOLOR=100> <当前骰王/SCOLOR=254>：<[/SCOLOR=249>{<$STR(S$骰王④④④)>/SCOLOR=253}<]/SCOLOR=249>\
+<骰王⑤⑤⑤/SCOLOR=250><(1.1倍攻击力)/SCOLOR=100> <当前骰王/SCOLOR=254>：<[/SCOLOR=249>{<$STR(S$骰王⑤⑤⑤)>/SCOLOR=253}<]/SCOLOR=249>\
+<骰王⑥⑥⑥/SCOLOR=250><(1.1倍攻击力)/SCOLOR=100> <当前骰王/SCOLOR=254>：<[/SCOLOR=249>{<$STR(S$骰王⑥⑥⑥)>/SCOLOR=253}<]/SCOLOR=249>\
+所有人都可以通过扔骰子抢夺骰王封号，不限等级、职业、装备好坏！\
+只要人品够好，就可以发起挑战，每次需要<5帝国币/SCOLOR=249>！  <普通扔骰子|250#扔到豹子(111,222,333,444,555,666)即可获得对应的骰王称号^250#之前对应的骰王玩家就会被弹劾，失去骰王称号和倍攻属性^250#每人只可以获得一个骰王称号和骰王倍攻属性^249#合区清空骰王数据，清空后需重新抢夺/@开始扔骰子去>\
+有钱能使鬼推磨老板只需<188金币/SCOLOR=249>可直接扔出豹子！<随机豹子|253#每次188金币随机获得1~6豹子/@老板扔骰子去> <精准豹子|253#每次228金币可选择豹子/@老板扔骰子去1>\ \
+
+[@老板扔骰子去1]
+#IF
+#ACT
+CLOSEMERCHANTBIGDLG
+close
+break
+#SAY
+所有人都可以通过扔骰子抢夺骰王封号，不限等级、职业、装备好坏！\
+对数字有要求的老板可选择扔精准的骰王豹子，每次需要<228金币/SCOLOR=249>!\
+<注意：/SCOLOR=249><精准扔骰王只是豹子数字不同，所有骰王附加属性一致!/SCOLOR=250>\ \
+<>       <骰王①①①/@骰王1>       <骰王②②②/@骰王2>       <骰王③③③/@骰王3>\ \
+<>       <骰王④④④/@骰王4>       <骰王⑤⑤⑤/@骰王5>       <骰王⑥⑥⑥/@骰王6>\ \
+<>                                                       <返回/@骰王争霸>
+
+[@骰王6]
+#OR
+CHECKTITLE 骰王①①①
+CHECKTITLE 骰王②②②
+CHECKTITLE 骰王③③③
+CHECKTITLE 骰王④④④
+CHECKTITLE 骰王⑤⑤⑤
+CHECKTITLE 骰王⑥⑥⑥
+#ACT
+MESSAGEBOX \你已经拥有骰王称号了！
+break
+
+#IF
+Not CheckGOLD 228
+#ACT
+MESSAGEBOX \金币不足228，无法扔骰子！
+break
+
+#IF
+CheckGOLD 228
+#ACT
+take 金币 228
+#ACT
+MOV N11 6
+MOV N12 6
+MOV N13 6
+MOV N14 
+GOTO @检测点数
+break
+
+[@骰王5]
+#OR
+CHECKTITLE 骰王①①①
+CHECKTITLE 骰王②②②
+CHECKTITLE 骰王③③③
+CHECKTITLE 骰王④④④
+CHECKTITLE 骰王⑤⑤⑤
+CHECKTITLE 骰王⑥⑥⑥
+#ACT
+MESSAGEBOX \你已经拥有骰王称号了！
+break
+
+#IF
+Not CheckGOLD 228
+#ACT
+MESSAGEBOX \金币不足228，无法扔骰子！
+break
+
+#IF
+CheckGOLD 228
+#ACT
+take 金币 228
+#ACT
+MOV N11 5
+MOV N12 5
+MOV N13 5
+MOV N14 
+GOTO @检测点数
+break
+
+[@骰王4]
+#OR
+CHECKTITLE 骰王①①①
+CHECKTITLE 骰王②②②
+CHECKTITLE 骰王③③③
+CHECKTITLE 骰王④④④
+CHECKTITLE 骰王⑤⑤⑤
+CHECKTITLE 骰王⑥⑥⑥
+#ACT
+MESSAGEBOX \你已经拥有骰王称号了！
+break
+
+#IF
+Not CheckGOLD 228
+#ACT
+MESSAGEBOX \金币不足228，无法扔骰子！
+break
+
+#IF
+CheckGOLD 228
+#ACT
+take 金币 228
+#ACT
+MOV N11 4
+MOV N12 4
+MOV N13 4
+MOV N14 
+GOTO @检测点数
+break
+
+[@骰王3]
+#OR
+CHECKTITLE 骰王①①①
+CHECKTITLE 骰王②②②
+CHECKTITLE 骰王③③③
+CHECKTITLE 骰王④④④
+CHECKTITLE 骰王⑤⑤⑤
+CHECKTITLE 骰王⑥⑥⑥
+#ACT
+MESSAGEBOX \你已经拥有骰王称号了！
+break
+
+#IF
+Not CheckGOLD 228
+#ACT
+MESSAGEBOX \金币不足228，无法扔骰子！
+break
+
+#IF
+CheckGOLD 228
+#ACT
+take 金币 228
+#ACT
+MOV N11 3
+MOV N12 3
+MOV N13 3
+MOV N14 
+GOTO @检测点数
+break
+
+[@骰王2]
+#OR
+CHECKTITLE 骰王①①①
+CHECKTITLE 骰王②②②
+CHECKTITLE 骰王③③③
+CHECKTITLE 骰王④④④
+CHECKTITLE 骰王⑤⑤⑤
+CHECKTITLE 骰王⑥⑥⑥
+#ACT
+MESSAGEBOX \你已经拥有骰王称号了！
+break
+
+#IF
+Not CheckGOLD 228
+#ACT
+MESSAGEBOX \金币不足228，无法扔骰子！
+break
+
+#IF
+CheckGOLD 228
+#ACT
+take 金币 228
+#ACT
+MOV N11 2
+MOV N12 2
+MOV N13 2
+MOV N14 
+GOTO @检测点数
+break
+
+[@骰王1]
+#OR
+CHECKTITLE 骰王①①①
+CHECKTITLE 骰王②②②
+CHECKTITLE 骰王③③③
+CHECKTITLE 骰王④④④
+CHECKTITLE 骰王⑤⑤⑤
+CHECKTITLE 骰王⑥⑥⑥
+#ACT
+MESSAGEBOX \你已经拥有骰王称号了！
+break
+
+#IF
+Not CheckGOLD 228
+#ACT
+MESSAGEBOX \金币不足228，无法扔骰子！
+break
+
+#IF
+CheckGOLD 228
+#ACT
+take 金币 228
+#ACT
+MOV N11 1
+MOV N12 1
+MOV N13 1
+MOV N14 
+GOTO @检测点数
+break
+
+[@老板扔骰子去]
+;#IF
+;NOT INSAFEZONE
+;#ACT
+;MESSAGEBOX \请站在安全区以内！
+;break
+
+#OR
+CHECKTITLE 骰王①①①
+CHECKTITLE 骰王②②②
+CHECKTITLE 骰王③③③
+CHECKTITLE 骰王④④④
+CHECKTITLE 骰王⑤⑤⑤
+CHECKTITLE 骰王⑥⑥⑥
+#ACT
+MESSAGEBOX \你已经拥有骰王称号了！
+break
+
+#IF
+Not CheckGOLD 188
+#ACT
+MESSAGEBOX \金币不足188，无法扔骰子！
+break
+
+#IF
+#ACT
+MOVR N14 1 7
+
+
+#IF
+CheckGOLD 188
+equal N14 1
+#ACT
+take 金币 188
+#ACT
+MOV N11 1
+MOV N12 1
+MOV N13 1
+;MOV D0 <$STR(N11)>
+;MOV D1 <$STR(N12)>
+;MOV D2 <$STR(N13)>
+;playdice 3 @检测点数
+MOV N14 
+GOTO @检测点数
+break
+
+
+#IF
+CheckGOLD 188
+equal N14 2
+#ACT
+take 金币 188
+#ACT
+MOV N11 2
+MOV N12 2
+MOV N13 2
+;MOV D0 <$STR(N11)>
+;MOV D1 <$STR(N12)>
+;MOV D2 <$STR(N13)>
+;playdice 3 @检测点数
+MOV N14 
+GOTO @检测点数
+break
+
+#IF
+CheckGOLD 188
+equal N14 3
+#ACT
+take 金币 188
+#ACT
+MOV N11 3
+MOV N12 3
+MOV N13 3
+;MOV D0 <$STR(N11)>
+;MOV D1 <$STR(N12)>
+;MOV D2 <$STR(N13)>
+;playdice 3 @检测点数
+MOV N14 
+GOTO @检测点数
+break
+
+
+#IF
+CheckGOLD 188
+equal N14 4
+#ACT
+take 金币 188
+#ACT
+MOV N11 4
+MOV N12 4
+MOV N13 4
+;MOV D0 <$STR(N11)>
+;MOV D1 <$STR(N12)>
+;MOV D2 <$STR(N13)>
+;playdice 3 @检测点数
+MOV N14 
+GOTO @检测点数
+break
+
+#IF
+CheckGOLD 188
+equal N14 5
+#ACT
+take 金币 188
+#ACT
+MOV N11 5
+MOV N12 5
+MOV N13 5
+;MOV D0 <$STR(N11)>
+;MOV D1 <$STR(N12)>
+;MOV D2 <$STR(N13)>
+;playdice 3 @检测点数
+MOV N14 
+GOTO @检测点数
+break
+
+#IF
+CheckGOLD 188
+equal N14 6
+#ACT
+take 金币 188
+#ACT
+MOV N11 6
+MOV N12 6
+MOV N13 6
+;MOV D0 <$STR(N11)>
+;MOV D1 <$STR(N12)>
+;MOV D2 <$STR(N13)>
+;playdice 3 @检测点数
+MOV N14 
+GOTO @检测点数
+break
+
+[@检测点数]
+#OR
+NOT EQUAL N11 <$STR(N12)>
+NOT EQUAL N11 <$STR(N13)>
+#ACT
+MESSAGEBOX \很遗憾！您本次扔出的骰子点数为<$STR(N11)>,<$STR(N12)>,<$STR(N13)>
+SENDMSG 6 很遗憾！您本次扔出的骰子点数为<$STR(N11)>,<$STR(N12)>,<$STR(N13)>
+BREAK
+
+#IF
+#ACT
+GetListString ..\QuestDiary\数据文件\骰王①.txt 0 S$骰王①①①
+GetListString ..\QuestDiary\数据文件\骰王②.txt 0 S$骰王②②②
+GetListString ..\QuestDiary\数据文件\骰王③.txt 0 S$骰王③③③
+GetListString ..\QuestDiary\数据文件\骰王④.txt 0 S$骰王④④④
+GetListString ..\QuestDiary\数据文件\骰王⑤.txt 0 S$骰王⑤⑤⑤
+GetListString ..\QuestDiary\数据文件\骰王⑥.txt 0 S$骰王⑥⑥⑥
+
+#IF
+EQUAL S$骰王①①①
+EQUAL N11 1
+EQUAL N12 1
+EQUAL N13 1
+#ACT
+MOV S$骰王①①① <$USERNAME>
+CONFERTITLE 骰王①①① 1
+#CALL [\游戏登陆\攻击倍数.txt] @攻击倍数
+;#CALL [\2游戏封号\头顶封号.txt] @头顶封号1
+AddTextListEx ..\QuestDiary\数据文件\骰王①.txt <$USERNAME> 0
+SendTopMsg 251 233 ◆◇◆玩家[<$USERNAME>]扔到豹子(111)，成为新的骰王①①①，获得1.1倍攻击的奖励◆◇◆ 1
+SendCenterMsg 251 233 ◆◇◆玩家[<$USERNAME>]扔到豹子(111)，成为新的骰王①①①，获得1.1倍攻击的奖励◆◇◆ 1
+GuildNoticeMsg 251 233 ◆◇◆玩家[<$USERNAME>]扔到豹子(111)，成为新的骰王①①①，获得1.1倍攻击的奖励◆◇◆
+MESSAGEBOX \恭喜你扔到豹子(111)，获得骰王①①①称号！
+GOTO @MAIN
+BREAK
+
+
+#IF
+NOT EQUAL S$骰王①①①
+EQUAL N11 1
+EQUAL N12 1
+EQUAL N13 1
+#ACT
+SendTopMsg 251 233 ◆◇◆玩家[<$USERNAME>]扔到豹子(111)，弹劾了[<$STR(S$骰王①①①)>]成为新的骰王①①①，获得1.1倍攻击的奖励◆◇◆ 1
+SendCenterMsg 251 233 ◆◇◆玩家[<$USERNAME>]扔到豹子(111)，弹劾了[<$STR(S$骰王①①①)>]成为新的骰王①①①，获得1.1倍攻击的奖励◆◇◆ 1
+GuildNoticeMsg 251 233 ◆◇◆玩家[<$USERNAME>]扔到豹子(111)，弹劾了[<$STR(S$骰王①①①)>]成为新的骰王①①①，获得1.1倍攻击的奖励◆◇◆
+MOV S20 <$STR(S$骰王①①①)>
+MOV S$骰王①①① <$USERNAME>
+CONFERTITLE 骰王①①① 1
+#CALL [\游戏登陆\攻击倍数.txt] @攻击倍数
+s20.SENDMSG 7 你的骰王①①①称号已被『<$STR(S$骰王①①①)>』抢走了！
+;DelTextList ..\QuestDiary\数据文件\骰王①.txt <$STR(s20)>
+AddTextListEx ..\QuestDiary\数据文件\骰王①.txt <$USERNAME> 0
+GMEXECUTE 开始提问 @骰王刷新
+MESSAGEBOX \恭喜你扔到豹子(111)，获得骰王①①①称号！
+GOTO @MAIN
+BREAK
+
+
+
+;----------------------------
+#IF
+EQUAL S$骰王②②②
+EQUAL N11 2
+EQUAL N12 2
+EQUAL N13 2
+#ACT
+MOV S$骰王②②② <$USERNAME>
+CONFERTITLE 骰王②②② 1
+#CALL [\游戏登陆\攻击倍数.txt] @攻击倍数
+;#CALL [\2游戏封号\头顶封号.txt] @头顶封号1
+AddTextListEx ..\QuestDiary\数据文件\骰王②.txt <$USERNAME> 0
+SendTopMsg 251 233 ◆◇◆玩家[<$USERNAME>]扔到豹子(222)，成为新的骰王②②②，获得1.1倍攻击的奖励◆◇◆ 1
+SendCenterMsg 251 233 ◆◇◆玩家[<$USERNAME>]扔到豹子(222)，成为新的骰王②②②，获得1.1倍攻击的奖励◆◇◆ 1
+GuildNoticeMsg 251 233 ◆◇◆玩家[<$USERNAME>]扔到豹子(222)，成为新的骰王②②②，获得1.1倍攻击的奖励◆◇◆
+MESSAGEBOX \恭喜你扔到豹子(222)，获得骰王②②②称号！
+GOTO @MAIN
+BREAK
+
+
+#IF
+NOT EQUAL S$骰王②②②
+EQUAL N11 2
+EQUAL N12 2
+EQUAL N13 2
+#ACT
+SendTopMsg 251 233 ◆◇◆玩家[<$USERNAME>]扔到豹子(222)，弹劾了[<$STR(S$骰王②②②)>]成为新的骰王②②②，获得1.1倍攻击的奖励◆◇◆ 1
+SendCenterMsg 251 233 ◆◇◆玩家[<$USERNAME>]扔到豹子(222)，弹劾了[<$STR(S$骰王②②②)>]成为新的骰王②②②，获得1.1倍攻击的奖励◆◇◆ 1
+GuildNoticeMsg 251 233 ◆◇◆玩家[<$USERNAME>]扔到豹子(222)，弹劾了[<$STR(S$骰王②②②)>]成为新的骰王②②②，获得1.1倍攻击的奖励◆◇◆
+MOV S20 <$STR(S$骰王②②②)>
+MOV S$骰王②②② <$USERNAME>
+CONFERTITLE 骰王②②② 1
+#CALL [\游戏登陆\攻击倍数.txt] @攻击倍数
+s20.SENDMSG 7 你的骰王②②②称号已被『<$STR(S$骰王②②②)>』抢走了！
+;DelTextList ..\QuestDiary\数据文件\骰王②.txt <$STR(s20)>
+AddTextListEx ..\QuestDiary\数据文件\骰王②.txt <$USERNAME> 0
+GMEXECUTE 开始提问 @骰王刷新
+MESSAGEBOX \恭喜你扔到豹子(222)，获得骰王②②②称号！
+GOTO @MAIN
+BREAK
+
+
+
+;----------------------------
+#IF
+EQUAL S$骰王③③③
+EQUAL N11 3
+EQUAL N12 3
+EQUAL N13 3
+#ACT
+MOV S$骰王③③③ <$USERNAME>
+CONFERTITLE 骰王③③③ 1
+#CALL [\游戏登陆\攻击倍数.txt] @攻击倍数
+;#CALL [\2游戏封号\头顶封号.txt] @头顶封号1
+AddTextListEx ..\QuestDiary\数据文件\骰王③.txt <$USERNAME> 0
+SendTopMsg 251 233 ◆◇◆玩家[<$USERNAME>]扔到豹子(333)，成为新的骰王③③③，获得1.1倍攻击的奖励◆◇◆ 1
+SendCenterMsg 251 233 ◆◇◆玩家[<$USERNAME>]扔到豹子(333)，成为新的骰王③③③，获得1.1倍攻击的奖励◆◇◆ 1
+GuildNoticeMsg 251 233 ◆◇◆玩家[<$USERNAME>]扔到豹子(333)，成为新的骰王③③③，获得1.1倍攻击的奖励◆◇◆
+MESSAGEBOX \恭喜你扔到豹子(333)，获得骰王③③③称号！
+GOTO @MAIN
+BREAK
+
+
+#IF
+NOT EQUAL S$骰王③③③
+EQUAL N11 3
+EQUAL N12 3
+EQUAL N13 3
+#ACT
+SendTopMsg 251 233 ◆◇◆玩家[<$USERNAME>]扔到豹子(333)，弹劾了[<$STR(S$骰王③③③)>]成为新的骰王③③③，获得1.1倍攻击的奖励◆◇◆ 1
+SendCenterMsg 251 233 ◆◇◆玩家[<$USERNAME>]扔到豹子(333)，弹劾了[<$STR(S$骰王③③③)>]成为新的骰王③③③，获得1.1倍攻击的奖励◆◇◆ 1
+GuildNoticeMsg 251 233 ◆◇◆玩家[<$USERNAME>]扔到豹子(333)，弹劾了[<$STR(S$骰王③③③)>]成为新的骰王③③③，获得1.1倍攻击的奖励◆◇◆
+MOV S20 <$STR(S$骰王③③③)>
+MOV S$骰王③③③ <$USERNAME>
+CONFERTITLE 骰王③③③ 1
+#CALL [\游戏登陆\攻击倍数.txt] @攻击倍数
+s20.SENDMSG 7 你的骰王③③③称号已被『<$STR(S$骰王③③③)>』抢走了！
+;DelTextList ..\QuestDiary\数据文件\骰王③.txt <$STR(s20)>
+AddTextListEx ..\QuestDiary\数据文件\骰王③.txt <$USERNAME> 0
+GMEXECUTE 开始提问 @骰王刷新
+MESSAGEBOX \恭喜你扔到豹子(333)，获得骰王③③③称号！
+GOTO @MAIN
+BREAK
+
+
+;----------------------------4
+#IF
+EQUAL S$骰王④④④
+EQUAL N11 4
+EQUAL N12 4
+EQUAL N13 4
+#ACT
+MOV S$骰王④④④ <$USERNAME>
+CONFERTITLE 骰王④④④ 1
+#CALL [\游戏登陆\攻击倍数.txt] @攻击倍数
+;#CALL [\2游戏封号\头顶封号.txt] @头顶封号1
+AddTextListEx ..\QuestDiary\数据文件\骰王④.txt <$USERNAME> 0
+SendTopMsg 251 233 ◆◇◆玩家[<$USERNAME>]扔到豹子(444)，成为新的骰王④④④，获得1.1倍攻击的奖励◆◇◆ 1
+SendCenterMsg 251 233 ◆◇◆玩家[<$USERNAME>]扔到豹子(444)，成为新的骰王④④④，获得1.1倍攻击的奖励◆◇◆ 1
+GuildNoticeMsg 251 233 ◆◇◆玩家[<$USERNAME>]扔到豹子(444)，成为新的骰王④④④，获得1.1倍攻击的奖励◆◇◆
+MESSAGEBOX \恭喜你扔到豹子(444)，获得骰王④④④称号！
+GOTO @MAIN
+BREAK
+
+
+#IF
+NOT EQUAL S$骰王④④④
+EQUAL N11 4
+EQUAL N12 4
+EQUAL N13 4
+#ACT
+SendTopMsg 251 233 ◆◇◆玩家[<$USERNAME>]扔到豹子(444)，弹劾了[<$STR(S$骰王④④④)>]成为新的骰王④④④，获得1.1倍攻击的奖励◆◇◆ 1
+SendCenterMsg 251 233 ◆◇◆玩家[<$USERNAME>]扔到豹子(444)，弹劾了[<$STR(S$骰王④④④)>]成为新的骰王④④④，获得1.1倍攻击的奖励◆◇◆ 1
+GuildNoticeMsg 251 233 ◆◇◆玩家[<$USERNAME>]扔到豹子(444)，弹劾了[<$STR(S$骰王④④④)>]成为新的骰王④④④，获得1.1倍攻击的奖励◆◇◆
+MOV S20 <$STR(S$骰王④④④)>
+MOV S$骰王④④④ <$USERNAME>
+CONFERTITLE 骰王④④④ 1
+#CALL [\游戏登陆\攻击倍数.txt] @攻击倍数
+s20.SENDMSG 7 你的骰王④④④称号已被『<$STR(S$骰王④④④)>』抢走了！
+;DelTextList ..\QuestDiary\数据文件\骰王④.txt <$STR(s20)>
+AddTextListEx ..\QuestDiary\数据文件\骰王④.txt <$USERNAME> 0
+GMEXECUTE 开始提问 @骰王刷新
+MESSAGEBOX \恭喜你扔到豹子(444)，获得骰王④④④称号！
+GOTO @MAIN
+BREAK
+
+
+
+;----------------------------5
+#IF
+EQUAL S$骰王⑤⑤⑤
+EQUAL N11 5
+EQUAL N12 5
+EQUAL N13 5
+#ACT
+MOV S$骰王⑤⑤⑤ <$USERNAME>
+CONFERTITLE 骰王⑤⑤⑤ 1
+#CALL [\游戏登陆\攻击倍数.txt] @攻击倍数
+;#CALL [\2游戏封号\头顶封号.txt] @头顶封号1
+AddTextListEx ..\QuestDiary\数据文件\骰王⑤.txt <$USERNAME> 0
+SendTopMsg 251 233 ◆◇◆玩家[<$USERNAME>]扔到豹子(555)，成为新的骰王⑤⑤⑤，获得1.1倍攻击的奖励◆◇◆ 1
+SendCenterMsg 251 233 ◆◇◆玩家[<$USERNAME>]扔到豹子(555)，成为新的骰王⑤⑤⑤，获得1.1倍攻击的奖励◆◇◆ 1
+GuildNoticeMsg 251 233 ◆◇◆玩家[<$USERNAME>]扔到豹子(555)，成为新的骰王⑤⑤⑤，获得1.1倍攻击的奖励◆◇◆
+MESSAGEBOX \恭喜你扔到豹子(555)，获得骰王⑤⑤⑤称号！
+GOTO @MAIN
+BREAK
+
+
+#IF
+NOT EQUAL S$骰王⑤⑤⑤
+EQUAL N11 5
+EQUAL N12 5
+EQUAL N13 5
+#ACT
+SendTopMsg 251 233 ◆◇◆玩家[<$USERNAME>]扔到豹子(555)，弹劾了[<$STR(S$骰王⑤⑤⑤)>]成为新的骰王⑤⑤⑤，获得1.1倍攻击的奖励◆◇◆ 1
+SendCenterMsg 251 233 ◆◇◆玩家[<$USERNAME>]扔到豹子(555)，弹劾了[<$STR(S$骰王⑤⑤⑤)>]成为新的骰王⑤⑤⑤，获得1.1倍攻击的奖励◆◇◆ 1
+GuildNoticeMsg 251 233 ◆◇◆玩家[<$USERNAME>]扔到豹子(555)，弹劾了[<$STR(S$骰王⑤⑤⑤)>]成为新的骰王⑤⑤⑤，获得1.1倍攻击的奖励◆◇◆
+MOV S20 <$STR(S$骰王⑤⑤⑤)>
+MOV S$骰王⑤⑤⑤ <$USERNAME>
+CONFERTITLE 骰王⑤⑤⑤ 1
+#CALL [\游戏登陆\攻击倍数.txt] @攻击倍数
+s20.SENDMSG 7 你的骰王⑤⑤⑤称号已被『<$STR(S$骰王⑤⑤⑤)>』抢走了！
+;DelTextList ..\QuestDiary\数据文件\骰王⑤.txt <$STR(s20)>
+AddTextListEx ..\QuestDiary\数据文件\骰王⑤.txt <$USERNAME> 0
+GMEXECUTE 开始提问 @骰王刷新
+MESSAGEBOX \恭喜你扔到豹子(555)，获得骰王⑤⑤⑤称号！
+GOTO @MAIN
+BREAK
+
+
+;----------------------------6
+#IF
+EQUAL S$骰王⑥⑥⑥
+EQUAL N11 6
+EQUAL N12 6
+EQUAL N13 6
+#ACT
+MOV S$骰王⑥⑥⑥ <$USERNAME>
+CONFERTITLE 骰王⑥⑥⑥ 1
+#CALL [\游戏登陆\攻击倍数.txt] @攻击倍数
+;#CALL [\2游戏封号\头顶封号.txt] @头顶封号1
+AddTextListEx ..\QuestDiary\数据文件\骰王⑥.txt <$USERNAME> 0
+SendTopMsg 251 233 ◆◇◆玩家[<$USERNAME>]扔到豹子(666)，成为新的骰王⑥⑥⑥，获得1.1倍攻击的奖励◆◇◆ 1
+SendCenterMsg 251 233 ◆◇◆玩家[<$USERNAME>]扔到豹子(666)，成为新的骰王⑥⑥⑥，获得1.1倍攻击的奖励◆◇◆ 1
+GuildNoticeMsg 251 233 ◆◇◆玩家[<$USERNAME>]扔到豹子(666)，成为新的骰王⑥⑥⑥，获得1.1倍攻击的奖励◆◇◆
+MESSAGEBOX \恭喜你扔到豹子(666)，获得骰王⑥⑥⑥称号！
+GOTO @MAIN
+BREAK
+
+
+#IF
+NOT EQUAL S$骰王⑥⑥⑥
+EQUAL N11 6
+EQUAL N12 6
+EQUAL N13 6
+#ACT
+SendTopMsg 251 233 ◆◇◆玩家[<$USERNAME>]扔到豹子(666)，弹劾了[<$STR(S$骰王⑥⑥⑥)>]成为新的骰王⑥⑥⑥，获得1.1倍攻击的奖励◆◇◆ 1
+SendCenterMsg 251 233 ◆◇◆玩家[<$USERNAME>]扔到豹子(666)，弹劾了[<$STR(S$骰王⑥⑥⑥)>]成为新的骰王⑥⑥⑥，获得1.1倍攻击的奖励◆◇◆ 1
+GuildNoticeMsg 251 233 ◆◇◆玩家[<$USERNAME>]扔到豹子(666)，弹劾了[<$STR(S$骰王⑥⑥⑥)>]成为新的骰王⑥⑥⑥，获得1.1倍攻击的奖励◆◇◆
+MOV S20 <$STR(S$骰王⑥⑥⑥)>
+MOV S$骰王⑥⑥⑥ <$USERNAME>
+CONFERTITLE 骰王⑥⑥⑥ 1
+#CALL [\游戏登陆\攻击倍数.txt] @攻击倍数
+s20.SENDMSG 7 你的骰王⑥⑥⑥称号已被『<$STR(S$骰王⑥⑥⑥)>』抢走了！
+;DelTextList ..\QuestDiary\数据文件\骰王⑥.txt <$STR(s20)>
+AddTextListEx ..\QuestDiary\数据文件\骰王⑥.txt <$USERNAME> 0
+GMEXECUTE 开始提问 @骰王刷新
+MESSAGEBOX \恭喜你扔到豹子(666)，获得骰王⑥⑥⑥称号！
+GOTO @MAIN
+BREAK
+
+
+
+
+
+
+
+[@开始扔骰子去]
+;#IF
+;NOT INSAFEZONE
+;#ACT
+;MESSAGEBOX \请站在安全区以内！
+;break
+
+#OR
+CHECKTITLE 骰王①①①
+CHECKTITLE 骰王②②②
+CHECKTITLE 骰王③③③
+CHECKTITLE 骰王④④④
+CHECKTITLE 骰王⑤⑤⑤
+CHECKTITLE 骰王⑥⑥⑥
+#ACT
+MESSAGEBOX \你已经拥有骰王称号了！
+break
+
+#IF
+CHECKGAMEDIAMOND < 5
+#ACT
+MESSAGEBOX \帝国币不足5个，无法扔骰子！
+break
+
+
+
+#IF
+CHECKGAMEDIAMOND > 4
+#ACT
+GAMEDIAMOND - 5
+#ACT
+MOVR N11 1 7
+MOVR N12 1 7
+MOVR N13 1 7
+;MOV D0 <$STR(N11)>
+;MOV D1 <$STR(N12)>
+;MOV D2 <$STR(N13)>
+;playdice 3 @检测点数
+GOTO @检测点数
+break
+
+}

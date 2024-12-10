@@ -1,0 +1,797 @@
+[@境界成长属性]
+{
+
+
+
+#IF
+#ACT
+MOV N$自身属性 0
+MOV N$境界等级 1
+MOV N$境界属性 1
+MOV N$境界经验 1
+MOV N$下级境界经验 1
+
+
+#IF
+checkjob warrior
+;--------战士----------
+#ACT
+MOV N$自身属性 <$MAXDC>
+MOV N$血量位置 0
+MOV S$本命职业 战士
+MOV N$本命属性位置1 3
+MOV N$本命属性位置 2
+MOV N$职业切割 2
+MOV N$境界经验值 10
+MOV N$本命属性颜色 249
+MOV N$本命属性A 15
+MOV N$本命属性B 23
+MOV N$职业血量 1
+
+#IF
+checkjob wizard
+;--------法师----------
+#ACT
+MOV N$自身属性 <$MAXDC>
+MOV N$血量位置 0
+MOV S$本命职业 法师
+MOV N$本命属性位置1 4
+MOV N$本命属性位置 3
+MOV N$职业切割 2
+MOV N$境界经验值 10
+MOV N$本命属性颜色 251
+MOV N$本命属性A 15
+MOV N$本命属性B 23
+MOV N$职业血量 1
+
+#IF
+checkjob taoist
+;--------道士----------
+#ACT
+MOV N$自身属性 <$MAXDC>
+MOV N$血量位置 0
+MOV S$本命职业 道士
+MOV N$本命属性位置1 5
+MOV N$本命属性位置 4
+MOV N$职业切割 2
+MOV N$境界经验值 10
+MOV N$本命属性颜色 70
+MOV N$本命属性A 15
+MOV N$本命属性B 23
+MOV N$职业血量 1
+
+
+
+
+
+
+#IF
+checkitemw 洗髓境 1
+#ACT
+MOV S$当前境界名字 洗髓境
+MOV N$设置境界等级 3
+MOV N$设置境界U190 1
+MOV N$境界经验 150
+MOV N$境界属性 1
+MOV S$当前境界装备 洗髓境
+MOV S$下级境界装备 辟谷境
+GOTO @给境界属性
+MOV N$境界颜色 7
+MOV N$境界经验倍数 2
+BREAK
+
+
+#IF
+checkitemw 辟谷境 1
+#ACT
+MOV S$当前境界名字 辟谷境
+MOV N$设置境界等级 3
+MOV N$设置境界U190 4
+MOV N$境界经验 200
+MOV N$境界属性 2
+MOV S$当前境界装备 辟谷境
+MOV S$下级境界装备 融合境
+GOTO @给境界属性
+MOV N$境界颜色 2
+MOV N$境界经验倍数 3
+BREAK
+
+
+#IF
+checkitemw 融合境 1
+#ACT
+MOV S$当前境界名字 融合境
+MOV N$设置境界等级 3
+MOV N$设置境界U190 7
+MOV N$境界经验 300
+MOV N$境界属性 3
+MOV S$当前境界装备 融合境
+MOV S$下级境界装备 练气境
+GOTO @给境界属性
+MOV N$境界颜色 2
+MOV N$境界经验倍数 4
+BREAK
+
+#IF
+checkitemw 练气境 1
+#ACT
+MOV S$当前境界名字 练气境
+MOV N$设置境界等级 3
+MOV N$设置境界U190 10
+MOV N$境界经验 500
+MOV N$境界属性 4
+MOV S$当前境界装备 练气境
+MOV S$下级境界装备 筑基境
+GOTO @给境界属性
+MOV N$境界颜色 3
+MOV N$境界经验倍数 5
+BREAK
+
+#IF
+checkitemw 筑基境 1
+#ACT
+MOV S$当前境界名字 筑基境
+MOV N$设置境界等级 3
+MOV N$设置境界U190 13
+MOV N$境界经验 1000
+MOV N$境界属性 5
+MOV S$当前境界装备 筑基境
+MOV S$下级境界装备 金丹境
+GOTO @给境界属性
+MOV N$境界颜色 3
+MOV N$境界经验倍数 6
+BREAK
+
+
+
+#IF
+checkitemw 金丹境 1
+#ACT
+MOV S$当前境界名字 金丹境
+MOV N$设置境界等级 3
+MOV N$设置境界U190 16
+MOV N$境界经验 1500
+MOV N$境界属性 6
+MOV S$当前境界装备 金丹境
+MOV S$下级境界装备 元婴境
+GOTO @给境界属性
+MOV N$境界颜色 6
+MOV N$境界经验倍数 8
+BREAK
+
+
+
+#IF
+checkitemw 元婴境 1
+#ACT
+MOV S$当前境界名字 元婴境
+MOV N$设置境界等级 3
+MOV N$设置境界U190 19
+MOV N$境界经验 2000
+MOV N$境界属性 7
+MOV S$当前境界装备 元婴境
+MOV S$下级境界装备 出窍境
+GOTO @给境界属性
+MOV N$境界颜色 6
+MOV N$境界经验倍数 10
+BREAK
+
+
+#IF
+checkitemw 出窍境 1
+#ACT
+MOV S$当前境界名字 出窍境
+MOV N$设置境界等级 3
+MOV N$设置境界U190 22
+MOV N$境界经验 2500
+MOV N$境界属性 8
+MOV S$当前境界装备 出窍境
+MOV S$下级境界装备 分神境
+GOTO @给境界属性
+MOV N$境界颜色 161
+MOV N$境界经验倍数 15
+BREAK
+
+#IF
+checkitemw 分神境 1
+#ACT
+MOV S$当前境界名字 分神境
+MOV N$设置境界等级 3
+MOV N$设置境界U190 25
+MOV N$境界经验 3000
+MOV N$境界属性 9
+MOV S$当前境界装备 分神境
+MOV S$下级境界装备 合体境
+GOTO @给境界属性
+MOV N$境界颜色 161
+MOV N$境界经验倍数 20
+BREAK
+
+
+#IF
+checkitemw 合体境 1
+#ACT
+MOV S$当前境界名字 合体境
+MOV N$设置境界等级 3
+MOV N$设置境界U190 28
+MOV N$境界经验 3500
+MOV N$境界属性 10
+MOV S$当前境界装备 合体境
+MOV S$下级境界装备 渡劫境
+GOTO @给境界属性
+MOV N$境界颜色 250
+MOV N$境界经验倍数 25
+BREAK
+
+
+#IF
+checkitemw 渡劫境 1
+#ACT
+MOV S$当前境界名字 渡劫境
+MOV N$设置境界等级 3
+MOV N$设置境界U190 31
+MOV N$境界经验 4000
+MOV N$境界属性 11
+MOV S$当前境界装备 渡劫境
+MOV S$下级境界装备 大乘境
+GOTO @给境界属性
+MOV N$境界颜色 250
+MOV N$境界经验倍数 30
+BREAK
+
+
+#IF
+checkitemw 大乘境 1
+#ACT
+MOV S$当前境界名字 大乘境
+MOV N$设置境界等级 3
+MOV N$设置境界U190 34
+MOV N$境界经验 5000
+MOV N$境界属性 12
+MOV S$当前境界装备 大乘境
+MOV S$下级境界装备 散仙境
+GOTO @给境界属性
+MOV N$境界颜色 146
+MOV N$境界经验倍数 35
+BREAK
+
+#IF
+checkitemw 散仙境 1
+#ACT
+MOV S$当前境界名字 散仙境
+MOV N$设置境界等级 3
+MOV N$设置境界U190 37
+MOV N$境界经验 10000
+MOV N$境界属性 13
+MOV S$当前境界装备 散仙境
+MOV S$下级境界装备 地仙境
+GOTO @给境界属性
+MOV N$境界颜色 146
+MOV N$境界经验倍数 40
+BREAK
+
+
+
+#IF
+checkitemw 地仙境 1
+#ACT
+MOV S$当前境界名字 地仙境
+MOV N$设置境界等级 3
+MOV N$设置境界U190 40
+MOV N$境界经验 12000
+MOV N$境界属性 13
+MOV S$当前境界装备 地仙境
+MOV S$下级境界装备 人仙境
+GOTO @给境界属性
+MOV N$境界颜色 154
+MOV N$境界经验倍数 45
+BREAK
+
+
+
+
+
+
+#IF
+checkitemw 人仙境 1
+#ACT
+MOV S$当前境界名字 人仙境
+MOV N$设置境界等级 3
+MOV N$设置境界U190 43
+MOV N$境界经验 14000
+MOV N$境界属性 13
+MOV S$当前境界装备 人仙境
+MOV S$下级境界装备 天仙境
+GOTO @给境界属性
+MOV N$境界颜色 154
+MOV N$境界经验倍数 50
+BREAK
+
+
+
+
+
+#IF
+checkitemw 天仙境 1
+#ACT
+MOV S$当前境界名字 天仙境
+MOV N$设置境界等级 3
+MOV N$设置境界U190 46
+MOV N$境界经验 16000
+MOV N$境界属性 13
+MOV S$当前境界装备 天仙境
+MOV S$下级境界装备 金仙境
+GOTO @给境界属性
+MOV N$境界颜色 242
+MOV N$境界经验倍数 55
+BREAK
+
+
+
+
+
+#IF
+checkitemw 金仙境 1
+#ACT
+MOV S$当前境界名字 金仙境
+MOV N$设置境界等级 3
+MOV N$设置境界U190 49
+MOV N$境界经验 18000
+MOV N$境界属性 13
+MOV S$当前境界装备 金仙境
+MOV S$下级境界装备 玄仙境
+GOTO @给境界属性
+MOV N$境界颜色 242
+MOV N$境界经验倍数 60
+BREAK
+
+
+
+
+
+#IF
+checkitemw 玄仙境 1
+#ACT
+MOV S$当前境界名字 玄仙境
+MOV N$设置境界等级 3
+MOV N$设置境界U190 52
+MOV N$境界经验 20000
+MOV N$境界属性 13
+MOV S$当前境界装备 玄仙境
+MOV S$下级境界装备 仙君境
+GOTO @给境界属性
+MOV N$境界颜色 241
+MOV N$境界经验倍数 70
+BREAK
+
+
+#IF
+checkitemw 仙君境 1
+#ACT
+MOV S$当前境界名字 仙君境
+MOV N$设置境界等级 3
+MOV N$设置境界U190 55
+MOV N$境界经验 22000
+MOV N$境界属性 13
+MOV S$当前境界装备 仙君境
+MOV S$下级境界装备 仙帝境
+GOTO @给境界属性
+MOV N$境界颜色 241
+MOV N$境界经验倍数 80
+BREAK
+
+
+#IF
+checkitemw 仙帝境 1
+#ACT
+MOV S$当前境界名字 仙帝境
+MOV N$设置境界等级 3
+MOV N$设置境界U190 58
+MOV N$境界经验 24000
+MOV N$境界属性 13
+MOV S$当前境界装备 仙帝境
+MOV S$下级境界装备 仙尊境
+GOTO @给境界属性
+MOV N$境界颜色 251
+MOV N$境界经验倍数 90
+BREAK
+
+
+
+
+
+#IF
+checkitemw 仙尊境 1
+#ACT
+MOV S$当前境界名字 仙尊境
+MOV N$设置境界等级 3
+MOV N$设置境界U190 61
+MOV N$境界经验 26000
+MOV N$境界属性 13
+MOV S$当前境界装备 仙尊境
+MOV S$下级境界装备 神人境
+GOTO @给境界属性
+MOV N$境界颜色 251
+MOV N$境界经验倍数 100
+BREAK
+
+
+
+
+
+#IF
+checkitemw 神人境 1
+#ACT
+MOV S$当前境界名字 神人境
+MOV N$设置境界等级 3
+MOV N$设置境界U190 64
+MOV N$境界经验 50000
+MOV N$境界属性 13
+MOV S$当前境界装备 神人境
+MOV S$下级境界装备 天神境
+GOTO @给境界属性
+MOV N$境界颜色 243
+MOV N$境界经验倍数 110
+BREAK
+
+
+
+
+
+#IF
+checkitemw 天神境 1
+#ACT
+MOV S$当前境界名字 天神境
+MOV N$设置境界等级 3
+MOV N$设置境界U190 67
+MOV N$境界经验 52000
+MOV N$境界属性 13
+MOV S$当前境界装备 天神境
+MOV S$下级境界装备 玄神境
+GOTO @给境界属性
+MOV N$境界颜色 243
+MOV N$境界经验倍数 120
+BREAK
+
+
+#IF
+checkitemw 玄神境 1
+#ACT
+MOV S$当前境界名字 玄神境
+MOV N$设置境界等级 3
+MOV N$设置境界U190 70
+MOV N$境界经验 54000
+MOV N$境界属性 13
+MOV S$当前境界装备 玄神境
+MOV S$下级境界装备 神王境
+GOTO @给境界属性
+MOV N$境界颜色 70
+MOV N$境界经验倍数 130
+BREAK
+
+
+#IF
+checkitemw 神王境 1
+#ACT
+MOV S$当前境界名字 神王境
+MOV N$设置境界等级 3
+MOV N$设置境界U190 73
+MOV N$境界经验 56000
+MOV N$境界属性 13
+MOV S$当前境界装备 神王境
+MOV S$下级境界装备 神君境
+GOTO @给境界属性
+MOV N$境界颜色 70
+MOV N$境界经验倍数 140
+BREAK
+
+#IF
+checkitemw 神君境 1
+#ACT
+MOV S$当前境界名字 神君境
+MOV N$设置境界等级 3
+MOV N$设置境界U190 76
+MOV N$境界经验 58000
+MOV N$境界属性 13
+MOV S$当前境界装备 神君境
+MOV S$下级境界装备 真神境
+GOTO @给境界属性
+MOV N$境界颜色 253
+MOV N$境界经验倍数 150
+BREAK
+
+#IF
+checkitemw 真神境 1
+#ACT
+MOV S$当前境界名字 真神境
+MOV N$设置境界等级 3
+MOV N$设置境界U190 79
+MOV N$境界经验 60000
+MOV N$境界属性 13
+MOV S$当前境界装备 真神境
+MOV S$下级境界装备 天帝境
+GOTO @给境界属性
+MOV N$境界颜色 253
+MOV N$境界经验倍数 150
+BREAK
+#IF
+checkitemw 天帝境 1
+#ACT
+MOV S$当前境界名字 天帝境
+MOV N$设置境界等级 3
+MOV N$设置境界U190 82
+MOV N$境界经验 62000
+MOV N$境界属性 13
+MOV S$当前境界装备 天帝境
+MOV S$下级境界装备 神帝境
+GOTO @给境界属性
+MOV N$境界颜色 249
+MOV N$境界经验倍数 150
+BREAK
+
+#IF
+checkitemw 神帝境 1
+#ACT
+MOV S$当前境界名字 神帝境
+MOV N$设置境界等级 3
+MOV N$设置境界U190 85
+MOV N$境界经验 64000
+MOV N$境界属性 13
+MOV S$当前境界装备 神帝境
+MOV S$下级境界装备 天尊境
+GOTO @给境界属性
+MOV N$境界颜色 249
+MOV N$境界经验倍数 150
+BREAK
+
+#IF
+checkitemw 天尊境 1
+#ACT
+MOV S$当前境界名字 天尊境
+MOV N$设置境界等级 3
+MOV N$设置境界U190 88
+MOV N$境界经验 66000
+MOV N$境界属性 13
+MOV S$当前境界装备 天尊境
+MOV S$下级境界装备 主宰境
+GOTO @给境界属性
+MOV N$境界颜色 254
+MOV N$境界经验倍数 150
+BREAK
+
+#IF
+checkitemw 主宰境 1
+#ACT
+MOV S$当前境界名字 主宰境
+MOV N$设置境界等级 3
+MOV N$设置境界U190 91
+MOV N$境界经验 68000
+MOV N$境界属性 14
+MOV S$当前境界装备 主宰境
+MOV S$下级境界装备 主宰境
+GOTO @给境界属性
+MOV N$境界颜色 254
+MOV N$境界经验倍数 200
+BREAK
+
+
+
+[@给境界属性]
+
+
+
+#IF
+#ACT
+MOV T7 <$Str(S$当前境界名字)>
+INC N$境界属性 <$STR(U190)>
+MOV N$境界等级 <$STR(U191)>
+MOV N$当前境界经验 <$str(U191)>
+INC N$当前境界经验 1
+MUL N$当前境界经验 <$Str(N$境界经验)>
+MOV N$下级境界经验 <$str(U191)>
+INC N$下级境界经验 2
+MUL N$下级境界经验 <$Str(N$境界经验)>
+MUL N$自身属性 2
+
+MOV N$境界血量 <$STR(U190)>
+MUL N$境界血量 <$Str(N$职业血量)>
+div N$境界血量 2
+MOV N$境界属性 <$STR(U190)>
+div N$境界属性 2
+
+MOV N$职业攻击 <$STR(U190)>
+div N$职业攻击 3
+
+
+
+MOV N$境界切割 <$STR(U190)>
+MUL N$境界切割 <$Str(N$职业切割)>
+MOV N$境界百分比 0
+
+#IF
+LARGE N$当前境界经验  10000000
+#ACT
+MOV N$当前境界经验  10000000
+
+#IF
+LARGE N$下级境界经验 10000000
+#ACT
+MOV N$下级境界经验 10000000
+
+
+#IF
+LARGE N$设置境界等级 100
+#ACT
+MOV N$设置境界等级 100
+
+
+
+
+
+#IF
+LARGE U191 5
+#ACT
+MOV U191 5
+
+#IF
+EQUAL U191 1
+#ACT
+MOV S$境界等级 初期
+
+#IF
+EQUAL U191 2
+#ACT
+MOV S$境界等级 中期
+
+#IF
+EQUAL U191 3
+#ACT
+MOV S$境界等级 后期
+
+
+#IF
+EQUAL U191 4
+#ACT
+MOV S$境界等级 大圆满
+
+
+
+#IF
+LARGE U190 94
+#ACT
+MOV U190 94
+
+
+
+#IF
+#ACT
+MOV N$境界百分比 1
+
+
+
+#IF
+not CHECKCUSTOMITEMPROGRESSBAR 14 0
+#ACT
+MOV U191 1
+MOV U190 <$STR(N$设置境界U190)>
+CHANGECustomItemProgressbar 14 0 0 1
+CHANGECustomItemProgressbar 14 0 1 境界等级
+CHANGECustomItemProgressbar 14 0 2 249
+CHANGECustomItemProgressbar 14 0 3 3
+CHANGECustomItemProgressbar 14 0 4 2
+CHANGECUSTOMITEMPROGRESSBARVALUE 14 0 1 = <$STR(N$设置境界等级)>
+CHANGECustomItemProgressbar 14 1 0 1
+CHANGECustomItemProgressbar 14 1 1 境界经验
+CHANGECustomItemProgressbar 14 1 2 250
+CHANGECustomItemProgressbar 14 1 3 11
+CHANGECustomItemProgressbar 14 1 4 11
+CHANGECUSTOMITEMPROGRESSBARVALUE 14 1 1 = <$STR(N$下级境界经验)>
+CHANGECUSTOMITEMPROGRESSBARVALUE 14 0 0 = 0
+CHANGECUSTOMITEMPROGRESSBARVALUE 14 1 0 = 0
+
+
+
+
+
+
+#IF
+CHECKBAGSIZE 3
+not checkitemw 主宰境 1
+not checkitem 主宰境 1
+checkitemw <$STR(S$当前境界装备)> 1
+CHECKCUSTOMITEMPROGRESSBARVALUE 14 0 0 = <$STR(N$设置境界等级)>
+CHECKCUSTOMITEMPROGRESSBARVALUE 14 1 0 = <$STR(N$当前境界经验)>
+#ACT
+takew <$STR(S$当前境界装备)> 1
+take <$STR(S$当前境界装备)> 1
+GiveStateItem <$STR(S$下级境界装备)> 1 1 0 0 1 1 1 1
+AutoTakeOnItem <$STR(S$下级境界装备)> 14
+GOTO @境界成长属性
+MOV U191 1
+MOV U190 <$STR(N$设置境界U190)>
+CHANGECustomItemProgressbar 14 0 0 1
+CHANGECustomItemProgressbar 14 0 1 境界等级
+CHANGECustomItemProgressbar 14 0 2 249
+CHANGECustomItemProgressbar 14 0 3 3
+CHANGECustomItemProgressbar 14 0 4 2
+CHANGECUSTOMITEMPROGRESSBARVALUE 14 0 1 = <$STR(N$设置境界等级)>
+CHANGECustomItemProgressbar 14 1 0 1
+CHANGECustomItemProgressbar 14 1 1 境界经验
+CHANGECustomItemProgressbar 14 1 2 250
+CHANGECustomItemProgressbar 14 1 3 11
+CHANGECustomItemProgressbar 14 1 4 11
+CHANGECUSTOMITEMPROGRESSBARVALUE 14 1 1 = <$STR(N$下级境界经验)>
+CHANGECUSTOMITEMPROGRESSBARVALUE 14 0 0 = 0
+CHANGECUSTOMITEMPROGRESSBARVALUE 14 1 0 = 0
+
+
+
+
+
+
+
+
+
+
+#IF
+CHECKCUSTOMITEMPROGRESSBARVALUE 14 1 0 = <$STR(N$当前境界经验)>
+#ACT
+INC U191 1
+INC U190 1
+CHANGECUSTOMITEMPROGRESSBARVALUE 14 0 0 + 1
+CHANGECUSTOMITEMPROGRESSBARVALUE 14 1 0 = 0
+CHANGECUSTOMITEMPROGRESSBARVALUE 14 1 1 = <$STR(N$下级境界经验)>
+
+
+
+
+
+#IF
+#ACT
+CHANGECUSTOMITEMPROGRESSBARVALUE 14 0 1 = <$STR(N$设置境界等级)>
+CHANGECUSTOMITEMPROGRESSBARVALUE 14 1 1 = <$STR(N$当前境界经验)>
+
+
+
+
+
+#IF
+NOT EQUAL S$境界标记 <$str(n$境界属性)>:<$STR(N$境界血量)>:<$STR(N$境界切割)>:<$STR(N$当前境界经验)>:<$STR(N$设置境界等级)>
+#ACT
+MOV S$境界标记 <$str(n$境界属性)>:<$STR(N$境界血量)>:<$STR(N$境界切割)>:<$STR(N$当前境界经验)>:<$STR(N$设置境界等级)>
+mov N$境界等级 <$str(U191)>
+DEC N$境界等级 1
+UpDateBoxItem 0
+LINKPICKUPITEM
+CHANGECUSTOMITEMTEXT 14 [<$STR(S$当前境界名字)>·<$STR(S$境界等级)>属性]
+CHANGECUSTOMITEMTEXTColor 14 254
+CHANGECUSTOMITEMABIL 14 4 0 <$STR(N$本命属性颜色)>
+CHANGECUSTOMITEMABIL 14 4 1 <$STR(N$本命属性位置1)>
+CHANGECUSTOMITEMABIL 14 4 2 3
+CHANGECUSTOMITEMABIL 14 4 3 <$STR(N$境界百分比)>
+CHANGECUSTOMITEMVALUE 14 4 = <$str(n$境界属性)>
+CHANGECUSTOMITEMABIL 14 5 0 250
+CHANGECUSTOMITEMABIL 14 5 1 6
+CHANGECUSTOMITEMABIL 14 5 2 4
+CHANGECUSTOMITEMABIL 14 5 3 <$STR(N$境界百分比)>
+CHANGECUSTOMITEMVALUE 14 5 = <$STR(N$境界血量)>
+CHANGECUSTOMITEMABIL 14 6 0 250
+CHANGECUSTOMITEMABIL 14 6 1 7
+CHANGECUSTOMITEMABIL 14 6 2 5
+CHANGECUSTOMITEMABIL 14 6 3 <$STR(N$境界百分比)>
+CHANGECUSTOMITEMVALUE 14 6 = <$STR(N$境界血量)>
+
+CHANGECUSTOMITEMABIL 14 7 0 253
+CHANGECUSTOMITEMABIL 14 7 1 10
+CHANGECUSTOMITEMABIL 14 7 2 6
+CHANGECUSTOMITEMABIL 14 7 3 1
+CHANGECUSTOMITEMVALUE 14 7 = <$STR(N$境界切割)>
+
+CHANGEITEMADDVALUE 14 <$STR(N$本命属性位置)> = <$str(N$职业攻击)>
+
+
+
+
+}
+
+

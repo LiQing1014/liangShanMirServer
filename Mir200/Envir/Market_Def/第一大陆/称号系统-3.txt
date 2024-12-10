@@ -1,0 +1,433 @@
+[@main]
+
+#IF
+large U12 6
+#ACT
+MESSAGEBOX 你称号已满:\\　　　　1.请到二大陆更深层次深造！！
+BREAK
+
+
+#IF
+Equal U12 0
+#ACT
+OPENMERCHANTBIGDLG 1 209 1 0 0 0 0
+#SAY
+<IMGEX:1:213:214:215:582:20/@exit>\ \ \ \
+<>                                                     <李淳罡：/FCOLOR=251>\
+<>                                                         <我若成佛，天下无魔，我若成魔，佛奈我何！/FCOLOR=70>  \ 
+<>                                                     \ 
+<>                                                      <传说最顶尖的强者，拥有神鬼莫测之能，抬手即/FCOLOR=250>\
+<>                                                      <可破碎虚空，剑开天门！号“万世主宰”/FCOLOR=250>\ \  \
+<>                                                     <当前晋升：/SCOLOR=249><【战国·书生】/SCOLOR=253>\ \
+<>                                                            <人物基础属性： 攻魔道 ＋1/SCOLOR=251>\ 
+<>                                                            <增加攻击伤害： ＋ 1%/SCOLOR=254>\   
+<>                                                            <杀人爆率增加： ＋ 1%/SCOLOR=254>\ 
+<>                                                              \ \ \
+<>                                                     <晋升战国称号提高人物攻击伤害及特殊属性，每/SCOLOR=249>\
+<>                                                     <一次提升都能让你感觉实力大增！/SCOLOR=249>\ \
+<>                                                     <当前晋升需要：/SCOLOR=250>30点卷\ \ 
+<>                                                                  <→>[<点击晋升称号/@点卷1>]<←>\
+
+
+
+#IF
+Equal U12 1
+#ACT
+OPENMERCHANTBIGDLG 1 209 1 0 0 0 0
+#SAY
+<IMGEX:1:213:214:215:582:20/@exit>\ \ \ \
+<>                                                     <李淳罡：/FCOLOR=251>\
+<>                                                         <我若成佛，天下无魔，我若成魔，佛奈我何！/FCOLOR=70>  \ 
+<>                                                     \ 
+<>                                                      <传说最顶尖的强者，拥有神鬼莫测之能，抬手即/FCOLOR=250>\
+<>                                                      <可破碎虚空，剑开天门！号“万世主宰”/FCOLOR=250>\ \  \
+<>                                                     <当前晋升：/SCOLOR=249><【战国·游侠】/SCOLOR=253>\ \
+<>                                                            <人物基础属性： 攻魔道 ＋2/SCOLOR=251>\ 
+<>                                                            <增加攻击伤害： ＋ 2%/SCOLOR=254>\   
+<>                                                            <杀人爆率增加： ＋ 2%/SCOLOR=254>\ 
+<>                                                              \ \ \
+<>                                                     <晋升战国称号提高人物攻击伤害及特殊属性，每/SCOLOR=249>\
+<>                                                     <一次提升都能让你感觉实力大增！/SCOLOR=249>\  \
+<>                                                     <当前晋升需要：/SCOLOR=250>50点卷\ \
+<>                                                                  <→>[<点击晋升称号/@点卷2>]<←>\
+
+
+#IF
+Equal U12 2
+#ACT
+OPENMERCHANTBIGDLG 1 209 1 0 0 0 0
+#SAY
+<IMGEX:1:213:214:215:582:20/@exit>\ \ \ \
+<>                                                     <李淳罡：/FCOLOR=251>\
+<>                                                         <我若成佛，天下无魔，我若成魔，佛奈我何！/FCOLOR=70>  \ 
+<>                                                     \ 
+<>                                                      <传说最顶尖的强者，拥有神鬼莫测之能，抬手即/FCOLOR=250>\
+<>                                                      <可破碎虚空，剑开天门！号“万世主宰”/FCOLOR=250>\ \  \
+<>                                                     <当前晋升：/SCOLOR=249><【战国·英雄】/SCOLOR=253>\ \
+<>                                                            <人物基础属性： 攻魔道 ＋3/SCOLOR=251>\ 
+<>                                                            <增加攻击伤害： ＋ 3%/SCOLOR=254>\   
+<>                                                            <杀人爆率增加： ＋ 3%/SCOLOR=254>\ 
+<>                                                              \ \ \
+<>                                                     <晋升战国称号提高人物攻击伤害及特殊属性，每/SCOLOR=249>\
+<>                                                     <一次提升都能让你感觉实力大增！/SCOLOR=249>\  \
+<>                                                     <当前晋升需要：/SCOLOR=250>80点卷\ \
+<>                                                                  <→>[<点击晋升称号/@点卷3>]<←>\
+
+
+#IF
+Equal U12 3
+#ACT
+OPENMERCHANTBIGDLG 1 209 1 0 0 0 0
+#SAY
+<IMGEX:1:213:214:215:582:20/@exit>\ \ \ \
+<>                                                     <李淳罡：/FCOLOR=251>\
+<>                                                         <我若成佛，天下无魔，我若成魔，佛奈我何！/FCOLOR=70>  \ 
+<>                                                     \ 
+<>                                                      <传说最顶尖的强者，拥有神鬼莫测之能，抬手即/FCOLOR=250>\
+<>                                                      <可破碎虚空，剑开天门！号“万世主宰”/FCOLOR=250>\ \  \
+<>                                                     <当前晋升：/SCOLOR=249><【战国·豪杰】/SCOLOR=253>\ \
+<>                                                            <人物基础属性： 攻魔道 ＋4/SCOLOR=251>\ 
+<>                                                            <增加攻击伤害： ＋ 4%/SCOLOR=254>\   
+<>                                                            <杀人爆率增加： ＋ 4%/SCOLOR=254>\ 
+<>                                                              \ \ \
+<>                                                     <晋升战国称号提高人物攻击伤害及特殊属性，每/SCOLOR=249>\
+<>                                                     <一次提升都能让你感觉实力大增！/SCOLOR=249>\  \
+<>                                                     <当前晋升需要：/SCOLOR=250>150点卷\ \ 
+<>                                                                  <→>[<点击晋升称号/@点卷4>]<←>\
+
+
+
+
+#IF
+Equal U12 4
+#ACT
+OPENMERCHANTBIGDLG 1 209 1 0 0 0 0
+#SAY
+<IMGEX:1:213:214:215:582:20/@exit>\ \ \ \
+<>                                                     <李淳罡：/FCOLOR=251>\
+<>                                                         <我若成佛，天下无魔，我若成魔，佛奈我何！/FCOLOR=70>  \ 
+<>                                                     \ 
+<>                                                      <传说最顶尖的强者，拥有神鬼莫测之能，抬手即/FCOLOR=250>\
+<>                                                      <可破碎虚空，剑开天门！号“万世主宰”/FCOLOR=250>\ \  \
+<>                                                     <当前晋升：/SCOLOR=249><【战国·尊者】/SCOLOR=253>\ \
+<>                                                            <人物基础属性： 攻魔道 ＋5/SCOLOR=251>\ 
+<>                                                            <增加攻击伤害： ＋ 5%/SCOLOR=254>\   
+<>                                                            <杀人爆率增加： ＋ 5%/SCOLOR=254>\ 
+<>                                                              \ \ \
+<>                                                     <晋升战国称号提高人物攻击伤害及特殊属性，每/SCOLOR=249>\
+<>                                                     <一次提升都能让你感觉实力大增！/SCOLOR=249>\  \
+<>                                                     <当前晋升需要：/SCOLOR=250>300点卷\ \
+<>                                                                  <→>[<点击晋升称号/@点卷5>]<←>\
+
+
+
+#IF
+Equal U12 5
+#ACT
+OPENMERCHANTBIGDLG 1 209 1 0 0 0 0
+#SAY
+<IMGEX:1:213:214:215:582:20/@exit>\ \ \ \
+<>                                                     <李淳罡：/FCOLOR=251>\
+<>                                                         <我若成佛，天下无魔，我若成魔，佛奈我何！/FCOLOR=70>  \ 
+<>                                                     \ 
+<>                                                      <传说最顶尖的强者，拥有神鬼莫测之能，抬手即/FCOLOR=250>\
+<>                                                      <可破碎虚空，剑开天门！号“万世主宰”/FCOLOR=250>\ \  \
+<>                                                     <当前晋升：/SCOLOR=249><【战国·王者】/SCOLOR=253>\ \
+<>                                                            <人物基础属性： 攻魔道 ＋6/SCOLOR=251>\ 
+<>                                                            <增加攻击伤害： ＋ 6%/SCOLOR=254>\   
+<>                                                            <杀人爆率增加： ＋ 6%/SCOLOR=254>\ 
+<>                                                              \ \ \
+<>                                                     <晋升战国称号提高人物攻击伤害及特殊属性，每/SCOLOR=249>\
+<>                                                     <一次提升都能让你感觉实力大增！/SCOLOR=249>\  \
+<>                                                     <当前晋升需要：/SCOLOR=250>500点卷\ \
+<>                                                                  <→>[<点击晋升称号/@点卷6>]<←>\
+
+
+#IF
+Equal U12 6
+#ACT
+OPENMERCHANTBIGDLG 1 209 1 0 0 0 0
+#SAY
+<IMGEX:1:213:214:215:582:20/@exit>\ \ \ \
+<>                                                     <李淳罡：/FCOLOR=251>\
+<>                                                         <我若成佛，天下无魔，我若成魔，佛奈我何！/FCOLOR=70>  \ 
+<>                                                     \ 
+<>                                                      <传说最顶尖的强者，拥有神鬼莫测之能，抬手即/FCOLOR=250>\
+<>                                                      <可破碎虚空，剑开天门！号“万世主宰”/FCOLOR=250>\ \  \
+<>                                                     <当前晋升：/SCOLOR=249><【战国·宗师】/SCOLOR=253>\ \
+<>                                                            <人物基础属性： 攻魔道 ＋7/SCOLOR=251>\ 
+<>                                                            <增加攻击伤害： ＋ 7%/SCOLOR=254>\   
+<>                                                            <杀人爆率增加： ＋ 7%/SCOLOR=254>\ 
+<>                                                              \ \ \
+<>                                                     <晋升战国称号提高人物攻击伤害及特殊属性，每/SCOLOR=249>\
+<>                                                     <一次提升都能让你感觉实力大增！/SCOLOR=249>\  \
+<>                                                     <当前晋升需要：/SCOLOR=250>1000点卷\ \ 
+<>                                                                  <→>[<点击晋升称号/@点卷7>]<←>\
+
+
+
+
+
+
+
+
+
+
+#IF
+Equal U12 7
+#ACT
+OPENMERCHANTBIGDLG 1 209 1 0 0 0 0
+#SAY
+<IMGEX:1:213:214:215:582:20/@exit>\ \ \ \
+<>                                                     <李淳罡：/FCOLOR=251>\
+<>                                                         <我若成佛，天下无魔，我若成魔，佛奈我何！/FCOLOR=70>  \ 
+<>                                                     \ 
+<>                                                      <传说最顶尖的强者，拥有神鬼莫测之能，抬手即/FCOLOR=250>\
+<>                                                      <可破碎虚空，剑开天门！号“万世主宰”/FCOLOR=250>\ \  \
+<>                                                     <当前晋升：/SCOLOR=249><【战国·霸主】/SCOLOR=253>\ \
+<>                                                            <人物基础属性： 攻魔道 ＋8/SCOLOR=251>\ 
+<>                                                            <增加攻击伤害： ＋ 9%/SCOLOR=254>\   
+<>                                                            <杀人爆率增加： ＋ 8%/SCOLOR=254>\ 
+<>                                                              \ \ \
+<>                                                     <晋升战国称号提高人物攻击伤害及特殊属性，每/SCOLOR=249>\
+<>                                                     <一次提升都能让你感觉实力大增！/SCOLOR=249>\  \
+<>                                                     <当前晋升需要：/SCOLOR=250>1588点卷\ \
+<>                                                                  <→>[<点击晋升称号/@点卷8>]<←>\
+
+
+#IF
+Equal U12 8
+#ACT
+OPENMERCHANTBIGDLG 1 209 1 0 0 0 0
+#SAY
+<IMGEX:1:213:214:215:582:20/@exit>\ \ \ \
+<>                                                     <李淳罡：/FCOLOR=251>\
+<>                                                         <我若成佛，天下无魔，我若成魔，佛奈我何！/FCOLOR=70>  \ 
+<>                                                     \ 
+<>                                                      <传说最顶尖的强者，拥有神鬼莫测之能，抬手即/FCOLOR=250>\
+<>                                                      <可破碎虚空，剑开天门！号“万世主宰”/FCOLOR=250>\ \  \
+<>                                                     <当前晋升：/SCOLOR=249><【战国·至尊】/SCOLOR=253>\ \
+<>                                                            <人物基础属性： 攻魔道 ＋10/SCOLOR=251>\ 
+<>                                                            <增加攻击伤害： ＋ 11%/SCOLOR=254>\  
+<>                                                            <杀人爆率增加： ＋ 9%/SCOLOR=254>\ 
+<>                                                             \ \ \
+<>                                                     <晋升战国称号提高人物攻击伤害及特殊属性，每/SCOLOR=249>\
+<>                                                     <一次提升都能让你感觉实力大增！/SCOLOR=249>\  \
+<>                                                     <当前晋升需要：/SCOLOR=250>点卷*2588\ \
+<>                                                                  <→>[<点击晋升称号/@点卷9>]<←>\
+
+
+#IF
+Equal U12 9
+#ACT
+OPENMERCHANTBIGDLG 1 209 1 0 0 0 0
+#SAY
+<IMGEX:1:213:214:215:582:20/@exit>\ \ \ \
+<>                                                     <李淳罡：/FCOLOR=251>\
+<>                                                         <我若成佛，天下无魔，我若成魔，佛奈我何！/FCOLOR=70>  \ 
+<>                                                     \ 
+<>                                                      <传说最顶尖的强者，拥有神鬼莫测之能，抬手即/FCOLOR=250>\
+<>                                                      <可破碎虚空，剑开天门！号“万世主宰”/FCOLOR=250>\ \  \
+<>                                                     <当前晋升终极：/SCOLOR=249><【万世主宰】/SCOLOR=253>\ \
+<>                                                            <人物基础属性： 攻魔道 ＋12/SCOLOR=251>\
+   
+<>                                                            <增加攻击伤害： ＋ 16%/SCOLOR=254>\ 
+<>                                                            <杀人爆率增加： ＋ 10%/SCOLOR=254>\ \ \  \
+<>                                                     <晋升战国称号提高人物攻击伤害及特殊属性，每/SCOLOR=249>\
+<>                                                     <一次提升都能让你感觉实力大增！/SCOLOR=249>\  \
+<>                                                     <当前晋升需要：/SCOLOR=250>点卷*3888\ \ 
+<>                                                                  <→>[<点击晋升称号/@点卷10>]<←>\
+
+
+#IF
+Equal U12 10
+#ACT
+OPENMERCHANTBIGDLG 1 209 1 0 0 0 0
+#SAY
+<IMGEX:1:213:214:215:582:20/@exit>\ \ \ \
+<>                                                     <李淳罡：/FCOLOR=251>\
+<>                                                         <我若成佛，天下无魔，我若成魔，佛奈我何！/FCOLOR=70>  \ 
+<>                                                     \ 
+<>                                                      <传说最顶尖的强者，拥有神鬼莫测之能，抬手即/FCOLOR=250>\
+<>                                                      <可破碎虚空，剑开天门！号“万世主宰”/FCOLOR=250>\ \  \ \ \
+<>                                                             <您已进阶到终极称号“万世主宰”！/SCOLOR=253>\ \
+<>                                                             <当前称号：/SCOLOR=251><【卍万世主宰卍】/SCOLOR=249>\ 
+
+
+
+
+
+[@点卷1]
+#IF
+Equal U12 0
+CHECKGAMEDIAMOND > 29
+CHECK [88] 0
+#act
+GAMEDIAMOND - 30
+MOV U12 1
+CONFERTITLE 战国·书生
+messagebox \\恭喜您晋升：战国·书生
+SENDMSG 0 系统公告ぐ：恭喜玩家「%s」晋升了『战国·书生』，江湖又将掀起一片血雨腥风！
+GOTO @main
+#ELSEACT
+MESSAGEBOX 晋升失败:原因如下\\　　　　1.您的“点卷”数量不足！
+BREAK
+
+[@点卷2]
+#IF
+Equal U12 1
+CHECKGAMEDIAMOND > 49
+CHECK [88] 0
+#act
+GAMEDIAMOND - 50
+MOV U12 2
+DEPRIVETITLE 战国·书生
+CONFERTITLE 战国·游侠
+messagebox \\恭喜您晋升：战国·游侠
+SENDMSG 0 系统公告ぐ：恭喜玩家「%s」晋升了『战国·游侠』，江湖又将掀起一片血雨腥风！
+GOTO @main
+#ELSEACT
+MESSAGEBOX 晋升失败:原因如下\\　　　　1.您的“点卷”数量不足！
+BREAK
+
+[@点卷3]
+#IF
+Equal U12 2
+CHECKGAMEDIAMOND > 79
+CHECK [88] 0
+#act
+GAMEDIAMOND - 80
+MOV U12 3
+DEPRIVETITLE 战国·游侠
+CONFERTITLE 战国·英雄
+messagebox \\恭喜您晋升：战国·英雄
+SENDMSG 0 系统公告ぐ：恭喜玩家「%s」晋升了『战国·英雄』，江湖又将掀起一片血雨腥风！
+GOTO @main
+#ELSEACT
+MESSAGEBOX 晋升失败:原因如下\\　　　　1.您的“点卷”数量不足！
+BREAK
+
+[@点卷4]
+#IF
+Equal U12 3
+CHECKGAMEDIAMOND > 149
+CHECK [88] 0
+#act
+GAMEDIAMOND - 150
+MOV U12 4
+DEPRIVETITLE 战国·英雄
+CONFERTITLE 战国·豪杰
+messagebox \\恭喜您晋升：战国·豪杰
+SENDMSG 0 系统公告ぐ：恭喜玩家「%s」晋升了『战国·豪杰』，江湖又将掀起一片血雨腥风！
+GOTO @main
+#ELSEACT
+MESSAGEBOX 晋升失败:原因如下\\　　　　1.您的“点卷”数量不足！
+BREAK
+
+[@点卷5]
+#IF
+Equal U12 4
+CHECKGAMEDIAMOND > 299
+CHECK [88] 0
+#act
+GAMEDIAMOND - 300
+MOV U12 5
+DEPRIVETITLE 战国·豪杰
+CONFERTITLE 战国·尊者
+messagebox \\恭喜您晋升：战国·尊者
+SENDMSG 0 系统公告ぐ：恭喜玩家「%s」晋升了『战国·尊者』，江湖又将掀起一片血雨腥风！
+GOTO @main
+#ELSEACT
+MESSAGEBOX 晋升失败:原因如下\\　　　　1.您的“点卷”数量不足！
+BREAK
+
+
+
+
+[@点卷6]
+#IF
+Equal U12 5
+CHECKGAMEDIAMOND > 499
+CHECK [88] 0
+#act
+GAMEDIAMOND - 500
+MOV U12 6
+DEPRIVETITLE 战国·尊者
+CONFERTITLE 战国·王者
+messagebox \\恭喜您晋升：战国·王者
+SENDMSG 0 系统公告ぐ：恭喜玩家「%s」晋升了『战国·王者』，江湖又将掀起一片血雨腥风！
+GOTO @main
+#ELSEACT
+MESSAGEBOX 晋升失败:原因如下\\　　　　1.您的“点卷”数量不足！
+BREAK
+
+
+[@点卷7]
+#IF
+Equal U12 6
+CHECKGAMEDIAMOND > 999
+CHECK [88] 0
+#act
+GAMEDIAMOND - 1000
+MOV U12 7
+DEPRIVETITLE 战国·王者
+CONFERTITLE 战国·宗师
+messagebox \\恭喜您晋升：战国·宗师
+SENDMSG 0 系统公告ぐ：恭喜玩家「%s」晋升了『战国·宗师』，江湖又将掀起一片血雨腥风！
+GOTO @main
+#ELSEACT
+MESSAGEBOX 晋升失败:原因如下\\　　　　1.您的“点卷”数量不足！
+BREAK
+
+[@点卷8]
+#IF
+Equal U12 7
+CHECKGAMEDIAMOND > 1587
+CHECK [88] 0
+#act
+GAMEDIAMOND - 1588
+MOV U12 8
+DEPRIVETITLE 战国·宗师
+CONFERTITLE 战国·霸主
+messagebox \\恭喜您晋升：战国·霸主
+SENDMSG 0 系统公告ぐ：恭喜玩家「%s」晋升了『战国·霸主』，江湖又将掀起一片血雨腥风！
+GOTO @main
+#ELSEACT
+MESSAGEBOX 晋升失败:原因如下\\　　　　1.您的“点卷”数量不足！
+BREAK
+
+[@点卷9]
+#IF
+Equal U12 8
+CHECKGAMEDIAMOND > 2587
+CHECK [88] 0
+#act
+GAMEDIAMOND - 2588
+MOV U12 9
+DEPRIVETITLE 战国·霸主
+CONFERTITLE 战国·至尊
+messagebox \\恭喜您晋升：战国·至尊
+SENDMSG 0 系统公告ぐ：恭喜玩家「%s」晋升了『战国·至尊』，江湖又将掀起一片血雨腥风！！
+SENDMSG 0 系统公告ぐ：恭喜玩家「%s」晋升了『战国·至尊』，江湖又将掀起一片血雨腥风！！
+GOTO @main
+#ELSEACT
+MESSAGEBOX 晋升失败:原因如下\\　　　　1.您的“点卷”数量不足！
+
+[@点卷10]
+#IF
+Equal U12 9
+CHECKGAMEDIAMOND > 3887
+CHECK [88] 0
+#act
+GAMEDIAMOND - 3888
+MOV U12 10
+DEPRIVETITLE 战国·至尊
+CONFERTITLE 万世主宰
+messagebox \\恭喜您晋升：万世主宰
+SENDMOVEMSG 0 253 255 150 1 ≮系统公告≯：恭喜玩家『<$USERNAME>』晋升了『卍万世主宰卍』，十步杀一人，千里不留行！
+SENDMSG 0 系统公告ぐ：恭喜玩家「%s」晋升了『卍万世主宰卍』，十步杀一人，千里不留行！！
+SENDMSG 0 系统公告ぐ：恭喜玩家「%s」晋升了『卍万世主宰卍』，十步杀一人，千里不留行！！
+GOTO @main
+#ELSEACT
+MESSAGEBOX 晋升失败:原因如下\\　　　　1.您的“点卷”数量不足！！
+BREAK

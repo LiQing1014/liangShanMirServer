@@ -1,0 +1,10 @@
+[@сно╥╧╔бт]
+{
+
+#IF
+Equal U13 0
+#ACT
+OPENMERCHANTBIGDLG 1 8 0 0 0 0 0
+#say
+<ImgEx:1:5:5:6:392:-16/@EXIT>
+11111111

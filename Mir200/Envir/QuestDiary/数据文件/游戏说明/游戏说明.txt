@@ -1,0 +1,42 @@
+[@youxi说明]
+{
+
+#if
+#act
+messagebox 该功能已禁用。
+break
+
+#IF
+#ACT
+close
+#SAY
+<>\
+<>            <1.76古剑情缘/FCOLOR=254>  —  <千里传音(全服喊话)/FCOLOR=254> \ \
+<--------------------------------------------------------------/AUTOCOLOR=91>\ 
+「<[全服喊话-元宝]/@@InPutString88>」　 <→/FCOLOR=70>　<功能介绍：/FCOLOR=253>：<喊话每次需要1200元宝/FCOLOR=250>\
+<--------------------------------------------------------------/AUTOCOLOR=91>\
+「<[全服喊话-点卷]/@@InPutString89>」　 <→/FCOLOR=70>　<功能介绍：/FCOLOR=253>：<喊话每次需要 30 点卷/FCOLOR=250>\ 
+<--------------------------------------------------------------/AUTOCOLOR=91>\
+
+[@InPutString88]
+#IF
+CheckGameGold > 1199
+#ACT
+GameGold - 1200
+SENDTOPCHATBOARDMSG 0 249 255 30 玩家【<$Username>】喊话：<$STR(S88)> 1
+#ELSEACT
+MESSAGEBOX 元宝不足！
+BREAK
+
+[@InPutString89]
+#IF
+CHECKGameDiamond > 29
+#ACT
+GameDiamond - 30
+SENDTOPCHATBOARDMSG 0 249 255 30 玩家【<$Username>】喊话：<$STR(S89)> 1
+#ELSEACT
+MESSAGEBOX 点卷不足！
+BREAK
+
+
+}

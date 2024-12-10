@@ -1,0 +1,443 @@
+[@基础按钮QF]
+{
+
+[@图标伸缩]
+#CALL [\基础按钮\顶部按钮.txt] @顶部按钮
+
+[@B_回收]
+; #CALL [\按钮功能\装备回收.txt] @装备回收
+#CALL [\游戏登陆\装备回收.txt] @开始回收 
+
+[@T_首充]
+#CALL [\按钮功能\首充.txt] @首充
+
+[@T_开服]
+#CALL [\按钮功能\开服好礼.txt] @开服好礼
+
+[@T_福利]
+#CALL [\按钮功能\福利大厅.txt] @福利大厅
+
+[@T_赞助]
+#CALL [\按钮功能\赞助.txt] @赞助
+
+[@T_助力]
+#CALL [\按钮功能\助力.txt] @助力
+
+[@T_攻略]
+#CALL [\按钮功能\攻略.txt] @攻略
+
+[@S_巡航]
+#CALL [\按钮功能\巡航.txt] @巡航
+
+[@B_货币兑换]
+#CALL [\按钮功能\货币兑换.txt] @货币兑换
+
+[@T_狂暴]
+#if
+#act
+#call [\按钮功能\狂暴之力.txt] @狂暴之力
+
+[@T_装扮]
+#if
+#act
+#call [\按钮功能\免费装扮.txt] @免费装扮
+
+[@T_客服]
+#act
+OPENHYPERLINK 701
+; sendmsg 9 111
+
+
+[@T_拉起充值]
+#IF
+equal <$CLIENTFLAG> 2
+#ACT
+PULLPAY <$STR(S$TCZ_JE)> 1 20
+#elseact
+PULLPAY <$STR(S$TCZ_JE)> <$STR(S$CZ_QD)> 20
+
+[@T_拉起充值1]
+#IF
+LARGE <$NPCINPUT(3)> 9
+#ACT
+PULLPAY <$NPCINPUT(3)> 1 20
+#ELSEACT
+PULLPAY 10 1 20
+
+[@T_拉起充值2]
+#IF
+LARGE <$NPCINPUT(3)> 9
+#ACT
+PULLPAY <$NPCINPUT(3)> <$STR(S$CZ_QD)> 20
+#ELSEACT
+PULLPAY 10 <$STR(S$CZ_QD)> 20
+
+[@T_拉起充值3]
+#IF
+#ACT
+PULLPAY <$STR(S$TCZ_JE)> <$STR(S$CZ_QD)> 20
+
+[@控制台QF]
+#if
+#act
+#call [\按钮功能\后台维护系统.txt] @控制台main
+
+[@T_盒子礼包]
+#IF
+#ACT
+OPENHYPERLINK 111
+BREAK
+
+[@T_交易行]
+#IF
+#ACT
+OPENHYPERLINK 35
+BREAK
+
+[@T_充值]
+#IF
+; Equal <$CLIENTFLAG> 2
+#ACT
+#CALL [\基础按钮\充值界面.txt] @充值界面
+; #ELSEACT
+; OPENHYPERLINK 26
+
+[@B_刷新]
+#ACT
+REFRESHBAG
+
+[@B_仓库]
+#ACT
+OPENSTORAGE
+
+[@T_商城]
+#IF
+#ACT
+OPENHYPERLINK 9
+
+[@S_角色]
+#IF
+#ACT
+OPENHYPERLINK 1
+
+[@S_背包]
+#IF
+#ACT
+OPENHYPERLINK 7
+
+[@S_装扮]
+#IF
+#ACT
+OPENHYPERLINK 19
+
+[@S_社交]
+#IF
+#ACT
+OPENHYPERLINK 28
+
+[@S_行会]
+#IF
+#ACT
+OPENHYPERLINK 31
+
+[@S_拍卖行]
+#IF
+CHECKMONEY 游戏真充 ? 58
+#elseact
+sendmsg 9 提示：防止小号肆意泛滥,需要充值满58元才能使用拍卖行功能哦！
+break
+
+#IF
+#ACT
+OPENHYPERLINK 27
+
+[@B_排行榜]
+#IF
+#ACT
+OPENHYPERLINK 32
+
+[@S_设置]
+#IF
+#ACT
+OPENHYPERLINK 23
+
+[@S_传送]
+#if
+#act
+#call [\按钮功能\大陆传送.txt] @大陆传送main
+
+[@B_切换角色]
+#IF
+#ACT
+OPENHYPERLINK 29
+
+[@装扮系统]
+#if
+#act
+#call [\按钮功能\装扮系统.txt] @QF_装扮_main
+
+[@任务系统QF]
+#if
+#act
+#call [\按钮功能\任务系统.txt] @任务系统main
+
+[@切换模式]
+#IF
+EQUAL N$切换模式 1
+#ACT
+MOV N$切换模式 0
+DELBUTTON 108 4
+BREAK
+#IF
+#ACT
+MOV N$QTMS_1 2
+MOV N$QTMS_2 1
+MOV N$HPMS_1 2
+MOV N$HPMS_2 1
+MOV N$BZMS_1 2
+MOV N$BZMS_2 1
+MOV N$HHMS_1 2
+MOV N$HHMS_2 1
+MOV N$SEMS_1 2
+MOV N$SEMS_2 1
+#IF
+CheckAttackMode 0
+#ACT
+MOV N$QTMS_1 1
+MOV N$QTMS_2 2
+#IF
+CheckAttackMode 1
+#ACT
+MOV N$HPMS_1 1
+MOV N$HPMS_2 2
+#IF
+CheckAttackMode 4
+#ACT
+MOV N$BZMS_1 1
+MOV N$BZMS_2 2
+#IF
+CheckAttackMode 5
+#ACT
+MOV N$HHMS_1 1
+MOV N$HHMS_2 2
+#IF
+CheckAttackMode 6
+#ACT
+MOV N$SEMS_1 1
+MOV N$SEMS_2 2
+#IF
+#ACT
+MOV N$切换模式 1
+MOV S$切换按钮 <Img|x=100|y=-237|img=custom/rt/ui/ms_bg.png>
+INC S$切换按钮 <Button|x=120|y=-237|pimg=custom/rt/ui/ms_qt_<$STR(N$QTMS_2)>.png|color=255|nimg=custom/rt/ui/ms_qt_<$STR(N$QTMS_1)>.png|link=@切换全体>
+INC S$切换按钮 <Img|x=100|y=-204|img=custom/rt/ui/ms_bg.png>
+INC S$切换按钮 <Button|x=120|y=-204|pimg=custom/rt/ui/ms_hp_<$STR(N$HPMS_2)>.png|color=255|nimg=custom/rt/ui/ms_hp_<$STR(N$HPMS_1)>.png|link=@切换和平>
+INC S$切换按钮 <Img|x=100|y=-171|img=custom/rt/ui/ms_bg.png>
+INC S$切换按钮 <Button|x=120|y=-171|pimg=custom/rt/ui/ms_bz_<$STR(N$BZMS_2)>.png|color=255|nimg=custom/rt/ui/ms_bz_<$STR(N$BZMS_1)>.png|link=@切换编组>
+INC S$切换按钮 <Img|x=100|y=-138|img=custom/rt/ui/ms_bg.png>
+INC S$切换按钮 <Button|x=120|y=-138|pimg=custom/rt/ui/ms_hh_<$STR(N$HHMS_2)>.png|color=255|nimg=custom/rt/ui/ms_hh_<$STR(N$HHMS_1)>.png|link=@切换行会>
+INC S$切换按钮 <Img|x=100|y=-105|img=custom/rt/ui/ms_bg.png>
+INC S$切换按钮 <Button|x=120|y=-105|pimg=custom/rt/ui/ms_se_<$STR(N$SEMS_2)>.png|color=255|nimg=custom/rt/ui/ms_se_<$STR(N$SEMS_1)>.png|link=@切换善恶>
+ADDBUTTON 108 4 <$STR(S$切换按钮)>
+BREAK
+
+[@切换全体]
+#ACT
+ChangeAttatckMode 0
+MOV N$切换模式 0
+DELBUTTON 108 4
+#CALL [\基础按钮\攻击模式.txt] @攻击模式
+[@切换和平]
+#ACT
+ChangeAttatckMode 1
+MOV N$切换模式 0
+DELBUTTON 108 4
+#CALL [\基础按钮\攻击模式.txt] @攻击模式
+[@切换编组]
+#ACT
+ChangeAttatckMode 4
+MOV N$切换模式 0
+DELBUTTON 108 4
+#CALL [\基础按钮\攻击模式.txt] @攻击模式
+[@切换行会]
+#ACT
+ChangeAttatckMode 5
+MOV N$切换模式 0
+DELBUTTON 108 4
+#CALL [\基础按钮\攻击模式.txt] @攻击模式
+[@切换善恶]
+#ACT
+ChangeAttatckMode 6
+MOV N$切换模式 0
+DELBUTTON 108 4
+#CALL [\基础按钮\攻击模式.txt] @攻击模式
+
+
+
+[@开始挂机]
+#ACT
+StartAutoPlayGame
+
+[@停止挂机]
+#ACT
+StopAutoPlayGame
+
+[@StartAutoPlayGame]
+#IF
+EQUAL N$UI_C 0
+#ACT
+MOV S$BTN_SZ -202
+#ELSEACT
+MOV S$BTN_SZ -92
+
+#IF
+Equal <$CLIENTFLAG> 2
+#ACT
+MOV N$GJ_DQ 1
+MOV S$挂机 <Button|id=111|x=-128|y=-380|nimg=private/main/Skill/1900012708.png|link=@停止挂机>
+INC S$挂机 <Effect|x=-133|y=-386|effecttype=0|effectid=70029|scale=1|speed=1>
+DELBUTTON 104 10
+ADDBUTTON 104 10 <$STR(S$挂机)>
+MOV S$挂机B <Button|x=110|y=<$STR(S$BTN_SZ)>|nimg=private/main/auto_tips/bg_kjxl_03.png|link=@挂机_打开设置>
+ADDBUTTON 108 2 <$STR(S$挂机B)>
+#ELSEACT
+MOV N$GJ_DQ 1
+MOV S$挂机 <Button|id=111|x=-70|y=-340|nimg=private/main/Skill/1900012708.png|link=@停止挂机>
+INC S$挂机 <Effect|x=-74|y=-347|effecttype=0|effectid=70029|scale=1|speed=1>
+DELBUTTON 104 10
+ADDBUTTON 104 10 <$STR(S$挂机)>
+MOV S$挂机B <Button|x=70|y=-232|nimg=private/main/auto_tips/bg_kjxl_03.png|link=@挂机_打开设置>
+ADDBUTTON 108 2 <$STR(S$挂机B)>
+
+
+[@StopAutoPlayGame]
+#IF
+Equal <$CLIENTFLAG> 2
+#ACT
+MOV N$GJ_DQ 0
+MOV S$挂机 <Button|id=111|x=-128|y=-380|nimg=private/main/Skill/1900012709.png|link=@开始挂机>
+DELBUTTON 104 10
+DELBUTTON 108 2
+ADDBUTTON 104 10 <$STR(S$挂机)>
+#ELSEACT
+MOV N$GJ_DQ 0
+MOV S$挂机 <Button|id=111|x=-70|y=-340|nimg=private/main/Skill/1900012709.png|link=@开始挂机>
+DELBUTTON 104 10
+DELBUTTON 108 2
+ADDBUTTON 104 10 <$STR(S$挂机)>
+
+[@挂机_打开设置]
+#ACT
+OPENHYPERLINK 22
+BREAK
+
+[@OpenBottomUI]
+#ACT
+#CALL [\基础按钮\攻击模式.txt] @攻击模式
+MOV S$龙尾 <Img|children={1a,1b}|x=190|y=-140|img=private/main/9.png>
+; INC S$龙尾 <Img|id=1a|x=8|y=48|img=private/main/8.png>
+INC S$龙尾 <Button|id=1b|x=-31|y=51|pimg=private/main/Button_3/1900012059.png|color=255|nimg=private/main/Button_3/1900012058.png|link=@T_商城>
+ADDBUTTON 108 6 <$STR(S$龙尾)>
+ADDBUTTON 108 5 <Button|x=165|y=-120|pimg=custom/rt/ui/b2.png|color=255|nimg=custom/rt/ui/b1.png|link=@B_排行榜>
+ADDBUTTON 108 10 <Button|x=200|y=-105|pimg=custom/rt/ui/pb1.png|color=255|nimg=custom/rt/ui/pb0.png|link=@QF_屏蔽信息>
+Addbutton 108 200 <Frames|x=-322.0|y=-190.0|width=263.7|height=214.3|speed=10|prefix=custom/frame/1/a_|loop=-1|count=15|suffix=.png><Frames|x=-275.0|y=-195.0|width=156.6|height=178.2|speed=10|prefix=custom/frame/2/|loop=-1|count=20|suffix=.png><Frames|x=95.0|y=-180.0|width=201.6|height=182.4|speed=10|prefix=custom/frame/3/|loop=-1|count=20|suffix=.png>
+
+MOV N$T_收缩 0
+#CALL [\基础按钮\TOP图标.txt] @TOP图标
+MOV N$信息栏收缩 1
+GOTO @信息栏收缩
+OPENHYPERLINK 110 1
+MOV N$UI_C 0
+#IF
+EQUAL N$GJ_DQ 1
+#ACT
+DELBUTTON 108 2
+DELAYGOTO 400 @StartAutoPlayGame
+
+[@CloseBottomUI]
+#ACT
+DELBUTTON 108 3
+DELBUTTON 108 5
+DELBUTTON 108 6
+DELBUTTON 108 10
+DELBUTTON 108 200
+MOV N$T_收缩 1
+#CALL [\基础按钮\TOP图标.txt] @TOP图标
+MOV N$信息栏收缩 0
+GOTO @信息栏收缩
+OPENHYPERLINK 110 2
+MOV N$UI_C 1
+#IF
+EQUAL N$GJ_DQ 1
+#ACT
+DELBUTTON 108 2
+DELAYGOTO 400 @StartAutoPlayGame
+
+[@DT_开启传送]
+#IF
+check [9] 0
+#ACT
+SENDMSG 9 <font color = '#FF0000'>开启狂暴即可使用</font>
+SET [4] 0
+#CALL [\基础按钮\主界面基础按钮QM.txt] @地图按钮
+BREAK
+
+#IF
+CHECK [4] 0
+#ACT
+SET [4] 1
+#CALL [\基础按钮\主界面基础按钮QM.txt] @地图按钮
+BREAK
+#ELSEACT
+SET [4] 0
+#CALL [\基础按钮\主界面基础按钮QM.txt] @地图按钮
+BREAK
+
+
+
+[@信息栏收缩]
+#IF
+EQUAL N$信息栏收缩 0
+#ACT
+MOV N$信息栏收缩 1
+BREAK
+#ELSEACT
+MOV N$信息栏收缩 0
+BREAK
+
+
+[@T_选择渠道]
+#IF
+EQUAL S$CZ_QD 1
+#ACT
+MOV N$CZ_QD 0
+#CALL [\基础按钮\充值界面.txt] @充值界面
+BREAK
+#IF
+EQUAL S$CZ_QD 2
+#ACT
+MOV N$CZ_QD 1
+#CALL [\基础按钮\充值界面.txt] @充值界面
+BREAK
+#IF
+EQUAL S$CZ_QD 3
+#ACT
+MOV N$CZ_QD 2
+#CALL [\基础按钮\充值界面.txt] @充值界面
+BREAK
+
+
+[@QF_屏蔽信息]
+#IF
+CHECK [201] 0
+#ACT
+SET [201] 1
+SENDMSG 7 [提示]您已开启过滤全服信息,再次点击即可关闭.
+FILTERGLOBALMSG 1
+BREAK
+#ELSEACT
+SET [201] 0
+SENDMSG 6 [提示]您已关闭过滤全服信息,再次点击即可开启.
+FILTERGLOBALMSG 0
+BREAK
+}

@@ -1,0 +1,51 @@
+[@main]
+
+#IF
+#ACT
+#SAY
+; <><┌┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┬┈┈┈┈┈┐/SCOLOR=254><>\
+; <><︳/SCOLOR=254>  <三山五岳/SCOLOR=254><:安全区域·怪物聚集·适合挂机·安全/SCOLOR=161> <︳/SCOLOR=254> <精品原创/SCOLOR=19> <︳/SCOLOR=254><>\
+; <><├┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┬┈┈┈┈┈┤/SCOLOR=254><>\
+; <><︳/SCOLOR=254>  <BOSS地图/SCOLOR=250><:各种精英、BOSS系列怪物应有尽有...../SCOLOR=253><├┈┈┈┈┈┤/SCOLOR=254><>\
+; <><├┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┤/SCOLOR=254> <进入地图|249#进入条件：^-^250#充值达到5000点^-^250#此地图很大，是安全区，可以放心挂机/@进入地图A> <︳/SCOLOR=254><>\
+; <><︳/SCOLOR=254>  <地图爆率/SCOLOR=250><:高级装备、高级特殊、货币材料..../SCOLOR=251>   <├┈┈┈┈┈┤/SCOLOR=254><>\
+; <><├┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┤/SCOLOR=254> <进入地图|249#进入条件：^-^250#充值达到5000点^-^250#此地图很大，是安全区，可以放心挂机/@进入地图A> <︳/SCOLOR=254><>\
+; <><︳/SCOLOR=254>  <进入条件/SCOLOR=250><:充值点不足5000点★级怪物必爆大量大米-宝石/SCOLOR=242><>\
+; <><└┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┴┈┈┈┈┈┘/SCOLOR=254><>\
+; <
+
+<Img|x=0.0|y=0.0|width=620|height=260|scale9t=10|scale9r=10|scale9l=10|scale9b=10|move=0|bg=1|img=public/bg_npc_04.jpg|reset=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=34.0|y=36.0|tipsx=10|tipsy=80|color=254|size=16|text=三山五岳>
+<Text|a=0|x=122.0|y=36.0|tipsx=10|tipsy=80|color=161|size=16|text=:安全区域·怪物聚集·适合挂机·安全>
+<Text|a=0|x=506.0|y=36.0|tipsx=10|tipsy=80|color=19|size=16|text=精品原创>
+<Text|a=0|x=34.0|y=76.0|tipsx=10|tipsy=80|color=250|size=16|text=BOSS地图>
+<Text|a=0|x=122.0|y=76.0|tipsx=10|tipsy=80|color=253|size=16|text=:各种精英、BOSS系列怪物应有尽有.....>
+<Text|a=0|x=508.0|y=96.0|tipsx=10|tipsy=80|color=251|size=16|text=进入地图|link=@进入地图A>
+<Text|a=0|x=1497.0|y=96.0|tipsx=10|tipsy=80|color=254|size=16|text=︳>
+<Text|a=0|x=34.0|y=116.0|tipsx=10|tipsy=80|color=250|size=16|text=地图爆率>
+<Text|a=0|x=122.0|y=116.0|tipsx=10|tipsy=80|color=251|size=16|text=:高级装备、高级特殊、货币材料....>
+<Text|a=0|x=508.0|y=136.0|tipsx=10|tipsy=80|color=251|size=16|text=进入地图|link=@进入地图A>
+<Text|a=0|x=1497.0|y=136.0|tipsx=10|tipsy=80|color=254|size=16|text=︳>
+<Text|a=0|x=34.0|y=156.0|tipsx=10|tipsy=80|color=250|size=16|text=进入条件>
+<Text|a=0|x=122.0|y=156.0|tipsx=10|tipsy=80|color=242|size=16|text=:充值点不足5000点★级怪物必爆大量大米-宝石>
+
+
+[@进入地图A]
+#if
+CHECKGAMEGIRD > 4999
+#act
+#ELSEACT
+messagebox 对不起，充值点不足5000点，无法进入！
+BREAK
+
+
+
+#IF
+#ACT
+Map 三山五岳
+SENDMSG 0 {[地图公告]:|151:0:1}江湖少侠「{<$USERNAME>|250:0:1}」成功进入地图:{「<$MapTitle>」|254:0:1}打宝
+break
+
+

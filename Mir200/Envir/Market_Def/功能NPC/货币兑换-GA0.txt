@@ -1,0 +1,64 @@
+()
+%100
+[@main]
+#IF
+#ACT
+#SAY
+
+#IF
+#ACT
+#SAY
+{[<$Username>]/SCOLOR=154}　　　你好,金币即为金币！　　　{当前金币数量为：<$GOLDCOUNT>/FCOLOR=250}   \ 
+<１０/FCOLOR=251><金币(金币)/FCOLOR=253>　<→ 可以兑换 →/FCOLOR=251>　 <(真实充值)/FCOLOR=249>　<１元/FCOLOR=251>\  \ 
+<>       <兑换10金币/@兑换红包1>      <兑换100金币/@兑换红包2>      <兑换500金币/@兑换红包5>   \ \ 
+<温馨提示：金币可以兑换点卷,可以在这里兑换，和[官方充值]一样！/FCOLOR=253>\
+<温馨提示：金币等于金币，交易使用！充值1:10，永久回收1:10！/FCOLOR=254>\  \ 
+<提示：金币用于玩家之间交易，满500点可提现，提现手续费10%/FCOLOR=249> \ 
+
+
+ 
+[@兑换红包1]
+#IF
+CHECKGOLD 10
+#ACT
+take 金币 10
+GAMEDIAMOND + 10
+GAMEGIRD + 1
+CALCVAR HUMAN 充值积分 + 1
+SAVEVAR HUMAN 充值积分 ..\QuestDiary\每日充值积分\充值积分.txt
+SENDMSG 1 玩家『<$USERNAME>』成功兑换了『<10>』点卷！
+break
+#ELSEACT
+MESSAGEBOX \\您的金币数量不足，无法兑换！
+break
+
+[@兑换红包2]
+#IF
+CHECKGOLD 100
+#ACT
+take 金币 100
+GAMEDIAMOND + 100
+GAMEGIRD + 10
+CALCVAR HUMAN 充值积分 + 10
+SAVEVAR HUMAN 充值积分 ..\QuestDiary\每日充值积分\充值积分.txt
+SENDMSG 1 玩家『<$USERNAME>』成功兑换了『<100>』点卷！
+break
+#ELSEACT
+MESSAGEBOX \\您的金币数量不足，无法兑换！
+break
+
+[@兑换红包5]
+#IF
+CHECKGOLD 500
+#ACT
+take 金币 500
+GAMEDIAMOND + 500
+GAMEGIRD + 50
+CALCVAR HUMAN 充值积分 + 50
+SAVEVAR HUMAN 充值积分 ..\QuestDiary\每日充值积分\充值积分.txt
+SENDMSG 1 玩家『<$USERNAME>』成功兑换了『<500>』点卷！
+break
+#ELSEACT
+MESSAGEBOX \\您的金币数量不足，无法兑换！
+break
+

@@ -1,0 +1,277 @@
+[@平台_每秒脚本]
+{
+;#if
+;Not	CheckContainstext	<$Servername>	小区
+;not	CheckContainstext	<$Maptitle>	微信
+;not	CheckOffline
+;CheckTextlist	..\Questdiary\一万七网络通服功能\怪物补偿数据.txt	[<$Map>]
+;CheckRangeMonCount <$Map> <$X> <$Y> 50 <	20
+;Not	INSAFEZONE
+;#act
+;goto	@怪物补偿系统
+
+
+#if
+Equal	S$商城按钮	开启
+Not	Equal	S$平台_商城特效	关闭
+#act
+Screffects	<$str(N$商城特效X)>	<$str(N$商城特效Y)>	<$str(N$通区_素材)> 470 20 1 50 0 0
+
+
+
+#if
+Not	Equal	S$充值数额
+Equal	S$手机绑定	开启
+Equal	S$手机
+#act
+Screffects	<$str(N$手机特效X)>	<$str(N$手机特效Y)>	<$str(N$通区_素材)> 520 10 1 100 0 0
+
+#IF
+LARGE N$通区_延迟 0
+#ACT
+DEC N$通区_延迟 1
+
+; 注释
+; #if
+; Not	CheckContainstext	<$Str(T11)>	:<$MACHINEID>
+; Not	Isonmap	wxbd
+; #act
+; Map	Wxbd
+
+
+#if
+Not	Equal	T12
+Not	CheckContainstext	<$Str(T12)>	封禁
+#act
+Inc	T12	 :未禁言:未封禁
+
+#IF
+isonmap	wxxhw
+#ACT
+CHANGEMODEEX	10 1
+
+#IF
+Not	isonmap	wxxhw
+CheckContainstext	<$Str(T12)>	已封禁
+#ACT
+Map	wxxhw
+
+#IF
+isonmap	wxxhw
+Not	CheckContainstext	<$Str(T12)>	已封禁
+#ACT
+Gohome
+
+#If
+checkBagsize	10
+Checktextlist	..\..\..\..\装备补偿.txt	[<$Servername>:<$Username>]
+#act
+GetStringPos	..\..\..\..\装备补偿.txt	[<$Servername>:<$Username>]
+Inc	N0	1
+GetListString	..\..\..\..\装备补偿.txt	<$Str(N0)>	S$通区_补偿装备名	S$通区_补偿装备数
+Give	<$Str(S$通区_补偿装备名)>	<$Str(S$通区_补偿装备数)>
+Deltextlist	..\..\..\..\装备补偿.txt	[<$Servername>:<$Username>]
+Deltextlist	..\..\..\..\装备补偿.txt	<$Str(S$通区_补偿装备名)>:<$Str(S$通区_补偿装备数)>
+
+#IF
+CHECKCONTAINSTEXT <$SERVERNAME> 测试
+#ACT
+MOV S$运算时间 <$YEAR>-<$MONTH>-<$DAY>-23:59:59
+#IF
+CHECKCONTAINSTEXT <$SERVERNAME> 测试
+CHECKTIME <$TIME> <$STR(S$运算时间)> > 0 N$开区倒计时
+#ACT
+ESPDECODETIME S$开区提醒 <$STR(N$开区倒计时)>
+DEC S$开区提醒 0天
+SENDCENTERMSG 251 0 当前为：[<$Str(S$平台_版本)>测试区]　距离正式开区还有：<$STR(S$开区提醒)> 5 2 @WUXIAO1
+
+#If
+Not	Equal	S$游戏币记号	<$Str(U24)>
+#act
+Mov	S$游戏币记号	<$Str(U24)>
+AddtextlistEX ..\Questdiary\一万七网络通服功能\【<$MONTH>月游戏币记录】.txt 【<$DATETIME>】【<$USERNAME>】【当前币：<$Str(U24)>】 0
+
+
+#if
+CheckContainstext	<$Str(T12)>	修理开
+Large	N$自动修复周期	600
+#act
+Mov	N$自动修复周期	0
+goto	@免费修理装备
+;goto	@收费修理装备
+#elseact
+Inc	N$自动修复周期	1
+
+#If
+Equal	<$Hour>:<$MINUTE>:<$SECOND>	19:59:59
+CheckTextlist	..\Questdiary\一万七网络通服功能\【沙城领取记录】.txt	正在设置攻城
+#act
+Deltextlist	..\Questdiary\一万七网络通服功能\【沙城领取记录】.txt	正在设置攻城
+Deltextlist	..\Questdiary\一万七网络通服功能\【沙城领取记录】.txt	正在设置攻城
+Deltextlist	..\Questdiary\一万七网络通服功能\【沙城领取记录】.txt	正在设置攻城
+Deltextlist	..\Questdiary\一万七网络通服功能\【沙城领取记录】.txt	正在设置攻城
+break
+
+#If
+CheckTextlist	..\Questdiary\一万七网络通服功能\【沙城领取记录】.txt	正在设置攻城
+#act
+break
+
+
+
+#if
+Equal	<$Hour>:<$MINUTE>:<$SECOND>	19:59:30
+CheckContainstext	<$ServerName>	小区
+#act
+Mov	S$沙城信息
+Mov	S$沙城归属信息	
+Mov	S$沙城奖金信息
+Mov	S$沙城老大信息
+Mov	S$沙城时间信息
+Mov	S$沙城分区名
+GetRandomText ..\Questdiary\一万七网络通服功能\【沙城领取记录】.txt	<$Str(S$沙城信息)>	0
+ExtractString :	<$Str(S$沙城信息)> S$沙城归属信息	S$沙城奖金信息	S$沙城老大信息	S$沙城分区名	S$沙城时间信息
+goto	@设定自动攻城
+addtextlist	..\Questdiary\一万七网络通服功能\【沙城领取记录】.txt	正在设置攻城
+
+#if
+Equal	<$Hour>:<$MINUTE>:<$SECOND>	19:59:55
+CheckContainstext	<$ServerName>	小区
+#act
+addtextlist	..\Questdiary\一万七网络通服功能\【沙城领取记录】.txt	正在设置攻城
+goto	@二次检测攻城
+
+[@二次检测攻城]
+#or
+CheckTextlist	..\Questdiary\一万七网络通服功能\【沙城领取记录】.txt 新区攻城:1000游戏币　(未领取):-:<$Servername>:日期
+CheckTextlist	..\Questdiary\一万七网络通服功能\【沙城领取记录】.txt 合区攻城:300游戏币　(未领取):-:<$Servername>:日期
+CheckTextlist	..\Questdiary\一万七网络通服功能\【沙城领取记录】.txt 老区攻城:100游戏币　(未领取):-:<$Servername>:日期
+#act
+goto	@攻城设定开始
+break
+
+#if
+#act
+Mov	S$沙城信息
+Mov	S$沙城归属信息	
+Mov	S$沙城奖金信息
+Mov	S$沙城老大信息
+Mov	S$沙城时间信息
+Mov	S$沙城分区名
+
+GetRandomText ..\Questdiary\一万七网络通服功能\【沙城领取记录】.txt	<$Str(S$沙城信息)>	0
+ExtractString :	<$Str(S$沙城信息)> S$沙城归属信息	S$沙城奖金信息	S$沙城老大信息	S$沙城分区名	S$沙城时间信息
+goto	@设定自动攻城
+addtextlist	..\Questdiary\一万七网络通服功能\【沙城领取记录】.txt	正在设置攻城
+
+[@设定自动攻城]
+#or
+EQUAL	S$沙城老大信息
+EQUAL	S$沙城老大信息	-
+#act
+goto	@攻城设定开始
+
+#If
+Equal	S$沙城信息
+#act
+goto	@攻城设定开始
+AddTextListEx	..\Questdiary\一万七网络通服功能\【沙城领取记录】.txt 新区攻城:1000游戏币　(未领取):-:<$ServerName>:日期 0
+Break
+
+#If
+Not	Equal	S$沙城分区名	<$ServerName>
+#act
+goto	@攻城设定开始
+AddTextListEx	..\Questdiary\一万七网络通服功能\【沙城领取记录】.txt 合区攻城:300游戏币　(未领取):-:<$ServerName>:日期 0
+Break
+
+#if
+#act
+goto	@攻城设定开始
+AddTextListEx	..\Questdiary\一万七网络通服功能\【沙城领取记录】.txt 老区攻城:100游戏币　(未领取):-:<$ServerName>:日期 0
+[@攻城设定开始]
+#if
+#act
+AddAttackSabukAll 0
+SENDMSG 0 ┏≈☆★≈☆★≈☆★☆≈【攻城信息提示】≈☆★☆≈★☆≈★☆≈┓
+SENDMSG 0 ╔┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅╗
+SENDMSG 0 ┇ 所有行会已自动申请攻城！→请尽快组织行会准备进攻沙巴克城！ ┇ 
+SENDMSG 0 ┇ 所有行会已自动申请攻城！→每晚20点,自动开启全服大型攻城战！┇ 
+SENDMSG 0 ┇ 所有行会已自动申请攻城！→每个行会都可以攻城!无需提交头像！┇ 
+SENDMSG 0 ┇ 所有行会已自动申请攻城！→如果您的势力不行,建议找结盟好友！┇  
+SENDMSG 0 ╚┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅╝
+SENDMSG 0 ┗≈☆★≈☆★≈☆★☆≈【攻城信息提示】≈☆★☆≈★☆≈★☆≈┛
+SENDMOVEMSG 0 249 0 100 3 沙巴克攻城争霸已经开始！请各大行会做好准备，为了至高无上的至尊而战吧！
+SCENEVIBRATION 1 3 1
+
+[@收费修理装备]
+#IF
+RepairAll
+#act
+Sendmsg	7	修复成功：系统以为您自动修理全身装备！
+#elseact
+Sendmsg	7	修复失败：你的金币不足以修理全身装备！
+
+[@免费修理装备]
+#if
+#act
+ActRepairAll
+Sendmsg	7	系统以为您自动修理全身装备！
+[@怪物补偿系统]
+#if
+#act
+Inc	N$怪物补偿计时	1
+
+#if
+Small	N$怪物补偿计时	5
+#act
+break
+#if
+CheckContainstext	<$STATSERVERTIME>	分
+#act
+ExtractString	分钟 <$STATSERVERTIME> S$分	S$秒
+Dec	S$秒	秒
+
+#if
+CheckContainstext	<$Str(S$分)>	时
+#act
+ExtractString	小时 <$Str(S$分)> S$时	S$分
+
+#if
+CheckContainstext	<$Str(S$时)>	天
+#act
+ExtractString	天 <$Str(S$时)> S$天	S$时
+
+#If
+#act
+Mov	N$怪物补偿计时	0
+Mul	N$补偿时间	<$Str(S$时)>	60
+inc	N$补偿时间	<$Str(S$分)>
+
+
+#or
+CheckContainstext	<$Servername>	测
+Small	<$Str(N$补偿时间)>	240
+#ACT
+GetStringPos	..\Questdiary\一万七网络通服功能\怪物补偿数据.txt	[<$Map>]
+; Esploopgoto	@循环补偿	5
+
+
+while n$循环序列 < 5
+goto @循环补偿
+inc n$循环序列 1
+endwhile
+
+[@循环补偿]
+#if
+#act
+Inc	N0	1
+GetRandomText	..\Questdiary\一万七网络通服功能\怪物补偿数据.txt	S$怪物补偿数据 <$Str(N0)>
+ESPExtractStringEx	:	<$Str(S$怪物补偿数据)>	S$怪物数据
+#if
+Large	<$Str(S$怪物数据_2)>	30
+large	<$Str(S$怪物数据_3)>	30
+#act
+MonGenEx <$Map> <$X> <$Y> <$Str(S$怪物数据_4)> 30 6 0 <$Str(S$怪物数据_9)>
+
+}

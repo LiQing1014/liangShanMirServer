@@ -1,0 +1,69 @@
+[@登陆设置]
+{
+#IF
+ISNEWHUMAN
+gender man
+#ACT
+take 布衣(男) 1
+take 乌木剑 1
+give 乌木剑 1
+give 布衣(男) 1
+give 盟重传送石 1
+
+AutoTakeOnItem 乌木剑 1
+AutoTakeOnItem 布衣(男) 0
+
+
+; 注释
+; SETSTORAGEOPEN 20130801 20130802 20130803 20130804 2 20130806 20130807 20130808 1 20130810
+; SETSTORAGEOPEN 20130801 20130802 20130803 20130804 3 20130806 20130807 20130808 1 20130810
+
+ChangeAttatckMode 0
+SENDMSG 6 提示：请按F12呼出游戏内挂 
+;SENDMSG 0 ぐ:欢迎{『<$USERNAME>』|253:0:1}来到{『<$SERVERNAME>』|250:0:1}→1.76独家绿色公益三职业传奇→{[<$SERVERNAME>]|254:0:1}
+SendCenterMsg 254 0 【新人提示】：ぐ:欢迎『<$USERNAME>』来到『<$SERVERNAME>』→1.76独家绿色公益三职业传奇→[<$SERVERNAME>] 1 5
+
+
+#IF
+ISNEWHUMAN
+gender Woman
+#ACT
+take 布衣(女) 1
+take 乌木剑 1
+give 乌木剑 1
+give 布衣(女) 1
+give 盟重传送石 1
+
+AutoTakeOnItem 乌木剑 1
+AutoTakeOnItem 布衣(女) 0
+
+; 注释
+; SETSTORAGEOPEN 20130801 20130802 20130803 20130804 2 20130806 20130807 20130808 1 20130810
+; SETSTORAGEOPEN 20130801 20130802 20130803 20130804 3 20130806 20130807 20130808 1 20130810
+
+ChangeAttatckMode 0
+SENDMSG 6 提示：请按F12呼出游戏内挂
+SendCenterMsg 254 0 【新人提示】：ぐ:欢迎『<$USERNAME>』来到『<$SERVERNAME>』→1.76独家绿色公益三职业传奇→[<$SERVERNAME>] 1 5
+
+#if
+checklevelex > 5
+#act
+SendCenterMsg 254 0 【新人提示】：ぐ:欢迎『<$USERNAME>』来到『<$SERVERNAME>』→1.76独家绿色公益三职业传奇→[<$SERVERNAME>] 1 5
+
+
+#IF
+CHECKLEVELEX > 75
+#ACT
+CHANGELEVEL = 75
+SENDMSG 7 提示：本服封顶75级，大于此等级将自动调整等级为75级！
+break
+
+
+;=============================假人登录提示================================
+
+
+
+
+
+
+}

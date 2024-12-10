@@ -1,0 +1,59 @@
+[@main]
+#IF
+#ACT
+close
+#say
+; 　   ¤╭⌒╮╭⌒╮                   \
+; < ╱◥██◣/scolor=249>╭⌒╮           < <$USERNAME>/AUTOCOLOR=161,250,254> <欢迎光临:/scolor=254>{<$SERVERNAME>/FCOLOR=249}\
+; <︱田︱田田|╰-------------/scolor=150>    　   \
+; <╬╬╬╬╬╬╬╬╬╬╬╬╬/scolor=64>    　 \
+; <> <主要怪物:/FCOLOR=7><青铜普通、精英、BOSS系列怪物/FCOLOR=43>\
+; <> <地图爆率:/FCOLOR=7><★/FCOLOR=250>\
+; <> <进入条件:/FCOLOR=7><50级/FCOLOR=254>\ \
+; \                  <进入青铜摸鱼地图|250#进入条件：^-^161#1.人物等级达到50级^-^161#您当前的摸鱼值为：<$GAMEGLORY>/@进入青铜地图>             \ 
+
+<Img|width=530|height=250|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|reset=1>
+<Layout|x=502.0|y=0.0|width=80|height=80|link=@exit>
+<Button|x=530.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=59.0|y=42.0|tipsx=10|tipsy=80|color=161,250,254|size=16|text=<$USERNAME>>
+<Text|a=0|x=209.0|y=42.0|tipsx=10|tipsy=80|color=254|size=16|text=欢迎光临:>
+<Text|a=0|x=308.0|y=42.0|tipsx=10|tipsy=80|color=249|size=16|text=<$SERVERNAME>>
+<Text|a=0|x=32.0|y=85.0|tipsx=10|tipsy=80|color=7|size=16|text=主要怪物:>
+<Text|a=0|x=131.0|y=85.0|tipsx=10|tipsy=80|color=43|size=16|text=青铜普通、精英、BOSS系列怪物>
+<Text|a=0|x=32.0|y=111.0|tipsx=10|tipsy=80|color=7|size=16|text=挑战难度:>
+<Text|a=0|x=131.0|y=111.0|tipsx=10|tipsy=80|color=250|size=16|text=★>
+<Text|a=0|x=32.0|y=137.0|tipsx=10|tipsy=80|color=7|size=16|text=进入条件:>
+<Text|a=0|x=131.0|y=137.0|tipsx=10|tipsy=80|color=254|size=16|text=50级>
+<Text|a=0|x=32.0|y=199.0|tipsx=10|tipsy=80|color=251|size=16|text=进入青铜摸鱼地图|link=@进入青铜地图>
+<Text|x=32.0|y=163.0|color=7|size=16|text=当前摸鱼值:>
+<Text|x=131.0|y=163.0|color=249|size=16|text=<$GAMEGLORY>>
+
+
+
+
+[@进入青铜地图]
+
+;#IF
+;CHECKRENEWLEVEL < 12
+;#ACT
+;messagebox 对不起，你当前觉醒等级没有四层觉醒，无法进入该地图
+;break
+
+#IF
+CHECKLEVELEX < 50
+#ACT
+messagebox 对不起，您的等级不足50级，无法进入该地图！
+break
+
+
+
+
+#IF
+#ACT
+map 青铜摸鱼地图 
+SENDMSG 0 玩家{『<$USERNAME>』|250:0}闯入{『<$MapTitle>』|43:0}去摸鱼了！
+
+
+
+
+

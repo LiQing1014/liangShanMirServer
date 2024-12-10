@@ -1,0 +1,48 @@
+[@37W登录检测]
+{
+
+#IF
+CHECK [172] 1
+#ACT
+MESSAGEBOX 当前角色已被转区限制登录，请换号重新登录！
+KICK
+break
+
+; ======
+#if
+#act
+break
+
+
+#IF
+NOT ISDUMMY
+NOT EQUAL T22 
+NOT EQUAL T23 <$MACHINEID>
+not ISONMAP wxyz
+#ACT
+map wxyz
+ChangeModeEx 1 5000
+ChangeModeEx 2 5000
+ChangeModeEx 10 5000
+MOV N$异地状态 1
+MESSAGEBOX 登陆异常\\系统检测你当前机器码与上次登录不符\\请使用绑定微信进行验证！
+DELAYGOTO 2000 @开始异地验证
+
+
+#IF
+ISONMAP wxyz
+#ACT
+ChangeModeEx 1 5000
+ChangeModeEx 2 5000
+ChangeModeEx 10 5000
+MOV N$异地状态 1
+MESSAGEBOX 登陆异常\\系统检测你当前机器码与上次登录不符\\请使用绑定微信进行验证！
+DELAYGOTO 2000 @开始异地验证
+
+
+[@开始异地验证]
+#IF
+#ACT
+#CALL [37W通服功能\微信绑定.TXT] @验证微信号码
+
+}

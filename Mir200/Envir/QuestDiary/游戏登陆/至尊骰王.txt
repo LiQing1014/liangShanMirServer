@@ -1,0 +1,462 @@
+[@至尊骰王]
+{
+
+
+
+
+#IF
+#ACT
+MOV S$①①①属性 ^-^161#普通骰王属性：^-^255#攻击5-5^-^255#防御5-5^-^21#血量+50^-^254#暴击+5%^-^254#攻伤+5%^-^254#怪物切割+150^-^249#攻击加成+2%^-^250#血量加成+4%
+MOV S$⑥⑥⑥属性 ^-^253#至尊骰王附带：^-^255#攻击10-10^-^255#防御10-10^-^21#血量+100^-^254#暴击+10%^-^254#攻伤+10%^-^254#怪物切割+300^-^249#攻击加成+3%^-^250#血量加成+6%
+
+
+MOV S$①①①骰王 <Img:1750:69:10:-7|250#拥有者:<$STR(A41)><$STR(S$①①①属性)>/@><Img:1750:69:30:-7|250#拥有者:<$STR(A41)><$STR(S$①①①属性)>/@><Img:1750:69:50:-7|250#拥有者:<$STR(A41)><$STR(S$①①①属性)>/@>
+MOV S$②②②骰王 <Img:1751:69:10:-7|250#拥有者:<$STR(A42)><$STR(S$①①①属性)>/@><Img:1751:69:30:-7|250#拥有者:<$STR(A42)><$STR(S$①①①属性)>/@><Img:1751:69:50:-7|250#拥有者:<$STR(A42)><$STR(S$①①①属性)>/@>
+MOV S$③③③骰王 <Img:1752:69:10:-7|250#拥有者:<$STR(A43)><$STR(S$①①①属性)>/@><Img:1752:69:30:-7|250#拥有者:<$STR(A43)><$STR(S$①①①属性)>/@><Img:1752:69:50:-7|250#拥有者:<$STR(A43)><$STR(S$①①①属性)>/@>
+MOV S$④④④骰王 <Img:1753:69:10:-7|250#拥有者:<$STR(A44)><$STR(S$①①①属性)>/@><Img:1753:69:30:-7|250#拥有者:<$STR(A44)><$STR(S$①①①属性)>/@><Img:1753:69:50:-7|250#拥有者:<$STR(A44)><$STR(S$①①①属性)>/@>
+MOV S$⑤⑤⑤骰王 <Img:1754:69:10:-7|250#拥有者:<$STR(A45)><$STR(S$①①①属性)>/@><Img:1754:69:30:-7|250#拥有者:<$STR(A45)><$STR(S$①①①属性)>/@><Img:1754:69:50:-7|250#拥有者:<$STR(A45)><$STR(S$①①①属性)>/@>
+MOV S$⑥⑥⑥骰王 <Img:1755:69:10:-7|253#拥有者:<$STR(A51)><$STR(S$⑥⑥⑥属性)>/@><Img:1755:69:30:-7|253#拥有者:<$STR(A51)><$STR(S$⑥⑥⑥属性)>/@><Img:1755:69:50:-7|253#拥有者:<$STR(A51)><$STR(S$⑥⑥⑥属性)>/@>
+
+close
+OPENMERCHANTBIGDLG 1 560 1 4 0 0 1 400 0
+#SAY
+; \ \    
+; <><随机摇骰子:/SCOLOR=161><5000元宝一次，3个骰子随机出点数，出现骰王几率非常低/SCOLOR=250>\ \  
+; <><土豪摇骰子:/SCOLOR=161><58大米一次，3个骰子同步随机数，必出现一个随机骰王/SCOLOR=253>\ \  
+
+; \  <$STR(S$①①①骰王)>           <①①①骰王拥有者:|<$STR(S$①①①属性)>/SCOLOR=250>   {<$STR(A41)>.|<$STR(S$①①①属性)>/AUTOCOLOR=7,8,9,158,161}\ \ 
+; \
+; \  <$STR(S$②②②骰王)>           <②②②骰王拥有者:|<$STR(S$①①①属性)>/SCOLOR=250>   {<$STR(A42)>.|<$STR(S$①①①属性)>/AUTOCOLOR=7,8,9,158,161}\ \ 
+;  \
+; \  <$STR(S$③③③骰王)>           <③③③骰王拥有者:|<$STR(S$①①①属性)>/SCOLOR=250>   {<$STR(A43)>.|<$STR(S$①①①属性)>/AUTOCOLOR=7,8,9,158,161}\ \ 
+;  \
+; \  <$STR(S$④④④骰王)>           <④④④骰王拥有者:|<$STR(S$①①①属性)>/SCOLOR=250>   {<$STR(A44)>.|<$STR(S$①①①属性)>/AUTOCOLOR=7,8,9,158,161}\  \ 
+;  \
+; \  <$STR(S$⑤⑤⑤骰王)>           <⑤⑤⑤骰王拥有者:|<$STR(S$①①①属性)>/SCOLOR=250>   {<$STR(A45)>.|<$STR(S$①①①属性)>/AUTOCOLOR=7,8,9,158,161}\ \ 
+;  \
+; \  <$STR(S$⑥⑥⑥骰王)>           <⑥⑥⑥骰王拥有者:|<$STR(S$⑥⑥⑥属性)>/SCOLOR=249>   {<$STR(A51)>.|<$STR(S$⑥⑥⑥属性)>/AUTOCOLOR=254,251,168,191,250,70,245,249,253}\
+;  \ 
+
+;  \   \   \    
+; <>        <骰王地图|250#以下玩家才可进入^-^161#①①①骰王拥有者:<$STR(A41)>^-^161#②②②骰王拥有者:<$STR(A42)>^-^161#③③③骰王拥有者:<$STR(A43)>^-^161#④④④骰王拥有者:<$STR(A44)>^-^161#⑤⑤⑤骰王拥有者:<$STR(A45)>^-^254#⑥⑥⑥骰王拥有者:<$STR(A51)>/@骰王地图>
+; <>         <普通扔骰子|250#5000元宝一次^-^249#注意：已有骰王扔普通骰会失去骰王资格，切记/@普通扔骰子去> <合区清理>
+; <>         <老板扔骰子|253#58大米一次/@老板摇号> <合区清理>\ \ \ \
+
+
+
+<Img|width=620|height=300|show=4|reset=1|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|scale9l=10>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=18.0|y=14.0|tipsx=10|tipsy=80|color=161|size=18|text=随机摇骰子:>
+<Text|a=0|x=139.0|y=14.0|tipsx=10|tipsy=80|color=250|size=18|text=5000元宝一次，3个骰子随机出点数，出现骰王几率非常低>
+<Text|a=0|x=18.0|y=54.0|tipsx=10|tipsy=80|color=161|size=18|text=土豪摇骰子:>
+<Text|a=0|x=139.0|y=54.0|tipsx=10|tipsy=80|color=253|size=18|text=58大米一次，3个骰子同步随机数，必出现一个随机骰王>
+<Text|a=0|x=18.0|y=87.0|tipsx=10|tipsy=80|color=255|size=18|text=①①①骰王：<$STR(A41)>>
+<Text|a=0|x=18.0|y=111.0|tipsx=10|tipsy=80|color=255|size=18|text=②②②骰王：<$STR(A42)>>
+<Text|a=0|x=18.0|y=133.0|tipsx=10|tipsy=80|color=255|size=18|text=③③③骰王：<$STR(A43)>>
+<Text|a=0|x=18.0|y=156.0|tipsx=10|tipsy=80|color=255|size=18|text=④④④骰王：<$STR(A44)>>
+<Text|a=0|x=18.0|y=179.0|tipsx=10|tipsy=80|color=255|size=18|text=⑤⑤⑤骰王：<$STR(A45)>>
+<Text|a=0|x=18.0|y=202.0|tipsx=10|tipsy=80|color=255|size=18|text=⑥⑥⑥骰王：<$STR(A51)>>
+<Text|a=0|x=181.0|y=247.0|tipsx=10|tipsy=80|color=251|size=18|text=普通扔骰子|link=@普通扔骰子去>
+<Text|x=39.0|y=249.0|color=251|size=18|text=骰王地图|link=@骰王地图>
+<Text|x=411.0|y=246.0|color=251|size=18|text=老板扔骰子|link=@老板摇号>
+<Text|x=278.0|y=248.0|color=249|size=18|text=合区清理>
+<Text|x=509.0|y=248.0|color=249|size=18|text=合区清理>
+
+
+
+[@骰王地图]
+
+
+#IF
+LARGE N$脱战CD 0
+#ACT
+MESSAGEBOX 对不起，您还在战斗状态，无法进入，<$STR(N$脱战CD)>秒方可进入！
+break
+
+
+
+#or
+EQUAL <$USERNAME> <$STR(A41)>
+EQUAL <$USERNAME> <$STR(A42)>
+EQUAL <$USERNAME> <$STR(A43)>
+EQUAL <$USERNAME> <$STR(A44)>
+EQUAL <$USERNAME> <$STR(A45)>
+EQUAL <$USERNAME> <$STR(A51)>
+#ACT
+map 骰王地图
+
+#ELSEACT
+MESSAGEBOX 对不起，您还不是骰王，无法进去骰王地图！
+BREAK
+
+[@普通扔骰子去]
+
+#IF
+CHECKGAMEGOLD < 5000
+#ACT
+MESSAGEBOX 您背包里没有“5000元宝”,我无法为您扔骰子！
+CLEARDELAYGOTO 150 @至尊骰王
+BREAK
+
+
+
+
+#IF
+CHECKGAMEGOLD > 4999
+#ACT
+GAMEGOLD - 5000
+MOVR N$19点 1 7
+MOVR N$20点 1 7
+MOVR N$21点 1 7
+MOVR N$22点 1 7
+MOV D0 <$STR(N$20点)>
+MOV D1 <$STR(N$21点)>
+MOV D2 <$STR(N$22点)>
+playdice 3 @检测点数
+CLEARDELAYGOTO 150 @至尊骰王
+break
+#ElseAct
+MessageBox [系统:]\　\　　　　每次需要：5000元宝\　\　　　　您账户上的元宝不足!!!
+break
+
+
+
+
+
+
+
+[@老板摇号]
+
+#IF
+CheckGAMEPOINT < 58
+#ACT
+MESSAGEBOX 您背包里没有“58大米”,我无法为您扔骰子！
+CLEARDELAYGOTO
+BREAK
+
+
+
+
+
+#IF
+CheckGAMEPOINT > 57
+#ACT
+GAMEPOINT - 58
+MOVR N$19点 1 7
+MOV N$20点 <$STR(N$19点)>
+MOV N$21点 <$STR(N$19点)>
+MOV N$22点 <$STR(N$19点)>
+MOV D0 <$STR(N$20点)>
+MOV D1 <$STR(N$21点)>
+MOV D2 <$STR(N$22点)>
+playdice 3 @检测点数
+break
+#ElseAct
+MessageBox [系统:]\　\　　　　每次需要：58大米\　\　　　　您的大米不足!!!
+break
+
+
+[@检测点数]
+#IF
+EQUAL <$USERNAME> <$STR(A41)>
+#ACT
+MOV A41 
+
+#IF
+EQUAL <$USERNAME> <$STR(A42)>
+#ACT
+MOV A42 
+
+#IF
+EQUAL <$USERNAME> <$STR(A43)>
+#ACT
+MOV A43	
+
+#IF
+EQUAL <$USERNAME> <$STR(A44)>
+#ACT
+MOV A44	
+
+#IF
+EQUAL <$USERNAME> <$STR(A45)>
+#ACT
+MOV A45	
+
+#IF
+EQUAL <$USERNAME> <$STR(A51)>
+#ACT
+MOV A51	
+
+#IF
+EQUAL N$20点 1
+EQUAL N$21点 1
+EQUAL N$22点 1
+#ACT
+SetOntimer 96 1
+SendCenterMsg 161 0 ◆◇◆玩家[<$Username>]弹劾[<$STR(A41)>]成为豹子“①①①”骰王，人物获得[攻击+2%]和[血量+4%] 1 1 5
+GuildNoticeMsg 161 0 ◆◇◆玩家[<$Username>]弹劾[<$STR(A41)>]成为豹子“①①①”骰王，人物获得[攻击+2%]和[血量+4%]
+MOV S$DY_提示骰王A <$STR(A41)>
+
+<$STR(S$DY_提示骰王A)>.DELAYGOTO 1000 @刷新筛子属性1
+MOV A41 <$USERNAME>
+SENDMSG 7 [系统]:恭喜您成为豹子“①①①”骰王,享受[骰王专属地图]
+
+SENDTOPCHATBOARDMSG 1 250 0 30 {普通骰王:|250:0}恭喜您成为豹子{“①①①”骰王|254:0}人物获得[攻击+2%]和[血量+4%] 1
+CONFERTITLE ①①①骰王
+<$STR(S$DY_提示骰王A)>.DEPRIVETITLE ①①①骰王
+;<$STR(S$DY_提示骰王A)>.mapmove di1 311 329
+<$STR(S$DY_提示骰王A)>.MessageBox [系统:]\　\　　　　您的骰王已经被玩家“<$STR(A41)>”抢夺了。
+Goto @刷新筛子属性
+GOTO @至尊骰王
+BREAK
+
+#IF
+EQUAL N$20点 2
+EQUAL N$21点 2
+EQUAL N$22点 2
+#ACT
+SetOntimer 96 1
+SendCenterMsg 161 0 ◆◇◆玩家[<$Username>]弹劾[<$STR(A42)>]成为豹子“②②②”骰王，人物获得[攻击+2%]和[血量+4%] 1 1 5
+GuildNoticeMsg 161 0 ◆◇◆玩家[<$Username>]弹劾[<$STR(A42)>]成为豹子“②②②”骰王，人物获得[攻击+2%]和[血量+4%]
+MOV S$DY_提示骰王B <$STR(A42)>
+MOV A42 <$USERNAME>
+
+<$STR(S$DY_提示骰王B)>.DELAYGOTO 1000 @刷新筛子属性1
+;CONFERTITLE ②②②骰王
+<$STR(S$DY_提示骰王B)>.DEPRIVETITLE ②②②骰王
+;<$STR(S$DY_提示骰王B)>.mapmove di1 311 329
+SENDMSG 7 [系统]:恭喜您成为豹子“②②②”骰王,人物获得[攻击+2%]和[血量+4%]
+SENDTOPCHATBOARDMSG 1 250 0 30 {普通骰王:|250:0}恭喜您成为豹子{“②②②”骰王|254:0}人物获得[攻击+2%]和[血量+4%] 1
+<$STR(S$DY_提示骰王B)>.MessageBox [系统:]\　\　　　　您的骰王已经被玩家“<$STR(A42)>”抢夺了。
+Goto @刷新筛子属性
+GOTO @至尊骰王
+BREAK
+
+#IF
+EQUAL N$20点 3
+EQUAL N$21点 3
+EQUAL N$22点 3
+#ACT
+SetOntimer 96 1
+SendCenterMsg 161 0 ◆◇◆玩家[<$Username>]弹劾[<$STR(A43)>]成为豹子“③③③”骰王，人物获得[攻击+2%]和[血量+4%] 1 5
+GuildNoticeMsg 161 0 ◆◇◆玩家[<$Username>]弹劾[<$STR(A43)>]成为豹子“③③③”骰王，人物获得[攻击+2%]和[血量+4%]
+MOV S$DY_提示骰王C <$STR(A43)>
+MOV A43 <$USERNAME>
+
+;CONFERTITLE ③③③骰王
+<$STR(S$DY_提示骰王C)>.DEPRIVETITLE ③③③骰王
+
+<$STR(S$DY_提示骰王C)>.DELAYGOTO 1000 @刷新筛子属性1
+
+;<$STR(S$DY_提示骰王C)>.mapmove di1 311 329
+
+
+SENDTOPCHATBOARDMSG 1 250 0 30 {普通骰王:|250:0}恭喜您成为豹子{“③③③”骰王|254:0}人物获得[攻击+2%]和[血量+4%] 1
+SENDMSG 7 [系统]:恭喜您成为豹子“③③③”骰王,人物获得[攻击+2%]和[血量+4%]
+<$STR(S$DY_提示骰王C)>.MessageBox [系统:]\　\　　　　您的骰王已经被玩家“<$STR(A43)>”抢夺了。
+Goto @刷新筛子属性
+GOTO @至尊骰王
+BREAK
+
+#IF
+EQUAL N$20点 4
+EQUAL N$21点 4
+EQUAL N$22点 4
+#ACT
+SetOntimer 96 1
+SendCenterMsg 161 0 ◆◇◆玩家[<$Username>]弹劾[<$STR(A44)>]成为豹子“④④④”骰王，人物获得[攻击+2%]和[血量+4%] 1 5
+GuildNoticeMsg 161 0 ◆◇◆玩家[<$Username>]弹劾[<$STR(A44)>]成为豹子“④④④”骰王，人物获得[攻击+2%]和[血量+4%]
+MOV S$DY_提示骰王D <$STR(A44)>
+MOV A44 <$USERNAME>
+<$STR(S$DY_提示骰王D)>.DELAYGOTO 1000 @刷新筛子属性1
+;CONFERTITLE ④④④骰王
+<$STR(S$DY_提示骰王D)>.DEPRIVETITLE ④④④骰王
+
+
+;<$STR(S$DY_提示骰王D)>.mapmove di1 311 329
+
+SENDTOPCHATBOARDMSG 1 250 0 30 {普通骰王:|250:0}恭喜您成为豹子{“④④④”骰王|254:0}人物获得[攻击+2%]和[血量+4%] 1
+SENDMSG 7 [系统]:恭喜您成为豹子“④④④”骰王,人物获得[攻击+2%]和[血量+4%]
+<$STR(S$DY_提示骰王D)>.MessageBox [系统:]\　\　　　　您的骰王已经被玩家“<$STR(A44)>”抢夺了。
+Goto @刷新筛子属性
+GOTO @至尊骰王
+
+
+
+
+BREAK
+
+#IF
+EQUAL N$20点 5
+EQUAL N$21点 5
+EQUAL N$22点 5
+#ACT
+SetOntimer 96 1
+SendCenterMsg 161 0 ◆◇◆玩家[<$Username>]弹劾[<$STR(A45)>]成为豹子“⑤⑤⑤”骰王，人物获得[攻击+2%]和[血量+4%] 1 5
+GuildNoticeMsg 161 0 ◆◇◆玩家[<$Username>]弹劾[<$STR(A45)>]成为豹子“⑤⑤⑤”骰王，人物获得[攻击+2%]和[血量+4%]
+MOV S$DY_提示骰王E <$STR(A45)>
+MOV A45 <$USERNAME>
+<$STR(S$DY_提示骰王E)>.DELAYGOTO 1000 @刷新筛子属性1
+;<$STR(S$DY_提示骰王E)>.mapmove di1 311 329
+;CONFERTITLE ⑤⑤⑤骰王
+<$STR(S$DY_提示骰王E)>.DEPRIVETITLE ⑤⑤⑤骰王
+
+SENDMSG 7 [系统]:恭喜您成为豹子“⑤⑤⑤”骰王，人物获得[攻击+2%]和[血量+4%]
+
+
+SENDTOPCHATBOARDMSG 1 255 0 30 {普通骰王:|250:0}恭喜您成为豹子{“⑤⑤⑤”骰王|254:0}人物获得[攻击+2%]和[血量+4%] 1
+<$STR(S$DY_提示骰王E)>.MessageBox [系统:]\　\　　　　您的骰王已经被玩家“<$STR(A45)>”抢夺了。
+Goto @刷新筛子属性
+GOTO @至尊骰王
+BREAK
+
+
+#IF
+EQUAL N$20点 6
+EQUAL N$21点 6
+EQUAL N$22点 6
+#ACT
+AddTextList ..\QuestDiary\数据文件\至尊骰王名单.txt <$USERNAME>
+SetOntimer 96 1
+SendCenterMsg 254 0 ◆◇◆玩家[<$Username>]弹劾[<$STR(A51)>]成为豹子“⑥⑥⑥”⑥⑥⑥骰王，人物获得[攻击+3%]和[血量+6%] 1 5
+GuildNoticeMsg 254 0 ◆◇◆玩家[<$Username>]弹劾[<$STR(A51)>]成为豹子“⑥⑥⑥”⑥⑥⑥骰王，人物获得[攻击+3%]和[血量+6%]
+MOV S$DY_提示骰王F <$STR(A51)>
+MOV A51 <$USERNAME>
+;<$STR(S$DY_提示骰王F)>.mapmove di1 311 329
+<$STR(S$DY_提示骰王F)>.DELAYGOTO 1000 @刷新筛子属性1
+;CONFERTITLE ⑥⑥⑥骰王
+<$STR(S$DY_提示骰王F)>.DEPRIVETITLE ⑥⑥⑥骰王
+SetIcon 7 79 7452 0 -220 24 0 100  0
+
+
+SENDMSG 7 [系统]:恭喜您成为豹子“⑥⑥⑥”⑥⑥⑥骰王,人物获得[攻击+3%]和[血量+6%]
+SENDTOPCHATBOARDMSG 1 255 0 60 {至尊骰王:|254:0}恭喜您成为豹子{“⑥⑥⑥骰王|253:0}，人物获得[攻击+3%]和[血量+6%] 1
+<$STR(S$DY_提示骰王F)>.MessageBox [系统:]\　\　　　　您的骰王已经被玩家“<$STR(A51)>”抢夺了。
+Goto @刷新筛子属性
+
+
+
+
+GOTO @至尊骰王
+BREAK
+#ElseAct
+DEPRIVETITLE ①①①骰王
+DEPRIVETITLE ②②②骰王
+DEPRIVETITLE ③③③骰王
+DEPRIVETITLE ④④④骰王
+DEPRIVETITLE ⑤⑤⑤骰王
+DEPRIVETITLE ⑥⑥⑥骰王
+SENDMSG 6 非常遗憾，本次摇骰子未获得豹子，请继续努力！
+GOTO @至尊骰王
+Break
+
+
+[@刷新筛子属性]
+
+#If
+#Act
+#CALL [\游戏登陆\属性加成.txt] @属性设置
+#CALL [\游戏登陆\封号系统.txt] @封号分类
+#CALL [\游戏登陆\怪物爆率.txt] @怪物爆率
+
+
+#If
+<$STR(S$DY_提示骰王A)>.Checkonline
+#Act
+Hcall <$STR(S$DY_提示骰王A)> @刷新筛子属性1
+
+
+#If
+<$STR(S$DY_提示骰王B)>.Checkonline
+#Act
+Hcall <$STR(S$DY_提示骰王B)> @刷新筛子属性1
+
+
+#If
+<$STR(S$DY_提示骰王C)>.Checkonline
+#Act
+Hcall <$STR(S$DY_提示骰王C)> @刷新筛子属性1
+
+
+#If
+<$STR(S$DY_提示骰王D)>.Checkonline
+#Act
+Hcall <$STR(S$DY_提示骰王D)> @刷新筛子属性1
+
+
+#If
+<$STR(S$DY_提示骰王E)>.Checkonline
+#Act
+Hcall <$STR(S$DY_提示骰王E)> @刷新筛子属性1
+
+
+
+#If
+<$STR(S$DY_提示骰王F)>.Checkonline
+#Act
+Hcall <$STR(S$DY_提示骰王F)> @刷新筛子属性1
+
+
+
+
+[@刷新筛子属性1]
+#If
+<$STR(S$DY_提示骰王A)>.Checkonline
+#Act
+#CALL [\游戏登陆\属性加成.txt] @属性设置
+#CALL [\游戏登陆\封号系统.txt] @封号分类
+#CALL [\游戏登陆\怪物爆率.txt] @怪物爆率
+
+#If
+<$STR(S$DY_提示骰王B)>.Checkonline
+#Act
+#CALL [\游戏登陆\属性加成.txt] @属性设置
+#CALL [\游戏登陆\封号系统.txt] @封号分类
+#CALL [\游戏登陆\怪物爆率.txt] @怪物爆率
+
+
+#If
+<$STR(S$DY_提示骰王C)>.Checkonline
+#Act
+
+
+#If
+<$STR(S$DY_提示骰王D)>.Checkonline
+#Act
+#CALL [\游戏登陆\属性加成.txt] @属性设置
+#CALL [\游戏登陆\封号系统.txt] @封号分类
+#CALL [\游戏登陆\怪物爆率.txt] @怪物爆率
+
+
+#If
+<$STR(S$DY_提示骰王E)>.Checkonline
+#Act
+#CALL [\游戏登陆\属性加成.txt] @属性设置
+#CALL [\游戏登陆\封号系统.txt] @封号分类
+#CALL [\游戏登陆\怪物爆率.txt] @怪物爆率
+
+
+#If
+<$STR(S$DY_提示骰王F)>.Checkonline
+#Act
+#CALL [\游戏登陆\属性加成.txt] @属性设置
+#CALL [\游戏登陆\封号系统.txt] @封号分类
+#CALL [\游戏登陆\怪物爆率.txt] @怪物爆率
+
+
+
+#IF
+ISONMAP 骰王地图
+#ACT
+mapmove 3 331 331
+BREAK
+
+
+
+
+
+
+
+
+}

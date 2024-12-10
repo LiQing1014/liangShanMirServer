@@ -1,0 +1,530 @@
+[@Main]
+
+
+#IF
+NOT CHECKUSEITEM 16
+#ACT
+MESSAGEBOX 请您先佩戴盾牌才能查看！
+CLEARDELAYGOTO
+BREAK
+
+#OR
+CHECKITEM 尚书盾牌 1
+CHECKITEM 学士盾牌 1
+CHECKITEM 太保盾牌 1
+CHECKITEM 太傅盾牌 1
+CHECKITEM 太师盾牌 1
+CHECKITEM 三等伯盾 1
+CHECKITEM 二等伯盾 1
+CHECKITEM 一等伯盾 1
+CHECKITEM 三等侯盾 1
+CHECKITEM 二等侯盾 1
+CHECKITEM 一等侯盾 1
+CHECKITEM 辅国公盾 1
+CHECKITEM 镇国公盾 1
+CHECKITEM 郡王盾牌 1
+CHECKITEM 亲王盾牌 1
+CHECKITEM 至尊盾牌 1
+CHECKITEM 一刀盾牌 1
+CHECKITEM 烈火盾牌 1
+CHECKITEM 蓝月复古盾牌 1
+CHECKITEMW 尚书盾牌 1
+CHECKITEMW 学士盾牌 1
+CHECKITEMW 太保盾牌 1
+CHECKITEMW 太傅盾牌 1
+CHECKITEMW 太师盾牌 1
+CHECKITEMW 三等伯盾 1
+CHECKITEMW 二等伯盾 1
+CHECKITEMW 一等伯盾 1
+CHECKITEMW 三等侯盾 1
+CHECKITEMW 二等侯盾 1
+CHECKITEMW 一等侯盾 1
+CHECKITEMW 辅国公盾 1
+CHECKITEMW 镇国公盾 1
+CHECKITEMW 郡王盾牌 1
+CHECKITEMW 亲王盾牌 1
+CHECKITEMW 至尊盾牌 1
+CHECKITEMW 一刀盾牌 1
+CHECKITEMW 烈火盾牌 1
+CHECKITEMW 蓝月复古盾牌 1
+#ACT
+#elseact
+MESSAGEBOX 对不起，请先佩戴尚书20级以上的盾牌在来！
+BREAK
+
+
+
+#OR
+CHECKITEM 包工盾牌 1
+CHECKITEMW 包工盾牌 1
+#ACT
+MOV S$当前盾牌 包工盾牌
+
+#OR
+CHECKITEM 短工盾牌 1
+CHECKITEMW 短工盾牌 1
+#ACT
+MOV S$当前盾牌 短工盾牌
+
+
+#OR
+CHECKITEM 长工盾牌 1
+CHECKITEMW 长工盾牌 1
+#ACT
+MOV S$当前盾牌 长工盾牌
+
+
+#OR
+CHECKITEM 中农盾牌 1
+CHECKITEMW 中农盾牌 1
+#ACT
+MOV S$当前盾牌 中农盾牌
+
+
+#OR
+CHECKITEM 富农盾牌 1
+CHECKITEMW 富农盾牌 1
+#ACT
+MOV S$当前盾牌 富农盾牌
+
+
+#OR
+CHECKITEM 掌柜盾牌 1
+CHECKITEMW 掌柜盾牌1
+#ACT
+MOV S$当前盾牌 掌柜盾牌
+
+
+#OR
+CHECKITEM 商人盾牌 1
+CHECKITEMW 商人盾牌 1
+#ACT
+MOV S$当前盾牌 商人盾牌
+
+
+#OR
+CHECKITEM 财主盾牌 1
+CHECKITEMW 财主盾牌 1
+#ACT
+MOV S$当前盾牌 财主盾牌
+
+
+#OR
+CHECKITEM 分神境 1
+CHECKITEMW 分神境 1
+#ACT
+MOV S$当前盾牌 分神境
+
+
+#OR
+CHECKITEM 县尉盾牌 1
+CHECKITEMW 县尉盾牌 1
+#ACT
+MOV S$当前盾牌 县尉盾牌
+
+
+#OR
+CHECKITEM 县丞盾牌 1
+CHECKITEMW 县丞盾牌 1
+#ACT
+MOV S$当前盾牌 县丞盾牌
+
+
+#OR
+CHECKITEM 县令盾牌 1
+CHECKITEMW 县令盾牌 1
+#ACT
+MOV S$当前盾牌 县令盾牌
+
+
+#OR
+CHECKITEM 通判盾牌 1
+CHECKITEMW 通判盾牌 1
+#ACT
+MOV S$当前盾牌 通判盾牌
+
+#OR
+CHECKITEM 主事盾牌 1
+CHECKITEMW 主事盾牌 1
+#ACT
+MOV S$当前盾牌 主事盾牌
+
+#OR
+CHECKITEM 知府盾牌 1
+CHECKITEMW 知府盾牌 1
+#ACT
+MOV S$当前盾牌 知府盾牌
+
+
+
+#OR
+CHECKITEM 员外盾牌 1
+CHECKITEMW 员外盾牌 1
+#ACT
+MOV S$当前盾牌 员外盾牌
+
+#OR
+CHECKITEM 郎中盾牌 1
+CHECKITEMW 郎中盾牌 1
+#ACT
+MOV S$当前盾牌 郎中盾牌
+
+#OR
+CHECKITEM 侍郎盾牌 1
+CHECKITEMW 侍郎盾牌 1
+#ACT
+MOV S$当前盾牌 侍郎盾牌
+
+#OR
+CHECKITEM 巡抚盾牌 1
+CHECKITEMW 巡抚盾牌 1
+#ACT
+MOV S$当前盾牌 巡抚盾牌
+
+#OR
+CHECKITEM 总督盾牌 1
+CHECKITEMW 总督盾牌 1
+#ACT
+MOV S$当前盾牌 总督盾牌
+
+
+
+#OR
+CHECKITEM 尚书盾牌 1
+CHECKITEMW 尚书盾牌 1
+#ACT
+MOV S$当前盾牌 尚书盾牌
+
+#OR
+CHECKITEM 学士盾牌 1
+CHECKITEMW 学士盾牌 1
+#ACT
+MOV S$当前盾牌 学士盾牌
+
+#OR
+CHECKITEM 太保盾牌 1
+CHECKITEMW 太保盾牌 1
+#ACT
+MOV S$当前盾牌 太保盾牌
+
+#OR
+CHECKITEM 太傅盾牌 1
+CHECKITEMW 太傅盾牌 1
+#ACT
+MOV S$当前盾牌 太傅盾牌
+
+#OR
+CHECKITEM 神王境 1
+CHECKITEMW 神王境 1
+#ACT
+MOV S$当前盾牌 神王境
+
+#OR
+CHECKITEM 太师盾牌 1
+CHECKITEMW 太师盾牌 1
+#ACT
+MOV S$当前盾牌 太师盾牌
+
+#OR
+CHECKITEM 三等伯盾 1
+CHECKITEMW 三等伯盾 1
+#ACT
+MOV S$当前盾牌 三等伯盾
+
+#OR
+CHECKITEM 二等伯盾 1
+CHECKITEMW 二等伯盾 1
+#ACT
+MOV S$当前盾牌 二等伯盾
+
+#OR
+CHECKITEM 一等伯盾 1
+CHECKITEMW 一等伯盾 1
+#ACT
+MOV S$当前盾牌 一等伯盾
+
+#OR
+CHECKITEM 三等侯盾 1
+CHECKITEMW 三等侯盾 1
+#ACT
+MOV S$当前盾牌 三等侯盾
+
+#OR
+CHECKITEM 二等侯盾 1
+CHECKITEMW 二等侯盾 1
+#ACT
+MOV S$当前盾牌 二等侯盾
+
+
+#OR
+CHECKITEM 一等侯盾 1
+CHECKITEMW 一等侯盾 1
+#ACT
+MOV S$当前盾牌 一等侯盾
+
+
+#OR
+CHECKITEM 辅国公盾 1
+CHECKITEMW 辅国公盾 1
+#ACT
+MOV S$当前盾牌 辅国公盾
+
+
+#OR
+CHECKITEM 镇国公盾 1
+CHECKITEMW 镇国公盾 1
+#ACT
+MOV S$当前盾牌 镇国公盾
+
+
+#OR
+CHECKITEM 郡王盾牌 1
+CHECKITEMW 郡王盾牌 1
+#ACT
+MOV S$当前盾牌 郡王盾牌
+
+
+#OR
+CHECKITEM 亲王盾牌 1
+CHECKITEMW 亲王盾牌 1
+#ACT
+MOV S$当前盾牌 亲王盾牌
+
+
+#OR
+CHECKITEM 至尊盾牌 1
+CHECKITEMW 至尊盾牌 1
+#ACT
+MOV S$当前盾牌 至尊盾牌
+
+
+#OR
+CHECKITEM 一刀盾牌 1
+CHECKITEMW 一刀盾牌 1
+#ACT
+MOV S$当前盾牌 一刀盾牌
+
+
+#OR
+CHECKITEM 烈火盾牌 1
+CHECKITEMW 烈火盾牌 1
+#ACT
+MOV S$当前盾牌 烈火盾牌
+
+
+#OR
+CHECKITEM 蓝月复古盾牌 1
+CHECKITEMW 蓝月复古盾牌 1
+#ACT
+MOV S$当前盾牌 蓝月复古盾牌
+
+
+
+
+
+#IF
+#Act
+#CALL [\极品拾取鉴定\盾牌成长属性.txt] @盾牌成长属性
+MOV N$盾牌元宝 <$STR(N$当前盾牌经验)>
+MUL N$盾牌元宝 5
+MOV N$盾牌材料 <$STR(N$当前盾牌经验)>
+DIV N$盾牌材料 60000
+MOV S$盾牌材料 梦想神石
+
+MOV S$盾牌经验D1 ^-^251#1.元宝*<$STR(N$盾牌元宝)>
+MOV S$盾牌经验D2 ^-^146#2.<$STR(S$盾牌材料)>*<$STR(N$盾牌材料)>
+
+
+
+MOV N$盾牌经验B <$STR(N$当前盾牌经验)>
+DIV N$盾牌经验B 2000
+MOV S$盾牌经验 当前需要：<$STR(N$盾牌经验B)>大米升级
+
+
+
+#IF
+CHECKITEMW 蓝月复古盾牌 1
+CHECKCUSTOMITEMPROGRESSBARVALUE 16 0 0 = 5
+#ACT
+
+MOV N$盾牌元宝 <$STR(N$当前盾牌经验)>
+MUL N$盾牌元宝 0
+MOV N$盾牌材料 <$STR(N$当前盾牌经验)>
+DIV N$盾牌材料 0
+MOV S$盾牌材料 已经满级
+
+MOV S$盾牌经验D1 ^-^251#1.已经满级
+MOV S$盾牌经验D2 ^-^146#2.已经满级
+
+
+
+MOV N$盾牌经验B <$STR(N$当前盾牌经验)>
+DIV N$盾牌经验B 0
+MOV S$盾牌经验 已经满级
+
+
+
+
+
+
+
+#IF
+#Act
+#CALL [\极品拾取鉴定\盾牌成长属性.txt] @盾牌成长属性
+close
+
+#SAY
+; \  
+; <> <【当前盾牌】：/SCOLOR=161>　<“<$STR(S$当前盾牌)>”/SCOLOR=254>     \ \
+; <> <【盾牌介绍】：/SCOLOR=161><能吸收怪物攻击的Hook伤害，对人物无效/SCOLOR=70>           \ \
+; <> <【盾牌介绍】：/SCOLOR=161><每个级别的盾牌吸收伤害比例越高吸收伤害越强/SCOLOR=250>   　\ \
+; <> <【盾牌介绍】：/SCOLOR=161><盾牌装备、不可交易、丢弃、爆出/SCOLOR=249>   　\ \ \
+; <>　　　   <Text:一键注入盾牌经验|^-^250#升下一级需要条件：<$STR(S$盾牌经验D1)><$STR(S$盾牌经验D2)>:10:-15{FCOLOR=251}/@材料一键升级>
+
+; <>　　　 <Text:大米注入盾牌经验|^-^250#升下一级需要条件：^-^253#<$STR(S$盾牌经验)>:10:-15{FCOLOR=251}/@大米一键升级>\
+
+<Img|width=620|height=300|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|reset=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32.0|y=36.0|tipsx=10|tipsy=80|color=161|size=18|text=【当前盾牌】：>
+<Text|a=0|x=186.0|y=36.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(S$当前盾牌)>>
+<Text|a=0|x=32.0|y=76.0|tipsx=10|tipsy=80|color=161|size=18|text=【盾牌介绍】：>
+<Text|a=0|x=186.0|y=76.0|tipsx=10|tipsy=80|color=70|size=18|text=能吸收怪物攻击的Hook伤害，对人物无效>
+<Text|a=0|x=32.0|y=116.0|tipsx=10|tipsy=80|color=161|size=18|text=【盾牌介绍】：>
+<Text|a=0|x=186.0|y=116.0|tipsx=10|tipsy=80|color=250|size=18|text=每个级别的盾牌吸收伤害比例越高吸收伤害越强>
+<Text|a=0|x=32.0|y=156.0|tipsx=10|tipsy=80|color=161|size=18|text=【盾牌介绍】：>
+<Text|a=0|x=186.0|y=156.0|tipsx=10|tipsy=80|color=249|size=18|text=盾牌装备、不可交易、丢弃、爆出>
+<Text|a=0|x=32.0|y=216.0|tipsx=10|tipsy=80|color=255|size=18|text=一键注入盾牌经验|link=@材料一键升级>
+<Text|a=0|x=250.0|y=216.0|tipsx=10|tipsy=80|color=255|size=18|text=大米注入盾牌经验|link=@大米一键升级>
+
+
+
+[@材料一键升级]
+
+
+#IF
+NOT CHECKUSEITEM 16
+#ACT
+MESSAGEBOX 请您先佩戴盾牌才能注入经验！
+CLEARDELAYGOTO
+BREAK
+
+#IF
+NOT CHECKBAGSIZE  12
+#ACT
+MESSAGEBOX [进阶失败]:\　\　　　　　　您的“包袱位置”不足“12个”空位置！
+break
+
+
+
+
+#IF
+CHECKITEMW 蓝月复古盾牌 1
+CHECKCUSTOMITEMPROGRESSBARVALUE 16 0 0 = 5
+#ACT
+CLEARDELAYGOTO
+MessageBox 对不起,您当前的盾牌已满了，无法继续增加经验！
+BREAK
+
+
+
+
+#IF
+CHECKGAMEGOLD < <$STR(N$盾牌元宝)>
+#ACT
+MESSAGEBOX \\\对不起，您的元宝不足<$STR(N$盾牌元宝)>个，无法注入经验！
+break
+
+
+#IF
+NOT CHECKITEM <$STR(S$盾牌材料)> <$STR(N$盾牌材料)>
+#ACT
+MESSAGEBOX \\\对不起，您的包袱里<$STR(S$盾牌材料)>不足<$STR(N$盾牌材料)>个，无法注入经验！
+break
+
+
+
+
+#IF
+CHECKGAMEGOLD > <$STR(N$盾牌元宝)>
+CHECKITEM <$STR(S$盾牌材料)> <$STR(N$盾牌材料)>
+#ACT
+GAMEGOLD -  <$STR(N$盾牌元宝)>
+TAKE <$STR(S$盾牌材料)> <$STR(N$盾牌材料)>
+CHANGECUSTOMITEMPROGRESSBARVALUE 16 1 0 + <$STR(N$当前盾牌经验)>
+SendCenterMsg 254 0 恭喜您的盾牌经验增加：<$STR(N$当前盾牌经验)>点经验 0 3
+GOTO @MAIN
+DELAYGOTO 10  @main
+break
+#elseact
+MessageBox \\注入失败：\\1.请检查您的包袱材料和货币是否齐全！！！
+break
+
+
+
+
+
+
+
+
+
+
+[@大米一键升级]
+
+
+#IF
+NOT CHECKUSEITEM 16
+#ACT
+MESSAGEBOX 请您先佩戴盾牌才能注入经验！
+CLEARDELAYGOTO
+BREAK
+
+#IF
+NOT CHECKBAGSIZE  12
+#ACT
+MESSAGEBOX [进阶失败]:\　\　　　　　　您的“包袱位置”不足“12个”空位置！
+break
+
+
+
+
+#IF
+CHECKITEMW 蓝月复古盾牌 1
+CHECKCUSTOMITEMPROGRESSBARVALUE 16 0 0 = 5
+#ACT
+CLEARDELAYGOTO
+MessageBox 对不起,您当前的盾牌已满了，无法继续增加经验！
+BREAK
+
+
+
+
+
+
+
+#IF
+CHECKGAMEPOINT < <$STR(N$盾牌经验B)>
+#ACT
+MESSAGEBOX \\\对不起，您的大米不足<$STR(N$盾牌经验B)>点
+break
+
+
+
+#or
+CHECKGAMEPOINT = <$STR(N$盾牌经验B)>
+CHECKGAMEPOINT > <$STR(N$盾牌经验B)>
+#ACT
+GAMEPOINT -  <$STR(N$盾牌经验B)>
+CHANGECUSTOMITEMPROGRESSBARVALUE 16 1 0 + <$STR(N$当前盾牌经验)>
+SendCenterMsg 254 0 恭喜您的盾牌经验增加：<$STR(N$当前盾牌经验)>点经验 0 3
+GOTO @MAIN
+DELAYGOTO 10  @main
+break
+#elseact
+MessageBox \\注入失败：\\1.请检查您的包袱材料和货币是否齐全！！！
+break
+
+
+
+
+

@@ -1,0 +1,37 @@
+[@main]
+#IF
+NOT EQUAL A147 
+#ACT
+MESSAGEBOX 为防止玩家攻沙期间不参与沙巴克激情，每晚21-22点停止进一切地图\【请玩家理解，传奇本生就是个激情的游戏，不要失去了他的意义】！！
+BREAK
+
+
+#IF
+NOT EQUAL A147 关闭打怪入口
+#act
+close
+#say
+<本服严禁外挂、脱机等辅助。/SCOLOR=249>\
+<一旦发现使用，直接删除角色，不给予任何警告的机会！/SCOLOR=249>\ \
+<做为帝国复古的特色地图，适合中级玩家打宝发育。/SCOLOR=250>\ \
+<本地图总共一层,小怪8分钟，15分钟刷新BOSS/SCOLOR=255>\ \
+
+<进入定军山/@会员进桃园> <(进入需要：100元宝)/SCOLOR=253>\ \
+
+
+[@会员进桃园]
+#IF
+NOT EQUAL A147 
+#ACT
+MESSAGEBOX 为防止玩家攻沙期间不参与沙巴克激情，每晚21-22点停止进一切地图\【请玩家理解，传奇本生就是个激情的游戏，不要失去了他的意义】！！
+BREAK
+
+#IF
+CHECKGAMEGOLD > 99
+#ACT
+GAMEGOLD - 100
+MAPMOVE 定军山 139 123
+GuildNoticeMsg 255 249 (*)【%s】进入了[%m]。
+break
+#elseact
+MESSAGEBOX 需要100元宝进入。

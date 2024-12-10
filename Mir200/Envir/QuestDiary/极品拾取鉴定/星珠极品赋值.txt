@@ -1,0 +1,855 @@
+[@一星珠]
+{
+
+
+#IF
+checkjob warrior
+#ACT
+MOV S$职业区分 战士
+
+
+#IF
+checkjob wizard
+#ACT
+MOV S$职业区分 法师
+
+#IF
+checkjob taoist
+#ACT
+MOV S$职业区分 道士
+
+
+#IF
+#ACT
+OPENMERCHANTBIGDLG 1 562 1 0 0 0 1 440 0
+#SAY
+\ \  \ 
+<∷/SCOLOR=67><觉醒极品属性，需要给我“/SCOLOR=161><极品星石/SCOLOR=254><”注意不是每次必成，只能碰运气觉醒/SCOLOR=161>\  \
+<-------------------------------------------------------------/SCOLOR=187>\  \
+\      <觉醒武器/@觉醒武器>            <觉醒衣服/@觉醒衣服>        <觉醒头盔/@觉醒头盔> \ \
+<-------------------------------------------------------------/SCOLOR=187>\ 
+\      <觉醒项链/@觉醒项链>            <觉醒左手/@觉醒左手>        <觉醒右手/@觉醒右手> \ \ 
+<-------------------------------------------------------------/SCOLOR=187>\ 
+\      <觉醒左戒/@觉醒左戒>            <觉醒右戒/@觉醒右戒>        <觉醒腰带/@觉醒腰带>  \ \
+<-------------------------------------------------------------/SCOLOR=187>\ 
+\      <觉醒靴子/@觉醒靴子>            <觉醒勋章/@觉醒勋章>        <觉醒斗笠/@觉醒斗笠> \ \
+<-------------------------------------------------------------/SCOLOR=187>\ 
+\      <觉醒宝石/@觉醒宝石>            \ \
+<-------------------------------------------------------------/SCOLOR=187>\ 
+
+
+
+
+
+
+
+
+[@觉醒时装]
+#ACT
+MOV S$觉醒极品位置名 时装衣服
+MOV N$锻造极品位置 17
+MOV N$锻造防御位置 0
+MOV N$锻造魔御位置 1
+MOV N$锻造攻击位置 2
+MOV N$锻造魔法位置 3
+MOV N$锻造道术位置 4
+MOV N$给予点数 0
+MOV S$攻击 攻击
+MOV S$魔法 魔法
+MOV S$道术 道术
+MOV S$防御 防御
+MOV S$魔御 魔御
+GOTO @觉醒极品预览
+
+
+[@觉醒本命符]
+#ACT
+MOV S$觉醒极品位置名 护身符
+MOV N$锻造极品位置 9
+MOV N$锻造防御位置 0
+MOV N$锻造魔御位置 1
+MOV N$锻造攻击位置 2
+MOV N$锻造魔法位置 3
+MOV N$锻造道术位置 4
+MOV N$给予点数 0
+MOV S$攻击 攻击
+MOV S$魔法 魔法
+MOV S$道术 道术
+MOV S$防御 防御
+MOV S$魔御 魔御
+GOTO @觉醒极品预览
+
+
+
+
+
+[@觉醒盾牌]
+#ACT
+MOV S$觉醒极品位置名 盾牌
+MOV N$锻造极品位置 16
+MOV N$锻造防御位置 0
+MOV N$锻造魔御位置 1
+MOV N$锻造攻击位置 2
+MOV N$锻造魔法位置 3
+MOV N$锻造道术位置 4
+MOV N$给予点数 0
+MOV S$攻击 攻击
+MOV S$魔法 魔法
+MOV S$道术 道术
+MOV S$防御 防御
+MOV S$魔御 魔御
+GOTO @觉醒极品预览
+
+
+
+
+
+
+[@觉醒马牌]
+#ACT
+MOV S$觉醒极品位置名 马牌
+MOV N$锻造极品位置 15
+MOV N$锻造防御位置 0
+MOV N$锻造魔御位置 1
+MOV N$锻造攻击位置 2
+MOV N$锻造魔法位置 3
+MOV N$锻造道术位置 4
+MOV N$给予点数 0
+MOV S$攻击 攻击
+MOV S$魔法 魔法
+MOV S$道术 道术
+MOV S$防御 防御
+MOV S$魔御 魔御
+GOTO @觉醒极品预览
+
+
+
+
+
+[@觉醒军鼓]
+#ACT
+MOV S$觉醒极品位置名 军鼓
+MOV N$锻造极品位置 14
+MOV N$锻造防御位置 0
+MOV N$锻造魔御位置 1
+MOV N$锻造攻击位置 2
+MOV N$锻造魔法位置 3
+MOV N$锻造道术位置 4
+MOV N$给予点数 0
+MOV S$攻击 攻击
+MOV S$魔法 魔法
+MOV S$道术 道术
+MOV S$防御 防御
+MOV S$魔御 魔御
+GOTO @觉醒极品预览
+
+
+
+
+
+[@觉醒宝石]
+#ACT
+MOV S$觉醒极品位置名 宝石
+MOV N$锻造极品位置 12
+MOV N$锻造防御位置 0
+MOV N$锻造魔御位置 1
+MOV N$锻造攻击位置 2
+MOV N$锻造魔法位置 3
+MOV N$锻造道术位置 4
+MOV N$给予点数 0
+MOV S$攻击 攻击
+MOV S$魔法 魔法
+MOV S$道术 道术
+MOV S$防御 防御
+MOV S$魔御 魔御
+GOTO @觉醒极品预览
+
+
+
+
+[@觉醒斗笠]
+#ACT
+MOV S$觉醒极品位置名 斗笠
+MOV N$锻造极品位置 13
+MOV N$锻造防御位置 0
+MOV N$锻造魔御位置 1
+MOV N$锻造攻击位置 2
+MOV N$锻造魔法位置 3
+MOV N$锻造道术位置 4
+MOV N$给予点数 0
+MOV S$攻击 攻击
+MOV S$魔法 魔法
+MOV S$道术 道术
+MOV S$防御 防御
+MOV S$魔御 魔御
+GOTO @觉醒极品预览
+
+[@觉醒勋章]
+#ACT
+MOV S$觉醒极品位置名 勋章
+MOV N$锻造极品位置 2
+MOV N$锻造防御位置 0
+MOV N$锻造魔御位置 1
+MOV N$锻造攻击位置 2
+MOV N$锻造魔法位置 3
+MOV N$锻造道术位置 4
+MOV N$给予点数 0
+MOV S$攻击 攻击
+MOV S$魔法 魔法
+MOV S$道术 道术
+MOV S$防御 防御
+MOV S$魔御 魔御
+GOTO @觉醒极品预览
+
+[@觉醒头盔]
+#ACT
+MOV S$觉醒极品位置名 头盔
+MOV N$锻造极品位置 4
+MOV N$锻造防御位置 0
+MOV N$锻造魔御位置 1
+MOV N$锻造攻击位置 2
+MOV N$锻造魔法位置 3
+MOV N$锻造道术位置 4
+MOV N$给予点数 0
+MOV S$攻击 攻击
+MOV S$魔法 魔法
+MOV S$道术 道术
+MOV S$防御 防御
+MOV S$魔御 魔御
+GOTO @觉醒极品预览
+
+[@觉醒项链]
+#ACT
+MOV S$觉醒极品位置名 项链
+MOV N$锻造极品位置 3
+MOV N$锻造防御位置 0
+MOV N$锻造魔御位置 1
+MOV N$锻造攻击位置 2
+MOV N$锻造魔法位置 3
+MOV N$锻造道术位置 4
+
+MOV N$给予点数 0
+MOV S$攻击 攻击
+MOV S$魔法 魔法
+MOV S$道术 道术
+MOV S$防御 准确
+MOV S$魔御 敏捷
+GOTO @觉醒极品预览
+
+[@觉醒武器]
+#IF
+#ACT
+GETHUMCUSTOMITEMVALUE 1 15 N$装备修为值1 N$百分比倍攻值
+
+; ESPGetItemFieldValue 1 NAME <$STR(S$身上装备名字)>
+mov S$身上装备名字 <$USEITEMNAME[1]>
+
+MOV S$觉醒极品位置名 武器
+MOV N$锻造极品位置 1
+MOV N$锻造攻击位置 0
+MOV N$锻造魔法位置 1
+MOV N$锻造道术位置 2
+MOV N$锻造防御位置 5
+MOV N$锻造魔御位置 11
+MOV N$给予点数 2
+MOV S$攻击 攻击
+MOV S$魔法 魔法
+MOV S$道术 道术
+MOV S$防御 准确
+MOV S$魔御 无用
+GOTO @觉醒极品预览
+
+[@觉醒衣服]
+#ACT
+MOV S$觉醒极品位置名 衣服
+MOV N$锻造极品位置 0
+MOV N$锻造防御位置 0
+MOV N$锻造魔御位置 1
+MOV N$锻造攻击位置 2
+MOV N$锻造魔法位置 3
+MOV N$锻造道术位置 4
+MOV N$给予点数 1
+MOV S$攻击 攻击
+MOV S$魔法 魔法
+MOV S$道术 道术
+MOV S$防御 防御
+MOV S$魔御 魔御
+GOTO @觉醒极品预览
+
+[@觉醒右手]
+#ACT
+MOV S$觉醒极品位置名 右手
+MOV N$锻造极品位置 5
+MOV N$锻造防御位置 0
+MOV N$锻造魔御位置 1
+MOV N$锻造攻击位置 2
+MOV N$锻造魔法位置 3
+MOV N$锻造道术位置 4
+MOV N$给予点数 0
+MOV S$攻击 攻击
+MOV S$魔法 魔法
+MOV S$道术 道术
+MOV S$防御 防御
+MOV S$魔御 魔御
+GOTO @觉醒极品预览
+
+[@觉醒左手]
+#ACT
+MOV S$觉醒极品位置名 左手
+MOV N$锻造极品位置 6
+MOV N$锻造防御位置 0
+MOV N$锻造魔御位置 1
+MOV N$锻造攻击位置 2
+MOV N$锻造魔法位置 3
+MOV N$锻造道术位置 4
+MOV N$给予点数 0
+MOV S$攻击 攻击
+MOV S$魔法 魔法
+MOV S$道术 道术
+MOV S$防御 防御
+MOV S$魔御 魔御
+GOTO @觉醒极品预览
+
+[@觉醒右戒]
+#ACT
+MOV S$觉醒极品位置名 右戒
+MOV N$锻造极品位置 7
+MOV N$锻造防御位置 0
+MOV N$锻造魔御位置 1
+MOV N$锻造攻击位置 2
+MOV N$锻造魔法位置 3
+MOV N$锻造道术位置 4
+MOV N$给予点数 0
+MOV S$攻击 攻击
+MOV S$魔法 魔法
+MOV S$道术 道术
+MOV S$防御 防御
+MOV S$魔御 魔御
+GOTO @觉醒极品预览
+
+[@觉醒左戒]
+#ACT
+MOV S$觉醒极品位置名 左戒
+MOV N$锻造极品位置 8
+MOV N$锻造防御位置 0
+MOV N$锻造魔御位置 1
+MOV N$锻造攻击位置 2
+MOV N$锻造魔法位置 3
+MOV N$锻造道术位置 4
+MOV N$给予点数 0
+MOV S$攻击 攻击
+MOV S$魔法 魔法
+MOV S$道术 道术
+MOV S$防御 防御
+MOV S$魔御 魔御
+GOTO @觉醒极品预览
+
+[@觉醒腰带]
+#ACT
+MOV S$觉醒极品位置名 腰带
+MOV N$锻造极品位置 10
+MOV N$锻造防御位置 0
+MOV N$锻造魔御位置 1
+MOV N$锻造攻击位置 2
+MOV N$锻造魔法位置 3
+MOV N$锻造道术位置 4
+MOV N$给予点数 0
+MOV S$攻击 攻击
+MOV S$魔法 魔法
+MOV S$道术 道术
+MOV S$防御 防御
+MOV S$魔御 魔御
+GOTO @觉醒极品预览
+
+[@觉醒靴子]
+#ACT
+MOV S$觉醒极品位置名 靴子
+MOV N$锻造极品位置 11
+MOV N$锻造防御位置 0
+MOV N$锻造魔御位置 1
+MOV N$锻造攻击位置 2
+MOV N$锻造魔法位置 3
+MOV N$锻造道术位置 4
+MOV N$给予点数 0
+MOV S$攻击 攻击
+MOV S$魔法 魔法
+MOV S$道术 道术
+MOV S$防御 防御
+MOV S$魔御 魔御
+MOV S$给予属性 <$STR(N$给予属性)>
+
+
+GOTO @觉醒极品预览
+
+;----------------------------------------------------------------
+
+[@觉醒极品预览]
+#IF
+#ACT
+MOV S$鉴定上限A 0
+MOV N$身上防御 0
+MOV N$身上魔御 0
+MOV N$身上攻击 0
+MOV N$身上魔法 0
+MOV N$身上道术 0
+;MOV N$给予属性 0
+; ESPGetItemFieldValue <$STR(N$锻造极品位置)> NAME <$STR(S$身上装备名字)>
+mov S$身上装备名字 <$USEITEMNAME[<$STR(N$锻造极品位置)>]> 
+
+#IF
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造攻击位置)> > 0
+#ACT
+GETITEMADDVALUE <$STR(N$锻造极品位置)> <$STR(N$锻造攻击位置)> <$STR(N$身上攻击)>
+
+#IF
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造魔法位置)> > 0
+#ACT
+GETITEMADDVALUE <$STR(N$锻造极品位置)> <$STR(N$锻造魔法位置)> <$STR(N$身上魔法)>
+
+#IF
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造道术位置)> > 0
+#ACT
+GETITEMADDVALUE <$STR(N$锻造极品位置)> <$STR(N$锻造道术位置)> <$STR(N$身上道术)>
+
+#IF
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造防御位置)> > 0
+#ACT
+GETITEMADDVALUE <$STR(N$锻造极品位置)> <$STR(N$锻造防御位置)> <$STR(N$身上防御)>
+
+#IF
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造魔御位置)> > 0
+#ACT
+GETITEMADDVALUE <$STR(N$锻造极品位置)> <$STR(N$锻造魔御位置)> <$STR(N$身上魔御)>
+
+
+
+
+
+#IF
+NOT CHECKUSEITEM <$STR(N$锻造极品位置)>
+#ACT
+MESSAGEBOX 这个位置没有穿戴装备，无法觉醒！
+BREAK
+
+
+#IF
+CheckTextlist ..\QuestDiary\极品拾取鉴定\装备大全.txt <$STR(S$身上装备名字)>
+#ACT
+GetStringPos ..\QuestDiary\极品拾取鉴定\装备大全.txt <$STR(S$身上装备名字)>
+INC N0 1
+GetListString ..\QuestDiary\极品拾取鉴定\装备大全.txt <$STR(N0)> S$属性类型A S$鉴定上限A
+
+
+#IF
+CheckTextlist ..\QuestDiary\极品拾取鉴定\战士装备.txt <$STR(S$身上装备名字)>
+checkjob warrior
+#ACT
+GetStringPos ..\QuestDiary\极品拾取鉴定\战士装备.txt <$STR(S$身上装备名字)>
+INC N0 1
+GetListString ..\QuestDiary\极品拾取鉴定\战士装备.txt <$STR(N0)> S$属性类型A S$鉴定上限A
+
+
+
+#IF
+CheckTextlist ..\QuestDiary\极品拾取鉴定\法师装备.txt <$STR(S$身上装备名字)>
+checkjob wizard
+#ACT
+GetStringPos ..\QuestDiary\极品拾取鉴定\法师装备.txt <$STR(S$身上装备名字)>
+INC N0 1
+GetListString ..\QuestDiary\极品拾取鉴定\法师装备.txt <$STR(N0)> S$属性类型A S$鉴定上限A
+
+
+#IF
+CheckTextlist ..\QuestDiary\极品拾取鉴定\道士装备.txt <$STR(S$身上装备名字)>
+checkjob taoist
+#ACT
+GetStringPos ..\QuestDiary\极品拾取鉴定\道士装备.txt <$STR(S$身上装备名字)>
+INC N0 1
+GetListString ..\QuestDiary\极品拾取鉴定\道士装备.txt <$STR(N0)> S$属性类型A S$鉴定上限A
+
+
+
+
+
+#IF
+#ACT
+#CALL [\极品拾取鉴定\锻造极品.txt] @锻造极品
+MOV N$修为上限 <$STR(S$鉴定上限A)>
+DEC N$修为上限 2
+DEC N$修为上限 <$STR(N$给予点数)>
+MOV S$身上攻击 <$STR(N$身上攻击)>
+MOV S$身上魔法 <$STR(N$身上魔法)>
+MOV S$身上道术 <$STR(N$身上道术)>
+MOV S$身上防御 <$STR(N$身上防御)>
+MOV S$身上魔御 <$STR(N$身上魔御)>
+MOV S$给予属性 <$STR(N$给予属性)>
+SetStringBlank <$STR(S$身上攻击)> 5 1
+SetStringBlank <$STR(S$身上魔法)> 5 1
+SetStringBlank <$STR(S$身上道术)> 5 1
+SetStringBlank <$STR(S$身上防御)> 5 1
+SetStringBlank <$STR(S$身上魔御)> 5 1
+SetStringBlank <$STR(S$给予属性)> 5 1
+OPENMERCHANTBIGDLG 1 562 1 0 0 0 1 440 0
+#SAY
+\ \  \ 
+ <您在正在觉醒身上“><$STR(S$身上装备名字)><"的极品属性>\ \  
+<当前身上极品的<$STR(S$防御)>：/SCOLOR=161>{<$STR(S$身上防御)>/SCOLOR=254}   上限：<$STR(S$鉴定上限A)>\ \  
+<当前身上极品的<$STR(S$魔御)>：/SCOLOR=161>{<$STR(S$身上魔御)>/SCOLOR=254}   上限：<$STR(S$鉴定上限A)>\ \ 
+<当前身上极品的<$STR(S$攻击)>：/SCOLOR=161>{<$STR(S$身上攻击)>/SCOLOR=254}   上限：<$STR(S$鉴定上限A)>\ \ 
+<当前身上极品的<$STR(S$魔法)>：/SCOLOR=161>{<$STR(S$身上魔法)>/SCOLOR=254}   上限：<$STR(S$鉴定上限A)>\ \ 
+<当前身上极品的<$STR(S$道术)>：/SCOLOR=161>{<$STR(S$身上道术)>/SCOLOR=254}   上限：<$STR(S$鉴定上限A)>\ \ 
+<当前身上觉醒的倍攻：/SCOLOR=22>{<$STR(S$给予属性)>/SCOLOR=253}   上限：<$STR(N$修为上限)>  \ \    
+<当前身上觉醒的生命：/SCOLOR=19>{<$STR(S$给予属性)>/SCOLOR=250}   上限：<$STR(N$修为上限)>     <类型：/SCOLOR=161>{<$STR(S$属性类型A)>/SCOLOR=21}\   \ 
+<-------------------------------------------------------------/SCOLOR=187>\  \ 
+\<觉醒极品：/SCOLOR=161>  <觉醒<$STR(S$攻击)>|250#需要：^-^254#极品星石*1^-^249#成功率：10%/@觉醒攻击>    <觉醒<$STR(S$魔法)>|250#需要：^-^254#极品星石*1^-^249#成功率：10%/@觉醒魔法>    <觉醒<$STR(S$道术)>|250#需要：^-^254#极品星石*1^-^249#成功率：10%/@觉醒道术>    <觉醒<$STR(S$防御)>|250#需要：^-^254#极品星石*1^-^249#成功率：10%/@觉醒防御>    <觉醒<$STR(S$魔御)>|250#需要：^-^254#极品星石*1^-^249#成功率：10%/@觉醒魔御>                  \  \ 
+\            <重洗元素|^-^161#随机重置极品元素^-^250#需要：^-^254#极品星石*10^-^249#成功率：100%/@重洗元素>            <上一页/@一星珠>\  \  
+\<注意：/SCOLOR=249><倍数和加星需根据/SCOLOR=161><职业类型主属性><觉醒才有用，否则不觉醒极品倍数/SCOLOR=161>  
+
+
+
+
+
+[@重洗元素]
+
+#IF
+#ACT
+GOTO @觉醒极品预览
+
+
+#IF
+NOT CHECKUSEITEM <$STR(N$锻造极品位置)>
+#ACT
+MESSAGEBOX 这个位置没有穿戴装备，无法觉醒！
+BREAK
+
+
+
+
+#IF
+NOT checkitem 极品星石 10
+#ACT 
+MESSAGEBOX \\非常抱歉，您包袱里面没有极品星石*10，无法觉醒属性
+break 
+
+
+
+#IF
+EQUAL S$属性类型A 攻击
+NOT CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造攻击位置)> = <$STR(S$鉴定上限A)>
+#ACT
+MESSAGEBOX \\对不起，您当前觉醒的属性还没有达<$STR(S$鉴定上限A)>点上限，请先觉醒到上限！
+break 
+
+
+#IF
+EQUAL S$属性类型A 道术
+NOT CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造道术位置)> = <$STR(S$鉴定上限A)>
+#ACT
+MESSAGEBOX \\对不起，您当前觉醒的属性还没有达<$STR(S$鉴定上限A)>点上限，请先觉醒到上限！
+break 
+
+
+
+#IF
+EQUAL S$属性类型A 魔法
+NOT CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造魔法位置)> = <$STR(S$鉴定上限A)>
+#ACT
+MESSAGEBOX \\对不起，您当前觉醒的属性还没有达<$STR(S$鉴定上限A)>点上限，请先觉醒到上限！
+break 
+
+
+
+#IF
+#ACT 
+TAKE 极品星石 10
+SetNewItemValue <$STR(N$锻造极品位置)> 0 = 0
+SetNewItemValue <$STR(N$锻造极品位置)> 1 = 0
+SetNewItemValue <$STR(N$锻造极品位置)> 2 = 0
+SetNewItemValue <$STR(N$锻造极品位置)> 3 = 0
+SetNewItemValue <$STR(N$锻造极品位置)> 4 = 0
+SetNewItemValue <$STR(N$锻造极品位置)> 5 = 0
+SetNewItemValue <$STR(N$锻造极品位置)> 6 = 0
+SetNewItemValue <$STR(N$锻造极品位置)> 7 = 0
+SetNewItemValue <$STR(N$锻造极品位置)> 8 = 0
+#CALL [\极品拾取鉴定\锻造极品.txt] @锻造极品
+MESSAGEBOX \\恭喜您，重置极品元素成功，请查看新的元素属性！！
+GOTO @觉醒极品预览
+break 
+
+
+
+
+
+
+[@觉醒道术]
+
+
+#IF
+NOT CHECKUSEITEM <$STR(N$锻造极品位置)>
+#ACT
+MESSAGEBOX 这个位置没有穿戴装备，无法觉醒！
+BREAK
+
+
+
+#IF
+NOT checkitem 极品星石 1
+#ACT 
+MESSAGEBOX \\非常抱歉，您包袱里面没有极品星石*1，无法觉醒属性
+break 
+
+
+#or
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造道术位置)> > <$STR(S$鉴定上限A)>
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造道术位置)> = <$STR(S$鉴定上限A)>
+#ACT
+MESSAGEBOX \\您当前觉醒的属性已达<$STR(S$鉴定上限A)>点上限，请换个属性继续觉醒！
+break 
+
+
+
+
+
+
+#IF
+RANDOM 10
+checkitem 极品星石 1
+#ACT 
+TAKE 极品星石 1
+CHANGEITEMADDVALUE <$STR(N$锻造极品位置)> <$STR(N$锻造道术位置)> + 1
+#CALL [\极品拾取鉴定\锻造极品.txt] @锻造极品
+SENDMSG 7 恭喜您，觉醒成功，您装备属性增加1点
+GOTO @觉醒极品预览
+break 
+
+#IF
+checkitem 极品星石 1
+#ACT 
+TAKE 极品星石 1
+SENDMSG 6 对不起，觉醒失败，极品星石被扣除
+GOTO @觉醒极品预览
+break 
+
+
+[@觉醒魔法]
+
+#IF
+NOT CHECKUSEITEM <$STR(N$锻造极品位置)>
+#ACT
+MESSAGEBOX 这个位置没有穿戴装备，无法觉醒！
+BREAK
+
+
+
+#IF
+NOT checkitem 极品星石 1
+#ACT 
+MESSAGEBOX \\非常抱歉，您包袱里面没有极品星石*1，无法觉醒属性
+break 
+
+
+
+#or
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造魔法位置)> > <$STR(S$鉴定上限A)>
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造魔法位置)> = <$STR(S$鉴定上限A)>
+#ACT
+MESSAGEBOX \\您当前觉醒的属性已达<$STR(S$鉴定上限A)>点上限，请换个属性继续觉醒！
+break 
+
+
+#IF
+RANDOM 10
+checkitem 极品星石 1
+#ACT 
+TAKE 极品星石 1
+CHANGEITEMADDVALUE <$STR(N$锻造极品位置)> <$STR(N$锻造魔法位置)> + 1
+#CALL [\极品拾取鉴定\锻造极品.txt] @锻造极品
+GOTO @觉醒极品预览
+SENDMSG 7 恭喜您，觉醒成功，您装备属性增加1点
+break 
+
+
+#IF
+checkitem 极品星石 1
+#ACT 
+TAKE 极品星石 1
+GOTO @觉醒极品预览
+SENDMSG 6 对不起，觉醒失败，极品星石被扣除
+break 
+
+
+
+
+
+
+
+[@觉醒攻击]
+
+#IF
+NOT CHECKUSEITEM <$STR(N$锻造极品位置)>
+#ACT
+MESSAGEBOX 这个位置没有穿戴装备，无法觉醒！
+BREAK
+
+
+
+
+#IF
+NOT checkitem 极品星石 1
+#ACT 
+MESSAGEBOX \\非常抱歉，您包袱里面没有极品星石*1，无法觉醒属性
+break 
+
+
+
+#or
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造攻击位置)> > <$STR(S$鉴定上限A)>
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造攻击位置)> = <$STR(S$鉴定上限A)>
+#ACT
+MESSAGEBOX \\您当前觉醒的属性已达<$STR(S$鉴定上限A)>点上限，请换个属性继续觉醒！
+break 
+
+
+
+
+#IF 
+RANDOM 10
+checkitem 极品星石 1
+#ACT 
+TAKE 极品星石 1
+CHANGEITEMADDVALUE <$STR(N$锻造极品位置)> <$STR(N$锻造攻击位置)> + 1
+#CALL [\极品拾取鉴定\锻造极品.txt] @锻造极品
+GOTO @觉醒极品预览
+SENDMSG 7 恭喜您，觉醒成功，您装备属性增加1点
+break 
+
+#IF 
+checkitem 极品星石 1
+#ACT 
+TAKE 极品星石 1
+GOTO @觉醒极品预览
+SENDMSG 6 对不起，觉醒失败，极品星石被扣除
+break 
+
+
+
+
+
+[@觉醒魔御]
+
+#IF
+EQUAL <$STR(S$魔御)> 无用
+#ACT
+MESSAGEBOX 这个位置没有用，不要瞎点，等下扣费了！
+BREAK
+
+#IF
+NOT CHECKUSEITEM <$STR(N$锻造极品位置)>
+#ACT
+MESSAGEBOX 这个位置没有穿戴装备，无法觉醒！
+BREAK
+
+
+#IF
+NOT checkitem 极品星石 1
+#ACT 
+MESSAGEBOX \\非常抱歉，您包袱里面没有极品星石*1，无法觉醒属性
+break 
+
+
+
+#or
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造魔御位置)> > <$STR(S$鉴定上限A)>
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造魔御位置)> = <$STR(S$鉴定上限A)>
+#ACT
+MESSAGEBOX \\您当前觉醒的属性已达<$STR(S$鉴定上限A)>点上限，请换个属性继续觉醒！
+break 
+
+
+#IF 
+RANDOM 10
+checkitem 极品星石 1
+#ACT 
+TAKE 极品星石 1
+CHANGEITEMADDVALUE <$STR(N$锻造极品位置)> <$STR(N$锻造魔御位置)> + 1
+#CALL [\极品拾取鉴定\锻造极品.txt] @锻造极品
+GOTO @觉醒极品预览
+SENDMSG 7 恭喜您，觉醒成功，您装备属性增加1点
+break 
+
+
+
+#IF 
+checkitem 极品星石 1
+#ACT 
+TAKE 极品星石 1
+GOTO @觉醒极品预览
+SENDMSG 6 对不起，觉醒失败，极品星石被扣除
+break 
+
+
+
+
+[@觉醒防御]
+
+#IF
+NOT CHECKUSEITEM <$STR(N$锻造极品位置)>
+#ACT
+MESSAGEBOX 这个位置没有穿戴装备，无法觉醒！
+BREAK
+
+
+
+#IF
+NOT checkitem 极品星石 1
+#ACT 
+MESSAGEBOX \\非常抱歉，您包袱里面没有极品星石*1，无法觉醒属性
+break 
+
+
+
+#or
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造防御位置)> > <$STR(S$鉴定上限A)>
+CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造防御位置)> = <$STR(S$鉴定上限A)>
+#ACT
+MESSAGEBOX \\您当前觉醒的属性已达<$STR(S$鉴定上限A)>点上限，请换个属性继续觉醒！
+break 
+
+
+#IF 
+checkitem 极品星石 1
+RANDOM 10
+#ACT 
+TAKE 极品星石 1
+CHANGEITEMADDVALUE <$STR(N$锻造极品位置)> <$STR(N$锻造防御位置)> + 1
+#CALL [\极品拾取鉴定\锻造极品.txt] @锻造极品
+GOTO @觉醒极品预览
+SENDMSG 7 恭喜您，觉醒成功，您装备属性增加1点
+break 
+
+
+#IF 
+checkitem 极品星石 1
+#ACT 
+TAKE 极品星石 1
+GOTO @觉醒极品预览
+SENDMSG 6 对不起，觉醒失败，极品星石被扣除
+break 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

@@ -1,0 +1,120 @@
+[@赤月类回收c]
+{
+#IF
+checkitem 圣战戒指 1
+#ACT
+take 圣战戒指 1
+inc m39 1
+inc m37 200000
+goto @赤月类回收c
+
+#IF
+checkitem 圣战手镯 1
+#ACT
+take 圣战手镯 1
+inc m39 1
+inc m37 200000
+goto @赤月类回收c
+
+#IF
+checkitem 圣战项链 1
+#ACT
+take 圣战项链 1
+inc m39 1
+inc m37 200000
+goto @赤月类回收c
+
+
+#IF
+checkitem 圣战头盔 1
+#ACT
+take 圣战头盔 1
+inc m39 1
+inc m37 200000
+goto @赤月类回收c
+
+
+
+
+
+
+#IF
+checkitem 法神戒指 1
+#ACT
+take 法神戒指 1
+inc m39 1
+inc m37 200000
+goto @赤月类回收c
+
+#IF
+checkitem 法神手镯 1
+#ACT
+take 法神手镯 1
+inc m39 1
+inc m37 200000
+goto @赤月类回收c
+
+#IF
+checkitem 法神项链 1
+#ACT
+take 法神项链 1
+inc m39 1
+inc m37 200000
+goto @赤月类回收c
+
+
+#IF
+checkitem 法神头盔 1
+#ACT
+take 法神头盔 1
+inc m39 1
+inc m37 200000
+goto @赤月类回收c
+
+
+
+#IF
+checkitem 天尊戒指 1
+#ACT
+take 天尊戒指 1
+inc m39 1
+inc m37 200000
+goto @赤月类回收c
+
+#IF
+checkitem 天尊手镯 1
+#ACT
+take 天尊手镯 1
+inc m39 1
+inc m37 200000
+goto @赤月类回收c
+
+#IF
+checkitem 天尊项链 1
+#ACT
+take 天尊项链 1
+inc m39 1
+inc m37 200000
+goto @赤月类回收c
+
+
+#IF
+checkitem 天尊头盔 1
+#ACT
+take 天尊头盔 1
+inc m39 1
+inc m37 200000
+goto @赤月类回收c
+
+
+#IF
+LARGE M37 0
+#ACT
+CHANGEEXP + <$STR(M37)> 1
+;GuildNoticeMsg 255 141  [%s]回收了<$STR(M39)>个赤月系列装备,获得经验<$STR(M37)>！
+MOV M37 0
+MOV M38 0
+MOV M39 0
+BREAK
+#ELSEACT
+}

@@ -1,0 +1,460 @@
+[@Main]
+
+
+#IF
+NOT CHECKUSEITEM 14
+#ACT
+MESSAGEBOX 请您先佩戴境界才能查看！
+CLEARDELAYGOTO
+BREAK
+
+
+
+#OR
+CHECKITEM 仙尊境 1
+CHECKITEM 神人境 1
+CHECKITEM 天神境 1
+CHECKITEM 玄神境 1
+CHECKITEM 神王境 1
+CHECKITEM 神君境 1
+CHECKITEM 真神境 1
+CHECKITEM 天帝境 1
+CHECKITEM 神帝境 1
+CHECKITEM 天尊境 1
+CHECKITEM 主宰境 1
+CHECKITEMW 仙尊境 1
+CHECKITEMW 神人境 1
+CHECKITEMW 天神境 1
+CHECKITEMW 玄神境 1
+CHECKITEMW 神王境 1
+CHECKITEMW 神君境 1
+CHECKITEMW 真神境 1
+CHECKITEMW 天帝境 1
+CHECKITEMW 神帝境 1
+CHECKITEMW 天尊境 1
+CHECKITEMW 主宰境 1
+#ACT
+#elseact
+MESSAGEBOX 对不起，请先佩戴仙尊境以上的境界在来！
+BREAK
+
+
+#OR
+CHECKITEM 洗髓境 1
+CHECKITEMW 洗髓境 1
+#ACT
+MOV S$当前境界 洗髓境
+
+#OR
+CHECKITEM 辟谷境 1
+CHECKITEMW 辟谷境 1
+#ACT
+MOV S$当前境界 辟谷境
+
+
+#OR
+CHECKITEM 融合境 1
+CHECKITEMW 融合境 1
+#ACT
+MOV S$当前境界 融合境
+
+
+#OR
+CHECKITEM 练气境 1
+CHECKITEMW 练气境 1
+#ACT
+MOV S$当前境界 练气境
+
+
+#OR
+CHECKITEM 筑基境 1
+CHECKITEMW 筑基境 1
+#ACT
+MOV S$当前境界 筑基境
+
+
+#OR
+CHECKITEM 金丹境 1
+CHECKITEMW 金丹境 1
+#ACT
+MOV S$当前境界 金丹境
+
+
+#OR
+CHECKITEM 元婴境 1
+CHECKITEMW 元婴境 1
+#ACT
+MOV S$当前境界 元婴境
+
+
+#OR
+CHECKITEM 出窍境 1
+CHECKITEMW 出窍境 1
+#ACT
+MOV S$当前境界 出窍境
+
+
+#OR
+CHECKITEM 分神境 1
+CHECKITEMW 分神境 1
+#ACT
+MOV S$当前境界 分神境
+
+
+#OR
+CHECKITEM 合体境 1
+CHECKITEMW 合体境 1
+#ACT
+MOV S$当前境界 合体境
+
+
+#OR
+CHECKITEM 渡劫境 1
+CHECKITEMW 渡劫境 1
+#ACT
+MOV S$当前境界 渡劫境
+
+
+#OR
+CHECKITEM 大乘境 1
+CHECKITEMW 大乘境 1
+#ACT
+MOV S$当前境界 大乘境
+
+#OR
+CHECKITEM 散仙境 1
+CHECKITEMW 散仙境 1
+#ACT
+MOV S$当前境界 散仙境
+
+#OR
+CHECKITEM 地仙境 1
+CHECKITEMW 地仙境 1
+#ACT
+MOV S$当前境界 地仙境
+
+#OR
+CHECKITEM 人仙境 1
+CHECKITEMW 人仙境 1
+#ACT
+MOV S$当前境界 人仙境
+
+#OR
+CHECKITEM 天仙境 1
+CHECKITEMW 天仙境 1
+#ACT
+MOV S$当前境界 天仙境
+
+#OR
+CHECKITEM 金仙境 1
+CHECKITEMW 金仙境 1
+#ACT
+MOV S$当前境界 金仙境
+
+#OR
+CHECKITEM 玄仙境 1
+CHECKITEMW 玄仙境 1
+#ACT
+MOV S$当前境界 玄仙境
+
+#OR
+CHECKITEM 仙君境 1
+CHECKITEMW 仙君境 1
+#ACT
+MOV S$当前境界 仙君境
+
+#OR
+CHECKITEM 仙帝境 1
+CHECKITEMW 仙帝境 1
+#ACT
+MOV S$当前境界 仙帝境
+
+#OR
+CHECKITEM 仙尊境 1
+CHECKITEMW 仙尊境 1
+#ACT
+MOV S$当前境界 仙尊境
+
+#OR
+CHECKITEM 神人境 1
+CHECKITEMW 神人境 1
+#ACT
+MOV S$当前境界 神人境
+
+#OR
+CHECKITEM 大乘境 1
+CHECKITEMW 大乘境 1
+#ACT
+MOV S$当前境界 大乘境
+
+#OR
+CHECKITEM 天神境 1
+CHECKITEMW 天神境 1
+#ACT
+MOV S$当前境界 天神境
+
+#OR
+CHECKITEM 玄神境 1
+CHECKITEMW 玄神境 1
+#ACT
+MOV S$当前境界 玄神境
+
+#OR
+CHECKITEM 神王境 1
+CHECKITEMW 神王境 1
+#ACT
+MOV S$当前境界 神王境
+
+#OR
+CHECKITEM 神君境 1
+CHECKITEMW 神君境 1
+#ACT
+MOV S$当前境界 神君境
+
+#OR
+CHECKITEM 真神境 1
+CHECKITEMW 真神境 1
+#ACT
+MOV S$当前境界 真神境
+
+#OR
+CHECKITEM 天帝境 1
+CHECKITEMW 天帝境 1
+#ACT
+MOV S$当前境界 天帝境
+
+#OR
+CHECKITEM 神帝境 1
+CHECKITEMW 神帝境 1
+#ACT
+MOV S$当前境界 神帝境
+
+#OR
+CHECKITEM 天尊境 1
+CHECKITEMW 天尊境 1
+#ACT
+MOV S$当前境界 天尊境
+
+#OR
+CHECKITEM 主宰境 1
+CHECKITEMW 主宰境 1
+#ACT
+MOV S$当前境界 主宰境
+
+
+
+
+
+
+
+
+
+
+#IF
+#Act
+#CALL [\极品拾取鉴定\境界成长属性.txt] @境界成长属性
+MOV N$境界经验A <$STR(N$当前境界经验)>
+DIV N$境界经验A 15
+MOV N$境界大米 <$STR(N$当前境界经验)>
+DIV N$境界大米 400
+MOV S$境界经验 当前需要：<$STR(N$境界大米)>大米升级
+
+
+MOV N$境界元宝 <$STR(N$当前境界经验)>
+MUL N$境界元宝 5
+MOV N$境界材料 <$STR(N$当前境界经验)>
+DIV N$境界材料 20000
+MOV S$境界材料 悟空宝石
+
+MOV S$境界条件1 ^-^251#1.元宝*<$STR(N$境界元宝)>
+MOV S$境界条件2 ^-^146#2.<$STR(S$境界材料)>*<$STR(N$境界材料)>
+
+
+
+#OR
+CHECKITEM 主宰境 1
+CHECKITEMW 主宰境 1
+#ACT
+MOV S$下级境界 主宰境
+MOV S$当前境界 主宰境
+
+
+
+#IF
+CHECKITEMW 主宰境 1
+CHECKCUSTOMITEMPROGRESSBARVALUE 14 0 0 = 3
+#ACT
+MOV N$境界经验A <$STR(N$当前境界经验)>
+DIV N$境界经验A 15
+MOV N$境界大米 <$STR(N$当前境界经验)>
+DIV N$境界大米 0
+MOV S$境界经验 已经满级
+
+
+MOV N$境界元宝 <$STR(N$当前境界经验)>
+MUL N$境界元宝 0
+MOV N$境界材料 <$STR(N$当前境界经验)>
+DIV N$境界材料 0
+MOV S$境界材料 已经满级
+
+MOV S$境界条件1 ^-^251#1.已经满级
+MOV S$境界条件2 ^-^146#2.已经满级
+
+
+
+
+
+#IF
+#Act
+#CALL [\极品拾取鉴定\境界成长属性.txt] @境界成长属性
+MOV N$境界经验A <$STR(N$当前境界经验)>
+DIV N$境界经验A 10
+close
+
+#SAY
+; \  
+; <> <【当前境界】：/SCOLOR=161>　<“<$STR(S$当前境界)>”/SCOLOR=253>     <$STR(S$境界详情展示)>\ \
+; <> <【装备介绍】：/SCOLOR=250><道可道，不可盗。能取一道，，但却不能攫取无尽道/SCOLOR=249>           \ \
+; <> <【装备介绍】：/SCOLOR=250><总有一道在天外，一道不尽，生生不息，再衍无尽道/SCOLOR=161>   　\ \
+; <> <【装备介绍】：/SCOLOR=250>　<本命装备、不可交易、丢弃、爆出/SCOLOR=243>   　\ \ \
+; <>　　　   <Text:一键注入境界经验|^-^250#升下一级需要条件：<$STR(S$境界条件1)><$STR(S$境界条件2)>:10:-15{FCOLOR=251}/@材料一键升级>
+
+; <>　　　 <Text:一键升级境界经验|^-^253#<$STR(S$境界经验)>^-^250#境界经验：^-^161#击杀境界怪物可以获得经验:10:-15{FCOLOR=251}/@一键升级>\
+
+<Img|width=620|height=300|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|reset=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=80|tipsx=10|tipsy=80|color=161|size=16|text=【当前境界】：>
+<RText|a=0|x=186|y=80|tipsx=10|tipsy=80|color=255|size=16|text=<“<$STR(S$当前境界)>”/FCOLOR=253>>
+<Text|a=0|x=32|y=120|tipsx=10|tipsy=80|color=250|size=16|text=【装备介绍】：>
+<Text|a=0|x=186|y=120|tipsx=10|tipsy=80|color=21|size=16|text=道可道，不可盗。能取一道，，但却不能攫取无尽道>
+<Text|a=0|x=32|y=160|tipsx=10|tipsy=80|color=250|size=16|text=【装备介绍】：>
+<Text|a=0|x=186|y=160|tipsx=10|tipsy=80|color=22|size=16|text=总有一道在天外，一道不尽，生生不息，再衍无尽道>
+<Text|a=0|x=32|y=200|tipsx=10|tipsy=80|color=250|size=16|text=【装备介绍】：>
+<Text|a=0|x=186|y=200|tipsx=10|tipsy=80|color=243|size=16|text=本命装备、不可交易、丢弃、爆出>
+<Text|a=0|x=38.0|y=260.0|tipsx=10|tipsy=80|color=251|size=16|tips={升下一级需要条件：<$STR(S$境界条件1)><$STR(S$境界条件2)>/FCOLOR=250}|text=一键注入境界经验|link=@材料一键升级>
+<Text|a=0|x=299.0|y=260.0|tipsx=10|tipsy=80|color=251|size=16|text=一键升级境界经验|link=@一键升级>
+
+
+
+[@材料一键升级]
+
+
+#IF
+NOT CHECKUSEITEM 14
+#ACT
+MESSAGEBOX 请您先佩戴境界才能注入经验！
+CLEARDELAYGOTO
+BREAK
+
+#IF
+NOT CHECKBAGSIZE  12
+#ACT
+MESSAGEBOX [进阶失败]:\　\　　　　　　您的“包袱位置”不足“12个”空位置！
+break
+
+
+
+
+#IF
+CHECKITEMW 主宰境 1
+CHECKCUSTOMITEMPROGRESSBARVALUE 14 0 0 = 3
+#ACT
+CLEARDELAYGOTO
+MessageBox 对不起,您当前的境界已满了，无法继续增加经验！
+BREAK
+
+
+
+
+
+#IF
+CHECKGAMEGOLD < <$STR(N$境界元宝)>
+#ACT
+MESSAGEBOX \\\对不起，您的元宝不足<$STR(N$境界元宝)>个，无法注入经验！
+break
+
+
+#IF
+NOT CHECKITEM <$STR(S$境界材料)> <$STR(N$境界材料)>
+#ACT
+MESSAGEBOX \\\对不起，您的包袱里<$STR(S$境界材料)>不足<$STR(N$境界材料)>个，无法注入经验！
+break
+
+
+
+
+#IF
+CHECKGAMEGOLD > <$STR(N$境界元宝)>
+CHECKITEM <$STR(S$境界材料)> <$STR(N$境界材料)>
+#ACT
+GAMEGOLD -  <$STR(N$境界元宝)>
+TAKE <$STR(S$境界材料)> <$STR(N$境界材料)>
+CHANGECUSTOMITEMPROGRESSBARVALUE 14 1 0 + <$STR(N$当前境界经验)>
+SendCenterMsg 253 0 恭喜您的境界经验增加：<$STR(N$当前境界经验)>点经验 0 3
+GOTO @MAIN
+DELAYGOTO 10  @main
+break
+#elseact
+MessageBox \\注入失败：\\1.请检查您的包袱材料和货币是否齐全！！！
+break
+
+
+
+
+[@一键升级]
+
+
+#IF
+NOT CHECKUSEITEM 14
+#ACT
+MESSAGEBOX 请您先佩戴境界才能注入经验！
+CLEARDELAYGOTO
+BREAK
+
+#IF
+NOT CHECKBAGSIZE  12
+#ACT
+MESSAGEBOX [进阶失败]:\　\　　　　　　您的“包袱位置”不足“12个”空位置！
+break
+
+
+
+
+#IF
+CHECKITEMW 主宰境 1
+CHECKCUSTOMITEMPROGRESSBARVALUE 14 0 0 = 3
+#ACT
+CLEARDELAYGOTO
+MessageBox 对不起,您当前的境界已满了，无法继续增加经验！
+BREAK
+
+
+
+
+
+#IF
+CHECKGAMEPOINT < <$STR(N$境界大米)>
+#ACT
+MESSAGEBOX \\\对不起，您的大米不足<$STR(N$境界大米)>点
+break
+
+
+
+#or
+CHECKGAMEPOINT = <$STR(N$境界大米)>
+CHECKGAMEPOINT > <$STR(N$境界大米)>
+#ACT
+GAMEPOINT -  <$STR(N$境界大米)>
+CHANGECUSTOMITEMPROGRESSBARVALUE 14 1 0 + <$STR(N$当前境界经验)>
+SendCenterMsg 253 0 恭喜您的境界经验增加：<$STR(N$当前境界经验)>点经验 0 3
+GOTO @MAIN
+DELAYGOTO 10  @main
+break
+#elseact
+MessageBox \\兑换失败：\\1.请检查您的账号上是否有<$STR(N$境界大米)>点大米\\
+break
+
+
+
+

@@ -1,0 +1,64 @@
+[@MAIN]
+; <武林大会/FCOLOR=254>   <Hot~/FCOLOR=249>             <谁是英雄？谁是狗熊？比比就知道！/AUTOCOLOR=254,251,168,191,250,70,245,249,253>\
+; <--------------------------------------------------------------/AUTOCOLOR=91>\
+; <><每天19:10分是武林争霸举办时间,大于40级的玩家才可以进入争霸地图./FCOLOR=19>\
+; <><活动开启10分钟内可以重复进入地图,10分钟后大门关闭./FCOLOR=19>\
+; <><当场地战斗仅剩最后一人则诞生/FCOLOR=19><“武林盟主”/FCOLOR=253><,受万人敬仰./FCOLOR=19>\
+; <><比赛规则:/SCOLOR=249><场地不允许使用任何药品,禁止使用回城石,随机石./SCOLOR=254>\
+; <><盟主奖励:/SCOLOR=249><“武林盟主”可以获得/SCOLOR=254><388888元宝/SCOLOR=253><奖励！！/SCOLOR=254>\
+; <--------------------------------------------------------------/AUTOCOLOR=91>\ 
+; <√进入武林争霸场地/@群英争霸>                                <关闭对话×/@exit>\ 
+
+<Img|width=620|height=300|img=public/bg_npc_01.png|bg=1|scale9r=10|scale9t=10|scale9b=10|reset=1|scale9l=10|move=0>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=60|tipsx=10|tipsy=80|color=254|size=18|text=武林大会>
+<Text|a=0|x=120|y=60|tipsx=10|tipsy=80|color=249|size=18|text=Hot~>
+<Text|a=0|x=164|y=60|tips=|tipsx=10|tipsy=80|color=254,251,168,191,250,70,245,249,253|size=18|text=谁是英雄？谁是狗熊？比比就知道！>
+<Text|a=0|x=32|y=80|tips=|tipsx=10|tipsy=80|color=91|size=18|text=-------------------------------------------------------------->
+<Text|a=0|x=32|y=100|tipsx=10|tipsy=80|color=19|size=18|text=每天19:10分是武林争霸举办时间,大于40级的玩家才可以进入争霸地图.>
+<Text|a=0|x=32|y=120|tipsx=10|tipsy=80|color=19|size=18|text=活动开启10分钟内可以重复进入地图,10分钟后大门关闭.>
+<Text|a=0|x=32|y=140|tipsx=10|tipsy=80|color=19|size=18|text=当场地战斗仅剩最后一人则诞生>
+<Text|a=0|x=340|y=140|tipsx=10|tipsy=80|color=253|size=18|text=“武林盟主”>
+<Text|a=0|x=472|y=140|tipsx=10|tipsy=80|color=19|size=18|text=,受万人敬仰.>
+<Text|a=0|x=32|y=160|tips=|tipsx=10|tipsy=80|color=249|size=18|text=比赛规则:>
+<Text|a=0|x=131|y=160|tips=|tipsx=10|tipsy=80|color=254|size=18|text=场地不允许使用任何药品,禁止使用回城石,随机石.>
+<Text|a=0|x=32|y=180|tips=|tipsx=10|tipsy=80|color=249|size=18|text=盟主奖励:>
+<Text|a=0|x=131|y=180|tips=|tipsx=10|tipsy=80|color=254|size=18|text=“武林盟主”可以获得>
+<Text|a=0|x=351|y=180|tips=|tipsx=10|tipsy=80|color=253|size=18|text=388888元宝>
+<Text|a=0|x=461|y=180|tips=|tipsx=10|tipsy=80|color=254|size=18|text=奖励！！>
+<Text|a=0|x=32|y=200|tips=|tipsx=10|tipsy=80|color=91|size=18|text=-------------------------------------------------------------->
+<Text|a=0|x=32|y=220|tipsx=10|tipsy=80|color=251|size=18|text=√进入武林争霸场地|link=@群英争霸>
+<Text|a=0|x=230|y=220|tipsx=10|tipsy=80|color=251|size=18|text=关闭对话×|link=@exit>
+
+
+[@群英争霸]
+#IF
+EQUAL G111 1
+#ACT
+GOTO @HUIKAI
+BREAK
+
+#IF
+hour 19 19
+min 10 20
+#ACT
+GOTO @HUIKAI
+BREAK
+#ELSEACT
+messagebox 请于每天晚上19:10-19:20点进入！
+CLOSE
+
+[@HUIKAI]
+#IF
+CHECKLEVELEX > 39
+#ACT
+MAPMOVE wlzb
+SENDMSG 0 %s进去了武林争霸，他是否会为了荣誉血战到底！ 
+SENDMSG 0 %s进去了武林争霸，他是否会为了荣誉血战到底！
+SENDMSG 0 %s进去了武林争霸，他是否会为了荣誉血战到底！
+SENDMSG 0 %s进去了武林争霸，他是否会为了荣誉血战到底！ 
+BREAK
+#ELSEACT
+messagebox 你的等级不够40级，不能进入
+CLOSE

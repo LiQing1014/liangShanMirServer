@@ -1,0 +1,51 @@
+[@main]
+
+#IF
+#ACT
+#SAY
+; <><┌┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┬┈┈┈┈┈┐/SCOLOR=254><>\
+; <><︳/SCOLOR=254>  <昆仑仙境/SCOLOR=254><:安全区域·怪物聚集·适合挂机·安全/SCOLOR=161> <︳/SCOLOR=254> <精品原创/SCOLOR=19> <︳/SCOLOR=254><>\
+; <><├┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┬┈┈┈┈┈┤/SCOLOR=254><>\
+; <><︳/SCOLOR=254>  <BOSS地图/SCOLOR=251><:各种精英、BOSS系列怪物应有尽有...../SCOLOR=249><├┈┈┈┈┈┤/SCOLOR=254><>\
+; <><├┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┤/SCOLOR=254> <进入地图|249#进入条件：^-^254#充值达到50000点^-^250#此地图很大，是安全区，可以放心挂机/@进入地图A> <︳/SCOLOR=254><>\
+; <><︳/SCOLOR=254>  <地图爆率/SCOLOR=251><:高级装备、高级特殊、货币材料..../SCOLOR=254>   <├┈┈┈┈┈┤/SCOLOR=254><>\
+; <><├┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┤/SCOLOR=254> <进入地图|249#进入条件：^-^254#充值达到50000点^-^250#此地图很大，是安全区，可以放心挂机/@进入地图A> <︳/SCOLOR=254><>\
+; <><︳/SCOLOR=254>  <进入条件/SCOLOR=251><:充值达到50000点★级怪物必爆大量大米-宝石/SCOLOR=249><>\
+; <><└┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┴┈┈┈┈┈┘/SCOLOR=254><>\
+; <
+
+<Img|width=620|height=300|scale9t=10|scale9l=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_06.jpg|reset=1|esc=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=54|y=80|tipsx=10|tipsy=80|color=254|size=16|text=昆仑仙境>
+<Text|a=0|x=142|y=80|tipsx=10|tipsy=80|color=161|size=16|text=:安全区域·怪物聚集·适合挂机·安全>
+<Text|a=0|x=516.0|y=80.0|tipsx=10|tipsy=80|color=19|size=16|text=精品原创>
+<Text|a=0|x=54|y=120|tipsx=10|tipsy=80|color=251|size=16|text=BOSS地图>
+<Text|a=0|x=142|y=120|tipsx=10|tipsy=80|color=249|size=16|text=:各种精英、BOSS系列怪物应有尽有.....>
+<Text|a=0|x=517.0|y=140.0|tipsx=10|tipsy=80|color=251|size=16|text=进入地图|link=@进入地图A>
+<Text|a=0|x=1528|y=140|tipsx=10|tipsy=80|color=254|size=16|text=︳>
+<Text|a=0|x=54|y=160|tipsx=10|tipsy=80|color=251|size=16|text=地图爆率>
+<Text|a=0|x=142|y=160|tipsx=10|tipsy=80|color=254|size=16|text=:高级装备、高级特殊、货币材料....>
+<Text|a=0|x=517.0|y=180.0|tipsx=10|tipsy=80|color=251|size=16|text=进入地图|link=@进入地图A>
+<Text|a=0|x=1528|y=180|tipsx=10|tipsy=80|color=254|size=16|text=︳>
+<Text|a=0|x=54|y=200|tipsx=10|tipsy=80|color=251|size=16|text=进入条件>
+<Text|a=0|x=142|y=200|tipsx=10|tipsy=80|color=249|size=16|text=:充值达到50000点★级怪物必爆大量大米-宝石>
+
+[@进入地图A]
+
+
+#if
+CHECKGAMEGIRD > 49999
+#act
+#ELSEACT
+messagebox 对不起，充值点不足50000点，无法进入！
+BREAK
+
+
+#IF
+#ACT
+Map 昆仑仙境
+SENDMSG 0 {[地图公告]:|151:0:1}江湖大侠「{<$USERNAME>|250:0:1}」成功进入地图:{「<$MapTitle>」|254:0:1}打宝
+break
+
+

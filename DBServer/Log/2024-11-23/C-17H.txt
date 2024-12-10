@@ -1,0 +1,3 @@
+Load(ø‚):[3] [2] 2024-11-23 17:05:07 ≤©π≈Ãÿ Level:0  --  --  -- 
+2024-11-23 17:05:08 ¥Ê¥¢∫ƒ ±£∫SaveHum:47,HumBodyItems:63,HumBagItems:47,UpdateHumStorageItems:62
+Save:[4] [0] 2024-11-23 17:05:08 ≤©π≈Ãÿ Level:1  -- Bag[0]: MakeIndex:12319 Index:50044 OverLap:0 btValue:49(-2141869483) Bag[1]: MakeIndex:12320 Index:50045 OverLap:0 btValue:49(-2141869483)  --  -- 

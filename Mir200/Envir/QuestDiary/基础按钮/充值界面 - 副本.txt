@@ -1,0 +1,210 @@
+[@充值界面]
+{
+#IF
+Equal <$CLIENTFLAG> 2
+#act
+MOV S$充值界面 <Layout|children={2,3,4,5,6,7,8}|x=0|y=0|width=730|height=443|color=0>
+
+INC S$充值界面 <Img|id=2|x=4|y=2|children={201,202,203,204,205,206,207,208,209}|img=public/1900000665.png>
+INC S$充值界面 <Img|id=201|x=0|y=0|img=public/ty/word_jygtiao_12.png.png>
+INC S$充值界面 <Effect|id=202|x=-10|y=-40|scale=1|effecttype=0|effectid=70002|speed=1>
+INC S$充值界面 <Img|id=203|x=60|y=5.5|img=custom/rt/cz/98.png>
+INC S$充值界面 <Img|id=204|children={204a}|x=70|y=40|img=item/item_2/000001.png>
+INC S$充值界面 <Text|id=204a|x=40|y=8|size=18|color=250|outline=2|outlinecolor=0|text=9800>
+INC S$充值界面 <Img|id=205|x=10|y=85|img=custom/rt/cz/s.png>
+INC S$充值界面 <ItemShow|id=206|x=40|y=70|itemid=10058|itemcount=200|showtips=1|bgtype=1|scale=0.8>
+INC S$充值界面 <ItemShow|id=207|x=100|y=70|itemid=10059|itemcount=200|showtips=1|bgtype=1|scale=0.8>
+INC S$充值界面 <ItemShow|id=208|x=160|y=70|itemid=4|itemcount=200000|showtips=1|bgtype=1|scale=0.8>
+INC S$充值界面 <Layout|id=209|x=0|y=0|width=238|height=136|link=@T_拉起充值#TCZ_JE=98>
+
+INC S$充值界面 <Img|id=3|x=248|y=2|children={301,302,303,304,305,306,307,308,309}|img=public/1900000665.png>
+INC S$充值界面 <Img|id=301|x=0|y=0|img=public/ty/word_jygtiao_12.png.png>
+INC S$充值界面 <Effect|id=302|x=-10|y=-40|scale=1|effecttype=0|effectid=70002|speed=1>
+INC S$充值界面 <Img|id=303|x=70|y=5.5|img=custom/rt/cz/198.png>
+INC S$充值界面 <Img|id=304|children={304a}|x=70|y=40|img=item/item_2/000001.png>
+INC S$充值界面 <Text|id=304a|x=40|y=8|size=18|color=250|outline=2|outlinecolor=0|text=19800>
+INC S$充值界面 <Img|id=305|x=10|y=85|img=custom/rt/cz/s.png>
+INC S$充值界面 <ItemShow|id=306|x=40|y=70|itemid=10058|itemcount=500|showtips=1|bgtype=1|scale=0.8>
+INC S$充值界面 <ItemShow|id=307|x=100|y=70|itemid=10059|itemcount=500|showtips=1|bgtype=1|scale=0.8>
+INC S$充值界面 <ItemShow|id=308|x=160|y=70|itemid=4|itemcount=500000|showtips=1|bgtype=1|scale=0.8>
+INC S$充值界面 <Layout|id=309|x=0|y=0|width=238|height=136|link=@T_拉起充值#TCZ_JE=198>
+
+INC S$充值界面 <Img|id=4|x=492|y=2|children={401,402,403,404,405,406,407,408,409}|img=public/1900000665.png>
+INC S$充值界面 <Img|id=401|x=0|y=0|img=public/ty/word_jygtiao_12.png.png>
+INC S$充值界面 <Effect|id=402|x=-10|y=-40|scale=1|effecttype=0|effectid=70002|speed=1>
+INC S$充值界面 <Img|id=403|x=70|y=5.5|img=custom/rt/cz/298.png>
+INC S$充值界面 <Img|id=404|children={404a}|x=70|y=40|img=item/item_2/000001.png>
+INC S$充值界面 <Text|id=404a|x=40|y=8|size=18|color=250|outline=2|outlinecolor=0|text=29800>
+INC S$充值界面 <Img|id=405|x=10|y=85|img=custom/rt/cz/s.png>
+INC S$充值界面 <ItemShow|id=406|x=40|y=70|itemid=10058|itemcount=800|showtips=1|bgtype=1|scale=0.8>
+INC S$充值界面 <ItemShow|id=407|x=100|y=70|itemid=10059|itemcount=800|showtips=1|bgtype=1|scale=0.8>
+INC S$充值界面 <ItemShow|id=408|x=160|y=70|itemid=4|itemcount=800000|showtips=1|bgtype=1|scale=0.8>
+INC S$充值界面 <Layout|id=409|x=0|y=0|width=238|height=136|link=@T_拉起充值#TCZ_JE=298>
+
+INC S$充值界面 <Img|id=5|x=4|y=142|children={501,502,503,504,505,506,507,508,509}|img=public/1900000665.png>
+INC S$充值界面 <Img|id=501|x=0|y=0|img=public/ty/word_jygtiao_12.png.png>
+INC S$充值界面 <Effect|id=502|x=-10|y=-40|scale=1|effecttype=0|effectid=70002|speed=1>
+INC S$充值界面 <Img|id=503|x=70|y=5.5|img=custom/rt/cz/398.png>
+INC S$充值界面 <Img|id=504|children={504a}|x=70|y=40|img=item/item_2/000001.png>
+INC S$充值界面 <Text|id=504a|x=40|y=8|size=18|color=250|outline=2|outlinecolor=0|text=39800>
+INC S$充值界面 <Img|id=505|x=10|y=85|img=custom/rt/cz/s.png>
+INC S$充值界面 <ItemShow|id=506|x=40|y=70|itemid=10058|itemcount=1200|showtips=1|bgtype=1|scale=0.8>
+INC S$充值界面 <ItemShow|id=507|x=100|y=70|itemid=10059|itemcount=1200|showtips=1|bgtype=1|scale=0.8>
+INC S$充值界面 <ItemShow|id=508|x=160|y=70|itemid=4|itemcount=1200000|showtips=1|bgtype=1|scale=0.8>
+INC S$充值界面 <Layout|id=509|x=0|y=0|width=238|height=136|link=@T_拉起充值#TCZ_JE=398>
+
+INC S$充值界面 <Img|id=6|x=248|y=142|children={601,602,603,604,605,606,607,608,609}|img=public/1900000665.png>
+INC S$充值界面 <Img|id=601|x=0|y=0|img=public/ty/word_jygtiao_12.png.png>
+INC S$充值界面 <Effect|id=602|x=-10|y=-40|scale=1|effecttype=0|effectid=70002|speed=1>
+INC S$充值界面 <Img|id=603|x=70|y=5.5|img=custom/rt/cz/698.png>
+INC S$充值界面 <Img|id=604|children={604a}|x=70|y=40|img=item/item_2/000001.png>
+INC S$充值界面 <Text|id=604a|x=40|y=8|size=18|color=250|outline=2|outlinecolor=0|text=69800>
+INC S$充值界面 <Img|id=605|x=10|y=85|img=custom/rt/cz/s.png>
+INC S$充值界面 <ItemShow|id=606|x=40|y=70|itemid=10058|itemcount=2400|showtips=1|bgtype=1|scale=0.8>
+INC S$充值界面 <ItemShow|id=607|x=100|y=70|itemid=10059|itemcount=2400|showtips=1|bgtype=1|scale=0.8>
+INC S$充值界面 <ItemShow|id=608|x=160|y=70|itemid=4|itemcount=2400000|showtips=1|bgtype=1|scale=0.8>
+INC S$充值界面 <Layout|id=609|x=0|y=0|width=238|height=136|link=@T_拉起充值#TCZ_JE=698>
+
+INC S$充值界面 <Img|id=7|x=492|y=142|children={701,702,703,704,705,706,707,708,709}|img=public/1900000665.png>
+INC S$充值界面 <Img|id=701|x=0|y=0|img=public/ty/word_jygtiao_12.png.png>
+INC S$充值界面 <Effect|id=702|x=-10|y=-40|scale=1|effecttype=0|effectid=70002|speed=1>
+INC S$充值界面 <Img|id=703|x=70|y=5.5|img=custom/rt/cz/998.png>
+INC S$充值界面 <Img|id=704|children={704a}|x=70|y=40|img=item/item_2/000001.png>
+INC S$充值界面 <Text|id=704a|x=40|y=8|size=18|color=250|outline=2|outlinecolor=0|text=99800>
+INC S$充值界面 <Img|id=705|x=10|y=85|img=custom/rt/cz/s.png>
+INC S$充值界面 <ItemShow|id=706|x=40|y=70|itemid=10058|itemcount=3600|showtips=1|bgtype=1|scale=0.8>
+INC S$充值界面 <ItemShow|id=707|x=100|y=70|itemid=10059|itemcount=3600|showtips=1|bgtype=1|scale=0.8>
+INC S$充值界面 <ItemShow|id=708|x=160|y=70|itemid=4|itemcount=3600000|showtips=1|bgtype=1|scale=0.8>
+INC S$充值界面 <Layout|id=709|x=0|y=0|width=238|height=136|link=@T_拉起充值#TCZ_JE=998>
+
+INC S$充值界面 <Img|id=8|children={801,802,803,804,805,806,807,808}|x=-1|y=280|width=734|height=162|scale9l=20|scale9r=20|scale9b=20|scale9t=20|img=custom/j.png>
+INC S$充值界面 <Text|id=801|x=26.0|y=34.0|color=161|size=18|outline=2|outlinecolor=|text=当前区名：<$SERVERNAME>>
+INC S$充值界面 <Text|id=802|x=326.0|y=34.0|color=161|size=18|outline=2|outlinecolor=|text=充值角色：<$USERNAME>>
+INC S$充值界面 <Img|id=803|x=14.0|y=75.0|width=704|img=public/1900000667_1.png|esc=0>
+
+INC S$充值界面 <Text|id=804|x=26.0|y=102.0|color=161|size=18|outline=2|outlinecolor=|text=充值比例：1元=100灵符>
+INC S$充值界面 <Text|id=805|x=326.0|y=102.0|color=161|size=18|outline=2|outlinecolor=|text=充值金额：>
+INC S$充值界面 <Img|id=806|x=417.0|y=98.0|img=private/powerful_secret/input_bg.png>
+INC S$充值界面 <Input|id=807|x=420.0|y=100.0|width=116|height=25|errortips=1|type=3|mincount=2|place=输入充值金额|maxcount=12|size=18|inputid=3|color=255|placecolor=161>
+
+INC S$充值界面 <Button|id=808|x=578.0|y=92.0|size=18|pimg=public/1900000661.png|nimg=public/1900000660.png|color=161|submitInput=3|text=确认支付|link=@T_拉起充值1>
+
+ADDBUTTON 40 1 <$STR(S$充值界面)>
+
+BREAK
+#ELSEACT
+MOV S$充值界面 <Layout|children={2,3,4,5,6,7,8}|x=-4|y=0|width=610|height=399|color=0>
+
+INC S$充值界面 <Img|id=2|x=4|y=2|children={201,202,203,204,205,206,207,208,209}|img=public_win32/1900000665.png>
+INC S$充值界面 <Img|id=201|x=0|y=0|img=public/ty/word_jygtiao_12.png.png>
+INC S$充值界面 <Effect|id=202|x=-34|y=-62|scale=1|effecttype=0|effectid=70002|speed=1>
+INC S$充值界面 <Img|id=203|x=44|y=5.5|img=custom/rt/cz/98.png>
+INC S$充值界面 <Img|id=204|children={204a}|x=50|y=35|img=item/item_2/000001.png>
+INC S$充值界面 <Text|id=204a|x=40|y=8|size=18|color=250|outline=2|outlinecolor=0|text=9800>
+INC S$充值界面 <Img|id=205|x=10|y=70|img=custom/rt/cz/s.png>
+INC S$充值界面 <ItemShow|id=206|x=40|y=56|itemid=10058|itemcount=200|showtips=1|bgtype=1|scale=1>
+INC S$充值界面 <ItemShow|id=207|x=80|y=56|itemid=10059|itemcount=200|showtips=1|bgtype=1|scale=1>
+INC S$充值界面 <ItemShow|id=208|x=120|y=56|itemid=4|itemcount=200000|showtips=1|bgtype=1|scale=1>
+INC S$充值界面 <Layout|id=209|x=0|y=0|width=238|height=136|link=@T_拉起充值3#TCZ_JE=98>
+
+INC S$充值界面 <Img|id=3|x=207|y=2|children={301,302,303,304,305,306,307,308,309}|img=public_win32/1900000665.png>
+INC S$充值界面 <Img|id=301|x=0|y=0|img=public/ty/word_jygtiao_12.png.png>
+INC S$充值界面 <Effect|id=302|x=-34|y=-62|scale=1|effecttype=0|effectid=70002|speed=1>
+INC S$充值界面 <Img|id=303|x=50|y=5.5|img=custom/rt/cz/198.png>
+INC S$充值界面 <Img|id=304|children={304a}|x=50|y=35|img=item/item_2/000001.png>
+INC S$充值界面 <Text|id=304a|x=40|y=8|size=18|color=250|outline=2|outlinecolor=0|text=19800>
+INC S$充值界面 <Img|id=305|x=10|y=70|img=custom/rt/cz/s.png>
+INC S$充值界面 <ItemShow|id=306|x=40|y=56|itemid=10058|itemcount=500|showtips=1|bgtype=1|scale=1>
+INC S$充值界面 <ItemShow|id=307|x=80|y=56|itemid=10059|itemcount=500|showtips=1|bgtype=1|scale=1>
+INC S$充值界面 <ItemShow|id=308|x=120|y=56|itemid=4|itemcount=500000|showtips=1|bgtype=1|scale=1>
+INC S$充值界面 <Layout|id=309|x=0|y=0|width=238|height=136|link=@T_拉起充值3#TCZ_JE=198>
+
+INC S$充值界面 <Img|id=4|x=409|y=2|children={401,402,403,404,405,406,407,408,409}|img=public_win32/1900000665.png>
+INC S$充值界面 <Img|id=401|x=0|y=0|img=public/ty/word_jygtiao_12.png.png>
+INC S$充值界面 <Effect|id=402|x=-34|y=-62|scale=1|effecttype=0|effectid=70002|speed=1>
+INC S$充值界面 <Img|id=403|x=50|y=5.5|img=custom/rt/cz/298.png>
+INC S$充值界面 <Img|id=404|children={404a}|x=50|y=35|img=item/item_2/000001.png>
+INC S$充值界面 <Text|id=404a|x=40|y=8|size=18|color=250|outline=2|outlinecolor=0|text=29800>
+INC S$充值界面 <Img|id=405|x=10|y=70|img=custom/rt/cz/s.png>
+INC S$充值界面 <ItemShow|id=406|x=40|y=56|itemid=10058|itemcount=800|showtips=1|bgtype=1|scale=1>
+INC S$充值界面 <ItemShow|id=407|x=80|y=56|itemid=10059|itemcount=800|showtips=1|bgtype=1|scale=1>
+INC S$充值界面 <ItemShow|id=408|x=120|y=56|itemid=4|itemcount=800000|showtips=1|bgtype=1|scale=1>
+INC S$充值界面 <Layout|id=409|x=0|y=0|width=238|height=136|link=@T_拉起充值3#TCZ_JE=298>
+
+INC S$充值界面 <Img|id=5|x=4|y=123|children={501,502,503,504,505,506,507,508,509}|img=public_win32/1900000665.png>
+INC S$充值界面 <Img|id=501|x=0|y=0|img=public/ty/word_jygtiao_12.png.png>
+INC S$充值界面 <Effect|id=502|x=-34|y=-62|scale=1|effecttype=0|effectid=70002|speed=1>
+INC S$充值界面 <Img|id=503|x=50|y=5.5|img=custom/rt/cz/398.png>
+INC S$充值界面 <Img|id=504|children={504a}|x=50|y=35|img=item/item_2/000001.png>
+INC S$充值界面 <Text|id=504a|x=40|y=8|size=18|color=250|outline=2|outlinecolor=0|text=39800>
+INC S$充值界面 <Img|id=505|x=10|y=70|img=custom/rt/cz/s.png>
+INC S$充值界面 <ItemShow|id=506|x=40|y=56|itemid=10058|itemcount=1200|showtips=1|bgtype=1|scale=1>
+INC S$充值界面 <ItemShow|id=507|x=80|y=56|itemid=10059|itemcount=1200|showtips=1|bgtype=1|scale=1>
+INC S$充值界面 <ItemShow|id=508|x=120|y=56|itemid=4|itemcount=1200000|showtips=1|bgtype=1|scale=1>
+INC S$充值界面 <Layout|id=509|x=0|y=0|width=238|height=136|link=@T_拉起充值3#TCZ_JE=398>
+
+INC S$充值界面 <Img|id=6|x=207|y=123|children={601,602,603,604,605,606,607,608,609}|img=public_win32/1900000665.png>
+INC S$充值界面 <Img|id=601|x=0|y=0|img=public/ty/word_jygtiao_12.png.png>
+INC S$充值界面 <Effect|id=602|x=-34|y=-62|scale=1|effecttype=0|effectid=70002|speed=1>
+INC S$充值界面 <Img|id=603|x=50|y=5.5|img=custom/rt/cz/698.png>
+INC S$充值界面 <Img|id=604|children={604a}|x=50|y=35|img=item/item_2/000001.png>
+INC S$充值界面 <Text|id=604a|x=40|y=8|size=18|color=250|outline=2|outlinecolor=0|text=69800>
+INC S$充值界面 <Img|id=605|x=10|y=70|img=custom/rt/cz/s.png>
+INC S$充值界面 <ItemShow|id=606|x=40|y=56|itemid=10058|itemcount=2400|showtips=1|bgtype=1|scale=1>
+INC S$充值界面 <ItemShow|id=607|x=80|y=56|itemid=10059|itemcount=2400|showtips=1|bgtype=1|scale=1>
+INC S$充值界面 <ItemShow|id=608|x=120|y=56|itemid=4|itemcount=2400000|showtips=1|bgtype=1|scale=1>
+INC S$充值界面 <Layout|id=609|x=0|y=0|width=238|height=136|link=@T_拉起充值3#TCZ_JE=698>
+
+INC S$充值界面 <Img|id=7|x=409|y=123|children={701,702,703,704,705,706,707,708,709}|img=public_win32/1900000665.png>
+INC S$充值界面 <Img|id=701|x=0|y=0|img=public/ty/word_jygtiao_12.png.png>
+INC S$充值界面 <Effect|id=702|x=-34|y=-62|scale=1|effecttype=0|effectid=70002|speed=1>
+INC S$充值界面 <Img|id=703|x=50|y=5.5|img=custom/rt/cz/998.png>
+INC S$充值界面 <Img|id=704|children={704a}|x=50|y=35|img=item/item_2/000001.png>
+INC S$充值界面 <Text|id=704a|x=40|y=8|size=18|color=250|outline=2|outlinecolor=0|text=99800>
+INC S$充值界面 <Img|id=705|x=10|y=70|img=custom/rt/cz/s.png>
+INC S$充值界面 <ItemShow|id=706|x=40|y=56|itemid=10058|itemcount=3600|showtips=1|bgtype=1|scale=1>
+INC S$充值界面 <ItemShow|id=707|x=80|y=56|itemid=10059|itemcount=3600|showtips=1|bgtype=1|scale=1>
+INC S$充值界面 <ItemShow|id=708|x=120|y=56|itemid=4|itemcount=3600000|showtips=1|bgtype=1|scale=1>
+INC S$充值界面 <Layout|id=709|x=0|y=0|width=238|height=136|link=@T_拉起充值3#TCZ_JE=998>
+
+INC S$充值界面 <Img|id=8|children={801,802,803,804,805,806,807,808,809,810,811}|x=-1|y=237|width=610|height=162|scale9l=20|scale9r=20|scale9b=20|scale9t=20|img=custom/j.png>
+INC S$充值界面 <Text|id=801|x=26.0|y=34.0|color=161|size=16|outline=2|outlinecolor=|text=当前区名：<$SERVERNAME>>
+INC S$充值界面 <Text|id=802|x=234.0|y=34.0|color=161|size=16|outline=2|outlinecolor=|text=充值角色：<$USERNAME>>
+INC S$充值界面 <Img|id=803|x=14.0|y=75.0|width=582|img=public/1900000667_1.png|esc=0>
+
+INC S$充值界面 <Text|id=804|x=413.0|y=34.0|color=161|size=16|outline=2|outlinecolor=|text=充值比例：1元=100灵符>
+INC S$充值界面 <Text|id=805|x=308.0|y=102.0|color=161|size=16|outline=2|outlinecolor=|text=金额：>
+INC S$充值界面 <Img|id=806|x=350.0|y=98.0|img=private/powerful_secret/input_bg.png>
+INC S$充值界面 <Input|id=807|x=353.0|y=100.0|width=116|height=25|errortips=1|type=3|mincount=2|place=输入充值金额|maxcount=12|size=16|inputid=3|color=255|placecolor=161>
+
+INC S$充值界面 <Button|id=808|x=481.0|y=92.0|size=16|pimg=public/1900000661.png|nimg=public/1900000660.png|color=161|submitInput=3|text=确认支付|link=@T_拉起充值2>
+
+
+INC S$充值界面 <Button|id=809|children={809a}|x=20.0|y=95.0|nimg=private/powerful_secret/bg_czzya_05.png|link=@T_选择渠道#CZ_QD=1>
+
+INC S$充值界面 <Button|id=810|children={810a}|x=118.0|y=95.0|nimg=private/powerful_secret/bg_czzya_06.png|link=@T_选择渠道#CZ_QD=2>
+
+INC S$充值界面 <Button|id=811|children={811a}|x=215.0|y=95.0|nimg=private/powerful_secret/bg_czzya_04.png|link=@T_选择渠道#CZ_QD=3>
+
+#IF
+EQUAL N$CZ_QD 0
+#ACT
+MOV S$CZ_QD 1
+INC S$充值界面 <Img|id=809a|x=66.0|y=1.0|img=private/powerful_secret/bg_czzya_05_1.png>
+
+#IF
+EQUAL N$CZ_QD 1
+#ACT
+INC S$充值界面 <Img|id=810a|x=70.0|y=1.0|img=private/powerful_secret/bg_czzya_06_1.png>
+
+#IF
+EQUAL N$CZ_QD 2
+#ACT
+INC S$充值界面 <Img|id=811a|x=67.0|y=1.0|img=private/powerful_secret/bg_czzya_04_1.png>
+
+#IF
+#ACT
+ADDBUTTON 40 1 <$STR(S$充值界面)>
+BREAK
+
+}

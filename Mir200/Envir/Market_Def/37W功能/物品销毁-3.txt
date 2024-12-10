@@ -1,0 +1,70 @@
+[@main]
+#IF
+#ACT
+#SAY
+\ \ \ \
+<>　　<物品销毁/SCOLOR=250><一经销毁,无法恢复！/SCOLOR=249>\ 
+<>　　<请将不需要的物品放下框中，自动销毁/SCOLOR=93><一经销毁,无法恢复！/SCOLOR=249>\ \
+\
+
+<>　　　　　　　       　    <【/SCOLOR=249><点击销毁框内物品|253#点击销毁物品,一经销毁无法恢复/@开始销毁><】/SCOLOR=249>\
+
+<ITEMBOX:3:0:47:80:-15:45:45:*:请放入需要销毁的物品,一经销毁无法恢复>\
+\ \ \ \
+
+
+
+
+[@开始销毁]
+#IF
+#Act
+MessageBox 请检查一下框内是否放错装备！一旦销毁概不负责！\\请检查一下框内是否放错装备！一旦销毁概不负责！\\请检查一下框内是否放错装备！是否确认销毁！一旦销毁概不负责！ @确认销毁 @exit
+break
+
+
+[@确认销毁]
+
+#or
+equal <$BOXITEM[3].NAME> ≮终极≯◎怒火倍攻ㄨ绝命斩
+equal <$BOXITEM[3].NAME> ≮终极≯◎怒火倍攻ㄨ无敌铠
+equal <$BOXITEM[3].NAME> ≮终极≯◎怒火倍攻ㄨ神盔
+equal <$BOXITEM[3].NAME> ≮终极≯◎怒火倍攻ㄨ神链
+equal <$BOXITEM[3].NAME> ≮终极≯◎怒火倍攻ㄨ神镯
+equal <$BOXITEM[3].NAME> ≮终极≯◎怒火倍攻ㄨ神戒
+equal <$BOXITEM[3].NAME> ≮终极≯◎怒火倍攻ㄨ神带
+equal <$BOXITEM[3].NAME> ≮终极≯◎怒火倍攻ㄨ神靴
+equal <$BOXITEM[3].NAME> 『神器』◎神之切割◎Max
+equal <$BOXITEM[3].NAME> 〔Max·护符〕◆◆炼世◆◆
+equal <$BOXITEM[3].NAME> 〔Max·战鼓〕◆◆炼世◆◆
+equal <$BOXITEM[3].NAME> 〔Max·宝石〕◆◆炼世◆◆
+equal <$BOXITEM[3].NAME> 〔Max·玉佩〕◆◆炼世◆◆
+equal <$BOXITEM[3].NAME> 仙法·六道降临
+equal <$BOXITEM[3].NAME> 仙法·梦境归一
+equal <$BOXITEM[3].NAME> 仙法·通天之道
+equal <$BOXITEM[3].NAME> 仙法·无我无天
+equal <$BOXITEM[3].NAME> 〔时装〕づ＂血杀千里＂
+equal <$BOXITEM[3].NAME> 〔时装〕づ＂龙战八荒＂
+equal <$BOXITEM[3].NAME> 〔时装〕づ＂十方俱灭＂◆Max
+equal <$BOXITEM[3].NAME> 〔时装〕づ＂十方俱灭＂◆Max
+equal <$BOXITEM[3].NAME> 怒火精灵[复活]
+#ACT
+MessageBox 当前装备无法销毁！
+break
+
+#IF
+#ACT
+SENDMSG 7 你的<$BOXITEM[3].NAME>已经成功销毁!!!一经销毁,无法恢复！概不负责！
+SENDMSG 7 你的<$BOXITEM[3].NAME>已经成功销毁!!!一经销毁,无法恢复！概不负责！
+SENDMSG 7 你的<$BOXITEM[3].NAME>已经成功销毁!!!一经销毁,无法恢复！概不负责！
+DELBOXITEM 3
+
+[@ItemIntoBox3]
+#IF
+#ACT
+SENDMSG 6 你放入的是<$BOXITEM[3].NAME>!!!一经销毁,无法恢复！概不负责！
+SENDMSG 6 你放入的是<$BOXITEM[3].NAME>!!!一经销毁,无法恢复！
+SENDMSG 6 你放入的是<$BOXITEM[3].NAME>!!!一经销毁,无法恢复！
+Break
+
+
+

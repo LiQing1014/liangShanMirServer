@@ -1,0 +1,584 @@
+[@main]
+<既然今天你碰巧遇到老夫，我就破例让你见识一下老夫的手艺吧！/FCOLOR=100>\
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<圣阶、神阶剑甲可以强化进阶，最高强化7点，进阶/SCOLOR=250><100%><成功！/SCOLOR=250>\
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>  <提示：/FCOLOR=249><请将需要强化的装备放入强化框内点击强化/FCOLOR=250> ↘ \   \
+<武器说明：/FCOLOR=249><每件武器共可进阶七次 成功几率100%/FCOLOR=70>   \  \ 
+<衣服说明：/FCOLOR=249><每件衣服可进阶五次 成功几率100%！/FCOLOR=70>  <点击进入强化界面/@STATR_强化>\
+<ITEMBOX:0:0:47:279:-90:76:76:*:254#请放入需强化的装备>
+
+
+
+
+[@ItemIntoBox0]
+#IF
+CHECKTEXTLIST ..\QuestDiary\数据文件\武器强化\普通物品.txt <$BOXITEM[0].NAME>
+#ACT
+#ELSEACT
+UNALLOWITEMINTOBOX
+SENDMSG 7 当前物品不允许强化!
+
+
+
+[@STATR_强化]
+#IF
+;检测OK框中是否有物品
+CheckBoxItemCount 0 1
+#ACT
+#ELSEACT
+MESSAGEBOX 失败:原因如下\\　　　　1.需要放入圣神剑甲才能进入强化界面！
+BREAK
+
+#IF
+#ACT
+SetUpgradeItem 0
+
+
+#IF
+CHECKTEXTLIST ..\QuestDiary\数据文件\武器强化\武器.txt <$BOXITEM[0].NAME>
+#ACT
+GOTO @武器强化
+BREAK
+
+#IF
+CHECKTEXTLIST ..\QuestDiary\数据文件\武器强化\衣服.txt <$BOXITEM[0].NAME>
+#ACT
+GOTO @衣服强化
+BREAK
+
+[@衣服强化]
+#IF
+CHECKTEXTLIST ..\QuestDiary\数据文件\武器强化\战士物品.txt <$BOXITEM[0].NAME>
+#ACT
+MOV N$属性位置 2
+#IF
+CHECKTEXTLIST ..\QuestDiary\数据文件\武器强化\法师物品.txt <$BOXITEM[0].NAME>
+#ACT
+MOV N$属性位置 3
+#IF
+CHECKTEXTLIST ..\QuestDiary\数据文件\武器强化\道士物品.txt <$BOXITEM[0].NAME>
+#ACT
+MOV N$属性位置 4
+
+#IF
+CHECKITEMADDVALUE -1 <$STR(N$属性位置)> = 4
+#ACT
+#SAY
+<既然今天你碰巧遇到老夫，我就破例让你见识一下老夫的手艺吧！/FCOLOR=100>\
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<圣阶、神阶衣服可以强化进阶，最高强化5点，进阶/SCOLOR=250><100%><成功！/SCOLOR=250>\
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>  <提示：/FCOLOR=249><请将需要强化的装备放入强化框内点击强化/FCOLOR=250> ↘ \   \
+<>  <五级强化：/FCOLOR=249><20000元宝+400点卷/FCOLOR=70>   \  \ 
+<>  <强化几率：/FCOLOR=249><成功几率100% /FCOLOR=70>                        <确定强化/@衣服5>\
+<ITEMBOX:0:0:47:279:-90:76:76:*:254#请放入需强化的装备>
+
+
+#IF
+CHECKITEMADDVALUE -1 <$STR(N$属性位置)> = 3
+#ACT
+#SAY
+<既然今天你碰巧遇到老夫，我就破例让你见识一下老夫的手艺吧！/FCOLOR=100>\
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<圣阶、神阶衣服可以强化进阶，最高强化5点，进阶/SCOLOR=250><100%><成功！/SCOLOR=250>\
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>  <提示：/FCOLOR=249><请将需要强化的装备放入强化框内点击强化/FCOLOR=250> ↘ \   \
+<>  <四级强化：/FCOLOR=249><10000元宝+300点卷/FCOLOR=70>   \  \ 
+<>  <强化几率：/FCOLOR=249><成功几率100% /FCOLOR=70>                        <确定强化/@衣服4>\
+<ITEMBOX:0:0:47:279:-90:76:76:*:254#请放入需强化的装备>
+
+#IF
+CHECKITEMADDVALUE -1 <$STR(N$属性位置)> = 2
+#ACT
+#SAY
+<既然今天你碰巧遇到老夫，我就破例让你见识一下老夫的手艺吧！/FCOLOR=100>\
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<圣阶、神阶衣服可以强化进阶，最高强化5点，进阶/SCOLOR=250><100%><成功！/SCOLOR=250>\
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>  <提示：/FCOLOR=249><请将需要强化的装备放入强化框内点击强化/FCOLOR=250> ↘ \   \
+<>  <三级强化：/FCOLOR=249><5000元宝+200点卷/FCOLOR=70>   \  \ 
+<>  <强化几率：/FCOLOR=249><成功几率100% /FCOLOR=70>                        <确定强化/@衣服3>\
+<ITEMBOX:0:0:47:279:-90:76:76:*:254#请放入需强化的装备>
+
+#IF
+CHECKITEMADDVALUE -1 <$STR(N$属性位置)> = 1
+#ACT
+#SAY
+<既然今天你碰巧遇到老夫，我就破例让你见识一下老夫的手艺吧！/FCOLOR=100>\
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<圣阶、神阶衣服可以强化进阶，最高强化5点，进阶/SCOLOR=250><100%><成功！/SCOLOR=250>\
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>  <提示：/FCOLOR=249><请将需要强化的装备放入强化框内点击强化/FCOLOR=250> ↘ \   \
+<>  <二级强化：/FCOLOR=249><3000元宝+150点卷/FCOLOR=70>   \  \ 
+<>  <强化几率：/FCOLOR=249><成功几率100% /FCOLOR=70>                        <确定强化/@衣服2>\
+<ITEMBOX:0:0:47:279:-90:76:76:*:254#请放入需强化的装备>
+
+#IF
+CHECKITEMADDVALUE -1 <$STR(N$属性位置)> = 0
+#ACT
+#SAY
+<既然今天你碰巧遇到老夫，我就破例让你见识一下老夫的手艺吧！/FCOLOR=100>\
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<圣阶、神阶衣服可以强化进阶，最高强化5点，进阶/SCOLOR=250><100%><成功！/SCOLOR=250>\
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>  <提示：/FCOLOR=249><请将需要强化的装备放入强化框内点击强化/FCOLOR=250> ↘ \   \
+<>  <一级强化：/FCOLOR=249><需要2000元宝+100点卷/FCOLOR=70>   \  \ 
+<>  <强化几率：/FCOLOR=249><成功几率100% /FCOLOR=70>                        <确定强化/@衣服1>\
+<ITEMBOX:0:0:47:279:-90:76:76:*:254#请放入需强化的装备>
+
+
+[@武器强化]
+#IF
+CHECKTEXTLIST ..\QuestDiary\数据文件\武器强化\战士物品.txt <$BOXITEM[0].NAME>
+#ACT
+MOV N$属性位置 0
+#IF
+CHECKTEXTLIST ..\QuestDiary\数据文件\武器强化\法师物品.txt <$BOXITEM[0].NAME>
+#ACT
+MOV N$属性位置 1
+#IF
+CHECKTEXTLIST ..\QuestDiary\数据文件\武器强化\道士物品.txt <$BOXITEM[0].NAME>
+#ACT
+MOV N$属性位置 2
+
+#IF
+CHECKITEMADDVALUE -1 <$STR(N$属性位置)> = 6
+#ACT
+#SAY
+<既然今天你碰巧遇到老夫，我就破例让你见识一下老夫的手艺吧！/FCOLOR=100>\
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<圣阶、神阶武器可以强化进阶，最高强化7点，进阶/SCOLOR=250><100%><成功！/SCOLOR=250>\
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>  <提示：/FCOLOR=249><请将需要强化的装备放入强化框内点击强化/FCOLOR=250> ↘ \   \
+<>  <七级强化：/FCOLOR=249><30000元宝+500点卷/FCOLOR=70>   \  \ 
+<>  <强化几率：/FCOLOR=249><成功几率100% /FCOLOR=70>                        <确定强化/@强化7>\
+<ITEMBOX:0:0:47:279:-90:76:76:*:254#请放入需强化的装备>
+
+#IF
+CHECKITEMADDVALUE -1 <$STR(N$属性位置)> = 5
+#ACT
+#SAY
+<既然今天你碰巧遇到老夫，我就破例让你见识一下老夫的手艺吧！/FCOLOR=100>\
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<圣阶、神阶武器可以强化进阶，最高强化7点，进阶/SCOLOR=250><100%><成功！/SCOLOR=250>\
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>  <提示：/FCOLOR=249><请将需要强化的装备放入强化框内点击强化/FCOLOR=250> ↘ \   \
+<>  <六级强化：/FCOLOR=249><20000元宝+350点卷/FCOLOR=70>   \  \ 
+<>  <强化几率：/FCOLOR=249><成功几率100% /FCOLOR=70>                        <确定强化/@强化6>\
+<ITEMBOX:0:0:47:279:-90:76:76:*:254#请放入需强化的装备>
+
+#IF
+CHECKITEMADDVALUE -1 <$STR(N$属性位置)> = 4
+#ACT
+#SAY
+<既然今天你碰巧遇到老夫，我就破例让你见识一下老夫的手艺吧！/FCOLOR=100>\
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<圣阶、神阶武器可以强化进阶，最高强化7点，进阶/SCOLOR=250><100%><成功！/SCOLOR=250>\
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>  <提示：/FCOLOR=249><请将需要强化的装备放入强化框内点击强化/FCOLOR=250> ↘ \   \
+<>  <五级强化：/FCOLOR=249><10000元宝+300点卷/FCOLOR=70>   \  \ 
+<>  <强化几率：/FCOLOR=249><成功几率100% /FCOLOR=70>                        <确定强化/@强化5>\
+<ITEMBOX:0:0:47:279:-90:76:76:*:254#请放入需强化的装备>
+
+#IF
+CHECKITEMADDVALUE -1 <$STR(N$属性位置)> = 3
+#ACT
+#SAY
+<既然今天你碰巧遇到老夫，我就破例让你见识一下老夫的手艺吧！/FCOLOR=100>\
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<圣阶、神阶武器可以强化进阶，最高强化7点，进阶/SCOLOR=250><100%><成功！/SCOLOR=250>\
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>  <提示：/FCOLOR=249><请将需要强化的装备放入强化框内点击强化/FCOLOR=250> ↘ \   \
+<>  <四级强化：/FCOLOR=249><5000元宝+250点卷/FCOLOR=70>   \  \ 
+<>  <强化几率：/FCOLOR=249><成功几率100% /FCOLOR=70>                        <确定强化/@强化4>\
+<ITEMBOX:0:0:47:279:-90:76:76:*:254#请放入需强化的装备>
+
+#IF
+CHECKITEMADDVALUE -1 <$STR(N$属性位置)> = 2
+#ACT
+#SAY
+<既然今天你碰巧遇到老夫，我就破例让你见识一下老夫的手艺吧！/FCOLOR=100>\
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<圣阶、神阶武器可以强化进阶，最高强化7点，进阶/SCOLOR=250><100%><成功！/SCOLOR=250>\
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>  <提示：/FCOLOR=249><请将需要强化的装备放入强化框内点击强化/FCOLOR=250> ↘ \   \
+<>  <三级强化：/FCOLOR=249><4000元宝+200点卷/FCOLOR=70>   \  \ 
+<>  <强化几率：/FCOLOR=249><成功几率100% /FCOLOR=70>                        <确定强化/@强化3>\
+<ITEMBOX:0:0:47:279:-90:76:76:*:254#请放入需强化的装备>
+
+#IF
+CHECKITEMADDVALUE -1 <$STR(N$属性位置)> = 1
+#ACT
+#SAY
+<既然今天你碰巧遇到老夫，我就破例让你见识一下老夫的手艺吧！/FCOLOR=100>\
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<圣阶、神阶武器可以强化进阶，最高强化7点，进阶/SCOLOR=250><100%><成功！/SCOLOR=250>\
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>  <提示：/FCOLOR=249><请将需要强化的装备放入强化框内点击强化/FCOLOR=250> ↘ \   \
+<>  <二级强化：/FCOLOR=249><3000元宝+150点卷/FCOLOR=70>   \  \ 
+<>  <强化几率：/FCOLOR=249><成功几率100% /FCOLOR=70>                        <确定强化/@强化2>\
+<ITEMBOX:0:0:47:279:-90:76:76:*:254#请放入需强化的装备>
+
+#IF
+CHECKITEMADDVALUE -1 <$STR(N$属性位置)> = 0
+#ACT
+#SAY
+<既然今天你碰巧遇到老夫，我就破例让你见识一下老夫的手艺吧！/FCOLOR=100>\
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<圣阶、神阶武器可以强化进阶，最高强化7点，进阶/SCOLOR=250><100%><成功！/SCOLOR=250>\
+<-------------------------------------------------------------/AUTOCOLOR=91>\
+<>  <提示：/FCOLOR=249><请将需要强化的装备放入强化框内点击强化/FCOLOR=250> ↘ \   \
+<>  <一级强化：/FCOLOR=249><需要2000元宝+100点卷/FCOLOR=70>   \  \ 
+<>  <强化几率：/FCOLOR=249><成功几率100% /FCOLOR=70>                        <确定强化/@强化1>\
+<ITEMBOX:0:0:47:279:-90:76:76:*:254#请放入需强化的装备>
+
+
+
+[@衣服1]
+#IF
+#ACT
+SetUpgradeItem 0
+
+#IF
+NOT CHECKTEXTLIST ..\QuestDiary\数据文件\武器强化\衣服.txt <$BOXITEM[0].NAME>
+#ACT
+messagebox \\当前物品不是衣服，无法强化！
+BREAK
+
+#IF
+CHECKITEMADDVALUE -1 <$STR(N$属性位置)> = 0
+checkgamegold > 1999
+CHECKGAMEDIAMOND > 99
+#ACT
+gamegold - 2000
+GAMEDIAMOND - 100
+CHANGEITEMADDVALUE -1 <$STR(N$属性位置)> + 1
+UpDateBoxItem 0
+messagebox \\恭喜您！衣服强化成功！
+SENDMSG 0 151 58 原始天尊ぐ：恭喜玩家「%s」成功将衣服【<$BOXITEM[0].NAME>】强化到一级！
+GOTO @衣服强化
+break
+#ELSEACT
+SENDMSG 7 缺少强化条件！！
+BREAK
+
+[@衣服2]
+#IF
+#ACT
+SetUpgradeItem 0
+
+#IF
+NOT CHECKTEXTLIST ..\QuestDiary\数据文件\武器强化\衣服.txt <$BOXITEM[0].NAME>
+#ACT
+messagebox \\当前物品不是衣服，无法强化！
+BREAK
+
+#IF
+CHECKITEMADDVALUE -1 <$STR(N$属性位置)> = 1
+checkgamegold > 2999
+CHECKGAMEDIAMOND > 149
+#ACT
+gamegold - 3000
+GAMEDIAMOND - 150
+CHANGEITEMADDVALUE -1 <$STR(N$属性位置)> + 1
+UpDateBoxItem 0
+messagebox \\恭喜您！衣服强化成功！
+SENDMSG 0 151 58 原始天尊ぐ：恭喜玩家「%s」成功将衣服【<$BOXITEM[0].NAME>】强化到二级！
+GOTO @衣服强化
+break
+#ELSEACT
+SENDMSG 7 缺少强化条件！！
+BREAK
+
+[@衣服3]
+#IF
+#ACT
+SetUpgradeItem 0
+
+#IF
+NOT CHECKTEXTLIST ..\QuestDiary\数据文件\武器强化\衣服.txt <$BOXITEM[0].NAME>
+#ACT
+messagebox \\当前物品不是衣服，无法强化！
+BREAK
+
+#IF
+CHECKITEMADDVALUE -1 <$STR(N$属性位置)> = 2
+checkgamegold > 4999
+CHECKGAMEDIAMOND > 199
+#ACT
+gamegold - 5000
+GAMEDIAMOND - 200
+CHANGEITEMADDVALUE -1 <$STR(N$属性位置)> + 1
+UpDateBoxItem 0
+messagebox \\恭喜您！衣服强化成功！
+SENDMSG 0 151 58 原始天尊ぐ：恭喜玩家「%s」成功将衣服【<$BOXITEM[0].NAME>】强化到三级！
+GOTO @衣服强化
+break
+#ELSEACT
+SENDMSG 7 缺少强化条件！！
+BREAK
+
+[@衣服4]
+#IF
+#ACT
+SetUpgradeItem 0
+
+#IF
+NOT CHECKTEXTLIST ..\QuestDiary\数据文件\武器强化\衣服.txt <$BOXITEM[0].NAME>
+#ACT
+messagebox \\当前物品不是衣服，无法强化！
+BREAK
+
+#IF
+CHECKITEMADDVALUE -1 <$STR(N$属性位置)> = 3
+checkgamegold > 9999
+CHECKGAMEDIAMOND > 299
+#ACT
+gamegold - 10000
+GAMEDIAMOND - 300
+CHANGEITEMADDVALUE -1 <$STR(N$属性位置)> + 1
+UpDateBoxItem 0
+messagebox \\恭喜您！衣服强化成功！
+SENDMSG 0 151 58 原始天尊ぐ：恭喜玩家「%s」成功将衣服【<$BOXITEM[0].NAME>】强化到四级！
+GOTO @衣服强化
+break
+#ELSEACT
+SENDMSG 7 缺少强化条件！！
+BREAK
+
+[@衣服5]
+#IF
+#ACT
+SetUpgradeItem 0
+
+#IF
+NOT CHECKTEXTLIST ..\QuestDiary\数据文件\武器强化\衣服.txt <$BOXITEM[0].NAME>
+#ACT
+messagebox \\当前物品不是衣服，无法强化！
+BREAK
+
+#IF
+CHECKITEMADDVALUE -1 <$STR(N$属性位置)> = 4
+checkgamegold > 19999
+CHECKGAMEDIAMOND > 399
+#ACT
+gamegold - 20000
+GAMEDIAMOND - 400
+CHANGEITEMADDVALUE -1 <$STR(N$属性位置)> + 1
+UpDateBoxItem 0
+messagebox \\恭喜您！衣服强化成功！
+SENDMSG 0 151 58 原始天尊ぐ：恭喜玩家「%s」成功将衣服【<$BOXITEM[0].NAME>】强化到五级！
+ReturnBoxItem O
+break
+#ELSEACT
+SENDMSG 7 缺少强化条件！！
+BREAK
+
+
+
+[@强化1]
+#IF
+#ACT
+SetUpgradeItem 0
+
+#IF
+NOT CHECKTEXTLIST ..\QuestDiary\数据文件\武器强化\武器.txt <$BOXITEM[0].NAME>
+#ACT
+messagebox \\当前物品不是武器，无法强化！
+BREAK
+
+#IF
+CHECKITEMADDVALUE -1 <$STR(N$属性位置)> = 0
+checkgamegold > 1999
+CHECKGAMEDIAMOND > 99
+#ACT
+gamegold - 2000
+GAMEDIAMOND - 100
+CHANGEITEMADDVALUE -1 <$STR(N$属性位置)> + 1
+CHANGEITEMADDVALUE -1 5 + 1
+UpDateBoxItem 0
+messagebox \\恭喜您！武器强化成功！
+SENDMSG 0 151 58 原始天尊ぐ：恭喜玩家「%s」成功将武器【<$BOXITEM[0].NAME>】强化到一级！
+GOTO @武器强化
+break
+#ELSEACT
+SENDMSG 7 缺少强化条件！！
+BREAK
+
+[@强化2]
+#IF
+#ACT
+SetUpgradeItem 0
+
+#IF
+NOT CHECKTEXTLIST ..\QuestDiary\数据文件\武器强化\武器.txt <$BOXITEM[0].NAME>
+#ACT
+messagebox \\当前物品不是武器，无法强化！
+BREAK
+
+#IF
+CHECKITEMADDVALUE -1 <$STR(N$属性位置)> = 1
+checkgamegold > 2999
+CHECKGAMEDIAMOND > 149
+#ACT
+gamegold - 3000
+GAMEDIAMOND - 150
+CHANGEITEMADDVALUE -1 <$STR(N$属性位置)> + 1
+CHANGEITEMADDVALUE -1 5 + 1
+UpDateBoxItem 0
+messagebox \\恭喜您！武器强化成功！
+SENDMSG 0 151 58 原始天尊ぐ：恭喜玩家「%s」成功将武器【<$BOXITEM[0].NAME>】强化到二级！
+GOTO @武器强化
+break
+#ELSEACT
+SENDMSG 7 缺少强化条件！！
+BREAK
+
+[@强化3]
+#IF
+#ACT
+SetUpgradeItem 0
+
+#IF
+NOT CHECKTEXTLIST ..\QuestDiary\数据文件\武器强化\武器.txt <$BOXITEM[0].NAME>
+#ACT
+messagebox \\当前物品不是武器，无法强化！
+BREAK
+
+#IF
+CHECKITEMADDVALUE -1 <$STR(N$属性位置)> = 2
+checkgamegold > 3999
+CHECKGAMEDIAMOND > 199
+#ACT
+gamegold - 4000
+GAMEDIAMOND - 200
+CHANGEITEMADDVALUE -1 <$STR(N$属性位置)> + 1
+CHANGEITEMADDVALUE -1 5 + 1
+UpDateBoxItem 0
+messagebox \\恭喜您！武器强化成功！
+SENDMSG 0 151 58 原始天尊ぐ：恭喜玩家「%s」成功将武器【<$BOXITEM[0].NAME>】强化到三级！
+GOTO @武器强化
+break
+#ELSEACT
+SENDMSG 7 缺少强化条件！！
+BREAK
+
+[@强化4]
+#IF
+#ACT
+SetUpgradeItem 0
+
+#IF
+NOT CHECKTEXTLIST ..\QuestDiary\数据文件\武器强化\武器.txt <$BOXITEM[0].NAME>
+#ACT
+messagebox \\当前物品不是武器，无法强化！
+BREAK
+
+#IF
+CHECKITEMADDVALUE -1 <$STR(N$属性位置)> = 3
+checkgamegold > 4999
+CHECKGAMEDIAMOND > 249
+#ACT
+gamegold - 5000
+GAMEDIAMOND - 250
+CHANGEITEMADDVALUE -1 <$STR(N$属性位置)> + 1
+CHANGEITEMADDVALUE -1 5 + 1
+UpDateBoxItem 0
+messagebox \\恭喜您！武器强化成功！
+SENDMSG 0 151 58 原始天尊ぐ：恭喜玩家「%s」成功将武器【<$BOXITEM[0].NAME>】强化到四级！
+GOTO @武器强化
+break
+#ELSEACT
+SENDMSG 7 缺少强化条件！！
+BREAK
+
+[@强化5]
+#IF
+#ACT
+SetUpgradeItem 0
+
+#IF
+NOT CHECKTEXTLIST ..\QuestDiary\数据文件\武器强化\武器.txt <$BOXITEM[0].NAME>
+#ACT
+messagebox \\当前物品不是武器，无法强化！
+BREAK
+
+
+#IF
+CHECKITEMADDVALUE -1 <$STR(N$属性位置)> = 4
+checkgamegold > 9999
+CHECKGAMEDIAMOND > 299
+#ACT
+gamegold - 10000
+GAMEDIAMOND - 300
+CHANGEITEMADDVALUE -1 <$STR(N$属性位置)> + 1
+CHANGEITEMADDVALUE -1 5 + 1
+UpDateBoxItem 0
+messagebox \\恭喜您！武器强化成功！
+SENDMSG 0 151 58 原始天尊ぐ：恭喜玩家「%s」成功将武器【<$BOXITEM[0].NAME>】强化到五级！
+GOTO @武器强化
+break
+#ELSEACT
+SENDMSG 7 缺少强化条件！！
+BREAK
+
+[@强化6]
+#IF
+#ACT
+SetUpgradeItem 0
+
+#IF
+NOT CHECKTEXTLIST ..\QuestDiary\数据文件\武器强化\武器.txt <$BOXITEM[0].NAME>
+#ACT
+messagebox \\当前物品不是武器，无法强化！
+BREAK
+
+
+#IF
+CHECKITEMADDVALUE -1 <$STR(N$属性位置)> = 5
+checkgamegold > 19999
+CHECKGAMEDIAMOND > 349
+#ACT
+gamegold - 20000
+GAMEDIAMOND - 350
+CHANGEITEMADDVALUE -1 <$STR(N$属性位置)> + 1
+CHANGEITEMADDVALUE -1 5 + 1
+UpDateBoxItem 0
+messagebox \\恭喜您！武器强化成功！
+SENDMSG 0 151 58 原始天尊ぐ：恭喜玩家「%s」成功将武器【<$BOXITEM[0].NAME>】强化到六级！
+GOTO @武器强化
+break
+#ELSEACT
+SENDMSG 7 缺少强化条件！！
+BREAK
+
+[@强化7]
+#IF
+#ACT
+SetUpgradeItem 0
+
+#IF
+NOT CHECKTEXTLIST ..\QuestDiary\数据文件\武器强化\武器.txt <$BOXITEM[0].NAME>
+#ACT
+messagebox \\当前物品不是武器，无法强化！
+BREAK
+
+#IF
+CHECKITEMADDVALUE -1 <$STR(N$属性位置)> = 6
+checkgamegold > 29999
+CHECKGAMEDIAMOND > 499
+#ACT
+gamegold - 30000
+GAMEDIAMOND - 550
+CHANGEITEMADDVALUE -1 <$STR(N$属性位置)> + 1
+CHANGEITEMADDVALUE -1 5 + 1
+UpDateBoxItem 0
+messagebox \\恭喜您！武器强化成功！
+SENDMSG 0 151 58 原始天尊ぐ：恭喜玩家「%s」成功将武器【<$BOXITEM[0].NAME>】强化到七级！
+ReturnBoxItem O
+break
+#ELSEACT
+SENDMSG 7 缺少强化条件！！
+BREAK
+

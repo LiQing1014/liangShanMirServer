@@ -1,0 +1,107 @@
+[@main]
+#IF
+#ACT
+close
+#say
+\
+<提示：/FCOLOR=249><如果打到神阶项链，加材料可将至尊圣链升级为“至尊神链”！/FCOLOR=253> \
+<>                <ItemShow:508:0:1:1:1>    →    <ItemShow:509:0:1:1:1> \ \ \  \
+<>方式1： <使用神战链升级|254#需：无双·战链+至尊圣链+赤炎石*88/@神战链>    <使用神魔链升级|254#需：无双·魔链+至尊圣链+赤炎石*88/@神魔链>    <使用神道链升级|254#需：无双·道链+至尊圣链+赤炎石*88/@神道链> \ \ 
+
+<>方式2： <用材料直接升级|251#需：至尊圣链+女娲补天神石*68/@神战链1>    <用材料直接升级|251#需：至尊圣链+女娲补天神石*68/@神魔链1>    <用材料直接升级|251#需：至尊圣链+女娲补天神石*68/@神道链1>  \ 
+
+<使用女娲石加至尊圣链直接升级为“至尊神链”选择适合的方式即可！/FCOLOR=258> \
+
+
+[@神战链]
+#IF
+checkitem 至尊圣链 1
+checkitem 无双·战链 1
+checkitem 赤炎石 88
+#ACT
+take 赤炎石 88
+take 至尊圣链 1
+take 无双·战链 1
+GIVE 至尊神链 1
+SetIcon 2 1 315 0 10 30 0 100 0
+SENDMSG 0 恭喜<$USERNAME>将至尊圣链升级成功，获得：至尊神链！ 
+#ELSEACT
+MESSAGEBOX \\您的条件不足！
+BREAK
+
+[@神魔链]
+#IF
+checkitem 至尊圣链 1
+checkitem 无双·魔链 1
+checkitem 赤炎石 88
+#ACT
+take 赤炎石 88
+take 至尊圣链 1
+take 无双·魔链 1
+GIVE 至尊神链 1
+SetIcon 2 1 315 0 10 30 0 100 0
+SENDMSG 0 恭喜<$USERNAME>将至尊圣链升级成功，获得：至尊神链！ 
+#ELSEACT
+MESSAGEBOX \\您的条件不足！
+BREAK
+
+[@神道链]
+#IF
+checkitem 至尊圣链 1
+checkitem 无双·道链 1
+checkitem 赤炎石 88
+#ACT
+take 赤炎石 88
+take 至尊圣链 1
+take 无双·道链 1
+GIVE 至尊神链 1
+SetIcon 2 1 315 0 10 30 0 100 0
+SENDMSG 0 恭喜<$USERNAME>将至尊圣链升级成功，获得：至尊神链！ 
+#ELSEACT
+MESSAGEBOX \\您的条件不足！
+BREAK
+
+
+
+[@神战链1]
+#IF
+checkitem 至尊圣链 1
+checkitem 女娲补天神石 68
+#ACT
+take 女娲补天神石 68
+take 至尊圣链 1
+GIVE 至尊神链 1
+SetIcon 2 1 315 0 10 30 0 100 0
+SENDMSG 0 恭喜<$USERNAME>将至尊圣链升级成功，获得：至尊神链！ 
+#ELSEACT
+MESSAGEBOX \\您的条件不足！
+BREAK
+
+[@神魔链1]
+#IF
+checkitem 至尊圣链 1
+checkitem 女娲补天神石 68
+#ACT
+take 女娲补天神石 68
+take 至尊圣链 1
+GIVE 至尊神链 1
+SetIcon 2 1 315 0 10 30 0 100 0
+SENDMSG 0 恭喜<$USERNAME>将至尊圣链升级成功，获得：至尊神链！ 
+#ELSEACT
+MESSAGEBOX \\您的条件不足！
+BREAK
+
+[@神道链1]
+#IF
+checkitem 至尊圣链 1
+checkitem 女娲补天神石 68
+#ACT
+take 女娲补天神石 68
+take 至尊圣链 1
+GIVE 至尊神链 1
+SetIcon 2 1 315 0 10 30 0 100 0
+SENDMSG 0 恭喜<$USERNAME>将至尊圣链升级成功，获得：至尊神链！ 
+#ELSEACT
+MESSAGEBOX \\您的条件不足！
+BREAK
+
