@@ -1,0 +1,286 @@
+[@顶部_开区豪礼]
+{
+#IF
+#ACT
+csv_read
+    
+MOV n$循环序列 0
+MOV S$开区豪礼_在线奖励
+MOV S$开区豪礼_在线奖励ID
+    
+while n$循环序列 < <$GetCsv(cfg_开区豪礼_七日,Row)>
+    
+goto @开区豪礼_在线奖励加载
+inc n$循环序列 1
+endwhile
+    
+#SAY
+<Img|x=0.0|y=0.0|esc=1|show=4|bg=1|move=0|img=custom/kaiquhaoli/bg_10.png|loadDelay=0|reset=1>
+<Layout|x=813.0|y=0.0|width=80|height=80|link=@exit>
+<Button|x=841.0|y=16.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+; <RText|x=262.0|y=127.0|outline=1|color=255|size=16|text=<当前在线时长：/FCOLOR=255><<$STR(J20)>分钟/FCOLOR=254>>
+<Button|a=4|x=159.0|y=93|nimg=custom/xiaomishu/bg_12.png|color=251|size=18|text=七日登录|link=@顶部_开区豪礼>
+<Button|a=4|x=159.0|y=147|nimg=custom/xiaomishu/bg_13.png|color=251|size=18|text=升级奖励|link=@开区豪礼_升级>
+<Button|a=4|x=159.0|y=201|nimg=custom/xiaomishu/bg_13.png|color=251|size=18|text=高价回收|link=@开区豪礼_回收>
+; <Button|a=4|x=159.0|y=255|nimg=custom/xiaomishu/bg_12.png|color=251|size=18|pimg=public/00000362.png|text=每日在线>
+
+<ListView|children={<$STR(S$开区豪礼_在线奖励ID)>}|x=254.0|y=199.0|width=566|height=320|margin=5>
+    
+<$str(S$开区豪礼_在线奖励)>
+    
+    
+[@开区豪礼_在线奖励加载]
+    
+#IF
+#ACT
+    
+getdbitemfieldvalue <$cfg_开区豪礼_七日(<$STR(n$循环序列)>_2)> idx S$在线奖励展示ID1
+getdbitemfieldvalue <$cfg_开区豪礼_七日(<$STR(n$循环序列)>_4)> idx S$在线奖励展示ID2
+; getdbitemfieldvalue <$cfg_开区豪礼_七日(<$STR(n$循环序列)>_6)> idx S$在线奖励展示ID3
+    
+INC S$开区豪礼_在线奖励 <Img|id=kqhl<$STR(n$循环序列)>|children={kqhl<$STR(n$循环序列)>_1,kqhl<$STR(n$循环序列)>_2,kqhl<$STR(n$循环序列)>_3,kqhl<$STR(n$循环序列)>_4,kqhl<$STR(n$循环序列)>_5}|x=0.0|y=0.0|height=70|img=custom/xiaomishu/bg_01.png|esc=0>
+INC S$开区豪礼_在线奖励 <RText|id=kqhl<$STR(n$循环序列)>_1|x=20.0|y=25.0|color=250|size=18|text=第<$cfg_开区豪礼_七日(<$STR(n$循环序列)>_1)>天>
+INC S$开区豪礼_在线奖励 <ItemShow|id=kqhl<$STR(n$循环序列)>_2|x=205|y=2.0|width=70|height=70|itemid=<$str(S$在线奖励展示ID1)>|itemcount=<$cfg_开区豪礼_七日(<$STR(n$循环序列)>_3)>|showtips=1|bgtype=1>
+INC S$开区豪礼_在线奖励 <ItemShow|id=kqhl<$STR(n$循环序列)>_3|x=290|y=2.0|width=70|height=70|itemid=<$str(S$在线奖励展示ID2)>|itemcount=<$cfg_开区豪礼_七日(<$STR(n$循环序列)>_5)>|showtips=1|bgtype=1>
+; INC S$开区豪礼_在线奖励 <ItemShow|id=kqhl<$STR(n$循环序列)>_4|x=333|y=2.0|width=70|height=70|itemid=<$str(S$在线奖励展示ID3)>|itemcount=<$cfg_开区豪礼_七日(<$STR(n$循环序列)>_7)>|showtips=1|bgtype=1>
+    
+#IF
+large U51 <$STR(n$循环序列)>
+#ACT
+INC S$开区豪礼_在线奖励 <Button|id=kqhl<$STR(n$循环序列)>_5|a=4|x=498.0|y=35.0|size=18|color=255|nimg=custom/button/cj5.png>
+#ELSEACT
+INC S$开区豪礼_在线奖励 <Button|id=kqhl<$STR(n$循环序列)>_5|a=4|x=498.0|y=35.0|size=18|color=255|nimg=custom/xiaomishu/bg_03.png|pimg=custom/xiaomishu/bg_04.png|link=@开区豪礼_七日登录领取#领取挡位=<$STR(n$循环序列)>>
+    
+#IF
+#ACT
+INC S$开区豪礼_在线奖励ID kqhl<$STR(n$循环序列)>,
+    
+
+
+[@开区豪礼_七日登录领取]
+#IF
+equal J0 1
+#ACT
+sendmsg 9 <font color='#FFFF00'>[系统提示]：</font><font color='#00FF00'>今日已经领取</font>
+break
+
+#IF
+large U51 6
+#ACT
+sendmsg 9 <font color='#FFFF00'>[系统提示]：</font><font color='#00FF00'>七日奖励已经领取完毕</font>
+BREAK
+
+#IF
+large S$领取挡位 <$str(U51)>
+#ACT
+sendmsg 9 <font color='#FFFF00'>[系统提示]：</font><font color='#00FF00'>请按照顺序领取</font>
+BREAK
+
+#IF
+#ACT
+INC U51 1
+MOV J0 1
+sendmsg 9 <font color='#FFFF00'>[系统提示]：</font><font color='#00FF00'>领取成功！！！</font>
+MAilGIVE <$cfg_开区豪礼_七日(<$STR(S$领取挡位)>_2)> <$cfg_开区豪礼_七日(<$STR(S$领取挡位)>_3)> 0#1#4#5#8 ;禁止丢弃
+MAilGIVE <$cfg_开区豪礼_七日(<$STR(S$领取挡位)>_4)> <$cfg_开区豪礼_七日(<$STR(S$领取挡位)>_5)> 0#1#4#5#8 ;禁止丢弃
+sendmsg 9 <font color='#FFFF00'>[系统提示]：</font><font color='#00FF00'>奖励已发送，请前往邮件提取</font>
+SendMail 2 开区豪礼 您的七日登录[第<$cfg_开区豪礼_七日(<$STR(S$领取挡位)>_1)>天]礼包已送达，请提取
+
+goto @顶部_开区豪礼
+
+
+
+
+
+
+
+
+; 升级奖励
+[@开区豪礼_升级]
+#IF
+#ACT
+MOV n$循环序列 0
+MOV S$开区豪礼_升级奖励
+MOV S$开区豪礼_升级奖励ID
+while n$循环序列 < <$GetCsv(cfg_开区豪礼_升级,Row)>
+    
+goto @开区豪礼_升级奖励加载
+inc n$循环序列 1
+endwhile
+    
+#SAY
+<Img|x=0.0|y=0.0|esc=1|show=4|bg=1|move=0|img=custom/kaiquhaoli/bg_00.png|loadDelay=0|reset=1>
+<Layout|x=813.0|y=0.0|width=80|height=80|link=@exit>
+<Button|x=841.0|y=16.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<RText|x=262.0|y=127.0|outline=1|color=255|size=16|text=<当前等级：/FCOLOR=255><<$LEVEL>级/FCOLOR=254>>
+<Button|a=4|x=159.0|y=93|nimg=custom/xiaomishu/bg_13.png|color=251|size=18|text=七日登录|link=@顶部_开区豪礼>
+<Button|a=4|x=159.0|y=147|nimg=custom/xiaomishu/bg_12.png|color=251|size=18|text=升级奖励|link=@开区豪礼_升级>
+<Button|a=4|x=159.0|y=201|nimg=custom/xiaomishu/bg_13.png|color=251|size=18|text=高价回收|link=@开区豪礼_回收>
+; <Button|a=4|x=159.0|y=255|nimg=custom/xiaomishu/bg_12.png|color=251|size=18|pimg=public/00000362.png|text=每日在线>
+
+<ListView|children={<$STR(S$开区豪礼_升级奖励ID)>}|x=254.0|y=199.0|width=566|height=320|margin=5>
+    
+<$str(S$开区豪礼_升级奖励)>
+
+[@开区豪礼_升级奖励加载]
+#IF
+#ACT
+    
+getdbitemfieldvalue <$cfg_开区豪礼_升级(<$STR(n$循环序列)>_2)> idx S$在线奖励展示ID1
+getdbitemfieldvalue <$cfg_开区豪礼_升级(<$STR(n$循环序列)>_4)> idx S$在线奖励展示ID2
+getdbitemfieldvalue <$cfg_开区豪礼_升级(<$STR(n$循环序列)>_6)> idx S$在线奖励展示ID3
+    
+INC S$开区豪礼_升级奖励 <Img|id=kqhl<$STR(n$循环序列)>|children={kqhl<$STR(n$循环序列)>_1,kqhl<$STR(n$循环序列)>_2,kqhl<$STR(n$循环序列)>_3,kqhl<$STR(n$循环序列)>_4,kqhl<$STR(n$循环序列)>_5}|x=0.0|y=0.0|height=70|img=custom/xiaomishu/bg_01.png|esc=0>
+INC S$开区豪礼_升级奖励 <RText|id=kqhl<$STR(n$循环序列)>_1|x=15.0|y=25.0|color=250|size=18|text=等级达到<$cfg_开区豪礼_升级(<$STR(n$循环序列)>_1)>级>
+INC S$开区豪礼_升级奖励 <ItemShow|id=kqhl<$STR(n$循环序列)>_2|x=180|y=2.0|width=70|height=70|itemid=<$str(S$在线奖励展示ID1)>|itemcount=<$cfg_开区豪礼_升级(<$STR(n$循环序列)>_3)>|showtips=1|bgtype=1>
+INC S$开区豪礼_升级奖励 <ItemShow|id=kqhl<$STR(n$循环序列)>_3|x=250|y=2.0|width=70|height=70|itemid=<$str(S$在线奖励展示ID2)>|itemcount=<$cfg_开区豪礼_升级(<$STR(n$循环序列)>_5)>|showtips=1|bgtype=1>
+INC S$开区豪礼_升级奖励 <ItemShow|id=kqhl<$STR(n$循环序列)>_4|x=320|y=2.0|width=70|height=70|itemid=<$str(S$在线奖励展示ID3)>|itemcount=<$cfg_开区豪礼_升级(<$STR(n$循环序列)>_7)>|showtips=1|bgtype=1>
+    
+#IF
+equal <$GETSTRVALUE(T1,升级奖励<$STR(n$循环序列)>)> 1
+#ACT
+INC S$开区豪礼_升级奖励 <Button|id=kqhl<$STR(n$循环序列)>_5|a=4|x=498.0|y=35.0|size=18|color=255|nimg=custom/button/cj5.png>
+#ELSEACT
+INC S$开区豪礼_升级奖励 <Button|id=kqhl<$STR(n$循环序列)>_5|a=4|x=498.0|y=35.0|size=18|color=255|nimg=custom/xiaomishu/bg_03.png|pimg=custom/xiaomishu/bg_04.png|link=@开区豪礼_升级奖励领取#领取挡位=<$STR(n$循环序列)>>
+    
+#IF
+#ACT
+INC S$开区豪礼_升级奖励ID kqhl<$STR(n$循环序列)>,
+
+
+[@开区豪礼_升级奖励领取]
+#IF
+checklevel <$cfg_开区豪礼_升级(<$STR(S$领取挡位)>_1)>
+#ELSEACT
+sendmsg 9 <font color='#FFFF00'>[系统提示]：</font><font color='#00FF00'>等级未达到[<$cfg_开区豪礼_升级(<$STR(S$领取挡位)>_1)>]级</font>
+break
+
+#IF
+equal <$GETSTRVALUE(T1,升级奖励<$STR(S$领取挡位)>)> 1
+#ACT
+sendmsg 9 <font color='#FFFF00'>[系统提示]：</font><font color='#00FF00'>你已经领取过了</font>
+break
+
+#IF
+#ACT
+ADDVARCACHE T1 升级奖励<$STR(S$领取挡位)> 1
+MAilGIVE <$cfg_开区豪礼_升级(<$STR(S$领取挡位)>_2)> <$cfg_开区豪礼_升级(<$STR(S$领取挡位)>_3)> 0#1#4#5#8 ;禁止丢弃
+MAilGIVE <$cfg_开区豪礼_升级(<$STR(S$领取挡位)>_4)> <$cfg_开区豪礼_升级(<$STR(S$领取挡位)>_5)> 0#1#4#5#8 ;禁止丢弃
+MAilGIVE <$cfg_开区豪礼_升级(<$STR(S$领取挡位)>_6)> <$cfg_开区豪礼_升级(<$STR(S$领取挡位)>_7)> 0#1#4#5#8 ;禁止丢弃
+sendmsg 9 <font color='#FFFF00'>[系统提示]：</font><font color='#00FF00'>奖励已发送，请前往邮件提取</font>
+SendMail 2 开区豪礼 您的升级奖励[<$cfg_开区豪礼_升级(<$STR(S$领取挡位)>_1)>]级礼包已送达，请提取
+goto @开区豪礼_升级
+
+
+[@开区豪礼_回收]
+
+#if
+equal n$回收当前页 0
+#ACT
+MOV n$回收当前页 1
+
+#IF
+#ACT
+; csv_read
+    
+; MOV n$循环序列 0
+formulation <$str(n$回收当前页)>*6 n$循环结束
+formulation <$str(n$循环结束)>-6 n$循环序列
+mov n$子容器序号 0
+MOV S$开区豪礼_回收奖励
+MOV S$开区豪礼_回收奖励ID
+
+
+while n$循环序列 < <$str(n$循环结束)>
+    
+goto @开区豪礼_回收奖励加载
+inc n$循环序列 1
+endwhile
+    
+#SAY
+<Img|x=0.0|y=0.0|esc=1|show=4|bg=1|move=0|img=custom/kaiquhaoli/bg_505.png|loadDelay=0|reset=1>
+<Layout|x=813.0|y=0.0|width=80|height=80|link=@exit>
+<Button|x=841.0|y=16.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Button|a=4|x=159.0|y=93|size=18|color=251|nimg=custom/xiaomishu/bg_13.png|text=七日登录|link=@顶部_开区豪礼>
+<Button|a=4|x=159.0|y=147|size=18|color=251|nimg=custom/xiaomishu/bg_13.png|text=升级奖励|link=@开区豪礼_升级>
+<Button|a=4|x=159.0|y=201|size=18|color=251|nimg=custom/xiaomishu/bg_12.png|text=高价回收>
+<Button|x=321.0|y=469.0|color=255|size=18|nimg=custom/kaiquhaoli/bg_04.png|link=@开区回收_上一页>
+<Button|x=628.0|y=469.0|color=255|size=18|nimg=custom/kaiquhaoli/bg_05.png|link=@开区回收_下一页>
+<Text|a=4|x=535.0|y=491.0|color=255|size=18|text=<$str(n$回收当前页)>>
+<ListView|children={<$STR(S$开区豪礼_回收奖励ID)>}|x=256.0|y=70.0|width=560|height=390|cantouch=0>
+
+
+<$STR(S$开区豪礼_回收奖励)>
+
+[@开区豪礼_回收奖励加载]
+#IF
+equal <$formulation[<$str(n$循环序列)>%2]> 0
+#ACT
+getdbitemfieldvalue <$cfg_开区豪礼_回收(<$STR(n$循环序列)>_1)> idx S$回收展示1
+mov n$x坐标 0
+inc S$开区豪礼_回收奖励 <Layout|id=kfhlhs_<$STR(n$子容器序号)>|children={kfhlhs<$STR(n$子容器序号)>_l,kfhlhs<$STR(n$子容器序号)>_r}|x=0.0|y=0.0|width=600|height=130>
+inc S$开区豪礼_回收奖励 <Img|id=kfhlhs<$STR(n$子容器序号)>_l|x=<$STR(n$x坐标)>|children={kfhlhs<$STR(n$子容器序号)>_1,kfhlhs<$STR(n$子容器序号)>_2,kfhlhs<$STR(n$子容器序号)>_3,kfhlhs<$STR(n$子容器序号)>_6,kfhlhs<$STR(n$子容器序号)>_4,kfhlhs<$STR(n$子容器序号)>_5}|esc=0|img=custom/kaiquhaoli/bg_25.png>
+inc S$开区豪礼_回收奖励 <Text|id=kfhlhs<$STR(n$子容器序号)>_1|a=4|x=137.0|y=22.0|color=70|size=18|outline=1|text=<$cfg_开区豪礼_回收(<$STR(n$循环序列)>_1)>>
+inc S$开区豪礼_回收奖励 <ItemShow|id=kfhlhs<$STR(n$子容器序号)>_2|x=19.0|y=46.0|width=70|height=70|itemid=<$str(S$回收展示1)>|itemcount=1|showtips=1|bgtype=1>
+inc S$开区豪礼_回收奖励 <RText|id=kfhlhs<$STR(n$子容器序号)>_3|x=91.0|y=51.0|color=255|size=16|outline=1|text=<回收<$cfg_开区豪礼_回收(<$STR(n$循环序列)>_2)>/FCOLOR=250>>
+inc S$开区豪礼_回收奖励 <RText|id=kfhlhs<$STR(n$子容器序号)>_6|x=220.0|y=51.0|color=255|size=16|outline=1|text=<<$cfg_开区豪礼_回收(<$STR(n$循环序列)>_3)>/FCOLOR=250>>
+inc S$开区豪礼_回收奖励 <ItemShow|id=kfhlhs<$STR(n$子容器序号)>_4|x=152.0|y=28.0|width=70|height=70|scale=0.6|itemid=7|itemcount=1|showtips=1|bgtype=0>
+inc S$开区豪礼_回收奖励 <Button|id=kfhlhs<$STR(n$子容器序号)>_5|x=97.0|y=76.0|size=18|color=255|clickInterval=3000|nimg=custom/kaiquhaoli/bg_02.png|link=@开区豪礼_执行回收#回收行=<$STR(n$循环序列)>>
+inc S$开区豪礼_回收奖励ID kfhlhs_<$STR(n$子容器序号)>,
+#ELSEACT
+mov n$x坐标 280
+getdbitemfieldvalue <$cfg_开区豪礼_回收(<$STR(n$循环序列)>_1)> idx S$回收展示2
+inc S$开区豪礼_回收奖励 <Img|id=kfhlhs<$STR(n$子容器序号)>_r|x=<$STR(n$x坐标)>|children={kfhlhs<$STR(n$子容器序号)>_1_r,kfhlhs<$STR(n$子容器序号)>_2_r,kfhlhs<$STR(n$子容器序号)>_3_r,kfhlhs<$STR(n$子容器序号)>_6_r,kfhlhs<$STR(n$子容器序号)>_4_r,kfhlhs<$STR(n$子容器序号)>_5_r}|esc=0|img=custom/kaiquhaoli/bg_25.png>
+inc S$开区豪礼_回收奖励 <Text|id=kfhlhs<$STR(n$子容器序号)>_1_r|a=4|x=137.0|y=22.0|color=70|size=18|outline=1|text=<$cfg_开区豪礼_回收(<$STR(n$循环序列)>_1)>>
+inc S$开区豪礼_回收奖励 <ItemShow|id=kfhlhs<$STR(n$子容器序号)>_2_r|x=19.0|y=46.0|width=70|height=70|itemid=<$str(S$回收展示2)>|itemcount=1|showtips=1|bgtype=1>
+inc S$开区豪礼_回收奖励 <RText|id=kfhlhs<$STR(n$子容器序号)>_3_r|x=91.0|y=51.0|color=255|size=16|outline=1|text=<回收<$cfg_开区豪礼_回收(<$STR(n$循环序列)>_2)>/FCOLOR=250>>
+inc S$开区豪礼_回收奖励 <RText|id=kfhlhs<$STR(n$子容器序号)>_6_r|x=220.0|y=51.0|color=255|size=16|outline=1|text=<<$cfg_开区豪礼_回收(<$STR(n$循环序列)>_3)>/FCOLOR=250>>
+inc S$开区豪礼_回收奖励 <ItemShow|id=kfhlhs<$STR(n$子容器序号)>_4_r|x=152.0|y=28.0|width=70|height=70|scale=0.6|itemid=7|itemcount=1|showtips=1|bgtype=0>
+inc S$开区豪礼_回收奖励 <Button|id=kfhlhs<$STR(n$子容器序号)>_5_r|x=97.0|y=76.0|size=18|color=255|clickInterval=3000|nimg=custom/kaiquhaoli/bg_02.png|link=@开区豪礼_执行回收#回收行=<$STR(n$循环序列)>>
+inc N$子容器序号 1
+
+#IF
+not SMALL n$循环序列 20
+#ACT
+INC n$循环序列 999
+
+[@开区回收_下一页]
+#if
+large n$回收当前页 3
+#ACT
+sendmsg 9 <font color='#FFFF00'>[系统提示]：</font><font color='#00FF00'>当前已经是最后一页</font>
+break
+
+#IF
+#ACT
+inc n$回收当前页 1
+goto @开区豪礼_回收
+
+[@开区回收_上一页]
+#if
+equal n$回收当前页 1
+#ACT
+sendmsg 9 <font color='#FFFF00'>[系统提示]：</font><font color='#00FF00'>当前已经是第一页</font>
+break
+
+#IF
+#ACT
+dec n$回收当前页 1
+goto @开区豪礼_回收
+
+
+[@开区豪礼_执行回收]
+#ACT
+; sendmsg 9 <$cfg_开区豪礼_回收(<$STR(S$回收行)>_1)>
+
+#IF
+#ACT
+TakeBagItem <$cfg_开区豪礼_回收(<$STR(S$回收行)>_1)> 10 N10 0
+
+#IF
+large N10 0
+#ACT
+MONEY 灵符 + <$FORMULATION[<$str(N10)>*<$cfg_开区豪礼_回收(<$STR(S$回收行)>_3)>]>
+sendmsg 9 <font color='#FFFF00'>[系统提示]：</font><font color='#00FF00'>回收成功，获得灵符[<$FORMULATION[<$str(N10)>*<$cfg_开区豪礼_回收(<$STR(S$回收行)>_3)>]>]</font>
+
+}

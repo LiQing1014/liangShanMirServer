@@ -1,0 +1,77 @@
+[@顶部_唯一特权]
+{
+#IF
+#ACT
+OPENHYPERLINK 33
+#SAY
+<Img|show=4|bg=1|loadDelay=1|move=0|reset=1|img=custom/weiyitequan/bg/101.png|esc=1>
+<Layout|x=892.0|y=16.0|width=80|height=80|link=@exit>
+<Button|x=909.0|y=31.0|color=255|size=18|pimg=custom/weiyitequan/x1.png|nimg=custom/weiyitequan/x.png|link=@exit>
+<Frames|x=-62.0|y=-186.0|speed=10|prefix=custom/weiyitequan/bg/tx|suffix=.png|count=18|loop=-1>
+<Frames|x=199.0|y=-33.0|speed=10|prefix=custom/weiyitequan/zi/zi_|suffix=.png|count=10|loop=-1>
+<Frames|x=464.0|y=34.0|speed=10|prefix=custom/weiyitequan/title/tx1_|suffix=.png|count=10|loop=-1>
+<Img|x=437.0|y=124.0|img=custom/weiyitequan/5.png|esc=0>
+<Img|x=392.0|y=160.0|img=custom/weiyitequan/6.png|esc=0>
+<Frames|x=366|y=198.0|speed=10|prefix=custom/weiyitequan/kuang/tx|suffix=.png|count=10|loop=-1>
+<Frames|x=550|y=198.0|speed=10|prefix=custom/weiyitequan/kuang/tx|suffix=.png|count=10|loop=-1>
+<Frames|x=458|y=198.0|speed=10|prefix=custom/weiyitequan/kuang/tx|suffix=.png|count=10|loop=-1>
+<Frames|x=642|y=198.0|speed=10|prefix=custom/weiyitequan/kuang/tx|suffix=.png|count=10|loop=-1>
+<Frames|x=734|y=198.0|speed=10|prefix=custom/weiyitequan/kuang/tx|suffix=.png|count=10|loop=-1>
+<Frames|x=822.0|y=198.0|speed=10|prefix=custom/weiyitequan/kuang/tx|suffix=.png|count=10|loop=-1>
+<Text|x=709.0|y=318.0|color=250|size=18|text=仅在此界面购买有效>
+<Text|x=747.0|y=292.0|color=251|size=18|text=58元直购>
+<Text|x=385|y=210.0|outline=1|color=94|size=20|text=材料\解绑>
+<Text|x=569.0|y=210.0|outline=1|color=94|size=20|text=交易\解绑>
+<Text|x=477.0|y=210.0|outline=1|color=94|size=20|text=自动\巡航>
+<Text|x=661.0|y=210.0|outline=1|color=94|size=20|text=海量\福利>
+<Text|x=753.0|y=210.0|outline=1|color=94|size=20|text=专属\称号>
+<Text|x=841|y=210.0|outline=1|color=94|size=20|text=免费\周卡>
+<Button|x=573.0|y=295.0|color=255|size=18|pimg=custom/weiyitequan/4.png|nimg=custom/weiyitequan/3.png|link=@购买特权>
+<Img|x=248.0|y=117.0|img=custom/weiyitequan/7.png|esc=0>
+
+    
+
+[@购买特权]
+#IF
+check [5] 1
+#ACT
+sendmsg 9 <font color='#FFFF00'>[系统提示]：</font><font color='#00FFFF'>你已经购买过了</font>
+break
+
+#IF
+CHECKMONEY 直购充值 ? 58
+#ACT
+MESSAGEBOX 你当前有<$MONEY(直购充值)>元直购金，是否使用直购金购买? @使用直购金购买 @空
+BREAK
+
+#IF
+#ACT
+ADDVARCACHE T4 直购项目 唯一特权58
+MOV S$充值金额 58
+#call [\系统功能\充值页面.txt] @充值页面_QF
+
+
+[@使用直购金购买]
+#IF
+CHECKMONEY 直购充值 ? 58
+#ELSEACT
+break
+
+#IF
+check [5] 1
+#ACT
+break
+
+#IF
+#ACT
+MONEY 直购充值 - 58
+setNpcMsg 直购充值
+ADDVARCACHE 充值项目
+set [5] 1
+MAilGIVE 元宝 500000 0#1#4#5#8 ;禁止丢弃
+CONFERTITLE 唯一特权
+MAilGIVE 免费周卡 1 0#1#4#5#8 ;禁止丢弃
+sendmsg 9 <font color='#FFFF00'>[系统提示]：</font><font color='#00FFFF'>购买成功，物品已通过邮件发送</font>
+SendMail 2 唯一特权 您购买的特权礼包已送达，请提取
+
+}

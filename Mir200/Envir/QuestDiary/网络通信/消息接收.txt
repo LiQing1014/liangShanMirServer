@@ -1,0 +1,34 @@
+[@消息接收]
+{
+[@Message_100]
+#ACT
+; SENDMSG 0 收到消息，<$PARAM1>, <$PARAM2>, <$PARAM3>, <$CUSTMSGPARAM>
+
+#IF
+equal <$PARAM2> 2
+#ACT
+GOTO @二大陆传送
+BREAK
+
+
+[@二大陆传送]
+#IF
+Checkrenewlevel < 10
+#ACT
+MESSAGEBOX 对不起，您当前的转生不够，请先10次转生在来！
+BREAK
+
+#IF
+check [168] 0
+#ACT
+MESSAGEBOX 对不起,你没有开通狂暴
+BREAK
+
+#IF
+#ACT
+MAPMOVE 摸鱼庄园 70 72
+SENDMSG 0 {[世界消息]:|151:0:1}大神「{<$USERNAME>|250:0:1}」成功进入全新地图:{「<$MapTitle>」|253:0:1}
+BREAK
+
+
+}

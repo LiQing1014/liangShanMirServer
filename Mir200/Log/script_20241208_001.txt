@@ -1,0 +1,457 @@
+[2024-12-08 19:54:46:578] 脚本错误, 加载失败: 按钮功能\首充.txt  @首充
+[2024-12-08 19:54:46:578] 脚本错误, 加载失败: 按钮功能\开服好礼.txt  @开服好礼
+[2024-12-08 19:54:46:578] 脚本错误, 加载失败: 按钮功能\赞助.txt  @赞助
+[2024-12-08 19:54:46:578] 脚本错误, 加载失败: 按钮功能\助力.txt  @助力
+[2024-12-08 19:54:46:578] 脚本错误, 加载失败: 按钮功能\攻略.txt  @攻略
+[2024-12-08 19:54:46:578] 脚本错误, 加载失败: 按钮功能\巡航.txt  @巡航
+[2024-12-08 19:54:46:578] 脚本错误, 加载失败: 按钮功能\货币兑换.txt  @货币兑换
+[2024-12-08 19:54:46:578] 脚本错误, 加载失败: 按钮功能\狂暴之力.txt  @狂暴之力
+[2024-12-08 19:54:46:578] 脚本错误, 加载失败: 按钮功能\免费装扮.txt  @免费装扮
+[2024-12-08 19:54:46:579] 脚本错误, 加载失败: 按钮功能\后台维护系统.txt  @控制台main
+[2024-12-08 19:54:46:579] 脚本错误, 加载失败: 按钮功能\大陆传送.txt  @大陆传送main
+[2024-12-08 19:54:46:579] 脚本错误, 加载失败: 按钮功能\装扮系统.txt  @QF_装扮_main
+[2024-12-08 19:54:46:579] 脚本错误, 加载失败: 按钮功能\任务系统.txt  @任务系统main
+[2024-12-08 19:54:46:580] 脚本错误, 加载失败: 基础按钮\TOP图标.txt  @TOP图标
+[2024-12-08 19:54:46:580] 脚本错误, 加载失败: 基础按钮\TOP图标.txt  @TOP图标
+
+[2024-12-08 19:54:50:114] LuaNPC: ID:999999994 执行 csv_read player: 耗时：31; NpcThreadId: 6176, CurPlayThreadId: 6176
+[2024-12-08 19:54:50:114] NPC:QManage ID:999999996 脚本执行 @STARTUP player: 耗时:47; NpcThreadId:6176, CurPlayThreadId:6176
+
+[2024-12-08 19:55:19:808] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:55:20:926] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:55:21:925] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:55:22:923] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:55:23:919] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:55:25:032] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:55:26:027] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:55:27:025] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:55:28:139] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:55:28:728] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:55:29:724] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:55:30:721] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:55:31:719] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:55:32:722] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:55:33:719] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:55:34:715] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:55:35:831] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:55:36:830] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:55:37:947] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:55:39:068] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:55:40:063] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:55:41:061] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:55:42:061] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:55:43:060] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:55:44:061] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:55:45:260] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:55:45:819] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:55:46:814] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:55:47:900] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:55:48:902] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:55:50:020] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:55:51:015] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:55:52:013] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:55:53:103] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:55:54:193] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:55:55:187] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:55:56:187] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:55:57:184] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:55:58:183] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:55:58:776] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:55:59:958] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:56:00:954] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:56:01:952] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:56:03:070] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:56:04:071] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:56:05:066] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:56:06:062] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:56:07:150] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:56:07:745] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:56:08:868] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:56:09:865] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:56:10:865] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:56:11:864] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:56:12:862] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:56:13:861] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:56:14:861] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:56:15:857] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:56:16:859] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:56:17:978] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:56:19:072] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:56:20:066] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:56:21:067] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:56:22:063] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:56:23:274] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:56:23:766] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:56:24:765] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:56:25:763] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:56:26:760] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:56:27:877] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:56:28:874] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:56:29:870] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:56:30:963] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:56:32:086] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:56:33:083] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:56:34:077] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:56:35:260] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:56:35:882] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:56:36:877] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:56:37:878] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:56:38:871] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:56:39:990] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:56:40:989] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:56:41:983] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:56:42:981] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:56:44:100] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:56:45:099] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:56:46:099] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:56:47:096] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:56:48:091] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:56:49:090] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:56:50:303] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:56:50:803] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:56:51:911] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:56:52:911] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:56:53:905] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:56:54:901] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:56:55:994] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:56:57:083] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:56:58:080] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:56:59:077] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:57:00:196] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:57:01:196] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:57:02:192] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:57:03:189] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:57:04:186] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:57:05:184] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:57:05:804] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:57:06:800] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:57:07:796] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:57:08:795] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:57:09:795] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:57:10:914] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:57:11:913] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:57:12:909] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:57:13:908] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:57:14:903] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:57:16:018] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:57:17:018] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:57:18:016] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:57:19:015] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:57:20:134] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:57:21:129] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:57:22:124] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:57:23:120] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:57:23:740] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:57:24:736] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:57:29:200] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:57:30:321] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:57:31:539] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:57:32:539] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:57:33:648] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:57:34:143] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:57:35:233] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:57:36:104] NPC:QFunction ID:999999999 脚本执行 @福利大厅 player:唐百 耗时:31; NpcThreadId:6176, CurPlayThreadId:6176
+[2024-12-08 19:57:36:444] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:57:37:659] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:57:38:284] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:57:39:360] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:57:40:359] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:57:41:355] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:57:42:359] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:57:43:355] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:57:44:474] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:57:45:475] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:57:46:474] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:57:47:471] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:57:48:581] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:57:49:578] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:57:50:576] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:57:51:195] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:57:52:189] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:57:53:184] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:57:54:182] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:57:55:305] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:57:56:299] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:57:57:416] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:57:58:415] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:57:59:409] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:58:00:407] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:58:01:404] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:58:02:402] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:58:03:518] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:58:04:516] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:58:05:515] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:58:06:514] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:58:07:134] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:58:08:134] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:58:09:133] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:58:10:124] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:58:11:119] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:58:12:336] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:58:13:333] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:58:14:331] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:58:15:329] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:58:16:325] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:58:17:327] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:58:18:323] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:58:19:439] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:58:20:438] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:58:21:438] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:58:22:433] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:58:23:552] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:58:24:548] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:58:25:547] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:58:26:545] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:58:27:663] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:58:28:163] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:58:29:155] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:58:30:151] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:58:31:272] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:58:32:263] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:58:33:264] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:58:34:353] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:58:35:445] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:58:36:440] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:58:37:435] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:58:38:663] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:58:39:161] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:58:40:264] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:58:41:450] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:58:42:571] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:58:43:570] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:58:44:568] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:58:45:562] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:58:46:559] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:58:47:144] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:58:48:145] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:58:49:145] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:58:50:139] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:58:51:142] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:58:52:141] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:58:53:139] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:58:54:259] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:58:55:352] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:58:56:346] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:58:57:342] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:58:58:459] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:58:59:453] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:59:00:454] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:59:01:449] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:59:02:556] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:59:03:550] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:59:04:551] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:59:05:546] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:59:06:548] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:59:07:554] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:59:08:544] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:59:09:545] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:59:10:634] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:59:11:131] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:59:12:126] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:59:13:123] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:59:14:124] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:59:15:121] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:59:16:215] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:59:17:213] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:59:18:331] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:59:19:323] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:59:20:324] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:59:21:441] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:59:22:440] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:59:23:438] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:59:24:439] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:59:25:436] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:59:26:433] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:59:27:522] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:59:28:625] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:59:29:123] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:59:30:212] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:59:31:208] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:59:32:208] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:59:33:205] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:59:34:206] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:59:35:201] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:59:36:320] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:59:37:317] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:59:38:313] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:59:39:310] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:59:40:308] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:59:41:428] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:59:42:425] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:59:43:426] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:59:44:424] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:59:45:422] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:59:46:419] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:59:47:539] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:59:48:533] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:59:49:529] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:59:50:527] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:59:51:138] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:59:52:137] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:59:53:259] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:59:54:253] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:59:55:247] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:59:56:369] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:59:57:367] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 19:59:58:363] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 19:59:59:357] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:00:00:476] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:00:01:472] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:00:02:469] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:00:03:585] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 20:00:04:580] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:00:05:580] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:00:06:698] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:00:07:289] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:00:08:287] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 20:00:09:284] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:00:10:401] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:00:11:588] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:00:12:211] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:00:13:205] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 20:00:14:199] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:00:15:199] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:00:16:291] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:00:17:478] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:00:18:475] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 20:00:19:471] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:00:20:466] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:00:21:467] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:00:22:465] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:00:23:464] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 20:00:24:465] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:00:25:550] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:00:26:547] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:00:27:546] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:00:28:544] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 20:00:29:163] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:00:30:163] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:00:31:155] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:00:32:245] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:00:33:246] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 20:00:34:473] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:00:35:466] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:00:36:124] [脚本错误]@给福符属性  脚本命令:MONEY NPC名称:QFunction 地图:0(0:0) 参数1:大米 参数2:+ 参数3:100 参数4: 参数5: 参数6:
+[2024-12-08 20:00:36:477] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:00:37:586] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:00:38:582] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 20:00:39:580] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:00:40:576] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:00:41:574] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:00:42:195] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:00:42:932] NPC:QFunction ID:999999999 脚本执行 @杀怪触发A player:唐百 耗时:31; NpcThreadId:6176, CurPlayThreadId:6176
+[2024-12-08 20:00:42:932] NPC:QFunction ID:999999999 脚本执行 @KILLMON player:唐百 耗时:31; NpcThreadId:6176, CurPlayThreadId:6176
+[2024-12-08 20:00:43:209] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 20:00:44:315] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:00:45:311] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:00:46:429] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:00:47:602] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:00:48:097] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 20:00:49:092] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:00:50:089] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:00:51:211] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:00:52:203] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:00:53:198] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 20:00:54:320] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:00:55:317] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:00:56:314] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:00:57:327] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:00:58:555] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 20:00:59:557] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:01:00:163] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:01:01:158] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:01:02:155] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:01:03:151] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 20:01:04:266] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:01:05:372] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:01:06:585] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:01:07:191] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:01:08:187] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 20:01:09:184] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:01:10:303] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:01:11:301] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:01:12:296] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:01:13:294] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 20:01:14:407] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:01:15:401] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:01:16:524] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:01:17:121] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:01:18:367] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+
+[2024-12-08 20:01:19:364] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:01:20:365] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:01:21:360] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:01:22:358] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+[2024-12-08 20:01:23:478] [脚本错误]@OnTimer103  脚本命令:MOV NPC名称:QManage 地图:0(0:0) 参数1:N$复活CD 参数2:<$REVIVALTIMEEX> 参数3: 参数4: 参数5: 参数6:
+

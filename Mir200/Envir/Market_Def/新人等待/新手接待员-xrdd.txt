@@ -1,0 +1,3 @@
+[@main]
+#ACT
+SENDMSG 9 111

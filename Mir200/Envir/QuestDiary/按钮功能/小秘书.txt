@@ -1,0 +1,198 @@
+[@顶部_小秘书]
+{
+#IF
+#ACT
+csv_read
+
+MOV n$循环序列 0
+MOV S$小秘书_在线奖励
+MOV S$小秘书_在线奖励ID
+
+; sendmsg 9 <$GetCsv(cfg_小秘书_每日在线,Row)>
+
+while n$循环序列 < <$GetCsv(cfg_小秘书_每日在线,Row)>
+
+goto @小秘书_在线奖励加载
+inc n$循环序列 1
+endwhile
+
+#SAY
+<Img|x=0.0|y=0.0|esc=1|show=4|bg=1|move=0|img=custom/xiaomishu/bg_010.png|loadDelay=0|reset=1>
+<Layout|x=813.0|y=0.0|width=80|height=80|link=@exit>
+<Button|x=841.0|y=16.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<RText|x=262.0|y=127.0|outline=1|color=255|size=16|text=<当前在线时长：/FCOLOR=255><<$STR(J20)>分钟/FCOLOR=254>>
+<Button|a=4|x=159.0|y=93|nimg=custom/xiaomishu/bg_12.png|color=251|size=18|text=每日在线|link=@顶部_小秘书>
+<Button|a=4|x=159.0|y=147|nimg=custom/xiaomishu/bg_13.png|color=251|size=18|text=周卡特权|link=@小秘书_周卡>
+; <Button|a=4|x=159.0|y=201|nimg=custom/xiaomishu/bg_12.png|color=251|size=18|pimg=public/00000362.png|text=每日在线>
+; <Button|a=4|x=159.0|y=255|nimg=custom/xiaomishu/bg_12.png|color=251|size=18|pimg=public/00000362.png|text=每日在线>
+
+<ListView|children={<$STR(S$小秘书_在线奖励ID)>}|x=254.0|y=199.0|width=566|height=320|margin=5>
+
+<$str(S$小秘书_在线奖励)>
+
+
+[@小秘书_在线奖励加载]
+
+#IF
+#ACT
+
+getdbitemfieldvalue <$cfg_小秘书_每日在线(<$STR(n$循环序列)>_2)> idx S$在线奖励展示ID1
+getdbitemfieldvalue <$cfg_小秘书_每日在线(<$STR(n$循环序列)>_4)> idx S$在线奖励展示ID2
+getdbitemfieldvalue <$cfg_小秘书_每日在线(<$STR(n$循环序列)>_6)> idx S$在线奖励展示ID3
+
+INC S$小秘书_在线奖励 <Img|id=xms<$STR(n$循环序列)>|children={xms<$STR(n$循环序列)>_1,xms<$STR(n$循环序列)>_2,xms<$STR(n$循环序列)>_3,xms<$STR(n$循环序列)>_4,xms<$STR(n$循环序列)>_5}|x=0.0|y=0.0|height=70|img=custom/xiaomishu/bg_01.png|esc=0>
+INC S$小秘书_在线奖励 <RText|id=xms<$STR(n$循环序列)>_1|x=25.0|y=25.0|color=250|size=18|text=在线<$cfg_小秘书_每日在线(<$STR(n$循环序列)>_1)>分钟>
+INC S$小秘书_在线奖励 <ItemShow|id=xms<$STR(n$循环序列)>_2|x=179|y=2.0|width=70|height=70|itemid=<$str(S$在线奖励展示ID1)>|itemcount=<$cfg_小秘书_每日在线(<$STR(n$循环序列)>_3)>|showtips=1|bgtype=1>
+INC S$小秘书_在线奖励 <ItemShow|id=xms<$STR(n$循环序列)>_3|x=256|y=2.0|width=70|height=70|itemid=<$str(S$在线奖励展示ID2)>|itemcount=<$cfg_小秘书_每日在线(<$STR(n$循环序列)>_5)>|showtips=1|bgtype=1>
+INC S$小秘书_在线奖励 <ItemShow|id=xms<$STR(n$循环序列)>_4|x=333|y=2.0|width=70|height=70|itemid=<$str(S$在线奖励展示ID3)>|itemcount=<$cfg_小秘书_每日在线(<$STR(n$循环序列)>_7)>|showtips=1|bgtype=1>
+
+#IF
+equal J1<$STR(n$循环序列)> 1
+#ACT
+INC S$小秘书_在线奖励 <Button|id=xms<$STR(n$循环序列)>_5|a=4|x=498.0|y=35.0|size=18|color=255|nimg=custom/button/cj5.png>
+#ELSEACT
+INC S$小秘书_在线奖励 <Button|id=xms<$STR(n$循环序列)>_5|a=4|x=498.0|y=35.0|size=18|color=255|nimg=custom/xiaomishu/bg_03.png|pimg=custom/xiaomishu/bg_04.png|link=@小秘书_在线奖励领取#领取挡位=<$STR(n$循环序列)>>
+
+#IF
+#ACT
+INC S$小秘书_在线奖励ID xms<$STR(n$循环序列)>,
+
+
+
+
+
+
+
+
+
+
+[@小秘书_在线奖励领取]
+#IF
+not LARGE J20 <$cfg_小秘书_每日在线(<$STR(S$领取挡位)>_1)>
+#ACT
+sendmsg 9 <font color='#FFFF00'>[系统提示]：</font><font color='#00FF00'>领取条件不足</font>
+BREAK
+
+#IF
+equal J1<$STR(S$领取挡位)> 1
+#ACT
+sendmsg 9 <font color='#FFFF00'>[系统提示]：</font><font color='#00FF00'>已经领取过了</font>
+BREAK
+
+#IF
+#ACT
+MOV J1<$STR(S$领取挡位)> 1
+; GiveStateItem <$cfg_小秘书_每日在线(<$STR(S$领取挡位)>_2)> <$cfg_小秘书_每日在线(<$STR(S$领取挡位)>_3)> 1 1 0 0 0 0 1 1
+MONEY <$cfg_小秘书_每日在线(<$STR(S$领取挡位)>_4)> + <$cfg_小秘书_每日在线(<$STR(S$领取挡位)>_5)>
+GiveStateItem <$cfg_小秘书_每日在线(<$STR(S$领取挡位)>_4)> <$cfg_小秘书_每日在线(<$STR(S$领取挡位)>_5)> 1 1 0 0 0 0 1 1
+GiveStateItem <$cfg_小秘书_每日在线(<$STR(S$领取挡位)>_6)> <$cfg_小秘书_每日在线(<$STR(S$领取挡位)>_7)> 1 1 0 0 0 0 1 1
+sendmsg 9 <font color='#FFFF00'>[系统提示]：</font><font color='#00FF00'>领取成功！！！</font>
+goto @顶部_小秘书
+
+
+[@小秘书_周卡]
+#IF
+#ACT
+UNIXTOSTR <$GETSTRVALUE(T0,周卡特权时间)> S$周卡到期时间
+getdbitemfieldvalue 100000元宝 idx S$周卡展示ID1
+getdbitemfieldvalue 炫光神石 idx S$周卡展示ID2
+getdbitemfieldvalue 2亿经验卷 idx S$周卡展示ID3
+getdbitemfieldvalue 极品星石 idx S$周卡展示ID4
+#SAY
+<Img|x=0.0|y=0.0|esc=1|show=4|bg=1|move=0|img=custom/xiaomishu/bg_001.png|loadDelay=0|reset=1>
+<Layout|x=813.0|y=0.0|width=80|height=80|link=@exit>
+<Button|x=841.0|y=16.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Button|a=4|x=159.0|y=93|size=18|color=251|nimg=custom/xiaomishu/bg_13.png|text=每日在线|link=@顶部_小秘书>
+<Button|a=4|x=159.0|y=147|size=18|color=251|nimg=custom/xiaomishu/bg_12.png|text=周卡特权|link=@小秘书_周卡>
+<ItemShow|x=327|y=360.0|width=70|height=70|itemid=<$str(S$周卡展示ID1)>|itemcount=1|showtips=1|bgtype=0>
+<ItemShow|x=444|y=360.0|width=70|height=70|itemid=<$str(S$周卡展示ID2)>|itemcount=50|showtips=1|bgtype=0>
+<ItemShow|x=561|y=360.0|width=70|height=70|itemid=<$str(S$周卡展示ID3)>|itemcount=1|showtips=1|bgtype=0>
+<ItemShow|x=678|y=360.0|width=70|height=70|itemid=<$str(S$周卡展示ID4)>|itemcount=2|showtips=1|bgtype=0>
+
+<RText|x=259.0|y=500.0|color=255|size=16|text=<周卡到期时间：/FCOLOR=255><<$str(S$周卡到期时间)>/FCOLOR=254>>
+
+#IF
+check [10] 0
+#SAY
+<Button|x=447.0|y=442.0|size=18|color=255|nimg=custom/xiaomishu/bg_07.png|link=@小秘书_购买周卡特权>
+#ELSESAY
+<Button|x=447.0|y=442.0|size=18|color=255|nimg=custom/xiaomishu/bg_08.png|link=@小秘书_领取周卡特权>
+
+[@小秘书_购买周卡特权]
+#IF
+; equal J30 1
+CHECK [10] 1
+#ACT
+sendmsg 9 <font color='#FFFF00'>[系统提示]：</font><font color='#00FFFF'>你已经购买过了</font>
+BREAK
+
+#IF
+CHECKMONEY 灵符 ? 350
+#ELSEACT
+sendmsg 9 <font color='#FFFF00'>[系统提示]：</font><font color='#00FFFF'>您的灵符不足350！！！</font>
+BREAK
+#IF
+#ACT
+MOV J30 1
+set [10] 1
+MONEY 灵符 - 350
+MAilGIVE 100000元宝 1 0#1#4#5#8 ;禁止丢弃
+MAilGIVE 炫光神石 50 0#1#4#5#8 ;禁止丢弃
+MAilGIVE 2亿经验卷 1 0#1#4#5#8 ;禁止丢弃
+MAilGIVE 极品星石 2 0#1#4#5#8 ;禁止丢弃
+sendmsg 9 <font color='#FFFF00'>[系统提示]：</font><font color='#00FF00'>购买成功，奖励已通过邮件发送</font>
+SendMail 1 周卡特权 你好[<$USERNAME>]，周卡特权已送达，请提取
+goto @周卡时间计算
+goto @小秘书_周卡
+
+
+
+[@小秘书_领取周卡特权]
+#IF
+CHECK [10] 0
+#ACT
+sendmsg 9 <font color='#FFFF00'>[系统提示]：</font><font color='#00FFFF'>你还未购买周卡特权</font>
+BREAK
+
+#IF
+equal J30 1
+#ACT
+sendmsg 9 <font color='#FFFF00'>[系统提示]：</font><font color='#00FFFF'>今日已经领取</font>
+BREAK
+
+#IF
+#ACT
+MOV J30 1
+MAilGIVE 100000元宝 1 0#1#4#5#8 ;禁止丢弃
+MAilGIVE 炫光神石 50 0#1#4#5#8 ;禁止丢弃
+MAilGIVE 2亿经验卷 1 0#1#4#5#8 ;禁止丢弃
+MAilGIVE 极品星石 2 0#1#4#5#8 ;禁止丢弃
+sendmsg 9 <font color='#FFFF00'>[系统提示]：</font><font color='#00FF00'>领取成功，奖励已通过邮件发送</font>
+SendMail 1 周卡特权 你好[<$USERNAME>]，周卡特权已送达，请提取
+goto @小秘书_周卡
+goto @周卡时间计算
+
+
+[@周卡时间计算]
+#if
+check [10] 0
+#act
+break
+
+#if
+equal J30 0
+#act
+break
+
+#OR
+equal <$GETSTRVALUE(T0,周卡特权时间)>
+large <$UTCNOW> <$GETSTRVALUE(T0,周卡特权时间)>
+#ACT
+ADDVARCACHE T0 周卡特权时间 <$formulation[<$UTCNOW>+604800]>
+break
+
+#if
+#act
+ADDVARCACHE T0 周卡特权时间 <$formulation[<$GETSTRVALUE(T0,周卡特权时间)>+604800]>
+
+}

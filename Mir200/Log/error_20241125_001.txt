@@ -1,0 +1,336 @@
+[2024-11-25 08:53:59:237] Failure: .\Map\轩辕古城.map could not be loaded.
+[2024-11-25 08:53:59:237] Failure: .\Map\轩辕古城.map could not be loaded.
+[2024-11-25 08:53:59:489] Failure: .\Map\定军山.map could not be loaded.
+[2024-11-25 08:53:59:496] Failure: .\Map\幽灵古堡.map could not be loaded.
+[2024-11-25 08:53:59:511] Failure: .\Map\神月祭坛.map could not be loaded.
+[2024-11-25 08:53:59:512] Failure: .\Map\失乐园.map could not be loaded.
+[2024-11-25 08:53:59:547] Failure: .\Map\十二封印之地.map could not be loaded.
+[2024-11-25 08:53:59:547] Failure: .\Map\BOSS之家.map could not be loaded.
+[2024-11-25 08:53:59:547] Failure: .\Map\雪域.map could not be loaded.
+[2024-11-25 08:53:59:562] Failure: .\Map\天之龙域.map could not be loaded.
+[2024-11-25 08:53:59:562] Failure: .\Map\神龙一层.map could not be loaded.
+[2024-11-25 08:53:59:562] Failure: .\Map\失乐园.map could not be loaded.
+[2024-11-25 08:53:59:566] Failure: .\Map\BOSS之家.map could not be loaded.
+[2024-11-25 08:53:59:568] Failure: .\Map\修罗天宫.map could not be loaded.
+[2024-11-25 08:53:59:570] Failure: .\Map\仙城.map could not be loaded.
+[2024-11-25 08:53:59:573] Failure: .\Map\九幽殿.map could not be loaded.
+[2024-11-25 08:53:59:580] Failure: .\Map\雪域大陆.map could not be loaded.
+[2024-11-25 08:53:59:581] Failure: .\Map\炼狱2.map could not be loaded.
+[2024-11-25 08:53:59:588] Failure: .\Map\天之龙域.map could not be loaded.
+[2024-11-25 08:53:59:848] Failure: .\Map\D71650.map could not be loaded.
+[2024-11-25 08:53:59:848] Failure: .\Map\D71651.map could not be loaded.
+[2024-11-25 08:53:59:848] Failure: .\Map\D71652.map could not be loaded.
+[2024-11-25 08:53:59:848] Failure: .\Map\D71653.map could not be loaded.
+[2024-11-25 08:53:59:885] Failure: .\Map\M001.map could not be loaded.
+[2024-11-25 08:54:01:799] >>>>>RegenMonsterByName ThreadError :[MainDoor]-0[3-20552] 当前Thread:7536
+[2024-11-25 08:54:01:799] MainDoor Name:MainDoor Map:3 X:672 Y:330 HP:4144
+[2024-11-25 08:54:01:799] >>>>>RegenMonsterByName ThreadError :[LeftWall]-0[3-20552] 当前Thread:7536
+[2024-11-25 08:54:01:799] LeftWall Name:LeftWall Map:3 X:624 Y:278 HP:3072
+[2024-11-25 08:54:01:799] >>>>>RegenMonsterByName ThreadError :[CenterWall]-0[3-20552] 当前Thread:7536
+[2024-11-25 08:54:01:799] CenterWall Name:CenterWall Map:3 X:627 Y:278 HP:3072
+[2024-11-25 08:54:01:799] >>>>>RegenMonsterByName ThreadError :[RightWall]-0[3-20552] 当前Thread:7536
+[2024-11-25 08:54:01:799] RightWall Name:RightWall Map:3 X:634 Y:271 HP:3072
+[2024-11-25 08:54:02:045] ---------------------线程耗时监控
+[2024-11-25 08:54:02:263] Frame-----------------------------------
+
+[2024-11-25 08:54:02:274] MainRunThread(15)-----------------------------------
+
+[2024-11-25 08:54:02:284] DbThread(0-0)-----------------------------------
+
+[2024-11-25 08:54:02:294] BoxSellDbThread(0)-----------------------------------
+
+[2024-11-25 08:54:02:304] NewHttpPost(15-0-0)-----------------------------------
+
+
+[2024-11-25 09:49:26:096] Failure: .\Map\轩辕古城.map could not be loaded.
+[2024-11-25 09:49:26:096] Failure: .\Map\轩辕古城.map could not be loaded.
+[2024-11-25 09:49:26:367] Failure: .\Map\定军山.map could not be loaded.
+[2024-11-25 09:49:26:374] Failure: .\Map\幽灵古堡.map could not be loaded.
+[2024-11-25 09:49:26:391] Failure: .\Map\神月祭坛.map could not be loaded.
+[2024-11-25 09:49:26:391] Failure: .\Map\失乐园.map could not be loaded.
+[2024-11-25 09:49:26:428] Failure: .\Map\十二封印之地.map could not be loaded.
+[2024-11-25 09:49:26:428] Failure: .\Map\BOSS之家.map could not be loaded.
+[2024-11-25 09:49:26:428] Failure: .\Map\雪域.map could not be loaded.
+[2024-11-25 09:49:26:443] Failure: .\Map\天之龙域.map could not be loaded.
+[2024-11-25 09:49:26:443] Failure: .\Map\神龙一层.map could not be loaded.
+[2024-11-25 09:49:26:443] Failure: .\Map\失乐园.map could not be loaded.
+[2024-11-25 09:49:26:448] Failure: .\Map\BOSS之家.map could not be loaded.
+[2024-11-25 09:49:26:449] Failure: .\Map\修罗天宫.map could not be loaded.
+[2024-11-25 09:49:26:452] Failure: .\Map\仙城.map could not be loaded.
+[2024-11-25 09:49:26:455] Failure: .\Map\九幽殿.map could not be loaded.
+[2024-11-25 09:49:26:463] Failure: .\Map\雪域大陆.map could not be loaded.
+[2024-11-25 09:49:26:463] Failure: .\Map\炼狱2.map could not be loaded.
+[2024-11-25 09:49:26:471] Failure: .\Map\天之龙域.map could not be loaded.
+[2024-11-25 09:49:26:749] Failure: .\Map\D71650.map could not be loaded.
+[2024-11-25 09:49:26:749] Failure: .\Map\D71651.map could not be loaded.
+[2024-11-25 09:49:26:749] Failure: .\Map\D71652.map could not be loaded.
+[2024-11-25 09:49:26:749] Failure: .\Map\D71653.map could not be loaded.
+[2024-11-25 09:49:26:792] Failure: .\Map\M001.map could not be loaded.
+[2024-11-25 09:49:28:724] >>>>>RegenMonsterByName ThreadError :[MainDoor]-0[3-25072] 当前Thread:16956
+[2024-11-25 09:49:28:724] MainDoor Name:MainDoor Map:3 X:672 Y:330 HP:4144
+[2024-11-25 09:49:28:724] >>>>>RegenMonsterByName ThreadError :[LeftWall]-0[3-25072] 当前Thread:16956
+[2024-11-25 09:49:28:724] LeftWall Name:LeftWall Map:3 X:624 Y:278 HP:3072
+[2024-11-25 09:49:28:724] >>>>>RegenMonsterByName ThreadError :[CenterWall]-0[3-25072] 当前Thread:16956
+[2024-11-25 09:49:28:724] CenterWall Name:CenterWall Map:3 X:627 Y:278 HP:3072
+[2024-11-25 09:49:28:724] >>>>>RegenMonsterByName ThreadError :[RightWall]-0[3-25072] 当前Thread:16956
+[2024-11-25 09:49:28:724] RightWall Name:RightWall Map:3 X:634 Y:271 HP:3072
+[2024-11-25 09:49:29:038] ---------------------线程耗时监控
+[2024-11-25 09:49:29:097] Frame-----------------------------------
+
+[2024-11-25 09:49:29:276] MainRunThread(0)-----------------------------------
+
+[2024-11-25 09:49:29:289] DbThread(16-0)-----------------------------------
+
+[2024-11-25 09:49:29:305] BoxSellDbThread(0)-----------------------------------
+
+[2024-11-25 09:49:29:320] NewHttpPost(0-0-0)-----------------------------------
+
+
+[2024-11-25 11:31:17:723] ---------------------线程耗时监控
+[2024-11-25 11:31:17:747] Frame-----------------------------------
+
+[2024-11-25 11:31:17:770] MainRunThread(0)-----------------------------------
+
+[2024-11-25 11:31:17:790] DbThread(0-0)-----------------------------------
+
+[2024-11-25 11:31:17:811] BoxSellDbThread(15)-----------------------------------
+
+[2024-11-25 11:31:17:831] NewHttpPost(16-0-0)-----------------------------------
+
+
+[2024-11-25 11:31:41:686] ---------------------线程耗时监控
+[2024-11-25 11:31:41:709] Frame-----------------------------------
+
+[2024-11-25 11:31:41:740] MainRunThread(0)-----------------------------------
+
+[2024-11-25 11:31:41:793] EnvirThread 0/0(2063-1)flag:10000997  lua: 0 CallLua: 0-----------------------------------
+
+[2024-11-25 11:31:41:872] DbThread(15-0)-----------------------------------
+
+[2024-11-25 11:31:41:895] BoxSellDbThread(16)-----------------------------------
+
+[2024-11-25 11:31:41:917] NewHttpPost(0-0-0)-----------------------------------
+
+
+[2024-11-25 11:43:51:805] >>>>>TPlayObject.RecalcAbilitys[和人合同,10000000001732500710000014542] 跨线程调用
+[2024-11-25 11:43:51:805] >>>>>TPlayObject.RecalcAbilitys[和人合同,10000000001732500710000014542] 跨线程调用
+
+[2024-11-25 14:18:28:298] Failure: .\Map\轩辕古城.map could not be loaded.
+[2024-11-25 14:18:28:298] Failure: .\Map\轩辕古城.map could not be loaded.
+[2024-11-25 14:18:28:642] Failure: .\Map\定军山.map could not be loaded.
+[2024-11-25 14:18:28:656] Failure: .\Map\幽灵古堡.map could not be loaded.
+[2024-11-25 14:18:28:682] Failure: .\Map\神月祭坛.map could not be loaded.
+[2024-11-25 14:18:28:683] Failure: .\Map\失乐园.map could not be loaded.
+[2024-11-25 14:18:28:761] Failure: .\Map\十二封印之地.map could not be loaded.
+[2024-11-25 14:18:28:762] Failure: .\Map\BOSS之家.map could not be loaded.
+[2024-11-25 14:18:28:762] Failure: .\Map\雪域.map could not be loaded.
+[2024-11-25 14:18:28:783] Failure: .\Map\天之龙域.map could not be loaded.
+[2024-11-25 14:18:28:783] Failure: .\Map\神龙一层.map could not be loaded.
+[2024-11-25 14:18:28:784] Failure: .\Map\失乐园.map could not be loaded.
+[2024-11-25 14:18:28:789] Failure: .\Map\BOSS之家.map could not be loaded.
+[2024-11-25 14:18:28:791] Failure: .\Map\修罗天宫.map could not be loaded.
+[2024-11-25 14:18:28:793] Failure: .\Map\仙城.map could not be loaded.
+[2024-11-25 14:18:28:799] Failure: .\Map\九幽殿.map could not be loaded.
+[2024-11-25 14:18:28:813] Failure: .\Map\雪域大陆.map could not be loaded.
+[2024-11-25 14:18:28:813] Failure: .\Map\炼狱2.map could not be loaded.
+[2024-11-25 14:18:28:826] Failure: .\Map\天之龙域.map could not be loaded.
+[2024-11-25 14:18:29:368] Failure: .\Map\D71650.map could not be loaded.
+[2024-11-25 14:18:29:368] Failure: .\Map\D71651.map could not be loaded.
+[2024-11-25 14:18:29:368] Failure: .\Map\D71652.map could not be loaded.
+[2024-11-25 14:18:29:368] Failure: .\Map\D71653.map could not be loaded.
+[2024-11-25 14:18:29:434] Failure: .\Map\M001.map could not be loaded.
+[2024-11-25 14:18:31:892] >>>>>RegenMonsterByName ThreadError :[MainDoor]-0[3-17836] 当前Thread:29260
+[2024-11-25 14:18:31:892] MainDoor Name:MainDoor Map:3 X:672 Y:330 HP:4144
+[2024-11-25 14:18:31:892] >>>>>RegenMonsterByName ThreadError :[LeftWall]-0[3-17836] 当前Thread:29260
+[2024-11-25 14:18:31:892] LeftWall Name:LeftWall Map:3 X:624 Y:278 HP:3072
+[2024-11-25 14:18:31:892] >>>>>RegenMonsterByName ThreadError :[CenterWall]-0[3-17836] 当前Thread:29260
+[2024-11-25 14:18:31:892] CenterWall Name:CenterWall Map:3 X:627 Y:278 HP:3072
+[2024-11-25 14:18:31:892] >>>>>RegenMonsterByName ThreadError :[RightWall]-0[3-17836] 当前Thread:29260
+[2024-11-25 14:18:31:892] RightWall Name:RightWall Map:3 X:634 Y:271 HP:3072
+[2024-11-25 14:18:32:308] ---------------------线程耗时监控
+[2024-11-25 14:18:32:595] Frame-----------------------------------
+
+[2024-11-25 14:18:32:623] MainRunThread(16)-----------------------------------
+
+[2024-11-25 14:18:32:642] DbThread(0-0)-----------------------------------
+
+[2024-11-25 14:18:32:665] BoxSellDbThread(0)-----------------------------------
+
+[2024-11-25 14:18:32:691] NewHttpPost(15-0-0)-----------------------------------
+
+
+[2024-11-25 14:45:59:286] Failure: .\Map\轩辕古城.map could not be loaded.
+[2024-11-25 14:45:59:286] Failure: .\Map\轩辕古城.map could not be loaded.
+[2024-11-25 14:45:59:423] Failure: .\Map\定军山.map could not be loaded.
+[2024-11-25 14:45:59:425] Failure: .\Map\幽灵古堡.map could not be loaded.
+[2024-11-25 14:45:59:430] Failure: .\Map\神月祭坛.map could not be loaded.
+[2024-11-25 14:45:59:430] Failure: .\Map\失乐园.map could not be loaded.
+[2024-11-25 14:45:59:443] Failure: .\Map\十二封印之地.map could not be loaded.
+[2024-11-25 14:45:59:443] Failure: .\Map\BOSS之家.map could not be loaded.
+[2024-11-25 14:45:59:443] Failure: .\Map\雪域.map could not be loaded.
+[2024-11-25 14:45:59:449] Failure: .\Map\天之龙域.map could not be loaded.
+[2024-11-25 14:45:59:449] Failure: .\Map\神龙一层.map could not be loaded.
+[2024-11-25 14:45:59:449] Failure: .\Map\失乐园.map could not be loaded.
+[2024-11-25 14:45:59:451] Failure: .\Map\BOSS之家.map could not be loaded.
+[2024-11-25 14:45:59:452] Failure: .\Map\修罗天宫.map could not be loaded.
+[2024-11-25 14:45:59:454] Failure: .\Map\仙城.map could not be loaded.
+[2024-11-25 14:45:59:455] Failure: .\Map\九幽殿.map could not be loaded.
+[2024-11-25 14:45:59:458] Failure: .\Map\雪域大陆.map could not be loaded.
+[2024-11-25 14:45:59:458] Failure: .\Map\炼狱2.map could not be loaded.
+[2024-11-25 14:45:59:461] Failure: .\Map\天之龙域.map could not be loaded.
+[2024-11-25 14:45:59:579] Failure: .\Map\D71650.map could not be loaded.
+[2024-11-25 14:45:59:579] Failure: .\Map\D71651.map could not be loaded.
+[2024-11-25 14:45:59:579] Failure: .\Map\D71652.map could not be loaded.
+[2024-11-25 14:45:59:579] Failure: .\Map\D71653.map could not be loaded.
+[2024-11-25 14:45:59:590] Failure: .\Map\M001.map could not be loaded.
+[2024-11-25 14:46:01:490] >>>>>RegenMonsterByName ThreadError :[MainDoor]-0[3-5988] 当前Thread:29596
+[2024-11-25 14:46:01:490] MainDoor Name:MainDoor Map:3 X:672 Y:330 HP:4144
+[2024-11-25 14:46:01:490] >>>>>RegenMonsterByName ThreadError :[LeftWall]-0[3-5988] 当前Thread:29596
+[2024-11-25 14:46:01:490] LeftWall Name:LeftWall Map:3 X:624 Y:278 HP:3072
+[2024-11-25 14:46:01:490] >>>>>RegenMonsterByName ThreadError :[CenterWall]-0[3-5988] 当前Thread:29596
+[2024-11-25 14:46:01:490] CenterWall Name:CenterWall Map:3 X:627 Y:278 HP:3072
+[2024-11-25 14:46:01:490] >>>>>RegenMonsterByName ThreadError :[RightWall]-0[3-5988] 当前Thread:29596
+[2024-11-25 14:46:01:490] RightWall Name:RightWall Map:3 X:634 Y:271 HP:3072
+[2024-11-25 14:46:01:745] ---------------------线程耗时监控
+[2024-11-25 14:46:01:950] Frame-----------------------------------
+
+[2024-11-25 14:46:01:981] MainRunThread(16)-----------------------------------
+
+[2024-11-25 14:46:01:996] EnvirThread 0/0(7266-0)flag:50000004  lua: 0 CallLua: 0-----------------------------------
+
+[2024-11-25 14:46:02:012] DbThread(0-0)-----------------------------------
+
+[2024-11-25 14:46:02:028] BoxSellDbThread(0)-----------------------------------
+
+[2024-11-25 14:46:02:043] NewHttpPost(0-0-0)-----------------------------------
+
+
+[2024-11-25 14:53:26:085] ---------------------线程耗时监控
+[2024-11-25 14:53:26:104] Frame-----------------------------------
+
+[2024-11-25 14:53:26:124] MainRunThread(0)-----------------------------------
+
+[2024-11-25 14:53:26:148] EnvirThread 0/0(2063-6)flag:10000997  lua: 0 CallLua: 0-----------------------------------
+
+[2024-11-25 14:53:26:168] DbThread(0-0)-----------------------------------
+
+[2024-11-25 14:53:26:185] BoxSellDbThread(15)-----------------------------------
+
+[2024-11-25 14:53:26:205] NewHttpPost(16-0-0)-----------------------------------
+
+
+[2024-11-25 14:53:29:013] ---------------------线程耗时监控
+[2024-11-25 14:53:29:031] Frame-----------------------------------
+
+[2024-11-25 14:53:29:050] MainRunThread(0)-----------------------------------
+
+[2024-11-25 14:53:29:067] EnvirThread 0/0(4984-6)flag:10000997  lua: 0 CallLua: 0-----------------------------------
+
+[2024-11-25 14:53:29:087] DbThread(0-0)-----------------------------------
+
+[2024-11-25 14:53:29:105] BoxSellDbThread(15)-----------------------------------
+
+[2024-11-25 14:53:29:124] NewHttpPost(16-0-0)-----------------------------------
+
+[2024-11-25 14:53:32:007] ---------------------线程耗时监控
+[2024-11-25 14:53:32:026] Frame-----------------------------------
+
+[2024-11-25 14:53:32:046] MainRunThread(0)-----------------------------------
+
+[2024-11-25 14:53:32:065] EnvirThread 0/0(7984-6)flag:10000997  lua: 0 CallLua: 0-----------------------------------
+
+[2024-11-25 14:53:32:084] DbThread(16-0)-----------------------------------
+
+[2024-11-25 14:53:32:102] BoxSellDbThread(16)-----------------------------------
+
+[2024-11-25 14:53:32:122] NewHttpPost(0-0-0)-----------------------------------
+
+
+[2024-11-25 14:53:35:008] ---------------------线程耗时监控
+[2024-11-25 14:53:35:025] Frame-----------------------------------
+
+[2024-11-25 14:53:35:044] MainRunThread(0)-----------------------------------
+
+[2024-11-25 14:53:35:062] EnvirThread 0/0(10984-6)flag:10000997  lua: 0 CallLua: 0-----------------------------------
+
+[2024-11-25 14:53:35:081] DbThread(0-0)-----------------------------------
+
+[2024-11-25 14:53:35:101] BoxSellDbThread(0)-----------------------------------
+
+[2024-11-25 14:53:35:121] NewHttpPost(0-0-0)-----------------------------------
+
+
+[2024-11-25 14:56:05:038] Failure: .\Map\轩辕古城.map could not be loaded.
+[2024-11-25 14:56:05:038] Failure: .\Map\轩辕古城.map could not be loaded.
+[2024-11-25 14:56:05:171] Failure: .\Map\定军山.map could not be loaded.
+[2024-11-25 14:56:05:172] Failure: .\Map\幽灵古堡.map could not be loaded.
+[2024-11-25 14:56:05:176] Failure: .\Map\神月祭坛.map could not be loaded.
+[2024-11-25 14:56:05:176] Failure: .\Map\失乐园.map could not be loaded.
+[2024-11-25 14:56:05:189] Failure: .\Map\十二封印之地.map could not be loaded.
+[2024-11-25 14:56:05:189] Failure: .\Map\BOSS之家.map could not be loaded.
+[2024-11-25 14:56:05:189] Failure: .\Map\雪域.map could not be loaded.
+[2024-11-25 14:56:05:194] Failure: .\Map\天之龙域.map could not be loaded.
+[2024-11-25 14:56:05:194] Failure: .\Map\神龙一层.map could not be loaded.
+[2024-11-25 14:56:05:194] Failure: .\Map\失乐园.map could not be loaded.
+[2024-11-25 14:56:05:196] Failure: .\Map\BOSS之家.map could not be loaded.
+[2024-11-25 14:56:05:197] Failure: .\Map\修罗天宫.map could not be loaded.
+[2024-11-25 14:56:05:199] Failure: .\Map\仙城.map could not be loaded.
+[2024-11-25 14:56:05:199] Failure: .\Map\九幽殿.map could not be loaded.
+[2024-11-25 14:56:05:204] Failure: .\Map\雪域大陆.map could not be loaded.
+[2024-11-25 14:56:05:204] Failure: .\Map\炼狱2.map could not be loaded.
+[2024-11-25 14:56:05:206] Failure: .\Map\天之龙域.map could not be loaded.
+[2024-11-25 14:56:05:317] Failure: .\Map\D71650.map could not be loaded.
+[2024-11-25 14:56:05:317] Failure: .\Map\D71651.map could not be loaded.
+[2024-11-25 14:56:05:317] Failure: .\Map\D71652.map could not be loaded.
+[2024-11-25 14:56:05:317] Failure: .\Map\D71653.map could not be loaded.
+[2024-11-25 14:56:05:327] Failure: .\Map\M001.map could not be loaded.
+[2024-11-25 14:56:07:188] >>>>>RegenMonsterByName ThreadError :[MainDoor]-0[3-28008] 当前Thread:25016
+[2024-11-25 14:56:07:188] MainDoor Name:MainDoor Map:3 X:672 Y:330 HP:4144
+[2024-11-25 14:56:07:188] >>>>>RegenMonsterByName ThreadError :[LeftWall]-0[3-28008] 当前Thread:25016
+[2024-11-25 14:56:07:188] LeftWall Name:LeftWall Map:3 X:624 Y:278 HP:3072
+[2024-11-25 14:56:07:188] >>>>>RegenMonsterByName ThreadError :[CenterWall]-0[3-28008] 当前Thread:25016
+[2024-11-25 14:56:07:188] CenterWall Name:CenterWall Map:3 X:627 Y:278 HP:3072
+[2024-11-25 14:56:07:188] >>>>>RegenMonsterByName ThreadError :[RightWall]-0[3-28008] 当前Thread:25016
+[2024-11-25 14:56:07:188] RightWall Name:RightWall Map:3 X:634 Y:271 HP:3072
+[2024-11-25 14:56:07:474] ---------------------线程耗时监控
+[2024-11-25 14:56:07:665] Frame-----------------------------------
+
+[2024-11-25 14:56:07:696] MainRunThread(0)-----------------------------------
+
+[2024-11-25 14:56:07:709] EnvirThread 0/0(7031-0)flag:50000004  lua: 0 CallLua: 0-----------------------------------
+
+[2024-11-25 14:56:07:724] DbThread(16-0)-----------------------------------
+
+[2024-11-25 14:56:07:738] BoxSellDbThread(15)-----------------------------------
+
+[2024-11-25 14:56:07:754] NewHttpPost(16-0-0)-----------------------------------
+
+
+[2024-11-25 15:31:42:562] ---------------------线程耗时监控
+[2024-11-25 15:31:42:587] Frame-----------------------------------
+
+[2024-11-25 15:31:42:608] MainRunThread(0)-----------------------------------
+
+[2024-11-25 15:31:42:631] EnvirThread 0/0(2063-1)flag:10000997  lua: 0 CallLua: 0-----------------------------------
+
+[2024-11-25 15:31:42:652] DbThread(0-0)-----------------------------------
+
+[2024-11-25 15:31:42:672] BoxSellDbThread(16)-----------------------------------
+
+[2024-11-25 15:31:42:693] NewHttpPost(15-0-0)-----------------------------------
+
+
+[2024-11-25 15:58:59:055] ---------------------线程耗时监控
+[2024-11-25 15:58:59:084] Frame-----------------------------------
+
+[2024-11-25 15:58:59:106] MainRunThread(0)-----------------------------------
+
+[2024-11-25 15:58:59:135] EnvirThread 0/0(2078-6)flag:10000997  lua: 0 CallLua: 0-----------------------------------
+
+[2024-11-25 15:58:59:160] DbThread(15-0)-----------------------------------
+
+[2024-11-25 15:58:59:184] BoxSellDbThread(16)-----------------------------------
+
+[2024-11-25 15:58:59:206] NewHttpPost(16-0-0)-----------------------------------
+
+

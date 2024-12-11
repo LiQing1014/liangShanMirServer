@@ -1,0 +1,114 @@
+[@首充礼包]
+{
+
+#IF
+; ISADMIN
+equal <$SERVERIDX> 1881
+#ACT
+MONEY 游戏真充 + 9999
+
+#IF
+equal S$首充选择
+#ACT
+MOV S$首充选择 0
+
+#IF
+#ACT
+; csv_read
+
+MOV S$首充按钮0 2
+MOV S$首充按钮1 2
+MOV S$首充按钮2 2
+MOV S$首充按钮<$STR(S$首充选择)> 1
+
+getdbitemfieldvalue <$cfg_首充礼包(<$STR(S$首充选择)>_2)> idx S$首充展示ID1
+getdbitemfieldvalue <$cfg_首充礼包(<$STR(S$首充选择)>_4)> idx S$首充展示ID2
+getdbitemfieldvalue <$cfg_首充礼包(<$STR(S$首充选择)>_6)> idx S$首充展示ID3
+getdbitemfieldvalue <$cfg_首充礼包(<$STR(S$首充选择)>_8)> idx S$首充展示ID4
+getdbitemfieldvalue <$cfg_首充礼包(<$STR(S$首充选择)>_10)> idx S$首充展示ID5
+
+#SAY
+<Img|show=4|bg=1|loadDelay=1|move=0|esc=1|img=custom/shouchong/scbg1.png|reset=1>
+<Layout|x=756.0|y=62.0|width=80|height=80|link=@exit>
+<Button|x=778.0|y=74.0|color=255|size=18|nimg=custom/shouchong/sc00.png|link=@exit>
+<Img|x=257.0|y=139.0|height=45|img=custom/shouchong/sc08.png|esc=0>
+<Img|x=323.0|y=142.0|img=custom/shouchong/sc05.png|esc=0>
+<Img|x=494.0|y=223.0|img=custom/shouchong/sc06.png|esc=0>
+<ItemShow|x=315|y=308.0|width=70|height=70|itemid=<$str(S$首充展示ID1)>|itemcount=<$cfg_首充礼包(<$STR(S$首充选择)>_3)>|showtips=1|bgtype=0>
+<ItemShow|x=385|y=308.0|width=70|height=70|itemid=<$str(S$首充展示ID2)>|itemcount=<$cfg_首充礼包(<$STR(S$首充选择)>_5)>|showtips=1|bgtype=0>
+<ItemShow|x=455|y=308.0|width=70|height=70|itemid=<$str(S$首充展示ID3)>|itemcount=<$cfg_首充礼包(<$STR(S$首充选择)>_7)>|showtips=1|bgtype=0>
+<ItemShow|x=525|y=308.0|width=70|height=70|itemid=<$str(S$首充展示ID4)>|itemcount=<$cfg_首充礼包(<$STR(S$首充选择)>_9)>|showtips=1|bgtype=0>
+<ItemShow|x=595|y=308.0|width=70|height=70|itemid=<$str(S$首充展示ID5)>|itemcount=<$cfg_首充礼包(<$STR(S$首充选择)>_11)>|showtips=1|bgtype=0>
+
+<Button|x=767.0|y=163|color=255|size=18|nimg=custom/shouchong/day1_<$STR(S$首充按钮0)>.png|link=@首充礼包#首充选择=0>
+<Button|x=767.0|y=235|size=18|color=255|nimg=custom/shouchong/day2_<$STR(S$首充按钮1)>.png|link=@首充礼包#首充选择=1>
+<Button|x=767.0|y=307|size=18|color=255|nimg=custom/shouchong/day3_<$STR(S$首充按钮2)>.png|link=@首充礼包#首充选择=2>
+
+#IF
+equal S$首充选择 0
+equal <$GETSTRVALUE(T1,首充礼包<$STR(S$首充选择)>)>
+#SAY
+<Button|x=417.0|y=419.0|color=255|size=18|nimg=custom/shouchong/lqsc.png|link=@首充礼包领取>
+#ELSESAY
+<Button|x=417.0|y=419.0|color=255|size=18|nimg=custom/shouchong/cq.png|link=@首充礼包充值>
+
+[@首充礼包领取]
+
+#IF
+; large U106 2
+equal <$GETSTRVALUE(T1,首充礼包0)> 1
+equal <$GETSTRVALUE(T1,首充礼包1)> 1
+equal <$GETSTRVALUE(T1,首充礼包2)> 1
+#ACT
+sendmsg 9 <font color='#FFFF00'>[系统提示]：</font><font color='#FF0000'>你已全部领取完毕</font>
+BREAK
+
+#IF
+CHECKMONEY 游戏真充 ? 10
+#ELSEACT
+sendmsg 9 <font color='#FFFF00'>[系统提示]：</font><font color='#FF0000'>你还未解锁首充</font>
+goto @拉起支付
+BREAK
+
+#IF
+equal J1 1
+#ACT
+sendmsg 9 <font color='#FFFF00'>[系统提示]：</font><font color='#FF0000'>今日已经领取</font>
+BREAK
+
+#IF
+equal <$GETSTRVALUE(T1,首充礼包<$STR(S$首充选择)>)> 1
+#ACT
+sendmsg 9 <font color='#FFFF00'>[系统提示]：</font><font color='#FF0000'>当前礼包已领取</font>
+BREAK
+
+; #IF
+; large S$首充选择 <$STR(U106)>
+; #ACT
+; sendmsg 9 <font color='#FFFF00'>[系统提示]：</font><font color='#FF0000'>请按照顺序领取</font>
+; BREAK
+
+#IF
+#ACT
+GiveStateItem <$cfg_首充礼包(<$STR(S$首充选择)>_2)> <$cfg_首充礼包(<$STR(S$首充选择)>_3)> 1 1 0 0 0 0 1 1
+GiveStateItem <$cfg_首充礼包(<$STR(S$首充选择)>_4)> <$cfg_首充礼包(<$STR(S$首充选择)>_5)> 1 1 0 0 0 0 1 1
+GiveStateItem <$cfg_首充礼包(<$STR(S$首充选择)>_6)> <$cfg_首充礼包(<$STR(S$首充选择)>_5)> 1 1 0 0 0 0 1 1
+GiveStateItem <$cfg_首充礼包(<$STR(S$首充选择)>_8)> <$cfg_首充礼包(<$STR(S$首充选择)>_9)> 1 1 0 0 0 0 1 1
+GiveStateItem <$cfg_首充礼包(<$STR(S$首充选择)>_10)> <$cfg_首充礼包(<$STR(S$首充选择)>_11)> 1 1 0 0 0 0 1 1
+; INC U106 1
+ADDVARCACHE T1 首充礼包<$STR(S$首充选择)> 1
+MOV J1 1
+
+
+
+[@首充礼包充值]
+<Img|show=4|bg=1|loadDelay=1|move=0|esc=1|img=custom/shouchong/bg_00.png|reset=1>
+<Layout|x=491.0|y=-8.0|width=80|height=80|link=@exit>
+<Button|x=515.0|y=10.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|x=133.0|y=71.0|color=250|size=18|text=10>
+<Text|x=133.0|y=101.0|color=251|size=18|text=<$USERNAME>>
+<Img|x=61.0|y=159.0|img=custom/shouchong/bg_01.png|esc=0>
+<Button|x=196.0|y=228.0|color=255|size=18|nimg=custom/shouchong/bg_02.png>
+
+
+}

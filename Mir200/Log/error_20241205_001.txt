@@ -1,0 +1,803 @@
+[2024-12-05 09:02:03:693] Failure: .\Map\轩辕古城.map could not be loaded.
+[2024-12-05 09:02:03:693] Failure: .\Map\轩辕古城.map could not be loaded.
+[2024-12-05 09:02:03:953] Failure: .\Map\定军山.map could not be loaded.
+[2024-12-05 09:02:03:960] Failure: .\Map\幽灵古堡.map could not be loaded.
+[2024-12-05 09:02:03:978] Failure: .\Map\神月祭坛.map could not be loaded.
+[2024-12-05 09:02:03:978] Failure: .\Map\失乐园.map could not be loaded.
+[2024-12-05 09:02:04:015] Failure: .\Map\十二封印之地.map could not be loaded.
+[2024-12-05 09:02:04:015] Failure: .\Map\BOSS之家.map could not be loaded.
+[2024-12-05 09:02:04:015] Failure: .\Map\雪域.map could not be loaded.
+[2024-12-05 09:02:04:028] Failure: .\Map\天之龙域.map could not be loaded.
+[2024-12-05 09:02:04:028] Failure: .\Map\神龙一层.map could not be loaded.
+[2024-12-05 09:02:04:028] Failure: .\Map\失乐园.map could not be loaded.
+[2024-12-05 09:02:04:033] Failure: .\Map\BOSS之家.map could not be loaded.
+[2024-12-05 09:02:04:034] Failure: .\Map\修罗天宫.map could not be loaded.
+[2024-12-05 09:02:04:036] Failure: .\Map\仙城.map could not be loaded.
+[2024-12-05 09:02:04:039] Failure: .\Map\九幽殿.map could not be loaded.
+[2024-12-05 09:02:04:047] Failure: .\Map\雪域大陆.map could not be loaded.
+[2024-12-05 09:02:04:047] Failure: .\Map\炼狱2.map could not be loaded.
+[2024-12-05 09:02:04:054] Failure: .\Map\天之龙域.map could not be loaded.
+[2024-12-05 09:02:04:318] Failure: .\Map\D71650.map could not be loaded.
+[2024-12-05 09:02:04:318] Failure: .\Map\D71651.map could not be loaded.
+[2024-12-05 09:02:04:318] Failure: .\Map\D71652.map could not be loaded.
+[2024-12-05 09:02:04:318] Failure: .\Map\D71653.map could not be loaded.
+[2024-12-05 09:02:04:356] Failure: .\Map\M001.map could not be loaded.
+[2024-12-05 09:02:06:349] >>>>>RegenMonsterByName ThreadError :[MainDoor]-0[3-9908] 当前Thread:2460
+[2024-12-05 09:02:06:349] MainDoor Name:MainDoor Map:3 X:672 Y:330 HP:4144
+[2024-12-05 09:02:06:349] >>>>>RegenMonsterByName ThreadError :[LeftWall]-0[3-9908] 当前Thread:2460
+[2024-12-05 09:02:06:349] LeftWall Name:LeftWall Map:3 X:624 Y:278 HP:3072
+[2024-12-05 09:02:06:349] >>>>>RegenMonsterByName ThreadError :[CenterWall]-0[3-9908] 当前Thread:2460
+[2024-12-05 09:02:06:349] CenterWall Name:CenterWall Map:3 X:627 Y:278 HP:3072
+[2024-12-05 09:02:06:349] >>>>>RegenMonsterByName ThreadError :[RightWall]-0[3-9908] 当前Thread:2460
+[2024-12-05 09:02:06:349] RightWall Name:RightWall Map:3 X:634 Y:271 HP:3072
+[2024-12-05 09:02:06:625] ---------------------线程耗时监控
+[2024-12-05 09:02:06:827] Frame-----------------------------------
+
+[2024-12-05 09:02:06:837] MainRunThread(0)-----------------------------------
+
+[2024-12-05 09:02:06:847] EnvirThread 0/0(7485-0)flag:50000004  lua: 1 CallLua:newreadcsv 18-----------------------------------
+
+[2024-12-05 09:02:06:857] DbThread(0-0)-----------------------------------
+
+[2024-12-05 09:02:06:910] BoxSellDbThread(15)-----------------------------------
+
+[2024-12-05 09:02:06:920] NewHttpPost(0-0-0)-----------------------------------
+
+
+[2024-12-05 10:38:15:221] ---------------------线程耗时监控
+[2024-12-05 10:38:15:250] Frame-----------------------------------
+
+[2024-12-05 10:38:15:284] MainRunThread(0)-----------------------------------
+
+[2024-12-05 10:38:15:319] EnvirThread 0/0(2078-2)flag:10000997  lua: 38 CallLua:release_print 651-----------------------------------
+
+[2024-12-05 10:38:15:351] DbThread(0-0)-----------------------------------
+
+[2024-12-05 10:38:15:379] BoxSellDbThread(15)-----------------------------------
+
+[2024-12-05 10:38:15:407] NewHttpPost(0-0-0)-----------------------------------
+
+
+[2024-12-05 13:25:42:055] ---------------------线程耗时监控
+[2024-12-05 13:25:42:080] Frame-----------------------------------
+
+[2024-12-05 13:25:42:104] MainRunThread(0)-----------------------------------
+
+[2024-12-05 13:25:42:125] EnvirThread 0/0(2062-1)flag:10000997  lua: 81 CallLua:newreadcsv 1354-----------------------------------
+
+[2024-12-05 13:25:42:150] DbThread(0-0)-----------------------------------
+
+[2024-12-05 13:25:42:174] BoxSellDbThread(15)-----------------------------------
+
+[2024-12-05 13:25:42:204] NewHttpPost(16-0-0)-----------------------------------
+
+
+[2024-12-05 13:35:11:588] ---------------------线程耗时监控
+[2024-12-05 13:35:11:610] Frame-----------------------------------
+
+[2024-12-05 13:35:11:631] MainRunThread(0)-----------------------------------
+
+[2024-12-05 13:35:11:649] EnvirThread 0/0(2047-2)flag:10000997  lua: 81 CallLua:newreadcsv 1354-----------------------------------
+
+[2024-12-05 13:35:11:672] DbThread(15-0)-----------------------------------
+
+[2024-12-05 13:35:11:694] BoxSellDbThread(0)-----------------------------------
+
+[2024-12-05 13:35:11:720] NewHttpPost(0-0-0)-----------------------------------
+
+
+[2024-12-05 13:55:56:251] ---------------------线程耗时监控
+[2024-12-05 13:55:56:287] Frame-----------------------------------
+
+[2024-12-05 13:55:56:321] MainRunThread(0)-----------------------------------
+
+[2024-12-05 13:55:56:356] EnvirThread 0/0(2094-7)flag:10000997  lua: 81 CallLua:newreadcsv 1354-----------------------------------
+
+[2024-12-05 13:55:56:389] DbThread(15-0)-----------------------------------
+
+[2024-12-05 13:55:56:426] BoxSellDbThread(0)-----------------------------------
+
+[2024-12-05 13:55:56:463] NewHttpPost(0-0-0)-----------------------------------
+
+
+[2024-12-05 14:04:28:443] Failure: .\Map\轩辕古城.map could not be loaded.
+[2024-12-05 14:04:28:443] Failure: .\Map\轩辕古城.map could not be loaded.
+[2024-12-05 14:04:28:768] Failure: .\Map\定军山.map could not be loaded.
+[2024-12-05 14:04:28:776] Failure: .\Map\幽灵古堡.map could not be loaded.
+[2024-12-05 14:04:28:794] Failure: .\Map\神月祭坛.map could not be loaded.
+[2024-12-05 14:04:28:794] Failure: .\Map\失乐园.map could not be loaded.
+[2024-12-05 14:04:28:836] Failure: .\Map\十二封印之地.map could not be loaded.
+[2024-12-05 14:04:28:836] Failure: .\Map\BOSS之家.map could not be loaded.
+[2024-12-05 14:04:28:836] Failure: .\Map\雪域.map could not be loaded.
+[2024-12-05 14:04:28:854] Failure: .\Map\天之龙域.map could not be loaded.
+[2024-12-05 14:04:28:854] Failure: .\Map\神龙一层.map could not be loaded.
+[2024-12-05 14:04:28:854] Failure: .\Map\失乐园.map could not be loaded.
+[2024-12-05 14:04:28:860] Failure: .\Map\BOSS之家.map could not be loaded.
+[2024-12-05 14:04:28:862] Failure: .\Map\修罗天宫.map could not be loaded.
+[2024-12-05 14:04:28:865] Failure: .\Map\仙城.map could not be loaded.
+[2024-12-05 14:04:28:869] Failure: .\Map\九幽殿.map could not be loaded.
+[2024-12-05 14:04:28:883] Failure: .\Map\雪域大陆.map could not be loaded.
+[2024-12-05 14:04:28:883] Failure: .\Map\炼狱2.map could not be loaded.
+[2024-12-05 14:04:28:894] Failure: .\Map\天之龙域.map could not be loaded.
+[2024-12-05 14:04:29:240] Failure: .\Map\D71650.map could not be loaded.
+[2024-12-05 14:04:29:240] Failure: .\Map\D71651.map could not be loaded.
+[2024-12-05 14:04:29:241] Failure: .\Map\D71652.map could not be loaded.
+[2024-12-05 14:04:29:241] Failure: .\Map\D71653.map could not be loaded.
+[2024-12-05 14:04:29:289] Failure: .\Map\M001.map could not be loaded.
+[2024-12-05 14:04:31:391] >>>>>RegenMonsterByName ThreadError :[MainDoor]-0[3-30444] 当前Thread:8228
+[2024-12-05 14:04:31:391] MainDoor Name:MainDoor Map:3 X:672 Y:330 HP:4144
+[2024-12-05 14:04:31:391] >>>>>RegenMonsterByName ThreadError :[LeftWall]-0[3-30444] 当前Thread:8228
+[2024-12-05 14:04:31:391] LeftWall Name:LeftWall Map:3 X:624 Y:278 HP:3072
+[2024-12-05 14:04:31:391] >>>>>RegenMonsterByName ThreadError :[CenterWall]-0[3-30444] 当前Thread:8228
+[2024-12-05 14:04:31:391] CenterWall Name:CenterWall Map:3 X:627 Y:278 HP:3072
+[2024-12-05 14:04:31:391] >>>>>RegenMonsterByName ThreadError :[RightWall]-0[3-30444] 当前Thread:8228
+[2024-12-05 14:04:31:391] RightWall Name:RightWall Map:3 X:634 Y:271 HP:3072
+[2024-12-05 14:04:31:705] ---------------------线程耗时监控
+[2024-12-05 14:04:31:786] Frame-----------------------------------
+
+[2024-12-05 14:04:31:963] MainRunThread(0)-----------------------------------
+
+[2024-12-05 14:04:31:980] EnvirThread 0/0(8500-0)flag:50000004  lua: 1 CallLua:newreadcsv 19-----------------------------------
+
+[2024-12-05 14:04:32:003] DbThread(15-0)-----------------------------------
+
+[2024-12-05 14:04:32:039] BoxSellDbThread(0)-----------------------------------
+
+[2024-12-05 14:04:32:055] NewHttpPost(16-0-0)-----------------------------------
+
+
+[2024-12-05 14:06:06:594] [Exception]TMainRunThread.LoadKuaFuConfig Error  Except：[FireDAC][Phys][ODBC][Microsoft][ODBC SQL Server Driver][DBNETLIB]ConnectionRead (recv()).[0000000001258281] JclDebug._ZN8Jcldebug17TJclStackInfoListC3EbiPvbS1_S1_ (Line 5509, "JclDebug.pas" + 34)
+[0000000001257AD2] JclDebug._ZN8Jcldebug18JclCreateStackListEbiPvbS0_ (Line 5351, "JclDebug.pas" + 1)
+[00000000012579B2] JclDebug._ZN8Jcldebug21DoExceptionStackTraceEPN6System7TObjectEPvbS3_ (Line 5292, "JclDebug.pas" + 20)
+[000000000125AAA5] JclDebug._ZN8Jcldebug14DoExceptNotifyEPN6System7TObjectEPvbS3_ (Line 6741, "JclDebug.pas" + 7)
+[0000000001249702] JclHookExcept._ZN13Jclhookexcept13TNotifierItem8DoNotifyEPN6System7TObjectEPvbS4_ (Line 272, "JclHookExcept.pas" + 5)
+[000000000124996B] JclHookExcept._ZN13Jclhookexcept14DoExceptNotifyEPN6System7TObjectEPvbS3_ (Line 339, "JclHookExcept.pas" + 13)
+[0000000001249AD0] JclHookExcept._ZN13Jclhookexcept20HookedRaiseExceptionEjjjPNS_19TExceptionArgumentsE (Line 381, "JclHookExcept.pas" + 14)
+[00000000002823B3] System._ZN6System14_RaiseAtExceptEPNS_7TObjectEPv (Line 22402, "System.pas" + 32)
+[0000000000282418] System._ZN6System11_RaiseAgainEv (Line 23481, "System.pas" + 9)
+[00000000008C484F] FireDAC.Comp.Client._ZN7Firedac4Comp6Client15TFDRdbmsDataSet10OpenCursorEb (Line 11214, "FireDAC.Comp.Client.pas" + 9)
+[0000000000650354] Data.DB._ZN4Data2Db8TDataSet9SetActiveEb (Line 12665, "Data.DB.pas" + 14)
+[000000000086B3BF] FireDAC.Comp.DataSet._ZN7Firedac4Comp7Dataset10TFDDataSet9SetActiveEb (Line 1615, "FireDAC.Comp.DataSet.pas" + 8)
+[00000000006500F6] Data.DB._ZN4Data2Db8TDataSet4OpenEv (Line 12620, "Data.DB.pas" + 2)
+[000000000156EFFF] svMain._ZN6Svmain14TMainRunThread15LoadKuaFuConfigEv (Line 3408, "svMain.pas" + 9)
+[000000000156F868] svMain._ZN6Svmain14TMainRunThread15CheckKuaFuStateEv (Line 3476, "svMain.pas" + 3)
+[000000000156D31E] svMain._ZN6Svmain14TMainRunThread5OnRunEv (Line 2798, "svMain.pas" + 155)
+[00000000006A21D6] uThreadPools._ZN12Uthreadpools11TThreadPool10ThreadProcEv (Line 174, "uThreadPools.pas" + 18)
+[00000000006A1D8F] uThreadPools._ZN12Uthreadpools9TMyThread7ExecuteEv (Line 74, "uThreadPools.pas" + 4)
+[00000000003A2963] System.Classes._ZN6System7Classes10ThreadProcEPNS0_7TThreadE (Line 15845, "System.Classes.pas" + 18)
+[0000000000282F8D] System._ZN6System13ThreadWrapperEPv (Line 25726, "System.pas" + 9)
+[00007FFD41647374] BaseThreadInitThunk
+[00007FFD42D7CC91] RtlUserThreadStart
+
+
+[2024-12-05 14:06:09:479] ---------------------线程耗时监控
+[2024-12-05 14:06:09:520] Frame-----------------------------------
+
+[2024-12-05 14:06:09:544] MainRunThread(0)-----------------------------------
+
+[2024-12-05 14:06:09:569] EnvirThread 0/0(2078-1)flag:10000997  lua: 1 CallLua:newreadcsv 19-----------------------------------
+
+[2024-12-05 14:06:09:591] DbThread(0-0)-----------------------------------
+
+[2024-12-05 14:06:09:613] BoxSellDbThread(0)-----------------------------------
+
+[2024-12-05 14:06:09:640] NewHttpPost(0-0-0)-----------------------------------
+
+
+[2024-12-05 14:06:14:259] 执行SQL异常 TDbThread.ExecSql,Sql:MERGE INTO dbo.TBL_VAR A
+USING ( SELECT 'system' AS FLD_USERID,'ITEMNUMBER' AS FLD_VAR_NAME,0 AS FLD_TYPE,'39369' AS FLD_VAR_VALUE,'2024-12-05 14:06:11.835' AS tUpdateTime,0 AS FLD_JOINTYPE 
+) B
+ON (A.FLD_USERID=B.FLD_USERID AND A.FLD_VAR_NAME=B.FLD_VAR_NAME )
+WHEN MATCHED THEN
+	UPDATE SET A.FLD_VAR_VALUE=B.FLD_VAR_VALUE,A.tUpdateTime=B.tUpdateTime,A.FLD_JOINTYPE=B.FLD_JOINTYPE
+WHEN NOT MATCHED THEN
+	INSERT(FLD_USERID,FLD_VAR_NAME,FLD_TYPE,FLD_VAR_VALUE,tUpdateTime,FLD_JOINTYPE)
+	VALUES(B.FLD_USERID,B.FLD_VAR_NAME,B.FLD_TYPE,B.FLD_VAR_VALUE,B.tUpdateTime,B.FLD_JOINTYPE);  Except：[FireDAC][Phys][ODBC][Microsoft][ODBC SQL Server Driver]通讯链接失败[0000000001258281] JclDebug._ZN8Jcldebug17TJclStackInfoListC3EbiPvbS1_S1_ (Line 5509, "JclDebug.pas" + 34)
+[0000000001257AD2] JclDebug._ZN8Jcldebug18JclCreateStackListEbiPvbS0_ (Line 5351, "JclDebug.pas" + 1)
+[00000000012579B2] JclDebug._ZN8Jcldebug21DoExceptionStackTraceEPN6System7TObjectEPvbS3_ (Line 5292, "JclDebug.pas" + 20)
+[000000000125AAA5] JclDebug._ZN8Jcldebug14DoExceptNotifyEPN6System7TObjectEPvbS3_ (Line 6741, "JclDebug.pas" + 7)
+[0000000001249702] JclHookExcept._ZN13Jclhookexcept13TNotifierItem8DoNotifyEPN6System7TObjectEPvbS4_ (Line 272, "JclHookExcept.pas" + 5)
+[000000000124996B] JclHookExcept._ZN13Jclhookexcept14DoExceptNotifyEPN6System7TObjectEPvbS3_ (Line 339, "JclHookExcept.pas" + 13)
+[0000000001249AD0] JclHookExcept._ZN13Jclhookexcept20HookedRaiseExceptionEjjjPNS_19TExceptionArgumentsE (Line 381, "JclHookExcept.pas" + 14)
+[00000000002823B3] System._ZN6System14_RaiseAtExceptEPNS_7TObjectEPv (Line 22402, "System.pas" + 32)
+[0000000000282418] System._ZN6System11_RaiseAgainEv (Line 23481, "System.pas" + 9)
+[00000000008B7E84] FireDAC.Comp.Client._ZN7Firedac4Comp6Client16TFDCustomCommand15InternalExecuteEiib (Line 6853, "FireDAC.Comp.Client.pas" + 16)
+[00000000008B828F] FireDAC.Comp.Client._ZN7Firedac4Comp6Client16TFDCustomCommand7ExecuteEiib (Line 6871, "FireDAC.Comp.Client.pas" + 4)
+[00000000008C1D25] FireDAC.Comp.Client._ZN7Firedac4Comp6Client17TFDAdaptedDataSet15DoExecuteSourceEii (Line 10127, "FireDAC.Comp.Client.pas" + 5)
+[0000000000870701] FireDAC.Comp.DataSet._ZN7Firedac4Comp7Dataset10TFDDataSet7ExecuteEii (Line 3189, "FireDAC.Comp.DataSet.pas" + 9)
+[00000000008C5089] FireDAC.Comp.Client._ZN7Firedac4Comp6Client14TFDCustomQuery7ExecSQLEv (Line 11583, "FireDAC.Comp.Client.pas" + 2)
+[0000000000E980D6] uThread_Db._ZN10Uthread_db9TDbThread7ExecSqlEN6System13UnicodeStringEPNS1_7TVarRecEi (Line 3935, "uThread_Db.pas" + 11)
+[0000000000E97C8F] uThread_Db._ZN10Uthread_db9TDbThread7ExecSqlEN6System13UnicodeStringE (Line 3861, "uThread_Db.pas" + 1)
+[0000000000E8EE0A] uThread_Db._ZN10Uthread_db9TDbThread14UpdateBatchVarEv (Line 2687, "uThread_Db.pas" + 29)
+[0000000000E7F016] uThread_Db._ZN10Uthread_db9TDbThread5OnRunEv (Line 458, "uThread_Db.pas" + 66)
+[00000000006A21D6] uThreadPools._ZN12Uthreadpools11TThreadPool10ThreadProcEv (Line 174, "uThreadPools.pas" + 18)
+[00000000006A1D8F] uThreadPools._ZN12Uthreadpools9TMyThread7ExecuteEv (Line 74, "uThreadPools.pas" + 4)
+[00000000003A2963] System.Classes._ZN6System7Classes10ThreadProcEPNS0_7TThreadE (Line 15845, "System.Classes.pas" + 18)
+[0000000000282F8D] System._ZN6System13ThreadWrapperEPv (Line 25726, "System.pas" + 9)
+[00007FFD41647374] BaseThreadInitThunk
+[00007FFD42D7CC91] RtlUserThreadStart
+
+
+[2024-12-05 14:06:19:773] PayList Except：[DBNETLIB][ConnectionRead (recv()).]一般性网络错误。请检查网络文档。[0000000001258281] JclDebug._ZN8Jcldebug17TJclStackInfoListC3EbiPvbS1_S1_ (Line 5509, "JclDebug.pas" + 34)
+[0000000001257AD2] JclDebug._ZN8Jcldebug18JclCreateStackListEbiPvbS0_ (Line 5351, "JclDebug.pas" + 1)
+[00000000012579B2] JclDebug._ZN8Jcldebug21DoExceptionStackTraceEPN6System7TObjectEPvbS3_ (Line 5292, "JclDebug.pas" + 20)
+[000000000125AAA5] JclDebug._ZN8Jcldebug14DoExceptNotifyEPN6System7TObjectEPvbS3_ (Line 6741, "JclDebug.pas" + 7)
+[0000000001249702] JclHookExcept._ZN13Jclhookexcept13TNotifierItem8DoNotifyEPN6System7TObjectEPvbS4_ (Line 272, "JclHookExcept.pas" + 5)
+[000000000124996B] JclHookExcept._ZN13Jclhookexcept14DoExceptNotifyEPN6System7TObjectEPvbS3_ (Line 339, "JclHookExcept.pas" + 13)
+[0000000001249AD0] JclHookExcept._ZN13Jclhookexcept20HookedRaiseExceptionEjjjPNS_19TExceptionArgumentsE (Line 381, "JclHookExcept.pas" + 14)
+[00000000002823B3] System._ZN6System14_RaiseAtExceptEPNS_7TObjectEPv (Line 22402, "System.pas" + 32)
+[0000000000461704] System.Win.ComObj._ZN6System3Win6Comobj13SafeCallErrorEiPv (Line 1776, "System.Win.ComObj.pas" + 3)
+[000000000028CEB5] System._ZN6System16_CheckAutoResultEl (Line 40249, "System.pas" + 5)
+[000000000067CBFF] Data.Win.ADODB._ZN4Data3Win5Adodb17TCustomADODataSet10OpenCursorEb (Line 3574, "Data.Win.ADODB.pas" + 5)
+[0000000000650354] Data.DB._ZN4Data2Db8TDataSet9SetActiveEb (Line 12665, "Data.DB.pas" + 14)
+[00000000006500F6] Data.DB._ZN4Data2Db8TDataSet4OpenEv (Line 12620, "Data.DB.pas" + 2)
+[0000000000C18C0A] uChargeThread._ZN13Uchargethread13TChargeThread9PayListExEN6System13UnicodeStringE (Line 401, "uChargeThread.pas" + 18)
+[0000000000C178AA] uChargeThread._ZN13Uchargethread13TChargeThread5OnMsgEjyPv (Line 209, "uChargeThread.pas" + 18)
+[00000000006A2228] uThreadPools._ZN12Uthreadpools11TThreadPool10ThreadProcEv (Line 186, "uThreadPools.pas" + 30)
+[00000000006A1D8F] uThreadPools._ZN12Uthreadpools9TMyThread7ExecuteEv (Line 74, "uThreadPools.pas" + 4)
+[00000000003A2963] System.Classes._ZN6System7Classes10ThreadProcEPNS0_7TThreadE (Line 15845, "System.Classes.pas" + 18)
+[0000000000282F8D] System._ZN6System13ThreadWrapperEPv (Line 25726, "System.pas" + 9)
+[00007FFD41647374] BaseThreadInitThunk
+[00007FFD42D7CC91] RtlUserThreadStart
+
+
+[2024-12-05 14:45:15:555] ---------------------线程耗时监控
+[2024-12-05 14:45:15:591] Frame-----------------------------------
+
+[2024-12-05 14:45:15:631] MainRunThread(0)-----------------------------------
+
+[2024-12-05 14:45:15:669] EnvirThread 0/0(2078-2)flag:10000997  lua: 1 CallLua:newreadcsv 19-----------------------------------
+
+[2024-12-05 14:45:15:706] DbThread(0-0)-----------------------------------
+
+[2024-12-05 14:45:15:744] BoxSellDbThread(0)-----------------------------------
+
+[2024-12-05 14:45:15:782] NewHttpPost(0-0-0)-----------------------------------
+
+
+[2024-12-05 14:58:03:227] PayList Except：连接失败[0000000001258281] JclDebug._ZN8Jcldebug17TJclStackInfoListC3EbiPvbS1_S1_ (Line 5509, "JclDebug.pas" + 34)
+[0000000001257AD2] JclDebug._ZN8Jcldebug18JclCreateStackListEbiPvbS0_ (Line 5351, "JclDebug.pas" + 1)
+[00000000012579B2] JclDebug._ZN8Jcldebug21DoExceptionStackTraceEPN6System7TObjectEPvbS3_ (Line 5292, "JclDebug.pas" + 20)
+[000000000125AAA5] JclDebug._ZN8Jcldebug14DoExceptNotifyEPN6System7TObjectEPvbS3_ (Line 6741, "JclDebug.pas" + 7)
+[0000000001249702] JclHookExcept._ZN13Jclhookexcept13TNotifierItem8DoNotifyEPN6System7TObjectEPvbS4_ (Line 272, "JclHookExcept.pas" + 5)
+[000000000124996B] JclHookExcept._ZN13Jclhookexcept14DoExceptNotifyEPN6System7TObjectEPvbS3_ (Line 339, "JclHookExcept.pas" + 13)
+[0000000001249AD0] JclHookExcept._ZN13Jclhookexcept20HookedRaiseExceptionEjjjPNS_19TExceptionArgumentsE (Line 381, "JclHookExcept.pas" + 14)
+[00000000002823B3] System._ZN6System14_RaiseAtExceptEPNS_7TObjectEPv (Line 22402, "System.pas" + 32)
+[0000000000461704] System.Win.ComObj._ZN6System3Win6Comobj13SafeCallErrorEiPv (Line 1776, "System.Win.ComObj.pas" + 3)
+[000000000028CEB5] System._ZN6System16_CheckAutoResultEl (Line 40249, "System.pas" + 5)
+[000000000067CBFF] Data.Win.ADODB._ZN4Data3Win5Adodb17TCustomADODataSet10OpenCursorEb (Line 3574, "Data.Win.ADODB.pas" + 5)
+[0000000000650354] Data.DB._ZN4Data2Db8TDataSet9SetActiveEb (Line 12665, "Data.DB.pas" + 14)
+[00000000006500F6] Data.DB._ZN4Data2Db8TDataSet4OpenEv (Line 12620, "Data.DB.pas" + 2)
+[0000000000C18C0A] uChargeThread._ZN13Uchargethread13TChargeThread9PayListExEN6System13UnicodeStringE (Line 401, "uChargeThread.pas" + 18)
+[0000000000C178AA] uChargeThread._ZN13Uchargethread13TChargeThread5OnMsgEjyPv (Line 209, "uChargeThread.pas" + 18)
+[00000000006A2228] uThreadPools._ZN12Uthreadpools11TThreadPool10ThreadProcEv (Line 186, "uThreadPools.pas" + 30)
+[00000000006A1D8F] uThreadPools._ZN12Uthreadpools9TMyThread7ExecuteEv (Line 74, "uThreadPools.pas" + 4)
+[00000000003A2963] System.Classes._ZN6System7Classes10ThreadProcEPNS0_7TThreadE (Line 15845, "System.Classes.pas" + 18)
+[0000000000282F8D] System._ZN6System13ThreadWrapperEPv (Line 25726, "System.pas" + 9)
+[00007FFD41647374] BaseThreadInitThunk
+[00007FFD42D7CC91] RtlUserThreadStart
+
+
+[2024-12-05 15:18:16:711] ---------------------线程耗时监控
+[2024-12-05 15:18:16:735] Frame-----------------------------------
+
+[2024-12-05 15:18:16:767] MainRunThread(0)-----------------------------------
+
+[2024-12-05 15:18:16:790] EnvirThread 0/0(2063-1)flag:10000997  lua: 2 CallLua:newreadcsv 38-----------------------------------
+
+[2024-12-05 15:18:16:817] DbThread(0-0)-----------------------------------
+
+[2024-12-05 15:18:16:842] BoxSellDbThread(0)-----------------------------------
+
+[2024-12-05 15:18:16:864] NewHttpPost(0-0-0)-----------------------------------
+
+
+[2024-12-05 15:28:14:883] ---------------------线程耗时监控
+[2024-12-05 15:28:14:914] Frame-----------------------------------
+
+[2024-12-05 15:28:14:942] MainRunThread(16)-----------------------------------
+
+[2024-12-05 15:28:14:969] DbThread(0-0)-----------------------------------
+
+[2024-12-05 15:28:14:997] BoxSellDbThread(0)-----------------------------------
+
+[2024-12-05 15:28:15:032] NewHttpPost(0-0-0)-----------------------------------
+
+
+[2024-12-05 15:29:57:928] PayList Except：连接失败[0000000001258281] JclDebug._ZN8Jcldebug17TJclStackInfoListC3EbiPvbS1_S1_ (Line 5509, "JclDebug.pas" + 34)
+[0000000001257AD2] JclDebug._ZN8Jcldebug18JclCreateStackListEbiPvbS0_ (Line 5351, "JclDebug.pas" + 1)
+[00000000012579B2] JclDebug._ZN8Jcldebug21DoExceptionStackTraceEPN6System7TObjectEPvbS3_ (Line 5292, "JclDebug.pas" + 20)
+[000000000125AAA5] JclDebug._ZN8Jcldebug14DoExceptNotifyEPN6System7TObjectEPvbS3_ (Line 6741, "JclDebug.pas" + 7)
+[0000000001249702] JclHookExcept._ZN13Jclhookexcept13TNotifierItem8DoNotifyEPN6System7TObjectEPvbS4_ (Line 272, "JclHookExcept.pas" + 5)
+[000000000124996B] JclHookExcept._ZN13Jclhookexcept14DoExceptNotifyEPN6System7TObjectEPvbS3_ (Line 339, "JclHookExcept.pas" + 13)
+[0000000001249AD0] JclHookExcept._ZN13Jclhookexcept20HookedRaiseExceptionEjjjPNS_19TExceptionArgumentsE (Line 381, "JclHookExcept.pas" + 14)
+[00000000002823B3] System._ZN6System14_RaiseAtExceptEPNS_7TObjectEPv (Line 22402, "System.pas" + 32)
+[0000000000461704] System.Win.ComObj._ZN6System3Win6Comobj13SafeCallErrorEiPv (Line 1776, "System.Win.ComObj.pas" + 3)
+[000000000028CEB5] System._ZN6System16_CheckAutoResultEl (Line 40249, "System.pas" + 5)
+[000000000067CBFF] Data.Win.ADODB._ZN4Data3Win5Adodb17TCustomADODataSet10OpenCursorEb (Line 3574, "Data.Win.ADODB.pas" + 5)
+[0000000000650354] Data.DB._ZN4Data2Db8TDataSet9SetActiveEb (Line 12665, "Data.DB.pas" + 14)
+[00000000006500F6] Data.DB._ZN4Data2Db8TDataSet4OpenEv (Line 12620, "Data.DB.pas" + 2)
+[0000000000C18C0A] uChargeThread._ZN13Uchargethread13TChargeThread9PayListExEN6System13UnicodeStringE (Line 401, "uChargeThread.pas" + 18)
+[0000000000C178AA] uChargeThread._ZN13Uchargethread13TChargeThread5OnMsgEjyPv (Line 209, "uChargeThread.pas" + 18)
+[00000000006A2228] uThreadPools._ZN12Uthreadpools11TThreadPool10ThreadProcEv (Line 186, "uThreadPools.pas" + 30)
+[00000000006A1D8F] uThreadPools._ZN12Uthreadpools9TMyThread7ExecuteEv (Line 74, "uThreadPools.pas" + 4)
+[00000000003A2963] System.Classes._ZN6System7Classes10ThreadProcEPNS0_7TThreadE (Line 15845, "System.Classes.pas" + 18)
+[0000000000282F8D] System._ZN6System13ThreadWrapperEPv (Line 25726, "System.pas" + 9)
+[00007FFD41647374] BaseThreadInitThunk
+[00007FFD42D7CC91] RtlUserThreadStart
+
+
+[2024-12-05 15:46:54:868] ---------------------线程耗时监控
+[2024-12-05 15:46:54:899] Frame-----------------------------------
+
+[2024-12-05 15:46:54:930] MainRunThread(0)-----------------------------------
+
+[2024-12-05 15:46:54:970] EnvirThread 0/0(2078-2)flag:10000997  lua: 2 CallLua:newreadcsv 38-----------------------------------
+
+[2024-12-05 15:46:55:001] DbThread(0-0)-----------------------------------
+
+[2024-12-05 15:46:55:034] BoxSellDbThread(0)-----------------------------------
+
+[2024-12-05 15:46:55:068] NewHttpPost(0-0-0)-----------------------------------
+
+
+[2024-12-05 15:47:15:603] ---------------------线程耗时监控
+[2024-12-05 15:47:15:632] Frame-----------------------------------
+
+[2024-12-05 15:47:15:666] MainRunThread(0)-----------------------------------
+
+[2024-12-05 15:47:15:696] EnvirThread 0/0(2078-2)flag:10000997  lua: 2 CallLua:newreadcsv 38-----------------------------------
+
+[2024-12-05 15:47:15:727] DbThread(0-0)-----------------------------------
+
+[2024-12-05 15:47:15:760] BoxSellDbThread(15)-----------------------------------
+
+[2024-12-05 15:47:15:788] NewHttpPost(0-0-0)-----------------------------------
+
+
+[2024-12-05 16:02:15:476] ---------------------线程耗时监控
+[2024-12-05 16:02:15:502] Frame-----------------------------------
+
+[2024-12-05 16:02:15:534] MainRunThread(0)-----------------------------------
+
+[2024-12-05 16:02:15:568] DbThread(0-0)-----------------------------------
+
+[2024-12-05 16:02:15:602] BoxSellDbThread(0)-----------------------------------
+
+[2024-12-05 16:02:15:635] NewHttpPost(0-0-0)-----------------------------------
+
+
+[2024-12-05 16:02:18:774] ---------------------线程耗时监控
+[2024-12-05 16:02:18:804] Frame-----------------------------------
+
+[2024-12-05 16:02:18:842] MainRunThread(0)-----------------------------------
+
+[2024-12-05 16:02:18:869] EnvirThread 0/0(2078-2)flag:10000997  lua: 2 CallLua:newreadcsv 38-----------------------------------
+
+[2024-12-05 16:02:18:904] DbThread(0-0)-----------------------------------
+
+[2024-12-05 16:02:18:938] BoxSellDbThread(0)-----------------------------------
+
+[2024-12-05 16:02:18:976] NewHttpPost(0-0-0)-----------------------------------
+
+
+[2024-12-05 16:02:25:210] ---------------------线程耗时监控
+[2024-12-05 16:02:25:250] Frame-----------------------------------
+
+[2024-12-05 16:02:25:291] MainRunThread(16)-----------------------------------
+
+[2024-12-05 16:02:25:330] EnvirThread 0/0(2094-7)flag:10000997  lua: 2 CallLua:newreadcsv 38-----------------------------------
+
+[2024-12-05 16:02:25:364] DbThread(0-0)-----------------------------------
+
+[2024-12-05 16:02:25:402] BoxSellDbThread(0)-----------------------------------
+
+[2024-12-05 16:02:25:437] NewHttpPost(0-0-0)-----------------------------------
+
+
+[2024-12-05 16:02:28:000] ---------------------线程耗时监控
+[2024-12-05 16:02:28:030] Frame-----------------------------------
+
+[2024-12-05 16:02:28:069] MainRunThread(0)-----------------------------------
+
+[2024-12-05 16:02:28:106] EnvirThread 0/0(4859-7)flag:10000997  lua: 2 CallLua:newreadcsv 38-----------------------------------
+
+[2024-12-05 16:02:28:151] DbThread(0-0)-----------------------------------
+
+[2024-12-05 16:02:28:187] BoxSellDbThread(0)-----------------------------------
+
+[2024-12-05 16:02:28:227] NewHttpPost(0-0-0)-----------------------------------
+
+
+[2024-12-05 16:04:17:016] Failure: .\Map\轩辕古城.map could not be loaded.
+[2024-12-05 16:04:17:016] Failure: .\Map\轩辕古城.map could not be loaded.
+[2024-12-05 16:04:17:222] Failure: .\Map\定军山.map could not be loaded.
+[2024-12-05 16:04:17:224] Failure: .\Map\幽灵古堡.map could not be loaded.
+[2024-12-05 16:04:17:231] Failure: .\Map\神月祭坛.map could not be loaded.
+[2024-12-05 16:04:17:231] Failure: .\Map\失乐园.map could not be loaded.
+[2024-12-05 16:04:17:251] Failure: .\Map\十二封印之地.map could not be loaded.
+[2024-12-05 16:04:17:251] Failure: .\Map\BOSS之家.map could not be loaded.
+[2024-12-05 16:04:17:252] Failure: .\Map\雪域.map could not be loaded.
+[2024-12-05 16:04:17:261] Failure: .\Map\天之龙域.map could not be loaded.
+[2024-12-05 16:04:17:261] Failure: .\Map\神龙一层.map could not be loaded.
+[2024-12-05 16:04:17:261] Failure: .\Map\失乐园.map could not be loaded.
+[2024-12-05 16:04:17:264] Failure: .\Map\BOSS之家.map could not be loaded.
+[2024-12-05 16:04:17:265] Failure: .\Map\修罗天宫.map could not be loaded.
+[2024-12-05 16:04:17:267] Failure: .\Map\仙城.map could not be loaded.
+[2024-12-05 16:04:17:269] Failure: .\Map\九幽殿.map could not be loaded.
+[2024-12-05 16:04:17:275] Failure: .\Map\雪域大陆.map could not be loaded.
+[2024-12-05 16:04:17:275] Failure: .\Map\炼狱2.map could not be loaded.
+[2024-12-05 16:04:17:278] Failure: .\Map\天之龙域.map could not be loaded.
+[2024-12-05 16:04:17:453] Failure: .\Map\D71650.map could not be loaded.
+[2024-12-05 16:04:17:453] Failure: .\Map\D71651.map could not be loaded.
+[2024-12-05 16:04:17:453] Failure: .\Map\D71652.map could not be loaded.
+[2024-12-05 16:04:17:453] Failure: .\Map\D71653.map could not be loaded.
+[2024-12-05 16:04:17:471] Failure: .\Map\M001.map could not be loaded.
+[2024-12-05 16:04:19:483] >>>>>RegenMonsterByName ThreadError :[MainDoor]-0[3-22856] 当前Thread:8948
+[2024-12-05 16:04:19:483] MainDoor Name:MainDoor Map:3 X:672 Y:330 HP:4144
+[2024-12-05 16:04:19:483] >>>>>RegenMonsterByName ThreadError :[LeftWall]-0[3-22856] 当前Thread:8948
+[2024-12-05 16:04:19:483] LeftWall Name:LeftWall Map:3 X:624 Y:278 HP:3072
+[2024-12-05 16:04:19:483] >>>>>RegenMonsterByName ThreadError :[CenterWall]-0[3-22856] 当前Thread:8948
+[2024-12-05 16:04:19:483] CenterWall Name:CenterWall Map:3 X:627 Y:278 HP:3072
+[2024-12-05 16:04:19:483] >>>>>RegenMonsterByName ThreadError :[RightWall]-0[3-22856] 当前Thread:8948
+[2024-12-05 16:04:19:483] RightWall Name:RightWall Map:3 X:634 Y:271 HP:3072
+[2024-12-05 16:04:19:845] ---------------------线程耗时监控
+[2024-12-05 16:04:20:068] Frame-----------------------------------
+
+[2024-12-05 16:04:20:099] MainRunThread(0)-----------------------------------
+
+[2024-12-05 16:04:20:119] EnvirThread 0/0(8516-0)flag:50000004  lua: 1 CallLua:newreadcsv 19-----------------------------------
+
+[2024-12-05 16:04:20:144] DbThread(0-0)-----------------------------------
+
+[2024-12-05 16:04:20:164] BoxSellDbThread(0)-----------------------------------
+
+[2024-12-05 16:04:20:191] NewHttpPost(0-0-0)-----------------------------------
+
+
+[2024-12-05 16:05:49:461] ---------------------线程耗时监控
+[2024-12-05 16:05:49:487] Frame-----------------------------------
+
+[2024-12-05 16:05:49:518] MainRunThread(0)-----------------------------------
+
+[2024-12-05 16:05:49:544] EnvirThread 0/0(2063-1)flag:10000997  lua: 1 CallLua:newreadcsv 19-----------------------------------
+
+[2024-12-05 16:05:49:572] DbThread(0-0)-----------------------------------
+
+[2024-12-05 16:05:49:603] BoxSellDbThread(0)-----------------------------------
+
+[2024-12-05 16:05:49:627] NewHttpPost(0-0-0)-----------------------------------
+
+
+[2024-12-05 16:06:16:121] Failure: .\Map\轩辕古城.map could not be loaded.
+[2024-12-05 16:06:16:121] Failure: .\Map\轩辕古城.map could not be loaded.
+[2024-12-05 16:06:16:326] Failure: .\Map\定军山.map could not be loaded.
+[2024-12-05 16:06:16:328] Failure: .\Map\幽灵古堡.map could not be loaded.
+[2024-12-05 16:06:16:334] Failure: .\Map\神月祭坛.map could not be loaded.
+[2024-12-05 16:06:16:334] Failure: .\Map\失乐园.map could not be loaded.
+[2024-12-05 16:06:16:352] Failure: .\Map\十二封印之地.map could not be loaded.
+[2024-12-05 16:06:16:353] Failure: .\Map\BOSS之家.map could not be loaded.
+[2024-12-05 16:06:16:353] Failure: .\Map\雪域.map could not be loaded.
+[2024-12-05 16:06:16:361] Failure: .\Map\天之龙域.map could not be loaded.
+[2024-12-05 16:06:16:361] Failure: .\Map\神龙一层.map could not be loaded.
+[2024-12-05 16:06:16:361] Failure: .\Map\失乐园.map could not be loaded.
+[2024-12-05 16:06:16:364] Failure: .\Map\BOSS之家.map could not be loaded.
+[2024-12-05 16:06:16:365] Failure: .\Map\修罗天宫.map could not be loaded.
+[2024-12-05 16:06:16:368] Failure: .\Map\仙城.map could not be loaded.
+[2024-12-05 16:06:16:369] Failure: .\Map\九幽殿.map could not be loaded.
+[2024-12-05 16:06:16:376] Failure: .\Map\雪域大陆.map could not be loaded.
+[2024-12-05 16:06:16:376] Failure: .\Map\炼狱2.map could not be loaded.
+[2024-12-05 16:06:16:379] Failure: .\Map\天之龙域.map could not be loaded.
+[2024-12-05 16:06:16:551] Failure: .\Map\D71650.map could not be loaded.
+[2024-12-05 16:06:16:551] Failure: .\Map\D71651.map could not be loaded.
+[2024-12-05 16:06:16:551] Failure: .\Map\D71652.map could not be loaded.
+[2024-12-05 16:06:16:551] Failure: .\Map\D71653.map could not be loaded.
+[2024-12-05 16:06:16:567] Failure: .\Map\M001.map could not be loaded.
+[2024-12-05 16:06:18:580] >>>>>RegenMonsterByName ThreadError :[MainDoor]-0[3-24068] 当前Thread:27600
+[2024-12-05 16:06:18:580] MainDoor Name:MainDoor Map:3 X:672 Y:330 HP:4144
+[2024-12-05 16:06:18:580] >>>>>RegenMonsterByName ThreadError :[LeftWall]-0[3-24068] 当前Thread:27600
+[2024-12-05 16:06:18:580] LeftWall Name:LeftWall Map:3 X:624 Y:278 HP:3072
+[2024-12-05 16:06:18:580] >>>>>RegenMonsterByName ThreadError :[CenterWall]-0[3-24068] 当前Thread:27600
+[2024-12-05 16:06:18:580] CenterWall Name:CenterWall Map:3 X:627 Y:278 HP:3072
+[2024-12-05 16:06:18:580] >>>>>RegenMonsterByName ThreadError :[RightWall]-0[3-24068] 当前Thread:27600
+[2024-12-05 16:06:18:580] RightWall Name:RightWall Map:3 X:634 Y:271 HP:3072
+[2024-12-05 16:06:18:891] ---------------------线程耗时监控
+[2024-12-05 16:06:19:130] Frame-----------------------------------
+
+[2024-12-05 16:06:19:172] MainRunThread(0)-----------------------------------
+
+[2024-12-05 16:06:19:212] EnvirThread 0/0(7516-0)flag:50000004  lua: 1 CallLua:newreadcsv 19-----------------------------------
+
+[2024-12-05 16:06:19:235] DbThread(0-0)-----------------------------------
+
+[2024-12-05 16:06:19:258] BoxSellDbThread(0)-----------------------------------
+
+[2024-12-05 16:06:19:281] NewHttpPost(16-0-0)-----------------------------------
+
+
+[2024-12-05 16:08:31:572] 执行SQL异常 TDbThread.ExecSql,Sql:MERGE INTO dbo.TBL_VAR A
+USING ( SELECT 'system' AS FLD_USERID,'ITEMNUMBER' AS FLD_VAR_NAME,0 AS FLD_TYPE,'39416' AS FLD_VAR_VALUE,'2024-12-05 16:08:29.857' AS tUpdateTime,0 AS FLD_JOINTYPE 
+) B
+ON (A.FLD_USERID=B.FLD_USERID AND A.FLD_VAR_NAME=B.FLD_VAR_NAME )
+WHEN MATCHED THEN
+	UPDATE SET A.FLD_VAR_VALUE=B.FLD_VAR_VALUE,A.tUpdateTime=B.tUpdateTime,A.FLD_JOINTYPE=B.FLD_JOINTYPE
+WHEN NOT MATCHED THEN
+	INSERT(FLD_USERID,FLD_VAR_NAME,FLD_TYPE,FLD_VAR_VALUE,tUpdateTime,FLD_JOINTYPE)
+	VALUES(B.FLD_USERID,B.FLD_VAR_NAME,B.FLD_TYPE,B.FLD_VAR_VALUE,B.tUpdateTime,B.FLD_JOINTYPE);  Except：[FireDAC][Phys][ODBC][Microsoft][ODBC SQL Server Driver]通讯链接失败[0000000001258281] JclDebug._ZN8Jcldebug17TJclStackInfoListC3EbiPvbS1_S1_ (Line 5509, "JclDebug.pas" + 34)
+[0000000001257AD2] JclDebug._ZN8Jcldebug18JclCreateStackListEbiPvbS0_ (Line 5351, "JclDebug.pas" + 1)
+[00000000012579B2] JclDebug._ZN8Jcldebug21DoExceptionStackTraceEPN6System7TObjectEPvbS3_ (Line 5292, "JclDebug.pas" + 20)
+[000000000125AAA5] JclDebug._ZN8Jcldebug14DoExceptNotifyEPN6System7TObjectEPvbS3_ (Line 6741, "JclDebug.pas" + 7)
+[0000000001249702] JclHookExcept._ZN13Jclhookexcept13TNotifierItem8DoNotifyEPN6System7TObjectEPvbS4_ (Line 272, "JclHookExcept.pas" + 5)
+[000000000124996B] JclHookExcept._ZN13Jclhookexcept14DoExceptNotifyEPN6System7TObjectEPvbS3_ (Line 339, "JclHookExcept.pas" + 13)
+[0000000001249AD0] JclHookExcept._ZN13Jclhookexcept20HookedRaiseExceptionEjjjPNS_19TExceptionArgumentsE (Line 381, "JclHookExcept.pas" + 14)
+[00000000002823B3] System._ZN6System14_RaiseAtExceptEPNS_7TObjectEPv (Line 22402, "System.pas" + 32)
+[0000000000282418] System._ZN6System11_RaiseAgainEv (Line 23481, "System.pas" + 9)
+[00000000008B7E84] FireDAC.Comp.Client._ZN7Firedac4Comp6Client16TFDCustomCommand15InternalExecuteEiib (Line 6853, "FireDAC.Comp.Client.pas" + 16)
+[00000000008B828F] FireDAC.Comp.Client._ZN7Firedac4Comp6Client16TFDCustomCommand7ExecuteEiib (Line 6871, "FireDAC.Comp.Client.pas" + 4)
+[00000000008C1D25] FireDAC.Comp.Client._ZN7Firedac4Comp6Client17TFDAdaptedDataSet15DoExecuteSourceEii (Line 10127, "FireDAC.Comp.Client.pas" + 5)
+[0000000000870701] FireDAC.Comp.DataSet._ZN7Firedac4Comp7Dataset10TFDDataSet7ExecuteEii (Line 3189, "FireDAC.Comp.DataSet.pas" + 9)
+[00000000008C5089] FireDAC.Comp.Client._ZN7Firedac4Comp6Client14TFDCustomQuery7ExecSQLEv (Line 11583, "FireDAC.Comp.Client.pas" + 2)
+[0000000000E980D6] uThread_Db._ZN10Uthread_db9TDbThread7ExecSqlEN6System13UnicodeStringEPNS1_7TVarRecEi (Line 3935, "uThread_Db.pas" + 11)
+[0000000000E97C8F] uThread_Db._ZN10Uthread_db9TDbThread7ExecSqlEN6System13UnicodeStringE (Line 3861, "uThread_Db.pas" + 1)
+[0000000000E8EE0A] uThread_Db._ZN10Uthread_db9TDbThread14UpdateBatchVarEv (Line 2687, "uThread_Db.pas" + 29)
+[0000000000E7F016] uThread_Db._ZN10Uthread_db9TDbThread5OnRunEv (Line 458, "uThread_Db.pas" + 66)
+[00000000006A21D6] uThreadPools._ZN12Uthreadpools11TThreadPool10ThreadProcEv (Line 174, "uThreadPools.pas" + 18)
+[00000000006A1D8F] uThreadPools._ZN12Uthreadpools9TMyThread7ExecuteEv (Line 74, "uThreadPools.pas" + 4)
+[00000000003A2963] System.Classes._ZN6System7Classes10ThreadProcEPNS0_7TThreadE (Line 15845, "System.Classes.pas" + 18)
+[0000000000282F8D] System._ZN6System13ThreadWrapperEPv (Line 25726, "System.pas" + 9)
+[00007FFD41647374] BaseThreadInitThunk
+[00007FFD42D7CC91] RtlUserThreadStart
+
+[2024-12-05 16:08:34:540] [Exception]TMainRunThread.LoadKuaFuConfig Error  Except：[FireDAC][Phys][ODBC][Microsoft][ODBC SQL Server Driver][DBNETLIB]ConnectionRead (recv()).[0000000001258281] JclDebug._ZN8Jcldebug17TJclStackInfoListC3EbiPvbS1_S1_ (Line 5509, "JclDebug.pas" + 34)
+[0000000001257AD2] JclDebug._ZN8Jcldebug18JclCreateStackListEbiPvbS0_ (Line 5351, "JclDebug.pas" + 1)
+[00000000012579B2] JclDebug._ZN8Jcldebug21DoExceptionStackTraceEPN6System7TObjectEPvbS3_ (Line 5292, "JclDebug.pas" + 20)
+[000000000125AAA5] JclDebug._ZN8Jcldebug14DoExceptNotifyEPN6System7TObjectEPvbS3_ (Line 6741, "JclDebug.pas" + 7)
+[0000000001249702] JclHookExcept._ZN13Jclhookexcept13TNotifierItem8DoNotifyEPN6System7TObjectEPvbS4_ (Line 272, "JclHookExcept.pas" + 5)
+[000000000124996B] JclHookExcept._ZN13Jclhookexcept14DoExceptNotifyEPN6System7TObjectEPvbS3_ (Line 339, "JclHookExcept.pas" + 13)
+[0000000001249AD0] JclHookExcept._ZN13Jclhookexcept20HookedRaiseExceptionEjjjPNS_19TExceptionArgumentsE (Line 381, "JclHookExcept.pas" + 14)
+[00000000002823B3] System._ZN6System14_RaiseAtExceptEPNS_7TObjectEPv (Line 22402, "System.pas" + 32)
+[0000000000282418] System._ZN6System11_RaiseAgainEv (Line 23481, "System.pas" + 9)
+[00000000008C484F] FireDAC.Comp.Client._ZN7Firedac4Comp6Client15TFDRdbmsDataSet10OpenCursorEb (Line 11214, "FireDAC.Comp.Client.pas" + 9)
+[0000000000650354] Data.DB._ZN4Data2Db8TDataSet9SetActiveEb (Line 12665, "Data.DB.pas" + 14)
+[000000000086B3BF] FireDAC.Comp.DataSet._ZN7Firedac4Comp7Dataset10TFDDataSet9SetActiveEb (Line 1615, "FireDAC.Comp.DataSet.pas" + 8)
+[00000000006500F6] Data.DB._ZN4Data2Db8TDataSet4OpenEv (Line 12620, "Data.DB.pas" + 2)
+[000000000156EFFF] svMain._ZN6Svmain14TMainRunThread15LoadKuaFuConfigEv (Line 3408, "svMain.pas" + 9)
+[000000000156F868] svMain._ZN6Svmain14TMainRunThread15CheckKuaFuStateEv (Line 3476, "svMain.pas" + 3)
+[000000000156D31E] svMain._ZN6Svmain14TMainRunThread5OnRunEv (Line 2798, "svMain.pas" + 155)
+[00000000006A21D6] uThreadPools._ZN12Uthreadpools11TThreadPool10ThreadProcEv (Line 174, "uThreadPools.pas" + 18)
+[00000000006A1D8F] uThreadPools._ZN12Uthreadpools9TMyThread7ExecuteEv (Line 74, "uThreadPools.pas" + 4)
+[00000000003A2963] System.Classes._ZN6System7Classes10ThreadProcEPNS0_7TThreadE (Line 15845, "System.Classes.pas" + 18)
+[0000000000282F8D] System._ZN6System13ThreadWrapperEPv (Line 25726, "System.pas" + 9)
+[00007FFD41647374] BaseThreadInitThunk
+[00007FFD42D7CC91] RtlUserThreadStart
+
+
+[2024-12-05 16:09:52:078] Failure: .\Map\轩辕古城.map could not be loaded.
+[2024-12-05 16:09:52:078] Failure: .\Map\轩辕古城.map could not be loaded.
+[2024-12-05 16:09:52:290] Failure: .\Map\定军山.map could not be loaded.
+[2024-12-05 16:09:52:294] Failure: .\Map\幽灵古堡.map could not be loaded.
+[2024-12-05 16:09:52:304] Failure: .\Map\神月祭坛.map could not be loaded.
+[2024-12-05 16:09:52:305] Failure: .\Map\失乐园.map could not be loaded.
+[2024-12-05 16:09:52:326] Failure: .\Map\十二封印之地.map could not be loaded.
+[2024-12-05 16:09:52:326] Failure: .\Map\BOSS之家.map could not be loaded.
+[2024-12-05 16:09:52:327] Failure: .\Map\雪域.map could not be loaded.
+[2024-12-05 16:09:52:337] Failure: .\Map\天之龙域.map could not be loaded.
+[2024-12-05 16:09:52:337] Failure: .\Map\神龙一层.map could not be loaded.
+[2024-12-05 16:09:52:337] Failure: .\Map\失乐园.map could not be loaded.
+[2024-12-05 16:09:52:340] Failure: .\Map\BOSS之家.map could not be loaded.
+[2024-12-05 16:09:52:341] Failure: .\Map\修罗天宫.map could not be loaded.
+[2024-12-05 16:09:52:344] Failure: .\Map\仙城.map could not be loaded.
+[2024-12-05 16:09:52:345] Failure: .\Map\九幽殿.map could not be loaded.
+[2024-12-05 16:09:52:351] Failure: .\Map\雪域大陆.map could not be loaded.
+[2024-12-05 16:09:52:351] Failure: .\Map\炼狱2.map could not be loaded.
+[2024-12-05 16:09:52:355] Failure: .\Map\天之龙域.map could not be loaded.
+[2024-12-05 16:09:52:535] Failure: .\Map\D71650.map could not be loaded.
+[2024-12-05 16:09:52:535] Failure: .\Map\D71651.map could not be loaded.
+[2024-12-05 16:09:52:535] Failure: .\Map\D71652.map could not be loaded.
+[2024-12-05 16:09:52:535] Failure: .\Map\D71653.map could not be loaded.
+[2024-12-05 16:09:52:551] Failure: .\Map\M001.map could not be loaded.
+[2024-12-05 16:09:55:606] >>>>>RegenMonsterByName ThreadError :[MainDoor]-0[3-20004] 当前Thread:1836
+[2024-12-05 16:09:55:606] MainDoor Name:MainDoor Map:3 X:672 Y:330 HP:4144
+[2024-12-05 16:09:55:606] >>>>>RegenMonsterByName ThreadError :[LeftWall]-0[3-20004] 当前Thread:1836
+[2024-12-05 16:09:55:606] LeftWall Name:LeftWall Map:3 X:624 Y:278 HP:3072
+[2024-12-05 16:09:55:606] >>>>>RegenMonsterByName ThreadError :[CenterWall]-0[3-20004] 当前Thread:1836
+[2024-12-05 16:09:55:606] CenterWall Name:CenterWall Map:3 X:627 Y:278 HP:3072
+[2024-12-05 16:09:55:606] >>>>>RegenMonsterByName ThreadError :[RightWall]-0[3-20004] 当前Thread:1836
+[2024-12-05 16:09:55:606] RightWall Name:RightWall Map:3 X:634 Y:271 HP:3072
+[2024-12-05 16:09:55:961] ---------------------线程耗时监控
+[2024-12-05 16:09:56:042] Frame-----------------------------------
+
+[2024-12-05 16:09:56:204] MainRunThread(16)-----------------------------------
+
+[2024-12-05 16:09:56:227] EnvirThread 0/0(8562-0)flag:50000004  lua: 1 CallLua:newreadcsv 19-----------------------------------
+
+[2024-12-05 16:09:56:255] DbThread(0-0)-----------------------------------
+
+[2024-12-05 16:09:56:288] BoxSellDbThread(0)-----------------------------------
+
+[2024-12-05 16:09:56:314] NewHttpPost(0-0-0)-----------------------------------
+
+
+[2024-12-05 16:12:26:743] 执行SQL异常 TDbThread.ExecSql,Sql:MERGE INTO dbo.TBL_VAR A
+USING ( SELECT 'system' AS FLD_USERID,'ITEMNUMBER' AS FLD_VAR_NAME,0 AS FLD_TYPE,'39419' AS FLD_VAR_VALUE,'2024-12-05 16:12:25.837' AS tUpdateTime,0 AS FLD_JOINTYPE 
+) B
+ON (A.FLD_USERID=B.FLD_USERID AND A.FLD_VAR_NAME=B.FLD_VAR_NAME )
+WHEN MATCHED THEN
+	UPDATE SET A.FLD_VAR_VALUE=B.FLD_VAR_VALUE,A.tUpdateTime=B.tUpdateTime,A.FLD_JOINTYPE=B.FLD_JOINTYPE
+WHEN NOT MATCHED THEN
+	INSERT(FLD_USERID,FLD_VAR_NAME,FLD_TYPE,FLD_VAR_VALUE,tUpdateTime,FLD_JOINTYPE)
+	VALUES(B.FLD_USERID,B.FLD_VAR_NAME,B.FLD_TYPE,B.FLD_VAR_VALUE,B.tUpdateTime,B.FLD_JOINTYPE);  Except：[FireDAC][Phys][ODBC][Microsoft][ODBC SQL Server Driver]通讯链接失败[0000000001258281] JclDebug._ZN8Jcldebug17TJclStackInfoListC3EbiPvbS1_S1_ (Line 5509, "JclDebug.pas" + 34)
+[0000000001257AD2] JclDebug._ZN8Jcldebug18JclCreateStackListEbiPvbS0_ (Line 5351, "JclDebug.pas" + 1)
+[00000000012579B2] JclDebug._ZN8Jcldebug21DoExceptionStackTraceEPN6System7TObjectEPvbS3_ (Line 5292, "JclDebug.pas" + 20)
+[000000000125AAA5] JclDebug._ZN8Jcldebug14DoExceptNotifyEPN6System7TObjectEPvbS3_ (Line 6741, "JclDebug.pas" + 7)
+[0000000001249702] JclHookExcept._ZN13Jclhookexcept13TNotifierItem8DoNotifyEPN6System7TObjectEPvbS4_ (Line 272, "JclHookExcept.pas" + 5)
+[000000000124996B] JclHookExcept._ZN13Jclhookexcept14DoExceptNotifyEPN6System7TObjectEPvbS3_ (Line 339, "JclHookExcept.pas" + 13)
+[0000000001249AD0] JclHookExcept._ZN13Jclhookexcept20HookedRaiseExceptionEjjjPNS_19TExceptionArgumentsE (Line 381, "JclHookExcept.pas" + 14)
+[00000000002823B3] System._ZN6System14_RaiseAtExceptEPNS_7TObjectEPv (Line 22402, "System.pas" + 32)
+[0000000000282418] System._ZN6System11_RaiseAgainEv (Line 23481, "System.pas" + 9)
+[00000000008B7E84] FireDAC.Comp.Client._ZN7Firedac4Comp6Client16TFDCustomCommand15InternalExecuteEiib (Line 6853, "FireDAC.Comp.Client.pas" + 16)
+[00000000008B828F] FireDAC.Comp.Client._ZN7Firedac4Comp6Client16TFDCustomCommand7ExecuteEiib (Line 6871, "FireDAC.Comp.Client.pas" + 4)
+[00000000008C1D25] FireDAC.Comp.Client._ZN7Firedac4Comp6Client17TFDAdaptedDataSet15DoExecuteSourceEii (Line 10127, "FireDAC.Comp.Client.pas" + 5)
+[0000000000870701] FireDAC.Comp.DataSet._ZN7Firedac4Comp7Dataset10TFDDataSet7ExecuteEii (Line 3189, "FireDAC.Comp.DataSet.pas" + 9)
+[00000000008C5089] FireDAC.Comp.Client._ZN7Firedac4Comp6Client14TFDCustomQuery7ExecSQLEv (Line 11583, "FireDAC.Comp.Client.pas" + 2)
+[0000000000E980D6] uThread_Db._ZN10Uthread_db9TDbThread7ExecSqlEN6System13UnicodeStringEPNS1_7TVarRecEi (Line 3935, "uThread_Db.pas" + 11)
+[0000000000E97C8F] uThread_Db._ZN10Uthread_db9TDbThread7ExecSqlEN6System13UnicodeStringE (Line 3861, "uThread_Db.pas" + 1)
+[0000000000E8EE0A] uThread_Db._ZN10Uthread_db9TDbThread14UpdateBatchVarEv (Line 2687, "uThread_Db.pas" + 29)
+[0000000000E7F016] uThread_Db._ZN10Uthread_db9TDbThread5OnRunEv (Line 458, "uThread_Db.pas" + 66)
+[00000000006A21D6] uThreadPools._ZN12Uthreadpools11TThreadPool10ThreadProcEv (Line 174, "uThreadPools.pas" + 18)
+[00000000006A1D8F] uThreadPools._ZN12Uthreadpools9TMyThread7ExecuteEv (Line 74, "uThreadPools.pas" + 4)
+[00000000003A2963] System.Classes._ZN6System7Classes10ThreadProcEPNS0_7TThreadE (Line 15845, "System.Classes.pas" + 18)
+[0000000000282F8D] System._ZN6System13ThreadWrapperEPv (Line 25726, "System.pas" + 9)
+[00007FFD41647374] BaseThreadInitThunk
+[00007FFD42D7CC91] RtlUserThreadStart
+
+
+[2024-12-05 16:12:30:477] [Exception]TMainRunThread.LoadKuaFuConfig Error  Except：[FireDAC][Phys][ODBC][Microsoft][ODBC SQL Server Driver][DBNETLIB]ConnectionRead (recv()).[0000000001258281] JclDebug._ZN8Jcldebug17TJclStackInfoListC3EbiPvbS1_S1_ (Line 5509, "JclDebug.pas" + 34)
+[0000000001257AD2] JclDebug._ZN8Jcldebug18JclCreateStackListEbiPvbS0_ (Line 5351, "JclDebug.pas" + 1)
+[00000000012579B2] JclDebug._ZN8Jcldebug21DoExceptionStackTraceEPN6System7TObjectEPvbS3_ (Line 5292, "JclDebug.pas" + 20)
+[000000000125AAA5] JclDebug._ZN8Jcldebug14DoExceptNotifyEPN6System7TObjectEPvbS3_ (Line 6741, "JclDebug.pas" + 7)
+[0000000001249702] JclHookExcept._ZN13Jclhookexcept13TNotifierItem8DoNotifyEPN6System7TObjectEPvbS4_ (Line 272, "JclHookExcept.pas" + 5)
+[000000000124996B] JclHookExcept._ZN13Jclhookexcept14DoExceptNotifyEPN6System7TObjectEPvbS3_ (Line 339, "JclHookExcept.pas" + 13)
+[0000000001249AD0] JclHookExcept._ZN13Jclhookexcept20HookedRaiseExceptionEjjjPNS_19TExceptionArgumentsE (Line 381, "JclHookExcept.pas" + 14)
+[00000000002823B3] System._ZN6System14_RaiseAtExceptEPNS_7TObjectEPv (Line 22402, "System.pas" + 32)
+[0000000000282418] System._ZN6System11_RaiseAgainEv (Line 23481, "System.pas" + 9)
+[00000000008C484F] FireDAC.Comp.Client._ZN7Firedac4Comp6Client15TFDRdbmsDataSet10OpenCursorEb (Line 11214, "FireDAC.Comp.Client.pas" + 9)
+[0000000000650354] Data.DB._ZN4Data2Db8TDataSet9SetActiveEb (Line 12665, "Data.DB.pas" + 14)
+[000000000086B3BF] FireDAC.Comp.DataSet._ZN7Firedac4Comp7Dataset10TFDDataSet9SetActiveEb (Line 1615, "FireDAC.Comp.DataSet.pas" + 8)
+[00000000006500F6] Data.DB._ZN4Data2Db8TDataSet4OpenEv (Line 12620, "Data.DB.pas" + 2)
+[000000000156EFFF] svMain._ZN6Svmain14TMainRunThread15LoadKuaFuConfigEv (Line 3408, "svMain.pas" + 9)
+[000000000156F868] svMain._ZN6Svmain14TMainRunThread15CheckKuaFuStateEv (Line 3476, "svMain.pas" + 3)
+[000000000156D31E] svMain._ZN6Svmain14TMainRunThread5OnRunEv (Line 2798, "svMain.pas" + 155)
+[00000000006A21D6] uThreadPools._ZN12Uthreadpools11TThreadPool10ThreadProcEv (Line 174, "uThreadPools.pas" + 18)
+[00000000006A1D8F] uThreadPools._ZN12Uthreadpools9TMyThread7ExecuteEv (Line 74, "uThreadPools.pas" + 4)
+[00000000003A2963] System.Classes._ZN6System7Classes10ThreadProcEPNS0_7TThreadE (Line 15845, "System.Classes.pas" + 18)
+[0000000000282F8D] System._ZN6System13ThreadWrapperEPv (Line 25726, "System.pas" + 9)
+[00007FFD41647374] BaseThreadInitThunk
+[00007FFD42D7CC91] RtlUserThreadStart
+
+
+[2024-12-05 16:23:30:478] [Exception]TMainRunThread.LoadKuaFuConfig Error  Except：[FireDAC][Phys][ODBC][Microsoft][ODBC SQL Server Driver][DBNETLIB]ConnectionRead (recv()).[0000000001258281] JclDebug._ZN8Jcldebug17TJclStackInfoListC3EbiPvbS1_S1_ (Line 5509, "JclDebug.pas" + 34)
+[0000000001257AD2] JclDebug._ZN8Jcldebug18JclCreateStackListEbiPvbS0_ (Line 5351, "JclDebug.pas" + 1)
+[00000000012579B2] JclDebug._ZN8Jcldebug21DoExceptionStackTraceEPN6System7TObjectEPvbS3_ (Line 5292, "JclDebug.pas" + 20)
+[000000000125AAA5] JclDebug._ZN8Jcldebug14DoExceptNotifyEPN6System7TObjectEPvbS3_ (Line 6741, "JclDebug.pas" + 7)
+[0000000001249702] JclHookExcept._ZN13Jclhookexcept13TNotifierItem8DoNotifyEPN6System7TObjectEPvbS4_ (Line 272, "JclHookExcept.pas" + 5)
+[000000000124996B] JclHookExcept._ZN13Jclhookexcept14DoExceptNotifyEPN6System7TObjectEPvbS3_ (Line 339, "JclHookExcept.pas" + 13)
+[0000000001249AD0] JclHookExcept._ZN13Jclhookexcept20HookedRaiseExceptionEjjjPNS_19TExceptionArgumentsE (Line 381, "JclHookExcept.pas" + 14)
+[00000000002823B3] System._ZN6System14_RaiseAtExceptEPNS_7TObjectEPv (Line 22402, "System.pas" + 32)
+[0000000000282418] System._ZN6System11_RaiseAgainEv (Line 23481, "System.pas" + 9)
+[00000000008C484F] FireDAC.Comp.Client._ZN7Firedac4Comp6Client15TFDRdbmsDataSet10OpenCursorEb (Line 11214, "FireDAC.Comp.Client.pas" + 9)
+[0000000000650354] Data.DB._ZN4Data2Db8TDataSet9SetActiveEb (Line 12665, "Data.DB.pas" + 14)
+[000000000086B3BF] FireDAC.Comp.DataSet._ZN7Firedac4Comp7Dataset10TFDDataSet9SetActiveEb (Line 1615, "FireDAC.Comp.DataSet.pas" + 8)
+[00000000006500F6] Data.DB._ZN4Data2Db8TDataSet4OpenEv (Line 12620, "Data.DB.pas" + 2)
+[000000000156EFFF] svMain._ZN6Svmain14TMainRunThread15LoadKuaFuConfigEv (Line 3408, "svMain.pas" + 9)
+[000000000156F868] svMain._ZN6Svmain14TMainRunThread15CheckKuaFuStateEv (Line 3476, "svMain.pas" + 3)
+[000000000156D31E] svMain._ZN6Svmain14TMainRunThread5OnRunEv (Line 2798, "svMain.pas" + 155)
+[00000000006A21D6] uThreadPools._ZN12Uthreadpools11TThreadPool10ThreadProcEv (Line 174, "uThreadPools.pas" + 18)
+[00000000006A1D8F] uThreadPools._ZN12Uthreadpools9TMyThread7ExecuteEv (Line 74, "uThreadPools.pas" + 4)
+[00000000003A2963] System.Classes._ZN6System7Classes10ThreadProcEPNS0_7TThreadE (Line 15845, "System.Classes.pas" + 18)
+[0000000000282F8D] System._ZN6System13ThreadWrapperEPv (Line 25726, "System.pas" + 9)
+[00007FFD41647374] BaseThreadInitThunk
+[00007FFD42D7CC91] RtlUserThreadStart
+
+
+[2024-12-05 16:38:33:071] ---------------------线程耗时监控
+[2024-12-05 16:38:33:104] Frame-----------------------------------
+
+[2024-12-05 16:38:33:136] MainRunThread(0)-----------------------------------
+
+[2024-12-05 16:38:33:162] EnvirThread 0/0(2079-3)flag:10000997  lua: 1 CallLua:newreadcsv 19-----------------------------------
+
+[2024-12-05 16:38:33:192] DbThread(0-0)-----------------------------------
+
+[2024-12-05 16:38:33:227] BoxSellDbThread(0)-----------------------------------
+
+[2024-12-05 16:38:33:264] NewHttpPost(15-0-0)-----------------------------------
+
+
+[2024-12-05 16:38:54:929] ---------------------线程耗时监控
+[2024-12-05 16:38:54:963] Frame-----------------------------------
+
+[2024-12-05 16:38:54:993] MainRunThread(15)-----------------------------------
+
+[2024-12-05 16:38:55:025] DbThread(0-0)-----------------------------------
+
+[2024-12-05 16:38:55:056] BoxSellDbThread(0)-----------------------------------
+
+[2024-12-05 16:38:55:081] NewHttpPost(0-0-0)-----------------------------------
+
+
+[2024-12-05 16:39:27:711] ---------------------线程耗时监控
+[2024-12-05 16:39:27:742] Frame-----------------------------------
+
+[2024-12-05 16:39:27:772] MainRunThread(16)-----------------------------------
+
+[2024-12-05 16:39:27:804] DbThread(0-0)-----------------------------------
+
+[2024-12-05 16:39:27:833] BoxSellDbThread(15)-----------------------------------
+
+[2024-12-05 16:39:27:864] NewHttpPost(0-0-0)-----------------------------------
+
+
+[2024-12-05 16:39:33:648] ---------------------线程耗时监控
+[2024-12-05 16:39:33:677] Frame-----------------------------------
+
+[2024-12-05 16:39:33:708] MainRunThread(0)-----------------------------------
+
+[2024-12-05 16:39:33:739] DbThread(0-0)-----------------------------------
+
+[2024-12-05 16:39:33:775] BoxSellDbThread(0)-----------------------------------
+
+[2024-12-05 16:39:33:807] NewHttpPost(0-0-0)-----------------------------------
+
+
+[2024-12-05 17:26:07:128] PayList Except：[DBNETLIB][ConnectionWrite (send()).]一般性网络错误。请检查网络文档。[0000000001258281] JclDebug._ZN8Jcldebug17TJclStackInfoListC3EbiPvbS1_S1_ (Line 5509, "JclDebug.pas" + 34)
+[0000000001257AD2] JclDebug._ZN8Jcldebug18JclCreateStackListEbiPvbS0_ (Line 5351, "JclDebug.pas" + 1)
+[00000000012579B2] JclDebug._ZN8Jcldebug21DoExceptionStackTraceEPN6System7TObjectEPvbS3_ (Line 5292, "JclDebug.pas" + 20)
+[000000000125AAA5] JclDebug._ZN8Jcldebug14DoExceptNotifyEPN6System7TObjectEPvbS3_ (Line 6741, "JclDebug.pas" + 7)
+[0000000001249702] JclHookExcept._ZN13Jclhookexcept13TNotifierItem8DoNotifyEPN6System7TObjectEPvbS4_ (Line 272, "JclHookExcept.pas" + 5)
+[000000000124996B] JclHookExcept._ZN13Jclhookexcept14DoExceptNotifyEPN6System7TObjectEPvbS3_ (Line 339, "JclHookExcept.pas" + 13)
+[0000000001249AD0] JclHookExcept._ZN13Jclhookexcept20HookedRaiseExceptionEjjjPNS_19TExceptionArgumentsE (Line 381, "JclHookExcept.pas" + 14)
+[00000000002823B3] System._ZN6System14_RaiseAtExceptEPNS_7TObjectEPv (Line 22402, "System.pas" + 32)
+[0000000000461704] System.Win.ComObj._ZN6System3Win6Comobj13SafeCallErrorEiPv (Line 1776, "System.Win.ComObj.pas" + 3)
+[000000000028CEB5] System._ZN6System16_CheckAutoResultEl (Line 40249, "System.pas" + 5)
+[000000000067CBFF] Data.Win.ADODB._ZN4Data3Win5Adodb17TCustomADODataSet10OpenCursorEb (Line 3574, "Data.Win.ADODB.pas" + 5)
+[0000000000650354] Data.DB._ZN4Data2Db8TDataSet9SetActiveEb (Line 12665, "Data.DB.pas" + 14)
+[00000000006500F6] Data.DB._ZN4Data2Db8TDataSet4OpenEv (Line 12620, "Data.DB.pas" + 2)
+[0000000000C18C0A] uChargeThread._ZN13Uchargethread13TChargeThread9PayListExEN6System13UnicodeStringE (Line 401, "uChargeThread.pas" + 18)
+[0000000000C178AA] uChargeThread._ZN13Uchargethread13TChargeThread5OnMsgEjyPv (Line 209, "uChargeThread.pas" + 18)
+[00000000006A2228] uThreadPools._ZN12Uthreadpools11TThreadPool10ThreadProcEv (Line 186, "uThreadPools.pas" + 30)
+[00000000006A1D8F] uThreadPools._ZN12Uthreadpools9TMyThread7ExecuteEv (Line 74, "uThreadPools.pas" + 4)
+[00000000003A2963] System.Classes._ZN6System7Classes10ThreadProcEPNS0_7TThreadE (Line 15845, "System.Classes.pas" + 18)
+[0000000000282F8D] System._ZN6System13ThreadWrapperEPv (Line 25726, "System.pas" + 9)
+[00007FFD41647374] BaseThreadInitThunk
+[00007FFD42D7CC91] RtlUserThreadStart
+
+
+[2024-12-05 17:29:57:117] ---------------------线程耗时监控
+[2024-12-05 17:29:57:146] Frame-----------------------------------
+
+[2024-12-05 17:29:57:179] MainRunThread(0)-----------------------------------
+
+[2024-12-05 17:29:57:204] EnvirThread 0/0(2063-2)flag:10000997  lua: 1 CallLua:newreadcsv 19-----------------------------------
+
+[2024-12-05 17:29:57:233] DbThread(0-0)-----------------------------------
+
+[2024-12-05 17:29:57:264] BoxSellDbThread(0)-----------------------------------
+
+[2024-12-05 17:29:57:293] NewHttpPost(0-0-0)-----------------------------------
+
+
+[2024-12-05 17:30:07:071] ---------------------线程耗时监控
+[2024-12-05 17:30:07:104] Frame-----------------------------------
+
+[2024-12-05 17:30:07:139] MainRunThread(0)-----------------------------------
+
+[2024-12-05 17:30:07:170] EnvirThread 0/0(2079-2)flag:10000997  lua: 1 CallLua:newreadcsv 19-----------------------------------
+
+[2024-12-05 17:30:07:200] DbThread(0-0)-----------------------------------
+
+[2024-12-05 17:30:07:228] BoxSellDbThread(0)-----------------------------------
+
+[2024-12-05 17:30:07:256] NewHttpPost(0-0-0)-----------------------------------
+
+

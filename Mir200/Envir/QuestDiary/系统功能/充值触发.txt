@@ -1,0 +1,50 @@
+[@充值触发_QF]
+{
+#IF
+#ACT
+MONEY 游戏真充 + <$STR(M0)>
+
+#IF
+large <$HFCOUNT> 0
+#ACT
+MONEY 合区充值 + <$STR(M0)>
+
+#IF
+equal N0 20
+#ACT
+goto @货币充值_QF
+
+#IF
+equal N0 21
+#ACT
+goto @直购充值_QF
+
+[@货币充值_QF]
+#IF
+LARGE M0 0
+#ACT
+MONEY 灵符 + <$STR(M0)>0
+
+
+[@直购充值_QF]
+#IF
+equal <$GETSTRVALUE(T4,充值项目)> 唯一特权58
+equal M0 58
+#ACT
+ADDVARCACHE 充值项目
+MONEY 直购充值 - 58
+setNpcMsg 直购充值
+set [5] 1
+MAilGIVE 元宝 500000 0#1#4#5#8 ;禁止丢弃
+CONFERTITLE 唯一特权
+MAilGIVE 免费周卡 1 0#1#4#5#8 ;禁止丢弃
+sendmsg 9 <font color='#FFFF00'>[系统提示]：</font><font color='#00FFFF'>购买成功，物品已通过邮件发送</font>
+SendMail 2 唯一特权 您购买的特权礼包已送达，请提取
+BREAK
+
+
+#IF
+#act
+SendMail 1 充值错误 你好[<$USERNAME>],你有<$STR(M0)>元直购充值无法完成,资金已保留(当前<$MONEY(直购充值)>),你可以再次点击购买商品完成购买,有问题请联系客服! 
+
+}

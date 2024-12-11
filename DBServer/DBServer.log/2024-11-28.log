@@ -1,0 +1,25 @@
+09:45:05:276 TIocpCrossSocket.ProcessIoEvent.GetQueuedCompletionStatus : System Error.  Code: 64(0040), 指定的网络名不再可用。
+09:45:06:753 TIocpCrossSocket.ProcessIoEvent.GetQueuedCompletionStatus : System Error.  Code: 64(0040), 指定的网络名不再可用。
+13:27:11:048 TIocpCrossSocket.ProcessIoEvent.GetQueuedCompletionStatus : System Error.  Code: 64(0040), 指定的网络名不再可用。
+13:27:13:188 TIocpCrossSocket.ProcessIoEvent.GetQueuedCompletionStatus : System Error.  Code: 64(0040), 指定的网络名不再可用。
+14:02:43:948 TIocpCrossSocket.ProcessIoEvent.GetQueuedCompletionStatus : System Error.  Code: 64(0040), 指定的网络名不再可用。
+14:02:46:214 TIocpCrossSocket.ProcessIoEvent.GetQueuedCompletionStatus : System Error.  Code: 64(0040), 指定的网络名不再可用。
+14:02:47:644 TIocpCrossSocket.ProcessIoEvent.GetQueuedCompletionStatus : System Error.  Code: 64(0040), 指定的网络名不再可用。
+14:02:58:411 TIocpCrossSocket.ProcessIoEvent.GetQueuedCompletionStatus : System Error.  Code: 995(03E3), 由于线程退出或应用程序请求，已中止 I/O 操作。
+14:02:58:412 TIocpCrossSocket._NewAccept.AcceptEx : System Error.  Code: 10038(2736), 在一个非套接字上尝试了一个操作。
+14:02:58:411 TIocpCrossSocket.ProcessIoEvent.GetQueuedCompletionStatus : System Error.  Code: 995(03E3), 由于线程退出或应用程序请求，已中止 I/O 操作。
+14:02:58:426 TIocpCrossSocket.ProcessIoEvent.GetQueuedCompletionStatus : System Error.  Code: 995(03E3), 由于线程退出或应用程序请求，已中止 I/O 操作。
+14:02:58:426 TIocpCrossSocket._NewAccept.AcceptEx : System Error.  Code: 10038(2736), 在一个非套接字上尝试了一个操作。
+14:02:58:442 TIocpCrossSocket._NewAccept.AcceptEx : System Error.  Code: 10038(2736), 在一个非套接字上尝试了一个操作。
+16:22:59:110 TIocpCrossSocket.ProcessIoEvent.GetQueuedCompletionStatus : System Error.  Code: 64(0040), 指定的网络名不再可用。
+16:22:59:110 TIocpCrossSocket.ProcessIoEvent.GetQueuedCompletionStatus : System Error.  Code: 64(0040), 指定的网络名不再可用。
+16:22:59:110 TIocpCrossSocket.ProcessIoEvent.GetQueuedCompletionStatus : System Error.  Code: 64(0040), 指定的网络名不再可用。
+17:32:20:975 TIocpCrossSocket.ProcessIoEvent.GetQueuedCompletionStatus : System Error.  Code: 64(0040), 指定的网络名不再可用。
+17:32:23:020 TIocpCrossSocket.ProcessIoEvent.GetQueuedCompletionStatus : System Error.  Code: 64(0040), 指定的网络名不再可用。
+17:32:25:014 TIocpCrossSocket.ProcessIoEvent.GetQueuedCompletionStatus : System Error.  Code: 64(0040), 指定的网络名不再可用。
+17:32:36:013 TIocpCrossSocket.ProcessIoEvent.GetQueuedCompletionStatus : System Error.  Code: 995(03E3), 由于线程退出或应用程序请求，已中止 I/O 操作。
+17:32:36:013 TIocpCrossSocket._NewAccept.AcceptEx : System Error.  Code: 10038(2736), 在一个非套接字上尝试了一个操作。
+17:32:36:024 TIocpCrossSocket.ProcessIoEvent.GetQueuedCompletionStatus : System Error.  Code: 995(03E3), 由于线程退出或应用程序请求，已中止 I/O 操作。
+17:32:36:024 TIocpCrossSocket._NewAccept.AcceptEx : System Error.  Code: 10038(2736), 在一个非套接字上尝试了一个操作。
+17:32:36:025 TIocpCrossSocket.ProcessIoEvent.GetQueuedCompletionStatus : System Error.  Code: 995(03E3), 由于线程退出或应用程序请求，已中止 I/O 操作。
+17:32:36:025 TIocpCrossSocket._NewAccept.AcceptEx : System Error.  Code: 10038(2736), 在一个非套接字上尝试了一个操作。

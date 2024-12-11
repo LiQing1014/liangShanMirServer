@@ -1,0 +1,132 @@
+[2024-11-27 08:51:57:749] Failure: .\Map\轩辕古城.map could not be loaded.
+[2024-11-27 08:51:57:749] Failure: .\Map\轩辕古城.map could not be loaded.
+
+[2024-11-27 08:51:58:010] Failure: .\Map\定军山.map could not be loaded.
+[2024-11-27 08:51:58:018] Failure: .\Map\幽灵古堡.map could not be loaded.
+[2024-11-27 08:51:58:034] Failure: .\Map\神月祭坛.map could not be loaded.
+[2024-11-27 08:51:58:034] Failure: .\Map\失乐园.map could not be loaded.
+[2024-11-27 08:51:58:070] Failure: .\Map\十二封印之地.map could not be loaded.
+[2024-11-27 08:51:58:070] Failure: .\Map\BOSS之家.map could not be loaded.
+[2024-11-27 08:51:58:070] Failure: .\Map\雪域.map could not be loaded.
+[2024-11-27 08:51:58:085] Failure: .\Map\天之龙域.map could not be loaded.
+[2024-11-27 08:51:58:085] Failure: .\Map\神龙一层.map could not be loaded.
+[2024-11-27 08:51:58:085] Failure: .\Map\失乐园.map could not be loaded.
+[2024-11-27 08:51:58:090] Failure: .\Map\BOSS之家.map could not be loaded.
+[2024-11-27 08:51:58:091] Failure: .\Map\修罗天宫.map could not be loaded.
+[2024-11-27 08:51:58:094] Failure: .\Map\仙城.map could not be loaded.
+[2024-11-27 08:51:58:096] Failure: .\Map\九幽殿.map could not be loaded.
+[2024-11-27 08:51:58:103] Failure: .\Map\雪域大陆.map could not be loaded.
+[2024-11-27 08:51:58:103] Failure: .\Map\炼狱2.map could not be loaded.
+[2024-11-27 08:51:58:111] Failure: .\Map\天之龙域.map could not be loaded.
+[2024-11-27 08:51:58:411] Failure: .\Map\D71650.map could not be loaded.
+[2024-11-27 08:51:58:411] Failure: .\Map\D71651.map could not be loaded.
+[2024-11-27 08:51:58:411] Failure: .\Map\D71652.map could not be loaded.
+[2024-11-27 08:51:58:411] Failure: .\Map\D71653.map could not be loaded.
+[2024-11-27 08:51:58:453] Failure: .\Map\M001.map could not be loaded.
+[2024-11-27 08:52:01:474] >>>>>RegenMonsterByName ThreadError :[MainDoor]-0[3-6496] 当前Thread:19196
+[2024-11-27 08:52:01:474] MainDoor Name:MainDoor Map:3 X:672 Y:330 HP:4144
+[2024-11-27 08:52:01:474] >>>>>RegenMonsterByName ThreadError :[LeftWall]-0[3-6496] 当前Thread:19196
+[2024-11-27 08:52:01:474] LeftWall Name:LeftWall Map:3 X:624 Y:278 HP:3072
+[2024-11-27 08:52:01:474] >>>>>RegenMonsterByName ThreadError :[CenterWall]-0[3-6496] 当前Thread:19196
+[2024-11-27 08:52:01:474] CenterWall Name:CenterWall Map:3 X:627 Y:278 HP:3072
+[2024-11-27 08:52:01:474] >>>>>RegenMonsterByName ThreadError :[RightWall]-0[3-6496] 当前Thread:19196
+[2024-11-27 08:52:01:474] RightWall Name:RightWall Map:3 X:634 Y:271 HP:3072
+[2024-11-27 08:52:01:997] ---------------------线程耗时监控
+[2024-11-27 08:52:02:210] Frame-----------------------------------
+
+[2024-11-27 08:52:02:222] MainRunThread(15)-----------------------------------
+
+[2024-11-27 08:52:02:236] EnvirThread 0/0(12829-0)flag:50000004  lua: 0 CallLua: 0-----------------------------------
+
+[2024-11-27 08:52:02:247] DbThread(15-0)-----------------------------------
+
+[2024-11-27 08:52:02:274] BoxSellDbThread(0)-----------------------------------
+
+[2024-11-27 08:52:02:286] NewHttpPost(0-0-0)-----------------------------------
+
+
+[2024-11-27 12:33:03:713] Failure: .\Map\轩辕古城.map could not be loaded.
+[2024-11-27 12:33:03:713] Failure: .\Map\轩辕古城.map could not be loaded.
+[2024-11-27 12:33:04:057] Failure: .\Map\定军山.map could not be loaded.
+[2024-11-27 12:33:04:070] Failure: .\Map\幽灵古堡.map could not be loaded.
+[2024-11-27 12:33:04:094] Failure: .\Map\神月祭坛.map could not be loaded.
+[2024-11-27 12:33:04:094] Failure: .\Map\失乐园.map could not be loaded.
+[2024-11-27 12:33:04:145] Failure: .\Map\十二封印之地.map could not be loaded.
+[2024-11-27 12:33:04:146] Failure: .\Map\BOSS之家.map could not be loaded.
+[2024-11-27 12:33:04:146] Failure: .\Map\雪域.map could not be loaded.
+[2024-11-27 12:33:04:166] Failure: .\Map\天之龙域.map could not be loaded.
+[2024-11-27 12:33:04:166] Failure: .\Map\神龙一层.map could not be loaded.
+[2024-11-27 12:33:04:166] Failure: .\Map\失乐园.map could not be loaded.
+[2024-11-27 12:33:04:172] Failure: .\Map\BOSS之家.map could not be loaded.
+[2024-11-27 12:33:04:175] Failure: .\Map\修罗天宫.map could not be loaded.
+[2024-11-27 12:33:04:177] Failure: .\Map\仙城.map could not be loaded.
+[2024-11-27 12:33:04:181] Failure: .\Map\九幽殿.map could not be loaded.
+[2024-11-27 12:33:04:191] Failure: .\Map\雪域大陆.map could not be loaded.
+[2024-11-27 12:33:04:191] Failure: .\Map\炼狱2.map could not be loaded.
+[2024-11-27 12:33:04:202] Failure: .\Map\天之龙域.map could not be loaded.
+[2024-11-27 12:33:04:611] Failure: .\Map\D71650.map could not be loaded.
+[2024-11-27 12:33:04:611] Failure: .\Map\D71651.map could not be loaded.
+[2024-11-27 12:33:04:611] Failure: .\Map\D71652.map could not be loaded.
+[2024-11-27 12:33:04:611] Failure: .\Map\D71653.map could not be loaded.
+[2024-11-27 12:33:04:684] Failure: .\Map\M001.map could not be loaded.
+[2024-11-27 12:33:06:768] >>>>>RegenMonsterByName ThreadError :[MainDoor]-0[3-26584] 当前Thread:22264
+[2024-11-27 12:33:06:768] MainDoor Name:MainDoor Map:3 X:672 Y:330 HP:4144
+[2024-11-27 12:33:06:768] >>>>>RegenMonsterByName ThreadError :[LeftWall]-0[3-26584] 当前Thread:22264
+[2024-11-27 12:33:06:768] LeftWall Name:LeftWall Map:3 X:624 Y:278 HP:3072
+[2024-11-27 12:33:06:768] >>>>>RegenMonsterByName ThreadError :[CenterWall]-0[3-26584] 当前Thread:22264
+[2024-11-27 12:33:06:768] CenterWall Name:CenterWall Map:3 X:627 Y:278 HP:3072
+[2024-11-27 12:33:06:768] >>>>>RegenMonsterByName ThreadError :[RightWall]-0[3-26584] 当前Thread:22264
+[2024-11-27 12:33:06:768] RightWall Name:RightWall Map:3 X:634 Y:271 HP:3072
+
+[2024-11-27 12:33:07:023] ---------------------线程耗时监控
+[2024-11-27 12:33:07:247] Frame-----------------------------------
+
+[2024-11-27 12:33:07:285] MainRunThread(16)-----------------------------------
+
+[2024-11-27 12:33:07:298] EnvirThread 0/0(9031-0)flag:50000004  lua: 0 CallLua: 0-----------------------------------
+
+[2024-11-27 12:33:07:313] DbThread(16-0)-----------------------------------
+
+[2024-11-27 12:33:07:328] BoxSellDbThread(15)-----------------------------------
+
+[2024-11-27 12:33:07:343] NewHttpPost(16-0-0)-----------------------------------
+
+
+[2024-11-27 16:54:02:582] ---------------------线程耗时监控
+[2024-11-27 16:54:02:616] Frame-----------------------------------
+
+[2024-11-27 16:54:02:645] MainRunThread(0)-----------------------------------
+
+[2024-11-27 16:54:02:678] EnvirThread 0/0(2079-6)flag:10000997  lua: 0 CallLua: 0-----------------------------------
+
+[2024-11-27 16:54:02:706] DbThread(0-0)-----------------------------------
+
+[2024-11-27 16:54:02:738] BoxSellDbThread(0)-----------------------------------
+
+[2024-11-27 16:54:02:769] NewHttpPost(0-0-0)-----------------------------------
+
+[2024-11-27 16:54:00:628] 加载脚本报错 .\Envir\QuestDiary\基础按钮\主界面基础按钮QM.txt sLabel:@地图按钮 Except：Cannot open file "D:\996服务端\梁山复古服务端\MirServer\Mir200\Envir\QuestDiary\基础按钮\主界面基础按钮QM.txt". 另一个程序正在使用此文件，进程无法访问。[0000000001928281] JclDebug._ZN8Jcldebug17TJclStackInfoListC3EbiPvbS1_S1_ (Line 5509, "JclDebug.pas" + 34)
+[0000000001927AD2] JclDebug._ZN8Jcldebug18JclCreateStackListEbiPvbS0_ (Line 5351, "JclDebug.pas" + 1)
+[00000000019279B2] JclDebug._ZN8Jcldebug21DoExceptionStackTraceEPN6System7TObjectEPvbS3_ (Line 5292, "JclDebug.pas" + 20)
+[000000000192AAA5] JclDebug._ZN8Jcldebug14DoExceptNotifyEPN6System7TObjectEPvbS3_ (Line 6741, "JclDebug.pas" + 7)
+[0000000001919702] JclHookExcept._ZN13Jclhookexcept13TNotifierItem8DoNotifyEPN6System7TObjectEPvbS4_ (Line 272, "JclHookExcept.pas" + 5)
+[000000000191996B] JclHookExcept._ZN13Jclhookexcept14DoExceptNotifyEPN6System7TObjectEPvbS3_ (Line 339, "JclHookExcept.pas" + 13)
+[0000000001919AD0] JclHookExcept._ZN13Jclhookexcept20HookedRaiseExceptionEjjjPNS_19TExceptionArgumentsE (Line 381, "JclHookExcept.pas" + 14)
+[00000000009523B3] System._ZN6System14_RaiseAtExceptEPNS_7TObjectEPv (Line 22402, "System.pas" + 32)
+[0000000000952418] System._ZN6System11_RaiseAgainEv (Line 23481, "System.pas" + 9)
+[0000000000A5B9D4] System.Classes._ZN6System7Classes11TFileStreamC3ENS_13UnicodeStringEt (Line 9547, "System.Classes.pas" + 6)
+[0000000000A56080] System.Classes._ZN6System7Classes8TStrings12LoadFromFileENS_13UnicodeStringEPNS_8Sysutils9TEncodingE (Line 7097, "System.Classes.pas" + 1)
+[0000000000A56047] System.Classes._ZN6System7Classes8TStrings12LoadFromFileENS_13UnicodeStringE (Line 7091, "System.Classes.pas" + 2)
+[00000000014335A7] LocalDB.LoadCallScript (Line 7828, "LocalDB.pas" + 17)
+[0000000001434373] LocalDB.LoadScriptcall (Line 7912, "LocalDB.pas" + 38)
+[000000000143673A] LocalDB._ZN7Localdb6TFrmDB14LoadScriptFileEPN6Objnpc8TNormNpcEN6System13UnicodeStringES5_b (Line 8221, "LocalDB.pas" + 189)
+[0000000001716348] ObjNpc._ZN6Objnpc9TMerchant13LoadNpcScriptEh (Line 25590, "ObjNpc.pas" + 10)
+[000000000152F00C] uThread_Envir._ZN13Uthread_envir12TEnvirThread5OnMsgEjyPv (Line 1351, "uThread_Envir.pas" + 581)
+[0000000000D72228] uThreadPools._ZN12Uthreadpools11TThreadPool10ThreadProcEv (Line 186, "uThreadPools.pas" + 30)
+[0000000000D71D8F] uThreadPools._ZN12Uthreadpools9TMyThread7ExecuteEv (Line 74, "uThreadPools.pas" + 4)
+[0000000000A72963] System.Classes._ZN6System7Classes10ThreadProcEPNS0_7TThreadE (Line 15845, "System.Classes.pas" + 18)
+[0000000000952F8D] System._ZN6System13ThreadWrapperEPv (Line 25726, "System.pas" + 9)
+[00007FF8282A7374] BaseThreadInitThunk
+[00007FF82945CC91] RtlUserThreadStart
+
+

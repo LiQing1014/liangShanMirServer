@@ -1,0 +1,75 @@
+[@福利大厅]
+{
+
+#IF
+equal S$福利选择
+#ACT
+MOV S$福利选择 0
+MOV S$背景图 3
+MOV S$表格选择 登录
+
+#IF
+#ACT
+; csv_read
+MOV S$福利大厅ID
+MOV S$福利大厅页面
+MOV n$循环序列 0
+while n$循环序列 < <$Getcsv(cfg_福利大厅_登录,Row)>
+goto @福利大厅_数据加载
+inc n$循环序列 1
+endwhile
+
+
+#SAY
+<Img|show=4|bg=1|loadDelay=0|move=0|esc=1|img=custom/fuli/mian.png|reset=1>
+<Layout|x=897.0|y=94.0|width=80|height=80|link=@exit>
+<Button|x=922.0|y=112.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Button|x=40.0|y=125|children={xz_0}|color=255|size=18|nimg=custom/fuli/btn_3.png|link=@福利大厅#福利选择=0#表格选择=登录#背景图=3>
+<Button|x=40.0|y=184|children={xz_1}|color=255|size=18|nimg=custom/fuli/btn_2.png|link=@福利大厅#福利选择=1#表格选择=在线#背景图=2>
+<Button|x=40.0|y=243|children={xz_2}|color=255|size=18|nimg=custom/fuli/btn_7.png|link=@福利大厅#福利选择=2#表格选择=登录#背景图=7>
+<Button|x=40.0|y=302|children={xz_3}|color=255|size=18|nimg=custom/fuli/btn_6.png|link=@福利大厅#福利选择=3#表格选择=登录#背景图=6>
+<Button|x=40.0|y=361|children={xz_4}|color=255|size=18|nimg=custom/fuli/btn_3.png|link=@福利大厅#福利选择=4#表格选择=登录#背景图=3>
+<Button|x=40.0|y=420|children={xz_5}|color=255|size=18|nimg=custom/fuli/btn_3.png|link=@福利大厅#福利选择=5#表格选择=登录#背景图=3>
+<Button|x=40.0|y=479|children={xz_6}|color=255|size=18|nimg=custom/fuli/btn_3.png|link=@福利大厅#福利选择=6#表格选择=登录#背景图=3>
+<Button|x=40.0|y=538|children={xz_7}|color=255|size=18|nimg=custom/fuli/btn_3.png|link=@福利大厅#福利选择=7#表格选择=登录#背景图=3>
+<Img|x=215.0|y=126.0|img=custom/fuli/bg_<$STR(S$背景图)>.png|esc=0>
+
+<Img|id=xz_<$STR(S$福利选择)>|x=-8.0|y=-3.0|img=custom/fuli/bg.png|esc=0>
+
+<ListView|children={<$str(S$福利大厅ID)>}|x=220.0|y=270.0|width=684|height=340>
+
+<$str(S$福利大厅页面)>
+
+[@福利大厅_数据加载]
+#IF
+#ACT
+
+getdbitemfieldvalue <$cfg_福利大厅_<$STR(S$表格选择)>(<$STR(n$循环序列)>_2)> idx S$福利大厅展示1ID
+getdbitemfieldvalue <$cfg_福利大厅_<$STR(S$表格选择)>(<$STR(n$循环序列)>_4)> idx S$福利大厅展示2ID
+getdbitemfieldvalue <$cfg_福利大厅_<$STR(S$表格选择)>(<$STR(n$循环序列)>_6)> idx S$福利大厅展示3ID
+
+mov n$展示天数 <$STR(n$循环序列)>
+inc n$展示天数 1
+
+inc S$福利大厅页面 <Img|id=fldt<$STR(n$循环序列)>|children={fldt<$STR(n$循环序列)>_1,fldt<$STR(n$循环序列)>_2,fldt<$STR(n$循环序列)>_3,fldt<$STR(n$循环序列)>_4,fldt<$STR(n$循环序列)>_5}|x=0.0|y=0.0|img=custom/fuli/hang.png|esc=0>
+inc S$福利大厅页面 <RText|a=4|id=fldt<$STR(n$循环序列)>_1|x=94.0|y=40.0|color=255|size=18|outline=1|text=<$cfg_福利大厅_<$STR(S$表格选择)>(<$STR(n$循环序列)>_10)>>
+inc S$福利大厅页面 <ItemShow|id=fldt<$STR(n$循环序列)>_2|x=172|y=8|width=70|height=70|itemid=<$str(S$福利大厅展示1ID)>|itemcount=<$cfg_福利大厅_<$STR(S$表格选择)>(<$STR(n$循环序列)>_3)>|showtips=1|bgtype=1>
+inc S$福利大厅页面 <ItemShow|id=fldt<$STR(n$循环序列)>_3|x=285|y=8|width=70|height=70|itemid=<$str(S$福利大厅展示2ID)>|itemcount=<$cfg_福利大厅_<$STR(S$表格选择)>(<$STR(n$循环序列)>_5)>|showtips=1|bgtype=1>
+inc S$福利大厅页面 <ItemShow|id=fldt<$STR(n$循环序列)>_4|x=398|y=8|width=70|height=70|itemid=<$str(S$福利大厅展示3ID)>|itemcount=<$cfg_福利大厅_<$STR(S$表格选择)>(<$STR(n$循环序列)>_7)>|showtips=1|bgtype=1>
+
+#IF
+large U51 <$STR(n$循环序列)>
+#ACT
+inc S$福利大厅页面 <Button|id=fldt<$STR(n$循环序列)>_5|a=4|x=592.0|y=42.0|color=255|size=18|nimg=custom/fuli/lqzt_1.png>
+#ELSEACT
+inc S$福利大厅页面 <Button|id=fldt<$STR(n$循环序列)>_5|a=4|x=592.0|y=42.0|color=255|size=18|nimg=custom/fuli/lq.png|link=@福利大厅_领取奖励#领取顺序=<$STR(n$循环序列)>>
+#IF
+#ACT
+INC S$福利大厅ID fldt<$STR(n$循环序列)>,
+
+
+
+[@福利大厅_领取奖励]
+
+
+}
