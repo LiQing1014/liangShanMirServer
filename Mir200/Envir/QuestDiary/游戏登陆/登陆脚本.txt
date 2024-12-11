@@ -20,8 +20,8 @@ AutoTakeOnItem 布衣(男) 0
 
 ChangeAttatckMode 0
 SENDMSG 6 提示：请按F12呼出游戏内挂 
-;SENDMSG 0 ぐ:欢迎{『<$USERNAME>』|253:0:1}来到{『<$SERVERNAME>』|250:0:1}→1.76独家绿色公益三职业传奇→{[<$SERVERNAME>]|254:0:1}
-SendCenterMsg 254 0 【新人提示】：ぐ:欢迎『<$USERNAME>』来到『<$SERVERNAME>』→1.76独家绿色公益三职业传奇→[<$SERVERNAME>] 1 5
+;SENDMSG 0 ぐ:欢迎{『<$USERNAME>』|253:0:1}来到{『<$SERVERNAME>』|250:0:1}→1.76炫光绿色公益三职业传奇→{[<$SERVERNAME>]|254:0:1}
+SendCenterMsg 254 0 【新人提示】：ぐ:欢迎『<$USERNAME>』来到『<$SERVERNAME>』→1.76炫光绿色公益三职业传奇→[<$SERVERNAME>] 1 5
 
 
 #IF
@@ -43,12 +43,12 @@ AutoTakeOnItem 布衣(女) 0
 
 ChangeAttatckMode 0
 SENDMSG 6 提示：请按F12呼出游戏内挂
-SendCenterMsg 254 0 【新人提示】：ぐ:欢迎『<$USERNAME>』来到『<$SERVERNAME>』→1.76独家绿色公益三职业传奇→[<$SERVERNAME>] 1 5
+SendCenterMsg 254 0 【新人提示】：ぐ:欢迎『<$USERNAME>』来到『<$SERVERNAME>』→1.76炫光绿色公益三职业传奇→[<$SERVERNAME>] 1 5
 
 #if
 checklevelex > 5
 #act
-SendCenterMsg 254 0 【新人提示】：ぐ:欢迎『<$USERNAME>』来到『<$SERVERNAME>』→1.76独家绿色公益三职业传奇→[<$SERVERNAME>] 1 5
+SendCenterMsg 254 0 【新人提示】：ぐ:欢迎『<$USERNAME>』来到『<$SERVERNAME>』→1.76炫光绿色公益三职业传奇→[<$SERVERNAME>] 1 5
 
 
 #IF

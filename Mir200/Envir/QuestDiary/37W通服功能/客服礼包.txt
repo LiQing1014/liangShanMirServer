@@ -74,7 +74,8 @@ AutoTakeOnItem 洗髓境 14
 AutoTakeOnItem 包工盾牌 16
 #CALL [\极品拾取鉴定\盾牌成长属性.txt] @盾牌成长属性
 
-
+PICKUPITEMS 0 6 1000
+sendmsg 6 已开启自动拾取
 ;---------给物品段！
 
 

@@ -408,9 +408,10 @@ MOV S$盾牌经验D2 ^-^146#2.<$STR(S$盾牌材料)>*<$STR(N$盾牌材料)>
 
 MOV N$盾牌经验B <$STR(N$当前盾牌经验)>
 DIV N$盾牌经验B 2000
-MOV S$盾牌经验 当前需要：<$STR(N$盾牌经验B)>大米升级
+MOV S$盾牌经验 <$STR(N$盾牌经验B)>灵符
 
-
+getdbitemfieldvalue 梦想神石 idx S$展示物品1ID
+getdbitemfieldvalue 元宝 idx S$展示物品2ID
 
 
 
@@ -432,22 +433,42 @@ close
 ; <> <【盾牌介绍】：/SCOLOR=161><盾牌装备、不可交易、丢弃、爆出/SCOLOR=249>   　\ \ \
 ; <>　　　   <Text:一键注入盾牌经验|^-^250#升下一级需要条件：<$STR(S$盾牌经验D1)><$STR(S$盾牌经验D2)>:10:-15{FCOLOR=251}/@材料一键升级>
 
-; <>　　　 <Text:大米注入盾牌经验|^-^250#升下一级需要条件：^-^253#<$STR(S$盾牌经验)>:10:-15{FCOLOR=251}/@大米一键升级>\
+; <>　　　 <Text:灵符注入盾牌经验|^-^250#升下一级需要条件：^-^253#<$STR(S$盾牌经验)>:10:-15{FCOLOR=251}/@灵符一键升级>\
 
-<Img|width=620|height=300|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|reset=1>
-<Layout|x=597|y=3|width=80|height=80|link=@exit>
-<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
-<Text|a=0|x=32.0|y=36.0|tipsx=10|tipsy=80|color=161|size=18|text=【当前盾牌】：>
-<Text|a=0|x=186.0|y=36.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(S$当前盾牌)>>
-<Text|a=0|x=32.0|y=76.0|tipsx=10|tipsy=80|color=161|size=18|text=【盾牌介绍】：>
-<Text|a=0|x=186.0|y=76.0|tipsx=10|tipsy=80|color=70|size=18|text=能吸收怪物攻击的Hook伤害，对人物无效>
-<Text|a=0|x=32.0|y=116.0|tipsx=10|tipsy=80|color=161|size=18|text=【盾牌介绍】：>
-<Text|a=0|x=186.0|y=116.0|tipsx=10|tipsy=80|color=250|size=18|text=每个级别的盾牌吸收伤害比例越高吸收伤害越强>
-<Text|a=0|x=32.0|y=156.0|tipsx=10|tipsy=80|color=161|size=18|text=【盾牌介绍】：>
-<Text|a=0|x=186.0|y=156.0|tipsx=10|tipsy=80|color=249|size=18|text=盾牌装备、不可交易、丢弃、爆出>
-<Text|a=0|x=32.0|y=216.0|tipsx=10|tipsy=80|color=255|size=18|text=一键注入盾牌经验|link=@材料一键升级>
-<Text|a=0|x=250.0|y=216.0|tipsx=10|tipsy=80|color=255|size=18|text=大米注入盾牌经验|link=@大米一键升级>
+; <Img|width=620|height=300|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|reset=1>
+; <Layout|x=597|y=3|width=80|height=80|link=@exit>
+; <Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+; <Text|a=0|x=32.0|y=36.0|tipsx=10|tipsy=80|color=161|size=18|text=【当前盾牌】：>
+; <Text|a=0|x=186.0|y=36.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(S$当前盾牌)>>
+; <Text|a=0|x=32.0|y=76.0|tipsx=10|tipsy=80|color=161|size=18|text=【盾牌介绍】：>
+; <Text|a=0|x=186.0|y=76.0|tipsx=10|tipsy=80|color=70|size=18|text=能吸收怪物攻击的Hook伤害，对人物无效>
+; <Text|a=0|x=32.0|y=116.0|tipsx=10|tipsy=80|color=161|size=18|text=【盾牌介绍】：>
+; <Text|a=0|x=186.0|y=116.0|tipsx=10|tipsy=80|color=250|size=18|text=每个级别的盾牌吸收伤害比例越高吸收伤害越强>
+; <Text|a=0|x=32.0|y=156.0|tipsx=10|tipsy=80|color=161|size=18|text=【盾牌介绍】：>
+; <Text|a=0|x=186.0|y=156.0|tipsx=10|tipsy=80|color=249|size=18|text=盾牌装备、不可交易、丢弃、爆出>
+; <Text|a=0|x=32.0|y=216.0|tipsx=10|tipsy=80|color=255|size=18|text=一键注入盾牌经验|link=@材料一键升级>
+; <Text|a=0|x=250.0|y=216.0|tipsx=10|tipsy=80|color=255|size=18|text=灵符注入盾牌经验|link=@灵符一键升级>
 
+
+<Img|x=0.0|y=0.0|width=750|height=506|scale9l=10|reset=1|scale9r=10|bg=1|move=0|esc=1|scale9b=10|scale9t=10|img=custom/hecheng/bs1.png|show=4>
+<Layout|x=721.0|y=2.0|width=80|height=80|link=@exit>
+<Button|x=750.0|y=0.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=209.0|y=74.0|tipsx=10|tipsy=80|color=161|size=18|text=【当前盾牌】：>
+<Text|a=0|x=217.0|y=110.0|tipsx=10|tipsy=80|color=250|size=18|text=<$STR(S$当前盾牌)>>
+<Text|a=0|x=210.0|y=303.0|tipsx=10|tipsy=80|color=161|size=18|text=【盾牌介绍】：>
+<Text|a=0|x=343.0|y=303.0|tipsx=10|tipsy=80|color=70|size=18|text=能吸收怪物攻击的Hook伤害，对人物无效>
+<Text|a=0|x=210.0|y=328.0|tipsx=10|tipsy=80|color=161|size=18|text=【盾牌介绍】：>
+<Text|a=0|x=343.0|y=328.0|tipsx=10|tipsy=80|color=250|size=18|text=每个级别的盾牌吸收伤害比例越高吸收伤害越强>
+<Text|a=0|x=210.0|y=353.0|tipsx=10|tipsy=80|color=161|size=18|text=【盾牌介绍】：>
+<Text|a=0|x=343.0|y=353.0|tipsx=10|tipsy=80|color=249|size=18|text=盾牌装备、不可交易、丢弃、爆出>
+<Button|x=44.0|y=68.0|nimg=custom/button/tp9.png|color=255|size=18|text=盾牌合成>
+<EquipShow|x=433.0|y=170.0|width=70|height=70|index=16|showtips=1|bgtype=0>
+<Text|x=360.0|y=15.0|color=255|size=18|text=盾牌锻造>
+<Button|x=288.0|y=448.0|color=255|size=18|pimg=custom/button/ann2.png|nimg=custom/button/ann1.png|text=一键注入|link=@材料一键升级>
+<Button|x=537.0|y=448.0|color=255|size=18|pimg=custom/button/ann2.png|nimg=custom/button/ann1.png|text=灵符注入|link=@灵符一键升级>
+<ItemShow|x=268.0|y=380.0|width=70|height=70|itemid=<$str(S$展示物品1ID)>|itemcount=<$STR(N$盾牌材料)>|showtips=1|bgtype=1>
+<ItemShow|x=347.0|y=380.0|width=70|height=70|itemid=<$str(S$展示物品2ID)>|itemcount=<$STR(N$盾牌元宝)>|showtips=1|bgtype=1>
+<RText|x=544.0|y=403.0|color=255|size=18|text=<<$STR(S$盾牌经验)>/FCOLOR=251>>
 
 
 [@材料一键升级]
@@ -566,7 +587,7 @@ break
 
 
 
-[@大米一键升级]
+[@灵符一键升级]
 
 
 #IF
@@ -643,18 +664,18 @@ break
 
 
 #IF
-CHECKGAMEPOINT < <$STR(N$盾牌经验B)>
+checkmoney 灵符 < <$STR(N$盾牌经验B)>
 #ACT
-MESSAGEBOX \\\对不起，您的大米不足<$STR(N$盾牌经验B)>点
+MESSAGEBOX \\\对不起，您的灵符不足<$STR(N$盾牌经验B)>点
 break
 
 
 
 #or
-CHECKGAMEPOINT = <$STR(N$盾牌经验B)>
-CHECKGAMEPOINT > <$STR(N$盾牌经验B)>
+checkmoney 灵符 = <$STR(N$盾牌经验B)>
+checkmoney 灵符 > <$STR(N$盾牌经验B)>
 #ACT
-GAMEPOINT -  <$STR(N$盾牌经验B)>
+MONEY 灵符 -  <$STR(N$盾牌经验B)>
 CHANGECUSTOMITEMPROGRESSBARVALUE 16 1 0 + <$STR(N$当前盾牌经验)>
 SendCenterMsg 254 0 恭喜您的盾牌经验增加：<$STR(N$当前盾牌经验)>点经验 0 3
 GOTO @MAIN

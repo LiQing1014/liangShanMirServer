@@ -23,86 +23,6 @@ break
 
 
 
-#if
-check [124] 0
-#act
-mov S$回收124 <ImgEx:0:192:192:192:0:-2|249#宝石一键回收关/@回收开关124>
-
-#if
-check [124] 1
-#act
-mov S$回收124 <ImgEx:0:193:193:193:0:-2|250#宝石一键回收开/@回收开关124>
-
-
-#if
-check [125] 0
-#act
-mov S$回收125 <ImgEx:0:192:192:192:0:-2|249#宝石一键回收关/@回收开关125>
-
-#if
-check [125] 1
-#act
-mov S$回收125 <ImgEx:0:193:193:193:0:-2|250#宝石一键回收开/@回收开关125>
-
-
-
-
-#if
-check [126] 0
-#act
-mov S$回收126 <ImgEx:0:192:192:192:0:-2|249#宝石一键回收关/@回收开关126>
-
-#if
-check [126] 1
-#act
-mov S$回收126 <ImgEx:0:193:193:193:0:-2|250#宝石一键回收开/@回收开关126>
-
-
-
-
-#if
-check [127] 0
-#act
-mov S$回收127 <ImgEx:0:192:192:192:0:-2|249#宝石一键回收关/@回收开关127>
-
-#if
-check [127] 1
-#act
-mov S$回收127 <ImgEx:0:193:193:193:0:-2|250#宝石一键回收开/@回收开关127>
-
-
-
-#if
-check [128] 0
-#act
-mov S$回收128 <ImgEx:0:192:192:192:0:-2|249#宝石一键回收关/@回收开关128>
-
-#if
-check [128] 1
-#act
-mov S$回收128 <ImgEx:0:193:193:193:0:-2|250#宝石一键回收开/@回收开关128>
-
-
-#if
-check [129] 0
-#act
-mov S$回收129 <ImgEx:0:192:192:192:0:-2|249#宝石一键回收关/@回收开关129>
-
-#if
-check [129] 1
-#act
-mov S$回收129 <ImgEx:0:193:193:193:0:-2|250#宝石一键回收开/@回收开关129>
-
-
-#if
-check [130] 0
-#act
-mov S$回收130 <ImgEx:0:192:192:192:0:-2|249#宝石一键回收关/@回收开关130>
-
-#if
-check [130] 1
-#act
-mov S$回收130 <ImgEx:0:193:193:193:0:-2|250#宝石一键回收开/@回收开关130>
 
 
 
@@ -111,13 +31,13 @@ mov S$回收130 <ImgEx:0:193:193:193:0:-2|250#宝石一键回收开/@回收开关130>
 #IF
 EQUAL N$第1个孔宝石IDX 0
 #ACT
-ReturnBoxItem 2
-MOV N$第1个孔宝石IDX 4525
-MOV N$第2个孔宝石IDX 4530
-MOV N$第3个孔宝石IDX 4535
-MOV S$拆除按钮1 <拆除>
-MOV S$拆除按钮2 <拆除>
-MOV S$拆除按钮3 <拆除>
+; ReturnBoxItem 2
+; MOV N$第1个孔宝石IDX 4525
+; MOV N$第2个孔宝石IDX 4530
+; MOV N$第3个孔宝石IDX 4535
+; MOV S$拆除按钮1 <Button|x=22.0|y=420.0|width=60|pimg=custom/button/ann2.png|color=251|size=18|nimg=custom/button/ann1.png|text=拆除>
+; MOV S$拆除按钮2 <Button|x=97.0|y=420.0|width=60|pimg=custom/button/ann2.png|color=251|size=18|nimg=custom/button/ann1.png|text=拆除>
+; MOV S$拆除按钮3 <Button|x=173.0|y=420.0|width=60|pimg=custom/button/ann2.png|color=251|size=18|nimg=custom/button/ann1.png|text=拆除>
 
 
 
@@ -160,60 +80,10 @@ getdbitemfieldvalue 二级吸收	Idx	N$吸收Idx2
 getdbitemfieldvalue 三级吸收	Idx	N$吸收Idx3
 getdbitemfieldvalue 四级吸收	Idx	N$吸收Idx4
 getdbitemfieldvalue 五级吸收	Idx	N$吸收Idx5
-MOV	S$力量1	 <ItemShow:<$Str(N$力量Idx1)>:0:-15:-12:1/@合成一级力量>
-MOV	S$力量2	 <ItemShow:<$Str(N$力量Idx2)>:0:-15:-12:1/@合成二级力量>
-MOV	S$力量3	 <ItemShow:<$Str(N$力量Idx3)>:0:-15:-12:1/@合成三级力量>
-MOV	S$力量4	 <ItemShow:<$Str(N$力量Idx4)>:0:-15:-12:1/@合成四级力量>
-MOV	S$力量5	 <ItemShow:<$Str(N$力量Idx5)>:0:-15:-12:1/@合成五级力量>
-
-MOV	S$智力1	 <ItemShow:<$Str(N$智力Idx1)>:0:-15:-12:1/@合成一级智力>
-MOV	S$智力2	 <ItemShow:<$Str(N$智力Idx2)>:0:-15:-12:1/@合成二级智力>
-MOV	S$智力3	 <ItemShow:<$Str(N$智力Idx3)>:0:-15:-12:1/@合成三级智力>
-MOV	S$智力4	 <ItemShow:<$Str(N$智力Idx4)>:0:-15:-12:1/@合成四级智力>
-MOV	S$智力5	 <ItemShow:<$Str(N$智力Idx5)>:0:-15:-12:1/@合成五级智力>
-
-
-
-MOV	S$精神1	 <ItemShow:<$Str(N$精神Idx1)>:0:-15:-12:1/@合成一级精神>
-MOV	S$精神2	 <ItemShow:<$Str(N$精神Idx2)>:0:-15:-12:1/@合成二级精神>
-MOV	S$精神3	 <ItemShow:<$Str(N$精神Idx3)>:0:-15:-12:1/@合成三级精神>
-MOV	S$精神4	 <ItemShow:<$Str(N$精神Idx4)>:0:-15:-12:1/@合成四级精神>
-MOV	S$精神5	 <ItemShow:<$Str(N$精神Idx5)>:0:-15:-12:1/@合成五级精神>
-
-
-MOV	S$生命1	 <ItemShow:<$Str(N$生命Idx1)>:0:-15:-12:1/@合成一级生命>
-MOV	S$生命2	 <ItemShow:<$Str(N$生命Idx2)>:0:-15:-12:1/@合成二级生命>
-MOV	S$生命3	 <ItemShow:<$Str(N$生命Idx3)>:0:-15:-12:1/@合成三级生命>
-MOV	S$生命4	 <ItemShow:<$Str(N$生命Idx4)>:0:-15:-12:1/@合成四级生命>
-MOV	S$生命5	 <ItemShow:<$Str(N$生命Idx5)>:0:-15:-12:1/@合成五级生命>
-
-
-
-MOV	S$暴击1	 <ItemShow:<$Str(N$暴击Idx1)>:0:-15:-12:1/@合成一级暴击>
-MOV	S$暴击2	 <ItemShow:<$Str(N$暴击Idx2)>:0:-15:-12:1/@合成二级暴击>
-MOV	S$暴击3	 <ItemShow:<$Str(N$暴击Idx3)>:0:-15:-12:1/@合成三级暴击>
-MOV	S$暴击4	 <ItemShow:<$Str(N$暴击Idx4)>:0:-15:-12:1/@合成四级暴击>
-MOV	S$暴击5	 <ItemShow:<$Str(N$暴击Idx5)>:0:-15:-12:1/@合成五级暴击>
-
-
-MOV	S$攻伤1	 <ItemShow:<$Str(N$攻伤Idx1)>:0:-15:-12:1/@合成一级攻伤>
-MOV	S$攻伤2	 <ItemShow:<$Str(N$攻伤Idx2)>:0:-15:-12:1/@合成二级攻伤>
-MOV	S$攻伤3	 <ItemShow:<$Str(N$攻伤Idx3)>:0:-15:-12:1/@合成三级攻伤>
-MOV	S$攻伤4	 <ItemShow:<$Str(N$攻伤Idx4)>:0:-15:-12:1/@合成四级攻伤>
-MOV	S$攻伤5	 <ItemShow:<$Str(N$攻伤Idx5)>:0:-15:-12:1/@合成五级攻伤>
-
-MOV	S$吸收1	 <ItemShow:<$Str(N$吸收Idx1)>:0:-15:-12:1/@合成一级吸收>
-MOV	S$吸收2	 <ItemShow:<$Str(N$吸收Idx2)>:0:-15:-12:1/@合成二级吸收>
-MOV	S$吸收3	 <ItemShow:<$Str(N$吸收Idx3)>:0:-15:-12:1/@合成三级吸收>
-MOV	S$吸收4	 <ItemShow:<$Str(N$吸收Idx4)>:0:-15:-12:1/@合成四级吸收>
-MOV	S$吸收5	 <ItemShow:<$Str(N$吸收Idx5)>:0:-15:-12:1/@合成五级吸收>
-
 
 
 ReturnBoxItem 0
 ReturnBoxItem 1
-; close
-OPENMERCHANTBIGDLG 1 567 1 4 0 0 1 635 2
 #SAY 
 ; <> <◆◆◆◆/FCOLOR=250>         <◆◆◆◆/FCOLOR=161>　             <◆◆◆◆/FCOLOR=231>　                            <◆◆◆◆/FCOLOR=249>　     \
 ; <> <放入装备/FCOLOR=250>         <放入宝石/FCOLOR=161>　             <开孔放入/FCOLOR=231>　                            <拆除放入/FCOLOR=249>　     \
@@ -240,104 +110,131 @@ OPENMERCHANTBIGDLG 1 567 1 4 0 0 1 635 2
 ; \<生命宝石：/FCOLOR=249>   <$STR(S$生命1)> <$STR(S$生命2)> <$STR(S$生命3)> <$STR(S$生命4)> <$STR(S$生命5)><$STR(S$回收127)><←点击图标合成/FCOLOR=161>
 
 ; \ \ \
-; \<暴击宝石：/FCOLOR=249>   <$STR(S$暴击1)> <$STR(S$暴击2)> <$STR(S$暴击3)> <$STR(S$暴击4)> <$STR(S$暴击5)><$STR(S$回收128)><←点击图标合成/FCOLOR=161>             <抽奖宝石|253#99大米抽一次^-^161#随机抽取1-3级宝石^-^250#1级宝石几率：90%^-^251#2级宝石几率：7%^-^253#3级宝石几率：3%^-^254#一把开孔的锤子几率：5%^-^249#注意：抽到不满意的宝石请自行消耗/@大米宝石抽奖>
+; \<暴击宝石：/FCOLOR=249>   <$STR(S$暴击1)> <$STR(S$暴击2)> <$STR(S$暴击3)> <$STR(S$暴击4)> <$STR(S$暴击5)><$STR(S$回收128)><←点击图标合成/FCOLOR=161>             <抽奖宝石|253#99灵符抽一次^-^161#随机抽取1-3级宝石^-^250#1级宝石几率：90%^-^251#2级宝石几率：7%^-^253#3级宝石几率：3%^-^254#一把开孔的锤子几率：5%^-^249#注意：抽到不满意的宝石请自行消耗/@灵符宝石抽奖>
 
 ; \ \ \
-; \<攻伤宝石：/FCOLOR=249>   <$STR(S$攻伤1)> <$STR(S$攻伤2)> <$STR(S$攻伤3)> <$STR(S$攻伤4)> <$STR(S$攻伤5)><$STR(S$回收129)><←点击图标合成/FCOLOR=161>            <购买一把开孔的锤子|249#购买价格^250#200点大米*1个/@@InPutInteger88(注意：200点大米=一把开孔的锤子，请输入购买数量，1-100数值之间)>
+; \<攻伤宝石：/FCOLOR=249>   <$STR(S$攻伤1)> <$STR(S$攻伤2)> <$STR(S$攻伤3)> <$STR(S$攻伤4)> <$STR(S$攻伤5)><$STR(S$回收129)><←点击图标合成/FCOLOR=161>            <购买一把开孔的锤子|249#购买价格^250#200点灵符*1个/@@InPutInteger88(注意：200点灵符=一把开孔的锤子，请输入购买数量，1-100数值之间)>
 
 ; \ \ \
 ; \<吸收宝石：/FCOLOR=249>   <$STR(S$吸收1)> <$STR(S$吸收2)> <$STR(S$吸收3)> <$STR(S$吸收4)> <$STR(S$吸收5)><$STR(S$回收130)><←点击图标合成/FCOLOR=161>           <一键回收宝石|250#一级宝石：5000元宝^-^251#二级宝石：20000元宝^-^253#三级宝石：50000元宝^-^249#注意：请将保留的宝石先存放仓库，回收后概不负责/@一键回收宝石>                       
 
 
 
-<Img|width=700|height=600|move=0|img=public/bg_npc_04.jpg|reset=1|loadDelay=1|bg=1>
-<Layout|x=670.0|y=3.0|width=80|height=80|link=@exit>
-<Button|x=699.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
-<Text|a=0|x=32.0|y=15.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆◆>
-<Text|a=0|x=120.0|y=15.0|tipsx=10|tipsy=80|color=161|size=18|text=◆◆◆◆>
-<Text|a=0|x=208.0|y=15.0|tipsx=10|tipsy=80|color=231|size=18|text=◆◆◆◆>
-<Text|a=0|x=440.0|y=15.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
-<Text|a=0|x=32.0|y=35.0|tipsx=10|tipsy=80|color=250|size=18|text=放入装备>
-<Text|a=0|x=120.0|y=35.0|tipsx=10|tipsy=80|color=161|size=18|text=放入宝石>
-<Text|a=0|x=208.0|y=35.0|tipsx=10|tipsy=80|color=231|size=18|text=开孔放入>
-<Text|a=0|x=440.0|y=35.0|tipsx=10|tipsy=80|color=249|size=18|text=拆除放入>
-<Text|a=0|x=32.0|y=55.0|tipsx=10|tipsy=80|color=250|size=18|text=↓↓↓↓>
-<Text|a=0|x=120.0|y=55.0|tipsx=10|tipsy=80|color=161|size=18|text=↓↓↓↓>
-<Text|a=0|x=208.0|y=55.0|tipsx=10|tipsy=80|color=231|size=18|text=↓↓↓↓>
-<Text|a=0|x=440.0|y=55.0|tipsx=10|tipsy=80|color=249|size=18|text=↓↓↓↓>
-<ITEMBOX|x=31.0|y=83.0|width=55|height=55|boxindex=0|stdmode=5,10,11,63,28,62,16,48,15,19,51,30,26,22,23,64,65,52,20,21,7,53|tipsx=1|tipsy=65|img=public/1900000651_3.png>
-<ITEMBOX|x=118.0|y=83.0|width=55|height=55|boxindex=1|stdmode=46,42,45|tipsx=1|tipsy=65|img=public/1900000651_3.png>
-<ITEMBOX|x=207.0|y=83.0|width=55|height=55|boxindex=3|stdmode=*|tipsx=1|tipsy=65|img=public/1900000651_3.png>
-<ITEMBOX|x=437.0|y=83.0|width=55|height=55|boxindex=2|stdmode=5,10,11,63,28,62,16,48,15,19,51,30,26,22,23,64,65,52,20,21,7,53|img=public/1900000651_3.png>
-<Text|a=0|x=69.0|y=155.0|tipsx=10|tipsy=80|color=251|size=18|text=开始镶嵌|link=@开始镶嵌>
-<Text|a=0|x=200.0|y=155.0|tipsx=10|tipsy=80|color=251|size=18|text=开始打孔|link=@开始开孔>
-<ItemShow|x=356.0|y=135.0|width=70|height=70|itemid=<$STR(N$第1个孔宝石IDX)>|itemcount=1|showtips=1|color=250|bgtype=1>
-<ItemShow|x=443.0|y=135.0|width=70|height=70|itemid=<$STR(N$第2个孔宝石IDX)>|itemcount=1|showtips=1|color=250|bgtype=1>
-<ItemShow|x=530.0|y=135.0|width=70|height=70|itemid=<$STR(N$第3个孔宝石IDX)>|itemcount=1|showtips=1|color=250|bgtype=1>
-<Text|x=21.0|y=249.0|color=255|size=18|text=力量宝石:>
-<ItemShow|x=108.0|y=233.0|width=70|height=70|itemid=<$STR(N$力量Idx1)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成一级力量>
-<ItemShow|x=157.0|y=233.0|width=70|height=70|itemid=<$STR(N$力量Idx2)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成二级力量>
-<ItemShow|x=206.0|y=233.0|width=70|height=70|itemid=<$STR(N$力量Idx3)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成三级力量>
-<ItemShow|x=255.0|y=233.0|width=70|height=70|itemid=<$STR(N$力量Idx4)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成四级力量>
-<ItemShow|x=305.0|y=233.0|width=70|height=70|itemid=<$STR(N$力量Idx5)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成五级力量>
-<CheckBox|x=376.0|y=251.0|nimg=public/1900000550.png|checkboxid=1|pimg=public/1900000551.png|default=1>
-<Text|x=411.0|y=254.0|color=255|size=18|text=点击图标合成>
-<Text|x=21.0|y=299.0|color=255|size=18|text=智力宝石:>
-<ItemShow|x=108.0|y=283.0|width=70|height=70|itemid=<$STR(N$智力Idx1)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成一级智力>
-<ItemShow|x=157.0|y=283.0|width=70|height=70|itemid=<$STR(N$智力Idx2)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成二级智力>
-<ItemShow|x=206.0|y=283.0|width=70|height=70|itemid=<$STR(N$智力Idx3)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成三级智力>
-<ItemShow|x=255.0|y=283.0|width=70|height=70|itemid=<$STR(N$智力Idx4)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成四级智力>
-<ItemShow|x=305.0|y=283.0|width=70|height=70|itemid=<$STR(N$智力Idx5)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成五级智力>
-<CheckBox|x=376.0|y=301.0|nimg=public/1900000550.png|checkboxid=1|pimg=public/1900000551.png|default=1>
-<Text|x=411.0|y=304.0|color=255|size=18|text=点击图标合成>
-<Text|x=21.0|y=349.0|color=255|size=18|text=精神宝石:>
-<ItemShow|x=108.0|y=333.0|width=70|height=70|itemid=<$STR(N$精神Idx1)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成一级精神>
-<ItemShow|x=157.0|y=333.0|width=70|height=70|itemid=<$STR(N$精神Idx2)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成二级精神>
-<ItemShow|x=206.0|y=333.0|width=70|height=70|itemid=<$STR(N$精神Idx3)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成三级精神>
-<ItemShow|x=255.0|y=333.0|width=70|height=70|itemid=<$STR(N$精神Idx4)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成四级精神>
-<ItemShow|x=305.0|y=333.0|width=70|height=70|itemid=<$STR(N$精神Idx5)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成五级精神>
-<CheckBox|x=376.0|y=351.0|nimg=public/1900000550.png|checkboxid=1|pimg=public/1900000551.png|default=1>
-<Text|x=411.0|y=354.0|color=255|size=18|text=点击图标合成>
-<Text|x=21.0|y=400.0|color=255|size=18|text=生命宝石:>
-<ItemShow|x=108.0|y=384.0|width=70|height=70|itemid=<$STR(N$生命Idx1)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成一级生命>
-<ItemShow|x=157.0|y=384.0|width=70|height=70|itemid=<$STR(N$生命Idx2)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成二级生命>
-<ItemShow|x=206.0|y=384.0|width=70|height=70|itemid=<$STR(N$生命Idx3)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成三级生命>
-<ItemShow|x=255.0|y=384.0|width=70|height=70|itemid=<$STR(N$生命Idx4)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成四级生命>
-<ItemShow|x=305.0|y=384.0|width=70|height=70|itemid=<$STR(N$生命Idx5)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成五级生命>
-<CheckBox|x=376.0|y=402.0|nimg=public/1900000550.png|checkboxid=1|pimg=public/1900000551.png|default=1>
-<Text|x=411.0|y=405.0|color=255|size=18|text=点击图标合成>
-<Text|x=21.0|y=451.0|color=255|size=18|text=暴击宝石:>
-<ItemShow|x=108.0|y=435.0|width=70|height=70|itemid=<$STR(N$暴击Idx1)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成一级暴击>
-<ItemShow|x=157.0|y=435.0|width=70|height=70|itemid=<$STR(N$暴击Idx2)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成二级暴击>
-<ItemShow|x=206.0|y=435.0|width=70|height=70|itemid=<$STR(N$暴击Idx3)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成三级暴击>
-<ItemShow|x=255.0|y=435.0|width=70|height=70|itemid=<$STR(N$暴击Idx4)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成四级暴击>
-<ItemShow|x=305.0|y=435.0|width=70|height=70|itemid=<$STR(N$暴击Idx5)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成五级暴击>
-<CheckBox|x=376.0|y=453.0|nimg=public/1900000550.png|checkboxid=1|pimg=public/1900000551.png|default=1>
-<Text|x=411.0|y=456.0|color=255|size=18|text=点击图标合成>
-<Text|x=21.0|y=501.0|color=255|size=18|text=攻伤宝石:>
-<ItemShow|x=108.0|y=485.0|width=70|height=70|itemid=<$STR(N$攻伤Idx1)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成一级攻伤>
-<ItemShow|x=157.0|y=485.0|width=70|height=70|itemid=<$STR(N$攻伤Idx2)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成二级攻伤>
-<ItemShow|x=206.0|y=485.0|width=70|height=70|itemid=<$STR(N$攻伤Idx3)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成三级攻伤>
-<ItemShow|x=255.0|y=485.0|width=70|height=70|itemid=<$STR(N$攻伤Idx4)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成四级攻伤>
-<ItemShow|x=305.0|y=485.0|width=70|height=70|itemid=<$STR(N$攻伤Idx5)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成五级攻伤>
-<CheckBox|x=376.0|y=503.0|nimg=public/1900000550.png|checkboxid=1|pimg=public/1900000551.png|default=1>
-<Text|x=411.0|y=506.0|color=255|size=18|text=点击图标合成>
-<Text|x=21.0|y=551.0|color=255|size=18|text=吸收宝石:>
-<ItemShow|x=108.0|y=535.0|width=70|height=70|itemid=<$STR(N$吸收Idx1)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成一级吸收>
-<ItemShow|x=157.0|y=535.0|width=70|height=70|itemid=<$STR(N$吸收Idx2)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成二级吸收>
-<ItemShow|x=206.0|y=535.0|width=70|height=70|itemid=<$STR(N$吸收Idx3)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成三级吸收>
-<ItemShow|x=255.0|y=535.0|width=70|height=70|itemid=<$STR(N$吸收Idx4)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成四级吸收>
-<ItemShow|x=305.0|y=535.0|width=70|height=70|itemid=<$STR(N$吸收Idx5)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成五级吸收>
-<CheckBox|x=376.0|y=553.0|nimg=public/1900000550.png|checkboxid=1|pimg=public/1900000551.png|default=1>
-<Text|x=411.0|y=556.0|color=255|size=18|text=点击图标合成>
-<Button|x=544.0|y=400.0|nimg=public/1900000612.png|color=250|size=18|text=抽奖宝石|link=@大米宝石抽奖>
-<Button|x=544.0|y=482.0|nimg=public/1900000612.png|color=250|size=18|text=购买锤子|link=@装备镶嵌啊#购买宝石=1>
-<Button|x=544.0|y=545.0|nimg=public/1900000612.png|color=250|size=18|text=一键回收|link=@一键回收宝石>
-<Button|x=654.0|y=398.0|color=255|size=18|nimg=public/1900001024.png>
-<Button|x=654.0|y=544.0|color=255|size=18|nimg=public/1900001024.png>
-<Text|x=544.0|y=456.0|color=251|size=18|text=200大米*1个>
+; <Img|width=700|height=600|move=0|img=public/bg_npc_04.jpg|reset=1|loadDelay=1|bg=1>
+; <Layout|x=670.0|y=3.0|width=80|height=80|link=@exit>
+; <Button|x=699.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+; <Text|a=0|x=32.0|y=15.0|tipsx=10|tipsy=80|color=250|size=18|text=◆◆◆◆>
+; <Text|a=0|x=120.0|y=15.0|tipsx=10|tipsy=80|color=161|size=18|text=◆◆◆◆>
+; <Text|a=0|x=208.0|y=15.0|tipsx=10|tipsy=80|color=231|size=18|text=◆◆◆◆>
+; <Text|a=0|x=440.0|y=15.0|tipsx=10|tipsy=80|color=249|size=18|text=◆◆◆◆>
+; <Text|a=0|x=32.0|y=35.0|tipsx=10|tipsy=80|color=250|size=18|text=放入装备>
+; <Text|a=0|x=120.0|y=35.0|tipsx=10|tipsy=80|color=161|size=18|text=放入宝石>
+; <Text|a=0|x=208.0|y=35.0|tipsx=10|tipsy=80|color=231|size=18|text=开孔放入>
+; <Text|a=0|x=440.0|y=35.0|tipsx=10|tipsy=80|color=249|size=18|text=拆除放入>
+; <Text|a=0|x=32.0|y=55.0|tipsx=10|tipsy=80|color=250|size=18|text=↓↓↓↓>
+; <Text|a=0|x=120.0|y=55.0|tipsx=10|tipsy=80|color=161|size=18|text=↓↓↓↓>
+; <Text|a=0|x=208.0|y=55.0|tipsx=10|tipsy=80|color=231|size=18|text=↓↓↓↓>
+; <Text|a=0|x=440.0|y=55.0|tipsx=10|tipsy=80|color=249|size=18|text=↓↓↓↓>
+; <ITEMBOX|x=31.0|y=83.0|width=55|height=55|boxindex=0|stdmode=5,10,11,63,28,62,16,48,15,19,51,30,26,22,23,64,65,52,20,21,7,53|tipsx=1|tipsy=65|img=public/1900000651_3.png>
+; <ITEMBOX|x=118.0|y=83.0|width=55|height=55|boxindex=1|stdmode=46,42,45|tipsx=1|tipsy=65|img=public/1900000651_3.png>
+; <ITEMBOX|x=207.0|y=83.0|width=55|height=55|boxindex=3|stdmode=*|tipsx=1|tipsy=65|img=public/1900000651_3.png>
+; <ITEMBOX|x=437.0|y=83.0|width=55|height=55|boxindex=2|stdmode=5,10,11,63,28,62,16,48,15,19,51,30,26,22,23,64,65,52,20,21,7,53|img=public/1900000651_3.png>
+; <Text|a=0|x=69.0|y=155.0|tipsx=10|tipsy=80|color=251|size=18|text=开始镶嵌|link=@开始镶嵌>
+; <Text|a=0|x=200.0|y=155.0|tipsx=10|tipsy=80|color=251|size=18|text=开始打孔|link=@开始开孔>
+; <ItemShow|x=356.0|y=135.0|width=70|height=70|itemid=<$STR(N$第1个孔宝石IDX)>|itemcount=1|showtips=1|color=250|bgtype=1>
+; <ItemShow|x=443.0|y=135.0|width=70|height=70|itemid=<$STR(N$第2个孔宝石IDX)>|itemcount=1|showtips=1|color=250|bgtype=1>
+; <ItemShow|x=530.0|y=135.0|width=70|height=70|itemid=<$STR(N$第3个孔宝石IDX)>|itemcount=1|showtips=1|color=250|bgtype=1>
+; <Text|x=21.0|y=249.0|color=255|size=18|text=力量宝石:>
+; <ItemShow|x=108.0|y=233.0|width=70|height=70|itemid=<$STR(N$力量Idx1)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成一级力量>
+; <ItemShow|x=157.0|y=233.0|width=70|height=70|itemid=<$STR(N$力量Idx2)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成二级力量>
+; <ItemShow|x=206.0|y=233.0|width=70|height=70|itemid=<$STR(N$力量Idx3)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成三级力量>
+; <ItemShow|x=255.0|y=233.0|width=70|height=70|itemid=<$STR(N$力量Idx4)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成四级力量>
+; <ItemShow|x=305.0|y=233.0|width=70|height=70|itemid=<$STR(N$力量Idx5)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成五级力量>
+; <CheckBox|x=376.0|y=251.0|nimg=public/1900000550.png|checkboxid=1|pimg=public/1900000551.png|default=1>
+; <Text|x=411.0|y=254.0|color=255|size=18|text=点击图标合成>
+; <Text|x=21.0|y=299.0|color=255|size=18|text=智力宝石:>
+; <ItemShow|x=108.0|y=283.0|width=70|height=70|itemid=<$STR(N$智力Idx1)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成一级智力>
+; <ItemShow|x=157.0|y=283.0|width=70|height=70|itemid=<$STR(N$智力Idx2)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成二级智力>
+; <ItemShow|x=206.0|y=283.0|width=70|height=70|itemid=<$STR(N$智力Idx3)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成三级智力>
+; <ItemShow|x=255.0|y=283.0|width=70|height=70|itemid=<$STR(N$智力Idx4)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成四级智力>
+; <ItemShow|x=305.0|y=283.0|width=70|height=70|itemid=<$STR(N$智力Idx5)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成五级智力>
+; <CheckBox|x=376.0|y=301.0|nimg=public/1900000550.png|checkboxid=1|pimg=public/1900000551.png|default=1>
+; <Text|x=411.0|y=304.0|color=255|size=18|text=点击图标合成>
+; <Text|x=21.0|y=349.0|color=255|size=18|text=精神宝石:>
+; <ItemShow|x=108.0|y=333.0|width=70|height=70|itemid=<$STR(N$精神Idx1)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成一级精神>
+; <ItemShow|x=157.0|y=333.0|width=70|height=70|itemid=<$STR(N$精神Idx2)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成二级精神>
+; <ItemShow|x=206.0|y=333.0|width=70|height=70|itemid=<$STR(N$精神Idx3)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成三级精神>
+; <ItemShow|x=255.0|y=333.0|width=70|height=70|itemid=<$STR(N$精神Idx4)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成四级精神>
+; <ItemShow|x=305.0|y=333.0|width=70|height=70|itemid=<$STR(N$精神Idx5)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成五级精神>
+; <CheckBox|x=376.0|y=351.0|nimg=public/1900000550.png|checkboxid=1|pimg=public/1900000551.png|default=1>
+; <Text|x=411.0|y=354.0|color=255|size=18|text=点击图标合成>
+; <Text|x=21.0|y=400.0|color=255|size=18|text=生命宝石:>
+; <ItemShow|x=108.0|y=384.0|width=70|height=70|itemid=<$STR(N$生命Idx1)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成一级生命>
+; <ItemShow|x=157.0|y=384.0|width=70|height=70|itemid=<$STR(N$生命Idx2)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成二级生命>
+; <ItemShow|x=206.0|y=384.0|width=70|height=70|itemid=<$STR(N$生命Idx3)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成三级生命>
+; <ItemShow|x=255.0|y=384.0|width=70|height=70|itemid=<$STR(N$生命Idx4)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成四级生命>
+; <ItemShow|x=305.0|y=384.0|width=70|height=70|itemid=<$STR(N$生命Idx5)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成五级生命>
+; <CheckBox|x=376.0|y=402.0|nimg=public/1900000550.png|checkboxid=1|pimg=public/1900000551.png|default=1>
+; <Text|x=411.0|y=405.0|color=255|size=18|text=点击图标合成>
+; <Text|x=21.0|y=451.0|color=255|size=18|text=暴击宝石:>
+; <ItemShow|x=108.0|y=435.0|width=70|height=70|itemid=<$STR(N$暴击Idx1)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成一级暴击>
+; <ItemShow|x=157.0|y=435.0|width=70|height=70|itemid=<$STR(N$暴击Idx2)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成二级暴击>
+; <ItemShow|x=206.0|y=435.0|width=70|height=70|itemid=<$STR(N$暴击Idx3)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成三级暴击>
+; <ItemShow|x=255.0|y=435.0|width=70|height=70|itemid=<$STR(N$暴击Idx4)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成四级暴击>
+; <ItemShow|x=305.0|y=435.0|width=70|height=70|itemid=<$STR(N$暴击Idx5)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成五级暴击>
+; <CheckBox|x=376.0|y=453.0|nimg=public/1900000550.png|checkboxid=1|pimg=public/1900000551.png|default=1>
+; <Text|x=411.0|y=456.0|color=255|size=18|text=点击图标合成>
+; <Text|x=21.0|y=501.0|color=255|size=18|text=攻伤宝石:>
+; <ItemShow|x=108.0|y=485.0|width=70|height=70|itemid=<$STR(N$攻伤Idx1)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成一级攻伤>
+; <ItemShow|x=157.0|y=485.0|width=70|height=70|itemid=<$STR(N$攻伤Idx2)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成二级攻伤>
+; <ItemShow|x=206.0|y=485.0|width=70|height=70|itemid=<$STR(N$攻伤Idx3)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成三级攻伤>
+; <ItemShow|x=255.0|y=485.0|width=70|height=70|itemid=<$STR(N$攻伤Idx4)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成四级攻伤>
+; <ItemShow|x=305.0|y=485.0|width=70|height=70|itemid=<$STR(N$攻伤Idx5)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成五级攻伤>
+; <CheckBox|x=376.0|y=503.0|nimg=public/1900000550.png|checkboxid=1|pimg=public/1900000551.png|default=1>
+; <Text|x=411.0|y=506.0|color=255|size=18|text=点击图标合成>
+; <Text|x=21.0|y=551.0|color=255|size=18|text=吸收宝石:>
+; <ItemShow|x=108.0|y=535.0|width=70|height=70|itemid=<$STR(N$吸收Idx1)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成一级吸收>
+; <ItemShow|x=157.0|y=535.0|width=70|height=70|itemid=<$STR(N$吸收Idx2)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成二级吸收>
+; <ItemShow|x=206.0|y=535.0|width=70|height=70|itemid=<$STR(N$吸收Idx3)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成三级吸收>
+; <ItemShow|x=255.0|y=535.0|width=70|height=70|itemid=<$STR(N$吸收Idx4)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成四级吸收>
+; <ItemShow|x=305.0|y=535.0|width=70|height=70|itemid=<$STR(N$吸收Idx5)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成五级吸收>
+; <CheckBox|x=376.0|y=553.0|nimg=public/1900000550.png|checkboxid=1|pimg=public/1900000551.png|default=1>
+; <Text|x=411.0|y=556.0|color=255|size=18|text=点击图标合成>
+; <Button|x=544.0|y=400.0|nimg=public/1900000612.png|color=250|size=18|text=抽奖宝石|link=@灵符宝石抽奖>
+; <Button|x=544.0|y=482.0|nimg=public/1900000612.png|color=250|size=18|text=购买锤子|link=@装备镶嵌啊#购买宝石=1>
+; <Button|x=544.0|y=545.0|nimg=public/1900000612.png|color=250|size=18|text=一键回收|link=@一键回收宝石>
+; <Button|x=654.0|y=398.0|color=255|size=18|nimg=public/1900001024.png>
+; <Button|x=654.0|y=544.0|color=255|size=18|nimg=public/1900001024.png>
+; <Text|x=544.0|y=456.0|color=251|size=18|text=200灵符*1个>
 
 
+<Img|show=0|bg=1|loadDelay=1|move=1|esc=1|img=custom/hecheng/nbshc.png|reset=1>
+<Layout|x=724.0|y=-19.0|width=80|height=80|link=@exit>
+<Button|x=750.0|y=0.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<ITEMBOX|x=356.0|y=136.0|width=55|height=55|boxindex=0|stdmode=5,10,11,63,28,62,16,48,15,19,51,30,26,22,23,64,65,52,20,21,7,53|tipsx=1|tipsy=65|img=public/1900000651_3.png>
+<ITEMBOX|x=584.0|y=134.0|width=55|height=55|boxindex=1|stdmode=46,42,45|tipsx=1|tipsy=65|img=public/1900000651_3.png>
+<Button|x=300.0|y=400.0|color=251|size=18|pimg=custom/button/ann2.png|nimg=custom/button/ann1.png|text=开始镶嵌|link=@开始镶嵌>
+<ITEMBOX|x=101.0|y=104.0|width=55|height=55|boxindex=3|stdmode=*|tipsx=1|tipsy=65|img=public/1900000664.png>
+<Text|x=94.0|y=70.0|color=250|size=18|text=装备打孔>
+<ITEMBOX|x=101.0|y=277.0|width=55|height=55|boxindex=2|stdmode=5,10,11,63,28,62,16,48,15,19,51,30,26,22,23,64,65,52,20,21,7,53|img=public/1900000651.png>
+<Button|x=74.0|y=172.0|color=251|size=18|pimg=custom/button/ann2.png|nimg=custom/button/ann1.png|text=装备打孔|link=@开始开孔>
+<Text|x=94.0|y=244.0|color=250|size=18|text=拆除放入>
+<Button|x=22.0|y=420.0|width=60|pimg=custom/button/ann2.png|color=251|size=18|nimg=custom/button/ann1.png|text=拆除1|link=@拆除1>
+<Button|x=97.0|y=420.0|width=60|pimg=custom/button/ann2.png|color=251|size=18|nimg=custom/button/ann1.png|text=拆除2|link=@拆除2>
+<Button|x=173.0|y=420.0|width=60|pimg=custom/button/ann2.png|color=251|size=18|nimg=custom/button/ann1.png|text=拆除3|link=@拆除3>
+<Button|x=192.0|y=117.0|tips={第一个孔需要：一把开孔的锤子*1/FCOLOR=250}^{第二个孔需要：一把开孔的锤子*2/FCOLOR=249}^{第三个孔需要：一把开孔的锤子*3/FCOLOR=254}|size=16|nimg=public/1900001024.png|color=255>
+<Text|x=348.0|y=60.0|outline=2|color=250|size=18|text=放入装备>
+<Text|x=574.0|y=60.0|outline=2|color=250|size=18|text=放入宝石>
+<Button|x=570.0|y=400.0|color=251|size=18|pimg=custom/button/ann2.png|nimg=custom/button/ann1.png|text=宝石合成|link=@宝石合成界面>
+<Text|x=442.0|y=366.0|outline=2|color=251|size=18|text=200灵符*1个>
+<Button|x=437.0|y=400.0|color=250|size=18|pimg=custom/button/ann2.png|nimg=custom/button/ann1.png|text=购买锤子|link=@装备镶嵌啊#购买宝石=1>
+<ItemShow|x=19.0|y=345.0|width=70|height=70|itemid=<$STR(N$第1个孔宝石IDX)>|itemcount=1|showtips=1|color=250|bgtype=1>
+<ItemShow|x=94.0|y=345.0|width=70|height=70|itemid=<$STR(N$第2个孔宝石IDX)>|itemcount=1|showtips=1|color=250|bgtype=1>
+<ItemShow|x=170.0|y=345.0|width=70|height=70|itemid=<$STR(N$第3个孔宝石IDX)>|itemcount=1|showtips=1|color=250|bgtype=1>
+
+; <$STR(S$拆除按钮1)>
+; <$STR(S$拆除按钮2)>
+; <$STR(S$拆除按钮3)>
 
 #if
 equal S$购买宝石 1
@@ -351,38 +248,133 @@ mov S$购买宝石
 <Button|x=522.0|y=223.0|pimg=public/1900000511.png|size=18|color=255|nimg=public/1900000510.png|link=@装备镶嵌啊>
 
 
-; <Text|a=0|x=356.0|y=215.0|tipsx=10|tipsy=80|color=255|size=18|text=　<$STR(S$拆除按钮1)>　　<$STR(S$拆除按钮2)>　　<$STR(S$拆除按钮3)>>
-; <Text|a=0|x=32.0|y=271.0|tipsx=10|tipsy=80|color=249|size=18|text=力量宝石：>
-; <Text|a=0|x=142.0|y=271.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(S$力量1)> <$STR(S$力量2)> <$STR(S$力量3)> <$STR(S$力量4)> <$STR(S$力量5)><$STR(S$回收124)>>
-; <Text|a=0|x=1198.0|y=355.0|tipsx=10|tipsy=80|color=161|size=18|text=←点击图标合成>
-; <Text|a=0|x=32.0|y=351.0|tipsx=10|tipsy=80|color=249|size=18|text=智力宝石：>
-; <Text|a=0|x=142.0|y=351.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(S$智力1)> <$STR(S$智力2)> <$STR(S$智力3)> <$STR(S$智力4)> <$STR(S$智力5)><$STR(S$回收125)>>
-; <Text|a=0|x=1198.0|y=435.0|tipsx=10|tipsy=80|color=161|size=18|text=←点击图标合成>
-; <Text|a=0|x=32.0|y=431.0|tipsx=10|tipsy=80|color=249|size=18|text=精神宝石：>
-; <Text|a=0|x=142.0|y=431.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(S$精神1)> <$STR(S$精神2)> <$STR(S$精神3)> <$STR(S$精神4)> <$STR(S$精神5)><$STR(S$回收126)>>
-; <Text|a=0|x=1198.0|y=515.0|tipsx=10|tipsy=80|color=161|size=18|text=←点击图标合成>
-; <Text|a=0|x=32.0|y=511.0|tipsx=10|tipsy=80|color=249|size=18|text=生命宝石：>
-; <Text|a=0|x=142.0|y=511.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(S$生命1)> <$STR(S$生命2)> <$STR(S$生命3)> <$STR(S$生命4)> <$STR(S$生命5)><$STR(S$回收127)>>
-; <Text|a=0|x=1198.0|y=595.0|tipsx=10|tipsy=80|color=161|size=18|text=←点击图标合成>
-; <Text|a=0|x=32.0|y=675.0|tipsx=10|tipsy=80|color=249|size=18|text=暴击宝石：>
-; <Text|a=0|x=142.0|y=675.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(S$暴击1)> <$STR(S$暴击2)> <$STR(S$暴击3)> <$STR(S$暴击4)> <$STR(S$暴击5)><$STR(S$回收128)>>
-; <Text|a=0|x=1198.0|y=675.0|tipsx=10|tipsy=80|color=161|size=18|text=←点击图标合成>
-; <Text|a=0|x=1352.0|y=675.0|tipsx=10|tipsy=80|color=251|size=18|text=抽奖宝石|link=@大米宝石抽奖>
-; <Text|a=0|x=32.0|y=755.0|tipsx=10|tipsy=80|color=249|size=18|text=攻伤宝石：>
-; <Text|a=0|x=142.0|y=755.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(S$攻伤1)> <$STR(S$攻伤2)> <$STR(S$攻伤3)> <$STR(S$攻伤4)> <$STR(S$攻伤5)><$STR(S$回收129)>>
-; <Text|a=0|x=1198.0|y=755.0|tipsx=10|tipsy=80|color=161|size=18|text=←点击图标合成>
-; <Text|a=0|x=1352.0|y=755.0|tipsx=10|tipsy=80|color=251|size=18|text=购买一把开孔的锤子|link=@@InPutInteger88(注意：200点大米=一把开孔的锤子，请输入购买数量，1-100数值之间)>
-; <Text|a=0|x=32.0|y=835.0|tipsx=10|tipsy=80|color=249|size=18|text=吸收宝石：>
-; <Text|a=0|x=142.0|y=835.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(S$吸收1)> <$STR(S$吸收2)> <$STR(S$吸收3)> <$STR(S$吸收4)> <$STR(S$吸收5)><$STR(S$回收130)>>
-; <Text|a=0|x=1198.0|y=835.0|tipsx=10|tipsy=80|color=161|size=18|text=←点击图标合成>
-; <Text|a=0|x=1352.0|y=835.0|tipsx=10|tipsy=80|color=251|size=18|text=一键回收宝石|link=@一键回收宝石>
 
 
 
+[@宝石合成界面]
+#if
+check [124] 0
+#act
+mov S$回收124 0
+#ELSEACT
+mov S$回收124 1
 
+#if
+check [125] 0
+#act
+mov S$回收125 0
+#elseact
+mov S$回收125 1
 
+#if
+check [126] 0
+#act
+mov S$回收126 0
+#elseact
+mov S$回收126 1
 
+#if
+check [127] 0
+#act
+mov S$回收127 0
+#elseact
+mov S$回收127 1
 
+#if
+check [128] 0
+#act
+mov S$回收128 0
+#elseact
+mov S$回收128 1
+
+#if
+check [129] 0
+#act
+mov S$回收129 0
+#elseact
+mov S$回收129 1
+
+#if
+check [130] 0
+#act
+mov S$回收130 0
+#elseact
+mov S$回收130 1
+
+#IF
+#SAY
+<Img|show=0|bg=1|loadDelay=1|move=0|esc=1|img=custom/hecheng/cj6.png|reset=1>
+<Layout|x=721.0|y=-18.0|width=80|height=80|link=@exit>
+<Button|x=750.0|y=0.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Button|x=18.0|y=64.0|nimg=custom/button/an_4.png|color=255|size=18|text=宝石合成>
+<Text|x=155.0|y=71.0|color=255|size=18|text=力量宝石:>
+<ItemShow|x=242.0|y=55.0|width=70|height=70|itemid=<$STR(N$力量Idx1)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成一级力量>
+<ItemShow|x=291.0|y=55.0|width=70|height=70|itemid=<$STR(N$力量Idx2)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成二级力量>
+<ItemShow|x=340.0|y=55.0|width=70|height=70|itemid=<$STR(N$力量Idx3)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成三级力量>
+<ItemShow|x=389.0|y=55.0|width=70|height=70|itemid=<$STR(N$力量Idx4)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成四级力量>
+<ItemShow|x=439.0|y=55.0|width=70|height=70|itemid=<$STR(N$力量Idx5)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成五级力量>
+<CheckBox|x=649.0|y=73.0|nimg=public/1900000550.png|checkboxid=1|pimg=public/1900000551.png|default=<$STR(S$回收124)>|link=@回收开关124>
+<Text|x=501.0|y=76.0|color=255|size=18|text=点击物品合成>
+<Text|x=155.0|y=121.0|color=255|size=18|text=智力宝石:>
+<ItemShow|x=242.0|y=105.0|width=70|height=70|itemid=<$STR(N$智力Idx1)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成一级智力>
+<ItemShow|x=291.0|y=105.0|width=70|height=70|itemid=<$STR(N$智力Idx2)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成二级智力>
+<ItemShow|x=340.0|y=105.0|width=70|height=70|itemid=<$STR(N$智力Idx3)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成三级智力>
+<ItemShow|x=389.0|y=105.0|width=70|height=70|itemid=<$STR(N$智力Idx4)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成四级智力>
+<ItemShow|x=439.0|y=105.0|width=70|height=70|itemid=<$STR(N$智力Idx5)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成五级智力>
+<CheckBox|x=649.0|y=123.0|nimg=public/1900000550.png|checkboxid=1|pimg=public/1900000551.png|default=1<$STR(S$回收125)>|link=@回收开关125>
+<Text|x=501.0|y=126.0|color=255|size=18|text=点击物品合成>
+<Text|x=155.0|y=171.0|color=255|size=18|text=精神宝石:>
+<ItemShow|x=242.0|y=155.0|width=70|height=70|itemid=<$STR(N$精神Idx1)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成一级精神>
+<ItemShow|x=291.0|y=155.0|width=70|height=70|itemid=<$STR(N$精神Idx2)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成二级精神>
+<ItemShow|x=340.0|y=155.0|width=70|height=70|itemid=<$STR(N$精神Idx3)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成三级精神>
+<ItemShow|x=389.0|y=155.0|width=70|height=70|itemid=<$STR(N$精神Idx4)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成四级精神>
+<ItemShow|x=439.0|y=155.0|width=70|height=70|itemid=<$STR(N$精神Idx5)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成五级精神>
+<CheckBox|x=649.0|y=173.0|nimg=public/1900000550.png|checkboxid=1|pimg=public/1900000551.png|default=<$STR(S$回收126)>|link=@回收开关126>
+<Text|x=501.0|y=176.0|color=255|size=18|text=点击物品合成>
+<Text|x=155.0|y=222.0|color=255|size=18|text=生命宝石:>
+<ItemShow|x=242.0|y=206.0|width=70|height=70|itemid=<$STR(N$生命Idx1)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成一级生命>
+<ItemShow|x=291.0|y=206.0|width=70|height=70|itemid=<$STR(N$生命Idx2)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成二级生命>
+<ItemShow|x=340.0|y=206.0|width=70|height=70|itemid=<$STR(N$生命Idx3)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成三级生命>
+<ItemShow|x=389.0|y=206.0|width=70|height=70|itemid=<$STR(N$生命Idx4)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成四级生命>
+<ItemShow|x=439.0|y=206.0|width=70|height=70|itemid=<$STR(N$生命Idx5)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成五级生命>
+<CheckBox|x=649.0|y=224.0|nimg=public/1900000550.png|checkboxid=1|pimg=public/1900000551.png|default=<$STR(S$回收127)>|link=@回收开关127>
+<Text|x=501.0|y=227.0|color=255|size=18|text=点击物品合成>
+<Text|x=155.0|y=273.0|color=255|size=18|text=暴击宝石:>
+<ItemShow|x=242.0|y=257.0|width=70|height=70|itemid=<$STR(N$暴击Idx1)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成一级暴击>
+<ItemShow|x=291.0|y=257.0|width=70|height=70|itemid=<$STR(N$暴击Idx2)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成二级暴击>
+<ItemShow|x=340.0|y=257.0|width=70|height=70|itemid=<$STR(N$暴击Idx3)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成三级暴击>
+<ItemShow|x=389.0|y=257.0|width=70|height=70|itemid=<$STR(N$暴击Idx4)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成四级暴击>
+<ItemShow|x=439.0|y=257.0|width=70|height=70|itemid=<$STR(N$暴击Idx5)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成五级暴击>
+<CheckBox|x=649.0|y=275.0|nimg=public/1900000550.png|checkboxid=1|pimg=public/1900000551.png|default=<$STR(S$回收128)>|link=@回收开关128>
+<Text|x=501.0|y=278.0|color=255|size=18|text=点击物品合成>
+<Text|x=155.0|y=323.0|color=255|size=18|text=攻伤宝石:>
+<ItemShow|x=242.0|y=307.0|width=70|height=70|itemid=<$STR(N$攻伤Idx1)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成一级攻伤>
+<ItemShow|x=291.0|y=307.0|width=70|height=70|itemid=<$STR(N$攻伤Idx2)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成二级攻伤>
+<ItemShow|x=340.0|y=307.0|width=70|height=70|itemid=<$STR(N$攻伤Idx3)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成三级攻伤>
+<ItemShow|x=389.0|y=307.0|width=70|height=70|itemid=<$STR(N$攻伤Idx4)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成四级攻伤>
+<ItemShow|x=439.0|y=307.0|width=70|height=70|itemid=<$STR(N$攻伤Idx5)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成五级攻伤>
+<CheckBox|x=649.0|y=325.0|nimg=public/1900000550.png|checkboxid=1|pimg=public/1900000551.png|default=<$STR(S$回收129)>|link=@回收开关129>
+<Text|x=501.0|y=328.0|color=255|size=18|text=点击物品合成>
+<Text|x=155.0|y=373.0|color=255|size=18|text=吸收宝石:>
+<ItemShow|x=242.0|y=357.0|width=70|height=70|itemid=<$STR(N$吸收Idx1)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成一级吸收>
+<ItemShow|x=291.0|y=357.0|width=70|height=70|itemid=<$STR(N$吸收Idx2)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成二级吸收>
+<ItemShow|x=340.0|y=357.0|width=70|height=70|itemid=<$STR(N$吸收Idx3)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成三级吸收>
+<ItemShow|x=389.0|y=357.0|width=70|height=70|itemid=<$STR(N$吸收Idx4)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成四级吸收>
+<ItemShow|x=439.0|y=357.0|width=70|height=70|itemid=<$STR(N$吸收Idx5)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成五级吸收>
+<CheckBox|x=649.0|y=375.0|nimg=public/1900000550.png|checkboxid=1|pimg=public/1900000551.png|default=<$STR(S$回收130)>|link=@回收开关130>
+<Text|x=501.0|y=378.0|color=255|size=18|text=点击物品合成>
+<Button|x=156.0|y=449.0|color=251|size=18|pimg=custom/button/ann2.png|nimg=custom/button/ann1.png|text=抽奖宝石|link=@灵符宝石抽奖>
+<Button|x=399.0|y=449.0|color=251|size=18|pimg=custom/button/ann2.png|nimg=custom/button/ann1.png|text=一键回收|link=@一键回收宝石>
+<Button|x=276.0|y=450.0|tips={99灵符抽一次/FCOLOR=253}^{随机抽取1-3级宝石/FCOLOR=255}^{1级宝石几率：90%/FCOLOR=250}^{2级宝石几率：7%/FCOLOR=251}^{3级宝石几率：3%/FCOLOR=253}^{一把开孔的锤子几率：5%/FCOLOR=254}^{注意：抽到不满意的宝石请自行消耗/FCOLOR=249}|size=18|nimg=public/1900001024.png|color=255>
+<Button|x=520.0|y=450.0|tips={一级宝石：5000元宝/FCOLOR=250}^{二级宝石：20000元宝/FCOLOR=251}^{三级宝石：50000元宝/FCOLOR=253}^{注意：请将保留的宝石先存放仓库，回收后概不负责/FCOLOR=249}|size=18|nimg=public/1900001024.png|color=255>
+<Button|x=588.0|y=449.0|pimg=custom/button/ann2.png|nimg=custom/button/ann1.png|color=250|size=18|text=返回镶嵌界面|link=@装备镶嵌啊>
+<Text|x=687.0|y=76|color=250|size=18|text=回收>
+<Text|x=687.0|y=175.0|color=250|size=18|text=回收>
+<Text|x=687.0|y=125.0|color=250|size=18|text=回收>
+<Text|x=687.0|y=226.0|color=250|size=18|text=回收>
+<Text|x=687.0|y=277.0|color=250|size=18|text=回收>
+<Text|x=687.0|y=328.0|color=250|size=18|text=回收>
+<Text|x=687.0|y=377.0|color=250|size=18|text=回收>
 
 
 
@@ -431,21 +423,21 @@ MUL N87 200
 
 
 #IF
-CHECKGAMEPOINT < <$STR(N87)>
+checkmoney 灵符 < <$STR(N87)>
 #ACT
-messagebox \\对不起，您包袱里的大米不够<$STR(N87)>，无法购买！！
+messagebox \\对不起，您包袱里的灵符不够<$STR(N87)>，无法购买！！
 BREAK
 
 
 
 
 #or
-CHECKGAMEPOINT > <$STR(N87)>
-CHECKGAMEPOINT = <$STR(N87)>
+checkmoney 灵符 > <$STR(N87)>
+checkmoney 灵符 = <$STR(N87)>
 #ACT
-GAMEPOINT - <$STR(N87)>
+MONEY 灵符 - <$STR(N87)>
 GiveStateItem <$Str(S$给材料)> <$NPCINPUT(3)> 1 1 0 0 1 1 0 1
-MessageBox \\恭喜您，用<$STR(N87)>大米购买获得：(<$NPCINPUT(3)>)个<$Str(S$给材料)>
+MessageBox \\恭喜您，用<$STR(N87)>灵符购买获得：(<$NPCINPUT(3)>)个<$Str(S$给材料)>
 goto @货币兑换
 break
 
@@ -453,63 +445,93 @@ break
 
 
 [@一键回收宝石]
+#ACT
+MOV N$一级宝石回收数量 0
+MOV N$二级宝石回收数量 0
+MOV N$三级宝石回收数量 0
 
 
 #IF
 check [124] 1
 #ACT
-TakeBagItem |一级力量| 30 5000 0 0 50000 N10 0
-TakeBagItem |二级力量| 20 20000 0 0 200000 N10 0
-TakeBagItem |三级力量| 10 50000 0 0 500000 N10 0
+TakeBagItem |一级力量| 30 N10 0
+TakeBagItem |二级力量| 20 N11 0
+TakeBagItem |三级力量| 10 N12 0
+
+INC N$一级宝石回收数量 <$str(N10)>
+INC N$二级宝石回收数量 <$str(N11)>
+INC N$三级宝石回收数量 <$str(N12)>
+
 
 #IF
 check [125] 1
 #ACT
-TakeBagItem 一级智力| 30 5000 0 0 50000 N10 0
-TakeBagItem 二级智力| 20 20000 0 0 200000 N10 0
-TakeBagItem 三级智力| 10 50000 0 0 500000 N10 0
+TakeBagItem 一级智力| 30 N10 0
+TakeBagItem 二级智力| 20 N11 0
+TakeBagItem 三级智力| 10 N12 0
+INC N$一级宝石回收数量 <$str(N10)>
+INC N$二级宝石回收数量 <$str(N11)>
+INC N$三级宝石回收数量 <$str(N12)>
 
 
 #IF
 check [126] 1
 #ACT
-TakeBagItem 一级精神| 30 5000 0 0 50000 N10 0
-TakeBagItem 二级精神| 20 20000 0 0 200000 N10 0
-TakeBagItem 三级精神| 10 50000 0 0 500000 N10 0
+TakeBagItem 一级精神| 30 N10 0
+TakeBagItem 二级精神| 20 N11 0
+TakeBagItem 三级精神| 10 N12 0
+INC N$一级宝石回收数量 <$str(N10)>
+INC N$二级宝石回收数量 <$str(N11)>
+INC N$三级宝石回收数量 <$str(N12)>
 
 #IF
 check [127] 1
 #ACT
-TakeBagItem 一级生命| 30 5000 0 0 50000 N10 0
-TakeBagItem 二级生命| 20 20000 0 0 200000 N10 0
-TakeBagItem 三级生命| 10 50000 0 0 500000 N10 0
+TakeBagItem 一级生命| 30 N10 0
+TakeBagItem 二级生命| 20 N11 0
+TakeBagItem 三级生命| 10 N12 0
+INC N$一级宝石回收数量 <$str(N10)>
+INC N$二级宝石回收数量 <$str(N11)>
+INC N$三级宝石回收数量 <$str(N12)>
 
 #IF
 check [128] 1
 #ACT
-TakeBagItem 一级暴击| 30 5000 0 0 50000 N10 0
-TakeBagItem 二级暴击| 20 20000 0 0 200000 N10 0
-TakeBagItem 三级暴击| 10 50000 0 0 500000 N10 0
+TakeBagItem 一级暴击| 30 N10 0
+TakeBagItem 二级暴击| 20 N11 0
+TakeBagItem 三级暴击| 10 N12 0
+INC N$一级宝石回收数量 <$str(N10)>
+INC N$二级宝石回收数量 <$str(N11)>
+INC N$三级宝石回收数量 <$str(N12)>
 
 
 #IF
 check [129] 1
 #ACT
-TakeBagItem 一级攻伤| 30 5000 0 0 50000 N10 0
-TakeBagItem 二级攻伤| 20 20000 0 0 200000 N10 0
-TakeBagItem 三级攻伤| 10 50000 0 0 500000 N10 0
+TakeBagItem 一级攻伤| 30 N10 0
+TakeBagItem 二级攻伤| 20 N11 0
+TakeBagItem 三级攻伤| 10 N12 0
+INC N$一级宝石回收数量 <$str(N10)>
+INC N$二级宝石回收数量 <$str(N11)>
+INC N$三级宝石回收数量 <$str(N12)>
 
 
 
 #IF
 check [130] 1
 #ACT
-TakeBagItem 一级吸收| 30 5000 0 0 50000 N10 0
-TakeBagItem 二级吸收| 20 20000 0 0 200000 N10 0
-TakeBagItem 三级吸收| 10 50000 0 0 500000 N10 0
+TakeBagItem 一级吸收| 30 N10 0
+TakeBagItem 二级吸收| 20 N11 0
+TakeBagItem 三级吸收| 10 N12 0
+INC N$一级宝石回收数量 <$str(N10)>
+INC N$二级宝石回收数量 <$str(N11)>
+INC N$三级宝石回收数量 <$str(N12)>
 
-
-
+#IF
+#ACT
+MONEY 元宝 + <$FORMULATION[<$STR(N$一级宝石回收数量)>*5000]>
+MONEY 元宝 + <$FORMULATION[<$STR(N$二级宝石回收数量)>*20000]>
+MONEY 元宝 + <$FORMULATION[<$STR(N$三级宝石回收数量)>*50000]>
 
 
 [@回收开关124]
@@ -517,10 +539,10 @@ TakeBagItem 三级吸收| 10 50000 0 0 500000 N10 0
 check [124] 0
 #act
 set [124] 1
-goto @装备镶嵌啊
+goto @宝石合成界面
 #elseact
 set [124] 0
-goto @装备镶嵌啊
+goto @宝石合成界面
 
 
 [@回收开关125]
@@ -528,10 +550,10 @@ goto @装备镶嵌啊
 check [125] 0
 #act
 set [125] 1
-goto @装备镶嵌啊
+goto @宝石合成界面
 #elseact
 set [125] 0
-goto @装备镶嵌啊
+goto @宝石合成界面
 
 
 [@回收开关126]
@@ -539,20 +561,20 @@ goto @装备镶嵌啊
 check [126] 0
 #act
 set [126] 1
-goto @装备镶嵌啊
+goto @宝石合成界面
 #elseact
 set [126] 0
-goto @装备镶嵌啊
+goto @宝石合成界面
 
 [@回收开关127]
 #if
 check [127] 0
 #act
 set [127] 1
-goto @装备镶嵌啊
+goto @宝石合成界面
 #elseact
 set [127] 0
-goto @装备镶嵌啊
+goto @宝石合成界面
 
 
 [@回收开关128]
@@ -560,30 +582,30 @@ goto @装备镶嵌啊
 check [128] 0
 #act
 set [128] 1
-goto @装备镶嵌啊
+goto @宝石合成界面
 #elseact
 set [128] 0
-goto @装备镶嵌啊
+goto @宝石合成界面
 
 [@回收开关129]
 #if
 check [129] 0
 #act
 set [129] 1
-goto @装备镶嵌啊
+goto @宝石合成界面
 #elseact
 set [129] 0
-goto @装备镶嵌啊
+goto @宝石合成界面
 
 [@回收开关130]
 #if
 check [130] 0
 #act
 set [130] 1
-goto @装备镶嵌啊
+goto @宝石合成界面
 #elseact
 set [130] 0
-goto @装备镶嵌啊
+goto @宝石合成界面
 
 
 
@@ -594,7 +616,7 @@ goto @装备镶嵌啊
 
 
 
-[@大米宝石抽奖]
+[@灵符宝石抽奖]
 
 #IF
 NOT CHECKBAGSIZE  6
@@ -603,14 +625,14 @@ MESSAGEBOX [失败]:\　\　　　　　　您的“包袱位置”不足“6个”空位置！
 break
 
 #IF
-CHECKGAMEPOINT < 99
+checkmoney 灵符 < 99
 #ACT
-MESSAGEBOX 对不起，您当前账户大米不足99点，请及时充值！
+MESSAGEBOX 对不起，您当前账户灵符不足99点，请及时充值！
 BREAK
 
 #IF
 #ACT
-GAMEPOINT - 99
+MONEY 灵符 - 99
 GetRandomText ..\QuestDiary\全部通用限时\抽奖宝石.txt S$随机给宝石奖励
 GIVE <$Str(S$随机给宝石奖励)> 1
 SendCenterMsg 253 0 恭喜您，成功通过抽奖获得：<$Str(S$随机给宝石奖励)> 0 3
@@ -1176,7 +1198,8 @@ BREAK
 
 [@ItemIntoBox3]
 #IF
-EQUAL <$BOXITEM[3].DRILL3> 1
+; EQUAL <$BOXITEM[3].DRILL3> 1
+CHECKDRILLHOLE -1 2
 #ACT
 MESSAGEBOX 对不起，您的<$BOXITEM[3].NAME>已经开三个孔了，不能继续开孔了！
 ReturnBoxItem 3
@@ -1193,9 +1216,20 @@ MessageBox 您放入的装备不支持打孔
 BREAK
 
 [@开始开孔]
+
+
+
 #act
-sendmsg 9 打孔
+; sendmsg 9 打孔
 mov n$装备开孔位置 0
+
+
+#IF
+EQUAL <$BOXITEM[3].NAME>
+#ACT
+SENDMSG 9 请先放入装备
+BREAK
+
 #if
 CHECKDRILLHOLECOUNT -1 = 0
 #act
@@ -1311,7 +1345,8 @@ MESSAGEBOX [拆除失败]：背包至少需要有1个空格。
 #IF
 CHECKSOCKETABLEITEM -1 0 N$拆除宝石序号1 S$拆除宝石名字1
 #ACT
-SOCKETABLEITEM * * * * -1 0 * * 0 *
+; SOCKETABLEITEM * * * * -1 0 * * 0 *
+SOCKETABLEITEM -1 0 0
 give <$STR(S$拆除宝石名字1)> 1
 SENDMSG 6 [镶嵌摘除]:您的装备(<$BOXITEM[2].NAME>)第1个孔的(<$STR(S$拆除宝石名字1)>)拆除成功,拆除后宝石属性消失.
 UpDateBoxItem 2
@@ -1336,7 +1371,8 @@ MESSAGEBOX [拆除失败]：背包至少需要有1个空格。
 #IF
 CHECKSOCKETABLEITEM -1 1 N$拆除宝石序号2 S$拆除宝石名字2
 #ACT
-SOCKETABLEITEM * * * * -1 1 * * 0 *
+; SOCKETABLEITEM * * * * -1 1 * * 0 *
+SOCKETABLEITEM -1 1 0
 give <$STR(S$拆除宝石名字2)> 1
 SENDMSG 6 [镶嵌摘除]:您的装备(<$BOXITEM[2].NAME>)第2个孔的(<$STR(S$拆除宝石名字2)>)拆除成功,拆除后宝石属性消失.
 UpDateBoxItem 2
@@ -1360,7 +1396,8 @@ MESSAGEBOX [拆除失败]：背包至少需要有1个空格。
 #IF
 CHECKSOCKETABLEITEM -1 2 N$拆除宝石序号3 S$拆除宝石名字3
 #ACT
-SOCKETABLEITEM * * * * -1 2 * * 0 *
+; SOCKETABLEITEM * * * * -1 2 * * 0 *
+SOCKETABLEITEM -1 2 0
 give <$STR(S$拆除宝石名字3)> 1
 SENDMSG 6 [镶嵌摘除]:您的装备(<$BOXITEM[2].NAME>)第3个孔的(<$STR(S$拆除宝石名字3)>),拆除成功,拆除后宝石属性消失.
 UpDateBoxItem 2
@@ -1376,42 +1413,42 @@ ReturnBoxItem 2
 MOV N$第1个孔宝石IDX 4525
 MOV N$第2个孔宝石IDX 4530
 MOV N$第3个孔宝石IDX 4535
-MOV S$拆除按钮1 <拆除>
-MOV S$拆除按钮2 <拆除>
-MOV S$拆除按钮3 <拆除>
+; MOV S$拆除按钮1 <拆除>
+; MOV S$拆除按钮2 <拆除>
+; MOV S$拆除按钮3 <拆除>
 GOTO @装备镶嵌啊
 
 [@ItemIntoBox2]
 #act
-sendmsg 9 111
-
-
-<Button|x=351.0|y=196.0|nimg=public/1900000611.png|color=250|size=18|text=拆除>
-<Button|x=438.0|y=196.0|nimg=public/1900000611.png|color=250|size=18|text=拆除>
-<Button|x=525.0|y=196.0|nimg=public/1900000611.png|color=250|size=18|text=拆除>
-
+#IF
+; LARGE <$BOXITEM[2].GINDEX1> 0
+; LARGE <$BOXITEM[2].INDEX> 0
+CHECKSOCKETABLEITEM -1 0 N$第1个孔宝石IDX S1
+#ACT
+sendmsg 9 <$str(S1)>____<$STR(N$第1个孔宝石IDX)>
+; MOV N$第1个孔宝石IDX <$BOXITEM[2].INDEX>
+; DEC N$第1个孔宝石IDX 1
+; MOV S$拆除按钮1 <拆除|243#点击拆除第1个孔的“<$BOXITEM[2].GNAME1>”/@拆除1>
+MOV S$拆除按钮1 <Button|x=22.0|y=420.0|width=60|pimg=custom/button/ann2.png|color=251|size=18|nimg=custom/button/ann1.png|text=拆除|link=@拆除1>
 
 #IF
-LARGE <$BOXITEM[2].GINDEX1> 0
+; LARGE <$BOXITEM[2].GINDEX2> 0
+CHECKSOCKETABLEITEM -1 1 N$第2个孔宝石IDX S2
 #ACT
-MOV N$第1个孔宝石IDX <$BOXITEM[2].GINDEX1>
-DEC N$第1个孔宝石IDX 1
-MOV S$拆除按钮1 <拆除|243#点击拆除第1个孔的“<$BOXITEM[2].GNAME1>”/@拆除1>
-
+sendmsg 9 <$str(S2)>____<$STR(N$第2个孔宝石IDX)>
+; MOV N$第2个孔宝石IDX <$BOXITEM[2].GINDEX2>
+; DEC N$第2个孔宝石IDX 1
+; MOV S$拆除按钮2 <拆除|243#点击拆除第2个孔的“<$BOXITEM[2].GNAME2>”/@拆除2>
+MOV S$拆除按钮2 <Button|x=97.0|y=420.0|width=60|pimg=custom/button/ann2.png|color=251|size=18|nimg=custom/button/ann1.png|text=拆除|link=@拆除2>
 #IF
-LARGE <$BOXITEM[2].GINDEX2> 0
+; LARGE <$BOXITEM[2].GINDEX3> 0
+CHECKSOCKETABLEITEM -1 2 N$第3个孔宝石IDX S3
 #ACT
-MOV N$第2个孔宝石IDX <$BOXITEM[2].GINDEX2>
-DEC N$第2个孔宝石IDX 1
-MOV S$拆除按钮2 <拆除|243#点击拆除第2个孔的“<$BOXITEM[2].GNAME2>”/@拆除2>
-
-#IF
-LARGE <$BOXITEM[2].GINDEX3> 0
-#ACT
-MOV N$第3个孔宝石IDX <$BOXITEM[2].GINDEX3>
-DEC N$第3个孔宝石IDX 1
-MOV S$拆除按钮3 <拆除|243#点击拆除第3个孔的“<$BOXITEM[2].GNAME3>”/@拆除3>
-
+sendmsg 9 <$str(S3)>____<$STR(N$第3个孔宝石IDX)>
+; MOV N$第3个孔宝石IDX <$BOXITEM[2].GINDEX3>
+; DEC N$第3个孔宝石IDX 1
+; MOV S$拆除按钮3 <拆除|243#点击拆除第3个孔的“<$BOXITEM[2].GNAME3>”/@拆除3>
+MOV S$拆除按钮3 <Button|x=173.0|y=420.0|width=60|pimg=custom/button/ann2.png|color=251|size=18|nimg=custom/button/ann1.png|text=拆除|link=@拆除3>
 #IF
 #ACT
 GOTO @装备镶嵌啊
@@ -1428,6 +1465,9 @@ GOTO @装备镶嵌啊
 
 
 [@ItemIntoBox0]
+
+#act
+sendmsg 9 111
 
 #IF
 CHECKSOCKETABLEITEM -1 0 N$宝石的序号1 S$宝石的名字1
@@ -1456,7 +1496,8 @@ MessageBox 您放入的装备不支持镶嵌宝石
 BREAK
 
 #IF
-CHECKDRILLHOLECOUNT -1 = 0
+; CHECKDRILLHOLECOUNT = 0
+CHECKDRILLHOLE -1 0
 #ACT
 MESSAGEBOX 对不起，您的<$BOXITEM[0].NAME>还没有开第一个孔，请先开个孔在来！
 ReturnBoxItem 0
@@ -1693,6 +1734,8 @@ MOV N$宝石序号 <$BOXITEM[1].INDEX>
 
 
 [@开始镶嵌]
+#act
+; sendmsg 9 111
 
 #IF
 CHECKDRILLHOLECOUNT = 0
@@ -1762,6 +1805,7 @@ SOCKETABLEITEM -1 0 <$STR(N$宝石序号)>
 SetUpgradeItem 1
 UpDateBoxItem 1
 SENDUPGRADEITEM
+
 break
 
 [@镶嵌第二个]
@@ -1787,7 +1831,8 @@ CHECKSOCKETABLEITEM -1 3 N$宝石的序号4 S$宝石的名字4
 
 
 #IF
-EQUAL <$BOXITEM[0].DRILL2> 0
+; EQUAL <$BOXITEM[0].DRILL2> 0
+not CHECKDRILLHOLE -1 1
 #ACT
 MESSAGEBOX 对不起，您的<$BOXITEM[0].NAME>还没有开第二个孔，请先开第二个孔在来！
 ReturnBoxItem 0
@@ -1912,7 +1957,8 @@ break
 [@镶嵌第三个]
 
 #IF
-EQUAL <$BOXITEM[0].DRILL3> 0
+; EQUAL <$BOXITEM[0].DRILL3> 0
+not CHECKDRILLHOLE -1 2
 #ACT
 MESSAGEBOX 对不起，您的<$BOXITEM[0].NAME>还没有开第三个孔，请先开第三个孔在来！
 ReturnBoxItem 0

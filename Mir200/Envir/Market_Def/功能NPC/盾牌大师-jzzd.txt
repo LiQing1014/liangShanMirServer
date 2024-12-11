@@ -26,42 +26,42 @@ OPENMERCHANTBIGDLG 1 8 0 0 0 0 0
 <>     <ItemShow:645:0:1:1:1> \ \ \
 <提示：/SCOLOR=254><麒麟臂/SCOLOR=249><乃上古遗留之物，传说非神级强者不能驾驭！/SCOLOR=253>\
 <大哥如果没时间打，可以直接兑换护盾精华，选择适合您的方式即可.../SCOLOR=250>\ \
-<>     <兑换护盾精华*1|250#兑换 护盾精华*1个 需要大米*2点/@购买精华1>   <兑换护盾精华*10|251#兑换 护盾精华*10个 需要大米*20点/@购买精华2>   <兑换护盾精华*100|253#兑换 护盾精华*100个 需要大米*200点/@购买精华3>
+<>     <兑换护盾精华*1|250#兑换 护盾精华*1个 需要灵符*2点/@购买精华1>   <兑换护盾精华*10|251#兑换 护盾精华*10个 需要灵符*20点/@购买精华2>   <兑换护盾精华*100|253#兑换 护盾精华*100个 需要灵符*200点/@购买精华3>
 
 
 [@购买精华3]
 #IF
-CHECKGAMEPOINT > 199
+checkmoney 灵符 > 199
 #ACT
-GAMEPOINT - 200
+MONEY 灵符 - 200
 give 护盾精华 100
 SENDMSG 6 成功购买护盾精华*100!
 BREAK
 #ELSEACT
-MESSAGEBOX [购买失败]:大米点不足!
+MESSAGEBOX [购买失败]:灵符点不足!
 
 
 [@购买精华2]
 #IF
-CHECKGAMEPOINT > 19
+checkmoney 灵符 > 19
 #ACT
-GAMEPOINT - 20
+MONEY 灵符 - 20
 give 护盾精华 10
 SENDMSG 6 成功购买护盾精华*10!
 BREAK
 #ELSEACT
-MESSAGEBOX [购买失败]:大米点不足!
+MESSAGEBOX [购买失败]:灵符点不足!
 
 [@购买精华1]
 #IF
-CHECKGAMEPOINT > 1
+checkmoney 灵符 > 1
 #ACT
-GAMEPOINT - 2
+MONEY 灵符 - 2
 give 护盾精华 1
 SENDMSG 6 成功购买护盾精华*1!
 BREAK
 #ELSEACT
-MESSAGEBOX [购买失败]:大米点不足!
+MESSAGEBOX [购买失败]:灵符点不足!
 
 [@勋章1]
 #IF

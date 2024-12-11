@@ -1,11 +1,11 @@
-; [@通区充值]
-; {
-; #OR
-; ISONMAP wxbd
-; ISONMAP wxyz
-; #ACT
-; MESSAGEBOX 当前地图无法使用此功能！
-; break
+[@通区充值]
+{
+#OR
+ISONMAP wxbd
+ISONMAP wxyz
+#ACT
+MESSAGEBOX 当前地图无法使用此功能！
+break
 
 
 ; #IF
@@ -14,69 +14,69 @@
 ; MOV S$全站充值 <$STR(S6)>
 ; CLEARDELAYGOTO
 
-; #IF
-; equal 获取金额 <$STR(T22)>
-; #ACT
-; MOV S$全站充值 <$STR(S6)>
-; CLEARDELAYGOTO
+#IF
+equal 获取金额 <$STR(T22)>
+#ACT
+MOV S$全站充值 <$STR(S6)>
+CLEARDELAYGOTO
 
-; #IF
-; SMALL <$STR(S$全站充值)> 100
-; #ACT
-; Mov S$文字介绍1 <普通会员/SCOLOR=10>
-; Mov S$文字介绍2 <尊享15.5倍充值/SCOLOR=253>
-; MOV N$充值倍数 155
+#IF
+SMALL <$STR(S$全站充值)> 100
+#ACT
+Mov S$文字介绍1 <普通会员/SCOLOR=10>
+Mov S$文字介绍2 <尊享15.5倍充值/SCOLOR=253>
+MOV N$充值倍数 155
 
-; #IF
-; LARGE <$STR(S$全站充值)> 99
-; small <$STR(S$全站充值)> 500
-; #ACT
-; Mov S$文字介绍1 <永久会员/SCOLOR=249>
-; Mov S$文字介绍2 <尊享15.5倍充值/SCOLOR=253>
-; MOV N$充值倍数 155
+#IF
+LARGE <$STR(S$全站充值)> 99
+small <$STR(S$全站充值)> 500
+#ACT
+Mov S$文字介绍1 <永久会员/SCOLOR=249>
+Mov S$文字介绍2 <尊享15.5倍充值/SCOLOR=253>
+MOV N$充值倍数 155
 
-; #IF
-; LARGE <$STR(S$全站充值)> 499
-; small <$STR(S$全站充值)> 1000
-; #ACT
-; Mov S$文字介绍1 <高级会员/SCOLOR=249>
-; Mov S$文字介绍2 <尊享20.0倍充值/SCOLOR=253>
-; MOV N$充值倍数 200
+#IF
+LARGE <$STR(S$全站充值)> 499
+small <$STR(S$全站充值)> 1000
+#ACT
+Mov S$文字介绍1 <高级会员/SCOLOR=249>
+Mov S$文字介绍2 <尊享20.0倍充值/SCOLOR=253>
+MOV N$充值倍数 200
 
-; #IF
-; LARGE <$STR(S$全站充值)> 999
-; #ACT
-; Mov S$文字介绍1 <超级会员/SCOLOR=249>
-; Mov S$文字介绍2 <尊享20.0倍充值/SCOLOR=253>
-; MOV N$充值倍数 200
+#IF
+LARGE <$STR(S$全站充值)> 999
+#ACT
+Mov S$文字介绍1 <超级会员/SCOLOR=249>
+Mov S$文字介绍2 <尊享20.0倍充值/SCOLOR=253>
+MOV N$充值倍数 200
 
-; #IF
-; #ACT
-; MOV S$货币1名称 大米
-; MOV N$货币1比例 1
+#IF
+#ACT
+MOV S$货币1名称 灵符
+MOV N$货币1比例 1
 
-; MOV S$货币2名称 充值点
-; MOV N$货币2比例 1
+MOV S$货币2名称 充值点
+MOV N$货币2比例 1
 
-; MOV S$货币3名称 充值点
-; MOV N$货币3比例 1
+MOV S$货币3名称 充值点
+MOV N$货币3比例 1
 
-; ;#iF
-; ;Not CheckContainsText <$SERVERNAME> 测试
-; ;#act
-; ;ReadConfigFileItem ..\..\..\..\..\0.测试区充值记录\测试区充值记录.txt <$USERID> 测试区充值记录 <$STR(N$测试区充值数)>
+;#iF
+;Not CheckContainsText <$SERVERNAME> 测试
+;#act
+;ReadConfigFileItem ..\..\..\..\..\0.测试区充值记录\测试区充值记录.txt <$USERID> 测试区充值记录 <$STR(N$测试区充值数)>
 
-; ;#if
-; ;large N$测试区充值数 0
-; ;Not CheckContainsText <$SERVERNAME> 测试
-; ;#act
-; ;GOTO @循环领取扫码充值
+;#if
+;large N$测试区充值数 0
+;Not CheckContainsText <$SERVERNAME> 测试
+;#act
+;GOTO @循环领取扫码充值
 
 
-; #IF
-; #ACT
-; OPENMERCHANTBIGDLG <$Str(N$补丁编号)> 50 1 4 4 -88 0 0 0
-; #SAY
+#IF
+#ACT
+OPENMERCHANTBIGDLG <$Str(N$补丁编号)> 50 1 4 4 -88 0 0 0
+#SAY
 ; <>                               \
 ; <>                               \
 ; <>                               \
@@ -103,123 +103,175 @@
 ; <Imgex:<$Str(N$补丁编号)>:61:60:61:0:-156/@37W每日签到>\
 ; <Imgex:<$Str(N$补丁编号)>:63:62:63:0:-128/@37W联系客服>\
 
-; #ELSEACT
-; MESSAGEBOX <$STR(S1)>
-; BREAK
 
-; [@网站充值]
-; #IF
-; EQUAL S$扫码充值开关 网站开关:关
-; #ACT
-; MESSAGEBOX 非常抱歉，当前通道正在维护，请选择【扫码充值】通道！
-; BREAK
-; #OR
-; EQUAL <$STR(S$全站充值)> 0
-; small <$STR(S$全站充值)> 500
-; #ACT
-; MOV S$充值提示 <[单笔充值/fcolor=242><500元/fcolor=251><也可以直接享受/fcolor=242><(20)倍比例/fcolor=249><]/fcolor=242>
-
-
-; #if
-; #act
-; Mov n$提交金额 0
-
-; #if
-; small n$提交金额 10
-; #act
-; Mov n$提交金额 10
-
-
-; MUL N$提交充值 <$STR(N$充值倍数)>
-; DIV N$提交充值 10
-; goto @网站充值界面
-
-; [@网站充值界面]
-; #IF
-; #ACT
-; Mov N$提交充值 <$STR(n$提交金额)>
-; Mul N$提交充值 <$STR(N$充值倍数)>
-; Div N$提交充值 10
-
-; #IF
-; LARGE n$提交金额 499
-; #ACT
-; Mov N$提交充值 <$STR(n$提交金额)>
-; Mul N$提交充值 200
-; Div N$提交充值 10
-; #ELSEACT
-; Mov N$提交充值 <$STR(n$提交金额)>
-; Mul N$提交充值 <$STR(N$充值倍数)>
-; Div N$提交充值 10
-
-
-; #IF
-; #ACT
-; OPENMERCHANTBIGDLG <$Str(N$补丁编号)> 50 1 4 4 -88 0 0 0
-; #SAY
-; <>                               \
-; <>                               \
-; <>                               \
-; <Imgex:<$Str(N$补丁编号)>:2:1:2:546:-46/@Exit>\
-; <>                    <---------------------------------------------------------------------------/SCOLOR=11>\
-; <>                     <欢迎使用【网站支付】系统，请填写你要充值的金额！/SCOLOR=150> \
-; <>                    <---------------------------------------------------------------------------/SCOLOR=11>\
-; <>                    \
-; <>                     <充值选项：/fcolor=150><请输入需要充值金额：/@@InPutInteger83(请输入你充值的金额,单笔充值最高3000元.)><【/fcolor=250> <$STR(n$提交金额)> 元<】/fcolor=250><(默认10元)/fcolor=10>    <确认无误,提交充值/@提交充值A>\
-; <>                    \
-; <>                    <---------------------------------------------------------------------------/SCOLOR=11>\
-
-;                         \                        \
-; <>                                      <你当前订单金额:/SCOLOR=243>< <$STR(n$提交金额)> 元/SCOLOR=250>\
-; <>                                      <你当前会员等级:/SCOLOR=243> <$STR(S$文字介绍1)> <$STR(S$文字介绍2)> \
-; <>                                      <充值实际到账为:/SCOLOR=243>< <$STR(N$提交充值)>个游戏币 + <$STR(n$提交金额)>个转区点/SCOLOR=254> \
-; <>                                      <$STR(S$充值提示)>\
-; <>                                                        \
-; <>                                         <[手动领取充值]/@领取充值A>              <【/fcolor=10><返回界面/@退出><】/fcolor=10>\
+<Img|width=620|height=300|img=public/bg_npc_04.jpg|bg=1|scale9r=10|scale9t=10|scale9b=10|reset=1|scale9l=10|move=0>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=140|tips=|tipsx=10|tipsy=80|color=11|size=18|text=--------------------------------------------------------------------------->
+<Text|a=0|x=32|y=160|tips=|tipsx=10|tipsy=80|color=243|size=18|text=角色游戏币：>
+<Text|a=0|x=164|y=160|tipsx=10|tipsy=80|color=255|size=18|text= <$STR(U60)>元>
+<Text|a=0|x=318|y=160|tips=|tipsx=10|tipsy=80|color=243|size=18|text=角色转区点：>
+<Text|a=0|x=450|y=160|tipsx=10|tipsy=80|color=255|size=18|text= <$str(U61)>元>
+<Text|a=0|x=604|y=160|tips=|tipsx=10|tipsy=80|color=243|size=18|text=全站累计充值：>
+<Text|a=0|x=758|y=160|tipsx=10|tipsy=80|color=255|size=18|text= 元>
+<Text|a=0|x=32|y=180|tips=|tipsx=10|tipsy=80|color=11|size=18|text=--------------------------------------------------------------------------->
+<Text|a=0|x=32|y=200|tipsx=10|tipsy=80|color=150|size=18|text=充值选项：>
+<Text|a=0|x=142|y=200|tipsx=10|tipsy=80|color=150|size=18|text=【>
+<Text|a=0|x=164|y=200|tipsx=10|tipsy=80|color=251|size=18|text=→扫码充值←|link=@@InPutInteger94(请输入你充值的金额,单笔充值最高3000元.)>
+<Text|a=0|x=296|y=200|tipsx=10|tipsy=80|color=255|size=18|text=>>
+<Text|a=0|x=307|y=200|tipsx=10|tipsy=80|color=249|size=18|text=~推荐>
+<Text|a=0|x=362|y=200|tipsx=10|tipsy=80|color=150|size=18|text=】>
+<Text|a=0|x=384|y=200|tipsx=10|tipsy=80|color=150|size=18|text=【>
+<Text|a=0|x=593|y=200|tipsx=10|tipsy=80|color=150|size=18|text=】>
+<Text|a=0|x=32|y=220|tips=|tipsx=10|tipsy=80|color=11|size=18|text=--------------------------------------------------------------------------->
+<Text|a=0|x=32|y=240|tips=|tipsx=10|tipsy=80|color=243|size=18|text=当前会员等级:>
+<Text|a=0|x=175|y=240|tipsx=10|tipsy=80|color=255|size=18|text= <$str(S$文字介绍1)> <$str(S$文字介绍2)> >
+<Text|a=0|x=604|y=240|tipsx=10|tipsy=80|color=255|size=18|text=个游戏币 + 10转区点/SCOLOR=254>>
+<Text|a=0|x=32|y=260|tips=|tipsx=10|tipsy=80|color=11|size=18|text=--------------------------------------------------------------------------->
+<Text|a=0|x=32|y=280|tipsx=10|tipsy=80|color=150|size=18|text=兑换货币：>
+<Text|a=0|x=142|y=280|tipsx=10|tipsy=80|color=150|size=18|text=【>
+<Text|a=0|x=164|y=280|tipsx=10|tipsy=80|color=255|size=18|text=|250#兑换比例：1个游戏币兑换<$str(N$货币1比例)><$str(S$货币1名称)>+<$str(N$货币2比例)><$str(S$货币2名称)>/@@InPutInteger21(请输入您要兑换的游戏币数量：1-10000之间的数值)>>
+<Text|a=0|x=2034|y=280|tipsx=10|tipsy=80|color=150|size=18|text=】>
+<Text|a=0|x=2056|y=280|tipsx=10|tipsy=80|color=251|size=18|text=[手动领取充值]|link=@领取充值A>
+<Text|a=0|x=32|y=340|tips=|tipsx=10|tipsy=80|color=11|size=18|text=--------------------------------------------------------------------------->
+<Text|a=0|x=32|y=360|tipsx=10|tipsy=80|color=147|size=18|text=永久会员：>
+<Text|a=0|x=142|y=360|tipsx=10|tipsy=80|color=150|size=18|text=任意版本累计充值>
+<Text|a=0|x=318|y=360|tipsx=10|tipsy=80|color=147|size=18|text=“ 100元”>
+<Text|a=0|x=428|y=360|tipsx=10|tipsy=80|color=150|size=18|text=激活>
+<Text|a=0|x=472|y=360|tipsx=10|tipsy=80|color=147|size=18|text=所有版本爆率+100%>
+<Text|a=0|x=659|y=360|tipsx=10|tipsy=80|color=249|size=18|text=查看专属特权|250#所有版本充值尊享“15.5倍比例”^-^250#自动成为“包服卡会员”,每天领取158元充值>
+<Text|a=0|x=32|y=380|tipsx=10|tipsy=80|color=239|size=18|text=高级会员：>
+<Text|a=0|x=142|y=380|tipsx=10|tipsy=80|color=150|size=18|text=任意版本累计充值>
+<Text|a=0|x=318|y=380|tipsx=10|tipsy=80|color=239|size=18|text=“ 500元”>
+<Text|a=0|x=428|y=380|tipsx=10|tipsy=80|color=150|size=18|text=激活>
+<Text|a=0|x=472|y=380|tipsx=10|tipsy=80|color=239|size=18|text=所有版本爆率+200%>
+<Text|a=0|x=659|y=380|tipsx=10|tipsy=80|color=249|size=18|text=查看专属特权|250#所有版本充值尊享“20.0倍比例”^-^250#自动成为“包服卡会员”,每天领取158元充值>
+<Text|a=0|x=32|y=400|tipsx=10|tipsy=80|color=250|size=18|text=超级会员：>
+<Text|a=0|x=142|y=400|tipsx=10|tipsy=80|color=150|size=18|text=任意版本累计充值>
+<Text|a=0|x=318|y=400|tipsx=10|tipsy=80|color=250|size=18|text=“1000元”>
+<Text|a=0|x=428|y=400|tipsx=10|tipsy=80|color=150|size=18|text=激活>
+<Text|a=0|x=472|y=400|tipsx=10|tipsy=80|color=250|size=18|text=所有版本爆率+500%>
+<Text|a=0|x=659|y=400|tipsx=10|tipsy=80|color=249|size=18|text=查看专属特权|250#所有版本上线即送“超级称号”^250#所有版本充值尊享“20.0倍比例”^-^250#自动成为“包服卡会员”,每天领取158元充值>
+<Text|a=0|x=32|y=420|tips=|tipsx=10|tipsy=80|color=11|size=18|text=--------------------------------------------------------------------------->
 
 
+#ELSEACT
+MESSAGEBOX <$STR(S1)>
+BREAK
+
+[@网站充值]
+#IF
+EQUAL S$扫码充值开关 网站开关:关
+#ACT
+MESSAGEBOX 非常抱歉，当前通道正在维护，请选择【扫码充值】通道！
+BREAK
+#OR
+EQUAL <$STR(S$全站充值)> 0
+small <$STR(S$全站充值)> 500
+#ACT
+MOV S$充值提示 <[单笔充值/fcolor=242><500元/fcolor=251><也可以直接享受/fcolor=242><(20)倍比例/fcolor=249><]/fcolor=242>
+
+
+#if
+#act
+Mov n$提交金额 0
+
+#if
+small n$提交金额 10
+#act
+Mov n$提交金额 10
+
+
+MUL N$提交充值 <$STR(N$充值倍数)>
+DIV N$提交充值 10
+goto @网站充值界面
+
+[@网站充值界面]
+#IF
+#ACT
+Mov N$提交充值 <$STR(n$提交金额)>
+Mul N$提交充值 <$STR(N$充值倍数)>
+Div N$提交充值 10
+
+#IF
+LARGE n$提交金额 499
+#ACT
+Mov N$提交充值 <$STR(n$提交金额)>
+Mul N$提交充值 200
+Div N$提交充值 10
+#ELSEACT
+Mov N$提交充值 <$STR(n$提交金额)>
+Mul N$提交充值 <$STR(N$充值倍数)>
+Div N$提交充值 10
+
+
+#IF
+#ACT
+OPENMERCHANTBIGDLG <$Str(N$补丁编号)> 50 1 4 4 -88 0 0 0
+#SAY
+<>                               \
+<>                               \
+<>                               \
+<Imgex:<$Str(N$补丁编号)>:2:1:2:546:-46/@Exit>\
+<>                    <---------------------------------------------------------------------------/SCOLOR=11>\
+<>                     <欢迎使用【网站支付】系统，请填写你要充值的金额！/SCOLOR=150> \
+<>                    <---------------------------------------------------------------------------/SCOLOR=11>\
+<>                    \
+<>                     <充值选项：/fcolor=150><请输入需要充值金额：/@@InPutInteger83(请输入你充值的金额,单笔充值最高3000元.)><【/fcolor=250> <$STR(n$提交金额)> 元<】/fcolor=250><(默认10元)/fcolor=10>    <确认无误,提交充值/@提交充值A>\
+<>                    \
+<>                    <---------------------------------------------------------------------------/SCOLOR=11>\
+
+                        \                        \
+<>                                      <你当前订单金额:/SCOLOR=243>< <$STR(n$提交金额)> 元/SCOLOR=250>\
+<>                                      <你当前会员等级:/SCOLOR=243> <$STR(S$文字介绍1)> <$STR(S$文字介绍2)> \
+<>                                      <充值实际到账为:/SCOLOR=243>< <$STR(N$提交充值)>个游戏币 + <$STR(n$提交金额)>个转区点/SCOLOR=254> \
+<>                                      <$STR(S$充值提示)>\
+<>                                                        \
+<>                                         <[手动领取充值]/@领取充值A>              <【/fcolor=10><返回界面/@退出><】/fcolor=10>\
 
 
 
-; <Imgex:<$Str(N$补丁编号)>:52:52:52:0:-240>\
-; <Imgex:<$Str(N$补丁编号)>:57:56:57:0:-212/@37W包服卡>\
-; <Imgex:<$Str(N$补丁编号)>:59:58:59:0:-184/@37W转区服务>\
-; <Imgex:<$Str(N$补丁编号)>:61:60:61:0:-156/@37W每日签到>\
-; <Imgex:<$Str(N$补丁编号)>:63:62:63:0:-128/@37W联系客服>\
+
+
+<Imgex:<$Str(N$补丁编号)>:52:52:52:0:-240>\
+<Imgex:<$Str(N$补丁编号)>:57:56:57:0:-212/@37W包服卡>\
+<Imgex:<$Str(N$补丁编号)>:59:58:59:0:-184/@37W转区服务>\
+<Imgex:<$Str(N$补丁编号)>:61:60:61:0:-156/@37W每日签到>\
+<Imgex:<$Str(N$补丁编号)>:63:62:63:0:-128/@37W联系客服>\
 
 
 
 
-; [@InPutInteger83]
-; #if
-; small n83 10
-; #act
-; messagebox \\[失败]：每次最少10元。
-; Break
+[@InPutInteger83]
+#if
+small n83 10
+#act
+messagebox \\[失败]：每次最少10元。
+Break
 
-; #if
-; large n83 3001
-; #act
-; messagebox \\[失败]：超出单笔限制3000，请重新输入
-; Break
+#if
+large n83 3001
+#act
+messagebox \\[失败]：超出单笔限制3000，请重新输入
+Break
 
-; #if
-; #act
-; Mov n$提交金额 <$str(n83)>
-; goto @网站充值界面
+#if
+#act
+Mov n$提交金额 <$str(n83)>
+goto @网站充值界面
 
-; [@提交充值A]
-; #if
-; small n$提交金额 10
-; #act
-; messagebox \\[失败]：充值金额最低不能小于10元。
-; Break
+[@提交充值A]
+#if
+small n$提交金额 10
+#act
+messagebox \\[失败]：充值金额最低不能小于10元。
+Break
 
-; #IF
-; #ACT
-; GetListString ..\..\..\..\37W通区数据.txt 0 S$获取充值地址
-; GetListString ..\..\..\..\37W通区数据.txt 1 S$扫码充值开关
-; GetListString ..\..\..\..\37W通区数据.txt 2 S$网站充值开关
+#IF
+#ACT
+GetListString ..\..\..\..\37W通区数据.txt 0 S$获取充值地址
+GetListString ..\..\..\..\37W通区数据.txt 1 S$扫码充值开关
+GetListString ..\..\..\..\37W通区数据.txt 2 S$网站充值开关
 
 
 ; #IF
@@ -228,198 +280,198 @@
 ; WebBrowser <$STR(S1)>&hidemobile=1
 
 
-; [@InPutInteger21]
-; #or
-; Small N21 1
-; LARGE N21 10000
-; #ACT
-; MESSAGEBOX 兑换失败：您输入的数值不正确！\单次兑换：请输入1-10000之间的数值！
-; BREAK
+[@InPutInteger21]
+#or
+Small N21 1
+LARGE N21 10000
+#ACT
+MESSAGEBOX 兑换失败：您输入的数值不正确！\单次兑换：请输入1-10000之间的数值！
+BREAK
 
 
-; #IF
-; small U60 <$str(N21)>
-; #ACT
-; MESSAGEBOX 你没有<$STR(N21)>个游戏币。
-; BREAK
+#IF
+small U60 <$str(N21)>
+#ACT
+MESSAGEBOX 你没有<$STR(N21)>个游戏币。
+BREAK
 
-; #OR
-; EQUAL U60 <$STR(N21)>
-; LARGE U60 <$STR(N21)>
-; #ACT
-; DEC U60 <$STR(N21)>
-; Mul	N$货币比例A1	N21	<$STR(N$货币1比例)>
-; Mul	N$货币比例A2	N21	<$STR(N$货币2比例)>
-
-
-
-; GAMEPOINT + <$STR(N$货币比例A1)>
-; GAMEGIRD + <$STR(N$货币比例A2)>
-
-
-; AddTextListEx ..\QuestDiary\游戏币明细\<$USERNAME>.txt 250#减少类型：【兑换<$STR(S$货币1名称)>】|【游戏币减少：-<$STR(N21)>】|【总游戏币为：<$STR(U60)>】|操作时间：<$YEAR>年<$MONTH>月<$DAY>日<$HOUR>点<$MINUTE>分<$SECOND>秒 
-
-; AddTextListEx ..\..\..\..\37W包服功能\领取游戏币明细\游戏币兑换汇总.txt 250#减少类型：兑换<$STR(S$货币1名称)>】|【游戏币减少：-<$STR(N21)>】|【总游戏币为：<$STR(U60)>】|【区服：<$SERVERNAME>】|【账号：<$USERID>】|【角色：<$USERNAME>】|【微信ID：<$STR(T22)>】|操作时间：操作时间：<$YEAR>年<$MONTH>月<$DAY>日<$HOUR>点<$MINUTE>分<$SECOND>秒 
-
-; goto @通区充值
-; MESSAGEBOX 兑换成功，你获得了<$str(N$货币比例A1)>个<$STR(S$货币1名称)><$str(N$货币比例A2)>个<$STR(S$货币2名称)>
+#OR
+EQUAL U60 <$STR(N21)>
+LARGE U60 <$STR(N21)>
+#ACT
+DEC U60 <$STR(N21)>
+Mul	N$货币比例A1	N21	<$STR(N$货币1比例)>
+Mul	N$货币比例A2	N21	<$STR(N$货币2比例)>
 
 
 
+MONEY 灵符 + <$STR(N$货币比例A1)>
+GAMEGIRD + <$STR(N$货币比例A2)>
+
+
+AddTextListEx ..\QuestDiary\游戏币明细\<$USERNAME>.txt 250#减少类型：【兑换<$STR(S$货币1名称)>】|【游戏币减少：-<$STR(N21)>】|【总游戏币为：<$STR(U60)>】|操作时间：<$YEAR>年<$MONTH>月<$DAY>日<$HOUR>点<$MINUTE>分<$SECOND>秒 
+
+AddTextListEx ..\..\..\..\37W包服功能\领取游戏币明细\游戏币兑换汇总.txt 250#减少类型：兑换<$STR(S$货币1名称)>】|【游戏币减少：-<$STR(N21)>】|【总游戏币为：<$STR(U60)>】|【区服：<$SERVERNAME>】|【账号：<$USERID>】|【角色：<$USERNAME>】|【微信ID：<$STR(T22)>】|操作时间：操作时间：<$YEAR>年<$MONTH>月<$DAY>日<$HOUR>点<$MINUTE>分<$SECOND>秒 
+
+goto @通区充值
+MESSAGEBOX 兑换成功，你获得了<$str(N$货币比例A1)>个<$STR(S$货币1名称)><$str(N$货币比例A2)>个<$STR(S$货币2名称)>
 
 
 
-; [@37W游戏充值]
-; #IF
-; #ACT
-; #CALL [37W通服功能\充值脚本.TXT] @通区充值
+
+
+
+[@37W游戏充值]
+#IF
+#ACT
+#CALL [37W通服功能\充值脚本.TXT] @通区充值
 
  
 
-; [@37W转区服务]
-; #IF
-; #ACT
-; #CALL	[37W通服功能\2自助转区.TXT]	@自助转区
+[@37W转区服务]
+#IF
+#ACT
+#CALL	[37W通服功能\2自助转区.TXT]	@自助转区
 
-; [@37W包服卡]
-; #IF
-; #ACT
-; #CALL	[37W通服功能\1包服卡.TXT]	@包服卡
+[@37W包服卡]
+#IF
+#ACT
+#CALL	[37W通服功能\1包服卡.TXT]	@包服卡
 
-; [@37W每日签到]
-; #IF
-; #ACT
-; #CALL	[37W通服功能\3每日签到.TXT]	@每日签到
+[@37W每日签到]
+#IF
+#ACT
+#CALL	[37W通服功能\3每日签到.TXT]	@每日签到
 
-; [@37W联系客服]
-; #IF
-; #ACT
-; OpenWebSite http://www.37w.com/kf/kf.html
-
-
-; [@扫码充值]
-; #IF
-; #ACT
-; GetListString ..\..\..\..\37W通区数据.txt 0 S$获取充值地址
-; GetListString ..\..\..\..\37W通区数据.txt 1 S$扫码充值开关
-; GetListString ..\..\..\..\37W通区数据.txt 2 S$网站充值开关
+[@37W联系客服]
+#IF
+#ACT
+OpenWebSite http://www.37w.com/kf/kf.html
 
 
-; #IF
-; EQUAL S$扫码充值开关 扫码开关:关
-; #ACT
-; MESSAGEBOX 非常抱歉，扫码充值正在维护，请选择【网站充值】通道！
-; BREAK
-
-; #IF
-; #ACT
-; OPENMERCHANTBIGDLG <$Str(N$补丁编号)> 50 1 4 4 -88 0 0 0
-; #SAY
-; <>                               \
-; <>                               \
-; <>                               \
-; <Imgex:<$Str(N$补丁编号)>:2:1:2:546:-46/@Exit>\
-; <>                    <---------------------------------------------------------------------------/SCOLOR=11>\
-; <>                     <欢迎使用【扫码支付】系统，请选择你的支付方式！/SCOLOR=150> \
-; <>                    <---------------------------------------------------------------------------/SCOLOR=11>\
-; <>                         <【/fcolor=10><微信通道/@@InPutInteger82(请输入你充值的金额，单笔充值最高5000元。)><】/fcolor=10>    <【/fcolor=10><支付宝通道/@@InPutInteger80(请输入你充值的金额，单笔充值最高5000元。)><】/fcolor=10>    <【/fcolor=10><花呗通道/@@InPutInteger81(请输入你充值的金额，单笔充值最高5000元。)><】/fcolor=10>    <【/fcolor=10><返回主界面/@退出><】/fcolor=10>  \
-; <>                    <---------------------------------------------------------------------------/SCOLOR=11>\
-; <>\
-; <>                                            <【请先选择你的支付方式】/Autocolor=250,254,253,251,249>\<>\
-; <>                                            <【请先选择你的支付方式】/Autocolor=250,254,253,251,249>\<>\
-; <>                                            <【请先选择你的支付方式】/Autocolor=250,254,253,251,249>\<>\
-; <>                                                  <[领取充值]/@领取充值A> \
-; <>                                     \
+[@扫码充值]
+#IF
+#ACT
+GetListString ..\..\..\..\37W通区数据.txt 0 S$获取充值地址
+GetListString ..\..\..\..\37W通区数据.txt 1 S$扫码充值开关
+GetListString ..\..\..\..\37W通区数据.txt 2 S$网站充值开关
 
 
-; <Imgex:<$Str(N$补丁编号)>:52:52:52:0:-240>\
-; <Imgex:<$Str(N$补丁编号)>:57:56:57:0:-212/@37W包服卡>\
-; <Imgex:<$Str(N$补丁编号)>:59:58:59:0:-184/@37W转区服务>\
-; <Imgex:<$Str(N$补丁编号)>:61:60:61:0:-156/@37W每日签到>\
-; <Imgex:<$Str(N$补丁编号)>:63:62:63:0:-128/@37W联系客服>\
+#IF
+EQUAL S$扫码充值开关 扫码开关:关
+#ACT
+MESSAGEBOX 非常抱歉，扫码充值正在维护，请选择【网站充值】通道！
+BREAK
+
+#IF
+#ACT
+OPENMERCHANTBIGDLG <$Str(N$补丁编号)> 50 1 4 4 -88 0 0 0
+#SAY
+<>                               \
+<>                               \
+<>                               \
+<Imgex:<$Str(N$补丁编号)>:2:1:2:546:-46/@Exit>\
+<>                    <---------------------------------------------------------------------------/SCOLOR=11>\
+<>                     <欢迎使用【扫码支付】系统，请选择你的支付方式！/SCOLOR=150> \
+<>                    <---------------------------------------------------------------------------/SCOLOR=11>\
+<>                         <【/fcolor=10><微信通道/@@InPutInteger82(请输入你充值的金额，单笔充值最高5000元。)><】/fcolor=10>    <【/fcolor=10><支付宝通道/@@InPutInteger80(请输入你充值的金额，单笔充值最高5000元。)><】/fcolor=10>    <【/fcolor=10><花呗通道/@@InPutInteger81(请输入你充值的金额，单笔充值最高5000元。)><】/fcolor=10>    <【/fcolor=10><返回主界面/@退出><】/fcolor=10>  \
+<>                    <---------------------------------------------------------------------------/SCOLOR=11>\
+<>\
+<>                                            <【请先选择你的支付方式】/Autocolor=250,254,253,251,249>\<>\
+<>                                            <【请先选择你的支付方式】/Autocolor=250,254,253,251,249>\<>\
+<>                                            <【请先选择你的支付方式】/Autocolor=250,254,253,251,249>\<>\
+<>                                                  <[领取充值]/@领取充值A> \
+<>                                     \
 
 
-
-; [@InPutInteger94]
-
-
-; #IF
-; #ACT
-; GetListString ..\..\..\..\37W通区数据.txt 0 S$获取充值地址
-; GetListString ..\..\..\..\37W通区数据.txt 1 S$扫码充值开关
-; GetListString ..\..\..\..\37W通区数据.txt 2 S$网站充值开关
-
-
-; #IF
-; EQUAL S$扫码充值开关 扫码开关:关
-; #ACT
-; MESSAGEBOX 非常抱歉，扫码充值正在维护，请选择【网站充值】通道！
-; BREAK
-; #if
-; small n94 10
-; #act
-; messagebox \\[失败]：每次最少10元。
-; Break
-
-; #if
-; large n94 3001
-; #act
-; messagebox \\[失败]：超出单笔限制3000，请重新输入
-; Break
+<Imgex:<$Str(N$补丁编号)>:52:52:52:0:-240>\
+<Imgex:<$Str(N$补丁编号)>:57:56:57:0:-212/@37W包服卡>\
+<Imgex:<$Str(N$补丁编号)>:59:58:59:0:-184/@37W转区服务>\
+<Imgex:<$Str(N$补丁编号)>:61:60:61:0:-156/@37W每日签到>\
+<Imgex:<$Str(N$补丁编号)>:63:62:63:0:-128/@37W联系客服>\
 
 
 
+[@InPutInteger94]
 
 
-; #if
-; #act
-; Mov n$扫码提交金额 <$str(N94)>
-; Mov s$支付方式 WeChat
-; Mov s$充值金额 <$str(N94)>
-; Mov s$转区点数量 <$str(N94)>
-; Mov s$扫码导航 [<微信扫码/scolor=58>　┊　<支付宝扫码/@通道_支付宝>　┊　<花呗扫码/@通道_花呗>]
-; Mov s$扫码提示 “微信”
-; goto @扫码充值页面
-; Break
+#IF
+#ACT
+GetListString ..\..\..\..\37W通区数据.txt 0 S$获取充值地址
+GetListString ..\..\..\..\37W通区数据.txt 1 S$扫码充值开关
+GetListString ..\..\..\..\37W通区数据.txt 2 S$网站充值开关
+
+
+#IF
+EQUAL S$扫码充值开关 扫码开关:关
+#ACT
+MESSAGEBOX 非常抱歉，扫码充值正在维护，请选择【网站充值】通道！
+BREAK
+#if
+small n94 10
+#act
+messagebox \\[失败]：每次最少10元。
+Break
+
+#if
+large n94 3001
+#act
+messagebox \\[失败]：超出单笔限制3000，请重新输入
+Break
 
 
 
-; [@通道_微信]
-; #if
-; #act
-; Mov s$支付方式 WeChat
-; Mov s$充值金额 <$str(n$扫码提交金额)>
-; Mov s$转区点数量 <$str(n$扫码提交金额)>
-; Mov s$扫码导航 [<微信扫码/scolor=58>　┊　<支付宝扫码/@通道_支付宝>　┊　<花呗扫码/@通道_花呗>]
-; Mov s$扫码提示 “微信”
-; goto @扫码充值页面
-; Break
-
-; [@通道_支付宝]
-; #if
-; #act
-; Mov s$支付方式 alipay
-; Mov s$充值金额 <$str(n$扫码提交金额)>
-; Mov s$转区点数量 <$str(n$扫码提交金额)>
-; Mov s$扫码导航 [<微信扫码/@通道_微信>　┊　<支付宝扫码/scolor=58>　┊　<花呗扫码/@通道_花呗>]
-; Mov s$扫码提示 “支付宝(花呗)”
-; goto @扫码充值页面
-; Break
 
 
-; [@通道_花呗]
-; #if
-; #act
-; Mov s$支付方式 hbpay
-; Mov s$充值金额 <$str(n$扫码提交金额)>
-; Mov s$转区点数量 <$str(n$扫码提交金额)>
-; Mov s$扫码导航 [<微信扫码/@通道_微信>　┊　<支付宝扫码/@通道_支付宝>　┊　<花呗扫码/scolor=58>]
-; Mov s$扫码提示 “支付宝”
-; goto @扫码充值页面
-; Break
+#if
+#act
+Mov n$扫码提交金额 <$str(N94)>
+Mov s$支付方式 WeChat
+Mov s$充值金额 <$str(N94)>
+Mov s$转区点数量 <$str(N94)>
+Mov s$扫码导航 [<微信扫码/scolor=58>　┊　<支付宝扫码/@通道_支付宝>　┊　<花呗扫码/@通道_花呗>]
+Mov s$扫码提示 “微信”
+goto @扫码充值页面
+Break
 
 
-; [@扫码充值页面]
+
+[@通道_微信]
+#if
+#act
+Mov s$支付方式 WeChat
+Mov s$充值金额 <$str(n$扫码提交金额)>
+Mov s$转区点数量 <$str(n$扫码提交金额)>
+Mov s$扫码导航 [<微信扫码/scolor=58>　┊　<支付宝扫码/@通道_支付宝>　┊　<花呗扫码/@通道_花呗>]
+Mov s$扫码提示 “微信”
+goto @扫码充值页面
+Break
+
+[@通道_支付宝]
+#if
+#act
+Mov s$支付方式 alipay
+Mov s$充值金额 <$str(n$扫码提交金额)>
+Mov s$转区点数量 <$str(n$扫码提交金额)>
+Mov s$扫码导航 [<微信扫码/@通道_微信>　┊　<支付宝扫码/scolor=58>　┊　<花呗扫码/@通道_花呗>]
+Mov s$扫码提示 “支付宝(花呗)”
+goto @扫码充值页面
+Break
+
+
+[@通道_花呗]
+#if
+#act
+Mov s$支付方式 hbpay
+Mov s$充值金额 <$str(n$扫码提交金额)>
+Mov s$转区点数量 <$str(n$扫码提交金额)>
+Mov s$扫码导航 [<微信扫码/@通道_微信>　┊　<支付宝扫码/@通道_支付宝>　┊　<花呗扫码/scolor=58>]
+Mov s$扫码提示 “支付宝”
+goto @扫码充值页面
+Break
+
+
+[@扫码充值页面]
 ; #if
 ; 获取二维码 <$str(S$获取充值地址)> <$Str(N$补丁编号)> 30 <$str(S$支付方式)> 4 <$str(s$充值金额)> 13131313131 
 ; #act
@@ -427,31 +479,31 @@
 ; Mul n$提交充值 <$str(n$充值倍数)>
 ; Div n$提交充值 10
 
-; #if
-; large <$str(s$充值金额)> 499
-; #act
-; Mov n$提交充值 <$str(s$充值金额)>
-; Mul n$提交充值 200
-; Div n$提交充值 10
+#if
+large <$str(s$充值金额)> 499
+#act
+Mov n$提交充值 <$str(s$充值金额)>
+Mul n$提交充值 200
+Div n$提交充值 10
 
 
-; #OR
-; EQUAL <$STR(S$全站充值)> 0
-; small <$STR(S$全站充值)> 500
-; #ACT
-; MOV S$充值提示 <[单笔充值/fcolor=242><500元/fcolor=251><也可以直接享受/fcolor=242><(20)倍比例/fcolor=249><]/fcolor=242>
+#OR
+EQUAL <$STR(S$全站充值)> 0
+small <$STR(S$全站充值)> 500
+#ACT
+MOV S$充值提示 <[单笔充值/fcolor=242><500元/fcolor=251><也可以直接享受/fcolor=242><(20)倍比例/fcolor=249><]/fcolor=242>
 
-; #if
-; equal S2 0
-; #ACT
-; GOTO @扫码充值页面
-; BREAK
+#if
+equal S2 0
+#ACT
+GOTO @扫码充值页面
+BREAK
 
 
-; #IF
-; #ACT
-; OPENMERCHANTBIGDLG <$Str(N$补丁编号)> 50 1 4 4 -88 0 0 0
-; #SAY
+#IF
+#ACT
+OPENMERCHANTBIGDLG <$Str(N$补丁编号)> 50 1 4 4 -88 0 0 0
+#SAY
 
 ; <>                               \
 ; <>                               \
@@ -480,36 +532,69 @@
 ; <Imgex:<$Str(N$补丁编号)>:63:62:63:0:-128/@37W联系客服>\
 
 
+<Img|width=620|height=300|img=public/bg_npc_01.png|bg=1|scale9r=10|scale9t=10|scale9b=10|reset=1|scale9l=10|move=0>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=32|y=120|tipsx=10|tipsy=80|color=255|size=18|text=:2:1:2:546:-46/@Exit>>
+<Text|a=0|x=32|y=140|tips=|tipsx=10|tipsy=80|color=11|size=18|text=--------------------------------------------------------------------------->
+<Text|a=0|x=32|y=160|tips=|tipsx=10|tipsy=80|color=150|size=18|text=欢迎使用【扫码支付】系统，请选择你的支付方式！>
+<Text|a=0|x=32|y=180|tips=|tipsx=10|tipsy=80|color=11|size=18|text=--------------------------------------------------------------------------->
+<Text|a=0|x=32|y=200|tipsx=10|tipsy=80|color=150|size=18|text=充值方式选择：>
+<Text|a=0|x=186|y=200|tipsx=10|tipsy=80|color=255|size=18|text=  <$STR(s$扫码导航)>    >
+<Text|a=0|x=384|y=200|tipsx=10|tipsy=80|color=10|size=18|text=【>
+<Text|a=0|x=406|y=200|tipsx=10|tipsy=80|color=251|size=18|text=返回主界面|link=@退出>
+<Text|a=0|x=516|y=200|tipsx=10|tipsy=80|color=10|size=18|text=】>
+<Text|a=0|x=32|y=220|tips=|tipsx=10|tipsy=80|color=11|size=18|text=--------------------------------------------------------------------------->
+<Text|a=0|x=32|y=240|tipsx=10|tipsy=80|color=10|size=18|text=【>
+<Text|a=0|x=54|y=240|tips=|tipsx=10|tipsy=80|color=150|size=18|text=当前二维码订单已生成>
+<Text|a=0|x=274|y=240|tipsx=10|tipsy=80|color=10|size=18|text=】>
+<Text|a=0|x=32|y=260|tipsx=10|tipsy=80|color=255|size=18|text=                           <$STR(S2)>>
+<Text|a=0|x=32|y=280|tips=|tipsx=10|tipsy=80|color=243|size=18|text=你当前订单金额:>
+<Text|a=0|x=197|y=280|tipsx=10|tipsy=80|color=255|size=18|text= 元/SCOLOR=250>>
+<Text|a=0|x=32|y=300|tips=|tipsx=10|tipsy=80|color=243|size=18|text=你当前会员等级:>
+<Text|a=0|x=197|y=300|tipsx=10|tipsy=80|color=255|size=18|text= <$STR(S$文字介绍1)> <$STR(S$文字介绍2)> >
+<Text|a=0|x=32|y=320|tips=|tipsx=10|tipsy=80|color=243|size=18|text=充值实际到账为:>
+<Text|a=0|x=197|y=320|tipsx=10|tipsy=80|color=255|size=18|text=个游戏币 + <$STR(s$转区点数量)>个转区点/SCOLOR=254> >
+<Text|a=0|x=32|y=340|tipsx=10|tipsy=80|color=255|size=18|text=                                                    <$STR(S$充值提示)>>
+<Text|a=0|x=32|y=360|tipsx=10|tipsy=80|color=255|size=18|text=]进行扫码支付/Autocolor=251,254,253,251,249>>
+<Text|a=0|x=32|y=400|tipsx=10|tipsy=80|color=10|size=18|text=【>
+<Text|a=0|x=54|y=400|tipsx=10|tipsy=80|color=251|size=18|text=重输金额|link=@@InPutInteger94(请输入你充值的金额,单笔充值最高3000元.)>
+<Text|a=0|x=142|y=400|tipsx=10|tipsy=80|color=10|size=18|text=】>
+<Text|a=0|x=32|y=420|tipsx=10|tipsy=80|color=255|size=18|text=:52:52:52:0:-240>>
+<Text|a=0|x=32|y=440|tipsx=10|tipsy=80|color=255|size=18|text=:57:56:57:0:-212/@37W包服卡>>
+<Text|a=0|x=32|y=460|tipsx=10|tipsy=80|color=255|size=18|text=:59:58:59:0:-184/@37W转区服务>>
+<Text|a=0|x=32|y=480|tipsx=10|tipsy=80|color=255|size=18|text=:61:60:61:0:-156/@37W每日签到>>
+<Text|a=0|x=32|y=500|tipsx=10|tipsy=80|color=255|size=18|text=:63:62:63:0:-128/@37W联系客服>>
 
 
 
-; [@领取充值A]
-; #IF
-; #ACT
-; goto @循环领取扫码充值
+[@领取充值A]
+#IF
+#ACT
+goto @循环领取扫码充值
 
-; #IF
-; equal N$本次领取币数量 0
-; #ACT
-; MESSAGEBOX \\失败：未能查询到充值记录.
+#IF
+equal N$本次领取币数量 0
+#ACT
+MESSAGEBOX \\失败：未能查询到充值记录.
 
-; [@充值领取pt]
-; #IF
-; #ACT
-; goto @循环领取扫码充值
+[@充值领取pt]
+#IF
+#ACT
+goto @循环领取扫码充值
 
-; #IF
-; equal N$本次领取币数量 0
-; #ACT
-; MESSAGEBOX \\失败：未能查询到充值记录.
+#IF
+equal N$本次领取币数量 0
+#ACT
+MESSAGEBOX \\失败：未能查询到充值记录.
 
 
-; [@循环领取扫码充值]
-; #if
-; #act
-; Mov N$领取到的充值 0
-; Mov N$领取充值数量 0
-; Mov N$本次领取币数量 0
+[@循环领取扫码充值]
+#if
+#act
+Mov N$领取到的充值 0
+Mov N$领取充值数量 0
+Mov N$本次领取币数量 0
 
 ; #IF
 ; 领取补发 <$STR(T22)>
@@ -518,101 +603,101 @@
 ; Mov N$新充值累加计算 <$STR(S$全站充值)>
 ; Inc N$新充值累加计算 <$STR(N$领取到的充值)>
 
-; #if
-; large <$STR(N$新充值累加计算)> 499
-; #act
-; Mov N$充值倍数 200
+#if
+large <$STR(N$新充值累加计算)> 499
+#act
+Mov N$充值倍数 200
 
-; #if
-; large N$领取到的充值 0
-; #act
-; Mov N$循环领取循环次数 0
-; Mov N$领取充值数量 <$Str(N$领取到的充值)>
-; Mul N$领取充值数量 <$Str(N$充值倍数)>
-; Div N$领取充值数量 10
-; Inc U60 <$Str(N$领取充值数量)>
-; Inc U61 <$Str(N$领取到的充值)>
-; Inc N$本次领取币数量 <$Str(N$领取到的充值)>
+#if
+large N$领取到的充值 0
+#act
+Mov N$循环领取循环次数 0
+Mov N$领取充值数量 <$Str(N$领取到的充值)>
+Mul N$领取充值数量 <$Str(N$充值倍数)>
+Div N$领取充值数量 10
+Inc U60 <$Str(N$领取充值数量)>
+Inc U61 <$Str(N$领取到的充值)>
+Inc N$本次领取币数量 <$Str(N$领取到的充值)>
 
-; SENDMSG 1 ★恭喜玩家<$USERNAME>充值获得<$Str(N$领取充值数量)>游戏币,如果您也想获得,请赶快充值吧!
-; MESSAGEBOX 恭喜你获得了<$Str(N$领取充值数量)>游戏币....
-; AddTextListEx ..\QuestDiary\游戏币明细\<$USERNAME>.txt 251#增加类型：【充值领取】|【游戏币增加：+<$STR(N$领取充值数量)>】|【总游戏币为：<$STR(U60)>】|【微信ID】：<$STR(T22)>|操作时间：<$YEAR>年<$MONTH>月<$DAY>日<$HOUR>点<$MINUTE>分<$SECOND>秒 0
+SENDMSG 1 ★恭喜玩家<$USERNAME>充值获得<$Str(N$领取充值数量)>游戏币,如果您也想获得,请赶快充值吧!
+MESSAGEBOX 恭喜你获得了<$Str(N$领取充值数量)>游戏币....
+AddTextListEx ..\QuestDiary\游戏币明细\<$USERNAME>.txt 251#增加类型：【充值领取】|【游戏币增加：+<$STR(N$领取充值数量)>】|【总游戏币为：<$STR(U60)>】|【微信ID】：<$STR(T22)>|操作时间：<$YEAR>年<$MONTH>月<$DAY>日<$HOUR>点<$MINUTE>分<$SECOND>秒 0
 
-; AddTextListEx ..\..\..\..\37W包服功能\领取游戏币明细\充值领取记录.txt 251#增加类型：【充值领取】：|<$Str(N$领取到的充值)>|【区服：<$SERVERNAME>】|【账号：<$USERID>】|【角色：<$USERNAME>】|【游戏币增加：+<$STR(N$领取充值数量)>】|【总游戏币为：<$STR(U60)>】|【微信ID：<$STR(T22)>】|操作时间：<$YEAR>年<$MONTH>月<$DAY>日<$HOUR>点<$MINUTE>分<$SECOND>秒 0
+AddTextListEx ..\..\..\..\37W包服功能\领取游戏币明细\充值领取记录.txt 251#增加类型：【充值领取】：|<$Str(N$领取到的充值)>|【区服：<$SERVERNAME>】|【账号：<$USERID>】|【角色：<$USERNAME>】|【游戏币增加：+<$STR(N$领取充值数量)>】|【总游戏币为：<$STR(U60)>】|【微信ID：<$STR(T22)>】|操作时间：<$YEAR>年<$MONTH>月<$DAY>日<$HOUR>点<$MINUTE>分<$SECOND>秒 0
 
-; Gmexecute showeffect 79
-; Gmexecute showeffect 80
-; Gmexecute showeffect 81
-; Gmexecute showeffect 86
+Gmexecute showeffect 79
+Gmexecute showeffect 80
+Gmexecute showeffect 81
+Gmexecute showeffect 86
 
-; #if
-; large N$领取到的充值 0
-; CheckContainsText <$SERVERNAME> 测试
-; #act
-; ReadConfigFileItem ..\..\..\..\..\0.测试区充值记录\测试区充值记录.txt <$USERID> 测试区充值记录 <$Str(N$测试区之前记录)>
-; Inc N$测试区之前记录 <$Str(N$领取到的充值)>
-; DelConfigFileSection ..\..\..\..\..\0.测试区充值记录\测试区充值记录.txt <$USERID>
-; WriteConfigFileItem ..\..\..\..\..\0.测试区充值记录\测试区充值记录.txt <$USERID> 测试区充值记录 <$Str(N$测试区之前记录)>
+#if
+large N$领取到的充值 0
+CheckContainsText <$SERVERNAME> 测试
+#act
+ReadConfigFileItem ..\..\..\..\..\0.测试区充值记录\测试区充值记录.txt <$USERID> 测试区充值记录 <$Str(N$测试区之前记录)>
+Inc N$测试区之前记录 <$Str(N$领取到的充值)>
+DelConfigFileSection ..\..\..\..\..\0.测试区充值记录\测试区充值记录.txt <$USERID>
+WriteConfigFileItem ..\..\..\..\..\0.测试区充值记录\测试区充值记录.txt <$USERID> 测试区充值记录 <$Str(N$测试区之前记录)>
 
-; #if
-; Not CheckContainsText <$SERVERNAME> 测试
-; #act
-; ReadConfigFileItem ..\..\..\..\..\0.测试区充值记录\测试区充值记录.txt <$USERID> 测试区充值记录 <$STR(N$测试区充值数)>
+#if
+Not CheckContainsText <$SERVERNAME> 测试
+#act
+ReadConfigFileItem ..\..\..\..\..\0.测试区充值记录\测试区充值记录.txt <$USERID> 测试区充值记录 <$STR(N$测试区充值数)>
 
-; #if
-; large N$测试区充值数 0
-; Not CheckContainsText <$SERVERNAME> 测试
-; #act
-; Mov N$领取测试数量 <$Str(N$测试区充值数)>
-; Mul N$领取测试数量 <$Str(N$充值倍数)>
-; Div N$领取测试数量 10
-; Mul N$领取测试数量 12
-; Div N$领取测试数量 10
-; Inc U60 <$Str(N$领取测试数量)>
-; Inc U61 <$Str(N$测试区充值数)>
-; Inc N$本次领取币数量 <$Str(N$领取测试数量)>
-; DelConfigFileSection ..\..\..\..\..\0.测试区充值记录\测试区充值记录.txt <$USERID>
-; SENDMSG 1 ★恭喜玩家<$USERNAME>充值获得<$Str(N$领取测试数量)>游戏币,如果您也想获得,请赶快充值吧!
-; MESSAGEBOX 恭喜你领取了测试区充值<$Str(N$领取测试数量)>游戏币(包含测试区赠送20%)....
-; AddTextListEx ..\QuestDiary\游戏币明细\<$USERNAME>.txt 251#增加类型：【测试区充值领取】|【游戏币增加：+<$STR(N$领取测试数量)>】|【总游戏币为：<$STR(U60)>】|【微信ID】：<$STR(T22)>|操作时间：<$YEAR>年<$MONTH>月<$DAY>日<$HOUR>点<$MINUTE>分<$SECOND>秒 0
+#if
+large N$测试区充值数 0
+Not CheckContainsText <$SERVERNAME> 测试
+#act
+Mov N$领取测试数量 <$Str(N$测试区充值数)>
+Mul N$领取测试数量 <$Str(N$充值倍数)>
+Div N$领取测试数量 10
+Mul N$领取测试数量 12
+Div N$领取测试数量 10
+Inc U60 <$Str(N$领取测试数量)>
+Inc U61 <$Str(N$测试区充值数)>
+Inc N$本次领取币数量 <$Str(N$领取测试数量)>
+DelConfigFileSection ..\..\..\..\..\0.测试区充值记录\测试区充值记录.txt <$USERID>
+SENDMSG 1 ★恭喜玩家<$USERNAME>充值获得<$Str(N$领取测试数量)>游戏币,如果您也想获得,请赶快充值吧!
+MESSAGEBOX 恭喜你领取了测试区充值<$Str(N$领取测试数量)>游戏币(包含测试区赠送20%)....
+AddTextListEx ..\QuestDiary\游戏币明细\<$USERNAME>.txt 251#增加类型：【测试区充值领取】|【游戏币增加：+<$STR(N$领取测试数量)>】|【总游戏币为：<$STR(U60)>】|【微信ID】：<$STR(T22)>|操作时间：<$YEAR>年<$MONTH>月<$DAY>日<$HOUR>点<$MINUTE>分<$SECOND>秒 0
 
-; AddTextListEx ..\..\..\..\37W包服功能\领取游戏币明细\充值领取记录.txt 253#增加类型：【测试领取】：|<$Str(N$测试区充值数)>|【区服：<$SERVERNAME>】|【账号：<$USERID>】|【角色：<$USERNAME>】|【游戏币增加：+<$STR(N$领取测试数量)>】|【总游戏币为：<$STR(U60)>】|【微信ID：<$STR(T22)>】|操作时间：<$YEAR>年<$MONTH>月<$DAY>日<$HOUR>点<$MINUTE>分<$SECOND>秒 0
+AddTextListEx ..\..\..\..\37W包服功能\领取游戏币明细\充值领取记录.txt 253#增加类型：【测试领取】：|<$Str(N$测试区充值数)>|【区服：<$SERVERNAME>】|【账号：<$USERID>】|【角色：<$USERNAME>】|【游戏币增加：+<$STR(N$领取测试数量)>】|【总游戏币为：<$STR(U60)>】|【微信ID：<$STR(T22)>】|操作时间：<$YEAR>年<$MONTH>月<$DAY>日<$HOUR>点<$MINUTE>分<$SECOND>秒 0
 
-; Mov N$测试区充值数 0
-; Mov N$领取测试数量 0
-; Gmexecute showeffect 79
-; Gmexecute showeffect 80
-; Gmexecute showeffect 81
-; Gmexecute showeffect 86
+Mov N$测试区充值数 0
+Mov N$领取测试数量 0
+Gmexecute showeffect 79
+Gmexecute showeffect 80
+Gmexecute showeffect 81
+Gmexecute showeffect 86
 
-; #if
-; large N$领取到的充值 0
-; #act
-; Mov N$累计充值计算 <$STR(S$全站充值)>
-; Inc N$累计充值计算 <$Str(N$领取到的充值)>
+#if
+large N$领取到的充值 0
+#act
+Mov N$累计充值计算 <$STR(S$全站充值)>
+Inc N$累计充值计算 <$Str(N$领取到的充值)>
 
-; #if
-; large N$领取到的充值 0
-; large N$累计充值计算 999
-; CHECK [173] 0
-; #ACT
-; SET [173] 1
-; SETICON 5 <$Str(N$补丁编号)> 90 0 -150 8 0 100 0
+#if
+large N$领取到的充值 0
+large N$累计充值计算 999
+CHECK [173] 0
+#ACT
+SET [173] 1
+SETICON 5 <$Str(N$补丁编号)> 90 0 -150 8 0 100 0
 
-; #if
-; #act
-; goto @通区充值
-
-
-
-
-; [@退出]
-; #IF
-; #ACT
-; CLEARDELAYGOTO
-; GOTO @通区充值
+#if
+#act
+goto @通区充值
 
 
 
 
-; }
+[@退出]
+#IF
+#ACT
+CLEARDELAYGOTO
+GOTO @通区充值
+
+
+
+
+}

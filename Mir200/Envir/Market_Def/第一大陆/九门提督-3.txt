@@ -10,17 +10,28 @@
 
 ; <>                                       <进入神威狱/@qdc1>         \  \
 
-<Img|width=620|height=300|img=public/bg_npc_01.png|bg=1|scale9r=10|scale9t=10|scale9b=10|reset=1|scale9l=10|move=0>
-<Layout|x=597|y=3|width=80|height=80|link=@exit>
-<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
-<Text|a=0|x=32|y=60|tipsx=10|tipsy=80|color=254|size=18|text=【神威狱】>
-<Text|a=0|x=142|y=60|tipsx=10|tipsy=80|color=249|size=18|text=Hot~>
-<Text|a=0|x=186|y=60|tips=|tipsx=10|tipsy=80|color=253|size=18|text=每日开启一次狱之大门！>
-<Text|a=0|x=32|y=100|tipsx=10|tipsy=80|color=249|size=18|text=神威狱，乃上古时期用来禁锢封印大妖魔的神秘存在.>
-<Text|a=0|x=32|y=120|tipsx=10|tipsy=80|color=249|size=18|text=但是最近封印的大妖魔变得极不稳定！封印也不再坚不可破开始松动>
-<Text|a=0|x=32|y=160|tipsx=10|tipsy=80|color=250|size=18|text=神威狱共1层，每日22点30分准时开启，大门开启时间20分钟>
-<Text|a=0|x=32|y=180|tipsx=10|tipsy=80|color=250|size=18|text=地图刷新终极BOSS“神狱之主”，异常凶猛，实力不够不要去送死>
-<Text|a=0|x=32|y=220|tipsx=10|tipsy=80|color=251|size=18|text=进入神威狱|link=@qdc1>
+; <Img|width=620|height=300|img=public/bg_npc_01.png|bg=1|scale9r=10|scale9t=10|scale9b=10|reset=1|scale9l=10|move=0>
+; <Layout|x=597|y=3|width=80|height=80|link=@exit>
+; <Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+; <Text|a=0|x=32|y=60|tipsx=10|tipsy=80|color=254|size=18|text=【神威狱】>
+; <Text|a=0|x=142|y=60|tipsx=10|tipsy=80|color=249|size=18|text=Hot~>
+; <Text|a=0|x=186|y=60|tips=|tipsx=10|tipsy=80|color=253|size=18|text=每日开启一次狱之大门！>
+; <Text|a=0|x=32|y=100|tipsx=10|tipsy=80|color=249|size=18|text=神威狱，乃上古时期用来禁锢封印大妖魔的神秘存在.>
+; <Text|a=0|x=32|y=120|tipsx=10|tipsy=80|color=249|size=18|text=但是最近封印的大妖魔变得极不稳定！封印也不再坚不可破开始松动>
+; <Text|a=0|x=32|y=160|tipsx=10|tipsy=80|color=250|size=18|text=神威狱共1层，每日22点30分准时开启，大门开启时间20分钟>
+; <Text|a=0|x=32|y=180|tipsx=10|tipsy=80|color=250|size=18|text=地图刷新终极BOSS“神狱之主”，异常凶猛，实力不够不要去送死>
+; <Text|a=0|x=32|y=220|tipsx=10|tipsy=80|color=251|size=18|text=进入神威狱|link=@qdc1>
+
+<Img|x=0.0|y=0.0|show=4|scale9r=10|scale9t=10|scale9l=10|bg=1|scale9b=10|move=0|reset=1|img=custom/hecheng/db24.png|esc=1>
+<Layout|x=721.0|y=-15.0|width=80|height=80|link=@exit>
+<Button|x=749.0|y=0.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=72.0|y=248.0|tipsx=10|tipsy=80|color=254|size=22|outline=1|text=【神威狱】>
+<Text|a=0|x=377.0|y=154.0|tipsx=10|tipsy=80|color=253|size=18|outline=1|text=每日开启一次狱之大门！>
+<Text|a=0|x=262.0|y=188.0|width=440|tipsx=10|tipsy=80|color=249|size=18|outline=1|text=神威狱，乃上古时期用来禁锢封印大妖魔的神秘存在.>
+<Text|a=0|x=262.0|y=218.0|width=440|tipsx=10|tipsy=80|color=249|size=18|outline=1|text=但是最近封印的大妖魔变得极不稳定！封印也不再坚不可破开始松动>
+<Text|a=0|x=262.0|y=273.0|width=440|tipsx=10|tipsy=80|color=250|size=18|outline=1|text=神威狱共1层，每日22点30分准时开启，大门开启时间20分钟>
+<Text|a=0|x=262.0|y=331.0|width=440|tipsx=10|tipsy=80|color=250|size=18|outline=1|text=地图刷新终极BOSS“神狱之主”，异常凶猛，实力不够不要去送死>
+<Button|x=428.0|y=426.0|size=16|pimg=custom/button/ann2.png|nimg=custom/button/ann1.png|color=251|outline=1|text=进入神威狱|link=@qdc1>
 
 
 [@qdc1]

@@ -16,9 +16,9 @@ BREAK
 ;检测是否是假人
 ISDUMMY
 #ACT
-GetRandomText ..\QuestDiary\假人QQ332815\假人配置.txt S10
-SETDUMMYCONFIGFILENAME ..\QuestDiary\假人QQ332815\<$STR(S10)>.txt
-LOADDUMMYCONFIG
+; GetRandomText ..\QuestDiary\假人QQ332815\假人配置.txt S10
+; SETDUMMYCONFIGFILENAME ..\QuestDiary\假人QQ332815\<$STR(S10)>.txt
+; LOADDUMMYCONFIG
 
 #IF
 isdummy
@@ -45,7 +45,7 @@ ChangeHumAbility 7 + 30 99999999
 ChangeHumAbility 8 + 30 99999999
 ChangeHumAbility 9 + 30 99999999
 ChangeHumAbility 10 + 30 99999999
-SendCenterMsg 254 0 【新人提示】：ぐ:欢迎『<$USERNAME>』来到『<$SERVERNAME>』→1.76独家绿色公益三职业传奇→[<$SERVERNAME>] 1 5
+SendCenterMsg 254 0 【新人提示】：ぐ:欢迎『<$USERNAME>』来到『<$SERVERNAME>』→1.76炫光绿色公益三职业传奇→[<$SERVERNAME>] 1 5
 [@新人打怪]
 
 

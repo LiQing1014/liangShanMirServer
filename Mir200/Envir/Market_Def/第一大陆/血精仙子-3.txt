@@ -2,48 +2,83 @@
 
 #IF
 #ACT
-newreadcsv ..\QuestDiary\csv表格\cfg_魔血石打造.csv
-close
-OPENMERCHANTBIGDLG 1 557 1 4 0 0 1 400 0
+; newreadcsv ..\QuestDiary\csv表格\cfg_魔血石打造.csv
+; close
+; OPENMERCHANTBIGDLG 1 557 1 4 0 0 1 400 0
 
+#IF
+equal S$选择列
+#ACT
+MOV S$选择列 0
+
+#IF
+#ACT
 mov S$魔血石容器
 mov S$魔血石容器ID
 mov n$循环序列 0
 while n$循环序列 < <$Getcsv(cfg_魔血石打造,Row)>
-
-INC S$魔血石容器 <Layout|id=xsrq_<$STR(n$循环序列)>|children={xsrq_<$STR(n$循环序列)>_1,xsrq_<$STR(n$循环序列)>_2,xsrq_<$STR(n$循环序列)>_3,xsrq_<$STR(n$循环序列)>_4,xsrq_<$STR(n$循环序列)>_5}|x=0|y=0|width=600|height=30|link=@exit>
-INC S$魔血石容器 <Text|id=xsrq_<$STR(n$循环序列)>_1|a=0|x=10|y=0|tipsx=10|tipsy=80|color=251|size=16|text=[<$cfg_魔血石打造(<$STR(n$循环序列)>_1)>]|link=@无用>
-INC S$魔血石容器 <RText|id=xsrq_<$STR(n$循环序列)>_2|a=0|x=140|y=0|tipsx=10|tipsy=80|color=251|size=16|text=<属性：/FCOLOR=249><每秒恢复<$cfg_魔血石打造(<$STR(n$循环序列)>_2)>HPMP/FCOLOR=250>>
-INC S$魔血石容器 <Text|id=xsrq_<$STR(n$循环序列)>_3|a=0|x=350|y=0|tipsx=10|tipsy=80|color=251|size=16|text=<$cfg_魔血石打造(<$STR(n$循环序列)>_4)>元宝打造|link=@血石_元宝打造#读取行数=<$STR(n$循环序列)>>
-INC S$魔血石容器 <Text|id=xsrq_<$STR(n$循环序列)>_4|a=0|x=480|y=0|tipsx=10|tipsy=80|color=251|size=16|text=<$cfg_魔血石打造(<$STR(n$循环序列)>_6)>大米打造|link=@血石_大米打造#读取行数=<$STR(n$循环序列)>>
+mov S$选择按钮<$str(n$循环序列)> 1
+mov S$选择按钮<$str(S$选择列)> 2
+INC S$魔血石容器 <Button|id=xsrq_<$STR(n$循环序列)>|x=0.0|y=0.0|nimg=custom/button/ann<$str(S$选择按钮<$str(n$循环序列)>)>.png|color=250|size=15|text=<$cfg_魔血石打造(<$STR(n$循环序列)>_1)>|link=@Main#选择列=<$str(n$循环序列)>>
 inc S$魔血石容器ID xsrq_<$STR(n$循环序列)>,
 inc n$循环序列 1
 endwhile
+
+
+getdbitemfieldvalue 元宝 idx S$展示物品1ID
+getdbitemfieldvalue <$cfg_魔血石打造(<$STR(S$选择列)>_7)> idx S$展示物品2ID
+getdbitemfieldvalue <$cfg_魔血石打造(<$STR(S$选择列)>_1)> idx S$展示物品3ID
+
+
 #SAY
 ; <血石回血/SCOLOR=154> <New/SCOLOR=249>\ 
 ; <>   最近玛珐大陆动荡不平，每天进进出出这里的伤者日益增多,尤其\
 ; 是我身边这片土地，土壤已被鲜血染成红的....\  \
-; <[魔血石Lv.1]|250#每秒恢复10HPMP/@无用>     <属性：><每秒恢复10HPMP/AUTOCOLOR=250>     <元宝打造|250#打造条件：^-^251#元宝*1000/@元宝魔血石Lv.1>   <大米打造|250#打造条件：^-^253#大米*1/@大米魔血石Lv.1>\ 
-; <[魔血石Lv.2]|250#每秒恢复20HPMP/@无用>     <属性：><每秒恢复20HPMP/AUTOCOLOR=250>     <元宝打造|250#打造条件：^-^161#魔血石Lv.1^-^251#元宝*3000/@元宝魔血石Lv.2>   <大米打造|250#打造条件：^-^161#魔血石Lv.1^-^253#大米*2/@大米魔血石Lv.2>\ 
-; <[魔血石Lv.3]|250#每秒恢复30HPMP/@无用>     <属性：><每秒恢复30HPMP/AUTOCOLOR=250>     <元宝打造|250#打造条件：^-^161#魔血石Lv.2^-^251#元宝*5000/@元宝魔血石Lv.3>   <大米打造|250#打造条件：^-^161#魔血石Lv.2^-^253#大米*3/@大米魔血石Lv.3>\ 
-; <[魔血石Lv.4]|250#每秒恢复50HPMP/@无用>     <属性：><每秒恢复50HPMP/AUTOCOLOR=250>     <元宝打造|250#打造条件：^-^161#魔血石Lv.3^-^251#元宝*10000/@元宝魔血石Lv.4>   <大米打造|250#打造条件：^-^161#魔血石Lv.3^-^253#大米*5/@大米魔血石Lv.4>\  
-; <[魔血石Lv.5]|250#每秒恢复70HPMP/@无用>     <属性：><每秒恢复70HPMP/AUTOCOLOR=250>     <元宝打造|250#打造条件：^-^161#魔血石Lv.4^-^251#元宝*20000/@元宝魔血石Lv.5>   <大米打造|250#打造条件：^-^161#魔血石Lv.4^-^253#大米*10/@大米魔血石Lv.5>\  
-; <[魔血石Lv.6]|250#每秒恢复90HPMP/@无用>     <属性：><每秒恢复90HPMP/AUTOCOLOR=250>     <元宝打造|250#打造条件：^-^161#魔血石Lv.5^-^251#元宝*50000/@元宝魔血石Lv.6>   <大米打造|250#打造条件：^-^161#魔血石Lv.5^-^253#大米*25/@大米魔血石Lv.6>\ 
-; <[魔血石Lv.7]|250#每秒恢复110HPMP/@无用>     <属性：><每秒恢复110HPMP/AUTOCOLOR=250>    <元宝打造|250#打造条件：^-^161#魔血石Lv.6^-^251#元宝*80000/@元宝魔血石Lv.7>   <大米打造|250#打造条件：^-^161#魔血石Lv.6^-^253#大米*40/@大米魔血石Lv.7>\ 
-; <[魔血石Lv.8]|250#每秒恢复130HPMP/@无用>     <属性：><每秒恢复130HPMP/AUTOCOLOR=250>    <元宝打造|250#打造条件：^-^161#魔血石Lv.7^-^251#元宝*100000/@元宝魔血石Lv.8>   <大米打造|250#打造条件：^-^161#魔血石Lv.7^-^253#大米*50/@大米魔血石Lv.8>\ \ 
-; <[魔血石Lv.9]|250#每秒恢复150HPMP/@无用>     <属性：><每秒恢复150HPMP/AUTOCOLOR=250>    <元宝打造|250#打造条件：^-^161#魔血石Lv.8*1^-^251#元宝*200000/@元宝魔血石Lv.9>   <大米打造|250#打造条件：^-^161#魔血石Lv.8*1^-^253#大米*100/@大米魔血石Lv.9>\ \ 
-; <[魔血石.Max]|250#每秒恢复180HPMP/@无用>     <属性：><每秒恢复180HPMP/AUTOCOLOR=250>    <元宝打造|250#打造条件：^-^161#魔血石Lv.9*1^-^251#元宝*300000/@元宝魔血石.Max>   <大米打造|250#打造条件：^-^161#魔血石Lv.9*1^-^253#大米*150/@大米魔血石.Max>\ 
+; <[魔血石Lv.1]|250#每秒恢复10HPMP/@无用>     <属性：><每秒恢复10HPMP/AUTOCOLOR=250>     <元宝打造|250#打造条件：^-^251#元宝*1000/@元宝魔血石Lv.1>   <灵符打造|250#打造条件：^-^253#灵符*1/@灵符魔血石Lv.1>\ 
+; <[魔血石Lv.2]|250#每秒恢复20HPMP/@无用>     <属性：><每秒恢复20HPMP/AUTOCOLOR=250>     <元宝打造|250#打造条件：^-^161#魔血石Lv.1^-^251#元宝*3000/@元宝魔血石Lv.2>   <灵符打造|250#打造条件：^-^161#魔血石Lv.1^-^253#灵符*2/@灵符魔血石Lv.2>\ 
+; <[魔血石Lv.3]|250#每秒恢复30HPMP/@无用>     <属性：><每秒恢复30HPMP/AUTOCOLOR=250>     <元宝打造|250#打造条件：^-^161#魔血石Lv.2^-^251#元宝*5000/@元宝魔血石Lv.3>   <灵符打造|250#打造条件：^-^161#魔血石Lv.2^-^253#灵符*3/@灵符魔血石Lv.3>\ 
+; <[魔血石Lv.4]|250#每秒恢复50HPMP/@无用>     <属性：><每秒恢复50HPMP/AUTOCOLOR=250>     <元宝打造|250#打造条件：^-^161#魔血石Lv.3^-^251#元宝*10000/@元宝魔血石Lv.4>   <灵符打造|250#打造条件：^-^161#魔血石Lv.3^-^253#灵符*5/@灵符魔血石Lv.4>\  
+; <[魔血石Lv.5]|250#每秒恢复70HPMP/@无用>     <属性：><每秒恢复70HPMP/AUTOCOLOR=250>     <元宝打造|250#打造条件：^-^161#魔血石Lv.4^-^251#元宝*20000/@元宝魔血石Lv.5>   <灵符打造|250#打造条件：^-^161#魔血石Lv.4^-^253#灵符*10/@灵符魔血石Lv.5>\  
+; <[魔血石Lv.6]|250#每秒恢复90HPMP/@无用>     <属性：><每秒恢复90HPMP/AUTOCOLOR=250>     <元宝打造|250#打造条件：^-^161#魔血石Lv.5^-^251#元宝*50000/@元宝魔血石Lv.6>   <灵符打造|250#打造条件：^-^161#魔血石Lv.5^-^253#灵符*25/@灵符魔血石Lv.6>\ 
+; <[魔血石Lv.7]|250#每秒恢复110HPMP/@无用>     <属性：><每秒恢复110HPMP/AUTOCOLOR=250>    <元宝打造|250#打造条件：^-^161#魔血石Lv.6^-^251#元宝*80000/@元宝魔血石Lv.7>   <灵符打造|250#打造条件：^-^161#魔血石Lv.6^-^253#灵符*40/@灵符魔血石Lv.7>\ 
+; <[魔血石Lv.8]|250#每秒恢复130HPMP/@无用>     <属性：><每秒恢复130HPMP/AUTOCOLOR=250>    <元宝打造|250#打造条件：^-^161#魔血石Lv.7^-^251#元宝*100000/@元宝魔血石Lv.8>   <灵符打造|250#打造条件：^-^161#魔血石Lv.7^-^253#灵符*50/@灵符魔血石Lv.8>\ \ 
+; <[魔血石Lv.9]|250#每秒恢复150HPMP/@无用>     <属性：><每秒恢复150HPMP/AUTOCOLOR=250>    <元宝打造|250#打造条件：^-^161#魔血石Lv.8*1^-^251#元宝*200000/@元宝魔血石Lv.9>   <灵符打造|250#打造条件：^-^161#魔血石Lv.8*1^-^253#灵符*100/@灵符魔血石Lv.9>\ \ 
+; <[魔血石.Max]|250#每秒恢复180HPMP/@无用>     <属性：><每秒恢复180HPMP/AUTOCOLOR=250>    <元宝打造|250#打造条件：^-^161#魔血石Lv.9*1^-^251#元宝*300000/@元宝魔血石.Max>   <灵符打造|250#打造条件：^-^161#魔血石Lv.9*1^-^253#灵符*150/@灵符魔血石.Max>\ 
 
 
-<Img|width=620|height=400|scale9t=10|show=4|scale9r=10|scale9l=10|bg=1|scale9b=10|esc=1|move=0|img=public/bg_npc_04.jpg|reset=1>
-<Layout|x=597|y=3|width=80|height=80|link=@exit>
-<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
-<Text|a=0|x=32.0|y=22.0|tipsx=10|tipsy=80|color=154|size=16|text=血石回血>
-<Text|a=0|x=120.0|y=22.0|tipsx=10|tipsy=80|color=249|size=16|text=New>
-<Text|a=0|x=32.0|y=42.0|tipsx=10|tipsy=80|color=255|size=16|text=最近玛珐大陆动荡不平，每天进进出出这里的伤者日益增多,尤其>
-<Text|a=0|x=32.0|y=62.0|tipsx=10|tipsy=80|color=255|size=16|text=是我身边这片土地，土壤已被鲜血染成红的....>
-<ListView|children={<$STR(S$魔血石容器ID)>}|x=12.0|y=86.0|width=600|height=300>
+; <Img|width=620|height=400|scale9t=10|show=4|scale9r=10|scale9l=10|bg=1|scale9b=10|esc=1|move=0|img=public/bg_npc_04.jpg|reset=1>
+; <Layout|x=597|y=3|width=80|height=80|link=@exit>
+; <Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+; <Text|a=0|x=32.0|y=22.0|tipsx=10|tipsy=80|color=154|size=16|text=血石回血>
+; <Text|a=0|x=120.0|y=22.0|tipsx=10|tipsy=80|color=249|size=16|text=New>
+; <Text|a=0|x=32.0|y=42.0|tipsx=10|tipsy=80|color=255|size=16|text=最近玛珐大陆动荡不平，每天进进出出这里的伤者日益增多,尤其>
+; <Text|a=0|x=32.0|y=62.0|tipsx=10|tipsy=80|color=255|size=16|text=是我身边这片土地，土壤已被鲜血染成红的....>
+; <ListView|children={<$STR(S$魔血石容器ID)>}|x=12.0|y=86.0|width=600|height=300>
+; <$STR(S$魔血石容器)>
+
+
+
+<Img|show=4|bg=1|loadDelay=0|move=0|esc=1|img=custom/hecheng/bs1.png|reset=1>
+<Layout|x=721.0|y=-18.0|width=80|height=80|link=@exit>
+<Button|x=750.0|y=0.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<ItemShow|x=433.0|y=170.0|width=70|height=70|itemid=<$str(S$展示物品3ID)>|itemcount=1|showtips=1|bgtype=0>
+<RText|x=240.0|y=319.0|color=255|size=18|outline=1|text=<属性：/FCOLOR=255><每秒恢复<$cfg_魔血石打造(<$STR(S$选择列)>_2)>/FCOLOR=250>>
+<ItemShow|x=317.0|y=364.0|width=70|height=70|itemid=<$str(S$展示物品1ID)>|itemcount=<$cfg_魔血石打造(<$STR(S$选择列)>_4)>|showtips=1|bgtype=1>
+
+<Button|x=255.0|y=440.0|pimg=custom/button/ann2.png|nimg=custom/button/ann1.png|color=251|size=18|outline=1|text=元宝打造|link=@元宝<$cfg_魔血石打造(<$STR(S$选择列)>_1)>>
+
+<Button|x=557.0|y=440.0|color=251|pimg=custom/button/ann2.png|nimg=custom/button/ann1.png|size=18|outline=1|text=灵符打造|link=@灵符<$cfg_魔血石打造(<$STR(S$选择列)>_1)>>
+<Text|x=371.0|y=16.0|color=255|size=18|outline=1|text=血石锻造>
+<Text|x=630.0|y=384.0|color=255|size=18|text=灵符<$cfg_魔血石打造(<$STR(S$选择列)>_6)>>
+<ListView|children={<$STR(S$魔血石容器ID)>}|x=50.0|y=66.0|width=120|height=400|margin=2|cantouch=0>
 <$STR(S$魔血石容器)>
+
+#if
+not equal S$选择列 0
+#SAY
+<ItemShow|x=239.0|y=363.0|width=70|height=70|itemid=<$str(S$展示物品2ID)>|itemcount=1|showtips=1|bgtype=1>
+<ItemShow|x=541.0|y=363.0|width=70|height=70|itemid=<$str(S$展示物品2ID)>|itemcount=1|showtips=1|bgtype=1>
+
 
 [@血石_元宝打造]
 #act
@@ -70,14 +105,14 @@ give <$cfg_魔血石打造(<$STR(S$读取行数)>_1)> 1
 SendCenterMsg 250 0 【提示】：恭喜您成功打造一个【<$cfg_魔血石打造(<$STR(S$读取行数)>_1)>】 0 3
 
 
-[@血石_大米打造]
+[@血石_灵符打造]
 #act
 ; sendmsg 9 <$cfg_魔血石打造(<$STR(S$读取行数)>_0)>
 
 #if
-checkgamepoint ? <$cfg_魔血石打造(<$STR(S$读取行数)>_6)>
+checkmoney 灵符 ? <$cfg_魔血石打造(<$STR(S$读取行数)>_6)>
 #elseact
-MESSAGEBOX 对不起，您的账户上大米不足<$cfg_魔血石打造(<$STR(S$读取行数)>_6)>个，请好好检查！
+MESSAGEBOX 对不起，您的账户上灵符不足<$cfg_魔血石打造(<$STR(S$读取行数)>_6)>个，请好好检查！
 break
 
 #if
@@ -89,7 +124,7 @@ break
 
 #if
 #act
-GAMEPOINT - <$cfg_魔血石打造(<$STR(S$读取行数)>_6)>
+MONEY 灵符 - <$cfg_魔血石打造(<$STR(S$读取行数)>_6)>
 take <$cfg_魔血石打造(<$STR(S$读取行数)>_7)> 1
 give <$cfg_魔血石打造(<$STR(S$读取行数)>_1)> 1
 SendCenterMsg 250 0 【提示】：恭喜您成功打造一个【<$cfg_魔血石打造(<$STR(S$读取行数)>_1)>】 0 3
@@ -372,12 +407,12 @@ Break
 
 
 
-[@大米魔血石.Max]
+[@灵符魔血石.Max]
 
 #IF
-CHECKGAMEPOINT < 150
+checkmoney 灵符 < 150
 #ACT
-MESSAGEBOX 对不起，您的账户上大米不足150点，请好好检查！
+MESSAGEBOX 对不起，您的账户上灵符不足150点，请好好检查！
 break
 
 #IF
@@ -390,19 +425,19 @@ break
 
 #IF
 #Act
-GAMEPOINT - 150
+MONEY 灵符 - 150
 TAKE 魔血石Lv.9 1
 Give 魔血石.Max 1
 SendCenterMsg 250 0 【提示】：恭喜您成功打造一个【魔血石.Max】 0 3
 Break
 
 
-[@大米魔血石Lv.9]
+[@灵符魔血石Lv.9]
 
 #IF
-CHECKGAMEPOINT < 100
+checkmoney 灵符 < 100
 #ACT
-MESSAGEBOX 对不起，您的账户上大米不足100点，请好好检查！
+MESSAGEBOX 对不起，您的账户上灵符不足100点，请好好检查！
 break
 
 #IF
@@ -415,7 +450,7 @@ break
 
 #IF
 #Act
-GAMEPOINT - 100
+MONEY 灵符 - 100
 TAKE 魔血石Lv.8 1
 Give 魔血石Lv.9 1
 SendCenterMsg 250 0 【提示】：恭喜您成功打造一个【魔血石Lv.9】 0 3
@@ -429,12 +464,12 @@ Break
 
 
 
-[@大米魔血石Lv.8]
+[@灵符魔血石Lv.8]
 
 #IF
-CHECKGAMEPOINT < 50
+checkmoney 灵符 < 50
 #ACT
-MESSAGEBOX 对不起，您的账户上大米不足50点，请好好检查！
+MESSAGEBOX 对不起，您的账户上灵符不足50点，请好好检查！
 break
 
 #IF
@@ -447,7 +482,7 @@ break
 
 #IF
 #Act
-GAMEPOINT - 50
+MONEY 灵符 - 50
 TAKE 魔血石Lv.7 1
 Give 魔血石Lv.8 1
 SendCenterMsg 250 0 【提示】：恭喜您成功打造一个【魔血石Lv.8】 0 3
@@ -456,12 +491,12 @@ Break
 
 
 
-[@大米魔血石Lv.7]
+[@灵符魔血石Lv.7]
 
 #IF
-CHECKGAMEPOINT < 40
+checkmoney 灵符 < 40
 #ACT
-MESSAGEBOX 对不起，您的账户上大米不足40点，请好好检查！
+MESSAGEBOX 对不起，您的账户上灵符不足40点，请好好检查！
 break
 
 #IF
@@ -474,7 +509,7 @@ break
 
 #IF
 #Act
-GAMEPOINT - 40
+MONEY 灵符 - 40
 TAKE 魔血石Lv.6 1
 Give 魔血石Lv.7 1
 SendCenterMsg 250 0 【提示】：恭喜您成功打造一个【魔血石Lv.7】 0 3
@@ -483,12 +518,12 @@ Break
 
 
 
-[@大米魔血石Lv.6]
+[@灵符魔血石Lv.6]
 
 #IF
-CHECKGAMEPOINT < 25
+checkmoney 灵符 < 25
 #ACT
-MESSAGEBOX 对不起，您的账户上大米不足25点，请好好检查！
+MESSAGEBOX 对不起，您的账户上灵符不足25点，请好好检查！
 break
 
 #IF
@@ -501,7 +536,7 @@ break
 
 #IF
 #Act
-GAMEPOINT - 25
+MONEY 灵符 - 25
 TAKE 魔血石Lv.5 1
 Give 魔血石Lv.6 1
 SendCenterMsg 250 0 【提示】：恭喜您成功打造一个【魔血石Lv.6】 0 3
@@ -510,12 +545,12 @@ Break
 
 
 
-[@大米魔血石Lv.5]
+[@灵符魔血石Lv.5]
 
 #IF
-CHECKGAMEPOINT < 10
+checkmoney 灵符 < 10
 #ACT
-MESSAGEBOX 对不起，您的账户上大米不足10点，请好好检查！
+MESSAGEBOX 对不起，您的账户上灵符不足10点，请好好检查！
 break
 
 #IF
@@ -528,7 +563,7 @@ break
 
 #IF
 #Act
-GAMEPOINT - 10
+MONEY 灵符 - 10
 TAKE 魔血石Lv.4 1
 Give 魔血石Lv.5 1
 SendCenterMsg 250 0 【提示】：恭喜您成功打造一个【魔血石Lv.5】 0 3
@@ -537,12 +572,12 @@ Break
 
 
 
-[@大米魔血石Lv.4]
+[@灵符魔血石Lv.4]
 
 #IF
-CHECKGAMEPOINT < 5
+checkmoney 灵符 < 5
 #ACT
-MESSAGEBOX 对不起，您的账户上大米不足5点，请好好检查！
+MESSAGEBOX 对不起，您的账户上灵符不足5点，请好好检查！
 break
 
 #IF
@@ -555,7 +590,7 @@ break
 
 #IF
 #Act
-GAMEPOINT - 5
+MONEY 灵符 - 5
 TAKE 魔血石Lv.3 1
 Give 魔血石Lv.4 1
 SendCenterMsg 250 0 【提示】：恭喜您成功打造一个【魔血石Lv.4】 0 3
@@ -565,12 +600,12 @@ Break
 
 
 
-[@大米魔血石Lv.3]
+[@灵符魔血石Lv.3]
 
 #IF
-CHECKGAMEPOINT < 3
+checkmoney 灵符 < 3
 #ACT
-MESSAGEBOX 对不起，您的账户上大米不足3点，请好好检查！
+MESSAGEBOX 对不起，您的账户上灵符不足3点，请好好检查！
 break
 
 #IF
@@ -583,7 +618,7 @@ break
 
 #IF
 #Act
-GAMEPOINT - 3
+MONEY 灵符 - 3
 TAKE 魔血石Lv.2 1
 Give 魔血石Lv.3 1
 SendCenterMsg 250 0 【提示】：恭喜您成功打造一个【魔血石Lv.3】 0 3
@@ -596,12 +631,12 @@ Break
 
 
 
-[@大米魔血石Lv.2]
+[@灵符魔血石Lv.2]
 
 #IF
-CHECKGAMEPOINT < 2
+checkmoney 灵符 < 2
 #ACT
-MESSAGEBOX 对不起，您的账户上大米不足2点，请好好检查！
+MESSAGEBOX 对不起，您的账户上灵符不足2点，请好好检查！
 break
 
 #IF
@@ -614,25 +649,25 @@ break
 
 #IF
 #Act
-GAMEPOINT - 2
+MONEY 灵符 - 2
 TAKE 魔血石Lv.1 1
 Give 魔血石Lv.2 1
 SendCenterMsg 250 0 【提示】：恭喜您成功打造一个【魔血石Lv.2】 0 3
 Break
 
 
-[@大米魔血石Lv.1]
+[@灵符魔血石Lv.1]
 
 #IF
-CHECKGAMEPOINT < 1
+checkmoney 灵符 < 1
 #ACT
-MESSAGEBOX 对不起，您的账户上大米不足1点，请好好检查！
+MESSAGEBOX 对不起，您的账户上灵符不足1点，请好好检查！
 break
 
 
 #IF
 #Act
-GAMEPOINT - 1
+MONEY 灵符 - 1
 Give 魔血石Lv.1 1
 SendCenterMsg 250 0 【提示】：恭喜您成功打造一个【魔血石Lv.1】 0 3
 Break

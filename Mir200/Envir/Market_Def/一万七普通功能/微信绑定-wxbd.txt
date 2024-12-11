@@ -1,5 +1,5 @@
 [@Main]
 #If
 #act
-Espmapmoveex	3	330	330	5
+mapmove	3	330	330	5
 break

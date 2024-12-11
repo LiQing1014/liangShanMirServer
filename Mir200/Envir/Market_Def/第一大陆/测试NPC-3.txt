@@ -1,45 +1,34 @@
 [@MAIN]
-#ACT
-sendmsg 9 111
+<Img|x=-1.0|y=0.0|reset=1|show=0|bg=1|move=0|img=public_win32/1900000610.png|loadDelay=1|esc=1>
+<Layout|x=611.0|y=0.0|width=80|height=80|link=@exit>
+<Button|x=640.0|y=0.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Button|x=22|y=54.0|color=255|size=18|nimg=public/1900000612.png|text=等级+10|link=@等级>
+<Button|x=266|y=54|color=255|size=18|nimg=public/1900000612.png|text=元宝+1亿|link=@元宝>
+<Button|x=144|y=54.0|color=255|size=18|nimg=public/1900000612.png|text=灵符+1亿|link=@灵符>
+<Button|x=388|y=54|color=255|size=18|nimg=public/1900000612.png>
+<Button|x=510|y=54.0|color=255|size=18|nimg=public/1900000612.png>
+<Button|x=22.0|y=103.0|color=255|size=18|nimg=public/1900000612.png>
+<Button|x=266.0|y=103.0|color=255|size=18|nimg=public/1900000612.png>
+<Button|x=144.0|y=103.0|color=255|size=18|nimg=public/1900000612.png>
+<Button|x=388.0|y=103.0|color=255|size=18|nimg=public/1900000612.png>
+<Button|x=510.0|y=103.0|color=255|size=18|nimg=public/1900000612.png>
+<Button|x=22.0|y=153.0|color=255|size=18|nimg=public/1900000612.png>
+<Button|x=266.0|y=153.0|color=255|size=18|nimg=public/1900000612.png>
+<Button|x=144.0|y=153.0|color=255|size=18|nimg=public/1900000612.png>
+<Button|x=388.0|y=153.0|color=255|size=18|nimg=public/1900000612.png>
+<Button|x=510.0|y=153.0|color=255|size=18|nimg=public/1900000612.png>
 
 
-#if
-NOT CHECKCUSTOMITEMPROGRESSBAR 0 0
-#ACT
-; ChangeBindMoney 元宝 <$STR(N$吞噬元宝数量)>
-; TAKE 神器装备碎片 <$STR(N$吞噬碎片数量)>
-CHANGECUSTOMITEMPROGRESSBAR 0 0 0 1
-CHANGECUSTOMITEMPROGRESSBAR 0 0 1 吞噬等级：
-CHANGECUSTOMITEMPROGRESSBAR 0 0 2 253
-CHANGECUSTOMITEMPROGRESSBAR 0 0 3 1
-CHANGECUSTOMITEMPROGRESSBAR 0 0 4 2
-CHANGECUSTOMITEMPROGRESSBARVALUE 0 0 1 = 10
-CHANGECUSTOMITEMPROGRESSBARVALUE 0 0 0 = 1
-BREAK
-
-#if
-#ACT
-; ChangeBindMoney 元宝 <$STR(N$吞噬元宝数量)>
-; TAKE 神器装备碎片 <$STR(N$吞噬碎片数量)>
-CHANGECUSTOMITEMPROGRESSBARVALUE 0 0 0 + 1
 
 
-#if
-NOT CHECKCUSTOMITEMPROGRESSBAR 0 1
-#ACT
-; ChangeBindMoney 元宝 <$STR(N$吞噬元宝数量)>
-; TAKE 神器装备碎片 <$STR(N$吞噬碎片数量)>
-CHANGECUSTOMITEMPROGRESSBAR 0 1 0 1
-CHANGECUSTOMITEMPROGRESSBAR 0 1 1 吞噬经验：
-CHANGECUSTOMITEMPROGRESSBAR 0 1 2 253
-CHANGECUSTOMITEMPROGRESSBAR 0 1 3 1
-CHANGECUSTOMITEMPROGRESSBAR 0 1 4 2
-CHANGECUSTOMITEMPROGRESSBARVALUE 0 1 1 = 100
-CHANGECUSTOMITEMPROGRESSBARVALUE 0 1 0 = 1
-BREAK
+[@灵符]
+#act
+MONEY 灵符 + 100000000
 
-#if
-#ACT
-; ChangeBindMoney 元宝 <$STR(N$吞噬元宝数量)>
-; TAKE 神器装备碎片 <$STR(N$吞噬碎片数量)>
-CHANGECUSTOMITEMPROGRESSBARVALUE 0 1 0 + 1
+[@元宝]
+#act
+money 元宝 + 100000000
+
+[@等级]
+#act
+CHANGELEVEL + 10

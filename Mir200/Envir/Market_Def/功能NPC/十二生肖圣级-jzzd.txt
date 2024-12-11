@@ -7,7 +7,7 @@
 
 <遗物获取：/FCOLOR=250><生肖遗物可以在各大地图通过击杀BOSS必获取！/FCOLOR=19>\ \
 <遗物进阶：/FCOLOR=250><普通的生肖遗物可/FCOLOR=19><合成><进阶成圣级和神级生肖/FCOLOR=19>\ \
-<生肖遗物：/FCOLOR=250>  <10大米点购买3颗生肖遗物/FCOLOR=161>  <点击购买3颗/@11> <点击购买30颗/@22>\ \ 
+<生肖遗物：/FCOLOR=250>  <10灵符点购买3颗生肖遗物/FCOLOR=161>  <点击购买3颗/@11> <点击购买30颗/@22>\ \ 
 
 <>  <一键合成生肖|需要:10个生肖遗物^250#随机获得一种生肖/@合成>  <进阶圣级生肖/@进阶1>  <一键分解普通生肖|普通生肖可分解5个生肖遗物.请把你需要的普通生肖存仓库/@分解11>  <圣级生肖地图|需佩戴圣阶生肖套或神阶套可进入/@圣级生肖套进入>      
 
@@ -72,9 +72,9 @@ BREAK
 
 [@22]
 #IF
-CHECKGAMEPOINT > 87
+checkmoney 灵符 > 87
 #act
-GAMEPOINT - 88
+MONEY 灵符 - 88
 GIVE 生肖遗物 30
 break
 #ELSEACT
@@ -84,9 +84,9 @@ break
 
 [@11]
 #IF
-CHECKGAMEPOINT > 9
+checkmoney 灵符 > 9
 #act
-GAMEPOINT - 10
+MONEY 灵符 - 10
 GIVE 生肖遗物 3
 break
 #ELSEACT
@@ -134,7 +134,7 @@ BREAK
 #ACT
 #SAY
 <-------------------------------------------------------------/AUTOCOLOR=91>\
-<>    <圣级生肖遗物，进阶条件：/FCOLOR=70><需要3个相同的生肖+88大米点进阶./FCOLOR=250>\ 
+<>    <圣级生肖遗物，进阶条件：/FCOLOR=70><需要3个相同的生肖+88灵符点进阶./FCOLOR=250>\ 
 <-------------------------------------------------------------/AUTOCOLOR=91>\
 <>     <圣·子鼠/@圣1>      <圣·丑牛/@圣2>      <圣·寅虎/@圣3>      <圣·卯兔/@圣4>\ 
 <-------------------------------------------------------------/AUTOCOLOR=91>\
@@ -148,9 +148,9 @@ BREAK
 [@圣1]
 #if
 checkitem 子鼠 3
-CHECKGAMEPOINT > 87
+checkmoney 灵符 > 87
 #act
-GAMEPOINT - 88
+MONEY 灵符 - 88
 take 子鼠 3
 give 圣·子鼠 1
 GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出圣级生肖：【圣·子鼠】
@@ -162,9 +162,9 @@ break
 [@圣2]
 #if
 checkitem 丑牛 3
-CHECKGAMEPOINT > 87
+checkmoney 灵符 > 87
 #act
-GAMEPOINT - 88
+MONEY 灵符 - 88
 take 丑牛 3
 give 圣·丑牛 1
 GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出圣级生肖：【圣·丑牛】
@@ -176,9 +176,9 @@ break
 [@圣3]
 #if
 checkitem 寅虎 3
-CHECKGAMEPOINT > 87
+checkmoney 灵符 > 87
 #act
-GAMEPOINT - 88
+MONEY 灵符 - 88
 take 寅虎 3
 give 圣·寅虎 1
 GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出圣级生肖：【圣·寅虎】
@@ -190,9 +190,9 @@ break
 [@圣4]
 #if
 checkitem 卯兔 3
-CHECKGAMEPOINT > 87
+checkmoney 灵符 > 87
 #act
-GAMEPOINT - 88
+MONEY 灵符 - 88
 take 卯兔 3
 give 圣·卯兔 1
 GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出圣级生肖：【圣·卯兔】
@@ -204,9 +204,9 @@ break
 [@圣5]
 #if
 checkitem 辰龙 3
-CHECKGAMEPOINT > 87
+checkmoney 灵符 > 87
 #act
-GAMEPOINT - 88
+MONEY 灵符 - 88
 take 辰龙 3
 give 圣·辰龙 1
 GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出圣级生肖：【圣·辰龙】
@@ -218,9 +218,9 @@ break
 [@圣6]
 #if
 checkitem 巳蛇 3
-CHECKGAMEPOINT > 87
+checkmoney 灵符 > 87
 #act
-GAMEPOINT - 88
+MONEY 灵符 - 88
 take 巳蛇 3
 give 圣·巳蛇 1
 GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出圣级生肖：【圣·巳蛇】
@@ -232,9 +232,9 @@ break
 [@圣7]
 #if
 checkitem 午马 3
-CHECKGAMEPOINT > 87
+checkmoney 灵符 > 87
 #act
-GAMEPOINT - 88
+MONEY 灵符 - 88
 take 午马 3
 give 圣·午马 1
 GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出圣级生肖：【圣·午马】
@@ -246,9 +246,9 @@ break
 [@圣8]
 #if
 checkitem 未羊 3
-CHECKGAMEPOINT > 87
+checkmoney 灵符 > 87
 #act
-GAMEPOINT - 88
+MONEY 灵符 - 88
 take 未羊 3
 give 圣·未羊 1
 GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出圣级生肖：【圣·未羊】
@@ -260,9 +260,9 @@ break
 [@圣9]
 #if
 checkitem 申猴 3
-CHECKGAMEPOINT > 87
+checkmoney 灵符 > 87
 #act
-GAMEPOINT - 88
+MONEY 灵符 - 88
 take 申猴 3
 give 圣·申猴 1
 GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出圣级生肖：【圣·申猴】
@@ -274,9 +274,9 @@ break
 [@圣10]
 #if
 checkitem 酉鸡 3
-CHECKGAMEPOINT > 87
+checkmoney 灵符 > 87
 #act
-GAMEPOINT - 88
+MONEY 灵符 - 88
 take 酉鸡 3
 give 圣·酉鸡 1
 GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出圣级生肖：【圣·酉鸡】
@@ -288,9 +288,9 @@ break
 [@圣11]
 #if
 checkitem 戌狗 3
-CHECKGAMEPOINT > 87
+checkmoney 灵符 > 87
 #act
-GAMEPOINT - 88
+MONEY 灵符 - 88
 take 戌狗 3
 give 圣·戌狗 1
 GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出圣级生肖：【圣·戌狗】
@@ -302,9 +302,9 @@ break
 [@圣12]
 #if
 checkitem 亥猪 3
-CHECKGAMEPOINT > 87
+checkmoney 灵符 > 87
 #act
-GAMEPOINT - 88
+MONEY 灵符 - 88
 take 亥猪 3
 give 圣·亥猪 1
 GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出圣级生肖：【圣·亥猪】

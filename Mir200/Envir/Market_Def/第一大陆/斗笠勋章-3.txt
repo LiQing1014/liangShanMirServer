@@ -1,58 +1,108 @@
 [@MAIN]
+#IF
+equal S$分类选择
+#ACT
+MOV S$分类选择 0
+mov S$子项选择 0
+
+#if
+equal S$分类选择 0
+Large S$子项选择 4
+#act
+mov S$子项选择 0
+
+#if
+equal S$分类选择 2
+SMALL S$子项选择 10
+#act
+mov S$子项选择 10
+
+#if
+equal S$分类选择 1
+Large S$子项选择 9
+#act
+mov S$子项选择 5
+
+#if
+equal S$分类选择 1
+SMALL S$子项选择 5
+#act
+mov S$子项选择 5
 
 #IF
 #ACT
-MOV N$斗笠合成数量  2
-MOV N$斗笠价格0  5000
-MOV N$斗笠价格1  10000
-MOV N$斗笠价格2  30000
-MOV N$斗笠价格3  50000
-MOV N$斗笠价格4  80000
-MOV N$斗笠价格5  100000
-MOV S$斗笠价格0  幸运斗笠
-MOV S$斗笠价格1  青铜斗笠
-MOV S$斗笠价格2  白银斗笠
-MOV S$斗笠价格3  黄金斗笠
-MOV S$斗笠价格4  铂金斗笠
-MOV S$斗笠价格5  钻石斗笠
-MOV N$斗笠材料0  10
-MOV N$斗笠材料1  20
-MOV N$斗笠材料2  60
-MOV N$斗笠材料3  100
-MOV N$斗笠材料4  160
-MOV N$斗笠材料5  200
-MOV S$斗笠材料   魔法神石
+; newreadcsv ..\QuestDiary\csv表格\cfg_斗笠勋章锻造.csv
+; MOV N$斗笠合成数量  2
+; MOV N$斗笠价格0  5000
+; MOV N$斗笠价格1  10000
+; MOV N$斗笠价格2  30000
+; MOV N$斗笠价格3  50000
+; MOV N$斗笠价格4  80000
+; MOV N$斗笠价格5  100000
+; MOV S$斗笠价格0  幸运斗笠
+; MOV S$斗笠价格1  青铜斗笠
+; MOV S$斗笠价格2  白银斗笠
+; MOV S$斗笠价格3  黄金斗笠
+; MOV S$斗笠价格4  铂金斗笠
+; MOV S$斗笠价格5  钻石斗笠
+; MOV N$斗笠材料0  10
+; MOV N$斗笠材料1  20
+; MOV N$斗笠材料2  60
+; MOV N$斗笠材料3  100
+; MOV N$斗笠材料4  160
+; MOV N$斗笠材料5  200
+; MOV S$斗笠材料   炫光神石
 
-MOV N$勋章合成数量  2
-MOV N$勋章价格0  5000
-MOV N$勋章价格1  10000
-MOV N$勋章价格2  30000
-MOV N$勋章价格3  50000
-MOV N$勋章价格4  80000
-MOV N$勋章价格5  100000
-MOV S$勋章价格0  幸运勋章
-MOV S$勋章价格1  青铜勋章
-MOV S$勋章价格2  白银勋章
-MOV S$勋章价格3  黄金勋章
-MOV S$勋章价格4  铂金勋章
-MOV S$勋章价格5  钻石勋章
-MOV N$勋章材料0  10
-MOV N$勋章材料1  20
-MOV N$勋章材料2  60
-MOV N$勋章材料3  100
-MOV N$勋章材料4  160
-MOV N$勋章材料5  200
-MOV S$勋章材料   魔法神石
+; MOV N$勋章合成数量  2
+; MOV N$勋章价格0  5000
+; MOV N$勋章价格1  10000
+; MOV N$勋章价格2  30000
+; MOV N$勋章价格3  50000
+; MOV N$勋章价格4  80000
+; MOV N$勋章价格5  100000
+; MOV S$勋章价格0  幸运勋章
+; MOV S$勋章价格1  青铜勋章
+; MOV S$勋章价格2  白银勋章
+; MOV S$勋章价格3  黄金勋章
+; MOV S$勋章价格4  铂金勋章
+; MOV S$勋章价格5  钻石勋章
+; MOV N$勋章材料0  10
+; MOV N$勋章材料1  20
+; MOV N$勋章材料2  60
+; MOV N$勋章材料3  100
+; MOV N$勋章材料4  160
+; MOV N$勋章材料5  200
+; MOV S$勋章材料   炫光神石
 
+mov S$锻造分类0 3
+mov S$锻造分类1 3
+mov S$锻造分类2 3
+MOV S$锻造分类<$STR(S$分类选择)> 4
 
+; mov n$循环序列 0
+MOV N$起始行 <$GetTypeBRow(cfg_斗笠勋章锻造,1,<$STR(S$分类选择)>)>
+MOV N$结束行 <$GetTypeERow(cfg_斗笠勋章锻造,1,<$STR(S$分类选择)>)>
+inc N$结束行 1
+mov S$展示容器
+MOV S$容器ID
+while N$起始行 < <$str(N$结束行)>
+mov S$子按钮<$STR(N$起始行)> 3
+mov S$子按钮<$STR(S$子项选择)> 4
+; sendmsg 0 <$STR(N$起始行)>
+inc S$展示容器 <Button|id=<$STR(N$起始行)>|x=0.0|y=0.0|nimg=custom/button/an_<$str(S$子按钮<$STR(N$起始行)>)>.png|color=250|size=18|outline=1|text=<$cfg_斗笠勋章锻造(<$STR(N$起始行)>_2)>|link=@main#子项选择=<$str(N$起始行)>>
+inc S$容器ID <$STR(N$起始行)>,
 
-
+inc N$起始行 1
+endWhile
 
 
 #IF
 #ACT
-close
-close
+getdbitemfieldvalue <$cfg_斗笠勋章锻造(<$STR(S$子项选择)>_2)> idx S$展示物品ID
+getdbitemfieldvalue <$cfg_斗笠勋章锻造(<$STR(S$子项选择)>_3)> idx S$展示物品1ID
+getdbitemfieldvalue <$cfg_斗笠勋章锻造(<$STR(S$子项选择)>_5)> idx S$展示物品2ID
+getdbitemfieldvalue <$cfg_斗笠勋章锻造(<$STR(S$子项选择)>_7)> idx S$展示物品3ID
+; getdbitemfieldvalue 灵符 idx S$展示物品3ID
 #SAY
 ;<━━━━━━━━━━━━━━━━━━━━━━━━━━━━━/SCOLOR=58>\
 ; \ \ \ 
@@ -60,23 +110,176 @@ close
 
 ; \　               <★★★★★/SCOLOR=250><特戒合成/@特戒合成><★★★★★/SCOLOR=250>         \ \
 
-<Img|x=0.0|y=0.0|width=620|height=260|scale9t=10|scale9r=10|scale9l=10|scale9b=10|move=0|bg=1|img=public/bg_npc_04.jpg|reset=1>
-<Layout|x=597|y=3|width=80|height=80|link=@exit>
-<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
-<Text|a=0|x=32.0|y=39.0|tipsx=10|tipsy=80|color=250|size=16|text=★★★>
-<Text|a=0|x=98.0|y=39.0|tipsx=10|tipsy=80|color=251|size=16|text=斗笠打造|link=@斗笠合成>
-<Text|a=0|x=186.0|y=39.0|tipsx=10|tipsy=80|color=250|size=16|text=★★★>
-<Text|a=0|x=252.0|y=39.0|tipsx=10|tipsy=80|color=250|size=16|text=★★★>
-<Text|a=0|x=318.0|y=39.0|tipsx=10|tipsy=80|color=251|size=16|text=勋章打造|link=@勋章合成>
-<Text|a=0|x=406.0|y=39.0|tipsx=10|tipsy=80|color=250|size=16|text=★★★>
-<Text|a=0|x=32.0|y=119.0|tipsx=10|tipsy=80|color=250|size=16|text=★★★★★>
-<Text|a=0|x=142.0|y=119.0|tipsx=10|tipsy=80|color=251|size=16|text=特戒合成|link=@特戒合成>
-<Text|a=0|x=230.0|y=119.0|tipsx=10|tipsy=80|color=250|size=16|text=★★★★★>
-
+; <Img|x=0.0|y=0.0|width=620|height=260|scale9t=10|scale9r=10|scale9l=10|scale9b=10|move=0|bg=1|img=public/bg_npc_04.jpg|reset=1>
+; <Layout|x=597|y=3|width=80|height=80|link=@exit>
+; <Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+; <Text|a=0|x=32.0|y=39.0|tipsx=10|tipsy=80|color=250|size=16|text=★★★>
+; <Text|a=0|x=98.0|y=39.0|tipsx=10|tipsy=80|color=251|size=16|text=斗笠打造|link=@斗笠合成>
+; <Text|a=0|x=186.0|y=39.0|tipsx=10|tipsy=80|color=250|size=16|text=★★★>
+; <Text|a=0|x=252.0|y=39.0|tipsx=10|tipsy=80|color=250|size=16|text=★★★>
+; <Text|a=0|x=318.0|y=39.0|tipsx=10|tipsy=80|color=251|size=16|text=勋章打造|link=@勋章合成>
+; <Text|a=0|x=406.0|y=39.0|tipsx=10|tipsy=80|color=250|size=16|text=★★★>
+; <Text|a=0|x=32.0|y=119.0|tipsx=10|tipsy=80|color=250|size=16|text=★★★★★>
+; <Text|a=0|x=142.0|y=119.0|tipsx=10|tipsy=80|color=251|size=16|text=特戒合成|link=@特戒合成>
+; <Text|a=0|x=230.0|y=119.0|tipsx=10|tipsy=80|color=250|size=16|text=★★★★★>
 
 
 ;\                    <★★★★/SCOLOR=250><生肖洗炼/@sdfg生肖洗炼><★★★★/SCOLOR=250> \
 ;<>                            <清空包裹|249#请慎重清空包裹，否则后果自付{AUTOCOLOR=12}/@清理包裹>\
+
+
+<Img|show=4|bg=1|loadDelay=0|move=0|esc=1|img=custom/hecheng/ts1.png|reset=1>
+<Layout|x=722.0|y=-20.0|width=80|height=80|link=@exit>
+<Button|x=750.0|y=0.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Button|x=18.0|y=62|nimg=custom/button/an_<$STR(S$锻造分类0)>.png|color=251|size=18|outline=1|text=斗笠打造|link=@main#分类选择=0>
+<Button|x=18.0|y=101|nimg=custom/button/an_<$STR(S$锻造分类1)>.png|color=251|size=18|outline=1|text=勋章打造|link=@main#分类选择=1>
+<Button|x=18.0|y=140|nimg=custom/button/an_<$STR(S$锻造分类2)>.png|color=251|size=18|outline=1|text=特戒合成|link=@main#分类选择=2>
+<ItemShow|x=460.0|y=119.0|width=70|height=70|itemid=<$str(S$展示物品ID)>|itemcount=1|showtips=1|bgtype=0>
+
+<Text|x=325.0|y=15.0|color=255|size=18|outline=1|text=斗笠勋章锻造>
+
+
+<ListView|x=133.0|y=62.0|children={<$str(S$容器ID)>}|width=116|height=600|margin=5>
+<$str(S$展示容器)>
+
+#IF
+not equal S$分类选择 2
+#SAY
+<Button|x=441.0|y=404.0|pimg=custom/button/tp9.png|color=255|size=18|outline=1|nimg=custom/button/tp8.png|text=锻造|link=@斗笠勋章锻造>
+<ItemShow|x=376.0|y=250.0|width=70|height=70|itemid=<$str(S$展示物品1ID)>|itemcount=<$cfg_斗笠勋章锻造(<$STR(S$子项选择)>_4)>|showtips=1|bgtype=1>
+<ItemShow|x=540.0|y=250.0|width=70|height=70|itemid=<$str(S$展示物品2ID)>|itemcount=<$cfg_斗笠勋章锻造(<$STR(S$子项选择)>_6)>|showtips=1|bgtype=1>
+#ELSESAY
+<RText|x=310.0|y=238.0|color=251|size=16|outline=1|text=<材料锻造：/FCOLOR=251>>
+<RText|x=526.0|y=240.0|color=250|size=16|outline=1|text=<灵符锻造：/FCOLOR=250>>
+<ItemShow|x=304.0|y=259.0|width=70|height=70|itemid=<$STR(S$展示物品1ID)>|itemcount=<$cfg_斗笠勋章锻造(<$STR(S$子项选择)>_4)>|showtips=1|bgtype=1>
+<ItemShow|x=372.0|y=260.0|width=70|height=70|itemid=<$STR(S$展示物品2ID)>|itemcount=<$cfg_斗笠勋章锻造(<$STR(S$子项选择)>_6)>|showtips=1|bgtype=1>
+<RText|x=310.0|y=325.0|color=251|size=16|outline=1|text=<$cfg_斗笠勋章锻造(<$STR(S$子项选择)>_9)>>
+<RText|x=526.0|y=277.0|color=251|size=16|outline=1|text=<$cfg_斗笠勋章锻造(<$STR(S$子项选择)>_9)>>
+<RText|x=526.0|y=306.0|color=250|size=16|outline=1|text=<$cfg_斗笠勋章锻造(<$STR(S$子项选择)>_11)>>
+<Button|x=360.0|y=404.0|pimg=custom/button/tp9.png|color=255|size=18|nimg=custom/button/tp8.png|text=材料锻造|link=@材料锻造特戒>
+<Button|x=540.0|y=404.0|pimg=custom/button/tp9.png|color=255|size=18|nimg=custom/button/tp8.png|text=灵符锻造|link=@灵符锻造特戒>
+#if
+not equal S$子项选择 0
+not equal S$子项选择 5
+SMALL S$子项选择 10
+#SAY
+<ItemShow|x=459.0|y=250.0|width=70|height=70|itemid=<$str(S$展示物品3ID)>|itemcount=<$cfg_斗笠勋章锻造(<$STR(S$子项选择)>_8)>|showtips=1|bgtype=1>
+
+
+
+[@斗笠勋章锻造]
+#IF
+CHECKMONEY <$cfg_斗笠勋章锻造(<$STR(S$子项选择)>_3)> ? <$cfg_斗笠勋章锻造(<$STR(S$子项选择)>_4)>
+#ELSEACT
+sendmsg 9 <font color='#00FF00'>您的<$cfg_斗笠勋章锻造(<$STR(S$子项选择)>_3)>不足</font>
+BREAK
+
+#IF
+CHECKITEM <$cfg_斗笠勋章锻造(<$STR(S$子项选择)>_5)> <$cfg_斗笠勋章锻造(<$STR(S$子项选择)>_6)>
+#ELSEACT
+sendmsg 9 <font color='#00FF00'>您的<$cfg_斗笠勋章锻造(<$STR(S$子项选择)>_5)>不足</font>
+BREAK
+
+#IF
+not equal S$子项选择 0
+not equal S$子项选择 5
+not checkitem <$cfg_斗笠勋章锻造(<$STR(S$子项选择)>_7)> <$cfg_斗笠勋章锻造(<$STR(S$子项选择)>_8)>
+#ACT
+sendmsg 9 <font color='#00FF00'>您的<$cfg_斗笠勋章锻造(<$STR(S$子项选择)>_7)>不足</font>
+BREAK
+
+#IF
+#ACT
+take <$cfg_斗笠勋章锻造(<$STR(S$子项选择)>_7)> <$cfg_斗笠勋章锻造(<$STR(S$子项选择)>_8)>
+take <$cfg_斗笠勋章锻造(<$STR(S$子项选择)>_5)> <$cfg_斗笠勋章锻造(<$STR(S$子项选择)>_6)>
+MONEY <$cfg_斗笠勋章锻造(<$STR(S$子项选择)>_3)> - <$cfg_斗笠勋章锻造(<$STR(S$子项选择)>_4)>
+give <$cfg_斗笠勋章锻造(<$STR(S$子项选择)>_2)> 1
+sendmsg 9 <font color='#00FF00'>成功打造<$cfg_斗笠勋章锻造(<$STR(S$子项选择)>_7)>1个</font>
+
+[@材料锻造特戒]
+
+#IF
+CHECKMONEY <$cfg_斗笠勋章锻造(<$STR(S$子项选择)>_3)> ? <$cfg_斗笠勋章锻造(<$STR(S$子项选择)>_4)>
+#ELSEACT
+sendmsg 9 <font color='#00FF00'>您的<$cfg_斗笠勋章锻造(<$STR(S$子项选择)>_3)>不足</font>
+BREAK
+
+#IF
+CHECKITEM <$cfg_斗笠勋章锻造(<$STR(S$子项选择)>_5)> <$cfg_斗笠勋章锻造(<$STR(S$子项选择)>_6)>
+#ELSEACT
+sendmsg 9 <font color='#00FF00'>您的<$cfg_斗笠勋章锻造(<$STR(S$子项选择)>_5)>不足</font>
+BREAK
+
+#IF
+#ACT
+getbagitemcount 麻痹戒指 N1
+getbagitemcount 复活戒指 N2
+getbagitemcount 护身戒指 N3
+
+
+MOV N$一级特戒数量 0
+INC N$一级特戒数量 <$STR(N1)>
+INC N$一级特戒数量 <$STR(N2)>
+INC N$一级特戒数量 <$STR(N3)>
+
+#IF
+SMALL N$一级特戒数量 <$STR(N$材料特戒数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$材料特戒数量)>件复活戒指，无法锻造\\温馨提醒：麻痹戒指、护身戒指、复活戒指，任意<$STR(N$材料特戒数量)>件即可！
+BREAK
+
+#IF
+#ACT
+take <$cfg_斗笠勋章锻造(<$STR(S$子项选择)>_5)> <$cfg_斗笠勋章锻造(<$STR(S$子项选择)>_6)>
+MONEY <$cfg_斗笠勋章锻造(<$STR(S$子项选择)>_3)> - <$cfg_斗笠勋章锻造(<$STR(S$子项选择)>_4)>
+TakeBagItem 麻痹戒指|护身戒指|复活戒指| <$STR(N$材料特戒数量)> 0 0 0 0 N55 0
+GIVE <$cfg_斗笠勋章锻造(<$STR(S$子项选择)>_2)> 1
+MESSAGEBOX 恭喜您，成功打造一件：<$cfg_斗笠勋章锻造(<$STR(S$子项选择)>_2)>
+BREAK
+
+[@灵符锻造特戒]
+#IF
+checkmoney 灵符 < <$cfg_斗笠勋章锻造(<$STR(S$子项选择)>_12)>
+#ACT
+sendmsg 9 <font color='#00FF00'>您的灵符不足</font>
+BREAK
+
+#IF
+#ACT
+getbagitemcount 麻痹戒指 N1
+getbagitemcount 复活戒指 N2
+getbagitemcount 护身戒指 N3
+
+
+MOV N$一级特戒数量 0
+INC N$一级特戒数量 <$STR(N1)>
+INC N$一级特戒数量 <$STR(N2)>
+INC N$一级特戒数量 <$STR(N3)>
+
+#IF
+SMALL N$一级特戒数量 <$STR(N$材料特戒数量)>
+#ACT
+MESSAGEBOX 对不起，您的包袱里面没有<$STR(N$材料特戒数量)>件复活戒指，无法锻造\\温馨提醒：麻痹戒指、护身戒指、复活戒指，任意<$STR(N$材料特戒数量)>件即可！
+BREAK
+
+#IF
+#ACT
+MONEY 灵符 - <$cfg_斗笠勋章锻造(<$STR(S$子项选择)>_12)>
+TakeBagItem 麻痹戒指|护身戒指|复活戒指| <$STR(N$材料特戒数量)> 0 0 0 0 N55 0
+GIVE <$cfg_斗笠勋章锻造(<$STR(S$子项选择)>_2)> 1
+MESSAGEBOX 恭喜您，成功打造一件：<$cfg_斗笠勋章锻造(<$STR(S$子项选择)>_2)>
+BREAK
+
+
+
+
+
+
+; ===================================
+
+
+
+
 
 
 
@@ -84,15 +287,15 @@ close
 #IF
 #ACT
 MOV N$材料特戒数量  2
-MOV N$大米特戒数量  2
+MOV N$灵符特戒数量  2
 
 MOV N$材料特戒数量1  1
-MOV N$大米特戒数量1  2
+MOV N$灵符特戒数量1  2
 
 
-MOV S$材料特戒1  魔法神石
+MOV S$材料特戒1  炫光神石
 MOV N$材料特戒1  388
-MOV S$材料特戒2  魔法神石
+MOV S$材料特戒2  炫光神石
 MOV N$材料特戒2  588
 
 MOV N$特戒元宝价格1  380000
@@ -101,13 +304,10 @@ MOV S$特戒元宝价格1  38W元宝
 MOV N$特戒元宝价格2  300000
 MOV S$特戒元宝价格2  30W元宝
 
-MOV N$特戒大米价格1  188
-MOV N$特戒大米价格2  588
+MOV N$特戒灵符价格1  188
+MOV N$特戒灵符价格2  588
 
 
-
-close
-close
 #SAY
 \ \ \ 
 ; \<材料锻造/scolor=250>：    <战意麻痹|250#锻造条件：^-^161#1.任意1级三特戒系列*<$STR(N$材料特戒数量)>^-^250#2.<$STR(S$材料特戒1)>*<$STR(N$材料特戒1)>^-^251#3.<$STR(S$特戒元宝价格1)>/@材料战意麻痹>
@@ -116,24 +316,24 @@ close
 
 
 
-; \<大米锻造/scolor=253>：    <战意麻痹|250#锻造条件：^-^161#1.麻痹戒指系列*<$STR(N$材料特戒数量)>^-^253#2.大米*<$STR(N$特戒大米价格1)>/@大米战意麻痹>
-; <>         <道意复活|250#锻造条件：^-^161#1.任意1级三特戒系列*<$STR(N$材料特戒数量)>^-^253#2.大米*<$STR(N$特戒大米价格1)>/@大米道意复活>      
-; <>          <魔意护身|250#锻造条件：^-^161#1.任意1级三特戒系列*<$STR(N$材料特戒数量)>^-^253#2.大米*<$STR(N$特戒大米价格1)>/@大米魔意护身>      
+; \<灵符锻造/scolor=253>：    <战意麻痹|250#锻造条件：^-^161#1.麻痹戒指系列*<$STR(N$材料特戒数量)>^-^253#2.灵符*<$STR(N$特戒灵符价格1)>/@灵符战意麻痹>
+; <>         <道意复活|250#锻造条件：^-^161#1.任意1级三特戒系列*<$STR(N$材料特戒数量)>^-^253#2.灵符*<$STR(N$特戒灵符价格1)>/@灵符道意复活>      
+; <>          <魔意护身|250#锻造条件：^-^161#1.任意1级三特戒系列*<$STR(N$材料特戒数量)>^-^253#2.灵符*<$STR(N$特戒灵符价格1)>/@灵符魔意护身>      
 
 
 <Img|width=620|height=300|scale9t=10|scale9l=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|reset=1|esc=1>
 <Layout|x=597|y=3|width=80|height=80|link=@exit>
 <Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
 <Text|x=25.0|y=29.0|color=250|size=18|text=材料锻造：>
-<Text|x=25.0|y=91.0|color=243|size=18|text=大米锻造：>
+<Text|x=25.0|y=91.0|color=243|size=18|text=灵符锻造：>
 <Button|x=120|y=27.0|nimg=public/1900000612.png|color=250|size=18|text=战意麻痹|link=@材料战意麻痹>
 <Button|x=260|y=27.0|nimg=public/1900000612.png|color=250|size=18|text=道意复活|link=@材料道意复活>
 <Button|x=400|y=27.0|nimg=public/1900000612.png|color=250|size=18|text=魔意护身|link=@材料魔意护身>
-<Button|x=120|y=87.0|nimg=public/1900000612.png|color=250|size=18|text=战意麻痹|link=@大米战意麻痹>
-<Button|x=260|y=87.0|nimg=public/1900000612.png|color=250|size=18|text=道意复活|link=@大米道意复活>
-<Button|x=400|y=87.0|nimg=public/1900000612.png|color=250|size=18|text=魔意护身|link=@大米魔意护身>
+<Button|x=120|y=87.0|nimg=public/1900000612.png|color=250|size=18|text=战意麻痹|link=@灵符战意麻痹>
+<Button|x=260|y=87.0|nimg=public/1900000612.png|color=250|size=18|text=道意复活|link=@灵符道意复活>
+<Button|x=400|y=87.0|nimg=public/1900000612.png|color=250|size=18|text=魔意护身|link=@灵符魔意护身>
 <Button|x=542.0|y=26.0|color=255|size=18|nimg=public/1900001024.png|tips={锻造条件：/FCOLOR=250}^{1.任意1级三特戒系列*<$STR(N$材料特戒数量)>/FCOLOR=161}^{2.<$STR(S$材料特戒1)>*<$STR(N$材料特戒1)>/FCOLOR=250}^{3.<$STR(S$特戒元宝价格1)>/FCOLOR=251}>
-<Button|x=542.0|y=88.0|color=255|size=18|nimg=public/1900001024.png|tips={锻造条件：/FCOLOR=250}^{战意麻痹戒指锻造/FCOLOR=249}^{需麻痹系列戒指*2/FCOLOR=250}^{+188大米/FCOLOR=250}^{道意和魔意锻造/FCOLOR=249}^{1.任意1级三特戒系列*<$STR(N$材料特戒数量)>/FCOLOR=161}^{2.大米*<$STR(N$特戒大米价格1)>/FCOLOR=253}>
+<Button|x=542.0|y=88.0|color=255|size=18|nimg=public/1900001024.png|tips={锻造条件：/FCOLOR=250}^{战意麻痹戒指锻造/FCOLOR=249}^{需麻痹系列戒指*2/FCOLOR=250}^{+188灵符/FCOLOR=250}^{道意和魔意锻造/FCOLOR=249}^{1.任意1级三特戒系列*<$STR(N$材料特戒数量)>/FCOLOR=161}^{2.灵符*<$STR(N$特戒灵符价格1)>/FCOLOR=253}>
 
 
 
@@ -295,12 +495,12 @@ BREAK
 
 
 
-[@大米道意复活]
+[@灵符道意复活]
 
 #IF
-CHECKGAMEPOINT < <$STR(N$特戒大米价格1)>
+checkmoney 灵符 < <$STR(N$特戒灵符价格1)>
 #act
-MESSAGEBOX 对不起，您账户上的大米不足：<$STR(N$特戒大米价格1)>点，请检查在来！
+MESSAGEBOX 对不起，您账户上的灵符不足：<$STR(N$特戒灵符价格1)>点，请检查在来！
 BREAK
 
 
@@ -330,7 +530,7 @@ BREAK
 
 #IF
 #ACT
-GAMEPOINT - <$STR(N$特戒大米价格1)>
+MONEY 灵符 - <$STR(N$特戒灵符价格1)>
 TakeBagItem 麻痹戒指|护身戒指|复活戒指| <$STR(N$材料特戒数量)> 0 0 0 0 N55 0
 GIVE 道意复活 1
 MESSAGEBOX 恭喜您，成功打造一件：道意复活
@@ -340,12 +540,12 @@ BREAK
 
 
 
-[@大米战意麻痹]
+[@灵符战意麻痹]
 
 #IF
-CHECKGAMEPOINT < <$STR(N$特戒大米价格1)>
+checkmoney 灵符 < <$STR(N$特戒灵符价格1)>
 #act
-MESSAGEBOX 对不起，您账户上的大米不足：<$STR(N$特戒大米价格1)>点，请检查在来！
+MESSAGEBOX 对不起，您账户上的灵符不足：<$STR(N$特戒灵符价格1)>点，请检查在来！
 BREAK
 
 
@@ -375,7 +575,7 @@ BREAK
 
 #IF
 #ACT
-GAMEPOINT - <$STR(N$特戒大米价格1)>
+MONEY 灵符 - <$STR(N$特戒灵符价格1)>
 TakeBagItem 麻痹戒指|护身戒指|复活戒指| <$STR(N$材料特戒数量)> 0 0 0 0 N55 0
 GIVE 战意麻痹 1
 MESSAGEBOX 恭喜您，成功打造一件：战意麻痹
@@ -384,12 +584,12 @@ BREAK
 
 
 
-[@大米魔意护身]
+[@灵符魔意护身]
 
 #IF
-CHECKGAMEPOINT < <$STR(N$特戒大米价格1)>
+checkmoney 灵符 < <$STR(N$特戒灵符价格1)>
 #act
-MESSAGEBOX 对不起，您账户上的大米不足：<$STR(N$特戒大米价格1)>点，请检查在来！
+MESSAGEBOX 对不起，您账户上的灵符不足：<$STR(N$特戒灵符价格1)>点，请检查在来！
 BREAK
 
 
@@ -419,7 +619,7 @@ BREAK
 
 #IF
 #ACT
-GAMEPOINT - <$STR(N$特戒大米价格1)>
+MONEY 灵符 - <$STR(N$特戒灵符价格1)>
 TakeBagItem 麻痹戒指|护身戒指|复活戒指| <$STR(N$材料特戒数量)> 0 0 0 0 N55 0
 GIVE 魔意护身 1
 MESSAGEBOX 恭喜您，成功打造一件：魔意护身

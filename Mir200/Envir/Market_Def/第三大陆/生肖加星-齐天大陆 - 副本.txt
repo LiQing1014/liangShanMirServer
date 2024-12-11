@@ -79,7 +79,7 @@ DEC N$强化等级1 1
    \ 
 <><强化材料：/FCOLOR=155><轮回竹叶/FCOLOR=250>*<$Str(N$材料费用1)>   <强化费用：/FCOLOR=155><$Str(N$元宝费用)> {／/FCOLOR=250}<$GAMEGOLD> <元宝/FCOLOR=254> \ 
 <>   \
-<><生肖名称：/FCOLOR=250>{<$BOXITEM[1].NAME>./SCOLOR=70}  <$Str(S$生肖大米)> <$Str(S$成功几率)>\   
+<><生肖名称：/FCOLOR=250>{<$BOXITEM[1].NAME>./SCOLOR=70}  <$Str(S$生肖灵符)> <$Str(S$成功几率)>\   
 <>    \ 
 <>  <当前可强化：/FCOLOR=13>{<$Str(N$强化等级1)>/SCOLOR=250}/{<$Str(N$生肖强化等级)>/SCOLOR=254}                  <$Str(S$开启自动啊)>\   \ \
 <>   \  <ITEMBOX:1:0:117:135:-50:42:42:100,101,102,103,104,105,106,107,108,109,110,111:251#放入需要强化的生肖> \
@@ -451,8 +451,8 @@ MOV N$积分费用 10
 MOV N$材料费用1 1
 MOV N$材料费用2 1
 MOV N$强化等级 1
-MOV N$大米费用 0
-MOV S$生肖大米 　
+MOV N$灵符费用 0
+MOV S$生肖灵符 　
 GOTO @main
 
 
@@ -466,8 +466,8 @@ MOV N$积分费用 10
 MOV N$材料费用1 1
 MOV N$材料费用2 1
 MOV N$强化等级 2
-MOV N$大米费用 0
-MOV S$生肖大米 　
+MOV N$灵符费用 0
+MOV S$生肖灵符 　
 GOTO @main
 
 
@@ -481,8 +481,8 @@ MOV N$积分费用 10
 MOV N$材料费用1 1
 MOV N$材料费用2 1
 MOV N$强化等级 3
-MOV N$大米费用 0
-MOV S$生肖大米 　
+MOV N$灵符费用 0
+MOV S$生肖灵符 　
 GOTO @main
 
 
@@ -497,8 +497,8 @@ MOV N$积分费用 10
 MOV N$材料费用1 1
 MOV N$材料费用2 1
 MOV N$强化等级 4
-MOV N$大米费用 0
-MOV S$生肖大米 　
+MOV N$灵符费用 0
+MOV S$生肖灵符 　
 GOTO @main
 
 
@@ -513,8 +513,8 @@ MOV N$积分费用 10
 MOV N$材料费用1 1
 MOV N$材料费用2 1
 MOV N$强化等级 5
-MOV N$大米费用 0
-MOV S$生肖大米 　
+MOV N$灵符费用 0
+MOV S$生肖灵符 　
 GOTO @main
 
 
@@ -528,8 +528,8 @@ MOV N$积分费用 10
 MOV N$材料费用1 1
 MOV N$材料费用2 1
 MOV N$强化等级 6
-MOV N$大米费用 0
-MOV S$生肖大米 　
+MOV N$灵符费用 0
+MOV S$生肖灵符 　
 GOTO @main
 
 
@@ -544,8 +544,8 @@ MOV N$积分费用 10
 MOV N$材料费用1 1
 MOV N$材料费用2 1
 MOV N$强化等级 7
-MOV N$大米费用 0
-MOV S$生肖大米 　
+MOV N$灵符费用 0
+MOV S$生肖灵符 　
 GOTO @main
 
 
@@ -560,8 +560,8 @@ MOV N$积分费用 10
 MOV N$材料费用1 1
 MOV N$材料费用2 1
 MOV N$强化等级 8
-MOV N$大米费用 0
-MOV S$生肖大米 　
+MOV N$灵符费用 0
+MOV S$生肖灵符 　
 GOTO @main
 
 
@@ -576,7 +576,7 @@ MOV N$积分费用 10
 MOV N$材料费用1 1
 MOV N$材料费用2 1
 MOV N$强化等级 9
-MOV N$大米费用 0
+MOV N$灵符费用 0
 GOTO @main
 
 #IF
@@ -589,8 +589,8 @@ MOV N$积分费用 10
 MOV N$材料费用1 1
 MOV N$材料费用2 1
 MOV N$强化等级 10
-MOV N$大米费用 5
-MOV S$生肖大米 <强化费用：/FCOLOR=155>{<$Str(N$大米费用)>/SCOLOR=251}/{<$GAMEPOINT>/SCOLOR=250}　<大米/FCOLOR=253>
+MOV N$灵符费用 5
+MOV S$生肖灵符 <强化费用：/FCOLOR=155>{<$Str(N$灵符费用)>/SCOLOR=251}/{<$MONEY(灵符)>/SCOLOR=250}　<灵符/FCOLOR=253>
 GOTO @main
 
 
@@ -604,8 +604,8 @@ MOV N$积分费用 10
 MOV N$材料费用1 1
 MOV N$材料费用2 1
 MOV N$强化等级 11
-MOV N$大米费用 5
-MOV S$生肖大米 <强化费用：/FCOLOR=155>{<$Str(N$大米费用)>/SCOLOR=251}/{<$GAMEPOINT>/SCOLOR=250}　<大米/FCOLOR=253>
+MOV N$灵符费用 5
+MOV S$生肖灵符 <强化费用：/FCOLOR=155>{<$Str(N$灵符费用)>/SCOLOR=251}/{<$MONEY(灵符)>/SCOLOR=250}　<灵符/FCOLOR=253>
 GOTO @main
 
 
@@ -619,8 +619,8 @@ MOV N$积分费用 10
 MOV N$材料费用1 1
 MOV N$材料费用2 1
 MOV N$强化等级 12
-MOV N$大米费用 10
-MOV S$生肖大米 <强化费用：/FCOLOR=155>{<$Str(N$大米费用)>/SCOLOR=251}/{<$GAMEPOINT>/SCOLOR=250}　<大米/FCOLOR=253>
+MOV N$灵符费用 10
+MOV S$生肖灵符 <强化费用：/FCOLOR=155>{<$Str(N$灵符费用)>/SCOLOR=251}/{<$MONEY(灵符)>/SCOLOR=250}　<灵符/FCOLOR=253>
 GOTO @main
 
 #IF
@@ -633,8 +633,8 @@ MOV N$积分费用 10
 MOV N$材料费用1 1
 MOV N$材料费用2 1
 MOV N$强化等级 13
-MOV N$大米费用 15
-MOV S$生肖大米 <强化费用：/FCOLOR=155>{<$Str(N$大米费用)>/SCOLOR=251}/{<$GAMEPOINT>/SCOLOR=250}　<大米/FCOLOR=253>
+MOV N$灵符费用 15
+MOV S$生肖灵符 <强化费用：/FCOLOR=155>{<$Str(N$灵符费用)>/SCOLOR=251}/{<$MONEY(灵符)>/SCOLOR=250}　<灵符/FCOLOR=253>
 GOTO @main
 
 #IF
@@ -647,8 +647,8 @@ MOV N$积分费用 10
 MOV N$材料费用1 1
 MOV N$材料费用2 1
 MOV N$强化等级 14
-MOV N$大米费用 20
-MOV S$生肖大米 <强化费用：/FCOLOR=155>{<$Str(N$大米费用)>/SCOLOR=251}/{<$GAMEPOINT>/SCOLOR=250}　<大米/FCOLOR=253>
+MOV N$灵符费用 20
+MOV S$生肖灵符 <强化费用：/FCOLOR=155>{<$Str(N$灵符费用)>/SCOLOR=251}/{<$MONEY(灵符)>/SCOLOR=250}　<灵符/FCOLOR=253>
 GOTO @main
 
 
@@ -662,8 +662,8 @@ MOV N$积分费用 10
 MOV N$材料费用1 1
 MOV N$材料费用2 1
 MOV N$强化等级 15
-MOV N$大米费用 25
-MOV S$生肖大米 <强化费用：/FCOLOR=155>{<$Str(N$大米费用)>/SCOLOR=251}/{<$GAMEPOINT>/SCOLOR=250}　<大米/FCOLOR=253>
+MOV N$灵符费用 25
+MOV S$生肖灵符 <强化费用：/FCOLOR=155>{<$Str(N$灵符费用)>/SCOLOR=251}/{<$MONEY(灵符)>/SCOLOR=250}　<灵符/FCOLOR=253>
 GOTO @main
 
 
@@ -677,8 +677,8 @@ MOV N$积分费用 10
 MOV N$材料费用1 2
 MOV N$材料费用2 1
 MOV N$强化等级 16
-MOV N$大米费用 30
-MOV S$生肖大米 <强化费用：/FCOLOR=155>{<$Str(N$大米费用)>/SCOLOR=251}/{<$GAMEPOINT>/SCOLOR=250}　<大米/FCOLOR=253>
+MOV N$灵符费用 30
+MOV S$生肖灵符 <强化费用：/FCOLOR=155>{<$Str(N$灵符费用)>/SCOLOR=251}/{<$MONEY(灵符)>/SCOLOR=250}　<灵符/FCOLOR=253>
 GOTO @main
 
 
@@ -692,8 +692,8 @@ MOV N$积分费用 10
 MOV N$材料费用1 2
 MOV N$材料费用2 1
 MOV N$强化等级 17
-MOV N$大米费用 35
-MOV S$生肖大米 <强化费用：/FCOLOR=155>{<$Str(N$大米费用)>/SCOLOR=251}/{<$GAMEPOINT>/SCOLOR=250}　<大米/FCOLOR=253>
+MOV N$灵符费用 35
+MOV S$生肖灵符 <强化费用：/FCOLOR=155>{<$Str(N$灵符费用)>/SCOLOR=251}/{<$MONEY(灵符)>/SCOLOR=250}　<灵符/FCOLOR=253>
 GOTO @main
 
 
@@ -707,8 +707,8 @@ MOV N$积分费用 10
 MOV N$材料费用1 2
 MOV N$材料费用2 1
 MOV N$强化等级 18
-MOV N$大米费用 40
-MOV S$生肖大米 <强化费用：/FCOLOR=155>{<$Str(N$大米费用)>/SCOLOR=251}/{<$GAMEPOINT>/SCOLOR=250}　<大米/FCOLOR=253>
+MOV N$灵符费用 40
+MOV S$生肖灵符 <强化费用：/FCOLOR=155>{<$Str(N$灵符费用)>/SCOLOR=251}/{<$MONEY(灵符)>/SCOLOR=250}　<灵符/FCOLOR=253>
 GOTO @main
 
 
@@ -723,8 +723,8 @@ MOV N$积分费用 10
 MOV N$材料费用1 2
 MOV N$材料费用2 1
 MOV N$强化等级 19
-MOV N$大米费用 45
-MOV S$生肖大米 <强化费用：/FCOLOR=155>{<$Str(N$大米费用)>/SCOLOR=251}/{<$GAMEPOINT>/SCOLOR=250}　<大米/FCOLOR=253>
+MOV N$灵符费用 45
+MOV S$生肖灵符 <强化费用：/FCOLOR=155>{<$Str(N$灵符费用)>/SCOLOR=251}/{<$MONEY(灵符)>/SCOLOR=250}　<灵符/FCOLOR=253>
 GOTO @main
 
 
@@ -739,8 +739,8 @@ MOV N$积分费用 10
 MOV N$材料费用1 2
 MOV N$材料费用2 1
 MOV N$强化等级 20
-MOV N$大米费用 50
-MOV S$生肖大米 <强化费用：/FCOLOR=155>{<$Str(N$大米费用)>/SCOLOR=251}/{<$GAMEPOINT>/SCOLOR=250}　<大米/FCOLOR=253>
+MOV N$灵符费用 50
+MOV S$生肖灵符 <强化费用：/FCOLOR=155>{<$Str(N$灵符费用)>/SCOLOR=251}/{<$MONEY(灵符)>/SCOLOR=250}　<灵符/FCOLOR=253>
 GOTO @main
 
 
@@ -755,8 +755,8 @@ MOV N$积分费用 10
 MOV N$材料费用1 2
 MOV N$材料费用2 1
 MOV N$强化等级 21
-MOV N$大米费用 50
-MOV S$生肖大米 <强化费用：/FCOLOR=155>{<$Str(N$大米费用)>/SCOLOR=251}/{<$GAMEPOINT>/SCOLOR=250}　<大米/FCOLOR=253>
+MOV N$灵符费用 50
+MOV S$生肖灵符 <强化费用：/FCOLOR=155>{<$Str(N$灵符费用)>/SCOLOR=251}/{<$MONEY(灵符)>/SCOLOR=250}　<灵符/FCOLOR=253>
 GOTO @main
 
 
@@ -772,8 +772,8 @@ MOV N$积分费用 10
 MOV N$材料费用1 2
 MOV N$材料费用2 1
 MOV N$强化等级 22
-MOV N$大米费用 50
-MOV S$生肖大米 <强化费用：/FCOLOR=155>{<$Str(N$大米费用)>/SCOLOR=251}/{<$GAMEPOINT>/SCOLOR=250}　<大米/FCOLOR=253>
+MOV N$灵符费用 50
+MOV S$生肖灵符 <强化费用：/FCOLOR=155>{<$Str(N$灵符费用)>/SCOLOR=251}/{<$MONEY(灵符)>/SCOLOR=250}　<灵符/FCOLOR=253>
 GOTO @main
 
 
@@ -786,8 +786,8 @@ MOV N$积分费用 200
 MOV N$材料费用1 1
 MOV N$材料费用2 1
 MOV N$强化等级 23
-MOV N$大米费用 30
-MOV S$生肖大米 <强化费用：/FCOLOR=155>{<$Str(N$大米费用)>/SCOLOR=251}/{<$GAMEGOLD>/SCOLOR=250}　<大米/FCOLOR=253>
+MOV N$灵符费用 30
+MOV S$生肖灵符 <强化费用：/FCOLOR=155>{<$Str(N$灵符费用)>/SCOLOR=251}/{<$GAMEGOLD>/SCOLOR=250}　<灵符/FCOLOR=253>
 GOTO @main
 
 
@@ -801,8 +801,8 @@ MOV N$积分费用 200
 MOV N$材料费用1 1
 MOV N$材料费用2 1
 MOV N$强化等级 24
-MOV N$大米费用 30
-MOV S$生肖大米 <强化费用：/FCOLOR=155>{<$Str(N$大米费用)>/SCOLOR=251}/{<$GAMEGOLD>/SCOLOR=250}　<大米/FCOLOR=253>
+MOV N$灵符费用 30
+MOV S$生肖灵符 <强化费用：/FCOLOR=155>{<$Str(N$灵符费用)>/SCOLOR=251}/{<$GAMEGOLD>/SCOLOR=250}　<灵符/FCOLOR=253>
 GOTO @main
 
 
@@ -816,8 +816,8 @@ MOV N$积分费用 200
 MOV N$材料费用1 1
 MOV N$材料费用2 1
 MOV N$强化等级 25
-MOV N$大米费用 30
-MOV S$生肖大米 <强化费用：/FCOLOR=155>{<$Str(N$大米费用)>/SCOLOR=251}/{<$GAMEGOLD>/SCOLOR=250}　<大米/FCOLOR=253>
+MOV N$灵符费用 30
+MOV S$生肖灵符 <强化费用：/FCOLOR=155>{<$Str(N$灵符费用)>/SCOLOR=251}/{<$GAMEGOLD>/SCOLOR=250}　<灵符/FCOLOR=253>
 GOTO @main
 
 
@@ -830,8 +830,8 @@ MOV N$积分费用 200
 MOV N$材料费用1 1
 MOV N$材料费用2 1
 MOV N$强化等级 26
-MOV N$大米费用 30
-MOV S$生肖大米 <强化费用：/FCOLOR=155>{<$Str(N$大米费用)>/SCOLOR=251}/{<$GAMEGOLD>/SCOLOR=250}　<大米/FCOLOR=253>
+MOV N$灵符费用 30
+MOV S$生肖灵符 <强化费用：/FCOLOR=155>{<$Str(N$灵符费用)>/SCOLOR=251}/{<$GAMEGOLD>/SCOLOR=250}　<灵符/FCOLOR=253>
 GOTO @main
 
 
@@ -867,9 +867,9 @@ BREAK
 
 
 #IF
-CHECKGAMEPOINT < <$Str(N$大米费用)>
+checkmoney 灵符 < <$Str(N$灵符费用)>
 #ACT
-MESSAGEBOX \\\\对不起，您的大米不足:<$Str(N$大米费用)>点
+MESSAGEBOX \\\\对不起，您的灵符不足:<$Str(N$灵符费用)>点
 break
 
 
@@ -914,7 +914,7 @@ random <$STR(N$成功几率)>
 #ACT
 TAKE 轮回竹叶 <$Str(N$材料费用1)>
 GAMEGOLD - <$Str(N$元宝费用)>
-GAMEPOINT - <$Str(N$大米费用)>
+MONEY 灵符 - <$Str(N$灵符费用)>
 
 
 MOV N$强化后属性5 <$Str(N$强化等级)>
@@ -972,7 +972,7 @@ GOTO @main
 #ELSEACT
 TAKE 轮回竹叶 <$Str(N$材料费用1)>
 GAMEGOLD - <$Str(N$元宝费用)>
-GAMEPOINT - <$Str(N$大米费用)>
+MONEY 灵符 - <$Str(N$灵符费用)>
 SendCenterMsg 250 0 〖提示〗：对不起，强化失败 0 3
 GOTO @检测材料
 GOTO @main
@@ -1100,9 +1100,9 @@ BREAK
 
 
 #IF
-CHECKGAMEPOINT < <$Str(N$大米费用)>
+checkmoney 灵符 < <$Str(N$灵符费用)>
 #ACT
-MESSAGEBOX \\\\对不起，您的大米不足:<$Str(N$大米费用)>点
+MESSAGEBOX \\\\对不起，您的灵符不足:<$Str(N$灵符费用)>点
 break
 
 
@@ -1127,7 +1127,7 @@ random <$STR(N$成功几率)>
 #ACT
 TAKE 轮回竹叶 <$Str(N$材料费用1)>
 GAMEGOLD - <$Str(N$元宝费用)>
-GAMEPOINT - <$Str(N$大米费用)>
+MONEY 灵符 - <$Str(N$灵符费用)>
 
 
 MOV N$强化后属性5 <$Str(N$强化等级)>
@@ -1181,7 +1181,7 @@ GOTO @main
 #ELSEACT
 TAKE 轮回竹叶 <$Str(N$材料费用1)>
 GAMEGOLD - <$Str(N$元宝费用)>
-GAMEPOINT - <$Str(N$大米费用)>
+MONEY 灵符 - <$Str(N$灵符费用)>
 
 SendCenterMsg 250 0 〖提示〗：对不起，强化失败 0 3
 GOTO @检测材料

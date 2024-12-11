@@ -45,7 +45,7 @@ BREAK
 #act
 MOV N47 0
 mapmove ËÀÍö´óÌÓÉ± 4 15
-ChangeSP 20 1 1
+; ChangeSP 20 1 1
 break
 
 

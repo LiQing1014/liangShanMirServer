@@ -8,11 +8,11 @@
 ; MESSAGEBOX 当前地图无法使用此功能！
 ; break
 
-#IF
-签到状态 <$STR(T22)>
-#ACT
-MOV N$今日签到状态N <$STR(S2)>
-GOTO @游戏签到界面
+; #IF
+; 签到状态 <$STR(T22)>
+; #ACT
+; MOV N$今日签到状态N <$STR(S2)>
+; GOTO @游戏签到界面
 
 
 
@@ -63,18 +63,18 @@ break
 
 
 
-#IF
-提交数据 3 申请签到 <$STR(T22)>
-#ACT
-INC U60 50
-MESSAGEBOX 恭喜你签到成功，获得了50个游戏币！
-AddTextListEx ..\QuestDiary\游戏币明细\<$USERNAME>.txt 249#增加类型：【签到领取】|【游戏币增加：+50】|【总游戏币为：<$STR(U60)>】|操作时间：<$YEAR>年<$MONTH>月<$DAY>日<$HOUR>点<$MINUTE>分<$SECOND>秒 0
+; #IF
+; 提交数据 3 申请签到 <$STR(T22)>
+; #ACT
+; INC U60 50
+; MESSAGEBOX 恭喜你签到成功，获得了50个游戏币！
+; AddTextListEx ..\QuestDiary\游戏币明细\<$USERNAME>.txt 249#增加类型：【签到领取】|【游戏币增加：+50】|【总游戏币为：<$STR(U60)>】|操作时间：<$YEAR>年<$MONTH>月<$DAY>日<$HOUR>点<$MINUTE>分<$SECOND>秒 0
 
-AddTextList ..\..\..\..\37W包服功能\每日签到领取记录.txt  【签到领取】|【微信ID：<$STR(T22)>】|【区服：<$SERVERNAME>】|【账号：<$USERID>】|【角色：<$USERNAME>】|【游戏币增加：+50】|【总游戏币为：<$STR(U60)>】|操作时间：<$YEAR>年<$MONTH>月<$DAY>日<$HOUR>点<$MINUTE>分<$SECOND>秒 0
-GOTO @每日签到
-#ELSEACT
-MESSAGEBOX <$STR(S1)>
-GOTO @每日签到
+; AddTextList ..\..\..\..\37W包服功能\每日签到领取记录.txt  【签到领取】|【微信ID：<$STR(T22)>】|【区服：<$SERVERNAME>】|【账号：<$USERID>】|【角色：<$USERNAME>】|【游戏币增加：+50】|【总游戏币为：<$STR(U60)>】|操作时间：<$YEAR>年<$MONTH>月<$DAY>日<$HOUR>点<$MINUTE>分<$SECOND>秒 0
+; GOTO @每日签到
+; #ELSEACT
+; MESSAGEBOX <$STR(S1)>
+; GOTO @每日签到
 
 
 }

@@ -5,20 +5,22 @@
 #IF
 CHECK [1] 0
 #ACT
-MOV S$捐献进程 <Button|x=254.0|y=239.0|color=250|size=18|nimg=public/1900000611.png|text=捐献|link=@开始捐献>
+MOV S$捐献进程 <Button|x=362.0|y=343.0|color=251|size=18|nimg=custom/button/ann1.png|pimg=custom/button/ann2.png|text=捐献|link=@开始捐献>
+
 
 
 #IF
 CHECK [1] 1
 #ACT
-MOV S$捐献进程 <Text|x=254.0|y=239.0|size=18|text=您已经捐献过了>
+MOV S$捐献进程 <Text|x=386.0|y=343.0|color=250|size=18|outline=1|text=您已经捐献过了>
+
 ADDSKILL 护体神盾 3
 #IF
 #ACT
 close
 #SAY
 ; <>　　        <沙          城          捐          献/AUTOCOLOR=161,250,251,254,253> \ 
-; <>　   　     <New-⊙⊿/SCOLOR=250> <捐献的费用:/SCOLOR=161> <需100大米/SCOLOR=254>\ 
+; <>　   　     <New-⊙⊿/SCOLOR=250> <捐献的费用:/SCOLOR=161> <需100灵符/SCOLOR=254>\ 
 ; <>　   　     <New-⊙⊿/SCOLOR=250> <永久获得①：/SCOLOR=161><攻魔道15-15/SCOLOR=161>  \
 ; <>　   　     <New-⊙⊿/SCOLOR=250> <永久获得③：/SCOLOR=161><防  御15-15/SCOLOR=250> \ 
 ; <>　   　     <New-⊙⊿/SCOLOR=250> <永久获得②：/SCOLOR=161><血  量+150//SCOLOR=253>  \ 
@@ -27,31 +29,48 @@ close
 ; <>　　                  <$STR(S$捐献进程)>\　\
 
 
-<Img|width=620|height=300|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|reset=1>
-<Layout|x=597|y=3|width=80|height=80|link=@exit>
-<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
-<Text|a=0|x=32.0|y=20.0|tipsx=10|tipsy=80|color=161,250,251,254,253|size=18|text=沙          城          捐          献>
-<Text|a=0|x=32.0|y=57.0|tipsx=10|tipsy=80|color=250|size=18|text=New-⊙⊿>
-<Text|a=0|x=134.0|y=57.0|tipsx=10|tipsy=80|color=161|size=18|text=捐献的费用:>
-<Text|a=0|x=255.0|y=57.0|tipsx=10|tipsy=80|color=254|size=18|text=需100大米>
-<Text|a=0|x=32.0|y=77.0|tipsx=10|tipsy=80|color=250|size=18|text=New-⊙⊿>
-<Text|a=0|x=134.0|y=77.0|tipsx=10|tipsy=80|color=161|size=18|text=永久获得①：>
-<Text|a=0|x=266.0|y=77.0|tipsx=10|tipsy=80|color=161|size=18|text=攻魔道15-15>
-<Text|a=0|x=32.0|y=97.0|tipsx=10|tipsy=80|color=250|size=18|text=New-⊙⊿>
-<Text|a=0|x=134.0|y=97.0|tipsx=10|tipsy=80|color=161|size=18|text=永久获得③：>
-<Text|a=0|x=266.0|y=97.0|tipsx=10|tipsy=80|color=250|size=18|text=防  御15-15>
-<Text|a=0|x=32.0|y=117.0|tipsx=10|tipsy=80|color=250|size=18|text=New-⊙⊿>
-<Text|a=0|x=134.0|y=117.0|tipsx=10|tipsy=80|color=161|size=18|text=永久获得②：>
-<Text|a=0|x=266.0|y=117.0|tipsx=10|tipsy=80|color=253|size=18|text=血  量+150>
-<Text|a=0|x=32.0|y=137.0|tipsx=10|tipsy=80|color=250|size=18|text=New-⊙⊿>
-<Text|a=0|x=134.0|y=137.0|tipsx=10|tipsy=80|color=161|size=18|text=永久获得④：>
-<Text|a=0|x=266.0|y=137.0|tipsx=10|tipsy=80|color=251|size=18|text=怪物爆率+300%>
-<Text|a=0|x=32.0|y=157.0|tipsx=10|tipsy=80|color=250|size=18|text=New-⊙⊿>
-<Text|a=0|x=134.0|y=157.0|tipsx=10|tipsy=80|color=161|size=18|text=永久获得⑤：>
-<Text|a=0|x=266.0|y=157.0|tipsx=10|tipsy=80|color=70|size=18|text=护体神盾>
+; <Img|width=620|height=300|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|reset=1>
+; <Layout|x=597|y=3|width=80|height=80|link=@exit>
+; <Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+; <Text|a=0|x=32.0|y=20.0|tipsx=10|tipsy=80|color=161,250,251,254,253|size=18|text=沙          城          捐          献>
+; <Text|a=0|x=32.0|y=57.0|tipsx=10|tipsy=80|color=250|size=18|text=New-⊙⊿>
+; <Text|a=0|x=134.0|y=57.0|tipsx=10|tipsy=80|color=161|size=18|text=捐献的费用:>
+; <Text|a=0|x=255.0|y=57.0|tipsx=10|tipsy=80|color=254|size=18|text=需100灵符>
+; <Text|a=0|x=32.0|y=77.0|tipsx=10|tipsy=80|color=250|size=18|text=New-⊙⊿>
+; <Text|a=0|x=134.0|y=77.0|tipsx=10|tipsy=80|color=161|size=18|text=永久获得①：>
+; <Text|a=0|x=266.0|y=77.0|tipsx=10|tipsy=80|color=161|size=18|text=攻魔道15-15>
+; <Text|a=0|x=32.0|y=97.0|tipsx=10|tipsy=80|color=250|size=18|text=New-⊙⊿>
+; <Text|a=0|x=134.0|y=97.0|tipsx=10|tipsy=80|color=161|size=18|text=永久获得③：>
+; <Text|a=0|x=266.0|y=97.0|tipsx=10|tipsy=80|color=250|size=18|text=防  御15-15>
+; <Text|a=0|x=32.0|y=117.0|tipsx=10|tipsy=80|color=250|size=18|text=New-⊙⊿>
+; <Text|a=0|x=134.0|y=117.0|tipsx=10|tipsy=80|color=161|size=18|text=永久获得②：>
+; <Text|a=0|x=266.0|y=117.0|tipsx=10|tipsy=80|color=253|size=18|text=血  量+150>
+; <Text|a=0|x=32.0|y=137.0|tipsx=10|tipsy=80|color=250|size=18|text=New-⊙⊿>
+; <Text|a=0|x=134.0|y=137.0|tipsx=10|tipsy=80|color=161|size=18|text=永久获得④：>
+; <Text|a=0|x=266.0|y=137.0|tipsx=10|tipsy=80|color=251|size=18|text=怪物爆率+300%>
+; <Text|a=0|x=32.0|y=157.0|tipsx=10|tipsy=80|color=250|size=18|text=New-⊙⊿>
+; <Text|a=0|x=134.0|y=157.0|tipsx=10|tipsy=80|color=161|size=18|text=永久获得⑤：>
+; <Text|a=0|x=266.0|y=157.0|tipsx=10|tipsy=80|color=70|size=18|text=护体神盾>
+
+
+<Img|x=0.0|y=0.0|esc=1|show=4|bg=1|move=0|img=custom/hecheng/cj6.png|loadDelay=1|reset=1>
+<Layout|x=722.0|y=-18.0|width=80|height=80|link=@exit>
+<Button|x=750.0|y=0.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Button|x=18.0|y=65.0|nimg=custom/button/an_4.png|color=255|size=18|outline=1|text=沙城捐献>
+<Text|a=0|x=153.0|y=73.0|tipsx=10|tipsy=80|color=161,250,251,254,253|size=18|outline=1|text=沙          城          捐          献>
+<Text|a=0|x=155.0|y=110.0|tipsx=10|tipsy=80|color=161|size=18|outline=1|text=捐献的费用:>
+<Text|a=0|x=287.0|y=110.0|tipsx=10|tipsy=80|color=254|size=18|outline=1|text=需100灵符>
+<Text|a=0|x=155.0|y=136.0|tipsx=10|tipsy=80|color=161|size=18|outline=1|text=永久获得①：>
+<Text|a=0|x=287.0|y=136.0|tipsx=10|tipsy=80|color=161|size=18|outline=1|text=攻魔道15-15>
+<Text|a=0|x=155.0|y=162.0|tipsx=10|tipsy=80|color=161|size=18|outline=1|text=永久获得③：>
+<Text|a=0|x=287.0|y=162.0|tipsx=10|tipsy=80|color=250|size=18|outline=1|text=防  御15-15>
+<Text|a=0|x=155.0|y=188.0|tipsx=10|tipsy=80|color=161|size=18|outline=1|text=永久获得②：>
+<Text|a=0|x=287.0|y=188.0|tipsx=10|tipsy=80|color=253|size=18|outline=1|text=血  量+150>
+<Text|a=0|x=155.0|y=214.0|tipsx=10|tipsy=80|color=161|size=18|outline=1|text=永久获得④：>
+<Text|a=0|x=287.0|y=214.0|tipsx=10|tipsy=80|color=251|size=18|outline=1|text=怪物爆率+300%>
+<Text|a=0|x=155.0|y=240.0|tipsx=10|tipsy=80|color=161|size=18|outline=1|text=永久获得⑤：>
+<Text|a=0|x=287.0|y=240.0|tipsx=10|tipsy=80|color=70|size=18|outline=1|text=护体神盾>
 <$STR(S$捐献进程)>
-
-
 
 
 [@开始捐献]
@@ -64,20 +83,20 @@ MESSAGEBOX 您已经捐献过了，且永久增加属性!
 break
 
 #IF
-not CHECKGamePoint > 99
+not checkmoney 灵符 > 99
 #ACT
-MESSAGEBOX 对不起，您当前账户上的大米不够100
+MESSAGEBOX 对不起，您当前账户上的灵符不够100
 break
 
 
 #IF
 #ACT
-GamePoint - 100
+MONEY 灵符 - 100
 SET [1] 1
 CONFERTITLE 沙城捐献
 ADDSKILL 护体神盾 3
 GOTO @main
-MESSAGEBOX 恭喜您，成功捐献100大米，获得人物永久增加属性!
+MESSAGEBOX 恭喜您，成功捐献100灵符，获得人物永久增加属性!
 break
 
 

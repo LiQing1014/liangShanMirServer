@@ -97,7 +97,7 @@ OPENMERCHANTBIGDLG 1 560 1 4 0 0 1 400 0
 <ItemShow|x=113.0|y=226.0|width=70|height=70|itemid=<$STR(N$生肖Idx10)>|itemcount=1|showtips=1|bgtype=1>
 <ItemShow|x=210.0|y=226.0|width=70|height=70|itemid=<$STR(N$生肖Idx11)>|itemcount=1|showtips=1|bgtype=1>
 <ItemShow|x=307.0|y=226.0|width=70|height=70|itemid=<$STR(N$生肖Idx12)>|itemcount=1|showtips=1|bgtype=1>
-<Button|x=16.0|y=350.0|nimg=public/1900000611.png|color=250|size=16|text=抽奖生肖|link=@大米生肖抽奖>
+<Button|x=16.0|y=350.0|nimg=public/1900000611.png|color=250|size=16|text=抽奖生肖|link=@灵符生肖抽奖>
 <Button|x=136.0|y=349.0|nimg=public/1900000611.png|color=250|size=16|text=快速抽奖|link=@抽奖10次>
 <Button|x=263.0|y=348.0|nimg=public/1900000611.png|color=250|size=16|text=下一页|link=@打造下一页>
 <Button|x=12|y=87.0|nimg=public/1900000611.png|color=250|size=18|text=锻造|link=@打造子鼠1>
@@ -117,7 +117,7 @@ OPENMERCHANTBIGDLG 1 560 1 4 0 0 1 400 0
 
 
 
-[@大米生肖抽奖]
+[@灵符生肖抽奖]
 
 #IF
 NOT CHECKBAGSIZE  6
@@ -126,14 +126,14 @@ MESSAGEBOX [失败]:\　\　　　　　　您的“包袱位置”不足“6个”空位置！
 break
 
 #IF
-CHECKGAMEPOINT < 388
+checkmoney 灵符 < 388
 #ACT
-MESSAGEBOX 对不起，您当前账户大米不足388点，请及时充值！
+MESSAGEBOX 对不起，您当前账户灵符不足388点，请及时充值！
 BREAK
 
 #IF
 #ACT
-GAMEPOINT - 388
+MONEY 灵符 - 388
 GetRandomText ..\QuestDiary\全部通用限时\2级抽奖生肖.txt S$随机给生肖奖励
 GIVE <$Str(S$随机给生肖奖励)> 1
 SendCenterMsg 253 0 恭喜您，成功通过抽奖获得：<$Str(S$随机给生肖奖励)> 0 3
@@ -1130,7 +1130,7 @@ OPENMERCHANTBIGDLG 1 560 1 4 0 0 1 400 0
 
 ; \   <$Str(S$生肖展示9)>   <$Str(S$生肖展示10)>   <$Str(S$生肖展示11)>   <$Str(S$生肖展示12)>\ \  \ 
 ; \   <$Str(S$打造申猴)>         <$Str(S$打造酉鸡)>        <$Str(S$打造戌狗)>       <$Str(S$打造亥猪)>\ \ 
-; \    <抽奖生肖|253#388大米抽一次^-^161#随机抽取神级、圣级、神级生肖/@大米生肖抽奖>               <打造上一页/@MAIN>
+; \    <抽奖生肖|253#388灵符抽一次^-^161#随机抽取神级、圣级、神级生肖/@灵符生肖抽奖>               <打造上一页/@MAIN>
 
 
 <Img|x=-4.0|y=0.0|width=400|height=400|img=public/bg_npc_04.jpg|scale9t=10|move=0|loadDelay=1|reset=1|scale9l=10|scale9b=10|show=4|bg=1|scale9r=10|esc=1>
@@ -1148,7 +1148,7 @@ OPENMERCHANTBIGDLG 1 560 1 4 0 0 1 400 0
 <ItemShow|x=113.0|y=226.0|width=70|height=70|itemid=<$STR(N$生肖Idx10)>|itemcount=1|showtips=1|bgtype=1>
 <ItemShow|x=210.0|y=226.0|width=70|height=70|itemid=<$STR(N$生肖Idx11)>|itemcount=1|showtips=1|bgtype=1>
 <ItemShow|x=307.0|y=226.0|width=70|height=70|itemid=<$STR(N$生肖Idx12)>|itemcount=1|showtips=1|bgtype=1>
-<Button|x=16.0|y=350.0|nimg=public/1900000611.png|color=250|size=16|text=抽奖生肖|link=@大米生肖抽奖>
+<Button|x=16.0|y=350.0|nimg=public/1900000611.png|color=250|size=16|text=抽奖生肖|link=@灵符生肖抽奖>
 <Button|x=136.0|y=349.0|nimg=public/1900000611.png|color=250|size=16|text=快速抽奖|link=@抽奖10次>
 <Button|x=263.0|y=348.0|nimg=public/1900000611.png|color=250|size=16|text=上一页|link=@MAIN>
 <Button|x=12|y=87.0|nimg=public/1900000611.png|color=250|size=18|text=锻造|link=@打造子鼠A2>

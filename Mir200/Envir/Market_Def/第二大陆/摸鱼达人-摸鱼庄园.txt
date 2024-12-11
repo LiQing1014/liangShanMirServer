@@ -5,52 +5,63 @@
 
 #IF
 #ACT
-;DEPRIVETITLE 摸鱼达人Lv21
-MOV N$去掉旧的 <$STR(U38)>
-DEC N$去掉旧的 1
-DEPRIVETITLE 摸鱼达人Lv<$STR(N$去掉旧的)>
-CONFERTITLE 摸鱼达人Lv<$STR(U38)>
-MOV S$摸鱼达人等级 {摸鱼达人Lv<$STR(U38)>/FCOLOR=161}
-MOV N$摸鱼达人费用 1000
 MOV N$下级摸鱼达人属性 <$STR(U38)>
 INC N$下级摸鱼达人属性 1
-getdbitemfieldvalue 摸鱼达人Lv<$STR(N$下级摸鱼达人属性)> AC  N$下限防御A
-getdbitemfieldvalue 摸鱼达人Lv<$STR(N$下级摸鱼达人属性)> AC2 N$上限防御A
-getdbitemfieldvalue 摸鱼达人Lv<$STR(N$下级摸鱼达人属性)> MAC N$下限魔御A
-getdbitemfieldvalue 摸鱼达人Lv<$STR(N$下级摸鱼达人属性)> MAC2 N$上限魔御A
-getdbitemfieldvalue 摸鱼达人Lv<$STR(N$下级摸鱼达人属性)> DC  N$下限攻击A
-getdbitemfieldvalue 摸鱼达人Lv<$STR(N$下级摸鱼达人属性)> DC2 N$上限攻击A
-getdbitemfieldvalue 摸鱼达人Lv<$STR(N$下级摸鱼达人属性)> HP N$人物体力A
-getdbitemfieldvalue 摸鱼达人Lv<$STR(N$下级摸鱼达人属性)> VALUE1 N$暴击元素A
-getdbitemfieldvalue 摸鱼达人Lv<$STR(N$下级摸鱼达人属性)> VALUE2 N$攻伤元素A
-getdbitemfieldvalue 摸鱼达人Lv<$STR(N$下级摸鱼达人属性)> VALUE3 N$物理减伤A
-getdbitemfieldvalue 摸鱼达人Lv<$STR(N$下级摸鱼达人属性)> VALUE8 N$元素体力A
+getitemattrself 摸鱼达人Lv<$STR(N$下级摸鱼达人属性)>
+
+; GetDBItemFieldValue 摸鱼达人Lv10 AC S$哈哈哈哈
+; sendmsg 9 <$LUARESULT>
+
+GETVALIDSTRSUPER <$LUARESULT> _ S$返回属性_ N$返回数量
+
+; GAMEGLORY = 2000000
+; gamegird = 2000000
+;DEPRIVETITLE 摸鱼达人Lv21
+; MOV N$去掉旧的 <$STR(U38)>
+; DEC N$去掉旧的 1
+; DEPRIVETITLE 摸鱼达人Lv<$STR(N$去掉旧的)>
+; CONFERTITLE 摸鱼达人Lv<$STR(U38)>
+; MOV S$摸鱼达人等级 {摸鱼达人Lv<$STR(U38)>/FCOLOR=161}
+; MOV N$摸鱼达人费用 1000
+; MOV N$下级摸鱼达人属性 <$STR(U38)>
+; INC N$下级摸鱼达人属性 1
+; getdbitemfieldvalue 摸鱼达人Lv<$STR(N$下级摸鱼达人属性)> AC  N$下限防御A
+; getdbitemfieldvalue 摸鱼达人Lv<$STR(N$下级摸鱼达人属性)> AC2 N$上限防御A
+; getdbitemfieldvalue 摸鱼达人Lv<$STR(N$下级摸鱼达人属性)> MAC N$下限魔御A
+; getdbitemfieldvalue 摸鱼达人Lv<$STR(N$下级摸鱼达人属性)> MAC2 N$上限魔御A
+; getdbitemfieldvalue 摸鱼达人Lv<$STR(N$下级摸鱼达人属性)> DC  N$下限攻击A
+; getdbitemfieldvalue 摸鱼达人Lv<$STR(N$下级摸鱼达人属性)> DC2 N$上限攻击A
+; getdbitemfieldvalue 摸鱼达人Lv<$STR(N$下级摸鱼达人属性)> HP N$人物体力A
+; getdbitemfieldvalue 摸鱼达人Lv<$STR(N$下级摸鱼达人属性)> VALUE1 N$暴击元素A
+; getdbitemfieldvalue 摸鱼达人Lv<$STR(N$下级摸鱼达人属性)> VALUE2 N$攻伤元素A
+; getdbitemfieldvalue 摸鱼达人Lv<$STR(N$下级摸鱼达人属性)> VALUE3 N$物理减伤A
+; getdbitemfieldvalue 摸鱼达人Lv<$STR(N$下级摸鱼达人属性)> VALUE8 N$元素体力A
 
 
 
-#IF
-CHECKLEVELEX > 0
-#ACT
-MOV  S$排0  <$STR(A60)> 
-MOV  S$排1  <$STR(A61)> 
-MOV  S$排2  <$STR(A62)> 
-MOV  S$排3  <$STR(A63)> 
-MOV  S$排4  <$STR(A64)> 
-MOV  S$排5  <$STR(A65)> 
-MOV  S$排6  <$STR(A66)> 
-MOV  S$排7  <$STR(A67)> 
-MOV  S$排8  <$STR(A68)> 
-MOV  S$排9  <$STR(A69)> 
-SetStringBlank <$STR(S$排0)> 14 1
-SetStringBlank <$STR(S$排1)> 14 1
-SetStringBlank <$STR(S$排2)> 14 1
-SetStringBlank <$STR(S$排3)> 14 1
-SetStringBlank <$STR(S$排4)> 14 1
-SetStringBlank <$STR(S$排5)> 14 1
-SetStringBlank <$STR(S$排6)> 14 1
-SetStringBlank <$STR(S$排7)> 14 1
-SetStringBlank <$STR(S$排8)> 14 1
-SetStringBlank <$STR(S$排9)> 14 1
+; #IF
+; CHECKLEVELEX > 0
+; #ACT
+; MOV  S$排0  <$STR(A60)> 
+; MOV  S$排1  <$STR(A61)> 
+; MOV  S$排2  <$STR(A62)> 
+; MOV  S$排3  <$STR(A63)> 
+; MOV  S$排4  <$STR(A64)> 
+; MOV  S$排5  <$STR(A65)> 
+; MOV  S$排6  <$STR(A66)> 
+; MOV  S$排7  <$STR(A67)> 
+; MOV  S$排8  <$STR(A68)> 
+; MOV  S$排9  <$STR(A69)> 
+; SetStringBlank <$STR(S$排0)> 14 1
+; SetStringBlank <$STR(S$排1)> 14 1
+; SetStringBlank <$STR(S$排2)> 14 1
+; SetStringBlank <$STR(S$排3)> 14 1
+; SetStringBlank <$STR(S$排4)> 14 1
+; SetStringBlank <$STR(S$排5)> 14 1
+; SetStringBlank <$STR(S$排6)> 14 1
+; SetStringBlank <$STR(S$排7)> 14 1
+; SetStringBlank <$STR(S$排8)> 14 1
+; SetStringBlank <$STR(S$排9)> 14 1
 
 
 
@@ -156,7 +167,7 @@ MOV S$第6属性 {第六名属性：/FCOLOR=161}^{怪物切割+250/FCOLOR=253}^{攻击倍数+1.10
 MOV S$第7属性 {第七名属性：/FCOLOR=161}^{怪物切割+200/FCOLOR=253}^{攻击倍数+1.08/FCOLOR=249}^{血量倍数+1.08/FCOLOR=249}^{人物攻击+8/FCOLOR=70}^{人物魔法+8/FCOLOR=70}^{人物道术+8/FCOLOR=70}^{暴击几率+4%/FCOLOR=254}^{攻击伤害+4%/FCOLOR=254}^{怪物爆率+400%/FCOLOR=251}
 MOV S$第8属性 {第八名属性：/FCOLOR=161}^{怪物切割+150/FCOLOR=253}^{攻击倍数+1.06/FCOLOR=249}^{血量倍数+1.06/FCOLOR=249}^{人物攻击+6/FCOLOR=70}^{人物魔法+6/FCOLOR=70}^{人物道术+6/FCOLOR=70}^{暴击几率+3%/FCOLOR=254}^{攻击伤害+3%/FCOLOR=254}^{怪物爆率+300%/FCOLOR=251}
 MOV S$第9属性 {第九名属性：/FCOLOR=161}^{怪物切割+100/FCOLOR=253}^{攻击倍数+1.04/FCOLOR=249}^{血量倍数+1.04/FCOLOR=249}^{人物攻击+4/FCOLOR=70}^{人物魔法+4/FCOLOR=70}^{人物道术+4/FCOLOR=70}^{暴击几率+2%/FCOLOR=254}^{攻击伤害+2%/FCOLOR=254}^{怪物爆率+200%/FCOLOR=251}
-MOV S$第10属性 {第十名属性：/FCOLOR=161}^{怪物切割+50^/FCOLOR=253}^{攻击倍数+1.02/FCOLOR=249}^{血量倍数+1.02/FCOLOR=249}^{人物攻击+2/FCOLOR=70}^{人物魔法+2/FCOLOR=70}^{人物道术+2/FCOLOR=70}^{暴击几率+1%/FCOLOR=254}^{攻击伤害+1%/FCOLOR=254}^{怪物爆率+100%/FCOLOR=251}
+MOV S$第10属性 {第十名属性：/FCOLOR=161}^{怪物切割+50/FCOLOR=253}^{攻击倍数+1.02/FCOLOR=249}^{血量倍数+1.02/FCOLOR=249}^{人物攻击+2/FCOLOR=70}^{人物魔法+2/FCOLOR=70}^{人物道术+2/FCOLOR=70}^{暴击几率+1%/FCOLOR=254}^{攻击伤害+1%/FCOLOR=254}^{怪物爆率+100%/FCOLOR=251}
 
 
 
@@ -206,61 +217,61 @@ OPENMERCHANTBIGDLG 1 562 1 0 0 0 1 440 0
 
 ; \ \
 
-; \{购买摸鱼值池：/SCOLOR=161}{<$STR(N$可购买摸鱼点)>点/SCOLOR=250} <我要购买|249#购买事项：^-^250#1.可购买摸鱼池大于500点才能购买^-^253#2.购买条件：1大米=500摸鱼值^-^249#3.购买多少摸鱼值，可购买的池就越少/@@InPutInteger18(可购买<$STR(N$可购买摸鱼点)>点，1大米=500摸鱼值,请输入购买的大米数，拥有大米：<$GAMEPOINT>点)>
+; \{购买摸鱼值池：/SCOLOR=161}{<$STR(N$可购买摸鱼点)>点/SCOLOR=250} <我要购买|249#购买事项：^-^250#1.可购买摸鱼池大于500点才能购买^-^253#2.购买条件：1灵符=500摸鱼值^-^249#3.购买多少摸鱼值，可购买的池就越少/@@InPutInteger18(可购买<$STR(N$可购买摸鱼点)>点，1灵符=500摸鱼值,请输入购买的灵符数，拥有灵符：<$MONEY(灵符)>点)>
 ; <> <>   
-; {出售摸鱼值池：/SCOLOR=161}{<$STR(N$可出售摸鱼值)>点/SCOLOR=249} <我要出售|249#出售事项：^-^250#1.可出售摸鱼池大于1000点才能出售^-^253#2.出售条件：1000点摸鱼值=1大米^-^249#3.出售多少摸鱼值，可购买的池就越多/@@InPutInteger19(可出售<$STR(N$可出售摸鱼值)>点，1000点摸鱼值=1大米,请输入出售的大米数，拥有：<$GAMEGLORY>点)>
+; {出售摸鱼值池：/SCOLOR=161}{<$STR(N$可出售摸鱼值)>点/SCOLOR=249} <我要出售|249#出售事项：^-^250#1.可出售摸鱼池大于1000点才能出售^-^253#2.出售条件：1000点摸鱼值=1灵符^-^249#3.出售多少摸鱼值，可购买的池就越多/@@InPutInteger19(可出售<$STR(N$可出售摸鱼值)>点，1000点摸鱼值=1灵符,请输入出售的灵符数，拥有：<$GAMEGLORY>点)>
 
-<Img|x=0.0|y=0.0|width=750|height=600|reset=1|scale9t=50|scale9r=50|bg=1|scale9b=50|scale9l=50|move=0|img=public/bg_npc_04.jpg|show=4>
-<Layout|x=715.0|y=-9.0|width=80|height=80|link=@exit>
-<Button|x=747.0|y=0.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
-<Text|a=0|x=32.0|y=22.0|tipsx=10|tipsy=80|color=161|size=16|text=今天又摸鱼了，感觉自己就像一条自由自在的小小金鱼，游来游去>
-<Text|a=0|x=32.0|y=48.0|tipsx=10|tipsy=80|color=161|size=16|text=就是摸不到工作的边，作虽然很忙，请记得来摸一下鱼，愉快一下>
-<RText|a=0|x=32.0|y=75.0|tipsx=10|tipsy=80|color=161|size=16|text=下一级：<$STR(S$下级摸鱼达人A)>>
-<Text|a=0|x=32.0|y=213.0|tipsx=10|tipsy=80|color=161|size=16|text=当前摸鱼达人：>
-<RText|a=0|x=148.0|y=213.0|tipsx=10|tipsy=80|color=255|size=16|text=<$STR(S$摸鱼达人等级)>>
-<Text|a=0|x=32.0|y=233.0|tipsx=10|tipsy=80|color=161|size=16|text=---------------------------------------------------------------->
-<RText|a=0|x=32.0|y=251.0|tipsx=10|tipsy=80|color=254|size=16|text=摸鱼第一名:<$STR(S$排0)>>
-<Text|a=0|x=289.0|y=251.0|tips=<$STR(S$第1属性)>|tipsx=10|tipsy=80|color=255|size=16|text=点击查看属性>
-<RText|a=0|x=494.0|y=251.0|tipsx=10|tipsy=80|color=231|size=16|text=奉献摸鱼点:<<$STR(G60)>/FCOLOR=250>点>
-<RText|a=0|x=32.0|y=272.0|tipsx=10|tipsy=80|color=249|size=16|text=摸鱼第二名:<$STR(S$排1)>>
-<Text|a=0|x=289.0|y=272.0|tips=<$STR(S$第2属性)>|tipsx=10|tipsy=80|color=255|size=16|text=点击查看属性>
-<RText|a=0|x=494.0|y=272.0|tipsx=10|tipsy=80|color=231|size=16|text=奉献摸鱼点:<<$STR(G61)>/FCOLOR=250>点>
-<RText|a=0|x=32.0|y=292.0|tipsx=10|tipsy=80|color=253|size=16|text=摸鱼第三名:<$STR(S$排2)>>
-<Text|a=0|x=289.0|y=292.0|tips=<$STR(S$第3属性)>|tipsx=10|tipsy=80|color=255|size=16|text=点击查看属性>
-<RText|a=0|x=494.0|y=292.0|tipsx=10|tipsy=80|color=231|size=16|text=奉献摸鱼点:<<$STR(G62)>/FCOLOR=250>点>
-<RText|a=0|x=32.0|y=313.0|tipsx=10|tipsy=80|color=243|size=16|text=摸鱼第四名:<$STR(S$排3)>>
-<Text|a=0|x=289.0|y=313.0|tips=<$STR(S$第4属性)>|tipsx=10|tipsy=80|color=255|size=16|text=点击查看属性>
-<RText|a=0|x=494.0|y=313.0|tipsx=10|tipsy=80|color=231|size=16|text=奉献摸鱼点:<<$STR(G63)>/FCOLOR=250>点>
-<RText|a=0|x=32.0|y=334.0|tipsx=10|tipsy=80|color=251|size=16|text=摸鱼第五名:<$STR(S$排4)>>
-<Text|a=0|x=289.0|y=334.0|tips=<$STR(S$第5属性)>|tipsx=10|tipsy=80|color=255|size=16|text=点击查看属性>
-<RText|a=0|x=494.0|y=334.0|tipsx=10|tipsy=80|color=231|size=16|text=奉献摸鱼点:<<$STR(G64)>/FCOLOR=250>点>
-<RText|a=0|x=32.0|y=355.0|tipsx=10|tipsy=80|color=250|size=16|text=摸鱼第六名:<$STR(S$排5)>>
-<Text|a=0|x=289.0|y=355.0|tips=<$STR(S$第6属性)>|tipsx=10|tipsy=80|color=255|size=16|text=点击查看属性>
-<RText|a=0|x=494.0|y=355.0|tipsx=10|tipsy=80|color=231|size=16|text=奉献摸鱼点:<<$STR(G65)>/FCOLOR=250>点>
-<RText|a=0|x=32.0|y=376.0|tipsx=10|tipsy=80|color=250|size=16|text=摸鱼第七名:<$STR(S$排6)>>
-<Text|a=0|x=289.0|y=376.0|tips=<$STR(S$第7属性)>|tipsx=10|tipsy=80|color=255|size=16|text=点击查看属性>
-<RText|a=0|x=494.0|y=376.0|tipsx=10|tipsy=80|color=231|size=16|text=奉献摸鱼点:<<$STR(G66)>/FCOLOR=250>点>
-<RText|a=0|x=32.0|y=397.0|tipsx=10|tipsy=80|color=161|size=16|text=摸鱼第八名:<$STR(S$排7)>>
-<Text|a=0|x=289.0|y=397.0|tips=<$STR(S$第8属性)>|tipsx=10|tipsy=80|color=255|size=16|text=点击查看属性>
-<RText|a=0|x=494.0|y=397.0|tipsx=10|tipsy=80|color=231|size=16|text=奉献摸鱼点:<<$STR(G67)>/FCOLOR=250>点>
-<RText|a=0|x=32.0|y=417.0|tipsx=10|tipsy=80|color=161|size=16|text=摸鱼第九名:<$STR(S$排8)>>
-<Text|a=0|x=289.0|y=417.0|tips=<$STR(S$第9属性)>|tipsx=10|tipsy=80|color=255|size=16|text=点击查看属性>
-<RText|a=0|x=494.0|y=417.0|tipsx=10|tipsy=80|color=231|size=16|text=奉献摸鱼点:<<$STR(G68)>/FCOLOR=250>点>
-<RText|a=0|x=32.0|y=438.0|tipsx=10|tipsy=80|color=161|size=16|text=摸鱼第十名:<$STR(S$排9)>>
-<Text|a=0|x=289.0|y=438.0|tips=<$STR(S$第10属性)>|tipsx=10|tipsy=80|color=255|size=16|text=点击查看属性>
-<RText|a=0|x=494.0|y=438.0|tipsx=10|tipsy=80|color=231|size=16|text=奉献摸鱼点:<<$STR(G69)>/FCOLOR=250>点>
-<Text|a=0|x=32.0|y=693.0|tipsx=10|tipsy=80|color=161|size=16|text=------------------------------------------------------------------->
-<Text|x=338.0|y=213.0|color=255|size=16|text=提升摸鱼达人>
-<RText|x=482.0|y=213.0|color=255|size=16|text=<摸鱼值/FCOLOR=255><99999/FCOLOR=254>>
-<Text|x=281.0|y=95|color=255|size=16|text=防御：<$STR(N$下限防御A)>-<$STR(N$上限防御A)>>
-<Text|x=281.0|y=118|size=16|color=255|text=攻击：<$STR(N$下限攻击A)>-<$STR(N$上限攻击A)>>
-<Text|x=281.0|y=141|size=16|color=254|text=暴击元素 + <$STR(N$暴击元素A)>%>
-<Text|x=281.0|y=164|size=16|color=254|text=物理减伤 + <$STR(N$物理减伤A)>%>
-<Text|x=437.0|y=95.0|size=16|color=255|text=魔御：<$STR(N$下限魔御A)>-<$STR(N$上限魔御A)>>
-<Text|x=437.0|y=118.0|size=16|color=255|text=魔法：<$STR(N$下限攻击A)>-<$STR(N$上限攻击A)>>
-<Text|x=437.0|y=141.0|size=16|color=255|text=攻伤元素 + <$STR(N$攻伤元素A)>%>
-<Text|x=437.0|y=164.0|size=16|color=255|text=人物体力 + <$STR(N$元素体力A)>%>
-<Text|x=539.0|y=118.0|color=255|size=16|text=道术：<$STR(N$下限攻击A)>-<$STR(N$上限攻击A)>>
+; <Img|x=0.0|y=0.0|width=750|height=600|reset=1|scale9t=50|scale9r=50|bg=1|scale9b=50|scale9l=50|move=0|img=public/bg_npc_04.jpg|show=4>
+; <Layout|x=715.0|y=-9.0|width=80|height=80|link=@exit>
+; <Button|x=747.0|y=0.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+; <Text|a=0|x=32.0|y=22.0|tipsx=10|tipsy=80|color=161|size=16|text=今天又摸鱼了，感觉自己就像一条自由自在的小小金鱼，游来游去>
+; <Text|a=0|x=32.0|y=48.0|tipsx=10|tipsy=80|color=161|size=16|text=就是摸不到工作的边，作虽然很忙，请记得来摸一下鱼，愉快一下>
+; <RText|a=0|x=32.0|y=75.0|tipsx=10|tipsy=80|color=161|size=16|text=下一级：<$STR(S$下级摸鱼达人A)>>
+; <Text|a=0|x=32.0|y=213.0|tipsx=10|tipsy=80|color=161|size=16|text=当前摸鱼达人：>
+; <RText|a=0|x=148.0|y=213.0|tipsx=10|tipsy=80|color=255|size=16|text=<$STR(S$摸鱼达人等级)>>
+; <Text|a=0|x=32.0|y=233.0|tipsx=10|tipsy=80|color=161|size=16|text=---------------------------------------------------------------->
+; <RText|a=0|x=32.0|y=251.0|tipsx=10|tipsy=80|color=254|size=16|text=摸鱼第一名:<$STR(S$排0)>>
+; <Text|a=0|x=289.0|y=251.0|tips=<$STR(S$第1属性)>|tipsx=10|tipsy=80|color=255|size=16|text=点击查看属性>
+; <RText|a=0|x=494.0|y=251.0|tipsx=10|tipsy=80|color=231|size=16|text=奉献摸鱼点:<<$STR(G60)>/FCOLOR=250>点>
+; <RText|a=0|x=32.0|y=272.0|tipsx=10|tipsy=80|color=249|size=16|text=摸鱼第二名:<$STR(S$排1)>>
+; <Text|a=0|x=289.0|y=272.0|tips=<$STR(S$第2属性)>|tipsx=10|tipsy=80|color=255|size=16|text=点击查看属性>
+; <RText|a=0|x=494.0|y=272.0|tipsx=10|tipsy=80|color=231|size=16|text=奉献摸鱼点:<<$STR(G61)>/FCOLOR=250>点>
+; <RText|a=0|x=32.0|y=292.0|tipsx=10|tipsy=80|color=253|size=16|text=摸鱼第三名:<$STR(S$排2)>>
+; <Text|a=0|x=289.0|y=292.0|tips=<$STR(S$第3属性)>|tipsx=10|tipsy=80|color=255|size=16|text=点击查看属性>
+; <RText|a=0|x=494.0|y=292.0|tipsx=10|tipsy=80|color=231|size=16|text=奉献摸鱼点:<<$STR(G62)>/FCOLOR=250>点>
+; <RText|a=0|x=32.0|y=313.0|tipsx=10|tipsy=80|color=243|size=16|text=摸鱼第四名:<$STR(S$排3)>>
+; <Text|a=0|x=289.0|y=313.0|tips=<$STR(S$第4属性)>|tipsx=10|tipsy=80|color=255|size=16|text=点击查看属性>
+; <RText|a=0|x=494.0|y=313.0|tipsx=10|tipsy=80|color=231|size=16|text=奉献摸鱼点:<<$STR(G63)>/FCOLOR=250>点>
+; <RText|a=0|x=32.0|y=334.0|tipsx=10|tipsy=80|color=251|size=16|text=摸鱼第五名:<$STR(S$排4)>>
+; <Text|a=0|x=289.0|y=334.0|tips=<$STR(S$第5属性)>|tipsx=10|tipsy=80|color=255|size=16|text=点击查看属性>
+; <RText|a=0|x=494.0|y=334.0|tipsx=10|tipsy=80|color=231|size=16|text=奉献摸鱼点:<<$STR(G64)>/FCOLOR=250>点>
+; <RText|a=0|x=32.0|y=355.0|tipsx=10|tipsy=80|color=250|size=16|text=摸鱼第六名:<$STR(S$排5)>>
+; <Text|a=0|x=289.0|y=355.0|tips=<$STR(S$第6属性)>|tipsx=10|tipsy=80|color=255|size=16|text=点击查看属性>
+; <RText|a=0|x=494.0|y=355.0|tipsx=10|tipsy=80|color=231|size=16|text=奉献摸鱼点:<<$STR(G65)>/FCOLOR=250>点>
+; <RText|a=0|x=32.0|y=376.0|tipsx=10|tipsy=80|color=250|size=16|text=摸鱼第七名:<$STR(S$排6)>>
+; <Text|a=0|x=289.0|y=376.0|tips=<$STR(S$第7属性)>|tipsx=10|tipsy=80|color=255|size=16|text=点击查看属性>
+; <RText|a=0|x=494.0|y=376.0|tipsx=10|tipsy=80|color=231|size=16|text=奉献摸鱼点:<<$STR(G66)>/FCOLOR=250>点>
+; <RText|a=0|x=32.0|y=397.0|tipsx=10|tipsy=80|color=161|size=16|text=摸鱼第八名:<$STR(S$排7)>>
+; <Text|a=0|x=289.0|y=397.0|tips=<$STR(S$第8属性)>|tipsx=10|tipsy=80|color=255|size=16|text=点击查看属性>
+; <RText|a=0|x=494.0|y=397.0|tipsx=10|tipsy=80|color=231|size=16|text=奉献摸鱼点:<<$STR(G67)>/FCOLOR=250>点>
+; <RText|a=0|x=32.0|y=417.0|tipsx=10|tipsy=80|color=161|size=16|text=摸鱼第九名:<$STR(S$排8)>>
+; <Text|a=0|x=289.0|y=417.0|tips=<$STR(S$第9属性)>|tipsx=10|tipsy=80|color=255|size=16|text=点击查看属性>
+; <RText|a=0|x=494.0|y=417.0|tipsx=10|tipsy=80|color=231|size=16|text=奉献摸鱼点:<<$STR(G68)>/FCOLOR=250>点>
+; <RText|a=0|x=32.0|y=438.0|tipsx=10|tipsy=80|color=161|size=16|text=摸鱼第十名:<$STR(S$排9)>>
+; <Text|a=0|x=289.0|y=438.0|tips=<$STR(S$第10属性)>|tipsx=10|tipsy=80|color=255|size=16|text=点击查看属性>
+; <RText|a=0|x=494.0|y=438.0|tipsx=10|tipsy=80|color=231|size=16|text=奉献摸鱼点:<<$STR(G69)>/FCOLOR=250>点>
+; <Text|a=0|x=32.0|y=693.0|tipsx=10|tipsy=80|color=161|size=16|text=------------------------------------------------------------------->
+; <Text|x=338.0|y=213.0|color=255|size=16|text=提升摸鱼达人>
+; <RText|x=482.0|y=213.0|color=255|size=16|text=<摸鱼值/FCOLOR=255><99999/FCOLOR=254>>
+; <Text|x=281.0|y=95|color=255|size=16|text=防御：<$STR(N$下限防御A)>-<$STR(N$上限防御A)>>
+; <Text|x=281.0|y=118|size=16|color=255|text=攻击：<$STR(N$下限攻击A)>-<$STR(N$上限攻击A)>>
+; <Text|x=281.0|y=141|size=16|color=254|text=暴击元素 + <$STR(N$暴击元素A)>%>
+; <Text|x=281.0|y=164|size=16|color=254|text=物理减伤 + <$STR(N$物理减伤A)>%>
+; <Text|x=437.0|y=95.0|size=16|color=255|text=魔御：<$STR(N$下限魔御A)>-<$STR(N$上限魔御A)>>
+; <Text|x=437.0|y=118.0|size=16|color=255|text=魔法：<$STR(N$下限攻击A)>-<$STR(N$上限攻击A)>>
+; <Text|x=437.0|y=141.0|size=16|color=255|text=攻伤元素 + <$STR(N$攻伤元素A)>%>
+; <Text|x=437.0|y=164.0|size=16|color=255|text=人物体力 + <$STR(N$元素体力A)>%>
+; <Text|x=539.0|y=118.0|color=255|size=16|text=道术：<$STR(N$下限攻击A)>-<$STR(N$上限攻击A)>>
 <RText|x=34.0|y=493.0|color=255|size=16|text=<您当前摸鱼值：/FCOLOR=255><RText/FCOLOR=254>>
 <Text|x=296.0|y=496.0|color=255|size=16|text=奉献摸鱼点>
 <RText|x=32.0|y=530.0|color=255|size=16|text=<购买摸鱼值池：/FCOLOR=255><RText/FCOLOR=254>>
@@ -270,8 +281,137 @@ OPENMERCHANTBIGDLG 1 562 1 0 0 0 1 440 0
 
 
 
+<Img|show=4|bg=1|loadDelay=1|move=0|esc=1|img=custom/hecheng/zs7.png|reset=1>
+<Layout|x=723.0|y=-17.0|width=80|height=80|link=@exit>
+<Button|x=750.0|y=0.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=188.0|y=76.0|tipsx=10|tipsy=80|color=161|size=16|outline=1|text=今天又摸鱼了，感觉自己就像一条自由自在的小小金鱼，游来游去>
+<Text|a=0|x=188.0|y=102.0|tipsx=10|tipsy=80|color=161|size=16|outline=1|text=就是摸不到工作的边，作虽然很忙，请记得来摸一下鱼，愉快一下>
+<RText|a=0|x=188.0|y=129.0|tipsx=10|tipsy=80|color=161|size=16|outline=1|text=下一级：<$STR(S$下级摸鱼达人A)>>
+<Text|a=0|x=188.0|y=180.0|tipsx=10|tipsy=80|color=161|size=16|outline=1|text=当前摸鱼达人：>
+<RText|a=0|x=310.0|y=180.0|tipsx=10|tipsy=80|color=255|size=16|outline=1|text=<$STR(S$摸鱼达人等级)>>
+
+<RText|x=536.0|y=152.0|color=255|size=16|outline=1|text=<摸鱼值：/FCOLOR=255><<$GAMEGLORY>/FCOLOR=250>>
+<Text|x=194.0|y=254.0|color=255|size=16|outline=1|text=防御：<$str(S$返回属性_1)>-<$str(S$返回属性_2)>>
+<Text|x=194.0|y=277.0|color=255|size=16|outline=1|text=攻击：<$str(S$返回属性_3)>-<$str(S$返回属性_4)>>
+<Text|x=194.0|y=300.0|color=254|size=16|outline=1|text=暴击元素 + <$str(S$返回属性_13)>%>
+<Text|x=194.0|y=323.0|color=254|size=16|outline=1|text=物理减伤 + <$str(S$返回属性_12)>%>
+<Text|x=350.0|y=254.0|color=255|size=16|outline=1|text=魔御：<$str(S$返回属性_9)>-<$str(S$返回属性_10)>>
+<Text|x=350.0|y=277.0|color=255|size=16|outline=1|text=魔法：<$str(S$返回属性_5)>-<$str(S$返回属性_6)>>
+<Text|x=350.0|y=300.0|color=255|size=16|outline=1|text=攻伤元素 + <$str(S$返回属性_11)>%>
+<Text|x=350.0|y=323.0|color=255|size=16|outline=1|text=人物体力 + <$str(S$返回属性_14)>%>
+<Text|x=452.0|y=277.0|color=255|size=16|outline=1|text=道术：<$str(S$返回属性_7)>-<$str(S$返回属性_8)>>
+<Button|x=375.0|y=408.0|pimg=custom/button/ann2.png|nimg=custom/button/ann1.png|color=251|size=18|text=提升等级|link=@提升摸鱼达人>
+<Text|x=195.0|y=222.0|color=250|size=18|outline=1|text=下级属性：>
+<Button|x=35.0|y=65.0|nimg=custom/button/an_4.png|color=251|size=18|outline=1|text=摸鱼等级|link=@MAIN>
+<Button|x=35.0|y=113.0|size=18|nimg=custom/button/an_3.png|color=251|outline=1|text=摸鱼排名|link=@摸鱼排行面板>
+
+
+
+
+
 ; <Text|a=0|x=32.0|y=733.0|tipsx=10|tipsy=80|color=251|size=16|text=我要奉献摸鱼点|link=@@InPutInteger15(摸鱼排名最低1000起，你当前拥有摸鱼值：<$GAMEGLORY>
-[@InPutInteger19]
+
+
+
+[@摸鱼排行面板]
+#IF
+CHECKLEVELEX > 0
+#ACT
+MOV  S$排0  <$STR(A60)> 
+MOV  S$排1  <$STR(A61)> 
+MOV  S$排2  <$STR(A62)> 
+MOV  S$排3  <$STR(A63)> 
+MOV  S$排4  <$STR(A64)> 
+MOV  S$排5  <$STR(A65)> 
+MOV  S$排6  <$STR(A66)> 
+MOV  S$排7  <$STR(A67)> 
+MOV  S$排8  <$STR(A68)> 
+MOV  S$排9  <$STR(A69)> 
+SetStringBlank <$STR(S$排0)> 14 1
+SetStringBlank <$STR(S$排1)> 14 1
+SetStringBlank <$STR(S$排2)> 14 1
+SetStringBlank <$STR(S$排3)> 14 1
+SetStringBlank <$STR(S$排4)> 14 1
+SetStringBlank <$STR(S$排5)> 14 1
+SetStringBlank <$STR(S$排6)> 14 1
+SetStringBlank <$STR(S$排7)> 14 1
+SetStringBlank <$STR(S$排8)> 14 1
+SetStringBlank <$STR(S$排9)> 14 1
+#if
+#say
+<Img|x=0.0|y=0.0|reset=1|show=4|bg=1|move=0|img=custom/hecheng/cj6.png|loadDelay=1|esc=1>
+<Layout|x=723.0|y=-17.0|width=80|height=80|link=@exit>
+<Button|x=750.0|y=0.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<RText|a=0|x=148.0|y=67.0|tipsx=10|tipsy=80|color=254|size=16|outline=1|text=摸鱼第一名:<$STR(S$排0)>>
+<Text|a=0|x=382.0|y=67.0|tips=<$STR(S$第1属性)>|tipsx=10|tipsy=80|color=255|size=16|outline=1|text=点击查看属性>
+<RText|a=0|x=555.0|y=67.0|tipsx=10|tipsy=80|color=231|size=16|outline=1|text=奉献摸鱼点:<<$STR(G60)>/FCOLOR=250>点>
+<RText|a=0|x=148.0|y=90.0|tipsx=10|tipsy=80|color=249|size=16|outline=1|text=摸鱼第二名:<$STR(S$排1)>>
+<Text|a=0|x=382.0|y=90.0|tips=<$STR(S$第2属性)>|tipsx=10|tipsy=80|color=255|size=16|outline=1|text=点击查看属性>
+<RText|a=0|x=555.0|y=90.0|tipsx=10|tipsy=80|color=231|size=16|outline=1|text=奉献摸鱼点:<<$STR(G61)>/FCOLOR=250>点>
+<RText|a=0|x=148.0|y=113.0|tipsx=10|tipsy=80|color=253|size=16|outline=1|text=摸鱼第三名:<$STR(S$排2)>>
+<Text|a=0|x=382.0|y=113.0|tips=<$STR(S$第3属性)>|tipsx=10|tipsy=80|color=255|size=16|outline=1|text=点击查看属性>
+<RText|a=0|x=555.0|y=113.0|tipsx=10|tipsy=80|color=231|size=16|outline=1|text=奉献摸鱼点:<<$STR(G62)>/FCOLOR=250>点>
+<RText|a=0|x=148.0|y=136.0|tipsx=10|tipsy=80|color=243|size=16|outline=1|text=摸鱼第四名:<$STR(S$排3)>>
+<Text|a=0|x=382.0|y=136.0|tips=<$STR(S$第4属性)>|tipsx=10|tipsy=80|color=255|size=16|outline=1|text=点击查看属性>
+<RText|a=0|x=555.0|y=136.0|tipsx=10|tipsy=80|color=231|size=16|outline=1|text=奉献摸鱼点:<<$STR(G63)>/FCOLOR=250>点>
+<RText|a=0|x=148.0|y=159.0|tipsx=10|tipsy=80|color=251|size=16|outline=1|text=摸鱼第五名:<$STR(S$排4)>>
+<Text|a=0|x=382.0|y=159.0|tips=<$STR(S$第5属性)>|tipsx=10|tipsy=80|color=255|size=16|outline=1|text=点击查看属性>
+<RText|a=0|x=555.0|y=159.0|tipsx=10|tipsy=80|color=231|size=16|outline=1|text=奉献摸鱼点:<<$STR(G64)>/FCOLOR=250>点>
+<RText|a=0|x=148.0|y=182.0|tipsx=10|tipsy=80|color=250|size=16|outline=1|text=摸鱼第六名:<$STR(S$排5)>>
+<Text|a=0|x=382.0|y=182.0|tips=<$STR(S$第6属性)>|tipsx=10|tipsy=80|color=255|size=16|outline=1|text=点击查看属性>
+<RText|a=0|x=555.0|y=182.0|tipsx=10|tipsy=80|color=231|size=16|outline=1|text=奉献摸鱼点:<<$STR(G65)>/FCOLOR=250>点>
+<RText|a=0|x=148.0|y=205.0|tipsx=10|tipsy=80|color=250|size=16|outline=1|text=摸鱼第七名:<$STR(S$排6)>>
+<Text|a=0|x=382.0|y=205.0|tips=<$STR(S$第7属性)>|tipsx=10|tipsy=80|color=255|size=16|outline=1|text=点击查看属性>
+<RText|a=0|x=555.0|y=205.0|tipsx=10|tipsy=80|color=231|size=16|outline=1|text=奉献摸鱼点:<<$STR(G66)>/FCOLOR=250>点>
+<RText|a=0|x=148.0|y=228.0|tipsx=10|tipsy=80|color=161|size=16|outline=1|text=摸鱼第八名:<$STR(S$排7)>>
+<Text|a=0|x=382.0|y=228.0|tips=<$STR(S$第8属性)>|tipsx=10|tipsy=80|color=255|size=16|outline=1|text=点击查看属性>
+<RText|a=0|x=555.0|y=228.0|tipsx=10|tipsy=80|color=231|size=16|outline=1|text=奉献摸鱼点:<<$STR(G67)>/FCOLOR=250>点>
+<RText|a=0|x=148.0|y=251.0|tipsx=10|tipsy=80|color=161|size=16|outline=1|text=摸鱼第九名:<$STR(S$排8)>>
+<Text|a=0|x=382.0|y=251.0|tips=<$STR(S$第9属性)>|tipsx=10|tipsy=80|color=255|size=16|outline=1|text=点击查看属性>
+<RText|a=0|x=555.0|y=251.0|tipsx=10|tipsy=80|color=231|size=16|outline=1|text=奉献摸鱼点:<<$STR(G68)>/FCOLOR=250>点>
+<RText|a=0|x=148.0|y=274.0|tipsx=10|tipsy=80|color=161|size=16|outline=1|text=摸鱼第十名:<$STR(S$排9)>>
+<Text|a=0|x=382.0|y=274.0|tips=<$STR(S$第10属性)>|tipsx=10|tipsy=80|color=255|size=16|outline=1|text=点击查看属性>
+<RText|a=0|x=555.0|y=274.0|tipsx=10|tipsy=80|color=231|size=16|outline=1|text=奉献摸鱼点:<<$STR(G69)>/FCOLOR=250>点>
+<Button|x=19.0|y=65.0|nimg=custom/button/an_3.png|color=251|size=18|outline=1|text=摸鱼等级|link=@MAIN>
+<Button|x=19.0|y=113.0|nimg=custom/button/an_4.png|color=251|size=18|outline=1|text=摸鱼排名|link=@摸鱼排行面板>
+<RText|x=148.0|y=387.0|color=255|size=16|outline=1|text=<您当前奉献摸鱼值：/FCOLOR=255><<$STR(U8)>点/FCOLOR=254>>
+<RText|x=148.0|y=440.0|color=255|size=16|outline=1|text=<购买摸鱼值池：/FCOLOR=255><<$STR(N$可购买摸鱼点)>点/FCOLOR=254>>
+<RText|x=396.0|y=387.0|color=255|size=16|outline=1|text=<出售摸鱼值池：/FCOLOR=255><<$STR(N$可出售摸鱼值)>点/FCOLOR=254>>
+<Button|x=352.0|y=435.0|pimg=custom/button/ann2.png|nimg=custom/button/ann1.png|color=251|size=18|text=我要购买|outline=1|link=@摸鱼排行面板#购买摸鱼值=1>
+<Button|x=601.0|y=435.0|nimg=custom/button/ann1.png|submitInput=3|pimg=custom/button/ann2.png|size=18|color=251|outline=1|text=奉献摸鱼点|link=@奉献摸鱼值>
+<Button|x=602.0|y=381.0|pimg=custom/button/ann2.png|nimg=custom/button/ann1.png|color=251|size=18|text=我要出售|outline=1|link=@摸鱼排行面板#出售摸鱼值=1>
+<Input|x=494.0|y=440.0|width=96|height=25|color=255|type=0|size=16|inputid=3|place=输入数量>
+<Img|x=492.0|y=437.0|width=100|img=public/1900000668.png|esc=0>
+<RText|x=149.0|y=303.0|color=255|size=18|outline=1|text=<奉献事项：/FCOLOR=255><摸鱼排名最低1000起/FCOLOR=254><奉献的摸鱼点每天凌晨清零/FCOLOR=251>>
+<RText|x=149.0|y=330.0|color=255|size=18|outline=1|text=<购买事项：/FCOLOR=255><可购买摸鱼池大于500点才能购买/FCOLOR=254><1灵符=500摸鱼值/FCOLOR=251>>
+<RText|x=149.0|y=357.0|color=255|size=18|outline=1|text=<出售事项：/FCOLOR=255><可出售摸鱼池大于1000点才能出售/FCOLOR=254><1000点摸鱼值=1灵符/FCOLOR=254>>
+
+#if
+equal S$出售摸鱼值 1
+#act
+MOV S$出售摸鱼值
+#say
+<Img|x=281.0|y=175.0|width=300|height=180|esc=0|img=public/bg_npc_04.jpg>
+<Text|x=380.0|y=187.0|color=251|size=18|outline=1|text=出售摸鱼值>
+<Img|x=353.0|y=236.0|img=public/1900000668.png|esc=0>
+<Button|x=376.0|y=289.0|pimg=custom/button/ann2.png|nimg=custom/button/ann1.png|submitInput=4|color=251|size=18|text=点击出售|link=@出售摸鱼值>
+<Input|x=356.0|y=239.0|width=150|height=25|size=16|type=0|inputid=4|color=255>
+<Button|x=581.0|y=175.0|size=18|color=255|nimg=public/1900000510.png|link=@摸鱼排行面板>
+
+#if
+equal S$购买摸鱼值 1
+#act
+mov S$购买摸鱼值
+#say
+<Img|x=281.0|y=175.0|width=300|height=180|esc=0|img=public/bg_npc_04.jpg>
+<Text|x=380.0|y=187.0|color=251|size=18|outline=1|text=购买摸鱼值>
+<Img|x=353.0|y=236.0|img=public/1900000668.png|esc=0>
+<Button|x=376.0|y=289.0|pimg=custom/button/ann2.png|nimg=custom/button/ann1.png|submitInput=5|color=251|size=18|text=点击购买|link=@购买摸鱼值>
+<Input|x=356.0|y=239.0|width=150|height=25|size=16|type=0|inputid=5|color=255>
+<Button|x=581.0|y=175.0|size=18|color=255|nimg=public/1900000510.png|link=@摸鱼排行面板>
+
+
+[@出售摸鱼值]
 
 #IF
 #ACT
@@ -285,7 +425,9 @@ EQUAL G311 0
 messagebox \\对不起，当前出售的摸鱼池没有库存，无法出售！
 BREAK
 
-
+#if
+#act
+mov N19 <$NPCINPUT(4)>
 
 #or
 EQUAL N19
@@ -319,10 +461,10 @@ CHECKGAMEGLORY > N73
 #ACT
 INC G310 <$STR(N19)>
 DEC G311 <$STR(N19)>
-GAMEPOINT + <$STR(N19)>
+MONEY 灵符 + <$STR(N19)>
 GAMEGLORY - <$STR(N73)>
-MessageBox \\恭喜您，出售<$STR(N73)>点摸鱼值，获得：<$STR(N19)>大米
-goto @MAIN
+MessageBox \\恭喜您，出售<$STR(N73)>点摸鱼值，获得：<$STR(N19)>灵符
+goto @摸鱼排行面板
 break
 
 
@@ -336,7 +478,7 @@ break
 
 
 
-[@InPutInteger18]
+[@购买摸鱼值]
 
 #IF
 #ACT
@@ -350,7 +492,9 @@ EQUAL G310 0
 messagebox \\对不起，当前购买的摸鱼池没有库存，无法购买！
 BREAK
 
-
+#if
+#act
+MOV N18 <$NPCINPUT(5)>
 
 #or
 EQUAL N18
@@ -373,21 +517,21 @@ MUL N74 1
 
 
 #IF
-CHECKGAMEPOINT < <$STR(N74)>
+checkmoney 灵符 < <$STR(N74)>
 #ACT
-MESSAGEBOX \\\您的账户上大米不足:<$STR(N74)>点
+MESSAGEBOX \\\您的账户上灵符不足:<$STR(N74)>点
 break
 
 #or
-CHECKGAMEPOINT = N74
-CHECKGAMEPOINT > N74
+checkmoney 灵符 = N74
+checkmoney 灵符 > N74
 #ACT
 DEC G310 <$STR(N74)>
 INC G311 <$STR(N74)>
-GAMEPOINT - <$STR(N74)>
+MONEY 灵符 - <$STR(N74)>
 GAMEGLORY + <$STR(N73)>
-MessageBox \\恭喜您，用<$STR(N74)>大米购买获得：<$STR(N73)>摸鱼值
-goto @MAIN
+MessageBox \\恭喜您，用<$STR(N74)>灵符购买获得：<$STR(N73)>摸鱼值
+goto @摸鱼排行面板
 break
 
 
@@ -439,7 +583,7 @@ break
 
 
 
-[@InPutInteger15]
+[@奉献摸鱼值]
 
 
 #if
@@ -470,9 +614,9 @@ BREAK
 
 
 #or
-EQUAL N15
-EQUAL N15 0
-SMALL N15 1000
+EQUAL <$NPCINPUT(3)>
+EQUAL <$NPCINPUT(3)> 0
+SMALL <$NPCINPUT(3)> 1000
 #ACT
 messagebox \\对不起，奉献的摸鱼点，至少1000起，不能为空或者0！！
 BREAK
@@ -480,20 +624,20 @@ BREAK
 
 
 #IF
-CHECKGAMEGLORY < <$STR(N15)>
+CHECKGAMEGLORY < <$NPCINPUT(3)>
 #ACT
-MessageBox 对不起,您当前的摸鱼值不足<$STR(N15)>点！
+MessageBox 对不起,您当前的摸鱼值不足<$NPCINPUT(3)>点！
 BREAK
 
 
 #or
-CHECKGAMEGLORY > <$STR(N15)>
-CHECKGAMEGLORY = <$STR(N15)>
+CHECKGAMEGLORY > <$NPCINPUT(3)>
+CHECKGAMEGLORY = <$NPCINPUT(3)>
 #ACT
-GAMEGLORY - <$STR(N15)>
-INC U8 <$STR(N15)>
-MESSAGEBOX 恭喜你，捐献了<$STR(N15)>摸鱼点，请稍等10秒，排名马上刷新！
-goto @main
+GAMEGLORY - <$NPCINPUT(3)>
+INC U8 <$NPCINPUT(3)>
+MESSAGEBOX 恭喜你，捐献了<$NPCINPUT(3)>摸鱼点，请稍等10秒，排名马上刷新！
+goto @摸鱼排行面板
 BREAK
 
 

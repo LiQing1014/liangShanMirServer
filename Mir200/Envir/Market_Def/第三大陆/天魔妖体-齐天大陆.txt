@@ -1,6 +1,7 @@
 
 [@main]
-
+#ACT
+; newreadcsv ..\QuestDiary\csv表格\cfg_天魔妖体.csv
 
 #OR
 CHECKTITLE 天魔妖体Lv10
@@ -37,7 +38,7 @@ MOV N$天魔材料A 10
 MOV S$天魔材料B 悟空宝石
 MOV N$天魔材料B 10
 MOV N$天魔元宝D 6000000
-MOV N$天魔大米D 600
+MOV N$天魔灵符D 600
 MOV S$天魔按钮1 <天魔妖体Lv11/FCOLOR=251>
 ; MOV S$天魔按钮1 <天魔妖体Lv11|253#提升条件：^-^146#1:<$STR(S$天魔材料A)>*<$STR(N$天魔材料A)>^-^150#2:元宝*<$STR(N$天魔元宝D)>/FCOLOR=251>
 MOV S$天魔按钮2 <天魔妖体Lv12/FCOLOR=248>
@@ -67,7 +68,7 @@ MOV N$天魔材料A 12
 MOV S$天魔材料B 悟空宝石
 MOV N$天魔材料B 12
 MOV N$天魔元宝D 6500000
-MOV N$天魔大米D 650
+MOV N$天魔灵符D 650
 MOV S$天魔按钮1 <天魔妖体Lv11/FCOLOR=250>
 MOV S$天魔按钮2 <天魔妖体Lv12/FCOLOR=251>
 ; MOV S$天魔按钮2 <天魔妖体Lv12|253#提升条件：^-^146#1:<$STR(S$天魔材料A)>*<$STR(N$天魔材料A)>^-^150#2:元宝*<$STR(N$天魔元宝D)>/FCOLOR=251>
@@ -96,7 +97,7 @@ MOV N$天魔材料A 14
 MOV S$天魔材料B 悟空宝石
 MOV N$天魔材料B 14
 MOV N$天魔元宝D 7000000
-MOV N$天魔大米D 700
+MOV N$天魔灵符D 700
 MOV S$天魔按钮1 <天魔妖体Lv11/FCOLOR=250>
 MOV S$天魔按钮2 <天魔妖体Lv12/FCOLOR=250>
 MOV S$天魔按钮3 <天魔妖体Lv13/FCOLOR=251>
@@ -126,7 +127,7 @@ MOV N$天魔材料A 16
 MOV S$天魔材料B 悟空宝石
 MOV N$天魔材料B 16
 MOV N$天魔元宝D 7500000
-MOV N$天魔大米D 750
+MOV N$天魔灵符D 750
 MOV S$天魔按钮1 <天魔妖体Lv11/FCOLOR=250>
 MOV S$天魔按钮2 <天魔妖体Lv12/FCOLOR=250>
 MOV S$天魔按钮3 <天魔妖体Lv13/FCOLOR=250>
@@ -155,7 +156,7 @@ MOV N$天魔材料A 18
 MOV S$天魔材料B 悟空宝石
 MOV N$天魔材料B 18
 MOV N$天魔元宝D 8000000
-MOV N$天魔大米D 800
+MOV N$天魔灵符D 800
 MOV S$天魔按钮1 <天魔妖体Lv11/FCOLOR=250>
 MOV S$天魔按钮2 <天魔妖体Lv12/FCOLOR=250>
 MOV S$天魔按钮3 <天魔妖体Lv13/FCOLOR=250>
@@ -186,7 +187,7 @@ MOV N$天魔材料A 20
 MOV S$天魔材料B 悟空宝石
 MOV N$天魔材料B 20
 MOV N$天魔元宝D 8500000
-MOV N$天魔大米D 850
+MOV N$天魔灵符D 850
 MOV S$天魔按钮1 <天魔妖体Lv16/FCOLOR=251>
 ; MOV S$天魔按钮1 <天魔妖体Lv16|253#提升条件：^-^146#1:<$STR(S$天魔材料A)>*<$STR(N$天魔材料A)>^-^150#2:元宝*<$STR(N$天魔元宝D)>/FCOLOR=251>
 MOV S$天魔按钮2 <天魔妖体Lv17/FCOLOR=248>
@@ -215,7 +216,7 @@ MOV N$天魔材料A 22
 MOV S$天魔材料B 悟空宝石
 MOV N$天魔材料B 22
 MOV N$天魔元宝D 9000000
-MOV N$天魔大米D 900
+MOV N$天魔灵符D 900
 MOV S$天魔按钮1 <天魔妖体Lv16/FCOLOR=250>
 MOV S$天魔按钮2 <天魔妖体Lv17/FCOLOR=251>
 ; MOV S$天魔按钮2 <天魔妖体Lv17|253#提升条件：^-^146#1:<$STR(S$天魔材料A)>*<$STR(N$天魔材料A)>^-^150#2:元宝*<$STR(N$天魔元宝D)>/FCOLOR=251>
@@ -244,7 +245,7 @@ MOV N$天魔材料A 24
 MOV S$天魔材料B 悟空宝石
 MOV N$天魔材料B 25
 MOV N$天魔元宝D 9500000
-MOV N$天魔大米D 950
+MOV N$天魔灵符D 950
 MOV S$天魔按钮1 <天魔妖体Lv16/FCOLOR=250>
 MOV S$天魔按钮2 <天魔妖体Lv17/FCOLOR=250>
 MOV S$天魔按钮3 <天魔妖体Lv18/FCOLOR=251>
@@ -275,7 +276,7 @@ MOV N$天魔材料A 26
 MOV S$天魔材料B 悟空宝石
 MOV N$天魔材料B 26
 MOV N$天魔元宝D 10000000
-MOV N$天魔大米D 1000
+MOV N$天魔灵符D 1000
 MOV S$天魔按钮1 <天魔妖体Lv16/FCOLOR=250>
 MOV S$天魔按钮2 <天魔妖体Lv17/FCOLOR=250>
 MOV S$天魔按钮3 <天魔妖体Lv18/FCOLOR=250>
@@ -304,7 +305,7 @@ MOV N$天魔材料A 28
 MOV S$天魔材料B 悟空宝石
 MOV N$天魔材料B 28
 MOV N$天魔元宝D 12000000
-MOV N$天魔大米D 1200
+MOV N$天魔灵符D 1200
 MOV S$天魔按钮1 <天魔妖体Lv16/FCOLOR=250>
 MOV S$天魔按钮2 <天魔妖体Lv17/FCOLOR=250>
 MOV S$天魔按钮3 <天魔妖体Lv18/FCOLOR=250>
@@ -346,7 +347,7 @@ MOV N$天魔材料A 0
 MOV S$天魔材料B 当前天魔已满
 MOV N$天魔材料B 0
 MOV N$天魔元宝D 0
-MOV N$天魔大米D 0
+MOV N$天魔灵符D 0
 MOV S$天魔按钮1 <天魔妖体Lv16/FCOLOR=250>
 MOV S$天魔按钮2 <天魔妖体Lv17/FCOLOR=250>
 MOV S$天魔按钮3 <天魔妖体Lv18/FCOLOR=250>
@@ -365,6 +366,94 @@ MOV N$颜色7 254
 MOV N$颜色8 254
 MOV N$颜色9 254
 MOV N$颜色10 254
+
+
+#IF
+#ACT
+getdbitemfieldvalue <$cfg_天魔妖体(<$STR(U99)>_5)> idx S$展示物品1ID
+getdbitemfieldvalue <$cfg_天魔妖体(<$STR(U99)>_7)> idx S$展示物品2ID
+; getdbitemfieldvalue <$cfg_天魔妖体(<$STR(U99)>_5)> idx S$展示物品1ID
+
+
+BREAK
+#SAY
+<Img|show=4|bg=1|loadDelay=0|move=1|esc=1|img=custom/hecheng/zs1.png|reset=1>
+<Layout|x=722.0|y=-17.0|width=80|height=80|link=@exit>
+<Button|x=750.0|y=0.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=89.0|y=61.0|tipsx=10|tipsy=80|color=161|size=16|outline=1|text=天魔妖体:>
+<Text|a=0|x=161.0|y=61.0|tipsx=10|tipsy=80|color=250|size=16|outline=1|text=天魔体质的修炼者拥有强大的肉身，能在战斗中展现出极高的战力和生存能力>
+<Text|a=0|x=89.0|y=83.0|tipsx=10|tipsy=80|color=161|size=16|outline=1|text=功能介绍:>
+<Text|a=0|x=161.0|y=83.0|tipsx=10|tipsy=80|color=254|size=16|outline=1|text=天魔妖体会大幅度增加人物的体力元素>
+<RText|x=113.0|y=119.0|color=255|size=18|outline=1|text=<当前：/FCOLOR=253><<$cfg_天魔妖体(<$STR(U99)>_1)>/FCOLOR=254>>
+<RText|x=123.0|y=208.0|color=255|size=18|outline=1|text=<人物体力：/FCOLOR=255><+ <$cfg_天魔妖体(<$STR(U99)>_2)>%/FCOLOR=254>>
+<RText|x=123.0|y=250.0|color=255|size=18|outline=1|text=<人物魔力：/FCOLOR=255><+ <$cfg_天魔妖体(<$STR(U99)>_2)>%/FCOLOR=254>>
+<RText|x=455.0|y=119.0|color=255|size=18|outline=1|text=<下级：/FCOLOR=253><<$cfg_天魔妖体(<$STR(U99)>_3)>/FCOLOR=254>>
+<RText|x=461.0|y=208.0|color=255|size=18|outline=1|text=<人物体力：/FCOLOR=255><+ <$cfg_天魔妖体(<$STR(U99)>_4)>%/FCOLOR=254>>
+<RText|x=461.0|y=250.0|color=255|size=18|outline=1|text=<人物魔力：/FCOLOR=255><+ <$cfg_天魔妖体(<$STR(U99)>_4)>%/FCOLOR=254>>
+<ItemShow|x=110.0|y=380.0|width=70|height=70|itemid=<$str(S$展示物品1ID)>|itemcount=<$cfg_天魔妖体(<$STR(U99)>_6)>|showtips=1|bgtype=1>
+<ItemShow|x=195.0|y=380.0|width=70|height=70|itemid=<$str(S$展示物品2ID)>|itemcount=<$cfg_天魔妖体(<$STR(U99)>_8)>|showtips=1|bgtype=1>
+<Button|x=130.0|y=450.0|pimg=custom/button/ann2.png|nimg=custom/button/ann1.png|color=251|size=18|text=材料提升|link=@材料提升_天魔妖体>
+<Button|x=492.0|y=450.0|pimg=custom/button/ann2.png|nimg=custom/button/ann1.png|color=251|size=18|text=灵符提升|link=@灵符提升_天魔妖体>
+<Text|a=4|x=544.0|y=414.0|color=250|size=18|text=<$cfg_天魔妖体(<$STR(U99)>_9)>*<$cfg_天魔妖体(<$STR(U99)>_10)>>
+<Text|x=328.0|y=15.0|color=255|size=18|text=天魔妖体>
+
+
+
+[@材料提升_天魔妖体]
+
+#IF
+large U99 19
+#ACT
+SENDMSG 9 <font color='#00FF00'>已升满级</font>
+BREAK
+
+#IF
+NOT CHECKITEM <$cfg_天魔妖体(<$STR(U99)>_5)> <$cfg_天魔妖体(<$STR(U99)>_6)>
+#ACT
+SENDMSG 9 <font color='#00FF00'>您的<$cfg_天魔妖体(<$STR(U99)>_5)>不足【<$cfg_天魔妖体(<$STR(U99)>_6)>】</font>
+BREAK
+
+#IF
+NOT CHECKMONEY <$cfg_天魔妖体(<$STR(U99)>_7)> ? <$cfg_天魔妖体(<$STR(U99)>_8)>
+#ACT
+SENDMSG 9 <font color='#00FF00'>您的<$cfg_天魔妖体(<$STR(U99)>_7)>不足【<$cfg_天魔妖体(<$STR(U99)>_8)>】</font>
+BREAK
+
+#IF
+#ACT
+TAKE <$cfg_天魔妖体(<$STR(U99)>_5)> <$cfg_天魔妖体(<$STR(U99)>_6)>
+MONEY <$cfg_天魔妖体(<$STR(U99)>_7)> - <$cfg_天魔妖体(<$STR(U99)>_8)>
+DEPRIVETITLE 天魔妖体Lv<$STR(U99)>
+INC U99 1
+CONFERTITLE 天魔妖体Lv<$STR(U99)>
+goto @main
+sendmsg 9 <font color='#00FF00'>升级成功</font>
+
+[@灵符提升_天魔妖体]
+#IF
+large U99 19
+#ACT
+SENDMSG 9 <font color='#00FF00'>已升满级</font>
+BREAK
+
+#IF
+checkmoney 灵符 < <$cfg_天魔妖体(<$STR(U99)>_10)>
+#ACT
+SENDMSG 9 <font color='#00FF00'>您的<$cfg_天魔妖体(<$STR(U99)>_9)>不足【<$cfg_天魔妖体(<$STR(U99)>_10)>】</font>
+BREAK
+
+#IF
+#ACT
+MONEY 灵符 - <$cfg_天魔妖体(<$STR(U99)>_10)>
+DEPRIVETITLE 天魔妖体Lv<$STR(U99)>
+INC U99 1
+CONFERTITLE 天魔妖体Lv<$STR(U99)>
+goto @main
+sendmsg 9 <font color='#00FF00'>升级成功</font>
+
+
+
+[@hhhhh]
 
 #OR
 CHECKTITLE 天魔妖体Lv10
@@ -386,7 +475,7 @@ OPENMERCHANTBIGDLG 1 558 1 4 0 0 1 495 2
 ; \    <☆☆☆/FCOLOR=249>  <$STR(S$天魔按钮4)>  <☆☆☆/FCOLOR=249>  <☆☆☆/FCOLOR=250>  <增加体力元素+28%/FCOLOR=<$STR(N$颜色4)>>  <☆☆☆/FCOLOR=250>\ \
 ; \    <☆☆☆/FCOLOR=249>  <$STR(S$天魔按钮5)>  <☆☆☆/FCOLOR=249>  <☆☆☆/FCOLOR=250>  <增加体力元素+30%/FCOLOR=<$STR(N$颜色5)>> <☆☆☆/FCOLOR=250>\ 
 ; <━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━/FCOLOR=58>\ \
-; \                   <材料提升|249#提升条件：^-^250#1.<$STR(S$天魔材料A)>*<$STR(N$天魔材料A)>^-^250#2.元宝*<$STR(N$天魔元宝D)>/@材料提升>                          <大米提升|249#提升条件：^-^253#1.大米*<$STR(N$天魔大米D)>/@大米提升>
+; \                   <材料提升|249#提升条件：^-^250#1.<$STR(S$天魔材料A)>*<$STR(N$天魔材料A)>^-^250#2.元宝*<$STR(N$天魔元宝D)>/@材料提升>                          <灵符提升|249#提升条件：^-^253#1.灵符*<$STR(N$天魔灵符D)>/@灵符提升>
 
 <Img|width=620|height=300|reset=1|scale9l=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|esc=1|scale9t=10>
 <Layout|x=597|y=3|width=80|height=80|link=@exit>
@@ -430,7 +519,7 @@ OPENMERCHANTBIGDLG 1 558 1 4 0 0 1 495 2
 <Text|a=0|x=518.0|y=191.0|tipsx=10|tipsy=80|color=250|size=16|text=☆☆☆>
 <Text|a=0|x=14.0|y=211.0|tipsx=10|tipsy=80|color=58|size=16|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
 <Text|a=0|x=14.0|y=256.0|tipsx=10|tipsy=80|color=255|size=16|text=材料提升|link=@材料提升>
-<Text|a=0|x=182.0|y=257.0|tipsx=10|tipsy=80|color=255|size=16|text=材料提升|link=@大米提升>
+<Text|a=0|x=182.0|y=257.0|tipsx=10|tipsy=80|color=255|size=16|text=材料提升|link=@灵符提升>
 
 
 
@@ -465,7 +554,7 @@ OPENMERCHANTBIGDLG 1 558 1 4 0 0 1 495 2
 ; \    <☆☆☆/FCOLOR=249>  <$STR(S$天魔按钮4)>  <☆☆☆/FCOLOR=249>  <☆☆☆/FCOLOR=250>  <增加体力元素+38%/FCOLOR=<$STR(N$颜色9)>>  <☆☆☆/FCOLOR=250>\ \
 ; \    <☆☆☆/FCOLOR=249>  <$STR(S$天魔按钮5)>  <☆☆☆/FCOLOR=249>  <☆☆☆/FCOLOR=250>  <增加体力元素+40%/FCOLOR=<$STR(N$颜色10)>>  <☆☆☆/FCOLOR=250>\ 
 ; <━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━/FCOLOR=58>\ \
-; \                   <材料提升|249#提升条件：^-^250#1.<$STR(S$天魔材料A)>*<$STR(N$天魔材料A)>^-^250#2.元宝*<$STR(N$天魔元宝D)>/@材料提升>                          <大米提升|249#提升条件：^-^253#1.大米*<$STR(N$天魔大米D)>/@大米提升>
+; \                   <材料提升|249#提升条件：^-^250#1.<$STR(S$天魔材料A)>*<$STR(N$天魔材料A)>^-^250#2.元宝*<$STR(N$天魔元宝D)>/@材料提升>                          <灵符提升|249#提升条件：^-^253#1.灵符*<$STR(N$天魔灵符D)>/@灵符提升>
 
 
 
@@ -512,7 +601,7 @@ OPENMERCHANTBIGDLG 1 558 1 4 0 0 1 495 2
 <Text|a=0|x=518.0|y=191.0|tipsx=10|tipsy=80|color=250|size=16|text=☆☆☆>
 <Text|a=0|x=14.0|y=211.0|tipsx=10|tipsy=80|color=58|size=16|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
 <Text|a=0|x=14.0|y=256.0|tipsx=10|tipsy=80|color=255|size=16|text=材料提升|link=@材料提升>
-<Text|a=0|x=182.0|y=257.0|tipsx=10|tipsy=80|color=255|size=16|text=材料提升|link=@大米提升>
+<Text|a=0|x=182.0|y=257.0|tipsx=10|tipsy=80|color=255|size=16|text=材料提升|link=@灵符提升>
 
 
 
@@ -520,7 +609,7 @@ OPENMERCHANTBIGDLG 1 558 1 4 0 0 1 495 2
 
 
 
-[@大米提升]
+[@灵符提升]
 
 
 #OR
@@ -542,15 +631,15 @@ break
 
 
 #IF
-CHECKGAMEPOINT < <$STR(N$天魔大米D)>
+checkmoney 灵符 < <$STR(N$天魔灵符D)>
 #ACT
-MESSAGEBOX 对不起，您当前账户大米不足<$STR(N$天魔大米D)>，请检查包袱！
+MESSAGEBOX 对不起，您当前账户灵符不足<$STR(N$天魔灵符D)>，请检查包袱！
 BREAK
 
 
 #IF
 #ACT
-GAMEPOINT - <$STR(N$天魔大米D)>
+MONEY 灵符 - <$STR(N$天魔灵符D)>
 DEPRIVETITLE <$STR(S$当前的天魔)>
 CONFERTITLE <$STR(S$下级的天魔)>
 MESSAGEBOX 恭喜您，成功获得<$STR(S$下级的天魔)>,请您再接再厉，未来可期！

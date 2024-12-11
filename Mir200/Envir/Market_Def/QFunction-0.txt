@@ -11,6 +11,13 @@
 #call [\»õ±Ò¶Ò»».txt] @»õ±Ò¶Ò»»
 #call [\È«²¿Í¨ÓÃÏÞÊ±\ÏÞÊ±Ê×É±.txt] @Ê×É±½±Àø
 #CALL [\ÓÎÏ·µÇÂ½\¿ñ±©Ö®Á¦.txt] @¿ñ±©Ö®Á¦
+#CALL [\ÍøÂçÍ¨ÐÅ\ÏûÏ¢½ÓÊÕ.txt] @ÏûÏ¢½ÓÊÕ
+#CALL [\ÏµÍ³¹¦ÄÜ\¹¦ÄÜ·þÎñ.txt] @B_¹¦ÄÜ
+#CALL [\°´Å¥¹¦ÄÜ\¸£Àû´óÌü.txt] @¸£Àû´óÌü
+#CALL [\°´Å¥¹¦ÄÜ\Ê×³äÀñ°ü.txt] @Ê×³äÀñ°ü
+#CALL [\°´Å¥¹¦ÄÜ\Ð¡ÃØÊé.txt] @¶¥²¿_Ð¡ÃØÊé
+#CALL [\°´Å¥¹¦ÄÜ\¿ªÇøºÀÀñ.txt] @¶¥²¿_¿ªÇøºÀÀñ
+#CALL [\°´Å¥¹¦ÄÜ\Î¨Ò»ÌØÈ¨.txt] @¶¥²¿_Î¨Ò»ÌØÈ¨
 
 [@MagSelfFunc82]
 #if
@@ -67,18 +74,18 @@ MESSAGEBOX [ÏµÍ³:]\¡¡\¡¡¡¡¡¡±¾·þ¹¥³ÇÆÚ¼ä21µã-22µã£¬±¦±¦½ûÖ¹´ò¹Ö£¡¿ìÈ¥¼ÓÈë¹¥³ÇÕ½°
 [@GetCastle0]
 #IF 
 #act
-ESPSendCenterMsg 253 0 12 10 4 6000 ¡ô¡ó¡ôµ±Ç°É³°Í¿ËÒÑ±»¡¾<$OWNERGUILD>¡¿Õ¼Áì£¡£¡¡ô¡ó¡ô 
-ESPSendCenterMsg 253 0 12 10 4 6000 ¡ô¡ó¡ôµ±Ç°É³°Í¿ËÒÑ±»¡¾<$OWNERGUILD>¡¿Õ¼Áì£¡£¡¡ô¡ó¡ô 
-ESPSendCenterMsg 253 0 12 10 4 6000 ¡ô¡ó¡ôµ±Ç°É³°Í¿ËÒÑ±»¡¾<$OWNERGUILD>¡¿Õ¼Áì£¡£¡¡ô¡ó¡ô 
+SendCenterMsg 253 0 12 10 4 6000 ¡ô¡ó¡ôµ±Ç°É³°Í¿ËÒÑ±»¡¾<$OWNERGUILD>¡¿Õ¼Áì£¡£¡¡ô¡ó¡ô 
+SendCenterMsg 253 0 12 10 4 6000 ¡ô¡ó¡ôµ±Ç°É³°Í¿ËÒÑ±»¡¾<$OWNERGUILD>¡¿Õ¼Áì£¡£¡¡ô¡ó¡ô 
+SendCenterMsg 253 0 12 10 4 6000 ¡ô¡ó¡ôµ±Ç°É³°Í¿ËÒÑ±»¡¾<$OWNERGUILD>¡¿Õ¼Áì£¡£¡¡ô¡ó¡ô 
 BREAK
 
 [@ESPÐ¡ÍË¿ØÖÆ]
 #IF
 EQUAL N$ÍÑÕ½CD 0
 #ACT
-ESPAllowTag 1      
+; ESPAllowTag 1      
 #elseact
-ESPAllowTag 0
+; ESPAllowTag 0
 SENDMSG 5 [ÌáÊ¾]£ºÕ½¶·×´Ì¬ÏÂ½ûÖ¹ÎÞ·¨Ð¡ÍË,ÇëÍ£Ö¹¹¥»÷»ò²»±»¹¥»÷10Ãëºó×Ô¶¯ÍÑÀëÕ½¶·×´Ì¬
 Break
 
@@ -86,9 +93,9 @@ Break
 #IF
 EQUAL N$ÍÑÕ½CD 0
 #ACT
-ESPAllowTag 1      
+; ESPAllowTag 1      
 #elseact
-ESPAllowTag 0
+; ESPAllowTag 0
 SENDMSG 5 [ÌáÊ¾]£ºÕ½¶·×´Ì¬ÏÂ½ûÖ¹Ê¹ÓÃ´«ËÍ¹¦ÄÜ,ÇëÍ£Ö¹¹¥»÷»ò²»±»¹¥»÷10Ãëºó×Ô¶¯ÍÑÀëÕ½¶·×´Ì¬
 Break
 
@@ -96,33 +103,33 @@ Break
 
 [@ESP½øÈë°²È«Çø]
 
-#IF
-; »ñÈ¡½ð¶î <$STR(T22)>
-equal »ñÈ¡½ð¶î <$STR(T22)>
-#ACT
-MOV S$È«Õ¾³äÖµ <$STR(S6)>
+; #IF
+; ; »ñÈ¡½ð¶î <$STR(T22)>
+; equal »ñÈ¡½ð¶î <$STR(T22)>
+; #ACT
+; MOV S$È«Õ¾³äÖµ <$STR(S6)>
 
-#IF
-ISONMAP 3
-CheckContainsTextList ..\..\..\..\37W°ü·þ¹¦ÄÜ\¿ªÆôÉñÃØÈË.txt ¿ª
-SMALL <$STR(S$È«Õ¾³äÖµ)> 100
-#ACT
-ChangeSP 0 1 0
+; #IF
+; ISONMAP 3
+; CheckContainsTextList ..\..\..\..\37W°ü·þ¹¦ÄÜ\¿ªÆôÉñÃØÈË.txt ¿ª
+; SMALL <$STR(S$È«Õ¾³äÖµ)> 100
+; #ACT
+; ChangeSP 0 1 0
 
 #if
 #act
 DETOXIFCATION
-ESPSendCenterMsg 250 0 12 10 0 600 ¡ô¡ó¡ôÄãÒÑ½øÈë°²È«Çø¡ô¡ó¡ô 
+SendCenterMsg 250 0 12 10 0 600 ¡ô¡ó¡ôÄãÒÑ½øÈë°²È«Çø¡ô¡ó¡ô 
 BREAK
 
 [@ESPÀë¿ª°²È«Çø]
 #IF
 #ACT
-ChangeSP 0 0 0
+; ChangeSP 0 0 0
 
 #if
 #act
-ESPSendCenterMsg 251 0 12 10 0 600 ¡ô¡ó¡ôÄãÒÑÀë¿ª°²È«Çø¡ô¡ó¡ô 
+SendCenterMsg 251 0 12 10 0 600 ¡ô¡ó¡ôÄãÒÑÀë¿ª°²È«Çø¡ô¡ó¡ô 
 BREAK
 
 [@ESPµØÍ¼±ä¸ü]
@@ -138,38 +145,38 @@ CheckContainsTextList ..\..\..\..\37W°ü·þ¹¦ÄÜ\¿ªÆôÉñÃØÈË.txt ¿ª
 INSAFEZONE
 SMALL <$STR(S$È«Õ¾³äÖµ)> 100
 #ACT
-ChangeSP 0 1 0
+; ChangeSP 0 1 0
 
-[@ESPStartAutoPlayGame]
+; [@StartAutoPlayGame]
 
-#OR
-ISONMAP 0150
-ISONMAP H201
-ISONMAP 3
-#act
-MESSAGEBOX µ±Ç°µØÍ¼½ûÖ¹¹Ò»ú
-break
+; #OR
+; ISONMAP 0150
+; ISONMAP H201
+; ISONMAP 3
+; #act
+; MESSAGEBOX µ±Ç°µØÍ¼½ûÖ¹¹Ò»ú
+; break
 
-#IF
-CHECK [170] 0
-#ACT
-Messagebox	 ¿ªÆôÊ§°Ü£º\¡¡\ÄúÉÐÎ´¼¤»î[Î¢ÐÅÀñ°ü]£¡
-BREAK
+; #IF
+; CHECK [170] 0
+; #ACT
+; Messagebox	 ¿ªÆôÊ§°Ü£º\¡¡\ÄúÉÐÎ´¼¤»î[Î¢ÐÅÀñ°ü]£¡
+; BREAK
 
-#IF
-#ACT
-ESPStartAutoPlayGame
-Mov	S$×Ô¶¯¹Ò»ú	¿ªÆô
-#CALL   [37WÍ¨·þ¹¦ÄÜ\Í¨·þ°´Å¥.TXT] @Í¨·þ°´Å¥
-#elseact
-MESSAGEBOX ¹Ò»úÊ§°Ü£º¼¤»î[Î¢ÐÅÀñ°ü]¼´¿É¿ªÆô×Ô¶¯¹Ò»ú£¡
+; #IF
+; #ACT
+; StartAutoPlayGame
+; Mov	S$×Ô¶¯¹Ò»ú	¿ªÆô
+; #CALL   [37WÍ¨·þ¹¦ÄÜ\Í¨·þ°´Å¥.TXT] @Í¨·þ°´Å¥
+; #elseact
+; MESSAGEBOX ¹Ò»úÊ§°Ü£º¼¤»î[Î¢ÐÅÀñ°ü]¼´¿É¿ªÆô×Ô¶¯¹Ò»ú£¡
 
-[@ESPStopAutoPlayGame]
-#IF
-#ACT
-Mov	S$×Ô¶¯¹Ò»ú
-ESPStopAutoPlayGame
-#CALL   [37WÍ¨·þ¹¦ÄÜ\Í¨·þ°´Å¥.TXT] @Í¨·þ°´Å¥
+; [@StopAutoPlayGame]
+; #IF
+; #ACT
+; Mov	S$×Ô¶¯¹Ò»ú
+; StopAutoPlayGame
+; #CALL   [37WÍ¨·þ¹¦ÄÜ\Í¨·þ°´Å¥.TXT] @Í¨·þ°´Å¥
 
 [@QueryMyShopFail]
 
@@ -263,13 +270,13 @@ BREAK
 #IF
 Equal	S$×Ô¶¯¹Ò»ú
 #ACT
-ShowWindow 2021
+; ShowWindow 2021
 
 #IF
 Equal	S$×Ô¶¯¹Ò»ú	¿ªÆô
 #ACT
 Mov	S$×Ô¶¯¹Ò»ú
-ESPStopAutoPlayGame
+StopAutoPlayGame
 
 #if
 #act
@@ -304,7 +311,8 @@ kick
 [@¸øÎïÆ·µ½±³°ü]
 #IF
 #ACT
-ESPGiveEx <$STR(S0)> <$STR(S1)> <$STR(S2)> <$STR(S3)> <$STR(S4)> <$STR(S5)>
+; ×¢ÊÍ
+; ESPGiveEx <$STR(S0)> <$STR(S1)> <$STR(S2)> <$STR(S3)> <$STR(S4)> <$STR(S5)>
 
 [@¿ªÊ¼×ªÇøÑéÖ¤]
 #IF
@@ -328,7 +336,7 @@ ChangeModeEx 1 1
 ChangeModeEx 2 1
 ChangeModeEx 10 1
 MOV N$ÒìµØ×´Ì¬ 0
-Espmapmoveex 3 330 330 8
+mapmove 3 330 330 8
 MOV T23 <$MACHINEID>
 MESSAGEBOX ÑéÖ¤³É¹¦£¬µ±Ç°×îÐÂ°ó¶¨µÄ»úÆ÷Îª£º<$MACHINEID>
 break
@@ -337,7 +345,7 @@ break
 #ACT
 MOV T22 <$STR(S0)>
 MOV T23 <$MACHINEID>
-Espmapmoveex 3 330 330 8
+mapmove 3 330 330 8
 MESSAGEBOX µ±Ç°°ó¶¨µÄ»úÆ÷Îª£º<$MACHINEID>
 
 #if
@@ -361,7 +369,7 @@ ISONMAP 3
 CheckContainsTextList ..\..\..\..\37W°ü·þ¹¦ÄÜ\¿ªÆôÉñÃØÈË.txt ¿ª
 SMALL <$STR(S$È«Õ¾³äÖµ)> 100
 #ACT
-ChangeSP 0 1 0
+; ChangeSP 0 1 0
 
 [@ESPNOTSHOPBUY]
 #IF
@@ -422,14 +430,14 @@ break
 #if
 isonmap ÆëÌì´óÂ½
 #act
-MAGICDISABLED
+stop
 messagebox ¸ÃµØÍ¼½ûÖ¹Ê¹ÓÃ´Ë¼¼ÄÜ!
 break
 [@Magic19]
 #if
 isonmap ÆëÌì´óÂ½
 #act
-MAGICDISABLED
+stop
 messagebox ¸ÃµØÍ¼½ûÖ¹Ê¹ÓÃ´Ë¼¼ÄÜ
 break
 
@@ -491,68 +499,68 @@ ALLOWDROP	1
 [@DropUseItems1]
 #IF
 #ACT
-ThrowItem <$MAP> <$X> <$Y> 8 50´óÃ× 10|300 1 1
-SENDMSG 6 ÄúµÄÎäÆ÷±£ÏÕÒÑÉúÐ§ÎäÆ÷Ã»ÓÐµô£¬µôÂä50´óÃ×*10£¬Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä¡£
-MESSAGEBOX \¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ÏµÍ³ÌáÊ¾£º¡¾ÎäÆ÷µôÂä¡¿\\·Ç³£ÒÅº¶£¬ÄúµÄÎäÆ÷±£ÏÕÒÑÉúÐ§ÎäÆ÷Ã»ÓÐµô£¬µôÂä50´óÃ×*10\\Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä£¡£¡£¡
+ThrowItem <$MAP> <$X> <$Y> 8 50Áé·û 10|300 1 1
+SENDMSG 6 ÄúµÄÎäÆ÷±£ÏÕÒÑÉúÐ§ÎäÆ÷Ã»ÓÐµô£¬µôÂä50Áé·û*10£¬Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä¡£
+MESSAGEBOX \¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ÏµÍ³ÌáÊ¾£º¡¾ÎäÆ÷µôÂä¡¿\\·Ç³£ÒÅº¶£¬ÄúµÄÎäÆ÷±£ÏÕÒÑÉúÐ§ÎäÆ÷Ã»ÓÐµô£¬µôÂä50Áé·û*10\\Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä£¡£¡£¡
 SENDMOVEMSG 0 250 0 100 1 ÌáÊ¾£º¡¾{<$CURRRTARGETNAME>/FCOLOR=249}¡¿ÔÚ´ò¼Ò½ÙÉá£¬´óÁ¿¡¾{<$SCATTERITEMNAME>/FCOLOR=245}¡¿µôÂäÔÚµØÍ¼¡¾{%m/FCOLOR=254}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©/FCOLOR=254}¡¿´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
 
-SENDMSG 0 {µôÂäÌáÊ¾£º|161:0}{¡¾<$CURRRTARGETNAME>¡¿|250:0}ÔÚ´ò¼Ò½ÙÉá£¬Íæ¼Ò{[<$USERNAME>]|254:0}µÄ{¡¾ÎäÆ÷¡¿|254:0}ÒâÍâµôÂä´¥·¢±£ÏÕ£¬´óÁ¿{50´óÃ×¾í|253:0}µôÂäÔÚµØÍ¼{%m|250:0}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©|251:0}´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
+SENDMSG 0 {µôÂäÌáÊ¾£º|161:0}{¡¾<$CURRRTARGETNAME>¡¿|250:0}ÔÚ´ò¼Ò½ÙÉá£¬Íæ¼Ò{[<$USERNAME>]|254:0}µÄ{¡¾ÎäÆ÷¡¿|254:0}ÒâÍâµôÂä´¥·¢±£ÏÕ£¬´óÁ¿{50Áé·û¾í|253:0}µôÂäÔÚµØÍ¼{%m|250:0}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©|251:0}´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
 
 
 
 [@DropUseItems0]
 #IF
 #ACT
-ThrowItem <$MAP> <$X> <$Y> 8 50´óÃ× 10|300 1 1
-SENDMSG 6 ÄúµÄÒÂ·þ±£ÏÕÒÑÉúÐ§ÒÂ·þÃ»ÓÐµô£¬µôÂäÀ¶50µã´óÃ×¾í*6£¬Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä¡£
-MESSAGEBOX \¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ÏµÍ³ÌáÊ¾£º¡¾ÒÂ·þµôÂä¡¿\\·Ç³£ÒÅº¶£¬ÄúµÄÒÂ·þ±£ÏÕÒÑÉúÐ§ÒÂ·þÃ»ÓÐµô£¬µôÂäÀ¶50µã´óÃ×¾í*6\\Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä£¡£¡£¡
+ThrowItem <$MAP> <$X> <$Y> 8 50Áé·û 10|300 1 1
+SENDMSG 6 ÄúµÄÒÂ·þ±£ÏÕÒÑÉúÐ§ÒÂ·þÃ»ÓÐµô£¬µôÂäÀ¶50µãÁé·û¾í*6£¬Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä¡£
+MESSAGEBOX \¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ÏµÍ³ÌáÊ¾£º¡¾ÒÂ·þµôÂä¡¿\\·Ç³£ÒÅº¶£¬ÄúµÄÒÂ·þ±£ÏÕÒÑÉúÐ§ÒÂ·þÃ»ÓÐµô£¬µôÂäÀ¶50µãÁé·û¾í*6\\Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä£¡£¡£¡
 SENDMOVEMSG 0 250 0 100 1 ÌáÊ¾£º¡¾{<$CURRRTARGETNAME>/FCOLOR=249}¡¿ÔÚ´ò¼Ò½ÙÉá£¬´óÁ¿¡¾{<$SCATTERITEMNAME>/FCOLOR=245}¡¿µôÂäÔÚµØÍ¼¡¾{%m/FCOLOR=254}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©/FCOLOR=254}¡¿´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
 
-SENDMSG 0 {µôÂäÌáÊ¾£º|161:0}{¡¾<$CURRRTARGETNAME>¡¿|250:0}ÔÚ´ò¼Ò½ÙÉá£¬Íæ¼Ò{[<$USERNAME>]|254:0}µÄ{¡¾ÒÂ·þ¡¿|254:0}ÒâÍâµôÂä´¥·¢±£ÏÕ£¬´óÁ¿{50´óÃ×¾í|253:0}µôÂäÔÚµØÍ¼{%m|250:0}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©|251:0}´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
+SENDMSG 0 {µôÂäÌáÊ¾£º|161:0}{¡¾<$CURRRTARGETNAME>¡¿|250:0}ÔÚ´ò¼Ò½ÙÉá£¬Íæ¼Ò{[<$USERNAME>]|254:0}µÄ{¡¾ÒÂ·þ¡¿|254:0}ÒâÍâµôÂä´¥·¢±£ÏÕ£¬´óÁ¿{50Áé·û¾í|253:0}µôÂäÔÚµØÍ¼{%m|250:0}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©|251:0}´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
 
 [@DropUseItems3]
 #IF
 #ACT
-ThrowItem <$MAP> <$X> <$Y> 8 50´óÃ× 10|300 1 1
-SENDMSG 6 ÄúµÄÏîÁ´±£ÏÕÒÑÉúÐ§ÏîÁ´Ã»ÓÐµô£¬µôÂä50´óÃ×*10£¬Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä¡£
-MESSAGEBOX \¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ÏµÍ³ÌáÊ¾£º¡¾ÏîÁ´µôÂä¡¿\\·Ç³£ÒÅº¶£¬ÄúµÄÏîÁ´±£ÏÕÒÑÉúÐ§ÏîÁ´Ã»ÓÐµô£¬µôÂä50´óÃ×*10\\Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä£¡£¡£¡
+ThrowItem <$MAP> <$X> <$Y> 8 50Áé·û 10|300 1 1
+SENDMSG 6 ÄúµÄÏîÁ´±£ÏÕÒÑÉúÐ§ÏîÁ´Ã»ÓÐµô£¬µôÂä50Áé·û*10£¬Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä¡£
+MESSAGEBOX \¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ÏµÍ³ÌáÊ¾£º¡¾ÏîÁ´µôÂä¡¿\\·Ç³£ÒÅº¶£¬ÄúµÄÏîÁ´±£ÏÕÒÑÉúÐ§ÏîÁ´Ã»ÓÐµô£¬µôÂä50Áé·û*10\\Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä£¡£¡£¡
 SENDMOVEMSG 0 250 0 100 1 ÌáÊ¾£º¡¾{<$CURRRTARGETNAME>/FCOLOR=249}¡¿ÔÚ´ò¼Ò½ÙÉá£¬´óÁ¿¡¾{<$SCATTERITEMNAME>/FCOLOR=245}¡¿µôÂäÔÚµØÍ¼¡¾{%m/FCOLOR=254}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©/FCOLOR=254}¡¿´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
 
-SENDMSG 0 {µôÂäÌáÊ¾£º|161:0}{¡¾<$CURRRTARGETNAME>¡¿|250:0}ÔÚ´ò¼Ò½ÙÉá£¬Íæ¼Ò{[<$USERNAME>]|254:0}µÄ{¡¾ÏîÁ´¡¿|254:0}ÒâÍâµôÂä´¥·¢±£ÏÕ£¬´óÁ¿{50´óÃ×¾í|253:0}µôÂäÔÚµØÍ¼{%m|250:0}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©|251:0}´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
+SENDMSG 0 {µôÂäÌáÊ¾£º|161:0}{¡¾<$CURRRTARGETNAME>¡¿|250:0}ÔÚ´ò¼Ò½ÙÉá£¬Íæ¼Ò{[<$USERNAME>]|254:0}µÄ{¡¾ÏîÁ´¡¿|254:0}ÒâÍâµôÂä´¥·¢±£ÏÕ£¬´óÁ¿{50Áé·û¾í|253:0}µôÂäÔÚµØÍ¼{%m|250:0}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©|251:0}´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
 
 
 [@DropUseItems4]
 #IF
 #ACT
-ThrowItem <$MAP> <$X> <$Y> 8 50´óÃ× 10|300 1 1
-SENDMSG 6 ÄúµÄÍ·¿ø±£ÏÕÒÑÉúÐ§Í·¿øÃ»ÓÐµô£¬µôÂä50´óÃ×*10£¬Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä¡£
-MESSAGEBOX \¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ÏµÍ³ÌáÊ¾£º¡¾Í·¿øµôÂä¡¿\\·Ç³£ÒÅº¶£¬ÄúµÄÍ·¿ø±£ÏÕÒÑÉúÐ§Í·¿øÃ»ÓÐµô£¬µôÂä50´óÃ×*10\\Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä£¡£¡£¡
+ThrowItem <$MAP> <$X> <$Y> 8 50Áé·û 10|300 1 1
+SENDMSG 6 ÄúµÄÍ·¿ø±£ÏÕÒÑÉúÐ§Í·¿øÃ»ÓÐµô£¬µôÂä50Áé·û*10£¬Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä¡£
+MESSAGEBOX \¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ÏµÍ³ÌáÊ¾£º¡¾Í·¿øµôÂä¡¿\\·Ç³£ÒÅº¶£¬ÄúµÄÍ·¿ø±£ÏÕÒÑÉúÐ§Í·¿øÃ»ÓÐµô£¬µôÂä50Áé·û*10\\Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä£¡£¡£¡
 SENDMOVEMSG 0 250 0 100 1 ÌáÊ¾£º¡¾{<$CURRRTARGETNAME>/FCOLOR=249}¡¿ÔÚ´ò¼Ò½ÙÉá£¬´óÁ¿¡¾{<$SCATTERITEMNAME>/FCOLOR=245}¡¿µôÂäÔÚµØÍ¼¡¾{%m/FCOLOR=254}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©/FCOLOR=254}¡¿´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
 
-SENDMSG 0 {µôÂäÌáÊ¾£º|161:0}{¡¾<$CURRRTARGETNAME>¡¿|250:0}ÔÚ´ò¼Ò½ÙÉá£¬Íæ¼Ò{[<$USERNAME>]|254:0}µÄ{¡¾Í·¿ø¡¿|254:0}ÒâÍâµôÂä´¥·¢±£ÏÕ£¬´óÁ¿{50´óÃ×¾í|253:0}µôÂäÔÚµØÍ¼{%m|250:0}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©|251:0}´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
+SENDMSG 0 {µôÂäÌáÊ¾£º|161:0}{¡¾<$CURRRTARGETNAME>¡¿|250:0}ÔÚ´ò¼Ò½ÙÉá£¬Íæ¼Ò{[<$USERNAME>]|254:0}µÄ{¡¾Í·¿ø¡¿|254:0}ÒâÍâµôÂä´¥·¢±£ÏÕ£¬´óÁ¿{50Áé·û¾í|253:0}µôÂäÔÚµØÍ¼{%m|250:0}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©|251:0}´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
 
 
 
 [@DropUseItems5]
 #IF
 #ACT
-ThrowItem <$MAP> <$X> <$Y> 8 50´óÃ× 10|300 1 1
-SENDMSG 6 ÄúµÄÓÒÊÖ±£ÏÕÒÑÉúÐ§ÓÒÊÖÃ»ÓÐµô£¬µôÂä50´óÃ×*10£¬Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä¡£
-MESSAGEBOX \¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ÏµÍ³ÌáÊ¾£º¡¾ÓÒÊÖµôÂä¡¿\\·Ç³£ÒÅº¶£¬ÄúµÄÓÒÊÖ±£ÏÕÒÑÉúÐ§ÓÒÊÖÃ»ÓÐµô£¬µôÂä50´óÃ×*10\\Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä£¡£¡£¡
+ThrowItem <$MAP> <$X> <$Y> 8 50Áé·û 10|300 1 1
+SENDMSG 6 ÄúµÄÓÒÊÖ±£ÏÕÒÑÉúÐ§ÓÒÊÖÃ»ÓÐµô£¬µôÂä50Áé·û*10£¬Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä¡£
+MESSAGEBOX \¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ÏµÍ³ÌáÊ¾£º¡¾ÓÒÊÖµôÂä¡¿\\·Ç³£ÒÅº¶£¬ÄúµÄÓÒÊÖ±£ÏÕÒÑÉúÐ§ÓÒÊÖÃ»ÓÐµô£¬µôÂä50Áé·û*10\\Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä£¡£¡£¡
 SENDMOVEMSG 0 250 0 100 1 ÌáÊ¾£º¡¾{<$CURRRTARGETNAME>/FCOLOR=249}¡¿ÔÚ´ò¼Ò½ÙÉá£¬´óÁ¿¡¾{<$SCATTERITEMNAME>/FCOLOR=245}¡¿µôÂäÔÚµØÍ¼¡¾{%m/FCOLOR=254}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©/FCOLOR=254}¡¿´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
 
-SENDMSG 0 {µôÂäÌáÊ¾£º|161:0}{¡¾<$CURRRTARGETNAME>¡¿|250:0}ÔÚ´ò¼Ò½ÙÉá£¬Íæ¼Ò{[<$USERNAME>]|254:0}µÄ{¡¾ÊÖïí¡¿|254:0}ÒâÍâµôÂä´¥·¢±£ÏÕ£¬´óÁ¿{50´óÃ×¾í|253:0}µôÂäÔÚµØÍ¼{%m|250:0}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©|251:0}´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
+SENDMSG 0 {µôÂäÌáÊ¾£º|161:0}{¡¾<$CURRRTARGETNAME>¡¿|250:0}ÔÚ´ò¼Ò½ÙÉá£¬Íæ¼Ò{[<$USERNAME>]|254:0}µÄ{¡¾ÊÖïí¡¿|254:0}ÒâÍâµôÂä´¥·¢±£ÏÕ£¬´óÁ¿{50Áé·û¾í|253:0}µôÂäÔÚµØÍ¼{%m|250:0}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©|251:0}´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
 
 
 [@DropUseItems6]
 #IF
 #ACT
-ThrowItem <$MAP> <$X> <$Y> 8 50´óÃ× 10|300 1 1
-SENDMSG 6 ÄúµÄ×óÊÖ±£ÏÕÒÑÉúÐ§×óÊÖÃ»ÓÐµô£¬µôÂä50´óÃ×*10£¬Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä¡£
-MESSAGEBOX \¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ÏµÍ³ÌáÊ¾£º¡¾×óÊÖµôÂä¡¿\\·Ç³£ÒÅº¶£¬ÄúµÄ×óÊÖ±£ÏÕÒÑÉúÐ§×óÊÖÃ»ÓÐµô£¬µôÂä50´óÃ×*10\\Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä£¡£¡£¡
+ThrowItem <$MAP> <$X> <$Y> 8 50Áé·û 10|300 1 1
+SENDMSG 6 ÄúµÄ×óÊÖ±£ÏÕÒÑÉúÐ§×óÊÖÃ»ÓÐµô£¬µôÂä50Áé·û*10£¬Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä¡£
+MESSAGEBOX \¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ÏµÍ³ÌáÊ¾£º¡¾×óÊÖµôÂä¡¿\\·Ç³£ÒÅº¶£¬ÄúµÄ×óÊÖ±£ÏÕÒÑÉúÐ§×óÊÖÃ»ÓÐµô£¬µôÂä50Áé·û*10\\Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä£¡£¡£¡
 SENDMOVEMSG 0 250 0 100 1 ÌáÊ¾£º¡¾{<$CURRRTARGETNAME>/FCOLOR=249}¡¿ÔÚ´ò¼Ò½ÙÉá£¬´óÁ¿¡¾{<$SCATTERITEMNAME>/FCOLOR=245}¡¿µôÂäÔÚµØÍ¼¡¾{%m/FCOLOR=254}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©/FCOLOR=254}¡¿´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
 
-SENDMSG 0 {µôÂäÌáÊ¾£º|161:0}{¡¾<$CURRRTARGETNAME>¡¿|250:0}ÔÚ´ò¼Ò½ÙÉá£¬Íæ¼Ò{[<$USERNAME>]|254:0}µÄ{¡¾ÊÖïí¡¿|254:0}ÒâÍâµôÂä´¥·¢±£ÏÕ£¬´óÁ¿{50´óÃ×¾í|253:0}µôÂäÔÚµØÍ¼{%m|250:0}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©|251:0}´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
+SENDMSG 0 {µôÂäÌáÊ¾£º|161:0}{¡¾<$CURRRTARGETNAME>¡¿|250:0}ÔÚ´ò¼Ò½ÙÉá£¬Íæ¼Ò{[<$USERNAME>]|254:0}µÄ{¡¾ÊÖïí¡¿|254:0}ÒâÍâµôÂä´¥·¢±£ÏÕ£¬´óÁ¿{50Áé·û¾í|253:0}µôÂäÔÚµØÍ¼{%m|250:0}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©|251:0}´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
 
 
 
@@ -560,68 +568,68 @@ SENDMSG 0 {µôÂäÌáÊ¾£º|161:0}{¡¾<$CURRRTARGETNAME>¡¿|250:0}ÔÚ´ò¼Ò½ÙÉá£¬Íæ¼Ò{[<$US
 [@DropUseItems7]
 #IF
 #ACT
-ThrowItem <$MAP> <$X> <$Y> 8 50´óÃ× 10|300 1 1
-SENDMSG 6 ÄúµÄÓÒ½ä±£ÏÕÒÑÉúÐ§ÓÒ½äÃ»ÓÐµô£¬µôÂä50´óÃ×*10£¬Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä¡£
-MESSAGEBOX \¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ÏµÍ³ÌáÊ¾£º¡¾ÓÒ½äµôÂä¡¿\\·Ç³£ÒÅº¶£¬ÄúµÄÓÒ½ä±£ÏÕÒÑÉúÐ§ÓÒ½äÃ»ÓÐµô£¬µôÂä50´óÃ×*10\\Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä£¡£¡£¡
+ThrowItem <$MAP> <$X> <$Y> 8 50Áé·û 10|300 1 1
+SENDMSG 6 ÄúµÄÓÒ½ä±£ÏÕÒÑÉúÐ§ÓÒ½äÃ»ÓÐµô£¬µôÂä50Áé·û*10£¬Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä¡£
+MESSAGEBOX \¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ÏµÍ³ÌáÊ¾£º¡¾ÓÒ½äµôÂä¡¿\\·Ç³£ÒÅº¶£¬ÄúµÄÓÒ½ä±£ÏÕÒÑÉúÐ§ÓÒ½äÃ»ÓÐµô£¬µôÂä50Áé·û*10\\Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä£¡£¡£¡
 SENDMOVEMSG 0 250 0 100 1 ÌáÊ¾£º¡¾{<$CURRRTARGETNAME>/FCOLOR=249}¡¿ÔÚ´ò¼Ò½ÙÉá£¬´óÁ¿¡¾{<$SCATTERITEMNAME>/FCOLOR=245}¡¿µôÂäÔÚµØÍ¼¡¾{%m/FCOLOR=254}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©/FCOLOR=254}¡¿´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
 
-SENDMSG 0 {µôÂäÌáÊ¾£º|161:0}{¡¾<$CURRRTARGETNAME>¡¿|250:0}ÔÚ´ò¼Ò½ÙÉá£¬Íæ¼Ò{[<$USERNAME>]|254:0}µÄ{¡¾½äÖ¸¡¿|254:0}ÒâÍâµôÂä´¥·¢±£ÏÕ£¬´óÁ¿{50´óÃ×¾í|253:0}µôÂäÔÚµØÍ¼{%m|250:0}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©|251:0}´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
+SENDMSG 0 {µôÂäÌáÊ¾£º|161:0}{¡¾<$CURRRTARGETNAME>¡¿|250:0}ÔÚ´ò¼Ò½ÙÉá£¬Íæ¼Ò{[<$USERNAME>]|254:0}µÄ{¡¾½äÖ¸¡¿|254:0}ÒâÍâµôÂä´¥·¢±£ÏÕ£¬´óÁ¿{50Áé·û¾í|253:0}µôÂäÔÚµØÍ¼{%m|250:0}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©|251:0}´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
 
 
 [@DropUseItems8]
 #IF
 #ACT
-ThrowItem <$MAP> <$X> <$Y> 8 50´óÃ× 10|300 1 1
-SENDMSG 6 ÄúµÄ×ó½ä±£ÏÕÒÑÉúÐ§×ó½äÃ»ÓÐµô£¬µôÂä50´óÃ×*10£¬Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä¡£
-MESSAGEBOX \¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ÏµÍ³ÌáÊ¾£º¡¾×ó½äµôÂä¡¿\\·Ç³£ÒÅº¶£¬ÄúµÄ×ó½ä±£ÏÕÒÑÉúÐ§×ó½äÃ»ÓÐµô£¬µôÂä50´óÃ×*10\\Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä£¡£¡£¡
+ThrowItem <$MAP> <$X> <$Y> 8 50Áé·û 10|300 1 1
+SENDMSG 6 ÄúµÄ×ó½ä±£ÏÕÒÑÉúÐ§×ó½äÃ»ÓÐµô£¬µôÂä50Áé·û*10£¬Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä¡£
+MESSAGEBOX \¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ÏµÍ³ÌáÊ¾£º¡¾×ó½äµôÂä¡¿\\·Ç³£ÒÅº¶£¬ÄúµÄ×ó½ä±£ÏÕÒÑÉúÐ§×ó½äÃ»ÓÐµô£¬µôÂä50Áé·û*10\\Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä£¡£¡£¡
 SENDMOVEMSG 0 250 0 100 1 ÌáÊ¾£º¡¾{<$CURRRTARGETNAME>/FCOLOR=249}¡¿ÔÚ´ò¼Ò½ÙÉá£¬´óÁ¿¡¾{<$SCATTERITEMNAME>/FCOLOR=245}¡¿µôÂäÔÚµØÍ¼¡¾{%m/FCOLOR=254}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©/FCOLOR=254}¡¿´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
 
-SENDMSG 0 {µôÂäÌáÊ¾£º|161:0}{¡¾<$CURRRTARGETNAME>¡¿|250:0}ÔÚ´ò¼Ò½ÙÉá£¬Íæ¼Ò{[<$USERNAME>]|254:0}µÄ{¡¾½äÖ¸¡¿|254:0}ÒâÍâµôÂä´¥·¢±£ÏÕ£¬´óÁ¿{50´óÃ×¾í|253:0}µôÂäÔÚµØÍ¼{%m|250:0}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©|251:0}´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
+SENDMSG 0 {µôÂäÌáÊ¾£º|161:0}{¡¾<$CURRRTARGETNAME>¡¿|250:0}ÔÚ´ò¼Ò½ÙÉá£¬Íæ¼Ò{[<$USERNAME>]|254:0}µÄ{¡¾½äÖ¸¡¿|254:0}ÒâÍâµôÂä´¥·¢±£ÏÕ£¬´óÁ¿{50Áé·û¾í|253:0}µôÂäÔÚµØÍ¼{%m|250:0}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©|251:0}´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
 
 
 [@DropUseItems9]
 #IF
 #ACT
-ThrowItem <$MAP> <$X> <$Y> 8 50´óÃ× 10|300 1 1
-SENDMSG 6 ÄúµÄ·ûÎÄ±£ÏÕÒÑÉúÐ§·ûÎÄÃ»ÓÐµô£¬µôÂä50´óÃ×*10£¬Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä¡£
-MESSAGEBOX \¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ÏµÍ³ÌáÊ¾£º¡¾·ûÎÄµôÂä¡¿\\·Ç³£ÒÅº¶£¬ÄúµÄ·ûÎÄ±£ÏÕÒÑÉúÐ§·ûÎÄÃ»ÓÐµô£¬µôÂä50´óÃ×*10\\Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä£¡£¡£¡
+ThrowItem <$MAP> <$X> <$Y> 8 50Áé·û 10|300 1 1
+SENDMSG 6 ÄúµÄ·ûÎÄ±£ÏÕÒÑÉúÐ§·ûÎÄÃ»ÓÐµô£¬µôÂä50Áé·û*10£¬Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä¡£
+MESSAGEBOX \¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ÏµÍ³ÌáÊ¾£º¡¾·ûÎÄµôÂä¡¿\\·Ç³£ÒÅº¶£¬ÄúµÄ·ûÎÄ±£ÏÕÒÑÉúÐ§·ûÎÄÃ»ÓÐµô£¬µôÂä50Áé·û*10\\Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä£¡£¡£¡
 SENDMOVEMSG 0 250 0 100 1 ÌáÊ¾£º¡¾{<$CURRRTARGETNAME>/FCOLOR=249}¡¿ÔÚ´ò¼Ò½ÙÉá£¬´óÁ¿¡¾{<$SCATTERITEMNAME>/FCOLOR=245}¡¿µôÂäÔÚµØÍ¼¡¾{%m/FCOLOR=254}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©/FCOLOR=254}¡¿´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
 
-SENDMSG 0 {µôÂäÌáÊ¾£º|161:0}{¡¾<$CURRRTARGETNAME>¡¿|250:0}ÔÚ´ò¼Ò½ÙÉá£¬Íæ¼Ò{[<$USERNAME>]|254:0}µÄ{¡¾½äÖ¸¡¿|254:0}ÒâÍâµôÂä´¥·¢±£ÏÕ£¬´óÁ¿{50´óÃ×¾í|253:0}µôÂäÔÚµØÍ¼{%m|250:0}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©|251:0}´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
+SENDMSG 0 {µôÂäÌáÊ¾£º|161:0}{¡¾<$CURRRTARGETNAME>¡¿|250:0}ÔÚ´ò¼Ò½ÙÉá£¬Íæ¼Ò{[<$USERNAME>]|254:0}µÄ{¡¾½äÖ¸¡¿|254:0}ÒâÍâµôÂä´¥·¢±£ÏÕ£¬´óÁ¿{50Áé·û¾í|253:0}µôÂäÔÚµØÍ¼{%m|250:0}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©|251:0}´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
 
 
 [@DropUseItems10]
 #IF
 #ACT
-ThrowItem <$MAP> <$X> <$Y> 8 50´óÃ× 10|300 1 1
-SENDMSG 6 ÄúµÄÑü´ø±£ÏÕÒÑÉúÐ§Ñü´øÃ»ÓÐµô£¬µôÂä50´óÃ×*10£¬Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä¡£
-MESSAGEBOX \¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ÏµÍ³ÌáÊ¾£º¡¾Ñü´øµôÂä¡¿\\·Ç³£ÒÅº¶£¬ÄúµÄÑü´ø±£ÏÕÒÑÉúÐ§Ñü´øÃ»ÓÐµô£¬µôÂä50´óÃ×*10\\Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä£¡£¡£¡
+ThrowItem <$MAP> <$X> <$Y> 8 50Áé·û 10|300 1 1
+SENDMSG 6 ÄúµÄÑü´ø±£ÏÕÒÑÉúÐ§Ñü´øÃ»ÓÐµô£¬µôÂä50Áé·û*10£¬Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä¡£
+MESSAGEBOX \¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ÏµÍ³ÌáÊ¾£º¡¾Ñü´øµôÂä¡¿\\·Ç³£ÒÅº¶£¬ÄúµÄÑü´ø±£ÏÕÒÑÉúÐ§Ñü´øÃ»ÓÐµô£¬µôÂä50Áé·û*10\\Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä£¡£¡£¡
 SENDMOVEMSG 0 250 0 100 1 ÌáÊ¾£º¡¾{<$CURRRTARGETNAME>/FCOLOR=249}¡¿ÔÚ´ò¼Ò½ÙÉá£¬´óÁ¿¡¾{<$SCATTERITEMNAME>/FCOLOR=245}¡¿µôÂäÔÚµØÍ¼¡¾{%m/FCOLOR=254}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©/FCOLOR=254}¡¿´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
 
-SENDMSG 0 {µôÂäÌáÊ¾£º|161:0}{¡¾<$CURRRTARGETNAME>¡¿|250:0}ÔÚ´ò¼Ò½ÙÉá£¬Íæ¼Ò{[<$USERNAME>]|254:0}µÄ{¡¾Ñü´ø¡¿|254:0}ÒâÍâµôÂä´¥·¢±£ÏÕ£¬´óÁ¿{50´óÃ×¾í|253:0}µôÂäÔÚµØÍ¼{%m|250:0}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©|251:0}´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
+SENDMSG 0 {µôÂäÌáÊ¾£º|161:0}{¡¾<$CURRRTARGETNAME>¡¿|250:0}ÔÚ´ò¼Ò½ÙÉá£¬Íæ¼Ò{[<$USERNAME>]|254:0}µÄ{¡¾Ñü´ø¡¿|254:0}ÒâÍâµôÂä´¥·¢±£ÏÕ£¬´óÁ¿{50Áé·û¾í|253:0}µôÂäÔÚµØÍ¼{%m|250:0}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©|251:0}´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
 
 
 
 [@DropUseItems11]
 #IF
 #ACT
-ThrowItem <$MAP> <$X> <$Y> 8 50´óÃ× 10|300 1 1
-SENDMSG 6 ÄúµÄÑ¥×Ó±£ÏÕÒÑÉúÐ§Ñ¥×ÓÃ»ÓÐµô£¬µôÂä50´óÃ×*10£¬Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä¡£
-MESSAGEBOX \¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ÏµÍ³ÌáÊ¾£º¡¾Ñ¥×ÓµôÂä¡¿\\·Ç³£ÒÅº¶£¬ÄúµÄÑ¥×Ó±£ÏÕÒÑÉúÐ§Ñ¥×ÓÃ»ÓÐµô£¬µôÂä50´óÃ×*10\\Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä£¡£¡£¡
+ThrowItem <$MAP> <$X> <$Y> 8 50Áé·û 10|300 1 1
+SENDMSG 6 ÄúµÄÑ¥×Ó±£ÏÕÒÑÉúÐ§Ñ¥×ÓÃ»ÓÐµô£¬µôÂä50Áé·û*10£¬Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä¡£
+MESSAGEBOX \¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ÏµÍ³ÌáÊ¾£º¡¾Ñ¥×ÓµôÂä¡¿\\·Ç³£ÒÅº¶£¬ÄúµÄÑ¥×Ó±£ÏÕÒÑÉúÐ§Ñ¥×ÓÃ»ÓÐµô£¬µôÂä50Áé·û*10\\Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä£¡£¡£¡
 SENDMOVEMSG 0 250 0 100 1 ÌáÊ¾£º¡¾{<$CURRRTARGETNAME>/FCOLOR=249}¡¿ÔÚ´ò¼Ò½ÙÉá£¬´óÁ¿¡¾{<$SCATTERITEMNAME>/FCOLOR=245}¡¿µôÂäÔÚµØÍ¼¡¾{%m/FCOLOR=254}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©/FCOLOR=254}¡¿´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
 
 
-SENDMSG 0 {µôÂäÌáÊ¾£º|161:0}{¡¾<$CURRRTARGETNAME>¡¿|250:0}ÔÚ´ò¼Ò½ÙÉá£¬Íæ¼Ò{[<$USERNAME>]|254:0}µÄ{¡¾Ñ¥×Ó¡¿|254:0}ÒâÍâµôÂä´¥·¢±£ÏÕ£¬´óÁ¿{50´óÃ×¾í|253:0}µôÂäÔÚµØÍ¼{%m|250:0}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©|251:0}´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
+SENDMSG 0 {µôÂäÌáÊ¾£º|161:0}{¡¾<$CURRRTARGETNAME>¡¿|250:0}ÔÚ´ò¼Ò½ÙÉá£¬Íæ¼Ò{[<$USERNAME>]|254:0}µÄ{¡¾Ñ¥×Ó¡¿|254:0}ÒâÍâµôÂä´¥·¢±£ÏÕ£¬´óÁ¿{50Áé·û¾í|253:0}µôÂäÔÚµØÍ¼{%m|250:0}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©|251:0}´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
 
 
 [@DropUseItems12]
 #IF
 #ACT
-ThrowItem <$MAP> <$X> <$Y> 8 50´óÃ× 10|300 1 1
-SENDMSG 6 ÄúµÄÑªÊ¯±£ÏÕÒÑÉúÐ§£¬ÑªÊ¯Ã»ÓÐµô£¬µôÂä50´óÃ×*10£¬Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä¡£
-MESSAGEBOX \¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ÏµÍ³ÌáÊ¾£º¡¾ÑªÊ¯µôÂä¡¿\\·Ç³£ÒÅº¶£¬ÄúµÄÑªÊ¯±£ÏÕÒÑÉúÐ§ÑªÊ¯Ã»ÓÐµô£¬µôÂä50´óÃ×*10\\Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä£¡£¡£¡
+ThrowItem <$MAP> <$X> <$Y> 8 50Áé·û 10|300 1 1
+SENDMSG 6 ÄúµÄÑªÊ¯±£ÏÕÒÑÉúÐ§£¬ÑªÊ¯Ã»ÓÐµô£¬µôÂä50Áé·û*10£¬Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä¡£
+MESSAGEBOX \¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ÏµÍ³ÌáÊ¾£º¡¾ÑªÊ¯µôÂä¡¿\\·Ç³£ÒÅº¶£¬ÄúµÄÑªÊ¯±£ÏÕÒÑÉúÐ§ÑªÊ¯Ã»ÓÐµô£¬µôÂä50Áé·û*10\\Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä£¡£¡£¡
 SENDMOVEMSG 0 250 0 100 1 ÌáÊ¾£º¡¾{<$CURRRTARGETNAME>/FCOLOR=249}¡¿ÔÚ´ò¼Ò½ÙÉá£¬´óÁ¿¡¾{<$SCATTERITEMNAME>/FCOLOR=245}¡¿µôÂäÔÚµØÍ¼¡¾{%m/FCOLOR=254}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©/FCOLOR=254}¡¿´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
-SENDMSG 0 {µôÂäÌáÊ¾£º|161:0}{¡¾<$CURRRTARGETNAME>¡¿|250:0}ÔÚ´ò¼Ò½ÙÉá£¬Íæ¼Ò{[<$USERNAME>]|254:0}µÄ{¡¾ÑªÊ¯¡¿|254:0}ÒâÍâµôÂä´¥·¢±£ÏÕ£¬´óÁ¿{50´óÃ×¾í|253:0}µôÂäÔÚµØÍ¼{%m|250:0}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©|251:0}´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
+SENDMSG 0 {µôÂäÌáÊ¾£º|161:0}{¡¾<$CURRRTARGETNAME>¡¿|250:0}ÔÚ´ò¼Ò½ÙÉá£¬Íæ¼Ò{[<$USERNAME>]|254:0}µÄ{¡¾ÑªÊ¯¡¿|254:0}ÒâÍâµôÂä´¥·¢±£ÏÕ£¬´óÁ¿{50Áé·û¾í|253:0}µôÂäÔÚµØÍ¼{%m|250:0}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©|251:0}´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
 
 
 
@@ -629,65 +637,65 @@ SENDMSG 0 {µôÂäÌáÊ¾£º|161:0}{¡¾<$CURRRTARGETNAME>¡¿|250:0}ÔÚ´ò¼Ò½ÙÉá£¬Íæ¼Ò{[<$US
 [@DropUseItems13]
 #IF
 #ACT
-ThrowItem <$MAP> <$X> <$Y> 8 50´óÃ× 10|300 1 1
-SENDMSG 6 ÄúµÄ¶·óÒ±£ÏÕÒÑÉúÐ§¶·óÒÃ»ÓÐµô£¬µôÂä50´óÃ×*10£¬Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä¡£
-MESSAGEBOX \¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ÏµÍ³ÌáÊ¾£º¡¾¶·óÒµôÂä¡¿\\·Ç³£ÒÅº¶£¬ÄúµÄ¶·óÒ±£ÏÕÒÑÉúÐ§¶·óÒÃ»ÓÐµô£¬µôÂä50´óÃ×*10\\Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä£¡£¡£¡
+ThrowItem <$MAP> <$X> <$Y> 8 50Áé·û 10|300 1 1
+SENDMSG 6 ÄúµÄ¶·óÒ±£ÏÕÒÑÉúÐ§¶·óÒÃ»ÓÐµô£¬µôÂä50Áé·û*10£¬Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä¡£
+MESSAGEBOX \¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ÏµÍ³ÌáÊ¾£º¡¾¶·óÒµôÂä¡¿\\·Ç³£ÒÅº¶£¬ÄúµÄ¶·óÒ±£ÏÕÒÑÉúÐ§¶·óÒÃ»ÓÐµô£¬µôÂä50Áé·û*10\\Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä£¡£¡£¡
 SENDMOVEMSG 0 250 0 100 1 ÌáÊ¾£º¡¾{<$CURRRTARGETNAME>/FCOLOR=249}¡¿ÔÚ´ò¼Ò½ÙÉá£¬´óÁ¿¡¾{<$SCATTERITEMNAME>/FCOLOR=245}¡¿µôÂäÔÚµØÍ¼¡¾{%m/FCOLOR=254}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©/FCOLOR=254}¡¿´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
 
-SENDMSG 0 {µôÂäÌáÊ¾£º|161:0}{¡¾<$CURRRTARGETNAME>¡¿|250:0}ÔÚ´ò¼Ò½ÙÉá£¬Íæ¼Ò{[<$USERNAME>]|254:0}µÄ{¡¾¶·óÒ¡¿|254:0}ÒâÍâµôÂä´¥·¢±£ÏÕ£¬´óÁ¿{50´óÃ×¾í|253:0}µôÂäÔÚµØÍ¼{%m|250:0}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©|251:0}´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
+SENDMSG 0 {µôÂäÌáÊ¾£º|161:0}{¡¾<$CURRRTARGETNAME>¡¿|250:0}ÔÚ´ò¼Ò½ÙÉá£¬Íæ¼Ò{[<$USERNAME>]|254:0}µÄ{¡¾¶·óÒ¡¿|254:0}ÒâÍâµôÂä´¥·¢±£ÏÕ£¬´óÁ¿{50Áé·û¾í|253:0}µôÂäÔÚµØÍ¼{%m|250:0}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©|251:0}´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
 
 
 [@DropUseItems14]
 #IF
 #ACT
-ThrowItem <$MAP> <$X> <$Y> 8 50´óÃ× 10|300 1 1
-SENDMSG 6 ÄúµÄ¾ü¹Ä±£ÏÕÒÑÉúÐ§¾ü¹ÄÃ»ÓÐµô£¬µôÂä50´óÃ×*10£¬Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä¡£
-MESSAGEBOX \¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ÏµÍ³ÌáÊ¾£º¡¾¾ü¹ÄµôÂä¡¿\\·Ç³£ÒÅº¶£¬ÄúµÄ¾ü¹Ä±£ÏÕÒÑÉúÐ§¾ü¹ÄÃ»ÓÐµô£¬µôÂä50´óÃ×*10\\Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä£¡£¡£¡
+ThrowItem <$MAP> <$X> <$Y> 8 50Áé·û 10|300 1 1
+SENDMSG 6 ÄúµÄ¾ü¹Ä±£ÏÕÒÑÉúÐ§¾ü¹ÄÃ»ÓÐµô£¬µôÂä50Áé·û*10£¬Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä¡£
+MESSAGEBOX \¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ÏµÍ³ÌáÊ¾£º¡¾¾ü¹ÄµôÂä¡¿\\·Ç³£ÒÅº¶£¬ÄúµÄ¾ü¹Ä±£ÏÕÒÑÉúÐ§¾ü¹ÄÃ»ÓÐµô£¬µôÂä50Áé·û*10\\Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä£¡£¡£¡
 SENDMOVEMSG 0 250 0 100 1 ÌáÊ¾£º¡¾{<$CURRRTARGETNAME>/FCOLOR=249}¡¿ÔÚ´ò¼Ò½ÙÉá£¬´óÁ¿¡¾{<$SCATTERITEMNAME>/FCOLOR=245}¡¿µôÂäÔÚµØÍ¼¡¾{%m/FCOLOR=254}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©/FCOLOR=254}¡¿´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
-SENDMSG 0 {µôÂäÌáÊ¾£º|161:0}{¡¾<$CURRRTARGETNAME>¡¿|250:0}ÔÚ´ò¼Ò½ÙÉá£¬Íæ¼Ò{[<$USERNAME>]|254:0}µÄ{¡¾¾ü¹Ä¡¿|254:0}ÒâÍâµôÂä´¥·¢±£ÏÕ£¬´óÁ¿{50´óÃ×¾í|253:0}µôÂäÔÚµØÍ¼{%m|250:0}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©|251:0}´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
+SENDMSG 0 {µôÂäÌáÊ¾£º|161:0}{¡¾<$CURRRTARGETNAME>¡¿|250:0}ÔÚ´ò¼Ò½ÙÉá£¬Íæ¼Ò{[<$USERNAME>]|254:0}µÄ{¡¾¾ü¹Ä¡¿|254:0}ÒâÍâµôÂä´¥·¢±£ÏÕ£¬´óÁ¿{50Áé·û¾í|253:0}µôÂäÔÚµØÍ¼{%m|250:0}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©|251:0}´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
 
 
 [@DropUseItems15]
 #IF
 #ACT
-ThrowItem <$MAP> <$X> <$Y> 8 50´óÃ× 10|300 1 1
-SENDMSG 6 ÄúµÄÂíÅÆ±£ÏÕÒÑÉúÐ§ÂíÅÆÃ»ÓÐµô£¬µôÂä50´óÃ×*10£¬Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä¡£
-MESSAGEBOX \¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ÏµÍ³ÌáÊ¾£º¡¾ÂíÅÆµôÂä¡¿\\·Ç³£ÒÅº¶£¬ÄúµÄÂíÅÆ±£ÏÕÒÑÉúÐ§ÂíÅÆÃ»ÓÐµô£¬µôÂä50´óÃ×*10\\Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä£¡£¡£¡
+ThrowItem <$MAP> <$X> <$Y> 8 50Áé·û 10|300 1 1
+SENDMSG 6 ÄúµÄÂíÅÆ±£ÏÕÒÑÉúÐ§ÂíÅÆÃ»ÓÐµô£¬µôÂä50Áé·û*10£¬Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä¡£
+MESSAGEBOX \¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ÏµÍ³ÌáÊ¾£º¡¾ÂíÅÆµôÂä¡¿\\·Ç³£ÒÅº¶£¬ÄúµÄÂíÅÆ±£ÏÕÒÑÉúÐ§ÂíÅÆÃ»ÓÐµô£¬µôÂä50Áé·û*10\\Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä£¡£¡£¡
 SENDMOVEMSG 0 250 0 100 1 ÌáÊ¾£º¡¾{<$CURRRTARGETNAME>/FCOLOR=249}¡¿ÔÚ´ò¼Ò½ÙÉá£¬´óÁ¿¡¾{<$SCATTERITEMNAME>/FCOLOR=245}¡¿µôÂäÔÚµØÍ¼¡¾{%m/FCOLOR=254}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©/FCOLOR=254}¡¿´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
-SENDMSG 0 {µôÂäÌáÊ¾£º|161:0}{¡¾<$CURRRTARGETNAME>¡¿|250:0}ÔÚ´ò¼Ò½ÙÉá£¬Íæ¼Ò{[<$USERNAME>]|254:0}µÄ{¡¾ÂíÅÆ¡¿|254:0}ÒâÍâµôÂä´¥·¢±£ÏÕ£¬´óÁ¿{50´óÃ×¾í|253:0}µôÂäÔÚµØÍ¼{%m|250:0}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©|251:0}´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
+SENDMSG 0 {µôÂäÌáÊ¾£º|161:0}{¡¾<$CURRRTARGETNAME>¡¿|250:0}ÔÚ´ò¼Ò½ÙÉá£¬Íæ¼Ò{[<$USERNAME>]|254:0}µÄ{¡¾ÂíÅÆ¡¿|254:0}ÒâÍâµôÂä´¥·¢±£ÏÕ£¬´óÁ¿{50Áé·û¾í|253:0}µôÂäÔÚµØÍ¼{%m|250:0}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©|251:0}´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
 
 
 
 [@DropUseItems16]
 #IF
 #ACT
-ThrowItem <$MAP> <$X> <$Y> 8 50´óÃ× 10|300 1 1
-SENDMSG 6 ÄúµÄ¶ÜÅÆ±£ÏÕÒÑÉúÐ§¶ÜÅÆÃ»ÓÐµô£¬µôÂä50´óÃ×*10£¬Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä¡£
-MESSAGEBOX \¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ÏµÍ³ÌáÊ¾£º¡¾¶ÜÅÆµôÂä¡¿\\·Ç³£ÒÅº¶£¬ÄúµÄ¶ÜÅÆ±£ÏÕÒÑÉúÐ§¶ÜÅÆÃ»ÓÐµô£¬µôÂä50´óÃ×*10\\Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä£¡£¡£¡
+ThrowItem <$MAP> <$X> <$Y> 8 50Áé·û 10|300 1 1
+SENDMSG 6 ÄúµÄ¶ÜÅÆ±£ÏÕÒÑÉúÐ§¶ÜÅÆÃ»ÓÐµô£¬µôÂä50Áé·û*10£¬Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä¡£
+MESSAGEBOX \¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ÏµÍ³ÌáÊ¾£º¡¾¶ÜÅÆµôÂä¡¿\\·Ç³£ÒÅº¶£¬ÄúµÄ¶ÜÅÆ±£ÏÕÒÑÉúÐ§¶ÜÅÆÃ»ÓÐµô£¬µôÂä50Áé·û*10\\Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä£¡£¡£¡
 SENDMOVEMSG 0 250 0 100 1 ÌáÊ¾£º¡¾{<$CURRRTARGETNAME>/FCOLOR=249}¡¿ÔÚ´ò¼Ò½ÙÉá£¬´óÁ¿¡¾{<$SCATTERITEMNAME>/FCOLOR=245}¡¿µôÂäÔÚµØÍ¼¡¾{%m/FCOLOR=254}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©/FCOLOR=254}¡¿´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
 
-SENDMSG 0 {µôÂäÌáÊ¾£º|161:0}{¡¾<$CURRRTARGETNAME>¡¿|250:0}ÔÚ´ò¼Ò½ÙÉá£¬Íæ¼Ò{[<$USERNAME>]|254:0}µÄ{¡¾¶ÜÅÆ¡¿|254:0}ÒâÍâµôÂä´¥·¢±£ÏÕ£¬´óÁ¿{50´óÃ×¾í|253:0}µôÂäÔÚµØÍ¼{%m|250:0}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©|251:0}´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
+SENDMSG 0 {µôÂäÌáÊ¾£º|161:0}{¡¾<$CURRRTARGETNAME>¡¿|250:0}ÔÚ´ò¼Ò½ÙÉá£¬Íæ¼Ò{[<$USERNAME>]|254:0}µÄ{¡¾¶ÜÅÆ¡¿|254:0}ÒâÍâµôÂä´¥·¢±£ÏÕ£¬´óÁ¿{50Áé·û¾í|253:0}µôÂäÔÚµØÍ¼{%m|250:0}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©|251:0}´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
 
 
 [@DropUseItems17]
 #IF
 #ACT
-ThrowItem <$MAP> <$X> <$Y> 8 50´óÃ× 10|300 1 1
-SENDMSG 6 ÄúµÄÊ±×°±£ÏÕÒÑÉúÐ§Ê±×°Ã»ÓÐµô£¬µôÂä50´óÃ×*10£¬Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä¡£
-MESSAGEBOX \¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ÏµÍ³ÌáÊ¾£º¡¾Ê±×°µôÂä¡¿\\·Ç³£ÒÅº¶£¬ÄúµÄÊ±×°±£ÏÕÒÑÉúÐ§Ê±×°Ã»ÓÐµô£¬µôÂä50´óÃ×*10\\Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä£¡£¡£¡
+ThrowItem <$MAP> <$X> <$Y> 8 50Áé·û 10|300 1 1
+SENDMSG 6 ÄúµÄÊ±×°±£ÏÕÒÑÉúÐ§Ê±×°Ã»ÓÐµô£¬µôÂä50Áé·û*10£¬Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä¡£
+MESSAGEBOX \¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ÏµÍ³ÌáÊ¾£º¡¾Ê±×°µôÂä¡¿\\·Ç³£ÒÅº¶£¬ÄúµÄÊ±×°±£ÏÕÒÑÉúÐ§Ê±×°Ã»ÓÐµô£¬µôÂä50Áé·û*10\\Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä£¡£¡£¡
 SENDMOVEMSG 0 250 0 100 1 ÌáÊ¾£º¡¾{<$CURRRTARGETNAME>/FCOLOR=249}¡¿ÔÚ´ò¼Ò½ÙÉá£¬´óÁ¿¡¾{<$SCATTERITEMNAME>/FCOLOR=245}¡¿µôÂäÔÚµØÍ¼¡¾{%m/FCOLOR=254}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©/FCOLOR=254}¡¿´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
-SENDMSG 0 {µôÂäÌáÊ¾£º|161:0}{¡¾<$CURRRTARGETNAME>¡¿|250:0}ÔÚ´ò¼Ò½ÙÉá£¬Íæ¼Ò{[<$USERNAME>]|254:0}µÄ{¡¾Ê±×°¡¿|254:0}ÒâÍâµôÂä´¥·¢±£ÏÕ£¬´óÁ¿{50´óÃ×¾í|253:0}µôÂäÔÚµØÍ¼{%m|250:0}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©|251:0}´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
+SENDMSG 0 {µôÂäÌáÊ¾£º|161:0}{¡¾<$CURRRTARGETNAME>¡¿|250:0}ÔÚ´ò¼Ò½ÙÉá£¬Íæ¼Ò{[<$USERNAME>]|254:0}µÄ{¡¾Ê±×°¡¿|254:0}ÒâÍâµôÂä´¥·¢±£ÏÕ£¬´óÁ¿{50Áé·û¾í|253:0}µôÂäÔÚµØÍ¼{%m|250:0}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©|251:0}´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
 
 
 [@DropUseItems18]
 #IF
 #ACT
-ThrowItem <$MAP> <$X> <$Y> 8 50´óÃ× 10|300 1 1
-SENDMSG 6 ÄúµÄÊ±×°ÎäÆ÷±£ÏÕÒÑÉúÐ§Ê±×°ÎäÆ÷Ã»ÓÐµô£¬µôÂä50´óÃ×*10£¬Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä¡£
-MESSAGEBOX \¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ÏµÍ³ÌáÊ¾£º¡¾Ê±×°ÎäÆ÷µôÂä¡¿\\·Ç³£ÒÅº¶£¬ÄúµÄÊ±×°ÎäÆ÷±£ÏÕÒÑÉúÐ§Ê±×°ÎäÆ÷Ã»ÓÐµô£¬µôÂä50´óÃ×*10\\Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä£¡£¡£¡
+ThrowItem <$MAP> <$X> <$Y> 8 50Áé·û 10|300 1 1
+SENDMSG 6 ÄúµÄÊ±×°ÎäÆ÷±£ÏÕÒÑÉúÐ§Ê±×°ÎäÆ÷Ã»ÓÐµô£¬µôÂä50Áé·û*10£¬Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä¡£
+MESSAGEBOX \¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ÏµÍ³ÌáÊ¾£º¡¾Ê±×°ÎäÆ÷µôÂä¡¿\\·Ç³£ÒÅº¶£¬ÄúµÄÊ±×°ÎäÆ÷±£ÏÕÒÑÉúÐ§Ê±×°ÎäÆ÷Ã»ÓÐµô£¬µôÂä50Áé·û*10\\Í¶±£ÒÑ¾­ÏûÊ§£¬Çë¸Ï½ôÈ¥Í¶±££¬±£ÏÕ×°±¸²»µôÂä£¡£¡£¡
 SENDMOVEMSG 0 250 0 100 1 ÌáÊ¾£º¡¾{<$CURRRTARGETNAME>/FCOLOR=249}¡¿ÔÚ´ò¼Ò½ÙÉá£¬´óÁ¿¡¾{<$SCATTERITEMNAME>/FCOLOR=245}¡¿µôÂäÔÚµØÍ¼¡¾{%m/FCOLOR=254}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©/FCOLOR=254}¡¿´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
 
-SENDMSG 0 {µôÂäÌáÊ¾£º|161:0}{¡¾<$CURRRTARGETNAME>¡¿|250:0}ÔÚ´ò¼Ò½ÙÉá£¬Íæ¼Ò{[<$USERNAME>]|254:0}µÄ{¡¾Ê±×°¡¿|254:0}ÒâÍâµôÂä´¥·¢±£ÏÕ£¬´óÁ¿{50´óÃ×¾í|253:0}µôÂäÔÚµØÍ¼{%m|250:0}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©|251:0}´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
+SENDMSG 0 {µôÂäÌáÊ¾£º|161:0}{¡¾<$CURRRTARGETNAME>¡¿|250:0}ÔÚ´ò¼Ò½ÙÉá£¬Íæ¼Ò{[<$USERNAME>]|254:0}µÄ{¡¾Ê±×°¡¿|254:0}ÒâÍâµôÂä´¥·¢±£ÏÕ£¬´óÁ¿{50Áé·û¾í|253:0}µôÂäÔÚµØÍ¼{%m|250:0}{(<$SCATTERITEMX>:<$SCATTERITEMY>£©|251:0}´¦£¬´ó¼Ò¸Ï½ôÈ¥ÇÀ£¡
 
 
 
@@ -729,7 +737,7 @@ LARGE <$SUCKDAMAGEPOINT> <$STR(N52)>
 NOT CHECKCURRTARGETRACE = 0
 CHECKUSEITEM 16
 #ACT
-HookStruck 1 50 51 52
+; HookStruck 1 50 51 52
 MOV N$¼õÉËÎüÊÕÖµ <$STR(N52)>
 CalcPer <$STR(N$¼õÉËÎüÊÕÖµ)> <$STR(N$Ã¿´ÎÎüÊÕ)> N$¼õÉËÎüÊÕÖµA
 DEC N52 <$STR(N$¼õÉËÎüÊÕÖµA)>
@@ -779,9 +787,9 @@ SENDMOVEMSG 0 249 0 0 1 ¹§Ï²¡¾{<$USERNAME>/FCOLOR=251}¡¿ÔÚ{<$MapTitle>:<$X>.<$Y>
 messagebox ¹§Ï²ÄúÔÚ<$MapTitle>:»÷É±[<$KILLMONNAME>]£¬Îª±¾·þµÚÒ»Î»»÷É±´ËBOSSµÄÍæ¼Ò\\\»ñµÃ½±Àø£º<$STR(S$½±ÀøÀàÐÍ)>[<$STR(S$Ê×É±½±Àø)>]
 
 #IF
-EQUAL S$½±ÀøÀàÐÍ ´óÃ×
+EQUAL S$½±ÀøÀàÐÍ Áé·û
 #ACT
-GAMEPOINT + <$STR(S$Ê×É±½±Àø)>
+MONEY Áé·û + <$STR(S$Ê×É±½±Àø)>
 SENDMOVEMSG 0 249 0 0 1 ¹§Ï²¡¾{<$USERNAME>/FCOLOR=251}¡¿ÔÚ{<$MapTitle>:<$X>.<$Y>/FCOLOR=253}»÷É±[{<$KILLMONNAME>/FCOLOR=250}]£¬Îª±¾·þµÚÒ»Î»»÷É±´ËBOSSµÄÍæ¼Ò£¬»ñµÃ<$STR(S$½±ÀøÀàÐÍ)>[{<$STR(S$Ê×É±½±Àø)>/FCOLOR=254}]£¡£¡£¡
 SCENEVIBRATION 0 1 1
 messagebox ¹§Ï²ÄúÔÚ<$MapTitle>:»÷É±[<$KILLMONNAME>]£¬Îª±¾·þµÚÒ»Î»»÷É±´ËBOSSµÄÍæ¼Ò\\\»ñµÃ½±Àø£º<$STR(S$½±ÀøÀàÐÍ)>[<$STR(S$Ê×É±½±Àø)>]
@@ -813,14 +821,14 @@ ThrowItem jqpd  23 26  10 50000Ôª±¦ 5|220 1
 ThrowItem jqpd  23 26  10 100000Ôª±¦ 3|220 1
 ThrowItem jqpd  23 26  10 200000Ôª±¦ 3|220 1
 ThrowItem jqpd  23 26  10 500000Ôª±¦ 1|220 1
-ThrowItem jqpd  23 26  10 10´óÃ× 3|220 1
-ThrowItem jqpd  23 26  10 20´óÃ× 2|220 1
-ThrowItem jqpd  23 26  10 100´óÃ× 1|220 1
-SENDMSG 0 ¹§Ï²<$USERNAME>·Ç³£â«ËöµÄÉ±ËÀ<$KILLMONNAME>£¬´óÁ¿Ôª±¦ºÍ´óÃ×µôÂäÔÚ¡ú¼¤ÇéÅÝµã
-SENDMSG 0 ¹§Ï²<$USERNAME>·Ç³£â«ËöµÄÉ±ËÀ<$KILLMONNAME>£¬´óÁ¿Ôª±¦ºÍ´óÃ×µôÂäÔÚ¡ú¼¤ÇéÅÝµã
-SENDMSG 0 ¹§Ï²<$USERNAME>·Ç³£â«ËöµÄÉ±ËÀ<$KILLMONNAME>£¬´óÁ¿Ôª±¦ºÍ´óÃ×µôÂäÔÚ¡ú¼¤ÇéÅÝµã
-SENDMSG 0 ¹§Ï²<$USERNAME>·Ç³£â«ËöµÄÉ±ËÀ<$KILLMONNAME>£¬´óÁ¿Ôª±¦ºÍ´óÃ×µôÂäÔÚ¡ú¼¤ÇéÅÝµã
-SENDMSG 0 ¹§Ï²<$USERNAME>·Ç³£â«ËöµÄÉ±ËÀ<$KILLMONNAME>£¬´óÁ¿Ôª±¦ºÍ´óÃ×µôÂäÔÚ¡ú¼¤ÇéÅÝµã
+ThrowItem jqpd  23 26  10 10Áé·û 3|220 1
+ThrowItem jqpd  23 26  10 20Áé·û 2|220 1
+ThrowItem jqpd  23 26  10 100Áé·û 1|220 1
+SENDMSG 0 ¹§Ï²<$USERNAME>·Ç³£â«ËöµÄÉ±ËÀ<$KILLMONNAME>£¬´óÁ¿Ôª±¦ºÍÁé·ûµôÂäÔÚ¡ú¼¤ÇéÅÝµã
+SENDMSG 0 ¹§Ï²<$USERNAME>·Ç³£â«ËöµÄÉ±ËÀ<$KILLMONNAME>£¬´óÁ¿Ôª±¦ºÍÁé·ûµôÂäÔÚ¡ú¼¤ÇéÅÝµã
+SENDMSG 0 ¹§Ï²<$USERNAME>·Ç³£â«ËöµÄÉ±ËÀ<$KILLMONNAME>£¬´óÁ¿Ôª±¦ºÍÁé·ûµôÂäÔÚ¡ú¼¤ÇéÅÝµã
+SENDMSG 0 ¹§Ï²<$USERNAME>·Ç³£â«ËöµÄÉ±ËÀ<$KILLMONNAME>£¬´óÁ¿Ôª±¦ºÍÁé·ûµôÂäÔÚ¡ú¼¤ÇéÅÝµã
+SENDMSG 0 ¹§Ï²<$USERNAME>·Ç³£â«ËöµÄÉ±ËÀ<$KILLMONNAME>£¬´óÁ¿Ôª±¦ºÍÁé·ûµôÂäÔÚ¡ú¼¤ÇéÅÝµã
 Gmexecute ¿ªÊ¼ÌáÎÊ @ËÍ²ÆËÍ±¦
 
 
@@ -1543,88 +1551,88 @@ Break
 [@StdModeFunc290]
 #IF
 #ACT
-GamePoint + 1
-SendCenterMsg 253 0 ¡¾ÌáÊ¾¡¿£º¹§Ï²ÄúµÄ´óÃ×Ôö¼Ó+1£¬Äúµ±Ç°µÄ´óÃ×ÊýÁ¿Îª£º(<$GamePoint>) 0 1
+MONEY Áé·û + 1
+SendCenterMsg 253 0 ¡¾ÌáÊ¾¡¿£º¹§Ï²ÄúµÄÁé·ûÔö¼Ó+1£¬Äúµ±Ç°µÄÁé·ûÊýÁ¿Îª£º(<$MONEY(Áé·û)>) 0 1
 Break
 
 
 [@StdModeFunc291]
 #IF
 #ACT
-GamePoint + 2
-SendCenterMsg 253 0 ¡¾ÌáÊ¾¡¿£º¹§Ï²ÄúµÄ´óÃ×Ôö¼Ó+2£¬Äúµ±Ç°µÄ´óÃ×ÊýÁ¿Îª£º(<$GamePoint>) 0 1
+MONEY Áé·û + 2
+SendCenterMsg 253 0 ¡¾ÌáÊ¾¡¿£º¹§Ï²ÄúµÄÁé·ûÔö¼Ó+2£¬Äúµ±Ç°µÄÁé·ûÊýÁ¿Îª£º(<$MONEY(Áé·û)>) 0 1
 Break
 
 
 [@StdModeFunc292]
 #IF
 #ACT
-GamePoint + 5
-SendCenterMsg 253 0 ¡¾ÌáÊ¾¡¿£º¹§Ï²ÄúµÄ´óÃ×Ôö¼Ó+5£¬Äúµ±Ç°µÄ´óÃ×ÊýÁ¿Îª£º(<$GamePoint>) 0 1
+MONEY Áé·û + 5
+SendCenterMsg 253 0 ¡¾ÌáÊ¾¡¿£º¹§Ï²ÄúµÄÁé·ûÔö¼Ó+5£¬Äúµ±Ç°µÄÁé·ûÊýÁ¿Îª£º(<$MONEY(Áé·û)>) 0 1
 Break
 
 [@StdModeFunc293]
 #IF
 #ACT
-GamePoint + 10
-SendCenterMsg 253 0 ¡¾ÌáÊ¾¡¿£º¹§Ï²ÄúµÄ´óÃ×Ôö¼Ó+10£¬Äúµ±Ç°µÄ´óÃ×ÊýÁ¿Îª£º(<$GamePoint>) 0 1
+MONEY Áé·û + 10
+SendCenterMsg 253 0 ¡¾ÌáÊ¾¡¿£º¹§Ï²ÄúµÄÁé·ûÔö¼Ó+10£¬Äúµ±Ç°µÄÁé·ûÊýÁ¿Îª£º(<$MONEY(Áé·û)>) 0 1
 Break
 
 [@StdModeFunc294]
 #IF
 #ACT
-GamePoint + 20
-SendCenterMsg 253 0 ¡¾ÌáÊ¾¡¿£º¹§Ï²ÄúµÄ´óÃ×Ôö¼Ó+20£¬Äúµ±Ç°µÄ´óÃ×ÊýÁ¿Îª£º(<$GamePoint>) 0 1
+MONEY Áé·û + 20
+SendCenterMsg 253 0 ¡¾ÌáÊ¾¡¿£º¹§Ï²ÄúµÄÁé·ûÔö¼Ó+20£¬Äúµ±Ç°µÄÁé·ûÊýÁ¿Îª£º(<$MONEY(Áé·û)>) 0 1
 Break
 
 [@StdModeFunc295]
 #IF
 #ACT
-GamePoint + 50
-SendCenterMsg 253 0 ¡¾ÌáÊ¾¡¿£º¹§Ï²ÄúµÄ´óÃ×Ôö¼Ó+50£¬Äúµ±Ç°µÄ´óÃ×ÊýÁ¿Îª£º(<$GamePoint>) 0 1
+MONEY Áé·û + 50
+SendCenterMsg 253 0 ¡¾ÌáÊ¾¡¿£º¹§Ï²ÄúµÄÁé·ûÔö¼Ó+50£¬Äúµ±Ç°µÄÁé·ûÊýÁ¿Îª£º(<$MONEY(Áé·û)>) 0 1
 Break
 
 [@StdModeFunc296]
 #IF
 #ACT
-GamePoint + 100
-SendCenterMsg 253 0 ¡¾ÌáÊ¾¡¿£º¹§Ï²ÄúµÄ´óÃ×Ôö¼Ó+100£¬Äúµ±Ç°µÄ´óÃ×ÊýÁ¿Îª£º(<$GamePoint>) 0 1
+MONEY Áé·û + 100
+SendCenterMsg 253 0 ¡¾ÌáÊ¾¡¿£º¹§Ï²ÄúµÄÁé·ûÔö¼Ó+100£¬Äúµ±Ç°µÄÁé·ûÊýÁ¿Îª£º(<$MONEY(Áé·û)>) 0 1
 Break
 
 
 [@StdModeFunc297]
 #IF
 #ACT
-GamePoint + 200
-SendCenterMsg 253 0 ¡¾ÌáÊ¾¡¿£º¹§Ï²ÄúµÄ´óÃ×Ôö¼Ó+200£¬Äúµ±Ç°µÄ´óÃ×ÊýÁ¿Îª£º(<$GamePoint>) 0 1
+MONEY Áé·û + 200
+SendCenterMsg 253 0 ¡¾ÌáÊ¾¡¿£º¹§Ï²ÄúµÄÁé·ûÔö¼Ó+200£¬Äúµ±Ç°µÄÁé·ûÊýÁ¿Îª£º(<$MONEY(Áé·û)>) 0 1
 Break
 
 [@StdModeFunc298]
 #IF
 #ACT
-GamePoint + 500
-SendCenterMsg 253 0 ¡¾ÌáÊ¾¡¿£º¹§Ï²ÄúµÄ´óÃ×Ôö¼Ó+500£¬Äúµ±Ç°µÄ´óÃ×ÊýÁ¿Îª£º(<$GamePoint>) 0 1
+MONEY Áé·û + 500
+SendCenterMsg 253 0 ¡¾ÌáÊ¾¡¿£º¹§Ï²ÄúµÄÁé·ûÔö¼Ó+500£¬Äúµ±Ç°µÄÁé·ûÊýÁ¿Îª£º(<$MONEY(Áé·û)>) 0 1
 Break
 
 [@StdModeFunc299]
 #IF
 #ACT
-GamePoint + 1000
-SendCenterMsg 253 0 ¡¾ÌáÊ¾¡¿£º¹§Ï²ÄúµÄ´óÃ×Ôö¼Ó+1000£¬Äúµ±Ç°µÄ´óÃ×ÊýÁ¿Îª£º(<$GamePoint>) 0 1
+MONEY Áé·û + 1000
+SendCenterMsg 253 0 ¡¾ÌáÊ¾¡¿£º¹§Ï²ÄúµÄÁé·ûÔö¼Ó+1000£¬Äúµ±Ç°µÄÁé·ûÊýÁ¿Îª£º(<$MONEY(Áé·û)>) 0 1
 Break
 
 [@StdModeFunc300]
 #IF
 #ACT
-GamePoint + 2000
-SendCenterMsg 253 0 ¡¾ÌáÊ¾¡¿£º¹§Ï²ÄúµÄ´óÃ×Ôö¼Ó+2000£¬Äúµ±Ç°µÄ´óÃ×ÊýÁ¿Îª£º(<$GamePoint>) 0 1
+MONEY Áé·û + 2000
+SendCenterMsg 253 0 ¡¾ÌáÊ¾¡¿£º¹§Ï²ÄúµÄÁé·ûÔö¼Ó+2000£¬Äúµ±Ç°µÄÁé·ûÊýÁ¿Îª£º(<$MONEY(Áé·û)>) 0 1
 Break
 
 [@StdModeFunc301]
 #IF
 #ACT
-GamePoint + 5000
-SendCenterMsg 253 0 ¡¾ÌáÊ¾¡¿£º¹§Ï²ÄúµÄ´óÃ×Ôö¼Ó+5000£¬Äúµ±Ç°µÄ´óÃ×ÊýÁ¿Îª£º(<$GamePoint>) 0 1
+MONEY Áé·û + 5000
+SendCenterMsg 253 0 ¡¾ÌáÊ¾¡¿£º¹§Ï²ÄúµÄÁé·ûÔö¼Ó+5000£¬Äúµ±Ç°µÄÁé·ûÊýÁ¿Îª£º(<$MONEY(Áé·û)>) 0 1
 Break
 
 
@@ -1934,6 +1942,11 @@ SendMsg 6 500Íò¾­Ñé¾íÊ¹ÓÃ³É¹¦£¬¾­ÑéÖµÔö¼Ó£º+5000000
 Break
 Close
 
+[@StdModeFunc400]
+#ACT 
+CONFERTITLE ìÅ¹â½£Ó°
+
+
 ;---------------------------------------------------------------------------------
 
 [@É±ËÀïÚ³µ]
@@ -1966,11 +1979,11 @@ ThrowItem 3 353 341 7 10000Ôª±¦ 5|60
 ThrowItem 3 353 341 7 50000Ôª±¦ 3|60
 ThrowItem 3 353 341 7 100000Ôª±¦ 2|60
 ThrowItem 3 353 341 7 200000Ôª±¦ 1|60
-ThrowItem 3 353 341 7 1´óÃ× 10|60
-ThrowItem 3 353 341 7 2´óÃ× 5|60
-ThrowItem 3 353 341 7 5´óÃ× 3|60
-ThrowItem 3 353 341 7 10´óÃ× 2|60
-ThrowItem 3 353 341 7 20´óÃ× 1|60
+ThrowItem 3 353 341 7 1Áé·û 10|60
+ThrowItem 3 353 341 7 2Áé·û 5|60
+ThrowItem 3 353 341 7 5Áé·û 3|60
+ThrowItem 3 353 341 7 10Áé·û 2|60
+ThrowItem 3 353 341 7 20Áé·û 1|60
 ThrowItem 3 353 341 7 500Ôª±¦ 5|60
 ThrowItem 3 353 341 7 50Ôª±¦ 5|60
 ThrowItem 3 353 341 7 1000Ôª±¦ 2|60
@@ -1978,17 +1991,17 @@ ThrowItem 3 353 341 7 1000Ôª±¦ 2|60
 ThrowItem 3 353 341 7 100Ôª±¦ 5|60
 ThrowItem 3 353 341 7 20Ôª±¦ 5|60
 ThrowItem 3 353 341 7 50Ôª±¦ 12|60
-GuildNoticeMsg 251 249 ÏµÍ³£ºÒ»´ó²¨Ôª±¦´óÃ×µôÂäÔÚÃËÖØÍÁ³ÇÒ©µê¸½½ü£¬Ò»·ÖÖÓºó¿É¼ñÈ¡£¡£¡£¡
-GuildNoticeMsg 251 249 ÏµÍ³£ºÒ»´ó²¨Ôª±¦´óÃ×µôÂäÔÚÃËÖØÍÁ³ÇÒ©µê¸½½ü£¬Ò»·ÖÖÓºó¿É¼ñÈ¡£¡£¡£¡
-GuildNoticeMsg 251 249 ÏµÍ³£ºÒ»´ó²¨Ôª±¦´óÃ×µôÂäÔÚÃËÖØÍÁ³ÇÒ©µê¸½½ü£¬Ò»·ÖÖÓºó¿É¼ñÈ¡£¡£¡£¡
-GuildNoticeMsg 251 249 ÏµÍ³£ºÒ»´ó²¨Ôª±¦´óÃ×µôÂäÔÚÃËÖØÍÁ³ÇÒ©µê¸½½ü£¬Ò»·ÖÖÓºó¿É¼ñÈ¡£¡£¡£¡
-GuildNoticeMsg 251 249 ÏµÍ³£ºÒ»´ó²¨Ôª±¦´óÃ×µôÂäÔÚÃËÖØÍÁ³ÇÒ©µê¸½½ü£¬Ò»·ÖÖÓºó¿É¼ñÈ¡£¡£¡£¡
-GuildNoticeMsg 251 249 ÏµÍ³£ºÒ»´ó²¨Ôª±¦´óÃ×µôÂäÔÚÃËÖØÍÁ³ÇÒ©µê¸½½ü£¬Ò»·ÖÖÓºó¿É¼ñÈ¡£¡£¡£¡
-SendCenterMsg 251 249 ÏµÍ³£ºÒ»´ó²¨Ôª±¦´óÃ×µôÂäÔÚÃËÖØÍÁ³ÇÒ©µê¸½½ü£¬Ò»·ÖÖÓºó¿É¼ñÈ¡£¡£¡£¡ 1 60
-SendCenterMsg 251 249 ÏµÍ³£ºÒ»´ó²¨Ôª±¦´óÃ×µôÂäÔÚÃËÖØÍÁ³ÇÒ©µê¸½½ü£¬Ò»·ÖÖÓºó¿É¼ñÈ¡£¡£¡£¡ 1 60
-SendCenterMsg 251 249 ÏµÍ³£ºÒ»´ó²¨Ôª±¦´óÃ×µôÂäÔÚÃËÖØÍÁ³ÇÒ©µê¸½½ü£¬Ò»·ÖÖÓºó¿É¼ñÈ¡£¡£¡£¡ 1 60
-SendCenterMsg 251 249 ÏµÍ³£ºÒ»´ó²¨Ôª±¦´óÃ×µôÂäÔÚÃËÖØÍÁ³ÇÒ©µê¸½½ü£¬Ò»·ÖÖÓºó¿É¼ñÈ¡£¡£¡£¡ 1 60
-SendCenterMsg 251 249 ÏµÍ³£ºÒ»´ó²¨Ôª±¦´óÃ×µôÂäÔÚÃËÖØÍÁ³ÇÒ©µê¸½½ü£¬Ò»·ÖÖÓºó¿É¼ñÈ¡£¡£¡£¡ 1 60
+GuildNoticeMsg 251 249 ÏµÍ³£ºÒ»´ó²¨Ôª±¦Áé·ûµôÂäÔÚÃËÖØÍÁ³ÇÒ©µê¸½½ü£¬Ò»·ÖÖÓºó¿É¼ñÈ¡£¡£¡£¡
+GuildNoticeMsg 251 249 ÏµÍ³£ºÒ»´ó²¨Ôª±¦Áé·ûµôÂäÔÚÃËÖØÍÁ³ÇÒ©µê¸½½ü£¬Ò»·ÖÖÓºó¿É¼ñÈ¡£¡£¡£¡
+GuildNoticeMsg 251 249 ÏµÍ³£ºÒ»´ó²¨Ôª±¦Áé·ûµôÂäÔÚÃËÖØÍÁ³ÇÒ©µê¸½½ü£¬Ò»·ÖÖÓºó¿É¼ñÈ¡£¡£¡£¡
+GuildNoticeMsg 251 249 ÏµÍ³£ºÒ»´ó²¨Ôª±¦Áé·ûµôÂäÔÚÃËÖØÍÁ³ÇÒ©µê¸½½ü£¬Ò»·ÖÖÓºó¿É¼ñÈ¡£¡£¡£¡
+GuildNoticeMsg 251 249 ÏµÍ³£ºÒ»´ó²¨Ôª±¦Áé·ûµôÂäÔÚÃËÖØÍÁ³ÇÒ©µê¸½½ü£¬Ò»·ÖÖÓºó¿É¼ñÈ¡£¡£¡£¡
+GuildNoticeMsg 251 249 ÏµÍ³£ºÒ»´ó²¨Ôª±¦Áé·ûµôÂäÔÚÃËÖØÍÁ³ÇÒ©µê¸½½ü£¬Ò»·ÖÖÓºó¿É¼ñÈ¡£¡£¡£¡
+SendCenterMsg 251 249 ÏµÍ³£ºÒ»´ó²¨Ôª±¦Áé·ûµôÂäÔÚÃËÖØÍÁ³ÇÒ©µê¸½½ü£¬Ò»·ÖÖÓºó¿É¼ñÈ¡£¡£¡£¡ 1 60
+SendCenterMsg 251 249 ÏµÍ³£ºÒ»´ó²¨Ôª±¦Áé·ûµôÂäÔÚÃËÖØÍÁ³ÇÒ©µê¸½½ü£¬Ò»·ÖÖÓºó¿É¼ñÈ¡£¡£¡£¡ 1 60
+SendCenterMsg 251 249 ÏµÍ³£ºÒ»´ó²¨Ôª±¦Áé·ûµôÂäÔÚÃËÖØÍÁ³ÇÒ©µê¸½½ü£¬Ò»·ÖÖÓºó¿É¼ñÈ¡£¡£¡£¡ 1 60
+SendCenterMsg 251 249 ÏµÍ³£ºÒ»´ó²¨Ôª±¦Áé·ûµôÂäÔÚÃËÖØÍÁ³ÇÒ©µê¸½½ü£¬Ò»·ÖÖÓºó¿É¼ñÈ¡£¡£¡£¡ 1 60
+SendCenterMsg 251 249 ÏµÍ³£ºÒ»´ó²¨Ôª±¦Áé·ûµôÂäÔÚÃËÖØÍÁ³ÇÒ©µê¸½½ü£¬Ò»·ÖÖÓºó¿É¼ñÈ¡£¡£¡£¡ 1 60
 break
 
 [@¼ÙÈË¸´»î]
@@ -2144,13 +2157,13 @@ CHECKCURRTARGETRACE = 0
 NOT CHECKUNDERWAR É³°Í¿Ë
 CHECKLEVELEX > 49
 #ACT
-<$CURRRTARGETNAME>.gamepoint + 5
+<$CURRRTARGETNAME>.GAMEGIRD + 5
 SET [168] 0
 DEPRIVETITLE ¿ñ±©Ö®Á¦
 SETICON 4 -1
 #CALL [\ÓÎÏ·µÇÂ½\ÊôÐÔ¼Ó³É.txt] @ÊôÐÔÉèÖÃ
-SendMsg 0 {¿ñ±©¹«¸æ:|254:0:1}£º{¡¾<$CURRRTARGETNAME>¡¿|251:0:1}¸ÉµôÁËÓµÓÐ{¡¾¿ñ±©Ö®Á¦¡¿|243:0:1}µÄ{¡¾<$USERNAME>¡¿|245:0:1}»ñµÃ{¡¾5µã¡¿|251:0:1}{´óÃ×|222:0:1}
-SENDMOVEMSG 0 253 255 100 1 {¿ñ±©¹«¸æ:/FCOLOR=254}<¹§Ï²/FCOLOR=250><¡¾<$CURRRTARGETNAME>¡¿/FCOLOR=253>¸ÉµôÁËÓµÓÐ{¡¾¿ñ±©Ö®Á¦¡¿/FCOLOR=250}µÄ{¡¾<$USERNAME>¡¿/FCOLOR=70}»ñµÃ{5µã´óÃ×½±Àø/FCOLOR=249}£¡£¡ 1 5
+SendMsg 0 {¿ñ±©¹«¸æ:|254:0:1}£º{¡¾<$CURRRTARGETNAME>¡¿|251:0:1}¸ÉµôÁËÓµÓÐ{¡¾¿ñ±©Ö®Á¦¡¿|243:0:1}µÄ{¡¾<$USERNAME>¡¿|245:0:1}»ñµÃ{¡¾5µã¡¿|251:0:1}{Áé·û|222:0:1}
+SENDMOVEMSG 0 253 255 100 1 {¿ñ±©¹«¸æ:/FCOLOR=254}<¹§Ï²/FCOLOR=250><¡¾<$CURRRTARGETNAME>¡¿/FCOLOR=253>¸ÉµôÁËÓµÓÐ{¡¾¿ñ±©Ö®Á¦¡¿/FCOLOR=250}µÄ{¡¾<$USERNAME>¡¿/FCOLOR=70}»ñµÃ{5µãÁé·û½±Àø/FCOLOR=249}£¡£¡ 1 5
 
 
 
@@ -2321,7 +2334,7 @@ MOV S$È«Õ¾³äÖµ <$STR(S6)>
 CheckContainsTextList ..\..\..\..\37W°ü·þ¹¦ÄÜ\¿ªÆôÉñÃØÈË.txt ¿ª
 SMALL <$STR(S$È«Õ¾³äÖµ)> 100
 #ACT
-ChangeSP 0 1 0
+; ChangeSP 0 1 0
 
 
 #IF
@@ -2862,6 +2875,10 @@ NOT ISONMAP ´ÏÃ÷Éµµ°µÄµØÅÌ
 M.HUMANHP - <$STR(N$¹ÖÎïÇÐ¸î)> 106
 
 
+; #if
+; equal <$SERVERIDX> 1881
+; #ACT
+; RangeHarm <$X> <$Y> 5 200 12 80 0 2 5
 
 
 [@MagicAttack]
@@ -2939,6 +2956,30 @@ CHECKCURRTARGETRACE = 0
 #ACT
 MOV N$Õ½¶·×´Ì¬ 3
 
+#IF
+CHECKCURRTARGETRACE = 0
+#ACT
+break
+
+#IF
+LARGE <$SUCKDAMAGE> <$STR(N$¼õÉËÎüÊÕÖµ)>
+NOT CHECKCURRTARGETRACE = 0
+CHECKUSEITEM 16
+#ACT
+
+; HookStruck 1 50 51 52
+MOV N$¼õÉËÎüÊÕÖµ <$DAMAGEVALUE>
+CalcPer <$DAMAGEVALUE> <$STR(N$Ã¿´ÎÎüÊÕ)> N$¼õÉËÎüÊÕÖµA
+DEC N$¼õÉËÎüÊÕÖµ <$STR(N$¼õÉËÎüÊÕÖµA)>
+SetSuckDamage - <$STR(N$¼õÉËÎüÊÕÖµA)> <$STR(N$Ã¿´ÎÎüÊÕ)> 1
+; SendCenterMsg 250 0 ¶ÜÅÆÎüÊÕ<$STR(N$Ã¿´ÎÎüÊÕ)>%±»¹¥»÷ÉËº¦Öµ£º<$STR(N$¼õÉËÎüÊÕÖµA)>µã£¬Êµ¼Ê<$STR(N$¼õÉËÎüÊÕÖµ)> 0 3
+; ---
+; HookStruck 1 50 51 52
+; MOV N$¼õÉËÎüÊÕÖµ <$DAMAGEVALUE>
+; CalcPer <$STR(N$¼õÉËÎüÊÕÖµ)> <$STR(N$Ã¿´ÎÎüÊÕ)> N$¼õÉËÎüÊÕÖµA
+; DEC N52 <$STR(N$¼õÉËÎüÊÕÖµA)>
+; SetSuckDamage - <$STR(N$¼õÉËÎüÊÕÖµA)> <$STR(N$Ã¿´ÎÎüÊÕ)> 1
+;SendCenterMsg 231 0 ¶ÜÅÆÎüÊÕ<$STR(N$Ã¿´ÎÎüÊÕ)>%±»¹¥»÷ÉËº¦Öµ£º<$STR(N$¼õÉËÎüÊÕÖµA)>µã£¬Êµ¼Ê<$STR(N$¼õÉËÎüÊÕÖµ)> 0 3
 
 [@ValidateOK]
 #IF
@@ -2946,9 +2987,9 @@ MOV N$Õ½¶·×´Ì¬ 3
 SendMsg 6 ÑéÖ¤³É¹¦!
 [@StdModeFunc42]
 #IF
-CHECKITEMADDVALUE 1 3 < 7
+CHECKITEMADDVALUE 1 5 < 7
 #ACT
-UPGRADEITEMEX 1 3 0 1 0
+UPGRADEITEMEX 1 5 0 1 0
 SENDMSG 6 ÄãµÄÎäÆ÷»ñµÃ×£¸£.£¡£¡ 
 #ELSEACT
 SendMsg 5 ÎäÆ÷ÐÒÔËÒÑ¾­+7ÁË£¬ÎÞ·¨ÔÙ´ÎÊ¹ÓÃ£¡
@@ -3038,6 +3079,7 @@ break
 <¹Ø±Õ/@exit>\
 
 
+; [@MagSelfFunc88]
 [@MagSelfFunc88]
 #OR
 ISONMAP 0150
@@ -3189,3 +3231,23 @@ Break
 ; ADDVARCACHE A7 <$STR(S$Ê×±¬×°±¸ÐÐÊý)> <$STR(N$Êä³ö)>
 ; ADDVARCACHE A8 <$STR(S$Ê×±¬×°±¸ÐÐÊý)> <$USERNAME>
 ; SENDMOVEMSG 0 253 0 150 1 ¹§Ï²Íæ¼Ò{<$USERNAME>/FCOLOR=250}»ñµÃ{¡¾<$CURRTEMNAME>¡¿/FCOLOR=249}Ê×±¬½±Àø¡¾<$cfg_Ê×É±½±Àø(<$STR(S$Ê×±¬×°±¸ÐÐÊý)>_3)><$cfg_Ê×É±½±Àø(<$STR(S$Ê×±¬×°±¸ÐÐÊý)>_2)>¡¿
+
+
+
+
+[@FindPathBegin]
+#IF
+equal <$SERVERIDX> 1881
+#ACT
+MAPMOVE <$MAP> <$ToPointX> <$ToPointY>
+; DSFUNCALL DINGSHICF_´«ËÍ 5000 1 1
+BREAK
+
+
+
+
+; ³äÖµ´¥·¢
+[@ReCharge]
+#IF
+#ACT
+#CALL [\ÏµÍ³¹¦ÄÜ\³äÖµ´¥·¢.txt] @³äÖµ´¥·¢_QF

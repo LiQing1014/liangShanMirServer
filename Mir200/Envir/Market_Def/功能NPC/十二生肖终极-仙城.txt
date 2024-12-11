@@ -159,7 +159,7 @@ break
 #ACT
 #SAY
 <-------------------------------------------------------------/AUTOCOLOR=91>\
-<生肖进阶：/FCOLOR=70><需要三个圣级生肖+188大米点./FCOLOR=250>\ 
+<生肖进阶：/FCOLOR=70><需要三个圣级生肖+188灵符点./FCOLOR=250>\ 
 <-------------------------------------------------------------/AUTOCOLOR=91>\
 <>     <神·子鼠/@神1>      <神·丑牛/@神2>      <神·寅虎/@神3>      <神·卯兔/@神4>\ 
 <-------------------------------------------------------------/AUTOCOLOR=91>\
@@ -174,9 +174,9 @@ break
 [@神1]
 #if
 checkitem 圣·子鼠 3
-CHECKGAMEPOINT > 187
+checkmoney 灵符 > 187
 #act
-GAMEPOINT - 188
+MONEY 灵符 - 188
 take 圣·子鼠 3
 give 神·子鼠 1
 GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出神级生肖：【神·子鼠】
@@ -188,9 +188,9 @@ break
 [@神2]
 #if
 checkitem 圣·丑牛 3
-CHECKGAMEPOINT > 187
+checkmoney 灵符 > 187
 #act
-GAMEPOINT - 188
+MONEY 灵符 - 188
 take 圣·丑牛 3
 give 神·丑牛 1
 GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出神级生肖：【神·丑牛】
@@ -202,9 +202,9 @@ break
 [@神3]
 #if
 checkitem 圣·寅虎 3
-CHECKGAMEPOINT > 187
+checkmoney 灵符 > 187
 #act
-GAMEPOINT - 188
+MONEY 灵符 - 188
 take 圣·寅虎 3
 give 神·寅虎 1
 GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出神级生肖：【神·寅虎】
@@ -216,9 +216,9 @@ break
 [@神4]
 #if
 checkitem 圣·卯兔 3
-CHECKGAMEPOINT > 187
+checkmoney 灵符 > 187
 #act
-GAMEPOINT - 188
+MONEY 灵符 - 188
 take 圣·卯兔 3
 give 神·卯兔 1
 GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出神级生肖：【神·卯兔】
@@ -230,9 +230,9 @@ break
 [@神5]
 #if
 checkitem 圣·辰龙 3
-CHECKGAMEPOINT > 187
+checkmoney 灵符 > 187
 #act
-GAMEPOINT - 188
+MONEY 灵符 - 188
 take 圣·辰龙 3
 give 神·辰龙 1
 GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出神级生肖：【神·辰龙】
@@ -244,9 +244,9 @@ break
 [@神6]
 #if
 checkitem 圣·巳蛇 3
-CHECKGAMEPOINT > 187
+checkmoney 灵符 > 187
 #act
-GAMEPOINT - 188
+MONEY 灵符 - 188
 take 圣·巳蛇 3
 give 神·巳蛇 1
 GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出神级生肖：【神·巳蛇】
@@ -258,9 +258,9 @@ break
 [@神7]
 #if
 checkitem 圣·午马 3
-CHECKGAMEPOINT > 187
+checkmoney 灵符 > 187
 #act
-GAMEPOINT - 188
+MONEY 灵符 - 188
 take 圣·午马 3
 give 神·午马 1
 GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出神级生肖：【神·午马】
@@ -272,9 +272,9 @@ break
 [@神8]
 #if
 checkitem 圣·未羊 3
-CHECKGAMEPOINT > 187
+checkmoney 灵符 > 187
 #act
-GAMEPOINT - 188
+MONEY 灵符 - 188
 take 圣·未羊 3
 give 神·未羊 1
 GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出神级生肖：【神·未羊】
@@ -286,9 +286,9 @@ break
 [@神9]
 #if
 checkitem 圣·申猴 3
-CHECKGAMEPOINT > 187
+checkmoney 灵符 > 187
 #act
-GAMEPOINT - 188
+MONEY 灵符 - 188
 take 圣·申猴 3
 give 神·申猴 1
 GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出神级生肖：【神·申猴】
@@ -300,9 +300,9 @@ break
 [@神10]
 #if
 checkitem 圣·酉鸡 3
-CHECKGAMEPOINT > 187
+checkmoney 灵符 > 187
 #act
-GAMEPOINT - 188
+MONEY 灵符 - 188
 take 圣·酉鸡 3
 give 神·酉鸡 1
 GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出神级生肖：【神·酉鸡】
@@ -314,9 +314,9 @@ break
 [@神11]
 #if
 checkitem 圣·戌狗 3
-CHECKGAMEPOINT > 187
+checkmoney 灵符 > 187
 #act
-GAMEPOINT - 188
+MONEY 灵符 - 188
 take 圣·戌狗 3
 give 神·戌狗 1
 GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出神级生肖：【神·戌狗】
@@ -328,9 +328,9 @@ break
 [@神12]
 #if
 checkitem 圣·亥猪 3
-CHECKGAMEPOINT > 187
+checkmoney 灵符 > 187
 #act
-GAMEPOINT - 188
+MONEY 灵符 - 188
 take 圣·亥猪 3
 give 神·亥猪 1
 GuildNoticeMsg 7 5  恭喜玩家〖<$USERNAME>〗成功锻造出神级生肖：【神·亥猪】

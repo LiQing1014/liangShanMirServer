@@ -38,7 +38,7 @@ MOV N$荒古材料A 10
 MOV S$荒古材料B 悟空宝石
 MOV N$荒古材料B 10
 MOV N$荒古元宝D 6000000
-MOV N$荒古大米D 600
+MOV N$荒古灵符D 600
 MOV S$荒古按钮1 <荒古圣体Lv11/FCOLOR=251>
 ; MOV S$荒古按钮1 <荒古圣体Lv11|253#提升条件：^-^146#1:<$STR(S$荒古材料A)>*<$STR(N$荒古材料A)>^-^150#2:元宝*<$STR(N$荒古元宝D)>/FCOLOR=251>
 MOV S$荒古按钮2 <荒古圣体Lv12/FCOLOR=248>
@@ -69,7 +69,7 @@ MOV N$荒古材料A 12
 MOV S$荒古材料B 悟空宝石
 MOV N$荒古材料B 12
 MOV N$荒古元宝D 6500000
-MOV N$荒古大米D 650
+MOV N$荒古灵符D 650
 MOV S$荒古按钮1 <荒古圣体Lv11/FCOLOR=250>
 MOV S$荒古按钮2 <荒古圣体Lv12/FCOLOR=251>
 ; MOV S$荒古按钮2 <荒古圣体Lv12|253#提升条件：^-^146#1:<$STR(S$荒古材料A)>*<$STR(N$荒古材料A)>^-^150#2:元宝*<$STR(N$荒古元宝D)>/FCOLOR=251>
@@ -98,7 +98,7 @@ MOV N$荒古材料A 14
 MOV S$荒古材料B 悟空宝石
 MOV N$荒古材料B 14
 MOV N$荒古元宝D 7000000
-MOV N$荒古大米D 700
+MOV N$荒古灵符D 700
 MOV S$荒古按钮1 <荒古圣体Lv11/FCOLOR=250>
 MOV S$荒古按钮2 <荒古圣体Lv12/FCOLOR=250>
 MOV S$荒古按钮3 <荒古圣体Lv13/FCOLOR=251>
@@ -129,7 +129,7 @@ MOV N$荒古材料A 16
 MOV S$荒古材料B 悟空宝石
 MOV N$荒古材料B 16
 MOV N$荒古元宝D 7500000
-MOV N$荒古大米D 750
+MOV N$荒古灵符D 750
 MOV S$荒古按钮1 <荒古圣体Lv11/FCOLOR=250>
 MOV S$荒古按钮2 <荒古圣体Lv12/FCOLOR=250>
 MOV S$荒古按钮3 <荒古圣体Lv13/FCOLOR=250>
@@ -158,7 +158,7 @@ MOV N$荒古材料A 18
 MOV S$荒古材料B 悟空宝石
 MOV N$荒古材料B 18
 MOV N$荒古元宝D 8000000
-MOV N$荒古大米D 800
+MOV N$荒古灵符D 800
 MOV S$荒古按钮1 <荒古圣体Lv11/FCOLOR=250>
 MOV S$荒古按钮2 <荒古圣体Lv12/FCOLOR=250>
 MOV S$荒古按钮3 <荒古圣体Lv13/FCOLOR=250>
@@ -188,7 +188,7 @@ MOV N$荒古材料A 20
 MOV S$荒古材料B 悟空宝石
 MOV N$荒古材料B 20
 MOV N$荒古元宝D 8500000
-MOV N$荒古大米D 850
+MOV N$荒古灵符D 850
 MOV S$荒古按钮1 <荒古圣体Lv16/FCOLOR=251>
 ; MOV S$荒古按钮1 <荒古圣体Lv16|253#提升条件：^-^146#1:<$STR(S$荒古材料A)>*<$STR(N$荒古材料A)>^-^150#2:元宝*<$STR(N$荒古元宝D)>/FCOLOR=251>
 MOV S$荒古按钮2 <荒古圣体Lv17/FCOLOR=248>
@@ -217,7 +217,7 @@ MOV N$荒古材料A 22
 MOV S$荒古材料B 悟空宝石
 MOV N$荒古材料B 22
 MOV N$荒古元宝D 9000000
-MOV N$荒古大米D 900
+MOV N$荒古灵符D 900
 MOV S$荒古按钮1 <荒古圣体Lv16/FCOLOR=250>
 MOV S$荒古按钮2 <荒古圣体Lv17/FCOLOR=251>
 ; MOV S$荒古按钮2 <荒古圣体Lv17|253#提升条件：^-^146#1:<$STR(S$荒古材料A)>*<$STR(N$荒古材料A)>^-^150#2:元宝*<$STR(N$荒古元宝D)>/FCOLOR=251>
@@ -247,7 +247,7 @@ MOV N$荒古材料A 24
 MOV S$荒古材料B 悟空宝石
 MOV N$荒古材料B 24
 MOV N$荒古元宝D 9500000
-MOV N$荒古大米D 950
+MOV N$荒古灵符D 950
 MOV S$荒古按钮1 <荒古圣体Lv16/FCOLOR=250>
 MOV S$荒古按钮2 <荒古圣体Lv17/FCOLOR=250>
 MOV S$荒古按钮3 <荒古圣体Lv18/FCOLOR=251>
@@ -278,7 +278,7 @@ MOV N$荒古材料A 26
 MOV S$荒古材料B 悟空宝石
 MOV N$荒古材料B 26
 MOV N$荒古元宝D 10000000
-MOV N$荒古大米D 1000
+MOV N$荒古灵符D 1000
 MOV S$荒古按钮1 <荒古圣体Lv16/FCOLOR=250>
 MOV S$荒古按钮2 <荒古圣体Lv17/FCOLOR=250>
 MOV S$荒古按钮3 <荒古圣体Lv18/FCOLOR=250>
@@ -307,7 +307,7 @@ MOV N$荒古材料A 28
 MOV S$荒古材料B 悟空宝石
 MOV N$荒古材料B 28
 MOV N$荒古元宝D 12000000
-MOV N$荒古大米D 1200
+MOV N$荒古灵符D 1200
 MOV S$荒古按钮1 <荒古圣体Lv16/FCOLOR=250>
 MOV S$荒古按钮2 <荒古圣体Lv17/FCOLOR=250>
 MOV S$荒古按钮3 <荒古圣体Lv18/FCOLOR=250>
@@ -349,7 +349,7 @@ MOV N$荒古材料A 0
 MOV S$荒古材料B 当前荒古已满
 MOV N$荒古材料B 0
 MOV N$荒古元宝D 0
-MOV N$荒古大米D 0
+MOV N$荒古灵符D 0
 MOV S$荒古按钮1 <荒古圣体Lv16/FCOLOR=250>
 MOV S$荒古按钮2 <荒古圣体Lv17/FCOLOR=250>
 MOV S$荒古按钮3 <荒古圣体Lv18/FCOLOR=250>
@@ -369,6 +369,98 @@ MOV N$颜色8 254
 MOV N$颜色9 254
 MOV N$颜色10 254
 
+
+
+#IF
+#ACT
+getdbitemfieldvalue <$cfg_荒古圣体(<$STR(U100)>_5)> idx S$展示物品1ID
+getdbitemfieldvalue <$cfg_荒古圣体(<$STR(U100)>_7)> idx S$展示物品2ID
+; getdbitemfieldvalue <$cfg_荒古圣体(<$STR(U100)>_5)> idx S$展示物品1ID
+
+
+BREAK
+#SAY
+<Img|show=4|bg=1|loadDelay=0|move=1|esc=1|img=custom/hecheng/zs1.png|reset=1>
+<Layout|x=722.0|y=-17.0|width=80|height=80|link=@exit>
+<Button|x=750.0|y=0.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=89.0|y=61.0|tipsx=10|tipsy=80|outline=1|size=16|color=161|text=荒古圣体:>
+<Text|a=0|x=161.0|y=61.0|tipsx=10|tipsy=80|outline=1|size=16|color=250|text=荒古后圣体遭天地诅咒，生命之轮寂静，苦海坚硬如铁,难以修炼。>
+<Text|a=0|x=89.0|y=83.0|tipsx=10|tipsy=80|outline=1|size=16|color=161|text=功能介绍:>
+<Text|a=0|x=161.0|y=83.0|tipsx=10|tipsy=80|outline=1|size=16|color=254|text=每级增加暴击，吸血，破防1%，同级下，有荒古圣体的力量和战力远胜其他人>
+<RText|x=113.0|y=119.0|outline=1|color=255|size=18|text=<当前：/FCOLOR=253><<$cfg_荒古圣体(<$STR(U100)>_1)>/FCOLOR=254>>
+<RText|x=123.0|y=188.0|outline=1|color=255|size=18|text=<暴击几率：/FCOLOR=255><+ <$cfg_荒古圣体(<$STR(U100)>_2)>%/FCOLOR=254>>
+<RText|x=123.0|y=230.0|outline=1|color=255|size=18|text=<忽视防御：/FCOLOR=255><+ <$cfg_荒古圣体(<$STR(U100)>_2)>%/FCOLOR=254>>
+<RText|x=123.0|y=272.0|outline=1|color=255|size=18|text=<人物吸血：/FCOLOR=255><+ <$cfg_荒古圣体(<$STR(U100)>_2)>%/FCOLOR=254>>
+<RText|x=455.0|y=119.0|outline=1|color=255|size=18|text=<下级：/FCOLOR=253><<$cfg_荒古圣体(<$STR(U100)>_3)>/FCOLOR=254>>
+<RText|x=461.0|y=188.0|outline=1|color=255|size=18|text=<暴击几率：/FCOLOR=255><+ <$cfg_荒古圣体(<$STR(U100)>_4)>%/FCOLOR=254>>
+<RText|x=461.0|y=230.0|outline=1|color=255|size=18|text=<忽视防御：/FCOLOR=255><+ <$cfg_荒古圣体(<$STR(U100)>_4)>%/FCOLOR=254>>
+<RText|x=461.0|y=272.0|outline=1|color=255|size=18|text=<人物吸血：/FCOLOR=255><+ <$cfg_荒古圣体(<$STR(U100)>_4)>%/FCOLOR=254>>
+<ItemShow|x=110.0|y=380.0|width=70|height=70|itemid=<$str(S$展示物品1ID)>|itemcount=<$cfg_荒古圣体(<$STR(U100)>_6)>|showtips=1|bgtype=1>
+<ItemShow|x=195.0|y=380.0|width=70|height=70|itemid=<$str(S$展示物品2ID)>|itemcount=<$cfg_荒古圣体(<$STR(U100)>_8)>|showtips=1|bgtype=1>
+<Button|x=130.0|y=450.0|color=251|size=18|pimg=custom/button/ann2.png|nimg=custom/button/ann1.png|text=材料提升|link=@材料提升_荒古圣体>
+<Button|x=492.0|y=450.0|color=251|size=18|pimg=custom/button/ann2.png|nimg=custom/button/ann1.png|text=灵符提升|link=@灵符提升_荒古圣体>
+<Text|a=4|x=544.0|y=414.0|color=250|size=18|text=<$cfg_荒古圣体(<$STR(U100)>_9)>*<$cfg_荒古圣体(<$STR(U100)>_10)>>
+<Text|x=328.0|y=15.0|color=255|size=18|text=荒古圣体>
+
+
+
+[@材料提升_荒古圣体]
+
+#IF
+large U100 19
+#ACT
+SENDMSG 9 <font color='#00FF00'>已升满级</font>
+BREAK
+
+#IF
+NOT CHECKITEM <$cfg_荒古圣体(<$STR(U100)>_5)> <$cfg_荒古圣体(<$STR(U100)>_6)>
+#ACT
+SENDMSG 9 <font color='#00FF00'>您的<$cfg_荒古圣体(<$STR(U100)>_5)>不足【<$cfg_荒古圣体(<$STR(U100)>_6)>】</font>
+BREAK
+
+#IF
+NOT CHECKMONEY <$cfg_荒古圣体(<$STR(U100)>_7)> ? <$cfg_荒古圣体(<$STR(U100)>_8)>
+#ACT
+SENDMSG 9 <font color='#00FF00'>您的<$cfg_荒古圣体(<$STR(U100)>_7)>不足【<$cfg_荒古圣体(<$STR(U100)>_8)>】</font>
+BREAK
+
+#IF
+#ACT
+TAKE <$cfg_荒古圣体(<$STR(U100)>_5)> <$cfg_荒古圣体(<$STR(U100)>_6)>
+MONEY <$cfg_荒古圣体(<$STR(U100)>_7)> - <$cfg_荒古圣体(<$STR(U100)>_8)>
+DEPRIVETITLE 荒古圣体Lv<$STR(U100)>
+INC U100 1
+CONFERTITLE 荒古圣体Lv<$STR(U100)>
+goto @main
+#call [\游戏登陆\属性加成.txt] @属性设置
+sendmsg 9 <font color='#00FF00'>升级成功</font>
+
+[@灵符提升_荒古圣体]
+#IF
+large U100 19
+#ACT
+SENDMSG 9 <font color='#00FF00'>已升满级</font>
+BREAK
+
+#IF
+checkmoney 灵符 < <$cfg_荒古圣体(<$STR(U100)>_10)>
+#ACT
+SENDMSG 9 <font color='#00FF00'>您的<$cfg_荒古圣体(<$STR(U100)>_9)>不足【<$cfg_荒古圣体(<$STR(U100)>_10)>】</font>
+BREAK
+
+#IF
+#ACT
+MONEY 灵符 - <$cfg_荒古圣体(<$STR(U100)>_10)>
+DEPRIVETITLE 荒古圣体Lv<$STR(U100)>
+INC U100 1
+CONFERTITLE 荒古圣体Lv<$STR(U100)>
+goto @main
+#call [\游戏登陆\属性加成.txt] @属性设置
+sendmsg 9 <font color='#00FF00'>升级成功</font>
+
+
+
+[@就哈哈哈哈]
 
 #OR
 CHECKTITLE 荒古圣体Lv10
@@ -390,7 +482,7 @@ OPENMERCHANTBIGDLG 1 558 1 4 0 0 1 495 2
 ; \    <☆☆☆/FCOLOR=249>  <$STR(S$荒古按钮4)>  <☆☆☆/FCOLOR=249>  <☆☆☆/FCOLOR=250>  <增加暴击，吸血，破防4%/FCOLOR=<$STR(N$颜色4)>>  <☆☆☆/FCOLOR=250>\ \
 ; \    <☆☆☆/FCOLOR=249>  <$STR(S$荒古按钮5)>  <☆☆☆/FCOLOR=249>  <☆☆☆/FCOLOR=250>  <增加暴击，吸血，破防5%/FCOLOR=<$STR(N$颜色5)>>  <☆☆☆/FCOLOR=250>\ 
 ; <━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━/FCOLOR=58>\ \
-; \                   <材料提升|249#提升条件：^-^250#1.<$STR(S$荒古材料A)>*<$STR(N$荒古材料A)>^-^250#2.元宝*<$STR(N$荒古元宝D)>/@材料提升>                          <大米提升|249#提升条件：^-^253#1.大米*<$STR(N$荒古大米D)>/@大米提升>
+; \                   <材料提升|249#提升条件：^-^250#1.<$STR(S$荒古材料A)>*<$STR(N$荒古材料A)>^-^250#2.元宝*<$STR(N$荒古元宝D)>/@材料提升>                          <灵符提升|249#提升条件：^-^253#1.灵符*<$STR(N$荒古灵符D)>/@灵符提升>
 
 
 
@@ -436,7 +528,7 @@ OPENMERCHANTBIGDLG 1 558 1 4 0 0 1 495 2
 <Text|a=0|x=556.0|y=206.0|tipsx=10|tipsy=80|color=250|size=16|text=☆☆☆>
 <Text|a=0|x=16.0|y=226.0|tipsx=10|tipsy=80|color=58|size=16|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
 <Text|a=0|x=16.0|y=250.0|tipsx=10|tipsy=80|color=255|size=16|text=材料提升|link=@材料提升>
-<Text|a=0|x=116.0|y=250.0|tipsx=10|tipsy=80|color=255|size=16|text=大米提升|link=@大米提升>
+<Text|a=0|x=116.0|y=250.0|tipsx=10|tipsy=80|color=255|size=16|text=灵符提升|link=@灵符提升>
 
 
 
@@ -468,7 +560,7 @@ OPENMERCHANTBIGDLG 1 558 1 4 0 0 1 495 2
 ; \    <☆☆☆/FCOLOR=249>  <$STR(S$荒古按钮4)>  <☆☆☆/FCOLOR=249>  <☆☆☆/FCOLOR=250>  <增加暴击，吸血，破防9%/FCOLOR=<$STR(N$颜色9)>>  <☆☆☆/FCOLOR=250>\ \
 ; \    <☆☆☆/FCOLOR=249>  <$STR(S$荒古按钮5)>  <☆☆☆/FCOLOR=249>  <☆☆☆/FCOLOR=250>  <增加暴击，吸血，破防10%/FCOLOR=<$STR(N$颜色10)>> <☆☆☆/FCOLOR=250>\ 
 ; <━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━/FCOLOR=58>\ \
-; \                   <材料提升|249#提升条件：^-^250#1.<$STR(S$荒古材料A)>*<$STR(N$荒古材料A)>^-^250#2.元宝*<$STR(N$荒古元宝D)>/@材料提升>                          <大米提升|249#提升条件：^-^253#1.大米*<$STR(N$荒古大米D)>/@大米提升>
+; \                   <材料提升|249#提升条件：^-^250#1.<$STR(S$荒古材料A)>*<$STR(N$荒古材料A)>^-^250#2.元宝*<$STR(N$荒古元宝D)>/@材料提升>                          <灵符提升|249#提升条件：^-^253#1.灵符*<$STR(N$荒古灵符D)>/@灵符提升>
 
 
 
@@ -515,7 +607,7 @@ OPENMERCHANTBIGDLG 1 558 1 4 0 0 1 495 2
 <Text|a=0|x=556.0|y=206.0|tipsx=10|tipsy=80|color=250|size=16|text=☆☆☆>
 <Text|a=0|x=16.0|y=226.0|tipsx=10|tipsy=80|color=58|size=16|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
 <Text|a=0|x=16.0|y=250.0|tipsx=10|tipsy=80|color=255|size=16|text=材料提升|link=@材料提升>
-<Text|a=0|x=116.0|y=250.0|tipsx=10|tipsy=80|color=255|size=16|text=大米提升|link=@大米提升>
+<Text|a=0|x=116.0|y=250.0|tipsx=10|tipsy=80|color=255|size=16|text=灵符提升|link=@灵符提升>
 
 
 
@@ -524,7 +616,7 @@ OPENMERCHANTBIGDLG 1 558 1 4 0 0 1 495 2
 
 
 
-[@大米提升]
+[@灵符提升]
 
 #OR
 CHECKTITLE 荒古圣体Lv20
@@ -540,15 +632,15 @@ break
 
 
 #IF
-CHECKGAMEPOINT < <$STR(N$荒古大米D)>
+checkmoney 灵符 < <$STR(N$荒古灵符D)>
 #ACT
-MESSAGEBOX 对不起，您当前账户大米不足<$STR(N$荒古大米D)>，请检查包袱！
+MESSAGEBOX 对不起，您当前账户灵符不足<$STR(N$荒古灵符D)>，请检查包袱！
 BREAK
 
 
 #IF
 #ACT
-GAMEPOINT - <$STR(N$荒古大米D)>
+MONEY 灵符 - <$STR(N$荒古灵符D)>
 DEPRIVETITLE <$STR(S$当前的荒古)>
 CONFERTITLE <$STR(S$下级的荒古)>
 MOV T8 <$STR(S$下级的荒古)>

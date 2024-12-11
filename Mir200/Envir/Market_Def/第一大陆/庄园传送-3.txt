@@ -1,4 +1,8 @@
 [@MAIN]
+#ACT
+; SENDCUSTMSG 1000 80
+; BREAK
+
 
 
 #IF
@@ -20,6 +24,7 @@ BREAK
 
 #IF
 #ACT
+; close
 MAPMOVE 摸鱼庄园 70 72
 SENDMSG 0 {[世界消息]:|151:0:1}大神「{<$USERNAME>|250:0:1}」成功进入全新地图:{「<$MapTitle>」|253:0:1}
 BREAK

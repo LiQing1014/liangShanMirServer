@@ -58,7 +58,7 @@ CONFERTITLE ÃþÓã´ïÈËLv0
 [@aaa1]
 #IF
 #ACT
-GAMEPOINT = 0
+MONEY Áé·û = 0
 GAMEDIAMOND = 0
 gamegold = 0
 GAMEGIRD = 0
@@ -71,4 +71,4 @@ GAMEGLORY = 0
 [@aaa]
 #IF
 #ACT
-GAMEPOINT + 100000
+MONEY Áé·û + 100000

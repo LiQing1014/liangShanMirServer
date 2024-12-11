@@ -1,7 +1,7 @@
 {
-    "workbench.editor.enablePreview": false,
     "files.encoding": "gb18030",
+    "workbench.editor.enablePreview": false,
     "editor.codeLens": false,
     "files.autoGuessEncoding": true,
-    "editor.snippetSuggestions": "none"
+    "editor.snippetSuggestions": "none",
 }

@@ -231,9 +231,9 @@ MOV S$当前福符 梦想成真符[V25]
 #CALL [\极品拾取鉴定\福符成长属性.txt] @福符成长属性
 MOV N$福符经验A <$STR(N$当前福符经验)>
 DIV N$福符经验A 15
-MOV N$福符大米 <$STR(N$当前福符经验)>
-DIV N$福符大米 5000
-MOV S$福符经验 当前需要：<$STR(N$福符大米)>大米升级
+MOV N$福符灵符 <$STR(N$当前福符经验)>
+DIV N$福符灵符 5000
+MOV S$福符经验 当前需要：<$STR(N$福符灵符)>灵符升级
 
 MOV N$福符元宝 <$STR(N$当前福符经验)>
 MUL N$福符元宝 2
@@ -241,14 +241,18 @@ MOV N$福符材料 <$STR(N$当前福符经验)>
 DIV N$福符材料 70000
 MOV S$福符材料 悟空宝石
 
+getdbitemfieldvalue 悟空宝石 idx S$展示物品1ID
+getdbitemfieldvalue 元宝 idx S$展示物品2ID
+
+
 MOV S$福符经验D1 ^-^251#1.元宝*<$STR(N$福符元宝)>
 MOV S$福符经验D2 ^-^146#2.<$STR(S$福符材料)>*<$STR(N$福符材料)>
 
 #IF
-EQUAL N$福符大米 0
+EQUAL N$福符灵符 0
 #Act
-MOV N$福符大米 1
-MOV S$福符经验 当前需要：<$STR(N$福符大米)>大米升级
+MOV N$福符灵符 1
+MOV S$福符经验 当前需要：<$STR(N$福符灵符)>灵符升级
 
 
 
@@ -260,8 +264,8 @@ CHECKCUSTOMITEMPROGRESSBARVALUE 9 0 0 = 30
 #ACT
 MOV N$福符经验A <$STR(N$当前福符经验)>
 DIV N$福符经验A 0
-MOV N$福符大米 <$STR(N$当前福符经验)>
-DIV N$福符大米 0
+MOV N$福符灵符 <$STR(N$当前福符经验)>
+DIV N$福符灵符 0
 MOV S$福符经验 已经满级
 
 MOV N$福符元宝 <$STR(N$当前福符经验)>
@@ -287,17 +291,35 @@ DIV N$福符经验A 10
 close
 
 #SAY
-\  
-<> <【当前福符】：/SCOLOR=161>　<“<$STR(S$当前福符)>”/SCOLOR=253>     <$STR(S$福符详情展示)>\ \
-<> <【装备介绍】：/SCOLOR=250>　<增加怪物切割和成长型的属性/SCOLOR=249>           \ \
-<> <【装备介绍】：/SCOLOR=250>　<据说拥有的人会“好运降临，好运不断”/SCOLOR=161>   　\ \
-<> <【装备介绍】：/SCOLOR=250>　<本命装备、不可交易、丢弃、爆出/SCOLOR=243>   　\ \ \
-<>　　　   <Text:材料升级福符经验|^-^250#升下一级需要条件：<$STR(S$福符经验D1)><$STR(S$福符经验D2)>^-^161#击杀怪物可以获得经验:10:-15{FCOLOR=251}/@材料一键升级>
+; \  
+; <> <【当前福符】：/SCOLOR=161>　<“<$STR(S$当前福符)>”/SCOLOR=253>     <$STR(S$福符详情展示)>\ \
+; <> <【装备介绍】：/SCOLOR=250>　<增加怪物切割和成长型的属性/SCOLOR=249>           \ \
+; <> <【装备介绍】：/SCOLOR=250>　<据说拥有的人会“好运降临，好运不断”/SCOLOR=161>   　\ \
+; <> <【装备介绍】：/SCOLOR=250>　<本命装备、不可交易、丢弃、爆出/SCOLOR=243>   　\ \ \
+; <>　　　   <Text:材料升级福符经验|^-^250#升下一级需要条件：<$STR(S$福符经验D1)><$STR(S$福符经验D2)>^-^161#击杀怪物可以获得经验:10:-15{FCOLOR=251}/@材料一键升级>
 
-<>　　　 <Text:大米升级福符经验|^-^253#<$STR(S$福符经验)>^-^250#福符经验：^-^161#击杀怪物可以获得经验:10:-15{FCOLOR=251}/@一键升级>\
+; <>　　　 <Text:灵符升级福符经验|^-^253#<$STR(S$福符经验)>^-^250#福符经验：^-^161#击杀怪物可以获得经验:10:-15{FCOLOR=251}/@一键升级>\
 
 
-
+<Img|x=0.0|y=0.0|width=750|height=506|scale9l=10|reset=1|scale9r=10|bg=1|move=0|esc=1|scale9b=10|scale9t=10|img=custom/hecheng/bs1.png|show=4>
+<Layout|x=721.0|y=2.0|width=80|height=80|link=@exit>
+<Button|x=750.0|y=0.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=209.0|y=74.0|tipsx=10|tipsy=80|color=161|size=18|text=【当前福符】：>
+<Text|a=0|x=217.0|y=110.0|tipsx=10|tipsy=80|color=250|size=18|text=<$STR(S$当前福符)>>
+<Text|a=0|x=210.0|y=303.0|tipsx=10|tipsy=80|color=161|size=18|text=【装备介绍】：>
+<Text|a=0|x=343.0|y=303.0|tipsx=10|tipsy=80|color=70|size=18|text=增加怪物切割和成长型的属性>
+<Text|a=0|x=210.0|y=328.0|tipsx=10|tipsy=80|color=161|size=18|text=【装备介绍】：>
+<Text|a=0|x=343.0|y=328.0|tipsx=10|tipsy=80|color=250|size=18|text=据说拥有的人会“好运降临，好运不断”>
+<Text|a=0|x=210.0|y=353.0|tipsx=10|tipsy=80|color=161|size=18|text=【装备介绍】：>
+<Text|a=0|x=343.0|y=353.0|tipsx=10|tipsy=80|color=249|size=18|text=本命装备、不可交易、丢弃、爆出>
+<Button|x=44.0|y=68.0|nimg=custom/button/tp9.png|color=255|size=18|text=福符锻造>
+<EquipShow|x=433.0|y=170.0|width=70|height=70|index=9|showtips=1|bgtype=0>
+<Text|x=360.0|y=15.0|color=255|size=18|text=福符锻造>
+<Button|x=288.0|y=448.0|color=255|size=18|pimg=custom/button/ann2.png|nimg=custom/button/ann1.png|text=一键注入|link=@材料一键升级>
+<Button|x=537.0|y=448.0|color=255|size=18|pimg=custom/button/ann2.png|nimg=custom/button/ann1.png|text=灵符注入|link=@一键升级>
+<ItemShow|x=268.0|y=380.0|width=70|height=70|itemid=<$str(S$展示物品1ID)>|itemcount=<$STR(N$福符材料)>|showtips=1|bgtype=1>
+<ItemShow|x=347.0|y=380.0|width=70|height=70|itemid=<$str(S$展示物品2ID)>|itemcount=<$STR(N$福符元宝)>|showtips=1|bgtype=1>
+<RText|x=544.0|y=403.0|color=255|size=18|text=<<$STR(S$福符经验)>/FCOLOR=251>>
 
 
 
@@ -407,25 +429,25 @@ BREAK
 
 
 #IF
-CHECKGAMEPOINT < <$STR(N$福符大米)>
+checkmoney 灵符 < <$STR(N$福符灵符)>
 #ACT
-MESSAGEBOX \\\对不起，您的大米不足<$STR(N$福符大米)>点
+MESSAGEBOX \\\对不起，您的灵符不足<$STR(N$福符灵符)>点
 break
 
 
 
 #or
-CHECKGAMEPOINT = <$STR(N$福符大米)>
-CHECKGAMEPOINT > <$STR(N$福符大米)>
+checkmoney 灵符 = <$STR(N$福符灵符)>
+checkmoney 灵符 > <$STR(N$福符灵符)>
 #ACT
-GAMEPOINT -  <$STR(N$福符大米)>
+MONEY 灵符 -  <$STR(N$福符灵符)>
 CHANGECUSTOMITEMPROGRESSBARVALUE 9 1 0 + <$STR(N$当前福符经验)>
 SendCenterMsg 21 0 恭喜您的福符经验增加：<$STR(N$当前福符经验)>点经验 0 3
 GOTO @MAIN
 DELAYGOTO 10  @main
 break
 #elseact
-MessageBox \\兑换失败：\\1.请检查您的账号上是否有<$STR(N$福符大米)>点大米\\
+MessageBox \\兑换失败：\\1.请检查您的账号上是否有<$STR(N$福符灵符)>点灵符\\
 break
 
 

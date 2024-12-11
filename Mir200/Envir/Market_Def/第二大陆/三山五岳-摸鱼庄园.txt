@@ -2,6 +2,11 @@
 
 #IF
 #ACT
+getdbitemfieldvalue 轩辕战盔 idx S$展示物品1ID
+getdbitemfieldvalue 轩辕战链 idx S$展示物品2ID
+getdbitemfieldvalue 轩辕战镯 idx S$展示物品3ID
+getdbitemfieldvalue 轩辕战戒 idx S$展示物品4ID
+getdbitemfieldvalue 轩辕战带 idx S$展示物品5ID
 #SAY
 ; <><┌┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┬┈┈┈┈┈┐/SCOLOR=254><>\
 ; <><︳/SCOLOR=254>  <三山五岳/SCOLOR=254><:安全区域·怪物聚集·适合挂机·安全/SCOLOR=161> <︳/SCOLOR=254> <精品原创/SCOLOR=19> <︳/SCOLOR=254><>\
@@ -10,26 +15,46 @@
 ; <><├┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┤/SCOLOR=254> <进入地图|249#进入条件：^-^250#充值达到5000点^-^250#此地图很大，是安全区，可以放心挂机/@进入地图A> <︳/SCOLOR=254><>\
 ; <><︳/SCOLOR=254>  <地图爆率/SCOLOR=250><:高级装备、高级特殊、货币材料..../SCOLOR=251>   <├┈┈┈┈┈┤/SCOLOR=254><>\
 ; <><├┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┤/SCOLOR=254> <进入地图|249#进入条件：^-^250#充值达到5000点^-^250#此地图很大，是安全区，可以放心挂机/@进入地图A> <︳/SCOLOR=254><>\
-; <><︳/SCOLOR=254>  <进入条件/SCOLOR=250><:充值点不足5000点★级怪物必爆大量大米-宝石/SCOLOR=242><>\
+; <><︳/SCOLOR=254>  <进入条件/SCOLOR=250><:充值点不足5000点★级怪物必爆大量灵符-宝石/SCOLOR=242><>\
 ; <><└┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┴┈┈┈┈┈┘/SCOLOR=254><>\
 ; <
 
-<Img|x=0.0|y=0.0|width=620|height=260|scale9t=10|scale9r=10|scale9l=10|scale9b=10|move=0|bg=1|img=public/bg_npc_04.jpg|reset=1>
+; <Img|x=0.0|y=0.0|width=620|height=260|scale9t=10|scale9r=10|scale9l=10|scale9b=10|move=0|bg=1|img=public/bg_npc_04.jpg|reset=1>
+; <Layout|x=597|y=3|width=80|height=80|link=@exit>
+; <Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+; <Text|a=0|x=34.0|y=36.0|tipsx=10|tipsy=80|color=254|size=16|text=三山五岳>
+; <Text|a=0|x=122.0|y=36.0|tipsx=10|tipsy=80|color=161|size=16|text=:安全区域·怪物聚集·适合挂机·安全>
+; <Text|a=0|x=506.0|y=36.0|tipsx=10|tipsy=80|color=19|size=16|text=精品原创>
+; <Text|a=0|x=34.0|y=76.0|tipsx=10|tipsy=80|color=250|size=16|text=BOSS地图>
+; <Text|a=0|x=122.0|y=76.0|tipsx=10|tipsy=80|color=253|size=16|text=:各种精英、BOSS系列怪物应有尽有.....>
+; <Text|a=0|x=508.0|y=96.0|tipsx=10|tipsy=80|color=251|size=16|text=进入地图|link=@进入地图A>
+; <Text|a=0|x=1497.0|y=96.0|tipsx=10|tipsy=80|color=254|size=16|text=︳>
+; <Text|a=0|x=34.0|y=116.0|tipsx=10|tipsy=80|color=250|size=16|text=地图爆率>
+; <Text|a=0|x=122.0|y=116.0|tipsx=10|tipsy=80|color=251|size=16|text=:高级装备、高级特殊、货币材料....>
+; <Text|a=0|x=508.0|y=136.0|tipsx=10|tipsy=80|color=251|size=16|text=进入地图|link=@进入地图A>
+; <Text|a=0|x=1497.0|y=136.0|tipsx=10|tipsy=80|color=254|size=16|text=︳>
+; <Text|a=0|x=34.0|y=156.0|tipsx=10|tipsy=80|color=250|size=16|text=进入条件>
+; <Text|a=0|x=122.0|y=156.0|tipsx=10|tipsy=80|color=242|size=16|text=:充值点不足5000点★级怪物必爆大量灵符-宝石>
+
+
+<Img|x=0.0|y=0.0|width=938|height=486|scale9t=10|reset=1|scale9r=10|bg=1|move=0|scale9l=10|scale9b=10|esc=1|img=custom/hecheng/cover.png|show=4>
 <Layout|x=597|y=3|width=80|height=80|link=@exit>
-<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
-<Text|a=0|x=34.0|y=36.0|tipsx=10|tipsy=80|color=254|size=16|text=三山五岳>
-<Text|a=0|x=122.0|y=36.0|tipsx=10|tipsy=80|color=161|size=16|text=:安全区域·怪物聚集·适合挂机·安全>
-<Text|a=0|x=506.0|y=36.0|tipsx=10|tipsy=80|color=19|size=16|text=精品原创>
-<Text|a=0|x=34.0|y=76.0|tipsx=10|tipsy=80|color=250|size=16|text=BOSS地图>
-<Text|a=0|x=122.0|y=76.0|tipsx=10|tipsy=80|color=253|size=16|text=:各种精英、BOSS系列怪物应有尽有.....>
-<Text|a=0|x=508.0|y=96.0|tipsx=10|tipsy=80|color=251|size=16|text=进入地图|link=@进入地图A>
-<Text|a=0|x=1497.0|y=96.0|tipsx=10|tipsy=80|color=254|size=16|text=︳>
-<Text|a=0|x=34.0|y=116.0|tipsx=10|tipsy=80|color=250|size=16|text=地图爆率>
-<Text|a=0|x=122.0|y=116.0|tipsx=10|tipsy=80|color=251|size=16|text=:高级装备、高级特殊、货币材料....>
-<Text|a=0|x=508.0|y=136.0|tipsx=10|tipsy=80|color=251|size=16|text=进入地图|link=@进入地图A>
-<Text|a=0|x=1497.0|y=136.0|tipsx=10|tipsy=80|color=254|size=16|text=︳>
-<Text|a=0|x=34.0|y=156.0|tipsx=10|tipsy=80|color=250|size=16|text=进入条件>
-<Text|a=0|x=122.0|y=156.0|tipsx=10|tipsy=80|color=242|size=16|text=:充值点不足5000点★级怪物必爆大量大米-宝石>
+<Button|x=812.0|y=14.0|nimg=custom/button/close.png|color=255|size=18|link=@exit>
+<Text|a=0|x=482.0|y=59.0|tipsx=10|tipsy=80|outline=1|size=16|color=253|text=→ → → ◆◆◆ 三山五岳 ◆◆◆ ← ← ←>
+<Text|a=0|x=470.0|y=138.0|tipsx=10|tipsy=80|outline=1|size=15|color=249|text=安全区域·怪物聚集·适合挂机·安全>
+<Text|a=0|x=470.0|y=167.0|tipsx=10|tipsy=80|outline=1|size=15|color=31|text=各种精英、BOSS系列怪物应有尽有>
+<Text|a=0|x=470.0|y=195.0|tipsx=10|tipsy=80|outline=1|size=15|color=251|text=高级装备、高级特殊、货币材料>
+<Text|a=0|x=470.0|y=225.0|tipsx=10|tipsy=80|outline=1|size=15|color=250|text=充值点5000点★级怪物必爆大量灵符-宝石>
+<Button|x=253.0|y=358.0|color=255|size=18|nimg=custom/button/button_main.png|link=@进入地图A>
+<ItemShow|x=487|y=335.0|width=70|height=70|itemid=<$STR(S$展示物品1ID)>|itemcount=1|showtips=1|bgtype=1>
+<ItemShow|x=554|y=335.0|width=70|height=70|itemid=<$STR(S$展示物品2ID)>|itemcount=1|showtips=1|bgtype=1>
+<ItemShow|x=621|y=335.0|width=70|height=70|itemid=<$STR(S$展示物品3ID)>|itemcount=1|showtips=1|bgtype=1>
+<ItemShow|x=688|y=335.0|width=70|height=70|itemid=<$STR(S$展示物品4ID)>|itemcount=1|showtips=1|bgtype=1>
+<ItemShow|x=755|y=335.0|width=70|height=70|itemid=<$STR(S$展示物品5ID)>|itemcount=1|showtips=1|bgtype=1>
+
+
+
+
 
 
 [@进入地图A]

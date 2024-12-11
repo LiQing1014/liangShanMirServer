@@ -107,11 +107,11 @@ MUL N$境界经验倍数A <$STR(N$境界倍数经验)>
 
 MOV N$境界增加经验值 <$STR(N$当前境界经验)>
 DIV N$境界增加经验值 <$STR(N$境界经验倍数A)>
-
-CHANGECUSTOMITEMPROGRESSBARVALUE 14 1 0 + <$STR(N$境界增加经验值)>
-#CALL [\极品拾取鉴定\境界成长属性.txt] @境界成长属性
-#CALL [\极品拾取鉴定\境界成长属性.txt] @境界成长属性
-ESPSendMoveCenterMsg 恭喜您，成功击杀{<$KILLMONNAME>|253}，<$STR(T7)>增加{<$STR(N$境界增加经验值)>点经验|250} 161 0 0 250 5000 0 0   
+goto @杀怪_境界经验叠加
+; CHANGECUSTOMITEMPROGRESSBARVALUE 14 1 0 + <$STR(N$境界增加经验值)>
+; #CALL [\极品拾取鉴定\境界成长属性.txt] @境界成长属性
+; #CALL [\极品拾取鉴定\境界成长属性.txt] @境界成长属性
+; SENDMSG 6 恭喜您，成功击杀{<$KILLMONNAME>|253}，<$STR(T7)>增加{<$STR(N$境界增加经验值)>点经验|250} 161 0 0 250 5000 0 0   
 BREAK
 
 
@@ -123,43 +123,89 @@ BREAK
 
 #IF
 CHECKTEXTLIST ..\QuestDiary\极品拾取鉴定\BOSS名单.txt <$KILLMONNAME>
-CheckKillSlaveName <$KILLMONNAME>
+; CheckKillSlaveName <$KILLMONNAME>
 #ACT
-MOV N$符增加经验值 <$ATTACKMONSTER_MAX_HP>
+MOV N$符增加经验值 <$ATTACKMONSTER_MAXHPEX>
 DIV N$符增加经验值 100
-CHANGECUSTOMITEMPROGRESSBARVALUE 9 1 0 + <$STR(N$符增加经验值)>
-#CALL [\极品拾取鉴定\福符成长属性.txt] @福符成长属性
-#CALL [\极品拾取鉴定\福符成长属性.txt] @福符成长属性
-ESPSendMoveCenterMsg 击杀{<$KILLMONNAME>|249}<$str(S$当前福符名字)>福符+{<$STR(N$符增加经验值)>点经验|250} 161 0 0 60 2000 0 0   
+GOTO @杀怪_福符经验叠加
+; CHANGECUSTOMITEMPROGRESSBARVALUE 9 1 0 + <$STR(N$符增加经验值)>
+; #CALL [\极品拾取鉴定\福符成长属性.txt] @福符成长属性
+; #CALL [\极品拾取鉴定\福符成长属性.txt] @福符成长属性
+; ; sendmsg 0 <$ATTACKMONSTER_MAXHPEX>
+; SENDMSG 6 击杀{<$KILLMONNAME>|249}<$str(S$当前福符名字)>福符+{<$STR(N$符增加经验值)>点经验|250}
 BREAK
 
 
 
 #IF
 CHECKTEXTLIST ..\QuestDiary\极品拾取鉴定\精英名单.txt <$KILLMONNAME>
-CheckKillSlaveName <$KILLMONNAME>
+; CheckKillSlaveName <$KILLMONNAME>
 #ACT
-MOV N$符增加经验值 <$ATTACKMONSTER_MAX_HP>
+MOV N$符增加经验值 <$ATTACKMONSTER_MAXHPEX>
 DIV N$符增加经验值 350
-CHANGECUSTOMITEMPROGRESSBARVALUE 9 1 0 + <$STR(N$符增加经验值)>
-#CALL [\极品拾取鉴定\福符成长属性.txt] @福符成长属性
-#CALL [\极品拾取鉴定\福符成长属性.txt] @福符成长属性
-ESPSendMoveCenterMsg 击杀{<$KILLMONNAME>|249}<$str(S$当前福符名字)>福符+{<$STR(N$符增加经验值)>点经验|250} 161 0 0 60 2000 0 0   
+goto @杀怪_福符经验叠加
+; CHANGECUSTOMITEMPROGRESSBARVALUE 9 1 0 + <$STR(N$符增加经验值)>
+; #CALL [\极品拾取鉴定\福符成长属性.txt] @福符成长属性
+; #CALL [\极品拾取鉴定\福符成长属性.txt] @福符成长属性
+; ; sendmsg 0 <$ATTACKMONSTER_MAXHPEX>
+; SENDMSG 6 击杀{<$KILLMONNAME>|249}<$str(S$当前福符名字)>福符+{<$STR(N$符增加经验值)>点经验|250}
 BREAK
 
 
 
 #IF
-CheckKillSlaveName <$KILLMONNAME>
+; CheckKillSlaveName <$KILLMONNAME>
 #ACT
-MOV N$符增加经验值 <$ATTACKMONSTER_MAX_HP>
+MOV N$符增加经验值 <$ATTACKMONSTER_MAXHPEX>
 DIV N$符增加经验值 2000
 INC N$符增加经验值 1
-CHANGECUSTOMITEMPROGRESSBARVALUE 9 1 0 + <$STR(N$符增加经验值)>
-#CALL [\极品拾取鉴定\福符成长属性.txt] @福符成长属性
-#CALL [\极品拾取鉴定\福符成长属性.txt] @福符成长属性
-ESPSendMoveCenterMsg 击杀{<$KILLMONNAME>|249}<$str(S$当前福符名字)>福符+{<$STR(N$符增加经验值)>点经验|250} 161 0 0 60 2000 0 0   
+; CHANGECUSTOMITEMPROGRESSBARVALUE 9 1 0 + <$STR(N$符增加经验值)>
+; #CALL [\极品拾取鉴定\福符成长属性.txt] @福符成长属性
+; #CALL [\极品拾取鉴定\福符成长属性.txt] @福符成长属性
+goto @杀怪_福符经验叠加
+; SENDMSG 6 击杀{<$KILLMONNAME>|249}<$str(S$当前福符名字)>福符+{<$STR(N$符增加经验值)>点经验|250}
+; SendCustomMsg 0 击杀{<$KILLMONNAME>|249}<$str(S$当前福符名字)>福符+{<$STR(N$符增加经验值)>点经验|250} 0 0 0 0
 BREAK
+
+; ESPSendMoveCenterMsg
+
+
+
+
+
+
+[@杀怪_福符经验叠加]
+#IF
+#ACT
+INC N$福符杀怪叠加经验 <$STR(N$符增加经验值)>
+; sendmsg 0 当前叠加经验：<$STR(N$福符杀怪叠加经验)>
+
+#IF
+LARGE N$福符杀怪叠加经验 49
+#ACT
+DEC N$福符杀怪叠加经验 50
+#CALL [\极品拾取鉴定\福符成长属性.txt] @福符成长属性
+CHANGECUSTOMITEMPROGRESSBARVALUE 9 1 0 + 1
+#CALL [\极品拾取鉴定\福符成长属性.txt] @福符成长属性
+; sendmsg 0 <$ATTACKMONSTER_MAXHPEX>
+SENDMSG 6 击杀{<$KILLMONNAME>|249}<$str(S$当前福符名字)>福符+{1点经验|250}
+
+
+
+[@杀怪_境界经验叠加]
+#IF
+#ACT
+INC N$境界杀怪经验叠加 <$STR(N$境界增加经验值)>
+
+#IF
+LARGE N$境界杀怪经验叠加 9
+#ACT
+DEC N$境界杀怪经验叠加 10
+CHANGECUSTOMITEMPROGRESSBARVALUE 14 1 0 + <$STR(N$境界增加经验值)>
+#CALL [\极品拾取鉴定\境界成长属性.txt] @境界成长属性
+#CALL [\极品拾取鉴定\境界成长属性.txt] @境界成长属性
+SENDMSG 6 恭喜您，成功击杀{<$KILLMONNAME>|253}，<$STR(T7)>增加{<$STR(N$境界增加经验值)>点经验|250} 161 0 0 250 5000 0 0   
+
 
 
 }

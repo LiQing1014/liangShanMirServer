@@ -24,7 +24,7 @@ break
 #SAY
 \ \
 <神级的武器和衣服乃是天界重宝，凡人是不配拥有的…/FCOLOR=100> <≮/FCOLOR=253><衣服互换/@衣服互换><≯/FCOLOR=253>\
-<我可以帮您把不同职业的神级剑甲进行互换，每次需要收费888大米点！！/FCOLOR=249>\ 
+<我可以帮您把不同职业的神级剑甲进行互换，每次需要收费888灵符点！！/FCOLOR=249>\ 
 <------------------------------------------------------------/SCOLOR=83>\
 　<无双·神剑换无双·魔杖/@互换1>   <无双·神剑换无双·道扇/@互换2>\
 <------------------------------------------------------------/SCOLOR=83>\
@@ -38,7 +38,7 @@ break
 #ACT
 #SAY
 <神级的武器和衣服乃是天界重宝，凡人是不配拥有的………/FCOLOR=100> \
-<我可以帮您把不同职业的神级剑甲进行互换，每次需要收费888大米点！！/FCOLOR=249>\ 
+<我可以帮您把不同职业的神级剑甲进行互换，每次需要收费888灵符点！！/FCOLOR=249>\ 
 <------------------------------------------------------------/SCOLOR=83>\
 　<无双·战甲换无双·魔袍/@衣服互换1>   <无双·战甲换无双·道袍/@衣服互换2>\
 　<无双·战衣换无双·魔衣/@衣服互换3>   <无双·战衣换无双·道衣/@衣服互换4>  \
@@ -520,9 +520,9 @@ break
 [@衣服互换12]
 #IF
 checkitem 无双·道衣 1
-CHECKGAMEPOINT > 887
+checkmoney 灵符 > 887
 #ACT
-GAMEPOINT - 888
+MONEY 灵符 - 888
 take 无双·道衣 1
 GIVE 无双·魔衣 1
 GuildNoticeMsg 255 249 ぐ恭喜【<$USERNAME>】在（原始天界）成功将《无双·道衣》互换成了《无双·魔衣》..
@@ -535,9 +535,9 @@ break
 [@衣服互换11]
 #IF
 checkitem 无双·道衣 1
-CHECKGAMEPOINT > 887
+checkmoney 灵符 > 887
 #ACT
-GAMEPOINT - 888
+MONEY 灵符 - 888
 take 无双·道衣 1
 GIVE 无双·战衣 1
 GuildNoticeMsg 255 249 ぐ恭喜【<$USERNAME>】在（原始天界）成功将《无双·道衣》互换成了《无双·战衣》..
@@ -550,9 +550,9 @@ break
 [@衣服互换10]
 #IF
 checkitem 无双·道袍 1
-CHECKGAMEPOINT > 887
+checkmoney 灵符 > 887
 #ACT
-GAMEPOINT - 888
+MONEY 灵符 - 888
 take 无双·道袍 1
 GIVE 无双·魔袍 1
 GuildNoticeMsg 255 249 ぐ恭喜【<$USERNAME>】在（原始天界）成功将《无双·道袍》互换成了《无双·魔袍》..
@@ -565,9 +565,9 @@ break
 [@衣服互换9]
 #IF
 checkitem 无双·道袍 1
-CHECKGAMEPOINT > 887
+checkmoney 灵符 > 887
 #ACT
-GAMEPOINT - 888
+MONEY 灵符 - 888
 take 无双·道袍 1
 GIVE 无双·战甲 1
 GuildNoticeMsg 255 249 ぐ恭喜【<$USERNAME>】在（原始天界）成功将《无双·道袍》互换成了《无双·战甲》..
@@ -580,9 +580,9 @@ break
 [@衣服互换8]
 #IF
 checkitem 无双·魔衣 1
-CHECKGAMEPOINT > 887
+checkmoney 灵符 > 887
 #ACT
-GAMEPOINT - 888
+MONEY 灵符 - 888
 take 无双·魔衣 1
 GIVE 无双·道衣 1
 GuildNoticeMsg 255 249 ぐ恭喜【<$USERNAME>】在（原始天界）成功将《无双·魔衣》互换成了《无双·道衣》..
@@ -595,9 +595,9 @@ break
 [@衣服互换7]
 #IF
 checkitem 无双·魔衣 1
-CHECKGAMEPOINT > 887
+checkmoney 灵符 > 887
 #ACT
-GAMEPOINT - 888
+MONEY 灵符 - 888
 take 无双·魔衣 1
 GIVE 无双·战衣 1
 GuildNoticeMsg 255 249 ぐ恭喜【<$USERNAME>】在（原始天界）成功将《无双·魔衣》互换成了《无双·战衣》..
@@ -610,9 +610,9 @@ break
 [@衣服互换6]
 #IF
 checkitem 无双·魔袍 1
-CHECKGAMEPOINT > 887
+checkmoney 灵符 > 887
 #ACT
-GAMEPOINT - 888
+MONEY 灵符 - 888
 take 无双·魔袍 1
 GIVE 无双·道袍 1
 GuildNoticeMsg 255 249 ぐ恭喜【<$USERNAME>】在（原始天界）成功将《无双·魔袍》互换成了《无双·道袍》..
@@ -625,9 +625,9 @@ break
 [@衣服互换5]
 #IF
 checkitem 无双·魔袍 1
-CHECKGAMEPOINT > 887
+checkmoney 灵符 > 887
 #ACT
-GAMEPOINT - 888
+MONEY 灵符 - 888
 take 无双·魔袍 1
 GIVE 无双·战甲 1
 GuildNoticeMsg 255 249 ぐ恭喜【<$USERNAME>】在（原始天界）成功将《无双·魔袍》互换成了《无双·战甲》..
@@ -640,9 +640,9 @@ break
 [@衣服互换4]
 #IF
 checkitem 无双·战衣 1
-CHECKGAMEPOINT > 887
+checkmoney 灵符 > 887
 #ACT
-GAMEPOINT - 888
+MONEY 灵符 - 888
 take 无双·战衣 1
 GIVE 无双·道衣 1
 GuildNoticeMsg 255 249 ぐ恭喜【<$USERNAME>】在（原始天界）成功将《无双·战衣》互换成了《无双·道衣》..
@@ -655,9 +655,9 @@ break
 [@衣服互换3]
 #IF
 checkitem 无双·战衣 1
-CHECKGAMEPOINT > 887
+checkmoney 灵符 > 887
 #ACT
-GAMEPOINT - 888
+MONEY 灵符 - 888
 take 无双·战衣 1
 GIVE 无双·魔衣 1
 GuildNoticeMsg 255 249 ぐ恭喜【<$USERNAME>】在（原始天界）成功将《无双·战衣》互换成了《无双·魔衣》..
@@ -670,9 +670,9 @@ break
 [@衣服互换2]
 #IF
 checkitem 无双·战甲 1
-CHECKGAMEPOINT > 887
+checkmoney 灵符 > 887
 #ACT
-GAMEPOINT - 888
+MONEY 灵符 - 888
 take 无双·战甲 1
 GIVE 无双·道袍 1
 GuildNoticeMsg 255 249 ぐ恭喜【<$USERNAME>】在（原始天界）成功将《无双·战甲》互换成了《无双·道袍》..
@@ -685,9 +685,9 @@ break
 [@衣服互换1]
 #IF
 checkitem 无双·战甲 1
-CHECKGAMEPOINT > 887
+checkmoney 灵符 > 887
 #ACT
-GAMEPOINT - 888
+MONEY 灵符 - 888
 take 无双·战甲 1
 GIVE 无双·魔袍 1
 GuildNoticeMsg 255 249 ぐ恭喜【<$USERNAME>】在（原始天界）成功将《无双·战甲》互换成了《无双·魔袍》..
@@ -700,9 +700,9 @@ break
 [@互换6]
 #IF
 checkitem 无双·道扇 1
-CHECKGAMEPOINT > 887
+checkmoney 灵符 > 887
 #ACT
-GAMEPOINT - 888
+MONEY 灵符 - 888
 take 无双·道扇 1
 GIVE 无双·魔杖 1
 GuildNoticeMsg 255 249 ぐ恭喜【<$USERNAME>】在（原始天界）成功将《无双·道扇》互换成了《无双·魔杖》..
@@ -715,9 +715,9 @@ break
 [@互换5]
 #IF
 checkitem 无双·道扇 1
-CHECKGAMEPOINT > 887
+checkmoney 灵符 > 887
 #ACT
-GAMEPOINT - 888
+MONEY 灵符 - 888
 take 无双·道扇 1
 GIVE 无双·神剑 1
 GuildNoticeMsg 255 249 ぐ恭喜【<$USERNAME>】在（原始天界）成功将《无双·道扇》互换成了《无双·神剑》..
@@ -730,9 +730,9 @@ break
 [@互换4]
 #IF
 checkitem 无双·魔杖 1
-CHECKGAMEPOINT > 887
+checkmoney 灵符 > 887
 #ACT
-GAMEPOINT - 888
+MONEY 灵符 - 888
 take 无双·魔杖 1
 GIVE 无双·道扇 1
 GuildNoticeMsg 255 249 ぐ恭喜【<$USERNAME>】在（原始天界）成功将《无双·魔杖》互换成了《无双·道扇》..
@@ -745,9 +745,9 @@ break
 [@互换3]
 #IF
 checkitem 无双·魔杖 1
-CHECKGAMEPOINT > 887
+checkmoney 灵符 > 887
 #ACT
-GAMEPOINT - 888
+MONEY 灵符 - 888
 take 无双·魔杖 1
 GIVE 无双·神剑 1
 GuildNoticeMsg 255 249 ぐ恭喜【<$USERNAME>】在（原始天界）成功将《无双·魔杖》互换成了《无双·神剑》..
@@ -760,9 +760,9 @@ break
 [@互换2]
 #IF
 checkitem 无双·神剑 1
-CHECKGAMEPOINT > 887
+checkmoney 灵符 > 887
 #ACT
-GAMEPOINT - 888
+MONEY 灵符 - 888
 take 无双·神剑 1
 GIVE 无双·道扇 1
 GuildNoticeMsg 255 249 ぐ恭喜【<$USERNAME>】在（原始天界）成功将《无双·神剑》互换成了《无双·道扇》..
@@ -775,9 +775,9 @@ break
 [@互换1]
 #IF
 checkitem 无双·神剑 1
-CHECKGAMEPOINT > 887
+checkmoney 灵符 > 887
 #ACT
-GAMEPOINT - 888
+MONEY 灵符 - 888
 take 无双·神剑 1
 GIVE 无双·魔杖 1
 GuildNoticeMsg 255 249 ぐ恭喜【<$USERNAME>】在（原始天界）成功将《无双·神剑》互换成了《无双·魔杖》..

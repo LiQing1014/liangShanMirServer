@@ -3,23 +3,23 @@
 {
 #IF
 #ACT
-SENDTOPCHATBOARDMSG 1 95 0 99999 {★超级福利：累计充值满100元，送|254:0}{《永久包服卡》|253:0}{→平台旗下多款游戏每天可领取50元充值~|250:0} 1
-Mov	N$通区_延迟	1
-GetStringPos	..\EffectImageList.txt		Magical.pak
-Mov	N$通区_素材	<$Str(N0)>
-ReadConfigFileItem	..\..\mdc.ini		MDC	SERVERKEY	S$平台_名称
-ReadConfigFileItem	..\..\mdc.ini		MDC	SERVERTAG	S$平台_版本
-ReadConfigFileItem	..\..\!Setup.txt	Setup	NpcMemoOffSetX		N$平台_偏移X
-ReadConfigFileItem	..\..\!Setup.txt	Setup	NpcMemoOffSetY		N$平台_偏移Y
-GetRandomText	..\..\..\..\解锁玩家.txt	S$比奇论坛
-Delaygoto		500	@加载平台_参数配置
-#if
-Equal	S$比奇论坛
-#act
-Addtextlist	..\..\..\..\解锁玩家.txt	解除转区玩家名单列表
-addtextlist		..\..\..\..\过滤验证.txt	临时上号过滤验证的玩家名字-每次登录清除一行，多次登录多写几行！
-addtextlist		..\..\..\..\装备补偿.txt	[区名:角色名]复制此两行格式写在下面-请保留此段方便以后使用
-addtextlist		..\..\..\..\装备补偿.txt	装备名:数量
+; SENDTOPCHATBOARDMSG 1 95 0 99999 {★超级福利：累计充值满100元，送|254:0}{《永久包服卡》|253:0}{→平台旗下多款游戏每天可领取50元充值~|250:0} 1
+; Mov	N$通区_延迟	1
+; GetStringPos	..\EffectImageList.txt		Magical.pak
+; Mov	N$通区_素材	<$Str(N0)>
+; ReadConfigFileItem	..\..\mdc.ini		MDC	SERVERKEY	S$平台_名称
+; ReadConfigFileItem	..\..\mdc.ini		MDC	SERVERTAG	S$平台_版本
+; ReadConfigFileItem	..\..\!Setup.txt	Setup	NpcMemoOffSetX		N$平台_偏移X
+; ReadConfigFileItem	..\..\!Setup.txt	Setup	NpcMemoOffSetY		N$平台_偏移Y
+; GetRandomText	..\..\..\..\解锁玩家.txt	S$比奇论坛
+; Delaygoto		500	@加载平台_参数配置
+; #if
+; Equal	S$比奇论坛
+; #act
+; Addtextlist	..\..\..\..\解锁玩家.txt	解除转区玩家名单列表
+; addtextlist		..\..\..\..\过滤验证.txt	临时上号过滤验证的玩家名字-每次登录清除一行，多次登录多写几行！
+; addtextlist		..\..\..\..\装备补偿.txt	[区名:角色名]复制此两行格式写在下面-请保留此段方便以后使用
+; addtextlist		..\..\..\..\装备补偿.txt	装备名:数量
 
 
 
@@ -30,7 +30,7 @@ Equal	S$平台_加载
 Not	Equal	<$STR(S$ESP版本自定义标记文本)>
 #act
 Mov	S$平台_名称	<$STR(S$ESP版本自定义标记文本)>
-ExtractString	|	<$STR(S$ESP版本自定义标记文本)>	S$平台_名称	S$无用
+GETVALIDSTRSUPER	|	<$STR(S$ESP版本自定义标记文本)>	S$平台_名称	S$无用
 Mov	S$平台_加载	已加载
 
 #If
@@ -38,7 +38,7 @@ Equal	S$平台_加载
 Not	Equal	<$STR(S$太极_版本自定义标记)>
 #act
 Mov	S$平台_名称	<$STR(S$太极_版本自定义标记)>
-ExtractString	|	<$STR(S$太极_版本自定义标记)>	S$平台_名称	S$无用
+GETVALIDSTRSUPER	|	<$STR(S$太极_版本自定义标记)>	S$平台_名称	S$无用
 Mov	S$平台_加载	已加载
 
 #If
@@ -52,7 +52,7 @@ Break
 GetStringPos ..\Questdiary\一万七网络通服功能\平台参数配置.txt		[<$Str(S$平台_名称)>]
 Inc	N0	1
 GetRandomText ..\Questdiary\一万七网络通服功能\平台参数配置.txt	S$平台_数据	<$Str(N0)>
-ExtractString	:	<$Str(S$平台_数据)>	S$平台_名称	S$平台_微信码	S$平台_企业号	S$平台_大称号1	S$平台_大称号2	S$平台_大称号Y
+GETVALIDSTRSUPER	:	<$Str(S$平台_数据)>	S$平台_名称	S$平台_微信码	S$平台_企业号	S$平台_大称号1	S$平台_大称号2	S$平台_大称号Y
 goto	@通区坐标偏移
 #If
 Equal	S$平台_微信码

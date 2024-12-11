@@ -3,9 +3,11 @@
 
 #IF
 #ACT
-MOV N$天命大米 100
+csv_read
+
+MOV N$天命灵符 100
 MOV S$天命按钮1 <天命之体Lv1/FCOLOR=251>
-; MOV S$天命按钮1 <天命之体Lv1|249#提升条件：^-^154#1.大米*<$STR(N$天命大米)>^-^254#当前大米：<$GAMEPOINT>点/FCOLOR=251>
+; MOV S$天命按钮1 <天命之体Lv1|249#提升条件：^-^154#1.灵符*<$STR(N$天命灵符)>^-^254#当前灵符：<$MONEY(灵符)>点/FCOLOR=251>
 MOV S$天命按钮2 <天命之体Lv2/FCOLOR=248>
 MOV S$天命按钮3 <天命之体Lv3/FCOLOR=248>
 MOV S$天命按钮4 <天命之体Lv4/FCOLOR=248>
@@ -17,10 +19,10 @@ MOV S$下级的天命 天命之体Lv1
 #IF
 CHECKTITLE 天命之体Lv1
 #ACT
-MOV N$天命大米 200
+MOV N$天命灵符 200
 MOV S$天命按钮1 <天命之体Lv1/FCOLOR=250>
 MOV S$天命按钮2 <天命之体Lv2/FCOLOR=251>
-; MOV S$天命按钮2 <天命之体Lv2|249#提升条件：^-^154#1.大米*<$STR(N$天命大米)>^-^254#当前大米：<$GAMEPOINT>点/FCOLOR=251>
+; MOV S$天命按钮2 <天命之体Lv2|249#提升条件：^-^154#1.灵符*<$STR(N$天命灵符)>^-^254#当前灵符：<$MONEY(灵符)>点/FCOLOR=251>
 MOV S$天命按钮3 <天命之体Lv3/FCOLOR=248>
 MOV S$天命按钮4 <天命之体Lv4/FCOLOR=248>
 MOV S$天命按钮5 <天命之体Lv5/FCOLOR=248>
@@ -32,11 +34,11 @@ MOV S$下级的天命 天命之体Lv2
 #IF
 CHECKTITLE 天命之体Lv2
 #ACT
-MOV N$天命大米 300
+MOV N$天命灵符 300
 MOV S$天命按钮1 <天命之体Lv1/FCOLOR=250>
 MOV S$天命按钮2 <天命之体Lv2/FCOLOR=250>
 MOV S$天命按钮3 <天命之体Lv3/FCOLOR=251>
-; MOV S$天命按钮3 <天命之体Lv3|249#提升条件：^-^154#1.大米*<$STR(N$天命大米)>^-^254#当前大米：<$GAMEPOINT>点/FCOLOR=251>
+; MOV S$天命按钮3 <天命之体Lv3|249#提升条件：^-^154#1.灵符*<$STR(N$天命灵符)>^-^254#当前灵符：<$MONEY(灵符)>点/FCOLOR=251>
 MOV S$天命按钮4 <天命之体Lv4/FCOLOR=248>
 MOV S$天命按钮5 <天命之体Lv5/FCOLOR=248>
 MOV S$当前天命  <天命之体Lv2/FCOLOR=254>
@@ -49,12 +51,12 @@ MOV S$下级的天命 天命之体Lv3
 #IF
 CHECKTITLE 天命之体Lv3
 #ACT
-MOV N$天命大米 400
+MOV N$天命灵符 400
 MOV S$天命按钮1 <天命之体Lv1/FCOLOR=250>
 MOV S$天命按钮2 <天命之体Lv2/FCOLOR=250>
 MOV S$天命按钮3 <天命之体Lv3/FCOLOR=250>
 MOV S$天命按钮4 <天命之体Lv4/FCOLOR=251>
-; MOV S$天命按钮4 <天命之体Lv4|249#提升条件：^-^154#1.大米*<$STR(N$天命大米)>^-^254#当前大米：<$GAMEPOINT>点/FCOLOR=251>
+; MOV S$天命按钮4 <天命之体Lv4|249#提升条件：^-^154#1.灵符*<$STR(N$天命灵符)>^-^254#当前灵符：<$MONEY(灵符)>点/FCOLOR=251>
 MOV S$天命按钮5 <天命之体Lv5/FCOLOR=248>
 MOV S$当前天命  <天命之体Lv3/FCOLOR=254>
 MOV S$当前的天命 天命之体Lv3
@@ -64,13 +66,13 @@ MOV S$下级的天命 天命之体Lv4
 #IF
 CHECKTITLE 天命之体Lv4
 #ACT
-MOV N$天命大米 500
+MOV N$天命灵符 500
 MOV S$天命按钮1 <天命之体Lv1/FCOLOR=250>
 MOV S$天命按钮2 <天命之体Lv2/FCOLOR=250>
 MOV S$天命按钮3 <天命之体Lv3/FCOLOR=250>
 MOV S$天命按钮4 <天命之体Lv4/FCOLOR=250>
 MOV S$天命按钮5 <天命之体Lv5/FCOLOR=251>
-; MOV S$天命按钮5 <天命之体Lv5|249#提升条件：^-^154#1.大米*<$STR(N$天命大米)>^-^254#当前大米：<$GAMEPOINT>点/FCOLOR=251>
+; MOV S$天命按钮5 <天命之体Lv5|249#提升条件：^-^154#1.灵符*<$STR(N$天命灵符)>^-^254#当前灵符：<$MONEY(灵符)>点/FCOLOR=251>
 MOV S$当前天命  <天命之体Lv4/FCOLOR=254>
 MOV S$当前的天命 天命之体Lv4
 MOV S$下级的天命 天命之体Lv5
@@ -80,9 +82,9 @@ MOV S$下级的天命 天命之体Lv5
 CHECKTITLE 天命之体Lv5
 #ACT
 SET [403] 1
-MOV N$天命大米 600
+MOV N$天命灵符 600
 MOV S$天命按钮1 <天命之体Lv6/FCOLOR=251>
-; MOV S$天命按钮1 <天命之体Lv6|249#提升条件：^-^154#1.大米*<$STR(N$天命大米)>^-^254#当前大米：<$GAMEPOINT>点/FCOLOR=251>
+; MOV S$天命按钮1 <天命之体Lv6|249#提升条件：^-^154#1.灵符*<$STR(N$天命灵符)>^-^254#当前灵符：<$MONEY(灵符)>点/FCOLOR=251>
 MOV S$天命按钮2 <天命之体Lv7/FCOLOR=248>
 MOV S$天命按钮3 <天命之体Lv8/FCOLOR=248>
 MOV S$天命按钮4 <天命之体Lv9/FCOLOR=248>
@@ -94,10 +96,10 @@ MOV S$下级的天命 天命之体Lv6
 #IF
 CHECKTITLE 天命之体Lv6
 #ACT
-MOV N$天命大米 700
+MOV N$天命灵符 700
 MOV S$天命按钮1 <天命之体Lv6/FCOLOR=250>
 MOV S$天命按钮2 <天命之体Lv7/FCOLOR=251>
-; MOV S$天命按钮2 <天命之体Lv7|249#提升条件：^-^154#1.大米*<$STR(N$天命大米)>^-^254#当前大米：<$GAMEPOINT>点/FCOLOR=251>
+; MOV S$天命按钮2 <天命之体Lv7|249#提升条件：^-^154#1.灵符*<$STR(N$天命灵符)>^-^254#当前灵符：<$MONEY(灵符)>点/FCOLOR=251>
 MOV S$天命按钮3 <天命之体Lv8/FCOLOR=248>
 MOV S$天命按钮4 <天命之体Lv9/FCOLOR=248>
 MOV S$天命按钮5 <天命之体Lv10/FCOLOR=248>
@@ -109,11 +111,11 @@ MOV S$下级的天命 天命之体Lv7
 #IF
 CHECKTITLE 天命之体Lv7
 #ACT
-MOV N$天命大米 800
+MOV N$天命灵符 800
 MOV S$天命按钮1 <天命之体Lv6/FCOLOR=250>
 MOV S$天命按钮2 <天命之体Lv7/FCOLOR=250>
 MOV S$天命按钮3 <天命之体Lv8/FCOLOR=251>
-; MOV S$天命按钮3 <天命之体Lv8|249#提升条件：^-^154#1.大米*<$STR(N$天命大米)>^-^254#当前大米：<$GAMEPOINT>点/FCOLOR=251>
+; MOV S$天命按钮3 <天命之体Lv8|249#提升条件：^-^154#1.灵符*<$STR(N$天命灵符)>^-^254#当前灵符：<$MONEY(灵符)>点/FCOLOR=251>
 MOV S$天命按钮4 <天命之体Lv9/FCOLOR=248>
 MOV S$天命按钮5 <天命之体Lv10/FCOLOR=248>
 MOV S$当前天命  <天命之体Lv7/FCOLOR=254>
@@ -126,12 +128,12 @@ MOV S$下级的天命 天命之体Lv8
 #IF
 CHECKTITLE 天命之体Lv8
 #ACT
-MOV N$天命大米 900
+MOV N$天命灵符 900
 MOV S$天命按钮1 <天命之体Lv6/FCOLOR=250>
 MOV S$天命按钮2 <天命之体Lv7/FCOLOR=250>
 MOV S$天命按钮3 <天命之体Lv8/FCOLOR=250>
 MOV S$天命按钮4 <天命之体Lv9/FCOLOR=251>
-; MOV S$天命按钮4 <天命之体Lv9|249#提升条件：^-^154#1.大米*<$STR(N$天命大米)>^-^254#当前大米：<$GAMEPOINT>点/FCOLOR=251>
+; MOV S$天命按钮4 <天命之体Lv9|249#提升条件：^-^154#1.灵符*<$STR(N$天命灵符)>^-^254#当前灵符：<$MONEY(灵符)>点/FCOLOR=251>
 MOV S$天命按钮5 <天命之体Lv10/FCOLOR=248>
 MOV S$当前天命  <天命之体Lv8/FCOLOR=254>
 MOV S$当前的天命 天命之体Lv8
@@ -141,13 +143,13 @@ MOV S$下级的天命 天命之体Lv9
 #IF
 CHECKTITLE 天命之体Lv9
 #ACT
-MOV N$天命大米 1000
+MOV N$天命灵符 1000
 MOV S$天命按钮1 <天命之体Lv6/FCOLOR=250>
 MOV S$天命按钮2 <天命之体Lv7/FCOLOR=250>
 MOV S$天命按钮3 <天命之体Lv8/FCOLOR=250>
 MOV S$天命按钮4 <天命之体Lv9/FCOLOR=250>
 MOV S$天命按钮5 <天命之体Lv10/FCOLOR=251>
-; MOV S$天命按钮5 <天命之体Lv10|249#提升条件：^-^154#1.大米*<$STR(N$天命大米)>^-^254#当前大米：<$GAMEPOINT>点/FCOLOR=251>
+; MOV S$天命按钮5 <天命之体Lv10|249#提升条件：^-^154#1.灵符*<$STR(N$天命灵符)>^-^254#当前灵符：<$MONEY(灵符)>点/FCOLOR=251>
 MOV S$当前天命  <天命之体Lv9/FCOLOR=254>
 MOV S$当前的天命 天命之体Lv9
 MOV S$下级的天命 天命之体Lv10
@@ -158,9 +160,9 @@ MOV S$下级的天命 天命之体Lv10
 #IF
 CHECKTITLE 天命之体Lv10
 #ACT
-MOV N$天命大米 1100
+MOV N$天命灵符 1100
 MOV S$天命按钮1 <天命之体Lv11/FCOLOR=251>
-; MOV S$天命按钮1 <天命之体Lv11|249#提升条件：^-^154#1.大米*<$STR(N$天命大米)>^-^254#当前大米：<$GAMEPOINT>点/FCOLOR=251>
+; MOV S$天命按钮1 <天命之体Lv11|249#提升条件：^-^154#1.灵符*<$STR(N$天命灵符)>^-^254#当前灵符：<$MONEY(灵符)>点/FCOLOR=251>
 MOV S$天命按钮2 <天命之体Lv12/FCOLOR=248>
 MOV S$天命按钮3 <天命之体Lv13/FCOLOR=248>
 MOV S$天命按钮4 <天命之体Lv14/FCOLOR=248>
@@ -173,10 +175,10 @@ MOV S$下级的天命 天命之体Lv11
 #IF
 CHECKTITLE 天命之体Lv11
 #ACT
-MOV N$天命大米 1200
+MOV N$天命灵符 1200
 MOV S$天命按钮1 <天命之体Lv11/FCOLOR=250>
 MOV S$天命按钮2 <天命之体Lv12/FCOLOR=251>
-; MOV S$天命按钮2 <天命之体Lv12|249#提升条件：^-^154#1.大米*<$STR(N$天命大米)>^-^254#当前大米：<$GAMEPOINT>点/FCOLOR=251>
+; MOV S$天命按钮2 <天命之体Lv12|249#提升条件：^-^154#1.灵符*<$STR(N$天命灵符)>^-^254#当前灵符：<$MONEY(灵符)>点/FCOLOR=251>
 MOV S$天命按钮3 <天命之体Lv13/FCOLOR=248>
 MOV S$天命按钮4 <天命之体Lv14/FCOLOR=248>
 MOV S$天命按钮5 <天命之体Lv15/FCOLOR=248>
@@ -189,11 +191,11 @@ MOV S$下级的天命 天命之体Lv12
 #IF
 CHECKTITLE 天命之体Lv12
 #ACT
-MOV N$天命大米 1300
+MOV N$天命灵符 1300
 MOV S$天命按钮1 <天命之体Lv11/FCOLOR=250>
 MOV S$天命按钮2 <天命之体Lv12/FCOLOR=250>
 MOV S$天命按钮3 <天命之体Lv13/FCOLOR=251>
-; MOV S$天命按钮3 <天命之体Lv13|249#提升条件：^-^154#1.大米*<$STR(N$天命大米)>^-^254#当前大米：<$GAMEPOINT>点/FCOLOR=251>
+; MOV S$天命按钮3 <天命之体Lv13|249#提升条件：^-^154#1.灵符*<$STR(N$天命灵符)>^-^254#当前灵符：<$MONEY(灵符)>点/FCOLOR=251>
 MOV S$天命按钮4 <天命之体Lv14/FCOLOR=248>
 MOV S$天命按钮5 <天命之体Lv15/FCOLOR=248>
 MOV S$当前天命  <天命之体Lv12/FCOLOR=254>
@@ -205,12 +207,12 @@ MOV S$下级的天命 天命之体Lv13
 #IF
 CHECKTITLE 天命之体Lv13
 #ACT
-MOV N$天命大米 1400
+MOV N$天命灵符 1400
 MOV S$天命按钮1 <天命之体Lv11/FCOLOR=250>
 MOV S$天命按钮2 <天命之体Lv12/FCOLOR=250>
 MOV S$天命按钮3 <天命之体Lv13/FCOLOR=250>
 MOV S$天命按钮4 <天命之体Lv14/FCOLOR=251>
-; MOV S$天命按钮4 <天命之体Lv14|249#提升条件：^-^154#1.大米*<$STR(N$天命大米)>^-^254#当前大米：<$GAMEPOINT>点/FCOLOR=251>
+; MOV S$天命按钮4 <天命之体Lv14|249#提升条件：^-^154#1.灵符*<$STR(N$天命灵符)>^-^254#当前灵符：<$MONEY(灵符)>点/FCOLOR=251>
 MOV S$天命按钮5 <天命之体Lv15/FCOLOR=248>
 MOV S$当前天命  <天命之体Lv13/FCOLOR=254>
 MOV S$当前的天命 天命之体Lv13
@@ -221,13 +223,13 @@ MOV S$下级的天命 天命之体Lv14
 #IF
 CHECKTITLE 天命之体Lv14
 #ACT
-MOV N$天命大米 1500
+MOV N$天命灵符 1500
 MOV S$天命按钮1 <天命之体Lv11/FCOLOR=250>
 MOV S$天命按钮2 <天命之体Lv12/FCOLOR=250>
 MOV S$天命按钮3 <天命之体Lv13/FCOLOR=250>
 MOV S$天命按钮4 <天命之体Lv14/FCOLOR=250>
 MOV S$天命按钮5 <天命之体Lv15/FCOLOR=251>
-; MOV S$天命按钮5 <天命之体Lv15|249#提升条件：^-^154#1.大米*<$STR(N$天命大米)>^-^254#当前大米：<$GAMEPOINT>点/FCOLOR=251>
+; MOV S$天命按钮5 <天命之体Lv15|249#提升条件：^-^154#1.灵符*<$STR(N$天命灵符)>^-^254#当前灵符：<$MONEY(灵符)>点/FCOLOR=251>
 MOV S$当前天命  <天命之体Lv14/FCOLOR=254>
 MOV S$当前的天命 天命之体Lv14
 MOV S$下级的天命 天命之体Lv15
@@ -239,9 +241,9 @@ MOV S$下级的天命 天命之体Lv15
 #IF
 CHECKTITLE 天命之体Lv15
 #ACT
-MOV N$天命大米 1600
+MOV N$天命灵符 1600
 MOV S$天命按钮1 <天命之体Lv16/FCOLOR=251>
-; MOV S$天命按钮1 <天命之体Lv16|249#提升条件：^-^154#1.大米*<$STR(N$天命大米)>^-^254#当前大米：<$GAMEPOINT>点/FCOLOR=251>
+; MOV S$天命按钮1 <天命之体Lv16|249#提升条件：^-^154#1.灵符*<$STR(N$天命灵符)>^-^254#当前灵符：<$MONEY(灵符)>点/FCOLOR=251>
 MOV S$天命按钮2 <天命之体Lv17/FCOLOR=248>
 MOV S$天命按钮3 <天命之体Lv18/FCOLOR=248>
 MOV S$天命按钮4 <天命之体Lv19/FCOLOR=248>
@@ -254,10 +256,10 @@ MOV S$下级的天命 天命之体Lv16
 #IF
 CHECKTITLE 天命之体Lv16
 #ACT
-MOV N$天命大米 1700
+MOV N$天命灵符 1700
 MOV S$天命按钮1 <天命之体Lv16/FCOLOR=250>
 MOV S$天命按钮2 <天命之体Lv17/FCOLOR=251>
-; MOV S$天命按钮2 <天命之体Lv17|249#提升条件：^-^154#1.大米*<$STR(N$天命大米)>^-^254#当前大米：<$GAMEPOINT>点/FCOLOR=251>
+; MOV S$天命按钮2 <天命之体Lv17|249#提升条件：^-^154#1.灵符*<$STR(N$天命灵符)>^-^254#当前灵符：<$MONEY(灵符)>点/FCOLOR=251>
 MOV S$天命按钮3 <天命之体Lv18/FCOLOR=248>
 MOV S$天命按钮4 <天命之体Lv19/FCOLOR=248>
 MOV S$天命按钮5 <天命之体Lv20/FCOLOR=248>
@@ -269,11 +271,11 @@ MOV S$下级的天命 天命之体Lv17
 #IF
 CHECKTITLE 天命之体Lv17
 #ACT
-MOV N$天命大米 1800
+MOV N$天命灵符 1800
 MOV S$天命按钮1 <天命之体Lv16/FCOLOR=250>
 MOV S$天命按钮2 <天命之体Lv17/FCOLOR=250>
 MOV S$天命按钮3 <天命之体Lv18/FCOLOR=251>
-; MOV S$天命按钮3 <天命之体Lv18|249#提升条件：^-^154#1.大米*<$STR(N$天命大米)>^-^254#当前大米：<$GAMEPOINT>点/FCOLOR=251>
+; MOV S$天命按钮3 <天命之体Lv18|249#提升条件：^-^154#1.灵符*<$STR(N$天命灵符)>^-^254#当前灵符：<$MONEY(灵符)>点/FCOLOR=251>
 MOV S$天命按钮4 <天命之体Lv19/FCOLOR=248>
 MOV S$天命按钮5 <天命之体Lv20/FCOLOR=248>
 MOV S$当前天命  <天命之体Lv17/FCOLOR=254>
@@ -285,12 +287,12 @@ MOV S$下级的天命 天命之体Lv18
 #IF
 CHECKTITLE 天命之体Lv18
 #ACT
-MOV N$天命大米 1900
+MOV N$天命灵符 1900
 MOV S$天命按钮1 <天命之体Lv16/FCOLOR=250>
 MOV S$天命按钮2 <天命之体Lv17/FCOLOR=250>
 MOV S$天命按钮3 <天命之体Lv18/FCOLOR=250>
 MOV S$天命按钮4 <天命之体Lv19/FCOLOR=251>
-; MOV S$天命按钮4 <天命之体Lv19|249#提升条件：^-^154#1.大米*<$STR(N$天命大米)>^-^254#当前大米：<$GAMEPOINT>点/FCOLOR=251>
+; MOV S$天命按钮4 <天命之体Lv19|249#提升条件：^-^154#1.灵符*<$STR(N$天命灵符)>^-^254#当前灵符：<$MONEY(灵符)>点/FCOLOR=251>
 MOV S$天命按钮5 <天命之体Lv20/FCOLOR=248>
 MOV S$当前天命  <天命之体Lv18/FCOLOR=254>
 MOV S$当前的天命 天命之体Lv18
@@ -302,13 +304,13 @@ MOV S$下级的天命 天命之体Lv19
 #IF
 CHECKTITLE 天命之体Lv19
 #ACT
-MOV N$天命大米 2000
+MOV N$天命灵符 2000
 MOV S$天命按钮1 <天命之体Lv16/FCOLOR=250>
 MOV S$天命按钮2 <天命之体Lv17/FCOLOR=250>
 MOV S$天命按钮3 <天命之体Lv18/FCOLOR=250>
 MOV S$天命按钮4 <天命之体Lv19/FCOLOR=250>
 MOV S$天命按钮5 <天命之体Lv20/FCOLOR=251>
-; MOV S$天命按钮5 <天命之体Lv20|249#提升条件：^-^154#1.大米*<$STR(N$天命大米)>^-^254#当前大米：<$GAMEPOINT>点/FCOLOR=251>
+; MOV S$天命按钮5 <天命之体Lv20|249#提升条件：^-^154#1.灵符*<$STR(N$天命灵符)>^-^254#当前灵符：<$MONEY(灵符)>点/FCOLOR=251>
 MOV S$当前天命  <天命之体Lv19/FCOLOR=254>
 MOV S$当前的天命 天命之体Lv19
 MOV S$下级的天命 天命之体Lv20
@@ -319,9 +321,9 @@ MOV S$下级的天命 天命之体Lv20
 #IF
 CHECKTITLE 天命之体Lv20
 #ACT
-MOV N$天命大米 2100
+MOV N$天命灵符 2100
 MOV S$天命按钮1 <天命之体Lv21/FCOLOR=251>
-; MOV S$天命按钮1 <天命之体Lv21|249#提升条件：^-^154#1.大米*<$STR(N$天命大米)>^-^254#当前大米：<$GAMEPOINT>点/FCOLOR=251>
+; MOV S$天命按钮1 <天命之体Lv21|249#提升条件：^-^154#1.灵符*<$STR(N$天命灵符)>^-^254#当前灵符：<$MONEY(灵符)>点/FCOLOR=251>
 MOV S$天命按钮2 <天命之体Lv22/FCOLOR=248>
 MOV S$天命按钮3 <天命之体Lv23/FCOLOR=248>
 MOV S$天命按钮4 <天命之体Lv24/FCOLOR=248>
@@ -335,10 +337,10 @@ MOV S$下级的天命 天命之体Lv21
 #IF
 CHECKTITLE 天命之体Lv21
 #ACT
-MOV N$天命大米 2200
+MOV N$天命灵符 2200
 MOV S$天命按钮1 <天命之体Lv21/FCOLOR=250>
 MOV S$天命按钮2 <天命之体Lv22/FCOLOR=251>
-; MOV S$天命按钮2 <天命之体Lv22|249#提升条件：^-^154#1.大米*<$STR(N$天命大米)>^-^254#当前大米：<$GAMEPOINT>点/FCOLOR=251>
+; MOV S$天命按钮2 <天命之体Lv22|249#提升条件：^-^154#1.灵符*<$STR(N$天命灵符)>^-^254#当前灵符：<$MONEY(灵符)>点/FCOLOR=251>
 MOV S$天命按钮3 <天命之体Lv23/FCOLOR=248>
 MOV S$天命按钮4 <天命之体Lv24/FCOLOR=248>
 MOV S$天命按钮5 <天命之体Lv25/FCOLOR=248>
@@ -351,11 +353,11 @@ MOV S$下级的天命 天命之体Lv22
 #IF
 CHECKTITLE 天命之体Lv22
 #ACT
-MOV N$天命大米 2300
+MOV N$天命灵符 2300
 MOV S$天命按钮1 <天命之体Lv21/FCOLOR=250>
 MOV S$天命按钮2 <天命之体Lv22/FCOLOR=250>
 MOV S$天命按钮3 <天命之体Lv23/FCOLOR=251>
-; MOV S$天命按钮3 <天命之体Lv23|249#提升条件：^-^154#1.大米*<$STR(N$天命大米)>^-^254#当前大米：<$GAMEPOINT>点/FCOLOR=251>
+; MOV S$天命按钮3 <天命之体Lv23|249#提升条件：^-^154#1.灵符*<$STR(N$天命灵符)>^-^254#当前灵符：<$MONEY(灵符)>点/FCOLOR=251>
 MOV S$天命按钮4 <天命之体Lv24/FCOLOR=248>
 MOV S$天命按钮5 <天命之体Lv25/FCOLOR=248>
 MOV S$当前天命  <天命之体Lv22/FCOLOR=254>
@@ -367,12 +369,12 @@ MOV S$下级的天命 天命之体Lv23
 #IF
 CHECKTITLE 天命之体Lv23
 #ACT
-MOV N$天命大米 2400
+MOV N$天命灵符 2400
 MOV S$天命按钮1 <天命之体Lv21/FCOLOR=250>
 MOV S$天命按钮2 <天命之体Lv22/FCOLOR=250>
 MOV S$天命按钮3 <天命之体Lv23/FCOLOR=250>
 MOV S$天命按钮4 <天命之体Lv24/FCOLOR=251>
-; MOV S$天命按钮4 <天命之体Lv24|249#提升条件：^-^154#1.大米*<$STR(N$天命大米)>^-^254#当前大米：<$GAMEPOINT>点/FCOLOR=251>
+; MOV S$天命按钮4 <天命之体Lv24|249#提升条件：^-^154#1.灵符*<$STR(N$天命灵符)>^-^254#当前灵符：<$MONEY(灵符)>点/FCOLOR=251>
 MOV S$天命按钮5 <天命之体Lv25/FCOLOR=248>
 MOV S$当前天命  <天命之体Lv23/FCOLOR=254>
 MOV S$当前的天命 天命之体Lv23
@@ -386,13 +388,13 @@ MOV S$下级的天命 天命之体Lv24
 #IF
 CHECKTITLE 天命之体Lv24
 #ACT
-MOV N$天命大米 2500
+MOV N$天命灵符 2500
 MOV S$天命按钮1 <天命之体Lv21/FCOLOR=250>
 MOV S$天命按钮2 <天命之体Lv22/FCOLOR=250>
 MOV S$天命按钮3 <天命之体Lv23/FCOLOR=250>
 MOV S$天命按钮4 <天命之体Lv24/FCOLOR=250>
 MOV S$天命按钮5 <天命之体Lv25/FCOLOR=251>
-; MOV S$天命按钮5 <天命之体Lv25|249#提升条件：^-^154#1.大米*<$STR(N$天命大米)>^-^254#当前大米：<$GAMEPOINT>点/FCOLOR=251>
+; MOV S$天命按钮5 <天命之体Lv25|249#提升条件：^-^154#1.灵符*<$STR(N$天命灵符)>^-^254#当前灵符：<$MONEY(灵符)>点/FCOLOR=251>
 MOV S$当前天命  <天命之体Lv24/FCOLOR=254>
 MOV S$当前的天命 天命之体Lv24
 MOV S$下级的天命 天命之体Lv25
@@ -401,9 +403,9 @@ MOV S$下级的天命 天命之体Lv25
 #IF
 CHECKTITLE 天命之体Lv25
 #ACT
-MOV N$天命大米 2600
+MOV N$天命灵符 2600
 MOV S$天命按钮1 <天命之体Lv26/FCOLOR=251>
-; MOV S$天命按钮1 <天命之体Lv26|249#提升条件：^-^154#1.大米*<$STR(N$天命大米)>^-^254#当前大米：<$GAMEPOINT>点/FCOLOR=251>
+; MOV S$天命按钮1 <天命之体Lv26|249#提升条件：^-^154#1.灵符*<$STR(N$天命灵符)>^-^254#当前灵符：<$MONEY(灵符)>点/FCOLOR=251>
 MOV S$天命按钮2 <天命之体Lv27/FCOLOR=248>
 MOV S$天命按钮3 <天命之体Lv28/FCOLOR=248>
 MOV S$天命按钮4 <天命之体Lv29/FCOLOR=248>
@@ -416,10 +418,10 @@ MOV S$下级的天命 天命之体Lv26
 #IF
 CHECKTITLE 天命之体Lv26
 #ACT
-MOV N$天命大米 2700
+MOV N$天命灵符 2700
 MOV S$天命按钮1 <天命之体Lv26/FCOLOR=250>
 MOV S$天命按钮2 <天命之体Lv27/FCOLOR=251>
-; MOV S$天命按钮2 <天命之体Lv27|249#提升条件：^-^154#1.大米*<$STR(N$天命大米)>^-^254#当前大米：<$GAMEPOINT>点/FCOLOR=251>
+; MOV S$天命按钮2 <天命之体Lv27|249#提升条件：^-^154#1.灵符*<$STR(N$天命灵符)>^-^254#当前灵符：<$MONEY(灵符)>点/FCOLOR=251>
 MOV S$天命按钮3 <天命之体Lv28/FCOLOR=248>
 MOV S$天命按钮4 <天命之体Lv29/FCOLOR=248>
 MOV S$天命按钮5 <天命之体Lv30/FCOLOR=248>
@@ -431,11 +433,11 @@ MOV S$下级的天命 天命之体Lv27
 #IF
 CHECKTITLE 天命之体Lv27
 #ACT
-MOV N$天命大米 2800
+MOV N$天命灵符 2800
 MOV S$天命按钮1 <天命之体Lv26/FCOLOR=250>
 MOV S$天命按钮2 <天命之体Lv27/FCOLOR=250>
 MOV S$天命按钮3 <天命之体Lv28/FCOLOR=251>
-; MOV S$天命按钮3 <天命之体Lv28|249#提升条件：^-^154#1.大米*<$STR(N$天命大米)>^-^254#当前大米：<$GAMEPOINT>点/FCOLOR=251>
+; MOV S$天命按钮3 <天命之体Lv28|249#提升条件：^-^154#1.灵符*<$STR(N$天命灵符)>^-^254#当前灵符：<$MONEY(灵符)>点/FCOLOR=251>
 MOV S$天命按钮4 <天命之体Lv29/FCOLOR=248>
 MOV S$天命按钮5 <天命之体Lv30/FCOLOR=248>
 MOV S$当前天命  <天命之体Lv27/FCOLOR=254>
@@ -447,12 +449,12 @@ MOV S$下级的天命 天命之体Lv28
 #IF
 CHECKTITLE 天命之体Lv28
 #ACT
-MOV N$天命大米 2900
+MOV N$天命灵符 2900
 MOV S$天命按钮1 <天命之体Lv26/FCOLOR=250>
 MOV S$天命按钮2 <天命之体Lv27/FCOLOR=250>
 MOV S$天命按钮3 <天命之体Lv28/FCOLOR=250>
 MOV S$天命按钮4 <天命之体Lv29/FCOLOR=251>
-; MOV S$天命按钮4 <天命之体Lv29|249#提升条件：^-^154#1.大米*<$STR(N$天命大米)>^-^254#当前大米：<$GAMEPOINT>点/FCOLOR=251>
+; MOV S$天命按钮4 <天命之体Lv29|249#提升条件：^-^154#1.灵符*<$STR(N$天命灵符)>^-^254#当前灵符：<$MONEY(灵符)>点/FCOLOR=251>
 MOV S$天命按钮5 <天命之体Lv30/FCOLOR=248>
 MOV S$当前天命  <天命之体Lv28/FCOLOR=254>
 MOV S$当前的天命 天命之体Lv28
@@ -462,13 +464,13 @@ MOV S$下级的天命 天命之体Lv29
 #IF
 CHECKTITLE 天命之体Lv29
 #ACT
-MOV N$天命大米 3000
+MOV N$天命灵符 3000
 MOV S$天命按钮1 <天命之体Lv26/FCOLOR=250>
 MOV S$天命按钮2 <天命之体Lv27/FCOLOR=250>
 MOV S$天命按钮3 <天命之体Lv28/FCOLOR=250>
 MOV S$天命按钮4 <天命之体Lv29/FCOLOR=250>
 MOV S$天命按钮5 <天命之体Lv30/FCOLOR=251>
-; MOV S$天命按钮5 <天命之体Lv30|249#提升条件：^-^154#1.大米*<$STR(N$天命大米)>^-^254#当前大米：<$GAMEPOINT>点/FCOLOR=251>
+; MOV S$天命按钮5 <天命之体Lv30|249#提升条件：^-^154#1.灵符*<$STR(N$天命灵符)>^-^254#当前灵符：<$MONEY(灵符)>点/FCOLOR=251>
 MOV S$当前天命  <天命之体Lv29/FCOLOR=254>
 MOV S$当前的天命 天命之体Lv29
 MOV S$下级的天命 天命之体Lv30
@@ -486,7 +488,7 @@ MOV N$天命材料A 0
 MOV S$天命材料B 当前天命已满
 MOV N$天命材料B 0
 MOV N$天命元宝D 0
-MOV N$天命大米 0
+MOV N$天命灵符 0
 MOV S$天命按钮1 <天命之体Lv26/FCOLOR=250>
 MOV S$天命按钮2 <天命之体Lv27/FCOLOR=250>
 MOV S$天命按钮3 <天命之体Lv28/FCOLOR=250>
@@ -497,6 +499,58 @@ MOV S$当前的天命 当前天命已满
 MOV S$下级的天命 当前天命已满
 
 
+
+
+#IF
+#SAY
+<Img|show=4|bg=1|loadDelay=0|move=1|esc=1|img=custom/hecheng/zs1.png|reset=1>
+<Layout|x=722.0|y=-17.0|width=80|height=80|link=@exit>
+<Button|x=750.0|y=0.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=89.0|y=61.0|tipsx=10|tipsy=80|outline=1|size=16|color=161|text=天命之体:>
+<Text|a=0|x=161.0|y=61.0|tipsx=10|tipsy=80|outline=1|size=16|color=250|text=是天地间最为原始和强大的体质，拥有者能够掌控天地之力>
+<Text|a=0|x=89.0|y=83.0|tipsx=10|tipsy=80|outline=1|size=16|color=161|text=功能介绍:>
+<Text|a=0|x=161.0|y=83.0|tipsx=10|tipsy=80|outline=1|size=16|color=254|text=每级增加1.01倍攻击，1.01倍血量，具备无穷的潜力和力量>
+<RText|x=113.0|y=119.0|outline=1|color=255|size=18|text=<当前：/FCOLOR=253><<$cfg_天命之体(<$STR(U101)>_1)>/FCOLOR=254>>
+<RText|x=123.0|y=188.0|outline=1|color=255|size=18|text=<暴击几率：/FCOLOR=255><+ <$cfg_天命之体(<$STR(U101)>_2)>%/FCOLOR=254>>
+<RText|x=123.0|y=230.0|outline=1|color=255|size=18|text=<忽视防御：/FCOLOR=255><+ <$cfg_天命之体(<$STR(U101)>_2)>%/FCOLOR=254>>
+<RText|x=123.0|y=272.0|outline=1|color=255|size=18|text=<人物吸血：/FCOLOR=255><+ <$cfg_天命之体(<$STR(U101)>_2)>%/FCOLOR=254>>
+<RText|x=455.0|y=119.0|outline=1|color=255|size=18|text=<下级：/FCOLOR=253><<$cfg_天命之体(<$STR(U101)>_3)>/FCOLOR=254>>
+<RText|x=461.0|y=188.0|outline=1|color=255|size=18|text=<暴击几率：/FCOLOR=255><+ <$cfg_天命之体(<$STR(U101)>_4)>%/FCOLOR=254>>
+<RText|x=461.0|y=230.0|outline=1|color=255|size=18|text=<忽视防御：/FCOLOR=255><+ <$cfg_天命之体(<$STR(U101)>_4)>%/FCOLOR=254>>
+<RText|x=461.0|y=272.0|outline=1|color=255|size=18|text=<人物吸血：/FCOLOR=255><+ <$cfg_天命之体(<$STR(U101)>_4)>%/FCOLOR=254>>
+<Button|x=336.0|y=451.0|color=251|size=18|pimg=custom/button/ann2.png|nimg=custom/button/ann1.png|text=灵符提升|link=@灵符提升_天命之体>
+<Text|a=4|x=390.0|y=421.0|color=250|size=18|text=<$cfg_天命之体(<$STR(U101)>_9)>*<$cfg_天命之体(<$STR(U101)>_10)>>
+<Text|x=328.0|y=15.0|color=255|size=18|text=天命之体>
+
+
+; <Button|x=130.0|y=450.0|color=251|size=18|pimg=custom/button/ann2.png|nimg=custom/button/ann1.png|text=材料提升|link=@材料提升_天命之体>
+
+[@灵符提升_天命之体]
+
+#IF
+LARGE U101 29
+#ACT
+SendMsg 9 <font color='#00FF00'>您当前的天命之体已经圆满，无需在升级</font>
+BREAK
+
+#IF
+checkmoney 灵符 < <$cfg_天命之体(<$STR(U101)>_10)>
+#ACT
+SENDMSG 9 <font color='#00FF00'>您的灵符不足<$cfg_天命之体(<$STR(U101)>_10)></font>
+BREAK
+
+#IF
+#ACT
+MONEY 灵符 - <$cfg_天命之体(<$STR(U101)>_10)>
+DEPRIVETITLE 天命之体Lv<$STR(U101)>
+INC U101 1
+CONFERTITLE 天命之体Lv<$STR(U101)>
+MESSAGEBOX 恭喜您，成功获得天命之体Lv<$STR(U101)>,请您再接再厉，未来可期！
+#CALL [\游戏登陆\属性加成.txt] @属性设置
+GOTO @MAIN
+BREAK
+
+[@哈哈哈哈]
 
 #IF
 CHECK [403] 0
@@ -514,7 +568,7 @@ OPENMERCHANTBIGDLG 1 558 1 4 0 0 1 495 2
 ; \    <☆☆☆/FCOLOR=249>  <$STR(S$天命按钮4)>  <☆☆☆/FCOLOR=249>  <☆☆☆/FCOLOR=250>  <增加攻击、血量1.04倍/FCOLOR=253>  <☆☆☆/FCOLOR=250>\ \
 ; \    <☆☆☆/FCOLOR=249>  <$STR(S$天命按钮5)>  <☆☆☆/FCOLOR=249>  <☆☆☆/FCOLOR=250>  <增加攻击、血量1.05倍/FCOLOR=253>  <☆☆☆/FCOLOR=250>\ 
 ; <━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━/FCOLOR=58>\ \
-; \                         <我要突破天命|249#提升条件：^-^154#大米*<$STR(N$天命大米)>^-^254#当前大米：<$GAMEPOINT>点/@大米提升>       当前大米：{<$GAMEPOINT>点/FCOLOR=254} 
+; \                         <我要突破天命|249#提升条件：^-^154#灵符*<$STR(N$天命灵符)>^-^254#当前灵符：<$MONEY(灵符)>点/@灵符提升>       当前灵符：{<$MONEY(灵符)>点/FCOLOR=254} 
 
 
 <Img|width=620|height=300|reset=1|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|scale9l=10>
@@ -558,8 +612,8 @@ OPENMERCHANTBIGDLG 1 558 1 4 0 0 1 495 2
 <Text|a=0|x=364.0|y=210.0|tipsx=10|tipsy=80|color=253|size=16|text=增加攻击、血量1.05倍>
 <Text|a=0|x=545.0|y=210.0|tipsx=10|tipsy=80|color=250|size=16|text=☆☆☆>
 <Text|a=0|x=19.0|y=230.0|tipsx=10|tipsy=80|color=58|size=16|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
-<Text|x=55.0|y=256.0|size=16|color=251|text=我要突破天命|link=@大米提升>
-<RText|x=284.0|y=255.0|color=255|size=16|text=<当前大米：/FCOLOR=255><<$GAMEPOINT>/FCOLOR=254>>
+<Text|x=55.0|y=256.0|size=16|color=251|text=我要突破天命|link=@灵符提升>
+<RText|x=284.0|y=255.0|color=255|size=16|text=<当前灵符：/FCOLOR=255><<$MONEY(灵符)>/FCOLOR=254>>
 
 
 
@@ -583,7 +637,7 @@ OPENMERCHANTBIGDLG 1 558 1 4 0 0 1 495 2
 ; \    <☆☆☆/FCOLOR=249>  <$STR(S$天命按钮4)>  <☆☆☆/FCOLOR=249>  <☆☆☆/FCOLOR=250>  <增加攻击、血量1.09倍/FCOLOR=253>  <☆☆☆/FCOLOR=250>\ \
 ; \    <☆☆☆/FCOLOR=249>  <$STR(S$天命按钮5)> <☆☆☆/FCOLOR=249>  <☆☆☆/FCOLOR=250>   <增加攻击、血量1.10倍/FCOLOR=253> <☆☆☆/FCOLOR=250>\ 
 ; <━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━/FCOLOR=58>\ \
-; \                         <我要突破天命|249#提升条件：^-^154#大米*<$STR(N$天命大米)>^-^254#当前大米：<$GAMEPOINT>点/@大米提升>       当前大米：{<$GAMEPOINT>点/FCOLOR=254} 
+; \                         <我要突破天命|249#提升条件：^-^154#灵符*<$STR(N$天命灵符)>^-^254#当前灵符：<$MONEY(灵符)>点/@灵符提升>       当前灵符：{<$MONEY(灵符)>点/FCOLOR=254} 
 
 
 <Img|width=620|height=300|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|reset=1>
@@ -627,8 +681,8 @@ OPENMERCHANTBIGDLG 1 558 1 4 0 0 1 495 2
 <Text|a=0|x=364.0|y=210.0|tipsx=10|tipsy=80|color=253|size=16|text=增加攻击、血量1.10倍>
 <Text|a=0|x=545.0|y=210.0|tipsx=10|tipsy=80|color=250|size=16|text=☆☆☆>
 <Text|a=0|x=19.0|y=230.0|tipsx=10|tipsy=80|color=58|size=16|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
-<Text|x=55.0|y=256.0|color=251|size=16|text=我要突破天命|link=@大米提升>
-<RText|x=284.0|y=255.0|color=255|size=16|text=<当前大米：/FCOLOR=255><<$GAMEPOINT>/FCOLOR=254>>
+<Text|x=55.0|y=256.0|color=251|size=16|text=我要突破天命|link=@灵符提升>
+<RText|x=284.0|y=255.0|color=255|size=16|text=<当前灵符：/FCOLOR=255><<$MONEY(灵符)>/FCOLOR=254>>
 
 
 
@@ -653,7 +707,7 @@ OPENMERCHANTBIGDLG 1 558 1 4 0 0 1 495 2
 ; \    <☆☆☆/FCOLOR=249>  <$STR(S$天命按钮4)>  <☆☆☆/FCOLOR=249>  <☆☆☆/FCOLOR=250>  <增加攻击、血量1.14倍/FCOLOR=253>  <☆☆☆/FCOLOR=250>\ \
 ; \    <☆☆☆/FCOLOR=249>  <$STR(S$天命按钮5)>  <☆☆☆/FCOLOR=249>  <☆☆☆/FCOLOR=250>  <增加攻击、血量1.15倍/FCOLOR=253>  <☆☆☆/FCOLOR=250>\ 
 ; <━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━/FCOLOR=58>\ \
-; \                         <我要突破天命|249#提升条件：^-^154#大米*<$STR(N$天命大米)>^-^254#当前大米：<$GAMEPOINT>点/@大米提升>       当前大米：{<$GAMEPOINT>点/FCOLOR=254} 
+; \                         <我要突破天命|249#提升条件：^-^154#灵符*<$STR(N$天命灵符)>^-^254#当前灵符：<$MONEY(灵符)>点/@灵符提升>       当前灵符：{<$MONEY(灵符)>点/FCOLOR=254} 
 
 
 <Img|width=620|height=300|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|reset=1>
@@ -697,8 +751,8 @@ OPENMERCHANTBIGDLG 1 558 1 4 0 0 1 495 2
 <Text|a=0|x=364.0|y=210.0|tipsx=10|tipsy=80|color=253|size=16|text=增加攻击、血量1.15倍>
 <Text|a=0|x=545.0|y=210.0|tipsx=10|tipsy=80|color=250|size=16|text=☆☆☆>
 <Text|a=0|x=19.0|y=230.0|tipsx=10|tipsy=80|color=58|size=16|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
-<Text|x=55.0|y=256.0|color=251|size=16|text=我要突破天命|link=@大米提升>
-<RText|x=284.0|y=255.0|color=255|size=16|text=<当前大米：/FCOLOR=255><<$GAMEPOINT>/FCOLOR=254>>
+<Text|x=55.0|y=256.0|color=251|size=16|text=我要突破天命|link=@灵符提升>
+<RText|x=284.0|y=255.0|color=255|size=16|text=<当前灵符：/FCOLOR=255><<$MONEY(灵符)>/FCOLOR=254>>
 
 
 
@@ -723,7 +777,7 @@ OPENMERCHANTBIGDLG 1 558 1 4 0 0 1 495 2
 ; \    <☆☆☆/FCOLOR=249>  <$STR(S$天命按钮4)>  <☆☆☆/FCOLOR=249>  <☆☆☆/FCOLOR=250>  <增加攻击、血量1.19倍/FCOLOR=253>  <☆☆☆/FCOLOR=250>\ \
 ; \    <☆☆☆/FCOLOR=249>  <$STR(S$天命按钮5)>  <☆☆☆/FCOLOR=249>  <☆☆☆/FCOLOR=250>  <增加攻击、血量1.20倍/FCOLOR=253>  <☆☆☆/FCOLOR=250>\ 
 ; <━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━/FCOLOR=58>\ \
-; \                         <我要突破天命|249#提升条件：^-^154#大米*<$STR(N$天命大米)>^-^254#当前大米：<$GAMEPOINT>点/@大米提升>       当前大米：{<$GAMEPOINT>点/FCOLOR=254} 
+; \                         <我要突破天命|249#提升条件：^-^154#灵符*<$STR(N$天命灵符)>^-^254#当前灵符：<$MONEY(灵符)>点/@灵符提升>       当前灵符：{<$MONEY(灵符)>点/FCOLOR=254} 
 
 
 
@@ -769,8 +823,8 @@ OPENMERCHANTBIGDLG 1 558 1 4 0 0 1 495 2
 <Text|a=0|x=364.0|y=210.0|tipsx=10|tipsy=80|color=253|size=16|text=增加攻击、血量1.20倍>
 <Text|a=0|x=545.0|y=210.0|tipsx=10|tipsy=80|color=250|size=16|text=☆☆☆>
 <Text|a=0|x=19.0|y=230.0|tipsx=10|tipsy=80|color=58|size=16|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
-<Text|x=55.0|y=256.0|color=251|size=16|text=我要突破天命|link=@大米提升>
-<RText|x=284.0|y=255.0|color=255|size=16|text=<当前大米：/FCOLOR=255><<$GAMEPOINT>/FCOLOR=254>>
+<Text|x=55.0|y=256.0|color=251|size=16|text=我要突破天命|link=@灵符提升>
+<RText|x=284.0|y=255.0|color=255|size=16|text=<当前灵符：/FCOLOR=255><<$MONEY(灵符)>/FCOLOR=254>>
 
 
 
@@ -795,7 +849,7 @@ OPENMERCHANTBIGDLG 1 558 1 4 0 0 1 495 2
 ; \    <☆☆☆/FCOLOR=249>  <$STR(S$天命按钮4)>  <☆☆☆/FCOLOR=249>  <☆☆☆/FCOLOR=250>  <增加攻击、血量1.24倍/FCOLOR=253>  <☆☆☆/FCOLOR=250>\ \
 ; \    <☆☆☆/FCOLOR=249>  <$STR(S$天命按钮5)>  <☆☆☆/FCOLOR=249>  <☆☆☆/FCOLOR=250>  <增加攻击、血量1.25倍/FCOLOR=253>  <☆☆☆/FCOLOR=250>\ 
 ; <━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━/FCOLOR=58>\ \
-; \                         <我要突破天命|249#提升条件：^-^154#大米*<$STR(N$天命大米)>^-^254#当前大米：<$GAMEPOINT>点/@大米提升>       当前大米：{<$GAMEPOINT>点/FCOLOR=254} 
+; \                         <我要突破天命|249#提升条件：^-^154#灵符*<$STR(N$天命灵符)>^-^254#当前灵符：<$MONEY(灵符)>点/@灵符提升>       当前灵符：{<$MONEY(灵符)>点/FCOLOR=254} 
 
 
 
@@ -840,8 +894,8 @@ OPENMERCHANTBIGDLG 1 558 1 4 0 0 1 495 2
 <Text|a=0|x=364.0|y=210.0|tipsx=10|tipsy=80|color=253|size=16|text=增加攻击、血量1.25倍>
 <Text|a=0|x=545.0|y=210.0|tipsx=10|tipsy=80|color=250|size=16|text=☆☆☆>
 <Text|a=0|x=19.0|y=230.0|tipsx=10|tipsy=80|color=58|size=16|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
-<Text|x=55.0|y=256.0|color=251|size=16|text=我要突破天命|link=@大米提升>
-<RText|x=284.0|y=255.0|color=255|size=16|text=<当前大米：/FCOLOR=255><<$GAMEPOINT>/FCOLOR=254>>
+<Text|x=55.0|y=256.0|color=251|size=16|text=我要突破天命|link=@灵符提升>
+<RText|x=284.0|y=255.0|color=255|size=16|text=<当前灵符：/FCOLOR=255><<$MONEY(灵符)>/FCOLOR=254>>
 
 
 
@@ -866,7 +920,7 @@ OPENMERCHANTBIGDLG 1 558 1 4 0 0 1 495 2
 ; \    <☆☆☆/FCOLOR=249>  <$STR(S$天命按钮4)>  <☆☆☆/FCOLOR=249>  <☆☆☆/FCOLOR=250>  <增加攻击、血量1.29倍/FCOLOR=253>  <☆☆☆/FCOLOR=250>\ \
 ; \    <☆☆☆/FCOLOR=249>  <$STR(S$天命按钮5)>  <☆☆☆/FCOLOR=249>  <☆☆☆/FCOLOR=250>  <增加攻击、血量1.30倍/FCOLOR=253>  <☆☆☆/FCOLOR=250>\ 
 ; <━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━/FCOLOR=58>\ \
-; \                         <我要突破天命|249#提升条件：^-^154#大米*<$STR(N$天命大米)>^-^254#当前大米：<$GAMEPOINT>点/@大米提升>       当前大米：{<$GAMEPOINT>点/FCOLOR=254} 
+; \                         <我要突破天命|249#提升条件：^-^154#灵符*<$STR(N$天命灵符)>^-^254#当前灵符：<$MONEY(灵符)>点/@灵符提升>       当前灵符：{<$MONEY(灵符)>点/FCOLOR=254} 
 
 
 <Img|width=620|height=300|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|reset=1>
@@ -910,11 +964,11 @@ OPENMERCHANTBIGDLG 1 558 1 4 0 0 1 495 2
 <Text|a=0|x=364.0|y=210.0|tipsx=10|tipsy=80|color=253|size=16|text=增加攻击、血量1.30倍>
 <Text|a=0|x=545.0|y=210.0|tipsx=10|tipsy=80|color=250|size=16|text=☆☆☆>
 <Text|a=0|x=19.0|y=230.0|tipsx=10|tipsy=80|color=58|size=16|text=━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━>
-<Text|x=55.0|y=256.0|color=251|size=16|text=我要突破天命|link=@大米提升>
-<RText|x=284.0|y=255.0|color=255|size=16|text=<当前大米：/FCOLOR=255><<$GAMEPOINT>/FCOLOR=254>>
+<Text|x=55.0|y=256.0|color=251|size=16|text=我要突破天命|link=@灵符提升>
+<RText|x=284.0|y=255.0|color=255|size=16|text=<当前灵符：/FCOLOR=255><<$MONEY(灵符)>/FCOLOR=254>>
 
 
-[@大米提升]
+[@灵符提升]
 
 #OR
 CHECKTITLE 天命之体Lv30
@@ -925,18 +979,18 @@ break
 
 
 #IF
-CHECKGAMEPOINT < <$STR(N$天命大米)>
+checkmoney 灵符 < <$STR(N$天命灵符)>
 #ACT
-MESSAGEBOX 对不起，您当前的大米不足<$STR(N$天命大米)>点，无法突破！
+MESSAGEBOX 对不起，您当前的灵符不足<$STR(N$天命灵符)>点，无法突破！
 BREAK
 
 
 #IF
 #ACT
-GAMEPOINT - <$STR(N$天命大米)>
+MONEY 灵符 - <$STR(N$天命灵符)>
 DEPRIVETITLE <$STR(S$当前的天命)>
 CONFERTITLE <$STR(S$下级的天命)>
-MOV T35 <$STR(S$下级的天命)>
+; MOV T35 <$STR(S$下级的天命)>
 MESSAGEBOX 恭喜您，成功获得<$STR(S$下级的天命)>,请您再接再厉，未来可期！
 #CALL [\游戏登陆\属性加成.txt] @属性设置
 GOTO @MAIN

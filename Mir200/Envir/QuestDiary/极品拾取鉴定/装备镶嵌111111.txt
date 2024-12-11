@@ -240,10 +240,10 @@ OPENMERCHANTBIGDLG 1 567 1 4 0 0 1 635 2
 ; \<生命宝石：/FCOLOR=249>   <$STR(S$生命1)> <$STR(S$生命2)> <$STR(S$生命3)> <$STR(S$生命4)> <$STR(S$生命5)><$STR(S$回收127)><←点击图标合成/FCOLOR=161>
 
 ; \ \ \
-; \<暴击宝石：/FCOLOR=249>   <$STR(S$暴击1)> <$STR(S$暴击2)> <$STR(S$暴击3)> <$STR(S$暴击4)> <$STR(S$暴击5)><$STR(S$回收128)><←点击图标合成/FCOLOR=161>             <抽奖宝石|253#99大米抽一次^-^161#随机抽取1-3级宝石^-^250#1级宝石几率：90%^-^251#2级宝石几率：7%^-^253#3级宝石几率：3%^-^254#一把开孔的锤子几率：5%^-^249#注意：抽到不满意的宝石请自行消耗/@大米宝石抽奖>
+; \<暴击宝石：/FCOLOR=249>   <$STR(S$暴击1)> <$STR(S$暴击2)> <$STR(S$暴击3)> <$STR(S$暴击4)> <$STR(S$暴击5)><$STR(S$回收128)><←点击图标合成/FCOLOR=161>             <抽奖宝石|253#99灵符抽一次^-^161#随机抽取1-3级宝石^-^250#1级宝石几率：90%^-^251#2级宝石几率：7%^-^253#3级宝石几率：3%^-^254#一把开孔的锤子几率：5%^-^249#注意：抽到不满意的宝石请自行消耗/@灵符宝石抽奖>
 
 ; \ \ \
-; \<攻伤宝石：/FCOLOR=249>   <$STR(S$攻伤1)> <$STR(S$攻伤2)> <$STR(S$攻伤3)> <$STR(S$攻伤4)> <$STR(S$攻伤5)><$STR(S$回收129)><←点击图标合成/FCOLOR=161>            <购买一把开孔的锤子|249#购买价格^250#200点大米*1个/@@InPutInteger88(注意：200点大米=一把开孔的锤子，请输入购买数量，1-100数值之间)>
+; \<攻伤宝石：/FCOLOR=249>   <$STR(S$攻伤1)> <$STR(S$攻伤2)> <$STR(S$攻伤3)> <$STR(S$攻伤4)> <$STR(S$攻伤5)><$STR(S$回收129)><←点击图标合成/FCOLOR=161>            <购买一把开孔的锤子|249#购买价格^250#200点灵符*1个/@@InPutInteger88(注意：200点灵符=一把开孔的锤子，请输入购买数量，1-100数值之间)>
 
 ; \ \ \
 ; \<吸收宝石：/FCOLOR=249>   <$STR(S$吸收1)> <$STR(S$吸收2)> <$STR(S$吸收3)> <$STR(S$吸收4)> <$STR(S$吸收5)><$STR(S$回收130)><←点击图标合成/FCOLOR=161>           <一键回收宝石|250#一级宝石：5000元宝^-^251#二级宝石：20000元宝^-^253#三级宝石：50000元宝^-^249#注意：请将保留的宝石先存放仓库，回收后概不负责/@一键回收宝石>                       
@@ -330,12 +330,12 @@ OPENMERCHANTBIGDLG 1 567 1 4 0 0 1 635 2
 <ItemShow|x=305.0|y=535.0|width=70|height=70|itemid=<$STR(N$吸收Idx5)>|itemcount=1|scale=0.7|showtips=1|bgtype=1|link=@合成五级吸收>
 <CheckBox|x=376.0|y=553.0|nimg=public/1900000550.png|checkboxid=1|pimg=public/1900000551.png|default=1>
 <Text|x=411.0|y=556.0|color=255|size=18|text=点击图标合成>
-<Button|x=544.0|y=400.0|nimg=public/1900000612.png|color=250|size=18|text=抽奖宝石|link=@大米宝石抽奖>
+<Button|x=544.0|y=400.0|nimg=public/1900000612.png|color=250|size=18|text=抽奖宝石|link=@灵符宝石抽奖>
 <Button|x=544.0|y=482.0|nimg=public/1900000612.png|color=250|size=18|text=购买锤子|link=@装备镶嵌啊#购买宝石=1>
 <Button|x=544.0|y=545.0|nimg=public/1900000612.png|color=250|size=18|text=一键回收|link=@一键回收宝石>
 <Button|x=654.0|y=398.0|color=255|size=18|nimg=public/1900001024.png>
 <Button|x=654.0|y=544.0|color=255|size=18|nimg=public/1900001024.png>
-<Text|x=544.0|y=456.0|color=251|size=18|text=200大米*1个>
+<Text|x=544.0|y=456.0|color=251|size=18|text=200灵符*1个>
 
 
 
@@ -367,11 +367,11 @@ mov S$购买宝石
 ; <Text|a=0|x=32.0|y=675.0|tipsx=10|tipsy=80|color=249|size=18|text=暴击宝石：>
 ; <Text|a=0|x=142.0|y=675.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(S$暴击1)> <$STR(S$暴击2)> <$STR(S$暴击3)> <$STR(S$暴击4)> <$STR(S$暴击5)><$STR(S$回收128)>>
 ; <Text|a=0|x=1198.0|y=675.0|tipsx=10|tipsy=80|color=161|size=18|text=←点击图标合成>
-; <Text|a=0|x=1352.0|y=675.0|tipsx=10|tipsy=80|color=251|size=18|text=抽奖宝石|link=@大米宝石抽奖>
+; <Text|a=0|x=1352.0|y=675.0|tipsx=10|tipsy=80|color=251|size=18|text=抽奖宝石|link=@灵符宝石抽奖>
 ; <Text|a=0|x=32.0|y=755.0|tipsx=10|tipsy=80|color=249|size=18|text=攻伤宝石：>
 ; <Text|a=0|x=142.0|y=755.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(S$攻伤1)> <$STR(S$攻伤2)> <$STR(S$攻伤3)> <$STR(S$攻伤4)> <$STR(S$攻伤5)><$STR(S$回收129)>>
 ; <Text|a=0|x=1198.0|y=755.0|tipsx=10|tipsy=80|color=161|size=18|text=←点击图标合成>
-; <Text|a=0|x=1352.0|y=755.0|tipsx=10|tipsy=80|color=251|size=18|text=购买一把开孔的锤子|link=@@InPutInteger88(注意：200点大米=一把开孔的锤子，请输入购买数量，1-100数值之间)>
+; <Text|a=0|x=1352.0|y=755.0|tipsx=10|tipsy=80|color=251|size=18|text=购买一把开孔的锤子|link=@@InPutInteger88(注意：200点灵符=一把开孔的锤子，请输入购买数量，1-100数值之间)>
 ; <Text|a=0|x=32.0|y=835.0|tipsx=10|tipsy=80|color=249|size=18|text=吸收宝石：>
 ; <Text|a=0|x=142.0|y=835.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(S$吸收1)> <$STR(S$吸收2)> <$STR(S$吸收3)> <$STR(S$吸收4)> <$STR(S$吸收5)><$STR(S$回收130)>>
 ; <Text|a=0|x=1198.0|y=835.0|tipsx=10|tipsy=80|color=161|size=18|text=←点击图标合成>
@@ -431,21 +431,21 @@ MUL N87 200
 
 
 #IF
-CHECKGAMEPOINT < <$STR(N87)>
+checkmoney 灵符 < <$STR(N87)>
 #ACT
-messagebox \\对不起，您包袱里的大米不够<$STR(N87)>，无法购买！！
+messagebox \\对不起，您包袱里的灵符不够<$STR(N87)>，无法购买！！
 BREAK
 
 
 
 
 #or
-CHECKGAMEPOINT > <$STR(N87)>
-CHECKGAMEPOINT = <$STR(N87)>
+checkmoney 灵符 > <$STR(N87)>
+checkmoney 灵符 = <$STR(N87)>
 #ACT
-GAMEPOINT - <$STR(N87)>
+MONEY 灵符 - <$STR(N87)>
 GiveStateItem <$Str(S$给材料)> <$NPCINPUT(3)> 1 1 0 0 1 1 0 1
-MessageBox \\恭喜您，用<$STR(N87)>大米购买获得：(<$NPCINPUT(3)>)个<$Str(S$给材料)>
+MessageBox \\恭喜您，用<$STR(N87)>灵符购买获得：(<$NPCINPUT(3)>)个<$Str(S$给材料)>
 goto @货币兑换
 break
 
@@ -594,7 +594,7 @@ goto @装备镶嵌啊
 
 
 
-[@大米宝石抽奖]
+[@灵符宝石抽奖]
 
 #IF
 NOT CHECKBAGSIZE  6
@@ -603,14 +603,14 @@ MESSAGEBOX [失败]:\　\　　　　　　您的“包袱位置”不足“6个”空位置！
 break
 
 #IF
-CHECKGAMEPOINT < 99
+checkmoney 灵符 < 99
 #ACT
-MESSAGEBOX 对不起，您当前账户大米不足99点，请及时充值！
+MESSAGEBOX 对不起，您当前账户灵符不足99点，请及时充值！
 BREAK
 
 #IF
 #ACT
-GAMEPOINT - 99
+MONEY 灵符 - 99
 GetRandomText ..\QuestDiary\全部通用限时\抽奖宝石.txt S$随机给宝石奖励
 GIVE <$Str(S$随机给宝石奖励)> 1
 SendCenterMsg 253 0 恭喜您，成功通过抽奖获得：<$Str(S$随机给宝石奖励)> 0 3

@@ -8,6 +8,12 @@ messagebox [提示]：你的等级不足60级，无法查看!
 break
 
 #IF
+CHECKLEVELEX > 64
+#ACT
+messagebox [提示]：当前大陆已升满，请前往下一大陆升级!
+break
+
+#IF
 #ACT
 MOV N$下级 <$LEVEL>
 INC N$下级 1
@@ -20,7 +26,7 @@ MOV S$免费条件  梦想神石*50+元宝*500W
 MOV S$免费条件1 梦想神石
 MOV N$免费条件1 50
 MOV N$免费元宝2 5000000
-MOV S$收费条件 大米*300
+MOV S$收费条件 灵符*300
 MOV N$收费条件 300
 
 
@@ -32,7 +38,7 @@ MOV S$免费条件  梦想神石*60+元宝*600W
 MOV S$免费条件1 梦想神石
 MOV N$免费条件1 60
 MOV N$免费元宝2 6000000
-MOV S$收费条件 大米*400
+MOV S$收费条件 灵符*400
 MOV N$收费条件 400
 
 
@@ -43,7 +49,7 @@ MOV S$免费条件  梦想神石*80+元宝*800W
 MOV S$免费条件1 梦想神石
 MOV N$免费条件1 80
 MOV N$免费元宝2 8000000
-MOV S$收费条件 大米*600
+MOV S$收费条件 灵符*600
 MOV N$收费条件 600
 
 
@@ -54,7 +60,7 @@ MOV S$免费条件  梦想神石*100+元宝*1000W
 MOV S$免费条件1 梦想神石
 MOV N$免费条件1 100
 MOV N$免费元宝2 10000000
-MOV S$收费条件 大米*700
+MOV S$收费条件 灵符*700
 MOV N$收费条件 700
 
 
@@ -66,7 +72,7 @@ MOV S$免费条件  梦想神石*150+元宝*1500W
 MOV S$免费条件1 梦想神石
 MOV N$免费条件1 150
 MOV N$免费元宝2 15000000
-MOV S$收费条件 大米*800
+MOV S$收费条件 灵符*800
 MOV N$收费条件 800
 
 
@@ -78,7 +84,7 @@ MOV S$免费条件  梦想神石*150+元宝*1500W
 MOV S$免费条件1 梦想神石
 MOV N$免费条件1 150
 MOV N$免费元宝2 15000000
-MOV S$收费条件 大米*1200
+MOV S$收费条件 灵符*1200
 MOV N$收费条件 1200
 
 #IF
@@ -88,7 +94,7 @@ MOV S$免费条件  梦想神石*150+元宝*1500W
 MOV S$免费条件1 梦想神石
 MOV N$免费条件1 150
 MOV N$免费元宝2 15000000
-MOV S$收费条件 大米*1200
+MOV S$收费条件 灵符*1200
 MOV N$收费条件 1200
 
 
@@ -99,7 +105,7 @@ MOV S$免费条件  梦想神石*150+元宝*1500W
 MOV S$免费条件1 梦想神石
 MOV N$免费条件1 150
 MOV N$免费元宝2 15000000
-MOV S$收费条件 大米*1200
+MOV S$收费条件 灵符*1200
 MOV N$收费条件 1200
 
 
@@ -112,7 +118,7 @@ MOV S$免费条件  梦想神石*150+元宝*1500W
 MOV S$免费条件1 梦想神石
 MOV N$免费条件1 150
 MOV N$免费元宝2 15000000
-MOV S$收费条件 大米*1200
+MOV S$收费条件 灵符*1200
 MOV N$收费条件 1200
 
 
@@ -124,7 +130,7 @@ MOV S$免费条件  梦想神石*70+元宝*700W
 MOV S$免费条件1 梦想神石
 MOV N$免费条件1 70
 MOV N$免费元宝2 7000000
-MOV S$收费条件 大米*600
+MOV S$收费条件 灵符*600
 MOV N$收费条件 600
 
 
@@ -144,44 +150,55 @@ MOV N$收费条件 0
 
 
 #IF
-CHECKLEVELEX < 65
+; CHECKLEVELEX < 65
 #ACT
-close
+; close
 #SAY
 ; \<><在蓝月复古的世界中，要通过不断修炼和突破来追求更强大的力量/SCOLOR=161>  \  
 ; \<><等级是向上进化时必然的经历过程。欲要无敌，必冲开所有的枷锁/SCOLOR=161>  \  
 ; \<><当前等级：/SCOLOR=250>{<$LEVEL>级/SCOLOR=254}　     {突破枷锁到：/SCOLOR=161}{〖<$STR(N$下级)>〗级/SCOLOR=249}\ \
 ; <><材料突破:/SCOLOR=161>< <$STR(S$免费条件)>/SCOLOR=250>   \  \
-; <><大米突破:/SCOLOR=161>< <$STR(S$收费条件)>/SCOLOR=253>  \ \ 
-; \             <材料突破①|250#提升条件：^-^161#1.<$str(S$免费条件1)><$str(n$免费条件1)>^-^161#2.元宝*<$str(N$免费元宝2)>/@材料突破>                    <大米突破②|250#提升要求：^-^254#<$str(s$收费条件)>/@大米突破>       \ 
+; <><灵符突破:/SCOLOR=161>< <$STR(S$收费条件)>/SCOLOR=253>  \ \ 
+; \             <材料突破①|250#提升条件：^-^161#1.<$str(S$免费条件1)><$str(n$免费条件1)>^-^161#2.元宝*<$str(N$免费元宝2)>/@材料突破>                    <灵符突破②|250#提升要求：^-^254#<$str(s$收费条件)>/@灵符突破>       \ 
 
-<Img|width=620|height=300|reset=1|scale9l=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|esc=1|scale9t=10>
-<Layout|x=597|y=3|width=80|height=80|link=@exit>
-<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
-<Text|a=0|x=32.0|y=28.0|tipsx=10|tipsy=80|color=161|size=18|text=在蓝月复古的世界中，要通过不断修炼和突破来追求更强大的力量>
-<Text|a=0|x=32.0|y=68.0|tipsx=10|tipsy=80|color=161|size=18|text=等级是向上进化时必然的经历过程。欲要无敌，必冲开所有的枷锁>
-<Text|a=0|x=32.0|y=108.0|tipsx=10|tipsy=80|color=250|size=18|text=当前等级：<$LEVEL>级>
-<Text|a=0|x=32.0|y=148.0|tipsx=10|tipsy=80|color=161|size=18|text=材料突破:<$STR(S$免费条件)>>
-<Text|a=0|x=32.0|y=188.0|tipsx=10|tipsy=80|color=161|size=18|text=大米突破:<$STR(S$收费条件)>>
-<Text|a=0|x=32.0|y=248.0|tipsx=10|tipsy=80|color=255|size=18|text=材料突破①|link=@材料突破>
-<Text|a=0|x=232.0|y=248.0|tipsx=10|tipsy=80|color=255|size=18|text=大米突破②|link=@大米突破>
+; <Img|width=620|height=300|reset=1|scale9l=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|esc=1|scale9t=10>
+; <Layout|x=597|y=3|width=80|height=80|link=@exit>
+; <Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+; <Text|a=0|x=32.0|y=28.0|tipsx=10|tipsy=80|color=161|size=18|text=在蓝月复古的世界中，要通过不断修炼和突破来追求更强大的力量>
+; <Text|a=0|x=32.0|y=68.0|tipsx=10|tipsy=80|color=161|size=18|text=等级是向上进化时必然的经历过程。欲要无敌，必冲开所有的枷锁>
+; <Text|a=0|x=32.0|y=108.0|tipsx=10|tipsy=80|color=250|size=18|text=当前等级：<$LEVEL>级>
+; <Text|a=0|x=32.0|y=148.0|tipsx=10|tipsy=80|color=161|size=18|text=材料突破:<$STR(S$免费条件)>>
+; <Text|a=0|x=32.0|y=188.0|tipsx=10|tipsy=80|color=161|size=18|text=灵符突破:<$STR(S$收费条件)>>
+; <Text|a=0|x=32.0|y=248.0|tipsx=10|tipsy=80|color=255|size=18|text=材料突破①|link=@材料突破>
+; <Text|a=0|x=232.0|y=248.0|tipsx=10|tipsy=80|color=255|size=18|text=灵符突破②|link=@灵符突破>
 
 
-#IF
-CHECKLEVELEX > 64
-#ACT
-close
-#SAY
-; \ \
-; 　　　　　　<你的等级已满！请前往下个地方提升/SCOLOR=250>  \ \ 
-; 　　　　　　<你的等级已满！请前往下个地方提升/SCOLOR=250>  \ \ 
-; 　　　　　　<你的等级已满！请前往下个地方提升/SCOLOR=250>  \ \ 
-<Img|width=620|height=300|img=public/bg_npc_04.jpg|bg=1|scale9r=10|scale9t=10|scale9b=10|reset=1|scale9l=10|move=0>
-<Layout|x=597|y=3|width=80|height=80|link=@exit>
-<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
-<Text|a=0|x=32|y=100|tips=|tipsx=10|tipsy=80|color=250|size=18|text=你的等级已满！请前往下个地方提升>
-<Text|a=0|x=32|y=140|tips=|tipsx=10|tipsy=80|color=250|size=18|text=你的等级已满！请前往下个地方提升>
-<Text|a=0|x=32|y=180|tips=|tipsx=10|tipsy=80|color=250|size=18|text=你的等级已满！请前往下个地方提升>
+<Img|show=4|bg=1|loadDelay=1|move=0|esc=1|img=custom/hecheng/sgq1.png|reset=1>
+<Layout|x=719.0|y=-18.0|width=80|height=80|link=@exit>
+<Button|x=748.0|y=0.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|x=371.0|y=16.0|color=255|size=18|text=等级提升>
+<Text|a=0|x=381.0|y=60.0|width=350|tipsx=10|tipsy=80|color=161|size=18|text=在蓝月复古的世界中，要通过不断修炼和突破来追求更强大的力量>
+<Text|a=0|x=381.0|y=109.0|width=350|tipsx=10|tipsy=80|color=161|size=18|text=等级是向上进化时必然的经历过程。欲要无敌，必冲开所有的枷锁>
+<Text|a=0|x=411.0|y=171.0|tipsx=10|tipsy=80|color=250|size=18|text=当前等级：<$LEVEL>级>
+<Text|a=0|x=411.0|y=203.0|tipsx=10|tipsy=80|color=161|size=18|text=材料突破:<$STR(S$免费条件)>>
+<Text|a=0|x=411.0|y=233.0|tipsx=10|tipsy=80|color=161|size=18|text=灵符突破:<$STR(S$收费条件)>>
+<Button|x=423.0|y=305.0|color=251|size=18|pimg=custom/button/ann2.png|nimg=custom/button/ann1.png|text=材料突破|link=@材料突破>
+<Button|x=593.0|y=305.0|color=251|size=18|pimg=custom/button/ann2.png|nimg=custom/button/ann1.png|text=灵符突破|link=@灵符突破>
+
+
+
+
+; #IF
+; CHECKLEVELEX > 64
+; #ACT
+; close
+; #SAY
+; <Img|width=620|height=300|img=public/bg_npc_04.jpg|bg=1|scale9r=10|scale9t=10|scale9b=10|reset=1|scale9l=10|move=0>
+; <Layout|x=597|y=3|width=80|height=80|link=@exit>
+; <Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+; <Text|a=0|x=32|y=100|tips=|tipsx=10|tipsy=80|color=250|size=18|text=你的等级已满！请前往下个地方提升>
+; <Text|a=0|x=32|y=140|tips=|tipsx=10|tipsy=80|color=250|size=18|text=你的等级已满！请前往下个地方提升>
+; <Text|a=0|x=32|y=180|tips=|tipsx=10|tipsy=80|color=250|size=18|text=你的等级已满！请前往下个地方提升>
 
 
 
@@ -220,7 +237,7 @@ break
 
 
 
-[@大米突破]
+[@灵符突破]
 #IF
 CHECKLEVELEX > 64
 #ACT
@@ -229,9 +246,9 @@ BREAK
 
 
 #IF
-CHECKGAMEPOINT < <$STR(N$收费条件)>
+checkmoney 灵符 < <$STR(N$收费条件)>
 #ACT
-MESSAGEBOX 对不起，您账户上的大米不够<$str(n$收费条件)>个
+MESSAGEBOX 对不起，您账户上的灵符不够<$str(n$收费条件)>个
 BREAK
 
 
@@ -239,7 +256,7 @@ BREAK
 #IF
 CHECKLEVELEX < 65
 #ACT
-GAMEPOINT - <$STR(N$收费条件)>
+MONEY 灵符 - <$STR(N$收费条件)>
 CHANGELEVEL + 1
 goto @main
 SENDMSG 7 [提示]：恭喜您，人物等级提升1级

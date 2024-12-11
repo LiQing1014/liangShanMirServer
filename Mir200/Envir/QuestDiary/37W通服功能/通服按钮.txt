@@ -44,12 +44,12 @@ ADDBUTTON <$Str(N$补丁编号)> 64 70 71 70 <$str(N$挂机按钮X)>	<$str(N$挂机按钮Y)>
 CHECK [171] 0
 #ACT
 ADDBUTTON <$Str(N$补丁编号)> 65 64 65 64 <$str(N$捡物按钮X)>	<$str(N$捡物按钮Y)> 0 -1 \249/自动拾取：关闭\250/点击开启\-\254/领微信礼包后激活此功能
-StartElf 0
-STARTPICKUP
+; StartElf 0
+; STARTPICKUP
 #elseact
 ADDBUTTON <$Str(N$补丁编号)> 65 66 67 66 <$str(N$捡物按钮X)>	<$str(N$捡物按钮Y)> 0 -1 \251/自动拾取：开启\250/点击关闭\-\254/领微信礼包后激活此功能
-StartElf 1
-STARTPICKUP
+; StartElf 1
+; STARTPICKUP
 
 
 

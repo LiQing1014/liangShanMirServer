@@ -154,16 +154,16 @@ MESSAGEBOX 当前角色拥有：<$str(U61)>点转区点，转区成功后此账号冻结无法登陆\　\你
 
 
 [@验证成功执行转区]
-#IF
-转区申请 <$STR(T22)> <$str(U61)>
-#ACT
-SET [172] 1
-MOV <$str(U61)> 0
-MESSAGEBOX <$STR(S1)>
-KICK 
-#ELSEACT
-MESSAGEBOX <$STR(S1)>
-BREAK
+; #IF
+; 转区申请 <$STR(T22)> <$str(U61)>
+; #ACT
+; SET [172] 1
+; MOV <$str(U61)> 0
+; MESSAGEBOX <$STR(S1)>
+; KICK 
+; #ELSEACT
+; MESSAGEBOX <$STR(S1)>
+; BREAK
 
 
 [@领取转区数据]
@@ -173,14 +173,14 @@ CheckContainsText <$SERVERNAME> 测试
 MESSAGEBOX 测试区禁止使用本功能。
 break
 
-#IF
-转区领取 <$STR(T22)> <$str(S7)>
-#ACT
-MOV N$领取转区点 <$STR(S2)>
-goto @转区异常检测
-#ELSEACT
-MESSAGEBOX <$STR(S1)>
-BREAK
+; #IF
+; 转区领取 <$STR(T22)> <$str(S7)>
+; #ACT
+; MOV N$领取转区点 <$STR(S2)>
+; goto @转区异常检测
+; #ELSEACT
+; MESSAGEBOX <$STR(S1)>
+; BREAK
 
 
 [@转区异常检测]
@@ -197,7 +197,7 @@ GOTO @自助转区
 #ELSEACT
 kick
 MESSAGEBOX 系统检测你非法操作，已将你剔出游戏！
-AddTextListEx ..\..\..\..\37W包服功能\转区异常.txt 微信ID：<$STR(T1)>|操作数量：<$STR(N$领取转区点)>
+
 
 
 

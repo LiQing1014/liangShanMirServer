@@ -4,7 +4,7 @@
 close
 #say
 ; \  \ 
-; <><Hot~/SCOLOR=250> <◇◆/SCOLOR=22>  <1.76独家复古绿色公益三职业传奇欢迎您/AUTOCOLOR=161,250,251,254,249>  <◆◇/SCOLOR=22>\
+; <><Hot~/SCOLOR=250> <◇◆/SCOLOR=22>  <1.76炫光复古绿色公益三职业传奇欢迎您/AUTOCOLOR=161,250,251,254,249>  <◆◇/SCOLOR=22>\
 ; <> <------------------------------------------------------------/SCOLOR=13>\
 
 ; <> <主要怪物:/FCOLOR=7><恶灵僵尸，骷髅刀斧手，骷髅锤兵，黄泉教主[BOSS]/FCOLOR=230>\
@@ -19,7 +19,7 @@ close
 <Button|x=530.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
 <Text|a=0|x=17.0|y=36.0|tipsx=10|tipsy=80|color=250|size=16|text=Hot~>
 <Text|a=0|x=61.0|y=36.0|tipsx=10|tipsy=80|color=22|size=16|text=◇◆>
-<Text|a=0|x=105.0|y=36.0|tipsx=10|tipsy=80|color=161,250,251,254,249|size=16|text=1.76独家复古绿色公益三职业传奇欢迎您>
+<Text|a=0|x=105.0|y=36.0|tipsx=10|tipsy=80|color=161,250,251,254,249|size=16|text=1.76炫光复古绿色公益三职业传奇欢迎您>
 <Text|a=0|x=410.0|y=36.0|tipsx=10|tipsy=80|color=22|size=16|text=◆◇>
 <Text|a=0|x=17.0|y=56.0|tipsx=10|tipsy=80|color=13|size=16|text=------------------------------------------------------------------------------>
 <Text|a=0|x=17.0|y=76.0|tipsx=10|tipsy=80|color=7|size=16|text=主要怪物:>

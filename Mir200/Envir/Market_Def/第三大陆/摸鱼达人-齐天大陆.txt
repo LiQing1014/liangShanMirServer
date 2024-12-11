@@ -206,9 +206,9 @@ OPENMERCHANTBIGDLG 1 562 1 0 0 0 1 440 0
 
 \ \
 
-\{购买摸鱼值池：/SCOLOR=161}{<$STR(N$可购买摸鱼点)>点/SCOLOR=250} <我要购买|249#购买事项：^-^250#1.可购买摸鱼池大于500点才能购买^-^253#2.购买条件：1大米=500摸鱼值^-^249#3.购买多少摸鱼值，可购买的池就越少/@@InPutInteger18(可购买<$STR(N$可购买摸鱼点)>点，1大米=500摸鱼值,请输入购买的大米数，拥有大米：<$GAMEPOINT>点)>
+\{购买摸鱼值池：/SCOLOR=161}{<$STR(N$可购买摸鱼点)>点/SCOLOR=250} <我要购买|249#购买事项：^-^250#1.可购买摸鱼池大于500点才能购买^-^253#2.购买条件：1灵符=500摸鱼值^-^249#3.购买多少摸鱼值，可购买的池就越少/@@InPutInteger18(可购买<$STR(N$可购买摸鱼点)>点，1灵符=500摸鱼值,请输入购买的灵符数，拥有灵符：<$MONEY(灵符)>点)>
 <> <>   
-{出售摸鱼值池：/SCOLOR=161}{<$STR(N$可出售摸鱼值)>点/SCOLOR=249} <我要出售|249#出售事项：^-^250#1.可出售摸鱼池大于1000点才能出售^-^253#2.出售条件：1000点摸鱼值=1大米^-^249#3.出售多少摸鱼值，可购买的池就越多/@@InPutInteger19(可出售<$STR(N$可出售摸鱼值)>点，1000点摸鱼值=1大米,请输入出售的大米数，拥有：<$GAMEGLORY>点)>
+{出售摸鱼值池：/SCOLOR=161}{<$STR(N$可出售摸鱼值)>点/SCOLOR=249} <我要出售|249#出售事项：^-^250#1.可出售摸鱼池大于1000点才能出售^-^253#2.出售条件：1000点摸鱼值=1灵符^-^249#3.出售多少摸鱼值，可购买的池就越多/@@InPutInteger19(可出售<$STR(N$可出售摸鱼值)>点，1000点摸鱼值=1灵符,请输入出售的灵符数，拥有：<$GAMEGLORY>点)>
 
 
 
@@ -265,9 +265,9 @@ CHECKGAMEGLORY > N73
 #ACT
 INC G310 <$STR(N19)>
 DEC G311 <$STR(N19)>
-GAMEPOINT + <$STR(N19)>
+MONEY 灵符 + <$STR(N19)>
 GAMEGLORY - <$STR(N73)>
-MessageBox \\恭喜您，出售<$STR(N73)>点摸鱼值，获得：<$STR(N19)>大米
+MessageBox \\恭喜您，出售<$STR(N73)>点摸鱼值，获得：<$STR(N19)>灵符
 goto @MAIN
 break
 
@@ -319,20 +319,20 @@ MUL N74 1
 
 
 #IF
-CHECKGAMEPOINT < <$STR(N74)>
+checkmoney 灵符 < <$STR(N74)>
 #ACT
-MESSAGEBOX \\\您的账户上大米不足:<$STR(N74)>点
+MESSAGEBOX \\\您的账户上灵符不足:<$STR(N74)>点
 break
 
 #or
-CHECKGAMEPOINT = N74
-CHECKGAMEPOINT > N74
+checkmoney 灵符 = N74
+checkmoney 灵符 > N74
 #ACT
 DEC G310 <$STR(N74)>
 INC G311 <$STR(N74)>
-GAMEPOINT - <$STR(N74)>
+MONEY 灵符 - <$STR(N74)>
 GAMEGLORY + <$STR(N73)>
-MessageBox \\恭喜您，用<$STR(N74)>大米购买获得：<$STR(N73)>摸鱼值
+MessageBox \\恭喜您，用<$STR(N74)>灵符购买获得：<$STR(N73)>摸鱼值
 goto @MAIN
 break
 

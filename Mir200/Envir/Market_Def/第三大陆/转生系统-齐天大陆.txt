@@ -14,7 +14,7 @@ MOV S$免费条件  {天命宝盘*10/FCOLOR=251}+元宝*500W
 MOV S$免费条件1 天命宝盘
 MOV N$免费条件1 10
 MOV N$免费元宝2 5000000
-MOV S$收费条件 大米*888
+MOV S$收费条件 灵符*888
 MOV N$收费条件 888
 MOV N$材料颜色 251
 MOV N$转身属性点 140
@@ -26,7 +26,7 @@ MOV S$免费条件  {天命宝盘*10/FCOLOR=251}+元宝*500W
 MOV S$免费条件1 天命宝盘
 MOV N$免费条件1 10
 MOV N$免费元宝2 5000000
-MOV S$收费条件 大米*888
+MOV S$收费条件 灵符*888
 MOV N$收费条件 888
 MOV N$材料颜色 251
 MOV N$转身属性点 150
@@ -38,7 +38,7 @@ MOV S$免费条件  {天命宝盘*10/FCOLOR=251}+元宝*500W
 MOV S$免费条件1 天命宝盘
 MOV N$免费条件1 10
 MOV N$免费元宝2 5000000
-MOV S$收费条件 大米*888
+MOV S$收费条件 灵符*888
 MOV N$收费条件 888
 MOV N$材料颜色 251
 MOV N$转身属性点 160
@@ -50,7 +50,7 @@ MOV S$免费条件  {天命宝盘*10/FCOLOR=251}+元宝*500W
 MOV S$免费条件1 天命宝盘
 MOV N$免费条件1 10
 MOV N$免费元宝2 5000000
-MOV S$收费条件 大米*888
+MOV S$收费条件 灵符*888
 MOV N$收费条件 888
 MOV N$材料颜色 251
 MOV N$转身属性点 170
@@ -62,7 +62,7 @@ MOV S$免费条件  {天命宝盘*10/FCOLOR=251}+元宝*500W
 MOV S$免费条件1 天命宝盘
 MOV N$免费条件1 10
 MOV N$免费元宝2 5000000
-MOV S$收费条件 大米*888
+MOV S$收费条件 灵符*888
 MOV N$收费条件 888
 MOV N$材料颜色 251
 MOV N$转身属性点 180
@@ -74,7 +74,7 @@ MOV S$免费条件  {天命宝盘*10/FCOLOR=251}+元宝*500W
 MOV S$免费条件1 天命宝盘
 MOV N$免费条件1 10
 MOV N$免费元宝2 5000000
-MOV S$收费条件 大米*888
+MOV S$收费条件 灵符*888
 MOV N$收费条件 888
 MOV N$材料颜色 251
 MOV N$转身属性点 190
@@ -86,7 +86,7 @@ MOV S$免费条件  {天命宝盘*10/FCOLOR=251}+元宝*500W
 MOV S$免费条件1 天命宝盘
 MOV N$免费条件1 10
 MOV N$免费元宝2 5000000
-MOV S$收费条件 大米*888
+MOV S$收费条件 灵符*888
 MOV N$收费条件 888
 MOV N$材料颜色 251
 MOV N$转身属性点 200
@@ -98,7 +98,7 @@ MOV S$免费条件  {天命宝盘*10/FCOLOR=251}+元宝*500W
 MOV S$免费条件1 天命宝盘
 MOV N$免费条件1 10
 MOV N$免费元宝2 5000000
-MOV S$收费条件 大米*888
+MOV S$收费条件 灵符*888
 MOV N$收费条件 888
 MOV N$材料颜色 251
 MOV N$转身属性点 210
@@ -110,7 +110,7 @@ MOV S$免费条件  {天命宝盘*10/FCOLOR=251}+元宝*500W
 MOV S$免费条件1 天命宝盘
 MOV N$免费条件1 10
 MOV N$免费元宝2 5000000
-MOV S$收费条件 大米*888
+MOV S$收费条件 灵符*888
 MOV N$收费条件 888
 MOV N$材料颜色 251
 MOV N$转身属性点 220
@@ -122,7 +122,7 @@ MOV S$免费条件  {天命宝盘*10/FCOLOR=251}+元宝*500W
 MOV S$免费条件1 天命宝盘
 MOV N$免费条件1 10
 MOV N$免费元宝2 5000000
-MOV S$收费条件 大米*888
+MOV S$收费条件 灵符*888
 MOV N$收费条件 888
 MOV N$材料颜色 251
 MOV N$转身属性点 250
@@ -138,14 +138,14 @@ MOV S$击杀怪物 已完成转生任务
 MOV N$击杀怪物 0
 MOV S$击杀怪物1 已完成转生任务
 MOV N$击杀怪物1 0
-MOV S$转身大米数量 已完成转生任务
-MOV N$转身大米数量 0
+MOV S$转身灵符数量 已完成转生任务
+MOV N$转身灵符数量 0
 MOV N$击杀怪物5 0
 MOV N$击杀怪物6 0
 MOV N$转身属性点 0
 
 
-MOV S$免费条件  <已完成转生任务
+MOV S$免费条件  已完成转生任务
 MOV S$免费条件1 已完成转生任务
 MOV N$免费条件1 0
 MOV N$免费元宝2 0
@@ -171,56 +171,62 @@ close
 ; <><问鼎极限要求:/FCOLOR=161><$STR(S$免费条件)>/FCOLOR=255>   \  \
 
 
-; \             <我要突破极限转生|250#提升条件：^-^<$str(N$材料颜色)>#1.<$str(S$免费条件1)>*<$str(n$免费条件1)>^-^161#2.元宝*<$str(N$免费元宝2)>/@突破转生>              <大米突破②|250#提升要求：^-^254#<$str(s$收费条件)>/@大米突破转生>             \ 
+; \             <我要突破极限转生|250#提升条件：^-^<$str(N$材料颜色)>#1.<$str(S$免费条件1)>*<$str(n$免费条件1)>^-^161#2.元宝*<$str(N$免费元宝2)>/@突破转生>              <灵符突破②|250#提升要求：^-^254#<$str(s$收费条件)>/@灵符突破转生>             \ 
 
 
 
-<Img|width=620|height=300|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|reset=1>
-<Layout|x=597|y=3|width=80|height=80|link=@exit>
-<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
-<Text|a=0|x=24.0|y=21.0|tipsx=10|tipsy=80|color=161|size=16|text=很久很久以前：世界本是一块大陆，在大陆的中心有一颗世界之树>
-<Text|a=0|x=24.0|y=61.0|tipsx=10|tipsy=80|color=161|size=16|text=树上结有三样物品，它们分别是：>
-<Text|a=0|x=265.0|y=61.0|tipsx=10|tipsy=80|color=251|size=16|text=天命宝盘>
-<Text|a=0|x=329.0|y=61.0|tipsx=10|tipsy=80|color=255|size=16|text=，>
-<Text|a=0|x=348.0|y=61.0|tipsx=10|tipsy=80|color=250|size=16|text=轮回竹叶>
-<Text|a=0|x=409.0|y=61.0|tipsx=10|tipsy=80|color=255|size=16|text=，>
-<Text|a=0|x=427.0|y=61.0|tipsx=10|tipsy=80|color=253|size=16|text=命运莲花>
-<Text|a=0|x=24.0|y=101.0|tipsx=10|tipsy=80|color=161|size=16|text=传闻得此三宝可有机缘问鼎最高的道之域境的极限转生。>
-<Text|a=0|x=24.0|y=141.0|tipsx=10|tipsy=80|color=249|size=16|text=------------------------------------------------------------->
-<Text|a=0|x=24.0|y=161.0|tipsx=10|tipsy=80|color=161|size=16|text=您当前：>
-<Text|a=0|x=24.0|y=201.0|tipsx=10|tipsy=80|color=161|size=16|text=问鼎极限要求:>
-<Text|x=95.0|y=161.0|color=253|size=16|text=<$RELEVEL>转>
-<RText|x=141.0|y=201.0|color=255|size=16|text=<$STR(S$免费条件)>>
-<Text|x=76.0|y=248.0|color=255|size=16|text=我要突破极限转生|link=@突破转生>
-<Text|x=314.0|y=248.0|color=255|size=16|text=大米突破②|link=@大米突破转生>
+; <Img|width=620|height=300|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|reset=1>
+; <Layout|x=597|y=3|width=80|height=80|link=@exit>
+; <Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+; <Text|a=0|x=24.0|y=21.0|tipsx=10|tipsy=80|color=161|size=16|text=很久很久以前：世界本是一块大陆，在大陆的中心有一颗世界之树>
+; <Text|a=0|x=24.0|y=61.0|tipsx=10|tipsy=80|color=161|size=16|text=树上结有三样物品，它们分别是：>
+; <Text|a=0|x=265.0|y=61.0|tipsx=10|tipsy=80|color=251|size=16|text=天命宝盘>
+; <Text|a=0|x=329.0|y=61.0|tipsx=10|tipsy=80|color=255|size=16|text=，>
+; <Text|a=0|x=348.0|y=61.0|tipsx=10|tipsy=80|color=250|size=16|text=轮回竹叶>
+; <Text|a=0|x=409.0|y=61.0|tipsx=10|tipsy=80|color=255|size=16|text=，>
+; <Text|a=0|x=427.0|y=61.0|tipsx=10|tipsy=80|color=253|size=16|text=命运莲花>
+; <Text|a=0|x=24.0|y=101.0|tipsx=10|tipsy=80|color=161|size=16|text=传闻得此三宝可有机缘问鼎最高的道之域境的极限转生。>
+; <Text|a=0|x=24.0|y=141.0|tipsx=10|tipsy=80|color=249|size=16|text=------------------------------------------------------------->
+; <Text|a=0|x=24.0|y=161.0|tipsx=10|tipsy=80|color=161|size=16|text=您当前：>
+; <Text|a=0|x=24.0|y=201.0|tipsx=10|tipsy=80|color=161|size=16|text=问鼎极限要求:>
+; <Text|x=95.0|y=161.0|color=253|size=16|text=<$RELEVEL>转>
+; <RText|x=141.0|y=201.0|color=255|size=16|text=<$STR(S$免费条件)>>
+; <Text|x=76.0|y=248.0|color=255|size=16|text=我要突破极限转生|link=@突破转生>
+; <Text|x=314.0|y=248.0|color=255|size=16|text=灵符突破②|link=@灵符突破转生>
 
 ; <Text|a=0|x=175|y=260|tipsx=10|tipsy=80|color=255|size=16|text=<$STR(S$免费条件)>/FCOLOR=255>
 ; <Text|a=0|x=32|y=320|tipsx=10|tipsy=80|color=255|size=16|text=#1.<$str(S$免费条件1)>*<$str(n$免费条件1)>^-^161#2.元宝*<$str(N$免费元宝2)>/@突破转生>              >
-; <Text|a=0|x=978|y=320|tipsx=10|tipsy=80|color=255|size=16|text=/@大米突破转生>
+; <Text|a=0|x=978|y=320|tipsx=10|tipsy=80|color=255|size=16|text=/@灵符突破转生>
 
 
 
 
-; <Img|width=620|height=250|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|reset=1>
-; <Layout|x=597|y=3|width=80|height=80|link=@exit>
-; <Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
-; <Text|a=0|x=26.0|y=34.0|tipsx=10|tipsy=80|color=254|size=16|text=转生：>
-; <Text|a=0|x=92.0|y=34.0|tipsx=10|tipsy=80|color=70|size=16|text=可以让角色获得新生,实现实力的飞跃和蜕变>
-; <Text|a=0|x=472.0|y=34.0|tipsx=10|tipsy=80|color=161|size=16|text=您当前：<$RELEVEL>转>
-; <Text|a=0|x=26.0|y=74.0|tipsx=10|tipsy=80|color=161|size=16|text=当前要求①：>
-; <Text|a=0|x=120.0|y=74.0|tipsx=10|tipsy=80|color=254|size=16|text=击杀<$STR(N$击杀怪物)>只<$STR(T20)>>
-; <Text|a=0|x=340.0|y=74.0|tipsx=10|tipsy=80|color=250|size=16|text=当前已经击杀：<$STR(U80)>只>
-; <Text|a=0|x=26.0|y=114.0|tipsx=10|tipsy=80|color=161|size=16|text=当前要求②：>
-; <Text|a=0|x=120.0|y=114.0|tipsx=10|tipsy=80|color=254|size=16|text=击杀<$STR(N$击杀怪物1)>只<$STR(T21)>>
-; <Text|a=0|x=340.0|y=114.0|tipsx=10|tipsy=80|color=250|size=16|text=当前已经击杀：<$STR(U81)>只>
-; <Text|a=0|x=26.0|y=154.0|tipsx=10|tipsy=80|color=255|size=16|text=下阶转生奖励自由属性：>
-; <RText|a=0|x=210.0|y=154.0|tipsx=10|tipsy=80|color=255|size=16|text=<<$STR(N$转身属性点)>点/FCOLOR=249>>
-; <Text|a=0|x=26.0|y=194.0|tips={当前转生条件：/FCOLOR=243}^{1：击杀[<$STR(N$击杀怪物)>]只<$STR(T20)>，已击杀<$STR(U80)>只}^{2：击杀[<$STR(N$击杀怪物1)>]只<$STR(T21)>，已击杀<$STR(U81)>只/FCOLOR=250}|tipsx=84|tipsy=105|color=251|size=16|text=我要转生|link=@进行转生>
-; <Text|a=0|x=144.0|y=194.0|tips={当前转生条件：/FCOLOR=243}^{1：击杀[<$STR(N$击杀怪物5)>]只<$STR(T20)>，已击杀<$STR(U80)>只}^{2：击杀[<$STR(N$击杀怪物6)>]只<$STR(T21)>，已击杀<$STR(U81)>只/FCOLOR=250}^{3:<$STR(S$转身大米数量)>}|tipsx=84|tipsy=105|color=251|size=16|text=快速转生|link=@大米转生>
-; <Button|x=438.0|y=191.0|color=250|size=16|nimg=public/1900000612.png|text=属性点分配|link=@打开面板>
+<Img|x=0.0|y=0.0|show=4|scale9r=10|scale9l=10|esc=1|bg=1|scale9b=10|move=0|reset=1|img=custom/hecheng/sgq1.png|scale9t=10>
+<Layout|x=720.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=750.0|y=0.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=398.0|y=174.0|tipsx=10|tipsy=80|color=161|size=16|outline=1|text=您当前：<$RELEVEL>转>
+<Text|x=398.0|y=205.0|color=255|size=16|outline=1|text=普通升级要求>
+<Text|x=336.0|y=15.0|color=251|size=18|outline=1|text=转生使者>
+<Button|x=559.0|y=430.0|color=255|size=16|pimg=custom/button/ann2.png|nimg=custom/button/ann1.png|text=普通转生|link=@进行转生>
+<Button|x=404.0|y=430.0|color=255|size=16|pimg=custom/button/ann2.png|nimg=custom/button/ann1.png|text=快速转生|link=@灵符转生>
+<Text|a=0|x=400.0|y=53.0|width=350|tipsx=10|tipsy=80|color=161|size=16|outline=1|text=很久很久以前：世界本是一块大陆，在大陆的中心有一颗世界之树>
+<Text|a=0|x=398.0|y=97.0|tipsx=10|tipsy=80|color=161|size=16|outline=1|text=树上结有三样物品，它们分别是：>
+<Text|a=0|x=398.0|y=117.0|tipsx=10|tipsy=80|color=251|size=16|outline=1|text=天命宝盘>
+<Text|a=0|x=464.0|y=117.0|tipsx=10|tipsy=80|color=255|size=16|outline=1|text=，>
+<Text|a=0|x=483.0|y=117.0|tipsx=10|tipsy=80|color=250|size=16|outline=1|text=轮回竹叶>
+<Text|a=0|x=544.0|y=117.0|tipsx=10|tipsy=80|color=255|size=16|outline=1|text=，>
+<Text|a=0|x=562.0|y=117.0|tipsx=10|tipsy=80|color=253|size=16|outline=1|text=命运莲花>
+<Text|a=0|x=398.0|y=140.0|width=350|tipsx=10|tipsy=80|color=161|size=16|outline=1|text=传闻得此三宝可有机缘问鼎最高的极限转生。>
+<RText|a=0|x=398.0|y=232.0|tipsx=10|tipsy=80|color=255|size=16|outline=1|text=<$STR(S$免费条件)>>
+<Text|x=401.0|y=263.0|color=250|size=16|outline=1|text=灵符突破>
+<RText|x=398.0|y=297.0|color=252|size=16|outline=1|text=<1.<$str(S$免费条件1)>*<$str(n$免费条件1)>/FCOLOR=252>>
+<RText|x=398.0|y=325.0|color=253|size=16|outline=1|text=<2.元宝*<$str(N$免费元宝2)>/FCOLOR=253>>
 
 
-[@大米突破转生]
+
+
+
+[@灵符突破转生]
 
 #IF
 Checkrenewlevel > 29
@@ -230,9 +236,9 @@ BREAK
 
 
 #IF
-CHECKGAMEPOINT < <$STR(N$收费条件)>
+checkmoney 灵符 < <$STR(N$收费条件)>
 #ACT
-MESSAGEBOX 对不起，您账户上的大米不够<$str(n$收费条件)>个
+MESSAGEBOX 对不起，您账户上的灵符不够<$str(n$收费条件)>个
 BREAK
 
 
@@ -242,7 +248,7 @@ BREAK
 
 #IF
 #act
-GAMEPOINT - <$STR(N$收费条件)>
+MONEY 灵符 - <$STR(N$收费条件)>
 RENEWLEVEL 1 0 0
 MOV U80 0
 MOV U81 0

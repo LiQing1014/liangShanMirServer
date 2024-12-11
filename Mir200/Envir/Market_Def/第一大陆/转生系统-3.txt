@@ -2,8 +2,8 @@
 #if
 equal <$SERVERIDX> 1881
 #act
-mov U80 1
-mov U81 1
+; mov U80 1
+; mov U81 1
 
 #IF
 Checkrenewlevel > 9
@@ -20,8 +20,8 @@ MOV S$击杀怪物 <$STR(T20)>
 MOV N$击杀怪物 10
 MOV S$击杀怪物1 <$STR(T21)>
 MOV N$击杀怪物1 30
-MOV S$转身大米数量 10大米
-MOV N$转身大米数量 10
+MOV S$转身灵符数量 10灵符
+MOV N$转身灵符数量 10
 MOV N$转身属性点 20
 MOV N$击杀怪物5 1
 MOV N$击杀怪物6 1
@@ -35,8 +35,8 @@ MOV S$击杀怪物 <$STR(T20)>
 MOV N$击杀怪物 10
 MOV S$击杀怪物1 <$STR(T21)>
 MOV N$击杀怪物1 30
-MOV S$转身大米数量 30大米
-MOV N$转身大米数量 30
+MOV S$转身灵符数量 30灵符
+MOV N$转身灵符数量 30
 MOV N$转身属性点 25
 MOV N$击杀怪物5 1
 MOV N$击杀怪物6 1
@@ -51,8 +51,8 @@ MOV S$击杀怪物 <$STR(T20)>
 MOV N$击杀怪物 10
 MOV S$击杀怪物1 <$STR(T21)>
 MOV N$击杀怪物1 30
-MOV S$转身大米数量 50大米
-MOV N$转身大米数量 50
+MOV S$转身灵符数量 50灵符
+MOV N$转身灵符数量 50
 MOV N$转身属性点 30
 MOV N$击杀怪物5 1
 MOV N$击杀怪物6 1
@@ -66,8 +66,8 @@ MOV S$击杀怪物 <$STR(T20)>
 MOV N$击杀怪物 10
 MOV S$击杀怪物1 <$STR(T21)>
 MOV N$击杀怪物1 30
-MOV S$转身大米数量 70大米
-MOV N$转身大米数量 70
+MOV S$转身灵符数量 70灵符
+MOV N$转身灵符数量 70
 MOV N$转身属性点 35
 MOV N$击杀怪物5 1
 MOV N$击杀怪物6 1
@@ -81,8 +81,8 @@ MOV S$击杀怪物 <$STR(T20)>
 MOV N$击杀怪物 10
 MOV S$击杀怪物1 <$STR(T21)>
 MOV N$击杀怪物1 30
-MOV S$转身大米数量 100大米
-MOV N$转身大米数量 100
+MOV S$转身灵符数量 100灵符
+MOV N$转身灵符数量 100
 MOV N$转身属性点 40
 MOV N$击杀怪物5 1
 MOV N$击杀怪物6 1
@@ -96,8 +96,8 @@ MOV S$击杀怪物 <$STR(T20)>
 MOV N$击杀怪物 10
 MOV S$击杀怪物1 <$STR(T21)>
 MOV N$击杀怪物1 30
-MOV S$转身大米数量 130大米
-MOV N$转身大米数量 130
+MOV S$转身灵符数量 130灵符
+MOV N$转身灵符数量 130
 MOV N$转身属性点 45
 MOV N$击杀怪物5 1
 MOV N$击杀怪物6 1
@@ -112,8 +112,8 @@ MOV S$击杀怪物 <$STR(T20)>
 MOV N$击杀怪物 10
 MOV S$击杀怪物1 <$STR(T21)>
 MOV N$击杀怪物1 30
-MOV S$转身大米数量 150大米
-MOV N$转身大米数量 150
+MOV S$转身灵符数量 150灵符
+MOV N$转身灵符数量 150
 MOV N$转身属性点 50
 MOV N$击杀怪物5 1
 MOV N$击杀怪物6 1
@@ -127,8 +127,8 @@ MOV S$击杀怪物 <$STR(T20)>
 MOV N$击杀怪物 10
 MOV S$击杀怪物1 <$STR(T21)>
 MOV N$击杀怪物1 30
-MOV S$转身大米数量 180大米
-MOV N$转身大米数量 180
+MOV S$转身灵符数量 180灵符
+MOV N$转身灵符数量 180
 MOV N$转身属性点 55
 MOV N$击杀怪物5 1
 MOV N$击杀怪物6 1
@@ -142,8 +142,8 @@ MOV S$击杀怪物 <$STR(T20)>
 MOV N$击杀怪物 10
 MOV S$击杀怪物1 <$STR(T21)>
 MOV N$击杀怪物1 30
-MOV S$转身大米数量 200大米
-MOV N$转身大米数量 200
+MOV S$转身灵符数量 200灵符
+MOV N$转身灵符数量 200
 MOV N$转身属性点 60
 MOV N$击杀怪物5 1
 MOV N$击杀怪物6 1
@@ -157,8 +157,8 @@ MOV S$击杀怪物 <$STR(T20)>
 MOV N$击杀怪物 10
 MOV S$击杀怪物1 <$STR(T21)>
 MOV N$击杀怪物1 30
-MOV S$转身大米数量 250大米
-MOV N$转身大米数量 250
+MOV S$转身灵符数量 250灵符
+MOV N$转身灵符数量 250
 MOV N$击杀怪物5 1
 MOV N$击杀怪物6 1
 MOV N$转身属性点 65
@@ -175,8 +175,8 @@ MOV S$击杀怪物 已完成转生任务
 MOV N$击杀怪物 0
 MOV S$击杀怪物1 已完成转生任务
 MOV N$击杀怪物1 0
-MOV S$转身大米数量 已完成转生任务
-MOV N$转身大米数量 0
+MOV S$转身灵符数量 已完成转生任务
+MOV N$转身灵符数量 0
 MOV N$击杀怪物5 0
 MOV N$击杀怪物6 0
 MOV N$转身属性点 0
@@ -194,32 +194,50 @@ close
 ; <><下阶转生奖励自由属性：/SCOLOR=255> < <$STR(N$转身属性点)>点/SCOLOR=249>\ \  
 
 ; <>                <我要转生|161#当前转生条件：^-^249#1：击杀[<$STR(N$击杀怪物)>]只<$STR(T20)>，已击杀<$STR(U80)>只^-^250#2：击杀[<$STR(N$击杀怪物1)>]只<$STR(T21)>，已击杀<$STR(U81)>只/@进行转生>
-; <>                <快速转生|161#当前转生条件：^-^249#1：击杀[<$STR(N$击杀怪物5)>]只<$STR(T20)>，已击杀<$STR(U80)>只^-^250#2：击杀[<$STR(N$击杀怪物6)>]只<$STR(T21)>，已击杀<$STR(U81)>只^-^253#3：<$STR(S$转身大米数量)>/@大米转生>\
+; <>                <快速转生|161#当前转生条件：^-^249#1：击杀[<$STR(N$击杀怪物5)>]只<$STR(T20)>，已击杀<$STR(U80)>只^-^250#2：击杀[<$STR(N$击杀怪物6)>]只<$STR(T21)>，已击杀<$STR(U81)>只^-^253#3：<$STR(S$转身灵符数量)>/@灵符转生>\
 
 ; <>                                                     \ \ \
 
 
-<Img|width=620|height=250|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|reset=1>
-<Layout|x=597|y=3|width=80|height=80|link=@exit>
-<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
-<Text|a=0|x=26.0|y=34.0|tipsx=10|tipsy=80|color=254|size=16|text=转生：>
-<Text|a=0|x=92.0|y=34.0|tipsx=10|tipsy=80|color=70|size=16|text=可以让角色获得新生,实现实力的飞跃和蜕变>
-<Text|a=0|x=472.0|y=34.0|tipsx=10|tipsy=80|color=161|size=16|text=您当前：<$RELEVEL>转>
-<Text|a=0|x=26.0|y=74.0|tipsx=10|tipsy=80|color=161|size=16|text=当前要求①：>
-<Text|a=0|x=120.0|y=74.0|tipsx=10|tipsy=80|color=254|size=16|text=击杀<$STR(N$击杀怪物)>只<$STR(T20)>>
-<Text|a=0|x=340.0|y=74.0|tipsx=10|tipsy=80|color=250|size=16|text=当前已经击杀：<$STR(U80)>只>
-<Text|a=0|x=26.0|y=114.0|tipsx=10|tipsy=80|color=161|size=16|text=当前要求②：>
-<Text|a=0|x=120.0|y=114.0|tipsx=10|tipsy=80|color=254|size=16|text=击杀<$STR(N$击杀怪物1)>只<$STR(T21)>>
-<Text|a=0|x=340.0|y=114.0|tipsx=10|tipsy=80|color=250|size=16|text=当前已经击杀：<$STR(U81)>只>
-<Text|a=0|x=26.0|y=154.0|tipsx=10|tipsy=80|color=255|size=16|text=下阶转生奖励自由属性：>
-<RText|a=0|x=210.0|y=154.0|tipsx=10|tipsy=80|color=255|size=16|text=<<$STR(N$转身属性点)>点/FCOLOR=249>>
-<Text|a=0|x=26.0|y=194.0|tips={当前转生条件：/FCOLOR=243}^{1：击杀[<$STR(N$击杀怪物)>]只<$STR(T20)>，已击杀<$STR(U80)>只}^{2：击杀[<$STR(N$击杀怪物1)>]只<$STR(T21)>，已击杀<$STR(U81)>只/FCOLOR=250}|tipsx=84|tipsy=105|size=16|color=251|text=我要转生|link=@进行转生>
-<Text|a=0|x=144.0|y=194.0|tips={当前转生条件：/FCOLOR=243}^{1：击杀[<$STR(N$击杀怪物5)>]只<$STR(T20)>，已击杀<$STR(U80)>只}^{2：击杀[<$STR(N$击杀怪物6)>]只<$STR(T21)>，已击杀<$STR(U81)>只/FCOLOR=250}^{3:<$STR(S$转身大米数量)>}|tipsx=84|tipsy=105|size=16|color=251|text=快速转生|link=@大米转生>
+; <Img|width=620|height=250|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|reset=1>
+; <Layout|x=597|y=3|width=80|height=80|link=@exit>
+; <Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+; <Text|a=0|x=26.0|y=34.0|tipsx=10|tipsy=80|color=254|size=16|text=转生：>
+; <Text|a=0|x=92.0|y=34.0|tipsx=10|tipsy=80|color=70|size=16|text=可以让角色获得新生,实现实力的飞跃和蜕变>
+; <Text|a=0|x=472.0|y=34.0|tipsx=10|tipsy=80|color=161|size=16|text=您当前：<$RELEVEL>转>
+; <Text|a=0|x=26.0|y=74.0|tipsx=10|tipsy=80|color=161|size=16|text=当前要求①：>
+; <Text|a=0|x=120.0|y=74.0|tipsx=10|tipsy=80|color=254|size=16|text=击杀<$STR(N$击杀怪物)>只<$STR(T20)>>
+; <Text|a=0|x=340.0|y=74.0|tipsx=10|tipsy=80|color=250|size=16|text=当前已经击杀：<$STR(U80)>只>
+; <Text|a=0|x=26.0|y=114.0|tipsx=10|tipsy=80|color=161|size=16|text=当前要求②：>
+; <Text|a=0|x=120.0|y=114.0|tipsx=10|tipsy=80|color=254|size=16|text=击杀<$STR(N$击杀怪物1)>只<$STR(T21)>>
+; <Text|a=0|x=340.0|y=114.0|tipsx=10|tipsy=80|color=250|size=16|text=当前已经击杀：<$STR(U81)>只>
+; <Text|a=0|x=26.0|y=154.0|tipsx=10|tipsy=80|color=255|size=16|text=下阶转生奖励自由属性：>
+; <RText|a=0|x=210.0|y=154.0|tipsx=10|tipsy=80|color=255|size=16|text=<<$STR(N$转身属性点)>点/FCOLOR=249>>
+; <Text|a=0|x=26.0|y=194.0|tips={当前转生条件：/FCOLOR=243}^{1：击杀[<$STR(N$击杀怪物)>]只<$STR(T20)>，已击杀<$STR(U80)>只}^{2：击杀[<$STR(N$击杀怪物1)>]只<$STR(T21)>，已击杀<$STR(U81)>只/FCOLOR=250}|tipsx=84|tipsy=105|size=16|color=251|text=我要转生|link=@进行转生>
+; <Text|a=0|x=144.0|y=194.0|tips={当前转生条件：/FCOLOR=243}^{1：击杀[<$STR(N$击杀怪物5)>]只<$STR(T20)>，已击杀<$STR(U80)>只}^{2：击杀[<$STR(N$击杀怪物6)>]只<$STR(T21)>，已击杀<$STR(U81)>只/FCOLOR=250}^{3:<$STR(S$转身灵符数量)>}|tipsx=84|tipsy=105|size=16|color=251|text=快速转生|link=@灵符转生>
+
+<Img|x=0.0|y=0.0|show=4|scale9r=10|scale9l=10|esc=1|bg=1|scale9b=10|move=0|reset=1|img=custom/hecheng/sgq1.png|scale9t=10>
+<Layout|x=720.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=750.0|y=0.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=398.0|y=204.0|tipsx=10|tipsy=80|color=254|size=16|outline=1|text=转生：>
+<Text|a=0|x=442.0|y=204.0|tipsx=10|tipsy=80|color=70|size=16|outline=1|text=可以让角色获得新生,实现实力的飞跃和蜕变>
+<Text|a=0|x=398.0|y=174.0|tipsx=10|tipsy=80|color=161|size=16|outline=1|text=您当前：<$RELEVEL>转>
+<Text|a=0|x=398.0|y=300.0|tipsx=10|tipsy=80|color=161|size=16|outline=1|text=当前要求①：>
+<Text|a=0|x=492.0|y=300.0|tipsx=10|tipsy=80|color=254|size=16|outline=1|text=击杀(<$STR(U80)>/<$STR(N$击杀怪物)>)只<$STR(T20)>>
+<Text|a=0|x=398.0|y=327.0|tipsx=10|tipsy=80|color=161|size=16|outline=1|text=当前要求②：>
+<Text|a=0|x=492.0|y=327.0|tipsx=10|tipsy=80|color=254|size=16|outline=1|text=击杀(<$STR(U81)>/<$STR(N$击杀怪物1)>)只<$STR(T21)>>
+<Text|a=0|x=398.0|y=233.0|tipsx=10|tipsy=80|color=255|size=16|outline=1|text=下阶转生奖励自由属性：>
+<RText|a=0|x=582.0|y=233.0|tipsx=10|tipsy=80|color=255|size=16|outline=1|text=<<$STR(N$转身属性点)>点/FCOLOR=249>>
+<Text|x=398.0|y=265.0|color=255|size=16|outline=1|text=普通升级要求>
+<Text|x=336.0|y=15.0|color=255|size=18|outline=1|text=转生使者>
+<Button|x=559.0|y=430.0|color=255|size=16|pimg=custom/button/ann2.png|nimg=custom/button/ann1.png|text=普通转生|outline=1|link=@进行转生>
+<Button|x=404.0|y=430.0|color=255|size=16|pimg=custom/button/ann2.png|nimg=custom/button/ann1.png|text=快速转生|outline=1|link=@灵符转生>
+<RText|x=28.0|y=418.0|color=255|size=16|outline=1|text=<快速转生：/FCOLOR=255><1.击杀[<$STR(U80)>/<$STR(N$击杀怪物5)>]只<$STR(T20)>/FCOLOR=249></FCOLOR=250>>
+<RText|x=108.0|y=441.0|color=255|size=16|outline=1|text=<2.击杀[<$STR(U81)>/<$STR(N$击杀怪物6)>]只<$STR(T21)>/FCOLOR=250>>
+<RText|x=108.0|y=464.0|color=255|size=16|outline=1|text=<3.<$STR(S$转身灵符数量)>/FCOLOR=251>>
 
 
-
-
-[@大米转生]
+[@灵符转生]
 
 #IF
 Checkrenewlevel > 9
@@ -244,9 +262,9 @@ BREAK
 
 
 #IF
-CHECKGAMEPOINT < <$STR(N$转身大米数量)>
+checkmoney 灵符 < <$STR(N$转身灵符数量)>
 #ACT
-MESSAGEBOX 非常抱歉：\　\您包袱里面的大米不足<$STR(N$转身大米数量)>点
+MESSAGEBOX 非常抱歉：\　\您包袱里面的灵符不足<$STR(N$转身灵符数量)>点
 BREAK
 
 
@@ -255,7 +273,7 @@ BREAK
 
 #IF
 #act
-GAMEPOINT - <$STR(N$转身大米数量)>
+MONEY 灵符 - <$STR(N$转身灵符数量)>
 RENEWLEVEL 1 0 <$STR(N$转身属性点)>
 MOV U80 0
 MOV U81 0

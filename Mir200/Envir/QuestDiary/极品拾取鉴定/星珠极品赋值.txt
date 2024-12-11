@@ -21,29 +21,50 @@ MOV S$职业区分 道士
 
 #IF
 #ACT
-OPENMERCHANTBIGDLG 1 562 1 0 0 0 1 440 0
+; OPENMERCHANTBIGDLG 1 562 1 0 0 0 1 440 0
 #SAY
-\ \  \ 
-<∷/SCOLOR=67><觉醒极品属性，需要给我“/SCOLOR=161><极品星石/SCOLOR=254><”注意不是每次必成，只能碰运气觉醒/SCOLOR=161>\  \
-<-------------------------------------------------------------/SCOLOR=187>\  \
-\      <觉醒武器/@觉醒武器>            <觉醒衣服/@觉醒衣服>        <觉醒头盔/@觉醒头盔> \ \
-<-------------------------------------------------------------/SCOLOR=187>\ 
-\      <觉醒项链/@觉醒项链>            <觉醒左手/@觉醒左手>        <觉醒右手/@觉醒右手> \ \ 
-<-------------------------------------------------------------/SCOLOR=187>\ 
-\      <觉醒左戒/@觉醒左戒>            <觉醒右戒/@觉醒右戒>        <觉醒腰带/@觉醒腰带>  \ \
-<-------------------------------------------------------------/SCOLOR=187>\ 
-\      <觉醒靴子/@觉醒靴子>            <觉醒勋章/@觉醒勋章>        <觉醒斗笠/@觉醒斗笠> \ \
-<-------------------------------------------------------------/SCOLOR=187>\ 
-\      <觉醒宝石/@觉醒宝石>            \ \
-<-------------------------------------------------------------/SCOLOR=187>\ 
+; \ \  \ 
+; <∷/SCOLOR=67><觉醒极品属性，需要给我“/SCOLOR=161><极品星石/SCOLOR=254><”注意不是每次必成，只能碰运气觉醒/SCOLOR=161>\  \
+; <-------------------------------------------------------------/SCOLOR=187>\  \
+; \      <觉醒武器/@觉醒武器>            <觉醒衣服/@觉醒衣服>        <觉醒头盔/@觉醒头盔> \ \
+; <-------------------------------------------------------------/SCOLOR=187>\ 
+; \      <觉醒项链/@觉醒项链>            <觉醒左手/@觉醒左手>        <觉醒右手/@觉醒右手> \ \ 
+; <-------------------------------------------------------------/SCOLOR=187>\ 
+; \      <觉醒左戒/@觉醒左戒>            <觉醒右戒/@觉醒右戒>        <觉醒腰带/@觉醒腰带>  \ \
+; <-------------------------------------------------------------/SCOLOR=187>\ 
+; \      <觉醒靴子/@觉醒靴子>            <觉醒勋章/@觉醒勋章>        <觉醒斗笠/@觉醒斗笠> \ \
+; <-------------------------------------------------------------/SCOLOR=187>\ 
+; \      <觉醒宝石/@觉醒宝石>            \ \
+; <-------------------------------------------------------------/SCOLOR=187>\ 
+
+
+<Img|width=620|height=300|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|reset=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=21.0|y=17.0|tipsx=10|tipsy=80|color=67|size=18|text=∷>
+<Text|a=0|x=43.0|y=17.0|tipsx=10|tipsy=80|color=161|size=18|text=觉醒极品属性，需要给我“>
+<Text|a=0|x=256.0|y=17.0|tipsx=10|tipsy=80|color=254|size=18|text=极品星石>
+<Text|a=0|x=331.0|y=17.0|tipsx=10|tipsy=80|color=161|size=18|text=”注意不是每次必成，只能碰运气觉醒>
+<Text|a=0|x=21.0|y=47.0|tipsx=10|tipsy=80|color=251|size=18|text=觉醒武器|link=@觉醒武器>
+<Text|a=0|x=109.0|y=47.0|tipsx=10|tipsy=80|color=251|size=18|text=觉醒衣服|link=@觉醒衣服>
+<Text|a=0|x=197.0|y=47.0|tipsx=10|tipsy=80|color=251|size=18|text=觉醒头盔|link=@觉醒头盔>
+<Text|a=0|x=21.0|y=81.0|tipsx=10|tipsy=80|color=251|size=18|text=觉醒项链|link=@觉醒项链>
+<Text|a=0|x=109.0|y=81.0|tipsx=10|tipsy=80|color=251|size=18|text=觉醒左手|link=@觉醒左手>
+<Text|a=0|x=197.0|y=81.0|tipsx=10|tipsy=80|color=251|size=18|text=觉醒右手|link=@觉醒右手>
+<Text|a=0|x=21.0|y=115.0|tipsx=10|tipsy=80|color=251|size=18|text=觉醒左戒|link=@觉醒左戒>
+<Text|a=0|x=109.0|y=115.0|tipsx=10|tipsy=80|color=251|size=18|text=觉醒右戒|link=@觉醒右戒>
+<Text|a=0|x=197.0|y=115.0|tipsx=10|tipsy=80|color=251|size=18|text=觉醒腰带|link=@觉醒腰带>
+<Text|a=0|x=21.0|y=154.0|tipsx=10|tipsy=80|color=251|size=18|text=觉醒靴子|link=@觉醒靴子>
+<Text|a=0|x=109.0|y=154.0|tipsx=10|tipsy=80|color=251|size=18|text=觉醒勋章|link=@觉醒勋章>
+<Text|a=0|x=197.0|y=154.0|tipsx=10|tipsy=80|color=251|size=18|text=觉醒斗笠|link=@觉醒斗笠>
+<Text|a=0|x=21.0|y=193.0|tipsx=10|tipsy=80|color=251|size=18|text=觉醒宝石|link=@觉醒宝石>
 
 
 
 
 
 
-
-
+; ok
 [@觉醒时装]
 #ACT
 MOV S$觉醒极品位置名 时装衣服
@@ -61,7 +82,7 @@ MOV S$防御 防御
 MOV S$魔御 魔御
 GOTO @觉醒极品预览
 
-
+; ok
 [@觉醒本命符]
 #ACT
 MOV S$觉醒极品位置名 护身符
@@ -82,7 +103,7 @@ GOTO @觉醒极品预览
 
 
 
-
+; ok
 [@觉醒盾牌]
 #ACT
 MOV S$觉醒极品位置名 盾牌
@@ -104,7 +125,7 @@ GOTO @觉醒极品预览
 
 
 
-
+; ok
 [@觉醒马牌]
 #ACT
 MOV S$觉醒极品位置名 马牌
@@ -125,7 +146,7 @@ GOTO @觉醒极品预览
 
 
 
-
+; ok
 [@觉醒军鼓]
 #ACT
 MOV S$觉醒极品位置名 军鼓
@@ -146,7 +167,7 @@ GOTO @觉醒极品预览
 
 
 
-
+; ok
 [@觉醒宝石]
 #ACT
 MOV S$觉醒极品位置名 宝石
@@ -166,7 +187,7 @@ GOTO @觉醒极品预览
 
 
 
-
+; ok
 [@觉醒斗笠]
 #ACT
 MOV S$觉醒极品位置名 斗笠
@@ -184,6 +205,7 @@ MOV S$防御 防御
 MOV S$魔御 魔御
 GOTO @觉醒极品预览
 
+; ok
 [@觉醒勋章]
 #ACT
 MOV S$觉醒极品位置名 勋章
@@ -201,6 +223,7 @@ MOV S$防御 防御
 MOV S$魔御 魔御
 GOTO @觉醒极品预览
 
+; ok
 [@觉醒头盔]
 #ACT
 MOV S$觉醒极品位置名 头盔
@@ -218,12 +241,15 @@ MOV S$防御 防御
 MOV S$魔御 魔御
 GOTO @觉醒极品预览
 
+; ok
 [@觉醒项链]
 #ACT
 MOV S$觉醒极品位置名 项链
 MOV N$锻造极品位置 3
-MOV N$锻造防御位置 0
+; MOV N$锻造防御位置 0
+MOV N$锻造防御位置 6
 MOV N$锻造魔御位置 1
+MOV N$锻造魔御位置 7
 MOV N$锻造攻击位置 2
 MOV N$锻造魔法位置 3
 MOV N$锻造道术位置 4
@@ -234,8 +260,10 @@ MOV S$魔法 魔法
 MOV S$道术 道术
 MOV S$防御 准确
 MOV S$魔御 敏捷
+; MOV S$魔御 魔御
 GOTO @觉醒极品预览
 
+; ok
 [@觉醒武器]
 #IF
 #ACT
@@ -246,11 +274,12 @@ mov S$身上装备名字 <$USEITEMNAME[1]>
 
 MOV S$觉醒极品位置名 武器
 MOV N$锻造极品位置 1
-MOV N$锻造攻击位置 0
-MOV N$锻造魔法位置 1
-MOV N$锻造道术位置 2
-MOV N$锻造防御位置 5
-MOV N$锻造魔御位置 11
+MOV N$锻造攻击位置 2
+MOV N$锻造魔法位置 3
+MOV N$锻造道术位置 4
+MOV N$锻造防御位置 6
+; MOV N$锻造魔御位置 11
+MOV N$锻造魔御位置 40
 MOV N$给予点数 2
 MOV S$攻击 攻击
 MOV S$魔法 魔法
@@ -259,6 +288,7 @@ MOV S$防御 准确
 MOV S$魔御 无用
 GOTO @觉醒极品预览
 
+; ok
 [@觉醒衣服]
 #ACT
 MOV S$觉醒极品位置名 衣服
@@ -276,6 +306,7 @@ MOV S$防御 防御
 MOV S$魔御 魔御
 GOTO @觉醒极品预览
 
+; ok
 [@觉醒右手]
 #ACT
 MOV S$觉醒极品位置名 右手
@@ -293,6 +324,7 @@ MOV S$防御 防御
 MOV S$魔御 魔御
 GOTO @觉醒极品预览
 
+; ok
 [@觉醒左手]
 #ACT
 MOV S$觉醒极品位置名 左手
@@ -310,6 +342,7 @@ MOV S$防御 防御
 MOV S$魔御 魔御
 GOTO @觉醒极品预览
 
+; ok
 [@觉醒右戒]
 #ACT
 MOV S$觉醒极品位置名 右戒
@@ -327,6 +360,7 @@ MOV S$防御 防御
 MOV S$魔御 魔御
 GOTO @觉醒极品预览
 
+; ok
 [@觉醒左戒]
 #ACT
 MOV S$觉醒极品位置名 左戒
@@ -344,6 +378,7 @@ MOV S$防御 防御
 MOV S$魔御 魔御
 GOTO @觉醒极品预览
 
+; ok
 [@觉醒腰带]
 #ACT
 MOV S$觉醒极品位置名 腰带
@@ -361,6 +396,7 @@ MOV S$防御 防御
 MOV S$魔御 魔御
 GOTO @觉醒极品预览
 
+; ok
 [@觉醒靴子]
 #ACT
 MOV S$觉醒极品位置名 靴子
@@ -399,27 +435,27 @@ mov S$身上装备名字 <$USEITEMNAME[<$STR(N$锻造极品位置)>]>
 #IF
 CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造攻击位置)> > 0
 #ACT
-GETITEMADDVALUE <$STR(N$锻造极品位置)> <$STR(N$锻造攻击位置)> <$STR(N$身上攻击)>
+GETITEMADDVALUE <$STR(N$锻造极品位置)> <$STR(N$锻造攻击位置)> N$身上攻击
 
 #IF
 CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造魔法位置)> > 0
 #ACT
-GETITEMADDVALUE <$STR(N$锻造极品位置)> <$STR(N$锻造魔法位置)> <$STR(N$身上魔法)>
+GETITEMADDVALUE <$STR(N$锻造极品位置)> <$STR(N$锻造魔法位置)> N$身上魔法
 
 #IF
 CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造道术位置)> > 0
 #ACT
-GETITEMADDVALUE <$STR(N$锻造极品位置)> <$STR(N$锻造道术位置)> <$STR(N$身上道术)>
+GETITEMADDVALUE <$STR(N$锻造极品位置)> <$STR(N$锻造道术位置)> N$身上道术
 
 #IF
 CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造防御位置)> > 0
 #ACT
-GETITEMADDVALUE <$STR(N$锻造极品位置)> <$STR(N$锻造防御位置)> <$STR(N$身上防御)>
+GETITEMADDVALUE <$STR(N$锻造极品位置)> <$STR(N$锻造防御位置)> N$身上防御
 
 #IF
 CheckItemAddValue <$STR(N$锻造极品位置)> <$STR(N$锻造魔御位置)> > 0
 #ACT
-GETITEMADDVALUE <$STR(N$锻造极品位置)> <$STR(N$锻造魔御位置)> <$STR(N$身上魔御)>
+GETITEMADDVALUE <$STR(N$锻造极品位置)> <$STR(N$锻造魔御位置)> N$身上魔御
 
 
 
@@ -491,20 +527,52 @@ SetStringBlank <$STR(S$身上魔御)> 5 1
 SetStringBlank <$STR(S$给予属性)> 5 1
 OPENMERCHANTBIGDLG 1 562 1 0 0 0 1 440 0
 #SAY
-\ \  \ 
- <您在正在觉醒身上“><$STR(S$身上装备名字)><"的极品属性>\ \  
-<当前身上极品的<$STR(S$防御)>：/SCOLOR=161>{<$STR(S$身上防御)>/SCOLOR=254}   上限：<$STR(S$鉴定上限A)>\ \  
-<当前身上极品的<$STR(S$魔御)>：/SCOLOR=161>{<$STR(S$身上魔御)>/SCOLOR=254}   上限：<$STR(S$鉴定上限A)>\ \ 
-<当前身上极品的<$STR(S$攻击)>：/SCOLOR=161>{<$STR(S$身上攻击)>/SCOLOR=254}   上限：<$STR(S$鉴定上限A)>\ \ 
-<当前身上极品的<$STR(S$魔法)>：/SCOLOR=161>{<$STR(S$身上魔法)>/SCOLOR=254}   上限：<$STR(S$鉴定上限A)>\ \ 
-<当前身上极品的<$STR(S$道术)>：/SCOLOR=161>{<$STR(S$身上道术)>/SCOLOR=254}   上限：<$STR(S$鉴定上限A)>\ \ 
-<当前身上觉醒的倍攻：/SCOLOR=22>{<$STR(S$给予属性)>/SCOLOR=253}   上限：<$STR(N$修为上限)>  \ \    
-<当前身上觉醒的生命：/SCOLOR=19>{<$STR(S$给予属性)>/SCOLOR=250}   上限：<$STR(N$修为上限)>     <类型：/SCOLOR=161>{<$STR(S$属性类型A)>/SCOLOR=21}\   \ 
-<-------------------------------------------------------------/SCOLOR=187>\  \ 
-\<觉醒极品：/SCOLOR=161>  <觉醒<$STR(S$攻击)>|250#需要：^-^254#极品星石*1^-^249#成功率：10%/@觉醒攻击>    <觉醒<$STR(S$魔法)>|250#需要：^-^254#极品星石*1^-^249#成功率：10%/@觉醒魔法>    <觉醒<$STR(S$道术)>|250#需要：^-^254#极品星石*1^-^249#成功率：10%/@觉醒道术>    <觉醒<$STR(S$防御)>|250#需要：^-^254#极品星石*1^-^249#成功率：10%/@觉醒防御>    <觉醒<$STR(S$魔御)>|250#需要：^-^254#极品星石*1^-^249#成功率：10%/@觉醒魔御>                  \  \ 
-\            <重洗元素|^-^161#随机重置极品元素^-^250#需要：^-^254#极品星石*10^-^249#成功率：100%/@重洗元素>            <上一页/@一星珠>\  \  
-\<注意：/SCOLOR=249><倍数和加星需根据/SCOLOR=161><职业类型主属性><觉醒才有用，否则不觉醒极品倍数/SCOLOR=161>  
+; \ \  \ 
+;  <您在正在觉醒身上“><$STR(S$身上装备名字)><"的极品属性>\ \  
+; <当前身上极品的<$STR(S$防御)>：/SCOLOR=161>{<$STR(S$身上防御)>/SCOLOR=254}   上限：<$STR(S$鉴定上限A)>\ \  
+; <当前身上极品的<$STR(S$魔御)>：/SCOLOR=161>{<$STR(S$身上魔御)>/SCOLOR=254}   上限：<$STR(S$鉴定上限A)>\ \ 
+; <当前身上极品的<$STR(S$攻击)>：/SCOLOR=161>{<$STR(S$身上攻击)>/SCOLOR=254}   上限：<$STR(S$鉴定上限A)>\ \ 
+; <当前身上极品的<$STR(S$魔法)>：/SCOLOR=161>{<$STR(S$身上魔法)>/SCOLOR=254}   上限：<$STR(S$鉴定上限A)>\ \ 
+; <当前身上极品的<$STR(S$道术)>：/SCOLOR=161>{<$STR(S$身上道术)>/SCOLOR=254}   上限：<$STR(S$鉴定上限A)>\ \ 
+; <当前身上觉醒的倍攻：/SCOLOR=22>{<$STR(S$给予属性)>/SCOLOR=253}   上限：<$STR(N$修为上限)>  \ \    
+; <当前身上觉醒的生命：/SCOLOR=19>{<$STR(S$给予属性)>/SCOLOR=250}   上限：<$STR(N$修为上限)>     <类型：/SCOLOR=161>{<$STR(S$属性类型A)>/SCOLOR=21}\   \ 
+; <-------------------------------------------------------------/SCOLOR=187>\  \ 
+; \<觉醒极品：/SCOLOR=161>  <觉醒<$STR(S$攻击)>|250#需要：^-^254#极品星石*1^-^249#成功率：10%/@觉醒攻击>    <觉醒<$STR(S$魔法)>|250#需要：^-^254#极品星石*1^-^249#成功率：10%/@觉醒魔法>    <觉醒<$STR(S$道术)>|250#需要：^-^254#极品星石*1^-^249#成功率：10%/@觉醒道术>    <觉醒<$STR(S$防御)>|250#需要：^-^254#极品星石*1^-^249#成功率：10%/@觉醒防御>    <觉醒<$STR(S$魔御)>|250#需要：^-^254#极品星石*1^-^249#成功率：10%/@觉醒魔御>                  \  \ 
+; \            <重洗元素|^-^161#随机重置极品元素^-^250#需要：^-^254#极品星石*10^-^249#成功率：100%/@重洗元素>            <上一页/@一星珠>\  \  
+; \<注意：/SCOLOR=249><倍数和加星需根据/SCOLOR=161><职业类型主属性><觉醒才有用，否则不觉醒极品倍数/SCOLOR=161>  
 
+
+<Img|x=0.0|y=0.0|width=620|height=450|scale9r=10|scale9t=10|scale9l=10|img=public/bg_npc_01.png|reset=1|move=0|bg=1|scale9b=10>
+<Layout|x=596.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=618.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=22.0|y=16.0|tipsx=10|tipsy=80|color=255|size=18|text=您在正在觉醒身上<$STR(S$身上装备名字)>的极品属性>
+<Text|a=0|x=22.0|y=56.0|tipsx=10|tipsy=80|color=255|size=18|text=当前身上极品的<$STR(S$防御)>：<$STR(S$身上防御)>>
+<Text|a=0|x=250.0|y=56.0|tipsx=10|tipsy=80|color=255|size=18|text=上限：<$STR(S$鉴定上限A)>>
+<Text|a=0|x=22.0|y=96.0|tipsx=10|tipsy=80|color=255|size=18|text=当前身上极品的<$STR(S$魔御)>：<$STR(S$身上魔御)>>
+<Text|a=0|x=250.0|y=96.0|tipsx=10|tipsy=80|color=255|size=18|text=上限：<$STR(S$鉴定上限A)>>
+<Text|a=0|x=22.0|y=136.0|tipsx=10|tipsy=80|color=255|size=18|text=当前身上极品的<$STR(S$攻击)>：<$STR(S$身上攻击)>>
+<Text|a=0|x=250.0|y=136.0|tipsx=10|tipsy=80|color=255|size=18|text=上限：<$STR(S$鉴定上限A)>>
+<Text|a=0|x=22.0|y=176.0|tipsx=10|tipsy=80|color=255|size=18|text=当前身上极品的<$STR(S$魔法)>：<$STR(S$身上魔法)>>
+<Text|a=0|x=250.0|y=176.0|tipsx=10|tipsy=80|color=255|size=18|text=上限：<$STR(S$鉴定上限A)>>
+<Text|a=0|x=22.0|y=216.0|tipsx=10|tipsy=80|color=255|size=18|text=当前身上极品的<$STR(S$道术)>：<$STR(S$身上道术)>>
+<Text|a=0|x=250.0|y=216.0|tipsx=10|tipsy=80|color=255|size=18|text=上限：<$STR(S$鉴定上限A)>>
+<Text|a=0|x=22.0|y=256.0|tipsx=10|tipsy=80|color=22|size=18|text=当前身上觉醒的倍攻：<$STR(S$给予属性)>>
+<Text|a=0|x=250.0|y=256.0|tipsx=10|tipsy=80|color=255|size=18|text=上限：<$STR(N$修为上限)>>
+<Text|a=0|x=22.0|y=296.0|tipsx=10|tipsy=80|color=19|size=18|text=当前身上觉醒的生命：<$STR(S$给予属性)>>
+<Text|a=0|x=250.0|y=296.0|tipsx=10|tipsy=80|color=255|size=18|text=上限：<$STR(N$修为上限)>>
+<Text|a=0|x=449.0|y=296.0|tipsx=10|tipsy=80|color=161|size=18|text=类型：<$STR(S$属性类型A)>>
+<Text|a=0|x=22.0|y=336.0|tipsx=10|tipsy=80|color=187|size=18|text=------------------------------------------------------------->
+<Text|a=0|x=22.0|y=353.0|tipsx=10|tipsy=80|color=161|size=18|text=觉醒极品：>
+<Text|a=0|x=112|y=353.0|tipsx=10|tipsy=80|color=255|size=18|text=觉醒<$str(S$攻击)>|link=@觉醒攻击>
+<Text|a=0|x=206|y=353.0|tipsx=10|tipsy=80|color=255|size=18|text=觉醒<$str(S$魔法)>|link=@觉醒魔法>
+<Text|a=0|x=300|y=353.0|tipsx=10|tipsy=80|color=255|size=18|text=觉醒<$str(S$道术)>|link=@觉醒道术>
+<Text|a=0|x=394|y=353.0|tipsx=10|tipsy=80|color=255|size=18|text=觉醒<$str(S$防御)>|link=@觉醒防御>
+<Text|a=0|x=488|y=353.0|tipsx=10|tipsy=80|color=255|size=18|text=觉醒<$STR(S$魔御)>|link=@觉醒魔御>
+<Text|a=0|x=22.0|y=409.0|tipsx=10|tipsy=80|color=251|size=18|text=重洗元素|link=@重洗元素>
+<Text|a=0|x=924.0|y=456.0|tipsx=10|tipsy=80|color=251|size=18|text=上一页|link=@一星珠>
+<Text|a=0|x=22.0|y=383.0|tipsx=10|tipsy=80|color=249|size=18|text=注意：>
+<Text|a=0|x=88.0|y=383.0|tipsx=10|tipsy=80|color=161|size=18|text=倍数和加星需根据>
+<Text|a=0|x=264.0|y=383.0|tipsx=10|tipsy=80|color=161|size=18|text=觉醒才有用，否则不觉醒极品倍数>
 
 
 

@@ -10,14 +10,14 @@ GOTO @LAOQUQU
 
 \ \ \
 <当前为新区 开区第二天合区，第二天晚上集体攻城！/SCOLOR=254>\ \
-<攻城奖励为 4650 大米/SCOLOR=245>\ \
+<攻城奖励为 4650 灵符/SCOLOR=245>\ \
 　　　              <沙老大领取奖励/@领取奖励>
 
 [@LAOQUQU]
 
 \ \ \
 <当前为老区 天天攻城，天天晚上都是激情！/SCOLOR=254>\ \
-<攻城奖励为 1550 大米/SCOLOR=245>\ \
+<攻城奖励为 1550 灵符/SCOLOR=245>\ \
 　　　              <沙老大领取奖励/@领取奖励>
 
 
@@ -50,13 +50,13 @@ break
 EQUAL G300 1
 EQUAL G301 1
 #act
-gamepoint + 4650
-SendCenterMsg 254 252 天下无双的沙城主【<$USERNAME>】领取了新区今日攻沙奖励4650大米 1 30
-SendCenterMsg 254 252 天下无双的沙城主【<$USERNAME>】领取了新区今日攻沙奖励4650大米 1 30
-SendCenterMsg 254 252 天下无双的沙城主【<$USERNAME>】领取了新区今日攻沙奖励4650大米 1 30
-SendCenterMsg 254 252 天下无双的沙城主【<$USERNAME>】领取了新区今日攻沙奖励4650大米 1 30
-SendCenterMsg 254 252 天下无双的沙城主【<$USERNAME>】领取了新区今日攻沙奖励4650大米 1 30
-SendCenterMsg 254 252 天下无双的沙城主【<$USERNAME>】领取了新区今日攻沙奖励4650大米 1 30
+MONEY 灵符 + 4650
+SendCenterMsg 254 252 天下无双的沙城主【<$USERNAME>】领取了新区今日攻沙奖励4650灵符 1 30
+SendCenterMsg 254 252 天下无双的沙城主【<$USERNAME>】领取了新区今日攻沙奖励4650灵符 1 30
+SendCenterMsg 254 252 天下无双的沙城主【<$USERNAME>】领取了新区今日攻沙奖励4650灵符 1 30
+SendCenterMsg 254 252 天下无双的沙城主【<$USERNAME>】领取了新区今日攻沙奖励4650灵符 1 30
+SendCenterMsg 254 252 天下无双的沙城主【<$USERNAME>】领取了新区今日攻沙奖励4650灵符 1 30
+SendCenterMsg 254 252 天下无双的沙城主【<$USERNAME>】领取了新区今日攻沙奖励4650灵符 1 30
 MOV G301 0
 AddTextListEx  ..\..\..\..\..\拿沙统计\沙奖励领取记录.txt  [<$SERVERNAME>]:行会[<$GUILDNAME>]:掌门人[<$USERNAME>]:时间[<$MONTH>月<$DAY>日<$HOUR>点<$MINUTE>分<$SECOND>秒]已经领取货币 0
 
@@ -66,10 +66,10 @@ break
 LARGE G300 1
 EQUAL G301 1
 #act
-gamepoint + 1550
-SendCenterMsg 254 252 天下无双的沙城主【<$USERNAME>】领取了老区今日攻沙奖励1550大米 1 30
-SendCenterMsg 254 252 天下无双的沙城主【<$USERNAME>】领取了老区今日攻沙奖励1550大米 1 30
-SendCenterMsg 254 252 天下无双的沙城主【<$USERNAME>】领取了老区今日攻沙奖励1550大米 1 30
+MONEY 灵符 + 1550
+SendCenterMsg 254 252 天下无双的沙城主【<$USERNAME>】领取了老区今日攻沙奖励1550灵符 1 30
+SendCenterMsg 254 252 天下无双的沙城主【<$USERNAME>】领取了老区今日攻沙奖励1550灵符 1 30
+SendCenterMsg 254 252 天下无双的沙城主【<$USERNAME>】领取了老区今日攻沙奖励1550灵符 1 30
 MOV G301 0
 AddTextListEx  ..\..\..\..\..\拿沙统计\沙奖励领取记录.txt  [<$SERVERNAME>]:行会[<$GUILDNAME>]:掌门人[<$USERNAME>]:时间[<$MONTH>月<$DAY>日<$HOUR>点<$MINUTE>分<$SECOND>秒]已经领取货币 0
 

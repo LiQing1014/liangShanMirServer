@@ -54,9 +54,31 @@ MOV N$每次吸收 0
 MOV N$每秒恢复 0
 
 
+MOV N$生肖切割加成1 0
+MOV N$生肖切割加成2 0
+MOV N$生肖切割加成3 0
+MOV N$生肖切割加成4 0
+MOV N$生肖切割加成5 0
+MOV N$生肖切割加成6 0
+MOV N$生肖切割加成7 0
+MOV N$生肖切割加成8 0
+MOV N$生肖切割加成9 0
+MOV N$生肖切割加成10 0
+MOV N$生肖切割加成11 0
+MOV N$生肖切割加成12 0
 
-
-
+MOV N$生肖切割百分比1 0
+MOV N$生肖切割百分比2 0
+MOV N$生肖切割百分比3 0
+MOV N$生肖切割百分比4 0
+MOV N$生肖切割百分比5 0
+MOV N$生肖切割百分比6 0
+MOV N$生肖切割百分比7 0
+MOV N$生肖切割百分比8 0
+MOV N$生肖切割百分比9 0
+MOV N$生肖切割百分比10 0
+MOV N$生肖切割百分比11 0
+MOV N$生肖切割百分比12 0
 
 
 
@@ -151,29 +173,89 @@ CONFERTITLE 白虎神兽Lv<$STR(U168)>
 
 #if
 #act
-GETHUMCUSTOMITEMVALUE -1 11 N$伤害吸收值 N$伤害吸收百分比A
+; GETHUMCUSTOMITEMVALUE -1 11 N$伤害吸收值 N$伤害吸收百分比A
+; INC N$伤害吸收 <$STR(N$伤害吸收值)>
+; GETHUMCUSTOMITEMVALUE -1 12 N$每次吸收值 N$每次吸收百分比A
+; INC N$每次吸收 <$STR(N$每次吸收百分比A)>
+; GETHUMCUSTOMITEMVALUE -1 13 N$每秒恢复值 N$每秒恢复百分比A
+; INC N$每秒恢复 <$STR(N$每秒恢复值)>
+
+GETHUMCUSTOMITEMVALUE 16 203 N$伤害吸收值 N$伤害吸收百分比A
 INC N$伤害吸收 <$STR(N$伤害吸收值)>
-GETHUMCUSTOMITEMVALUE -1 12 N$每次吸收值 N$每次吸收百分比A
+GETHUMCUSTOMITEMVALUE 16 204 N$每次吸收值 N$每次吸收百分比A
 INC N$每次吸收 <$STR(N$每次吸收百分比A)>
-GETHUMCUSTOMITEMVALUE -1 13 N$每秒恢复值 N$每秒恢复百分比A
+GETHUMCUSTOMITEMVALUE 16 205 N$每秒恢复值 N$每秒恢复百分比A
 INC N$每秒恢复 <$STR(N$每秒恢复值)>
 
-
-
-GETHUMCUSTOMITEMVALUE -1 10 N$怪物切割值 N$怪物切割值百分比A
+; GETHUMCUSTOMITEMVALUE -1 10 N$怪物切割值 N$怪物切割值百分比A
+GETHUMCUSTOMITEMVALUE 9 201 N$怪物切割值 N$怪物切割值百分比A
 INC N$怪物切割 <$STR(N$怪物切割值)>
 INC N$怪物切割百分比 <$STR(N$怪物切割值百分比A)>
 
 
-GETHUMCUSTOMITEMVALUE -1 15 N$鉴定神力值 N$鉴定神力值百分比A
-GETHUMCUSTOMITEMVALUE -1 16 N$鉴定生命值 N$鉴定生命值百分比A
+GETHUMCUSTOMITEMVALUE 30 201 N$生肖切割加成1 N$生肖切割百分比1
+INC N$怪物切割 <$STR(N$生肖切割加成1)>
+INC N$怪物切割百分比 <$STR(N$生肖切割百分比1)>
+GETHUMCUSTOMITEMVALUE 31 201 N$生肖切割加成2 N$生肖切割百分比2
+INC N$怪物切割 <$STR(N$生肖切割加成2)>
+INC N$怪物切割百分比 <$STR(N$生肖切割百分比2)>
+GETHUMCUSTOMITEMVALUE 32 201 N$生肖切割加成3 N$生肖切割百分比3
+INC N$怪物切割 <$STR(N$生肖切割加成3)>
+INC N$怪物切割百分比 <$STR(N$生肖切割百分比3)>
+GETHUMCUSTOMITEMVALUE 33 201 N$生肖切割加成4 N$生肖切割百分比4
+INC N$怪物切割 <$STR(N$生肖切割加成4)>
+INC N$怪物切割百分比 <$STR(N$生肖切割百分比4)>
+GETHUMCUSTOMITEMVALUE 34 201 N$生肖切割加成5 N$生肖切割百分比5
+INC N$怪物切割 <$STR(N$生肖切割加成5)>
+INC N$怪物切割百分比 <$STR(N$生肖切割百分比5)>
+GETHUMCUSTOMITEMVALUE 35 201 N$生肖切割加成6 N$生肖切割百分比6
+INC N$怪物切割 <$STR(N$生肖切割加成6)>
+INC N$怪物切割百分比 <$STR(N$生肖切割百分比6)>
+GETHUMCUSTOMITEMVALUE 36 201 N$生肖切割加成7 N$生肖切割百分比7
+INC N$怪物切割 <$STR(N$生肖切割加成7)>
+INC N$怪物切割百分比 <$STR(N$生肖切割百分比7)>
+GETHUMCUSTOMITEMVALUE 37 201 N$生肖切割加成8 N$生肖切割百分比8
+INC N$怪物切割 <$STR(N$生肖切割加成8)>
+INC N$怪物切割百分比 <$STR(N$生肖切割百分比8)>
+GETHUMCUSTOMITEMVALUE 38 201 N$生肖切割加成9 N$生肖切割百分比9
+INC N$怪物切割 <$STR(N$生肖切割加成9)>
+INC N$怪物切割百分比 <$STR(N$生肖切割百分比9)>
+GETHUMCUSTOMITEMVALUE 39 201 N$生肖切割加成10 N$生肖切割百分比10
+INC N$怪物切割 <$STR(N$生肖切割加成10)>
+INC N$怪物切割百分比 <$STR(N$生肖切割百分比10)>
+GETHUMCUSTOMITEMVALUE 40 201 N$生肖切割加成11 N$生肖切割百分比11
+INC N$怪物切割 <$STR(N$生肖切割加成11)>
+INC N$怪物切割百分比 <$STR(N$生肖切割百分比11)>
+GETHUMCUSTOMITEMVALUE 41 201 N$生肖切割加成12 N$生肖切割百分比12
+INC N$怪物切割 <$STR(N$生肖切割加成12)>
+INC N$怪物切割百分比 <$STR(N$生肖切割百分比12)>
+
+
+; GETHUMCUSTOMITEMVALUE -1 15 N$鉴定神力值 N$鉴定神力值百分比A
+; GETHUMCUSTOMITEMVALUE -1 16 N$鉴定生命值 N$鉴定生命值百分比A
+
+GETHUMCUSTOMITEMVALUE 1 206 N$鉴定神力值 N$鉴定神力值百分比A
+GETHUMCUSTOMITEMVALUE 1 207 N$鉴定生命值 N$鉴定生命值百分比A
+
 INC N$装备倍攻 <$STR(N$鉴定神力值)>
 inc N$人物血量百分比 <$STR(N$鉴定生命值)>
 inc N$人物蓝量百分比 <$STR(N$鉴定生命值)>
 
+; sendmsg 9 <$str(N$鉴定神力值)>
 
 
-
+; SENDMSG 0 <$str(N$生肖切割百分比1)>_哈哈哈
+; SENDMSG 0 <$str(N$生肖切割百分比2)>_哈哈哈
+; SENDMSG 0 <$str(N$生肖切割百分比3)>_哈哈哈
+; SENDMSG 0 <$str(N$生肖切割百分比4)>_哈哈哈
+; SENDMSG 0 <$str(N$生肖切割百分比5)>_哈哈哈
+; SENDMSG 0 <$str(N$生肖切割百分比6)>_哈哈哈
+; SENDMSG 0 <$str(N$生肖切割百分比7)>_哈哈哈
+; SENDMSG 0 <$str(N$生肖切割百分比8)>_哈哈哈
+; SENDMSG 0 <$str(N$生肖切割百分比9)>_哈哈哈
+; SENDMSG 0 <$str(N$生肖切割百分比10)>_哈哈哈
+; SENDMSG 0 <$str(N$生肖切割百分比11)>_哈哈哈
+; SENDMSG 0 <$str(N$生肖切割百分比12)>_哈哈哈
 
 
 

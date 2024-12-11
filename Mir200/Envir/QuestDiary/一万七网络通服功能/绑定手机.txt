@@ -170,6 +170,6 @@ Messagebox	您已达成《包服卡用户》+绑定手机！获赠奖励：100个游戏币！
 #if
 CheckContainstext	<$SerVername>	测试
 #act
-ExtractString	:	<$Str(T11)>	S$测试区微信ID	S$测试区机器码
+GETVALIDSTRSUPER	:	<$Str(T11)>	S$测试区微信ID	S$测试区机器码
 Addtextlist	..\QuestDiary\一万七网络通服功能\测试区手机奖励.txt	<$Str(S$测试区微信ID)>
 }

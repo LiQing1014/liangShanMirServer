@@ -1,47 +1,87 @@
 [@Main]
+#IF
+equal S$选择列
+#ACT
+MOV S$选择列 0
 
 #IF
 #ACT
-close
+csv_read
+mov S$魔血石容器
+mov S$魔血石容器ID
+mov n$循环序列 0
+while n$循环序列 < <$Getcsv(cfg_魔血石打造_终极,Row)>
+mov S$选择按钮<$str(n$循环序列)> 1
+mov S$选择按钮<$str(S$选择列)> 2
+INC S$魔血石容器 <Button|id=xsrq_<$STR(n$循环序列)>|x=0.0|y=0.0|nimg=custom/button/ann<$str(S$选择按钮<$str(n$循环序列)>)>.png|color=250|size=15|text=<$cfg_魔血石打造_终极(<$STR(n$循环序列)>_1)>|link=@Main#选择列=<$str(n$循环序列)>>
+inc S$魔血石容器ID xsrq_<$STR(n$循环序列)>,
+inc n$循环序列 1
+endwhile
+
+
+getdbitemfieldvalue 元宝 idx S$展示物品1ID
+getdbitemfieldvalue <$cfg_魔血石打造_终极(<$STR(S$选择列)>_7)> idx S$展示物品2ID
+getdbitemfieldvalue <$cfg_魔血石打造_终极(<$STR(S$选择列)>_1)> idx S$展示物品3ID
+getdbitemfieldvalue <$cfg_魔血石打造_终极(<$STR(S$选择列)>_8)> idx S$展示物品4ID
 ;OPENMERCHANTBIGDLG 1 557 1 4 0 0 1 400 0
 #SAY
 ; <血石使者/SCOLOR=154> <New/SCOLOR=249>\ 
 ; <>  <天命人，希望你能更深沉、勇敢，能充满战士的魄力和英雄的勇气/SCOLOR=230>\
 ; <在这个动荡不安的世界，期待着被探索与恢复..../SCOLOR=230>\  \
-; <[武神血石]|250#每秒恢复400HPMP/@无用>        <属性：><每秒恢复400HPMP/AUTOCOLOR=250>   <材料打造|250#打造条件：^-^254#1.悟空宝石*10^-^251#2.元宝*600W^-^250#3.魔龙血石*1/@元宝武神血石>   <大米打造|250#打造条件：^-^253#1.大米*1200^-^250#2.魔龙血石*1/@大米武神血石>\ 
-; <[轩辕血石]|250#每秒恢复450HPMP/@无用>        <属性：><每秒恢复450HPMP/AUTOCOLOR=250>   <材料打造|250#打造条件：^-^254#1.悟空宝石*20^-^251#2.元宝*700W^-^250#3.武神血石*1/@元宝轩辕血石>   <大米打造|250#打造条件：^-^253#1.大米*1400^-^250#2.武神血石*1/@大米轩辕血石>\ 
-; <[圣·轩辕血石]|250#每秒恢复500HPMP/@无用>    <属性：><每秒恢复500HPMP/AUTOCOLOR=250>   <材料打造|250#打造条件：^-^254#1.悟空宝石*30^-^251#2.元宝*800W^-^250#3.轩辕血石*1/@元宝圣·轩辕血石>   <大米打造|250#打造条件：^-^253#1.大米*1600^-^250#2.轩辕血石*1/@大米圣·轩辕血石>\ 
-; <[神·轩辕血石]|250#每秒恢复550HPMP/@无用>    <属性：><每秒恢复550HPMP/AUTOCOLOR=250>   <材料打造|250#打造条件：^-^254#1.悟空宝石*40^-^251#2.元宝*900W^-^250#3.圣·轩辕血石*1/@元宝神·轩辕血石>   <大米打造|250#打造条件：^-^253#1.大米*1800^-^250#2.圣·轩辕血石*1/@大米神·轩辕血石>\ 
-; <[蓝月复古·血石]|250#每秒恢复600HPMP/@无用>  <属性：><每秒恢复600HPMP/AUTOCOLOR=250>   <材料打造|250#打造条件：^-^254#1.悟空宝石*50^-^251#2.元宝*1000W^-^250#3.神·轩辕血石*1/@元宝蓝月复古·血石>   <大米打造|250#打造条件：^-^253#1.大米*2000^-^250#2.神·轩辕血石*1/@大米蓝月复古·血石>\ 
+; <[武神血石]|250#每秒恢复400HPMP/@无用>        <属性：><每秒恢复400HPMP/AUTOCOLOR=250>   <材料打造|250#打造条件：^-^254#1.悟空宝石*10^-^251#2.元宝*600W^-^250#3.魔龙血石*1/@元宝武神血石>   <灵符打造|250#打造条件：^-^253#1.灵符*1200^-^250#2.魔龙血石*1/@灵符武神血石>\ 
+; <[轩辕血石]|250#每秒恢复450HPMP/@无用>        <属性：><每秒恢复450HPMP/AUTOCOLOR=250>   <材料打造|250#打造条件：^-^254#1.悟空宝石*20^-^251#2.元宝*700W^-^250#3.武神血石*1/@元宝轩辕血石>   <灵符打造|250#打造条件：^-^253#1.灵符*1400^-^250#2.武神血石*1/@灵符轩辕血石>\ 
+; <[圣·轩辕血石]|250#每秒恢复500HPMP/@无用>    <属性：><每秒恢复500HPMP/AUTOCOLOR=250>   <材料打造|250#打造条件：^-^254#1.悟空宝石*30^-^251#2.元宝*800W^-^250#3.轩辕血石*1/@元宝圣·轩辕血石>   <灵符打造|250#打造条件：^-^253#1.灵符*1600^-^250#2.轩辕血石*1/@灵符圣·轩辕血石>\ 
+; <[神·轩辕血石]|250#每秒恢复550HPMP/@无用>    <属性：><每秒恢复550HPMP/AUTOCOLOR=250>   <材料打造|250#打造条件：^-^254#1.悟空宝石*40^-^251#2.元宝*900W^-^250#3.圣·轩辕血石*1/@元宝神·轩辕血石>   <灵符打造|250#打造条件：^-^253#1.灵符*1800^-^250#2.圣·轩辕血石*1/@灵符神·轩辕血石>\ 
+; <[蓝月复古·血石]|250#每秒恢复600HPMP/@无用>  <属性：><每秒恢复600HPMP/AUTOCOLOR=250>   <材料打造|250#打造条件：^-^254#1.悟空宝石*50^-^251#2.元宝*1000W^-^250#3.神·轩辕血石*1/@元宝蓝月复古·血石>   <灵符打造|250#打造条件：^-^253#1.灵符*2000^-^250#2.神·轩辕血石*1/@灵符蓝月复古·血石>\ 
 
 
-<Img|width=620|height=300|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|reset=1>
-<Layout|x=597|y=3|width=80|height=80|link=@exit>
-<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
-<Text|a=0|x=23.0|y=25.0|tipsx=10|tipsy=80|color=154|size=18|text=血石使者>
-<Text|a=0|x=111.0|y=25.0|tipsx=10|tipsy=80|color=249|size=18|text=New>
-<Text|a=0|x=23.0|y=45.0|tipsx=10|tipsy=80|color=230|size=18|text=天命人，希望你能更深沉、勇敢，能充满战士的魄力和英雄的勇气>
-<Text|a=0|x=23.0|y=65.0|tipsx=10|tipsy=80|color=230|size=18|text=在这个动荡不安的世界，期待着被探索与恢复....>
-<Text|a=0|x=23.0|y=105.0|tipsx=10|tipsy=80|color=251|size=18|text=[武神血石]|link=@无用>
-<RText|a=0|x=150.0|y=105.0|tipsx=10|tipsy=80|color=250|size=18|text=<属性：/FCOLOR=249>每秒恢复400HPMP>
-<Text|a=0|x=398.0|y=105.0|tipsx=10|tipsy=80|color=251|size=18|text=材料打造|link=@元宝武神血石>
-<Text|a=0|x=500.0|y=105.0|tipsx=10|tipsy=80|color=251|size=18|text=大米打造|link=@大米武神血石>
-<Text|a=0|x=23.0|y=125.0|tipsx=10|tipsy=80|color=251|size=18|text=[轩辕血石]|link=@无用>
-<RText|a=0|x=150.0|y=125.0|tipsx=10|tipsy=80|color=250|size=18|text=<属性：/FCOLOR=249>每秒恢复450HPMP>
-<Text|a=0|x=398.0|y=125.0|tipsx=10|tipsy=80|color=251|size=18|text=材料打造|link=@元宝轩辕血石>
-<Text|a=0|x=500.0|y=125.0|tipsx=10|tipsy=80|color=251|size=18|text=大米打造|link=@大米轩辕血石>
-<Text|a=0|x=23.0|y=145.0|tipsx=10|tipsy=80|color=251|size=18|text=[圣·轩辕血石]|link=@无用>
-<RText|a=0|x=150.0|y=145.0|tipsx=10|tipsy=80|color=250|size=18|text=<属性：/FCOLOR=249>每秒恢复500HPMP>
-<Text|a=0|x=398.0|y=145.0|tipsx=10|tipsy=80|color=251|size=18|text=材料打造|link=@元宝圣·轩辕血石>
-<Text|a=0|x=500.0|y=145.0|tipsx=10|tipsy=80|color=251|size=18|text=大米打造|link=@大米圣·轩辕血石>
-<Text|a=0|x=23.0|y=165.0|tipsx=10|tipsy=80|color=251|size=18|text=[神·轩辕血石]|link=@无用>
-<RText|a=0|x=150.0|y=165.0|tipsx=10|tipsy=80|color=250|size=18|text=<属性：/FCOLOR=249>每秒恢复550HPMP>
-<Text|a=0|x=398.0|y=165.0|tipsx=10|tipsy=80|color=251|size=18|text=材料打造|link=@元宝神·轩辕血石>
-<Text|a=0|x=500.0|y=165.0|tipsx=10|tipsy=80|color=251|size=18|text=大米打造|link=@大米神·轩辕血石>
-<Text|a=0|x=23.0|y=185.0|tipsx=10|tipsy=80|color=251|size=18|text=[蓝月复古·血石]|link=@无用>
-<RText|a=0|x=150.0|y=185.0|tipsx=10|tipsy=80|color=250|size=18|text=<属性：/FCOLOR=249>每秒恢复600HPMP>
-<Text|a=0|x=398.0|y=185.0|tipsx=10|tipsy=80|color=251|size=18|text=材料打造|link=@元宝蓝月复古·血石>
-<Text|a=0|x=500.0|y=185.0|tipsx=10|tipsy=80|color=251|size=18|text=大米打造|link=@大米蓝月复古·血石>
+; <Img|width=620|height=300|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|reset=1>
+; <Layout|x=597|y=3|width=80|height=80|link=@exit>
+; <Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+; <Text|a=0|x=23.0|y=25.0|tipsx=10|tipsy=80|color=154|size=18|text=血石使者>
+; <Text|a=0|x=111.0|y=25.0|tipsx=10|tipsy=80|color=249|size=18|text=New>
+; <Text|a=0|x=23.0|y=45.0|tipsx=10|tipsy=80|color=230|size=18|text=天命人，希望你能更深沉、勇敢，能充满战士的魄力和英雄的勇气>
+; <Text|a=0|x=23.0|y=65.0|tipsx=10|tipsy=80|color=230|size=18|text=在这个动荡不安的世界，期待着被探索与恢复....>
+; <Text|a=0|x=23.0|y=105.0|tipsx=10|tipsy=80|color=251|size=18|text=[武神血石]|link=@无用>
+; <RText|a=0|x=150.0|y=105.0|tipsx=10|tipsy=80|color=250|size=18|text=<属性：/FCOLOR=249>每秒恢复400HPMP>
+; <Text|a=0|x=398.0|y=105.0|tipsx=10|tipsy=80|color=251|size=18|text=材料打造|link=@元宝武神血石>
+; <Text|a=0|x=500.0|y=105.0|tipsx=10|tipsy=80|color=251|size=18|text=灵符打造|link=@灵符武神血石>
+; <Text|a=0|x=23.0|y=125.0|tipsx=10|tipsy=80|color=251|size=18|text=[轩辕血石]|link=@无用>
+; <RText|a=0|x=150.0|y=125.0|tipsx=10|tipsy=80|color=250|size=18|text=<属性：/FCOLOR=249>每秒恢复450HPMP>
+; <Text|a=0|x=398.0|y=125.0|tipsx=10|tipsy=80|color=251|size=18|text=材料打造|link=@元宝轩辕血石>
+; <Text|a=0|x=500.0|y=125.0|tipsx=10|tipsy=80|color=251|size=18|text=灵符打造|link=@灵符轩辕血石>
+; <Text|a=0|x=23.0|y=145.0|tipsx=10|tipsy=80|color=251|size=18|text=[圣·轩辕血石]|link=@无用>
+; <RText|a=0|x=150.0|y=145.0|tipsx=10|tipsy=80|color=250|size=18|text=<属性：/FCOLOR=249>每秒恢复500HPMP>
+; <Text|a=0|x=398.0|y=145.0|tipsx=10|tipsy=80|color=251|size=18|text=材料打造|link=@元宝圣·轩辕血石>
+; <Text|a=0|x=500.0|y=145.0|tipsx=10|tipsy=80|color=251|size=18|text=灵符打造|link=@灵符圣·轩辕血石>
+; <Text|a=0|x=23.0|y=165.0|tipsx=10|tipsy=80|color=251|size=18|text=[神·轩辕血石]|link=@无用>
+; <RText|a=0|x=150.0|y=165.0|tipsx=10|tipsy=80|color=250|size=18|text=<属性：/FCOLOR=249>每秒恢复550HPMP>
+; <Text|a=0|x=398.0|y=165.0|tipsx=10|tipsy=80|color=251|size=18|text=材料打造|link=@元宝神·轩辕血石>
+; <Text|a=0|x=500.0|y=165.0|tipsx=10|tipsy=80|color=251|size=18|text=灵符打造|link=@灵符神·轩辕血石>
+; <Text|a=0|x=23.0|y=185.0|tipsx=10|tipsy=80|color=251|size=18|text=[蓝月复古·血石]|link=@无用>
+; <RText|a=0|x=150.0|y=185.0|tipsx=10|tipsy=80|color=250|size=18|text=<属性：/FCOLOR=249>每秒恢复600HPMP>
+; <Text|a=0|x=398.0|y=185.0|tipsx=10|tipsy=80|color=251|size=18|text=材料打造|link=@元宝蓝月复古·血石>
+; <Text|a=0|x=500.0|y=185.0|tipsx=10|tipsy=80|color=251|size=18|text=灵符打造|link=@灵符蓝月复古·血石>
+
+
+<Img|show=4|bg=1|loadDelay=0|move=0|esc=1|img=custom/hecheng/bs1.png|reset=1>
+<Layout|x=721.0|y=-18.0|width=80|height=80|link=@exit>
+<Button|x=750.0|y=0.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+; <Button|x=50.0|y=66.0|pimg=custom/button/ann2.png|nimg=custom/button/ann1.png|color=255|size=18|text=Button>
+<ItemShow|x=433.0|y=170.0|width=70|height=70|itemid=<$str(S$展示物品3ID)>|itemcount=1|showtips=1|bgtype=0>
+<RText|x=213.0|y=266.0|color=255|size=18|text=<属性：/FCOLOR=255><每秒恢复<$cfg_魔血石打造_终极(<$STR(S$选择列)>_2)>/FCOLOR=250>>
+<ItemShow|x=317.0|y=364.0|width=70|height=70|itemid=<$str(S$展示物品1ID)>|itemcount=<$cfg_魔血石打造_终极(<$STR(S$选择列)>_4)>|showtips=1|bgtype=1>
+
+<Button|x=255.0|y=440.0|pimg=custom/button/ann2.png|nimg=custom/button/ann1.png|color=251|size=18|text=材料打造|link=@元宝<$cfg_魔血石打造_终极(<$STR(S$选择列)>_1)>>
+
+<Button|x=557.0|y=440.0|color=251|pimg=custom/button/ann2.png|nimg=custom/button/ann1.png|size=18|text=灵符打造|link=@灵符<$cfg_魔血石打造_终极(<$STR(S$选择列)>_1)>>
+<Text|x=371.0|y=16.0|color=255|size=18|text=血石锻造>
+<Text|x=630.0|y=384.0|color=255|size=18|text=灵符<$cfg_魔血石打造_终极(<$STR(S$选择列)>_6)>>
+<ListView|children={<$STR(S$魔血石容器ID)>}|x=50.0|y=66.0|width=120|height=400|margin=2|cantouch=0>
+<$STR(S$魔血石容器)>
+<ItemShow|x=239.0|y=363.0|width=70|height=70|itemid=<$str(S$展示物品2ID)>|itemcount=1|showtips=1|bgtype=1>
+<ItemShow|x=541.0|y=363.0|width=70|height=70|itemid=<$str(S$展示物品2ID)>|itemcount=1|showtips=1|bgtype=1>
+<ItemShow|x=278.0|y=301.0|width=70|height=70|itemid=<$str(S$展示物品4ID)>|itemcount=<$cfg_魔血石打造_终极(<$STR(S$选择列)>_9)>|showtips=1|bgtype=1>
 
 
 [@元宝蓝月复古·血石]
@@ -244,12 +284,12 @@ Break
 
 
 
-[@大米蓝月复古·血石]
+[@灵符蓝月复古·血石]
 
 #IF
-CHECKGAMEPOINT < 2000
+checkmoney 灵符 < 2000
 #ACT
-MESSAGEBOX 对不起，您的账户上大米不足2000点，请好好检查！
+MESSAGEBOX 对不起，您的账户上灵符不足2000点，请好好检查！
 break
 
 
@@ -266,7 +306,7 @@ break
 
 #IF
 #Act
-GAMEPOINT - 2000
+MONEY 灵符 - 2000
 TAKE 神·轩辕血石 1
 Give 蓝月复古·血石 1
 SendCenterMsg 250 0 【提示】：恭喜您成功打造一个【蓝月复古·血石】 0 3
@@ -275,12 +315,12 @@ Break
 
 
 
-[@大米神·轩辕血石]
+[@灵符神·轩辕血石]
 
 #IF
-CHECKGAMEPOINT < 1800
+checkmoney 灵符 < 1800
 #ACT
-MESSAGEBOX 对不起，您的账户上大米不足1800点，请好好检查！
+MESSAGEBOX 对不起，您的账户上灵符不足1800点，请好好检查！
 break
 
 
@@ -296,7 +336,7 @@ break
 
 #IF
 #Act
-GAMEPOINT - 1800
+MONEY 灵符 - 1800
 TAKE 圣·轩辕血石 1
 Give 神·轩辕血石 1
 SendCenterMsg 250 0 【提示】：恭喜您成功打造一个【神·轩辕血石】 0 3
@@ -308,13 +348,13 @@ Break
 
 
 
-[@大米圣·轩辕血石]
+[@灵符圣·轩辕血石]
 
 
 #IF
-CHECKGAMEPOINT < 1600
+checkmoney 灵符 < 1600
 #ACT
-MESSAGEBOX 对不起，您的账户上大米不足1600点，请好好检查！
+MESSAGEBOX 对不起，您的账户上灵符不足1600点，请好好检查！
 break
 
 
@@ -331,7 +371,7 @@ break
 
 #IF
 #Act
-GAMEPOINT - 1600
+MONEY 灵符 - 1600
 TAKE 轩辕血石 1
 Give 圣·轩辕血石 1
 SendCenterMsg 250 0 【提示】：恭喜您成功打造一个【圣·轩辕血石】 0 3
@@ -344,12 +384,12 @@ Break
 
 
 
-[@大米轩辕血石]
+[@灵符轩辕血石]
 
 #IF
-CHECKGAMEPOINT < 1400
+checkmoney 灵符 < 1400
 #ACT
-MESSAGEBOX 对不起，您的账户上大米不足1400点，请好好检查！
+MESSAGEBOX 对不起，您的账户上灵符不足1400点，请好好检查！
 break
 
 
@@ -366,7 +406,7 @@ break
 
 #IF
 #Act
-GAMEPOINT - 1400
+MONEY 灵符 - 1400
 TAKE 武神血石 1
 Give 轩辕血石 1
 SendCenterMsg 250 0 【提示】：恭喜您成功打造一个【轩辕血石】 0 3
@@ -381,12 +421,12 @@ Break
 
 
 
-[@大米武神血石]
+[@灵符武神血石]
 
 #IF
-CHECKGAMEPOINT < 1200
+checkmoney 灵符 < 1200
 #ACT
-MESSAGEBOX 对不起，您的账户上大米不足1200点，请好好检查！
+MESSAGEBOX 对不起，您的账户上灵符不足1200点，请好好检查！
 break
 
 
@@ -404,7 +444,7 @@ break
 
 #IF
 #Act
-GAMEPOINT - 1200
+MONEY 灵符 - 1200
 TAKE 魔龙血石 1
 Give 武神血石 1
 SendCenterMsg 250 0 【提示】：恭喜您成功打造一个【武神血石】 0 3

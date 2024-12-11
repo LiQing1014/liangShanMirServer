@@ -1,0 +1,48 @@
+[@充值页面_QF]
+{
+
+#IF
+equal S$充值渠道
+#ACT
+MOV S$充值渠道 1
+#IF
+equal <$CLIENTFLAG> 2
+#ACT
+goto @调用充值_QF
+BREAK
+
+#IF
+#ACT
+#SAY
+<Img|x=0.0|y=0.0|esc=1|show=4|bg=1|move=0|img=custom/shouchong/bg_00.png|loadDelay=1|reset=1>
+<Layout|x=459.0|y=-3.0|width=80|height=80|link=@exit>
+<Button|x=486.0|y=11.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|x=132.0|y=68.0|color=251|size=18|text=<$STR(S$充值金额)>>
+<Text|x=132.0|y=98.0|outline=1|color=251|size=18|text=<$USERNAME>>
+<RText|x=308.0|y=85.0|color=251|size=18|outline=1|text=<充值项目：/FCOLOR=250><<$GETSTRVALUE(T4,直购项目)>/FCOLOR=251>>
+<Layout|x=62.0|y=159.0|width=120|height=42|link=@充值页面_QF#充值渠道=1>
+<Layout|x=207.0|y=159.0|width=120|height=42|link=@充值页面_QF#充值渠道=2>
+<Layout|x=354.0|y=159.0|width=120|height=42|link=@充值页面_QF#充值渠道=3>
+<Button|x=195.0|y=228.0|pimg=custom/shouchong/bg_03.png|color=255|size=18|nimg=custom/shouchong/bg_02.png|link=@调用充值_QF>
+
+
+#IF
+equal S$充值渠道 1
+#SAY
+<Img|x=62.0|y=159.0|img=custom/shouchong/bg_01.png|esc=0>
+#IF
+equal S$充值渠道 2
+#SAY
+<Img|x=207.0|y=159.0|img=custom/shouchong/bg_04.png|esc=0>
+#IF
+equal S$充值渠道 3
+#SAY
+<Img|x=353.0|y=159.0|img=custom/shouchong/bg_04.png|esc=0>
+
+
+[@调用充值_QF]
+#IF
+#ACT
+pullpay <$STR(S$充值金额)> <$STR(S$充值渠道)> 21
+
+}

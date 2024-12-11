@@ -130,7 +130,7 @@ Mov	S$沙城老大信息
 Mov	S$沙城时间信息
 Mov	S$沙城分区名
 GetRandomText ..\Questdiary\一万七网络通服功能\【沙城领取记录】.txt	<$Str(S$沙城信息)>	0
-ExtractString :	<$Str(S$沙城信息)> S$沙城归属信息	S$沙城奖金信息	S$沙城老大信息	S$沙城分区名	S$沙城时间信息
+GETVALIDSTRSUPER :	<$Str(S$沙城信息)> S$沙城归属信息	S$沙城奖金信息	S$沙城老大信息	S$沙城分区名	S$沙城时间信息
 goto	@设定自动攻城
 addtextlist	..\Questdiary\一万七网络通服功能\【沙城领取记录】.txt	正在设置攻城
 
@@ -160,7 +160,7 @@ Mov	S$沙城时间信息
 Mov	S$沙城分区名
 
 GetRandomText ..\Questdiary\一万七网络通服功能\【沙城领取记录】.txt	<$Str(S$沙城信息)>	0
-ExtractString :	<$Str(S$沙城信息)> S$沙城归属信息	S$沙城奖金信息	S$沙城老大信息	S$沙城分区名	S$沙城时间信息
+GETVALIDSTRSUPER :	<$Str(S$沙城信息)> S$沙城归属信息	S$沙城奖金信息	S$沙城老大信息	S$沙城分区名	S$沙城时间信息
 goto	@设定自动攻城
 addtextlist	..\Questdiary\一万七网络通服功能\【沙城领取记录】.txt	正在设置攻城
 
@@ -229,18 +229,18 @@ break
 #if
 CheckContainstext	<$STATSERVERTIME>	分
 #act
-ExtractString	分钟 <$STATSERVERTIME> S$分	S$秒
+GETVALIDSTRSUPER	分钟 <$STATSERVERTIME> S$分	S$秒
 Dec	S$秒	秒
 
 #if
 CheckContainstext	<$Str(S$分)>	时
 #act
-ExtractString	小时 <$Str(S$分)> S$时	S$分
+GETVALIDSTRSUPER	小时 <$Str(S$分)> S$时	S$分
 
 #if
 CheckContainstext	<$Str(S$时)>	天
 #act
-ExtractString	天 <$Str(S$时)> S$天	S$时
+GETVALIDSTRSUPER	天 <$Str(S$时)> S$天	S$时
 
 #If
 #act

@@ -1,0 +1,599 @@
+[2024-12-07 08:53:46:837] Failure: .\Map\轩辕古城.map could not be loaded.
+[2024-12-07 08:53:46:837] Failure: .\Map\轩辕古城.map could not be loaded.
+
+[2024-12-07 08:53:47:089] Failure: .\Map\定军山.map could not be loaded.
+[2024-12-07 08:53:47:097] Failure: .\Map\幽灵古堡.map could not be loaded.
+[2024-12-07 08:53:47:111] Failure: .\Map\神月祭坛.map could not be loaded.
+[2024-12-07 08:53:47:111] Failure: .\Map\失乐园.map could not be loaded.
+[2024-12-07 08:53:47:145] Failure: .\Map\十二封印之地.map could not be loaded.
+[2024-12-07 08:53:47:146] Failure: .\Map\BOSS之家.map could not be loaded.
+[2024-12-07 08:53:47:146] Failure: .\Map\雪域.map could not be loaded.
+[2024-12-07 08:53:47:159] Failure: .\Map\天之龙域.map could not be loaded.
+[2024-12-07 08:53:47:159] Failure: .\Map\神龙一层.map could not be loaded.
+[2024-12-07 08:53:47:159] Failure: .\Map\失乐园.map could not be loaded.
+[2024-12-07 08:53:47:164] Failure: .\Map\BOSS之家.map could not be loaded.
+[2024-12-07 08:53:47:165] Failure: .\Map\修罗天宫.map could not be loaded.
+[2024-12-07 08:53:47:167] Failure: .\Map\仙城.map could not be loaded.
+[2024-12-07 08:53:47:170] Failure: .\Map\九幽殿.map could not be loaded.
+[2024-12-07 08:53:47:177] Failure: .\Map\雪域大陆.map could not be loaded.
+[2024-12-07 08:53:47:177] Failure: .\Map\炼狱2.map could not be loaded.
+[2024-12-07 08:53:47:185] Failure: .\Map\天之龙域.map could not be loaded.
+[2024-12-07 08:53:47:448] Failure: .\Map\D71650.map could not be loaded.
+[2024-12-07 08:53:47:448] Failure: .\Map\D71651.map could not be loaded.
+[2024-12-07 08:53:47:448] Failure: .\Map\D71652.map could not be loaded.
+[2024-12-07 08:53:47:448] Failure: .\Map\D71653.map could not be loaded.
+[2024-12-07 08:53:47:491] Failure: .\Map\M001.map could not be loaded.
+[2024-12-07 08:53:49:520] >>>>>RegenMonsterByName ThreadError :[MainDoor]-0[3-16528] 当前Thread:21500
+[2024-12-07 08:53:49:520] MainDoor Name:MainDoor Map:3 X:672 Y:330 HP:4144
+[2024-12-07 08:53:49:520] >>>>>RegenMonsterByName ThreadError :[LeftWall]-0[3-16528] 当前Thread:21500
+[2024-12-07 08:53:49:520] LeftWall Name:LeftWall Map:3 X:624 Y:278 HP:3072
+[2024-12-07 08:53:49:520] >>>>>RegenMonsterByName ThreadError :[CenterWall]-0[3-16528] 当前Thread:21500
+[2024-12-07 08:53:49:520] CenterWall Name:CenterWall Map:3 X:627 Y:278 HP:3072
+[2024-12-07 08:53:49:520] >>>>>RegenMonsterByName ThreadError :[RightWall]-0[3-16528] 当前Thread:21500
+[2024-12-07 08:53:49:520] RightWall Name:RightWall Map:3 X:634 Y:271 HP:3072
+[2024-12-07 08:53:49:854] ---------------------线程耗时监控
+[2024-12-07 08:53:50:050] Frame-----------------------------------
+
+[2024-12-07 08:53:50:059] MainRunThread(0)-----------------------------------
+
+[2024-12-07 08:53:50:077] EnvirThread 0/0(7547-0)flag:2000000015  lua: 1 CallLua:newreadcsv 19-----------------------------------
+
+[2024-12-07 08:53:50:086] DbThread(16-0)-----------------------------------
+
+[2024-12-07 08:53:50:096] BoxSellDbThread(16)-----------------------------------
+
+[2024-12-07 08:53:50:105] NewHttpPost(16-0-0)-----------------------------------
+
+
+[2024-12-07 09:12:42:620] >>>>>TPlayObject.RecalcAbilitys[韦浩林,10000000001733476280000058152] 跨线程调用
+[2024-12-07 09:12:42:620] >>>>>TPlayObject.RecalcAbilitys[韦浩林,10000000001733476280000058152] 跨线程调用
+
+[2024-12-07 10:16:29:701] ---------------------线程耗时监控
+[2024-12-07 10:16:29:721] Frame-----------------------------------
+
+[2024-12-07 10:16:29:741] MainRunThread(0)-----------------------------------
+
+[2024-12-07 10:16:29:760] DbThread(0-0)-----------------------------------
+
+[2024-12-07 10:16:29:780] BoxSellDbThread(16)-----------------------------------
+
+[2024-12-07 10:16:29:801] NewHttpPost(0-0-0)-----------------------------------
+
+
+[2024-12-07 11:02:00:563] FuncNpcCall Err 折扇:@StartAutoPlayGame Except：Stack overflow[00000000005B35CB] System._ZN6System24InternalUStrFromPCharLenERNS_13UnicodeStringEPcii (Line 26783, "System.pas" + 0)
+[0000000001587AD2] JclDebug._ZN8Jcldebug18JclCreateStackListEbiPvbS0_ (Line 5351, "JclDebug.pas" + 1)
+[00000000015879B2] JclDebug._ZN8Jcldebug21DoExceptionStackTraceEPN6System7TObjectEPvbS3_ (Line 5292, "JclDebug.pas" + 20)
+[000000000158AAA5] JclDebug._ZN8Jcldebug14DoExceptNotifyEPN6System7TObjectEPvbS3_ (Line 6741, "JclDebug.pas" + 7)
+[0000000001579702] JclHookExcept._ZN13Jclhookexcept13TNotifierItem8DoNotifyEPN6System7TObjectEPvbS4_ (Line 272, "JclHookExcept.pas" + 5)
+[000000000157996B] JclHookExcept._ZN13Jclhookexcept14DoExceptNotifyEPN6System7TObjectEPvbS3_ (Line 339, "JclHookExcept.pas" + 13)
+[0000000001579B31] JclHookExcept._ZN13Jclhookexcept19HookedExceptObjProcEPN6System16TExceptionRecordE (Line 395, "JclHookExcept.pas" + 5)
+[00000000005B1B17] System._ZN6System23_DelphiExceptionHandlerEPNS_16TExceptionRecordEyPvS2_ (Line 21118, "System.pas" + 53)
+[00007FFA6B6128BF] Unknown function at __chkstk
+[00007FFA6B5C2554] RtlRaiseException
+[00007FFA6B6113CE] KiUserExceptionDispatcher
+[00000000005B35CB] System._ZN6System24InternalUStrFromPCharLenERNS_13UnicodeStringEPcii (Line 26783, "System.pas" + 0)
+[00000000005B5044] System._ZN6System13_UStrFromLStrERNS_13UnicodeStringENS_11AnsiStringTILt0EEE (Line 31045, "System.pas" + 5)
+[00000000015DCE99] EDcode._ZN6Edcode12EncodeStringEN6System11AnsiStringTILt0EEE (Line 140, "EDcode.pas" + 1)
+[00000000015DFB73] uMsgManage._ZN10Umsgmanage10TMsgManage14SendDefMessageEiiiiiN6System13UnicodeStringE (Line 385, "uMsgManage.pas" + 3)
+[00000000016DD48F] ObjPlay._ZN7Objplay11TPlayObject17StartAutoPlayGameEb (Line 24410, "ObjPlay.pas" + 11)
+[000000000134B802] ObjNpc.QuestActionProcess (Line 19339, "ObjNpc.pas" + 2330)
+[0000000001354378] ObjNpc._ZN6Objnpc8TNormNpc9GotoLableEPN7Objplay11TPlayObjectEN6System13UnicodeStringEbPN7Objbase11TBaseObjectEPNS4_7Classes5TListEb (Line 20623, "ObjNpc.pas" + 138)
+[00000000016E11F2] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEiRKNS1_7VariantEb (Line 25204, "ObjPlay.pas" + 101)
+[00000000016E1555] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEi (Line 25223, "ObjPlay.pas" + 2)
+[00000000016E097D] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEb (Line 25094, "ObjPlay.pas" + 11)
+[00000000016DD4AC] ObjPlay._ZN7Objplay11TPlayObject17StartAutoPlayGameEb (Line 24413, "ObjPlay.pas" + 14)
+[000000000134B802] ObjNpc.QuestActionProcess (Line 19339, "ObjNpc.pas" + 2330)
+[0000000001354378] ObjNpc._ZN6Objnpc8TNormNpc9GotoLableEPN7Objplay11TPlayObjectEN6System13UnicodeStringEbPN7Objbase11TBaseObjectEPNS4_7Classes5TListEb (Line 20623, "ObjNpc.pas" + 138)
+[00000000016E11F2] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEiRKNS1_7VariantEb (Line 25204, "ObjPlay.pas" + 101)
+[00000000016E1555] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEi (Line 25223, "ObjPlay.pas" + 2)
+[00000000016E097D] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEb (Line 25094, "ObjPlay.pas" + 11)
+[00000000016DD4AC] ObjPlay._ZN7Objplay11TPlayObject17StartAutoPlayGameEb (Line 24413, "ObjPlay.pas" + 14)
+[000000000134B802] ObjNpc.QuestActionProcess (Line 19339, "ObjNpc.pas" + 2330)
+[0000000001354378] ObjNpc._ZN6Objnpc8TNormNpc9GotoLableEPN7Objplay11TPlayObjectEN6System13UnicodeStringEbPN7Objbase11TBaseObjectEPNS4_7Classes5TListEb (Line 20623, "ObjNpc.pas" + 138)
+[00000000016E11F2] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEiRKNS1_7VariantEb (Line 25204, "ObjPlay.pas" + 101)
+[00000000016E1555] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEi (Line 25223, "ObjPlay.pas" + 2)
+[00000000016E097D] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEb (Line 25094, "ObjPlay.pas" + 11)
+[00000000016DD4AC] ObjPlay._ZN7Objplay11TPlayObject17StartAutoPlayGameEb (Line 24413, "ObjPlay.pas" + 14)
+[000000000134B802] ObjNpc.QuestActionProcess (Line 19339, "ObjNpc.pas" + 2330)
+[0000000001354378] ObjNpc._ZN6Objnpc8TNormNpc9GotoLableEPN7Objplay11TPlayObjectEN6System13UnicodeStringEbPN7Objbase11TBaseObjectEPNS4_7Classes5TListEb (Line 20623, "ObjNpc.pas" + 138)
+[00000000016E11F2] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEiRKNS1_7VariantEb (Line 25204, "ObjPlay.pas" + 101)
+[00000000016E1555] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEi (Line 25223, "ObjPlay.pas" + 2)
+[00000000016E097D] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEb (Line 25094, "ObjPlay.pas" + 11)
+[00000000016DD4AC] ObjPlay._ZN7Objplay11TPlayObject17StartAutoPlayGameEb (Line 24413, "ObjPlay.pas" + 14)
+[000000000134B802] ObjNpc.QuestActionProcess (Line 19339, "ObjNpc.pas" + 2330)
+[0000000001354378] ObjNpc._ZN6Objnpc8TNormNpc9GotoLableEPN7Objplay11TPlayObjectEN6System13UnicodeStringEbPN7Objbase11TBaseObjectEPNS4_7Classes5TListEb (Line 20623, "ObjNpc.pas" + 138)
+[00000000016E11F2] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEiRKNS1_7VariantEb (Line 25204, "ObjPlay.pas" + 101)
+[00000000016E1555] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEi (Line 25223, "ObjPlay.pas" + 2)
+[00000000016E097D] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEb (Line 25094, "ObjPlay.pas" + 11)
+[00000000016DD4AC] ObjPlay._ZN7Objplay11TPlayObject17StartAutoPlayGameEb (Line 24413, "ObjPlay.pas" + 14)
+[000000000134B802] ObjNpc.QuestActionProcess (Line 19339, "ObjNpc.pas" + 2330)
+[0000000001354378] ObjNpc._ZN6Objnpc8TNormNpc9GotoLableEPN7Objplay11TPlayObjectEN6System13UnicodeStringEbPN7Objbase11TBaseObjectEPNS4_7Classes5TListEb (Line 20623, "ObjNpc.pas" + 138)
+[00000000016E11F2] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEiRKNS1_7VariantEb (Line 25204, "ObjPlay.pas" + 101)
+[00000000016E1555] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEi (Line 25223, "ObjPlay.pas" + 2)
+[00000000016E097D] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEb (Line 25094, "ObjPlay.pas" + 11)
+[00000000016DD4AC] ObjPlay._ZN7Objplay11TPlayObject17StartAutoPlayGameEb (Line 24413, "ObjPlay.pas" + 14)
+[000000000134B802] ObjNpc.QuestActionProcess (Line 19339, "ObjNpc.pas" + 2330)
+[0000000001354378] ObjNpc._ZN6Objnpc8TNormNpc9GotoLableEPN7Objplay11TPlayObjectEN6System13UnicodeStringEbPN7Objbase11TBaseObjectEPNS4_7Classes5TListEb (Line 20623, "ObjNpc.pas" + 138)
+[00000000016E11F2] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEiRKNS1_7VariantEb (Line 25204, "ObjPlay.pas" + 101)
+[00000000016E1555] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEi (Line 25223, "ObjPlay.pas" + 2)
+[00000000016E097D] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEb (Line 25094, "ObjPlay.pas" + 11)
+[00000000016DD4AC] ObjPlay._ZN7Objplay11TPlayObject17StartAutoPlayGameEb (Line 24413, "ObjPlay.pas" + 14)
+[000000000134B802] ObjNpc.QuestActionProcess (Line 19339, "ObjNpc.pas" + 2330)
+[0000000001354378] ObjNpc._ZN6Objnpc8TNormNpc9GotoLableEPN7Objplay11TPlayObjectEN6System13UnicodeStringEbPN7Objbase11TBaseObjectEPNS4_7Classes5TListEb (Line 20623, "ObjNpc.pas" + 138)
+[00000000016E11F2] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEiRKNS1_7VariantEb (Line 25204, "ObjPlay.pas" + 101)
+[00000000016E1555] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEi (Line 25223, "ObjPlay.pas" + 2)
+[00000000016E097D] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEb (Line 25094, "ObjPlay.pas" + 11)
+[00000000016DD4AC] ObjPlay._ZN7Objplay11TPlayObject17StartAutoPlayGameEb (Line 24413, "ObjPlay.pas" + 14)
+[000000000134B802] ObjNpc.QuestActionProcess (Line 19339, "ObjNpc.pas" + 2330)
+[0000000001354378] ObjNpc._ZN6Objnpc8TNormNpc9GotoLableEPN7Objplay11TPlayObjectEN6System13UnicodeStringEbPN7Objbase11TBaseObjectEPNS4_7Classes5TListEb (Line 20623, "ObjNpc.pas" + 138)
+[00000000016E11F2] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEiRKNS1_7VariantEb (Line 25204, "ObjPlay.pas" + 101)
+[00000000016E1555] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEi (Line 25223, "ObjPlay.pas" + 2)
+[00000000016E097D] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEb (Line 25094, "ObjPlay.pas" + 11)
+[00000000016DD4AC] ObjPlay._ZN7Objplay11TPlayObject17StartAutoPlayGameEb (Line 24413, "ObjPlay.pas" + 14)
+[000000000134B802] ObjNpc.QuestActionProcess (Line 19339, "ObjNpc.pas" + 2330)
+[0000000001354378] ObjNpc._ZN6Objnpc8TNormNpc9GotoLableEPN7Objplay11TPlayObjectEN6System13UnicodeStringEbPN7Objbase11TBaseObjectEPNS4_7Classes5TListEb (Line 20623, "ObjNpc.pas" + 138)
+[00000000016E11F2] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEiRKNS1_7VariantEb (Line 25204, "ObjPlay.pas" + 101)
+[00000000016E1555] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEi (Line 25223, "ObjPlay.pas" + 2)
+[00000000016E097D] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEb (Line 25094, "ObjPlay.pas" + 11)
+[00000000016DD4AC] ObjPlay._ZN7Objplay11TPlayObject17StartAutoPlayGameEb (Line 24413, "ObjPlay.pas" + 14)
+[000000000134B802] ObjNpc.QuestActionProcess (Line 19339, "ObjNpc.pas" + 2330)
+[0000000001354378] ObjNpc._ZN6Objnpc8TNormNpc9GotoLableEPN7Objplay11TPlayObjectEN6System13UnicodeStringEbPN7Objbase11TBaseObjectEPNS4_7Classes5TListEb (Line 20623, "ObjNpc.pas" + 138)
+[00000000016E11F2] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEiRKNS1_7VariantEb (Line 25204, "ObjPlay.pas" + 101)
+[00000000016E1555] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEi (Line 25223, "ObjPlay.pas" + 2)
+[00000000016E097D] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEb (Line 25094, "ObjPlay.pas" + 11)
+[00000000016DD4AC] ObjPlay._ZN7Objplay11TPlayObject17StartAutoPlayGameEb (Line 24413, "ObjPlay.pas" + 14)
+[000000000134B802] ObjNpc.QuestActionProcess (Line 19339, "ObjNpc.pas" + 2330)
+[0000000001354378] ObjNpc._ZN6Objnpc8TNormNpc9GotoLableEPN7Objplay11TPlayObjectEN6System13UnicodeStringEbPN7Objbase11TBaseObjectEPNS4_7Classes5TListEb (Line 20623, "ObjNpc.pas" + 138)
+[00000000016E11F2] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEiRKNS1_7VariantEb (Line 25204, "ObjPlay.pas" + 101)
+[00000000016E1555] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEi (Line 25223, "ObjPlay.pas" + 2)
+[00000000016E097D] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEb (Line 25094, "ObjPlay.pas" + 11)
+[00000000016DD4AC] ObjPlay._ZN7Objplay11TPlayObject17StartAutoPlayGameEb (Line 24413, "ObjPlay.pas" + 14)
+[000000000134B802] ObjNpc.QuestActionProcess (Line 19339, "ObjNpc.pas" + 2330)
+[0000000001354378] ObjNpc._ZN6Objnpc8TNormNpc9GotoLableEPN7Objplay11TPlayObjectEN6System13UnicodeStringEbPN7Objbase11TBaseObjectEPNS4_7Classes5TListEb (Line 20623, "ObjNpc.pas" + 138)
+[00000000016E11F2] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEiRKNS1_7VariantEb (Line 25204, "ObjPlay.pas" + 101)
+[00000000016E1555] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEi (Line 25223, "ObjPlay.pas" + 2)
+[00000000016E097D] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEb (Line 25094, "ObjPlay.pas" + 11)
+[00000000016DD4AC] ObjPlay._ZN7Objplay11TPlayObject17StartAutoPlayGameEb (Line 24413, "ObjPlay.pas" + 14)
+[000000000134B802] ObjNpc.QuestActionProcess (Line 19339, "ObjNpc.pas" + 2330)
+[0000000001354378] ObjNpc._ZN6Objnpc8TNormNpc9GotoLableEPN7Objplay11TPlayObjectEN6System13UnicodeStringEbPN7Objbase11TBaseObjectEPNS4_7Classes5TListEb (Line 20623, "ObjNpc.pas" + 138)
+[00000000016E11F2] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEiRKNS1_7VariantEb (Line 25204, "ObjPlay.pas" + 101)
+[00000000016E1555] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEi (Line 25223, "ObjPlay.pas" + 2)
+[00000000016E097D] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEb (Line 25094, "ObjPlay.pas" + 11)
+[00000000016DD4AC] ObjPlay._ZN7Objplay11TPlayObject17StartAutoPlayGameEb (Line 24413, "ObjPlay.pas" + 14)
+[000000000134B802] ObjNpc.QuestActionProcess (Line 19339, "ObjNpc.pas" + 2330)
+[0000000001354378] ObjNpc._ZN6Objnpc8TNormNpc9GotoLableEPN7Objplay11TPlayObjectEN6System13UnicodeStringEbPN7Objbase11TBaseObjectEPNS4_7Classes5TListEb (Line 20623, "ObjNpc.pas" + 138)
+[00000000016E11F2] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEiRKNS1_7VariantEb (Line 25204, "ObjPlay.pas" + 101)
+[00000000016E1555] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEi (Line 25223, "ObjPlay.pas" + 2)
+[00000000016E097D] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEb (Line 25094, "ObjPlay.pas" + 11)
+[00000000016DD4AC] ObjPlay._ZN7Objplay11TPlayObject17StartAutoPlayGameEb (Line 24413, "ObjPlay.pas" + 14)
+[000000000134B802] ObjNpc.QuestActionProcess (Line 19339, "ObjNpc.pas" + 2330)
+[0000000001354378] ObjNpc._ZN6Objnpc8TNormNpc9GotoLableEPN7Objplay11TPlayObjectEN6System13UnicodeStringEbPN7Objbase11TBaseObjectEPNS4_7Classes5TListEb (Line 20623, "ObjNpc.pas" + 138)
+[00000000016E11F2] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEiRKNS1_7VariantEb (Line 25204, "ObjPlay.pas" + 101)
+[00000000016E1555] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEi (Line 25223, "ObjPlay.pas" + 2)
+[00000000016E097D] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEb (Line 25094, "ObjPlay.pas" + 11)
+[00000000016DD4AC] ObjPlay._ZN7Objplay11TPlayObject17StartAutoPlayGameEb (Line 24413, "ObjPlay.pas" + 14)
+[000000000134B802] ObjNpc.QuestActionProcess (Line 19339, "ObjNpc.pas" + 2330)
+[0000000001354378] ObjNpc._ZN6Objnpc8TNormNpc9GotoLableEPN7Objplay11TPlayObjectEN6System13UnicodeStringEbPN7Objbase11TBaseObjectEPNS4_7Classes5TListEb (Line 20623, "ObjNpc.pas" + 138)
+[00000000016E11F2] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEiRKNS1_7VariantEb (Line 25204, "ObjPlay.pas" + 101)
+[00000000016E1555] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEi (Line 25223, "ObjPlay.pas" + 2)
+[00000000016E097D] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEb (Line 25094, "ObjPlay.pas" + 11)
+[00000000016DD4AC] ObjPlay._ZN7Objplay11TPlayObject17StartAutoPlayGameEb (Line 24413, "ObjPlay.pas" + 14)
+[000000000134B802] ObjNpc.QuestActionProcess (Line 19339, "ObjNpc.pas" + 2330)
+[0000000001354378] ObjNpc._ZN6Objnpc8TNormNpc9GotoLableEPN7Objplay11TPlayObjectEN6System13UnicodeStringEbPN7Objbase11TBaseObjectEPNS4_7Classes5TListEb (Line 20623, "ObjNpc.pas" + 138)
+[00000000016E11F2] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEiRKNS1_7VariantEb (Line 25204, "ObjPlay.pas" + 101)
+[00000000016E1555] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEi (Line 25223, "ObjPlay.pas" + 2)
+[00000000016E097D] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEb (Line 25094, "ObjPlay.pas" + 11)
+[00000000016DD4AC] ObjPlay._ZN7Objplay11TPlayObject17StartAutoPlayGameEb (Line 24413, "ObjPlay.pas" + 14)
+[000000000134B802] ObjNpc.QuestActionProcess (Line 19339, "ObjNpc.pas" + 2330)
+[0000000001354378] ObjNpc._ZN6Objnpc8TNormNpc9GotoLableEPN7Objplay11TPlayObjectEN6System13UnicodeStringEbPN7Objbase11TBaseObjectEPNS4_7Classes5TListEb (Line 20623, "ObjNpc.pas" + 138)
+[00000000016E11F2] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEiRKNS1_7VariantEb (Line 25204, "ObjPlay.pas" + 101)
+
+
+[2024-12-07 11:02:26:224] Failure: .\Map\轩辕古城.map could not be loaded.
+[2024-12-07 11:02:26:225] Failure: .\Map\轩辕古城.map could not be loaded.
+[2024-12-07 11:02:26:371] Failure: .\Map\定军山.map could not be loaded.
+[2024-12-07 11:02:26:373] Failure: .\Map\幽灵古堡.map could not be loaded.
+[2024-12-07 11:02:26:378] Failure: .\Map\神月祭坛.map could not be loaded.
+[2024-12-07 11:02:26:378] Failure: .\Map\失乐园.map could not be loaded.
+[2024-12-07 11:02:26:392] Failure: .\Map\十二封印之地.map could not be loaded.
+[2024-12-07 11:02:26:392] Failure: .\Map\BOSS之家.map could not be loaded.
+[2024-12-07 11:02:26:392] Failure: .\Map\雪域.map could not be loaded.
+[2024-12-07 11:02:26:399] Failure: .\Map\天之龙域.map could not be loaded.
+[2024-12-07 11:02:26:399] Failure: .\Map\神龙一层.map could not be loaded.
+[2024-12-07 11:02:26:399] Failure: .\Map\失乐园.map could not be loaded.
+[2024-12-07 11:02:26:402] Failure: .\Map\BOSS之家.map could not be loaded.
+[2024-12-07 11:02:26:402] Failure: .\Map\修罗天宫.map could not be loaded.
+[2024-12-07 11:02:26:405] Failure: .\Map\仙城.map could not be loaded.
+[2024-12-07 11:02:26:405] Failure: .\Map\九幽殿.map could not be loaded.
+[2024-12-07 11:02:26:410] Failure: .\Map\雪域大陆.map could not be loaded.
+[2024-12-07 11:02:26:410] Failure: .\Map\炼狱2.map could not be loaded.
+[2024-12-07 11:02:26:412] Failure: .\Map\天之龙域.map could not be loaded.
+[2024-12-07 11:02:26:536] Failure: .\Map\D71650.map could not be loaded.
+[2024-12-07 11:02:26:536] Failure: .\Map\D71651.map could not be loaded.
+[2024-12-07 11:02:26:536] Failure: .\Map\D71652.map could not be loaded.
+[2024-12-07 11:02:26:537] Failure: .\Map\D71653.map could not be loaded.
+[2024-12-07 11:02:26:548] Failure: .\Map\M001.map could not be loaded.
+[2024-12-07 11:02:28:390] >>>>>RegenMonsterByName ThreadError :[MainDoor]-0[3-3492] 当前Thread:12168
+[2024-12-07 11:02:28:390] MainDoor Name:MainDoor Map:3 X:672 Y:330 HP:4144
+[2024-12-07 11:02:28:390] >>>>>RegenMonsterByName ThreadError :[LeftWall]-0[3-3492] 当前Thread:12168
+[2024-12-07 11:02:28:390] LeftWall Name:LeftWall Map:3 X:624 Y:278 HP:3072
+[2024-12-07 11:02:28:390] >>>>>RegenMonsterByName ThreadError :[CenterWall]-0[3-3492] 当前Thread:12168
+[2024-12-07 11:02:28:390] CenterWall Name:CenterWall Map:3 X:627 Y:278 HP:3072
+[2024-12-07 11:02:28:390] >>>>>RegenMonsterByName ThreadError :[RightWall]-0[3-3492] 当前Thread:12168
+[2024-12-07 11:02:28:390] RightWall Name:RightWall Map:3 X:634 Y:271 HP:3072
+[2024-12-07 11:02:28:646] ---------------------线程耗时监控
+[2024-12-07 11:02:28:704] Frame-----------------------------------
+
+[2024-12-07 11:02:28:830] MainRunThread(0)-----------------------------------
+
+[2024-12-07 11:02:28:843] EnvirThread 0/0(7984-0)flag:50000004  lua: 1 CallLua:newreadcsv 19-----------------------------------
+
+[2024-12-07 11:02:28:857] DbThread(16-0)-----------------------------------
+
+[2024-12-07 11:02:28:870] BoxSellDbThread(15)-----------------------------------
+
+[2024-12-07 11:02:28:883] NewHttpPost(16-0-0)-----------------------------------
+
+
+[2024-12-07 11:02:58:998] FuncNpcCall Err 折扇:@StartAutoPlayGame Except：Stack overflow[00000000005B35CB] System._ZN6System24InternalUStrFromPCharLenERNS_13UnicodeStringEPcii (Line 26783, "System.pas" + 0)
+[0000000001587AD2] JclDebug._ZN8Jcldebug18JclCreateStackListEbiPvbS0_ (Line 5351, "JclDebug.pas" + 1)
+[00000000015879B2] JclDebug._ZN8Jcldebug21DoExceptionStackTraceEPN6System7TObjectEPvbS3_ (Line 5292, "JclDebug.pas" + 20)
+[000000000158AAA5] JclDebug._ZN8Jcldebug14DoExceptNotifyEPN6System7TObjectEPvbS3_ (Line 6741, "JclDebug.pas" + 7)
+[0000000001579702] JclHookExcept._ZN13Jclhookexcept13TNotifierItem8DoNotifyEPN6System7TObjectEPvbS4_ (Line 272, "JclHookExcept.pas" + 5)
+[000000000157996B] JclHookExcept._ZN13Jclhookexcept14DoExceptNotifyEPN6System7TObjectEPvbS3_ (Line 339, "JclHookExcept.pas" + 13)
+[0000000001579B31] JclHookExcept._ZN13Jclhookexcept19HookedExceptObjProcEPN6System16TExceptionRecordE (Line 395, "JclHookExcept.pas" + 5)
+[00000000005B1B17] System._ZN6System23_DelphiExceptionHandlerEPNS_16TExceptionRecordEyPvS2_ (Line 21118, "System.pas" + 53)
+[00007FFA6B6128BF] Unknown function at __chkstk
+[00007FFA6B5C2554] RtlRaiseException
+[00007FFA6B6113CE] KiUserExceptionDispatcher
+[00000000005B35CB] System._ZN6System24InternalUStrFromPCharLenERNS_13UnicodeStringEPcii (Line 26783, "System.pas" + 0)
+[00000000005B5044] System._ZN6System13_UStrFromLStrERNS_13UnicodeStringENS_11AnsiStringTILt0EEE (Line 31045, "System.pas" + 5)
+[00000000015DCE99] EDcode._ZN6Edcode12EncodeStringEN6System11AnsiStringTILt0EEE (Line 140, "EDcode.pas" + 1)
+[00000000015DFB73] uMsgManage._ZN10Umsgmanage10TMsgManage14SendDefMessageEiiiiiN6System13UnicodeStringE (Line 385, "uMsgManage.pas" + 3)
+[00000000016DD48F] ObjPlay._ZN7Objplay11TPlayObject17StartAutoPlayGameEb (Line 24410, "ObjPlay.pas" + 11)
+[000000000134B802] ObjNpc.QuestActionProcess (Line 19339, "ObjNpc.pas" + 2330)
+[0000000001354378] ObjNpc._ZN6Objnpc8TNormNpc9GotoLableEPN7Objplay11TPlayObjectEN6System13UnicodeStringEbPN7Objbase11TBaseObjectEPNS4_7Classes5TListEb (Line 20623, "ObjNpc.pas" + 138)
+[00000000016E11F2] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEiRKNS1_7VariantEb (Line 25204, "ObjPlay.pas" + 101)
+[00000000016E1555] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEi (Line 25223, "ObjPlay.pas" + 2)
+[00000000016E097D] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEb (Line 25094, "ObjPlay.pas" + 11)
+[00000000016DD4AC] ObjPlay._ZN7Objplay11TPlayObject17StartAutoPlayGameEb (Line 24413, "ObjPlay.pas" + 14)
+[000000000134B802] ObjNpc.QuestActionProcess (Line 19339, "ObjNpc.pas" + 2330)
+[0000000001354378] ObjNpc._ZN6Objnpc8TNormNpc9GotoLableEPN7Objplay11TPlayObjectEN6System13UnicodeStringEbPN7Objbase11TBaseObjectEPNS4_7Classes5TListEb (Line 20623, "ObjNpc.pas" + 138)
+[00000000016E11F2] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEiRKNS1_7VariantEb (Line 25204, "ObjPlay.pas" + 101)
+[00000000016E1555] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEi (Line 25223, "ObjPlay.pas" + 2)
+[00000000016E097D] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEb (Line 25094, "ObjPlay.pas" + 11)
+[00000000016DD4AC] ObjPlay._ZN7Objplay11TPlayObject17StartAutoPlayGameEb (Line 24413, "ObjPlay.pas" + 14)
+[000000000134B802] ObjNpc.QuestActionProcess (Line 19339, "ObjNpc.pas" + 2330)
+[0000000001354378] ObjNpc._ZN6Objnpc8TNormNpc9GotoLableEPN7Objplay11TPlayObjectEN6System13UnicodeStringEbPN7Objbase11TBaseObjectEPNS4_7Classes5TListEb (Line 20623, "ObjNpc.pas" + 138)
+[00000000016E11F2] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEiRKNS1_7VariantEb (Line 25204, "ObjPlay.pas" + 101)
+[00000000016E1555] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEi (Line 25223, "ObjPlay.pas" + 2)
+[00000000016E097D] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEb (Line 25094, "ObjPlay.pas" + 11)
+[00000000016DD4AC] ObjPlay._ZN7Objplay11TPlayObject17StartAutoPlayGameEb (Line 24413, "ObjPlay.pas" + 14)
+[000000000134B802] ObjNpc.QuestActionProcess (Line 19339, "ObjNpc.pas" + 2330)
+[0000000001354378] ObjNpc._ZN6Objnpc8TNormNpc9GotoLableEPN7Objplay11TPlayObjectEN6System13UnicodeStringEbPN7Objbase11TBaseObjectEPNS4_7Classes5TListEb (Line 20623, "ObjNpc.pas" + 138)
+[00000000016E11F2] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEiRKNS1_7VariantEb (Line 25204, "ObjPlay.pas" + 101)
+[00000000016E1555] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEi (Line 25223, "ObjPlay.pas" + 2)
+[00000000016E097D] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEb (Line 25094, "ObjPlay.pas" + 11)
+[00000000016DD4AC] ObjPlay._ZN7Objplay11TPlayObject17StartAutoPlayGameEb (Line 24413, "ObjPlay.pas" + 14)
+[000000000134B802] ObjNpc.QuestActionProcess (Line 19339, "ObjNpc.pas" + 2330)
+[0000000001354378] ObjNpc._ZN6Objnpc8TNormNpc9GotoLableEPN7Objplay11TPlayObjectEN6System13UnicodeStringEbPN7Objbase11TBaseObjectEPNS4_7Classes5TListEb (Line 20623, "ObjNpc.pas" + 138)
+[00000000016E11F2] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEiRKNS1_7VariantEb (Line 25204, "ObjPlay.pas" + 101)
+[00000000016E1555] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEi (Line 25223, "ObjPlay.pas" + 2)
+[00000000016E097D] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEb (Line 25094, "ObjPlay.pas" + 11)
+[00000000016DD4AC] ObjPlay._ZN7Objplay11TPlayObject17StartAutoPlayGameEb (Line 24413, "ObjPlay.pas" + 14)
+[000000000134B802] ObjNpc.QuestActionProcess (Line 19339, "ObjNpc.pas" + 2330)
+[0000000001354378] ObjNpc._ZN6Objnpc8TNormNpc9GotoLableEPN7Objplay11TPlayObjectEN6System13UnicodeStringEbPN7Objbase11TBaseObjectEPNS4_7Classes5TListEb (Line 20623, "ObjNpc.pas" + 138)
+[00000000016E11F2] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEiRKNS1_7VariantEb (Line 25204, "ObjPlay.pas" + 101)
+[00000000016E1555] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEi (Line 25223, "ObjPlay.pas" + 2)
+[00000000016E097D] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEb (Line 25094, "ObjPlay.pas" + 11)
+[00000000016DD4AC] ObjPlay._ZN7Objplay11TPlayObject17StartAutoPlayGameEb (Line 24413, "ObjPlay.pas" + 14)
+[000000000134B802] ObjNpc.QuestActionProcess (Line 19339, "ObjNpc.pas" + 2330)
+[0000000001354378] ObjNpc._ZN6Objnpc8TNormNpc9GotoLableEPN7Objplay11TPlayObjectEN6System13UnicodeStringEbPN7Objbase11TBaseObjectEPNS4_7Classes5TListEb (Line 20623, "ObjNpc.pas" + 138)
+[00000000016E11F2] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEiRKNS1_7VariantEb (Line 25204, "ObjPlay.pas" + 101)
+[00000000016E1555] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEi (Line 25223, "ObjPlay.pas" + 2)
+[00000000016E097D] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEb (Line 25094, "ObjPlay.pas" + 11)
+[00000000016DD4AC] ObjPlay._ZN7Objplay11TPlayObject17StartAutoPlayGameEb (Line 24413, "ObjPlay.pas" + 14)
+[000000000134B802] ObjNpc.QuestActionProcess (Line 19339, "ObjNpc.pas" + 2330)
+[0000000001354378] ObjNpc._ZN6Objnpc8TNormNpc9GotoLableEPN7Objplay11TPlayObjectEN6System13UnicodeStringEbPN7Objbase11TBaseObjectEPNS4_7Classes5TListEb (Line 20623, "ObjNpc.pas" + 138)
+[00000000016E11F2] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEiRKNS1_7VariantEb (Line 25204, "ObjPlay.pas" + 101)
+[00000000016E1555] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEi (Line 25223, "ObjPlay.pas" + 2)
+[00000000016E097D] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEb (Line 25094, "ObjPlay.pas" + 11)
+[00000000016DD4AC] ObjPlay._ZN7Objplay11TPlayObject17StartAutoPlayGameEb (Line 24413, "ObjPlay.pas" + 14)
+[000000000134B802] ObjNpc.QuestActionProcess (Line 19339, "ObjNpc.pas" + 2330)
+[0000000001354378] ObjNpc._ZN6Objnpc8TNormNpc9GotoLableEPN7Objplay11TPlayObjectEN6System13UnicodeStringEbPN7Objbase11TBaseObjectEPNS4_7Classes5TListEb (Line 20623, "ObjNpc.pas" + 138)
+[00000000016E11F2] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEiRKNS1_7VariantEb (Line 25204, "ObjPlay.pas" + 101)
+[00000000016E1555] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEi (Line 25223, "ObjPlay.pas" + 2)
+[00000000016E097D] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEb (Line 25094, "ObjPlay.pas" + 11)
+[00000000016DD4AC] ObjPlay._ZN7Objplay11TPlayObject17StartAutoPlayGameEb (Line 24413, "ObjPlay.pas" + 14)
+[000000000134B802] ObjNpc.QuestActionProcess (Line 19339, "ObjNpc.pas" + 2330)
+[0000000001354378] ObjNpc._ZN6Objnpc8TNormNpc9GotoLableEPN7Objplay11TPlayObjectEN6System13UnicodeStringEbPN7Objbase11TBaseObjectEPNS4_7Classes5TListEb (Line 20623, "ObjNpc.pas" + 138)
+[00000000016E11F2] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEiRKNS1_7VariantEb (Line 25204, "ObjPlay.pas" + 101)
+[00000000016E1555] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEi (Line 25223, "ObjPlay.pas" + 2)
+[00000000016E097D] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEb (Line 25094, "ObjPlay.pas" + 11)
+[00000000016DD4AC] ObjPlay._ZN7Objplay11TPlayObject17StartAutoPlayGameEb (Line 24413, "ObjPlay.pas" + 14)
+[000000000134B802] ObjNpc.QuestActionProcess (Line 19339, "ObjNpc.pas" + 2330)
+[0000000001354378] ObjNpc._ZN6Objnpc8TNormNpc9GotoLableEPN7Objplay11TPlayObjectEN6System13UnicodeStringEbPN7Objbase11TBaseObjectEPNS4_7Classes5TListEb (Line 20623, "ObjNpc.pas" + 138)
+[00000000016E11F2] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEiRKNS1_7VariantEb (Line 25204, "ObjPlay.pas" + 101)
+[00000000016E1555] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEi (Line 25223, "ObjPlay.pas" + 2)
+[00000000016E097D] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEb (Line 25094, "ObjPlay.pas" + 11)
+[00000000016DD4AC] ObjPlay._ZN7Objplay11TPlayObject17StartAutoPlayGameEb (Line 24413, "ObjPlay.pas" + 14)
+[000000000134B802] ObjNpc.QuestActionProcess (Line 19339, "ObjNpc.pas" + 2330)
+[0000000001354378] ObjNpc._ZN6Objnpc8TNormNpc9GotoLableEPN7Objplay11TPlayObjectEN6System13UnicodeStringEbPN7Objbase11TBaseObjectEPNS4_7Classes5TListEb (Line 20623, "ObjNpc.pas" + 138)
+[00000000016E11F2] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEiRKNS1_7VariantEb (Line 25204, "ObjPlay.pas" + 101)
+[00000000016E1555] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEi (Line 25223, "ObjPlay.pas" + 2)
+[00000000016E097D] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEb (Line 25094, "ObjPlay.pas" + 11)
+[00000000016DD4AC] ObjPlay._ZN7Objplay11TPlayObject17StartAutoPlayGameEb (Line 24413, "ObjPlay.pas" + 14)
+[000000000134B802] ObjNpc.QuestActionProcess (Line 19339, "ObjNpc.pas" + 2330)
+[0000000001354378] ObjNpc._ZN6Objnpc8TNormNpc9GotoLableEPN7Objplay11TPlayObjectEN6System13UnicodeStringEbPN7Objbase11TBaseObjectEPNS4_7Classes5TListEb (Line 20623, "ObjNpc.pas" + 138)
+[00000000016E11F2] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEiRKNS1_7VariantEb (Line 25204, "ObjPlay.pas" + 101)
+[00000000016E1555] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEi (Line 25223, "ObjPlay.pas" + 2)
+[00000000016E097D] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEb (Line 25094, "ObjPlay.pas" + 11)
+[00000000016DD4AC] ObjPlay._ZN7Objplay11TPlayObject17StartAutoPlayGameEb (Line 24413, "ObjPlay.pas" + 14)
+[000000000134B802] ObjNpc.QuestActionProcess (Line 19339, "ObjNpc.pas" + 2330)
+[0000000001354378] ObjNpc._ZN6Objnpc8TNormNpc9GotoLableEPN7Objplay11TPlayObjectEN6System13UnicodeStringEbPN7Objbase11TBaseObjectEPNS4_7Classes5TListEb (Line 20623, "ObjNpc.pas" + 138)
+[00000000016E11F2] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEiRKNS1_7VariantEb (Line 25204, "ObjPlay.pas" + 101)
+[00000000016E1555] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEi (Line 25223, "ObjPlay.pas" + 2)
+[00000000016E097D] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEb (Line 25094, "ObjPlay.pas" + 11)
+[00000000016DD4AC] ObjPlay._ZN7Objplay11TPlayObject17StartAutoPlayGameEb (Line 24413, "ObjPlay.pas" + 14)
+[000000000134B802] ObjNpc.QuestActionProcess (Line 19339, "ObjNpc.pas" + 2330)
+[0000000001354378] ObjNpc._ZN6Objnpc8TNormNpc9GotoLableEPN7Objplay11TPlayObjectEN6System13UnicodeStringEbPN7Objbase11TBaseObjectEPNS4_7Classes5TListEb (Line 20623, "ObjNpc.pas" + 138)
+[00000000016E11F2] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEiRKNS1_7VariantEb (Line 25204, "ObjPlay.pas" + 101)
+[00000000016E1555] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEi (Line 25223, "ObjPlay.pas" + 2)
+[00000000016E097D] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEb (Line 25094, "ObjPlay.pas" + 11)
+[00000000016DD4AC] ObjPlay._ZN7Objplay11TPlayObject17StartAutoPlayGameEb (Line 24413, "ObjPlay.pas" + 14)
+[000000000134B802] ObjNpc.QuestActionProcess (Line 19339, "ObjNpc.pas" + 2330)
+[0000000001354378] ObjNpc._ZN6Objnpc8TNormNpc9GotoLableEPN7Objplay11TPlayObjectEN6System13UnicodeStringEbPN7Objbase11TBaseObjectEPNS4_7Classes5TListEb (Line 20623, "ObjNpc.pas" + 138)
+[00000000016E11F2] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEiRKNS1_7VariantEb (Line 25204, "ObjPlay.pas" + 101)
+[00000000016E1555] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEi (Line 25223, "ObjPlay.pas" + 2)
+[00000000016E097D] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEb (Line 25094, "ObjPlay.pas" + 11)
+[00000000016DD4AC] ObjPlay._ZN7Objplay11TPlayObject17StartAutoPlayGameEb (Line 24413, "ObjPlay.pas" + 14)
+[000000000134B802] ObjNpc.QuestActionProcess (Line 19339, "ObjNpc.pas" + 2330)
+[0000000001354378] ObjNpc._ZN6Objnpc8TNormNpc9GotoLableEPN7Objplay11TPlayObjectEN6System13UnicodeStringEbPN7Objbase11TBaseObjectEPNS4_7Classes5TListEb (Line 20623, "ObjNpc.pas" + 138)
+[00000000016E11F2] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEiRKNS1_7VariantEb (Line 25204, "ObjPlay.pas" + 101)
+[00000000016E1555] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEi (Line 25223, "ObjPlay.pas" + 2)
+[00000000016E097D] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEb (Line 25094, "ObjPlay.pas" + 11)
+[00000000016DD4AC] ObjPlay._ZN7Objplay11TPlayObject17StartAutoPlayGameEb (Line 24413, "ObjPlay.pas" + 14)
+[000000000134B802] ObjNpc.QuestActionProcess (Line 19339, "ObjNpc.pas" + 2330)
+[0000000001354378] ObjNpc._ZN6Objnpc8TNormNpc9GotoLableEPN7Objplay11TPlayObjectEN6System13UnicodeStringEbPN7Objbase11TBaseObjectEPNS4_7Classes5TListEb (Line 20623, "ObjNpc.pas" + 138)
+[00000000016E11F2] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEiRKNS1_7VariantEb (Line 25204, "ObjPlay.pas" + 101)
+[00000000016E1555] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEi (Line 25223, "ObjPlay.pas" + 2)
+[00000000016E097D] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEb (Line 25094, "ObjPlay.pas" + 11)
+[00000000016DD4AC] ObjPlay._ZN7Objplay11TPlayObject17StartAutoPlayGameEb (Line 24413, "ObjPlay.pas" + 14)
+[000000000134B802] ObjNpc.QuestActionProcess (Line 19339, "ObjNpc.pas" + 2330)
+[0000000001354378] ObjNpc._ZN6Objnpc8TNormNpc9GotoLableEPN7Objplay11TPlayObjectEN6System13UnicodeStringEbPN7Objbase11TBaseObjectEPNS4_7Classes5TListEb (Line 20623, "ObjNpc.pas" + 138)
+[00000000016E11F2] ObjPlay._ZN7Objplay11TPlayObject11FuncNpcCallEN6System13UnicodeStringEbPKNS1_7TVarRecEiRKNS1_7VariantEb (Line 25204, "ObjPlay.pas" + 101)
+
+
+[2024-12-07 11:03:24:828] Failure: .\Map\轩辕古城.map could not be loaded.
+[2024-12-07 11:03:24:828] Failure: .\Map\轩辕古城.map could not be loaded.
+[2024-12-07 11:03:24:977] Failure: .\Map\定军山.map could not be loaded.
+[2024-12-07 11:03:24:979] Failure: .\Map\幽灵古堡.map could not be loaded.
+[2024-12-07 11:03:24:983] Failure: .\Map\神月祭坛.map could not be loaded.
+[2024-12-07 11:03:24:984] Failure: .\Map\失乐园.map could not be loaded.
+[2024-12-07 11:03:24:996] Failure: .\Map\十二封印之地.map could not be loaded.
+[2024-12-07 11:03:24:997] Failure: .\Map\BOSS之家.map could not be loaded.
+[2024-12-07 11:03:24:997] Failure: .\Map\雪域.map could not be loaded.
+[2024-12-07 11:03:25:003] Failure: .\Map\天之龙域.map could not be loaded.
+[2024-12-07 11:03:25:003] Failure: .\Map\神龙一层.map could not be loaded.
+[2024-12-07 11:03:25:003] Failure: .\Map\失乐园.map could not be loaded.
+[2024-12-07 11:03:25:005] Failure: .\Map\BOSS之家.map could not be loaded.
+[2024-12-07 11:03:25:005] Failure: .\Map\修罗天宫.map could not be loaded.
+[2024-12-07 11:03:25:007] Failure: .\Map\仙城.map could not be loaded.
+[2024-12-07 11:03:25:008] Failure: .\Map\九幽殿.map could not be loaded.
+
+[2024-12-07 11:03:25:012] Failure: .\Map\雪域大陆.map could not be loaded.
+[2024-12-07 11:03:25:012] Failure: .\Map\炼狱2.map could not be loaded.
+[2024-12-07 11:03:25:015] Failure: .\Map\天之龙域.map could not be loaded.
+[2024-12-07 11:03:25:136] Failure: .\Map\D71650.map could not be loaded.
+[2024-12-07 11:03:25:136] Failure: .\Map\D71651.map could not be loaded.
+[2024-12-07 11:03:25:136] Failure: .\Map\D71652.map could not be loaded.
+[2024-12-07 11:03:25:136] Failure: .\Map\D71653.map could not be loaded.
+[2024-12-07 11:03:25:146] Failure: .\Map\M001.map could not be loaded.
+[2024-12-07 11:03:27:027] >>>>>RegenMonsterByName ThreadError :[MainDoor]-0[3-9520] 当前Thread:9568
+[2024-12-07 11:03:27:027] MainDoor Name:MainDoor Map:3 X:672 Y:330 HP:4144
+[2024-12-07 11:03:27:027] >>>>>RegenMonsterByName ThreadError :[LeftWall]-0[3-9520] 当前Thread:9568
+[2024-12-07 11:03:27:027] LeftWall Name:LeftWall Map:3 X:624 Y:278 HP:3072
+[2024-12-07 11:03:27:027] >>>>>RegenMonsterByName ThreadError :[CenterWall]-0[3-9520] 当前Thread:9568
+[2024-12-07 11:03:27:027] CenterWall Name:CenterWall Map:3 X:627 Y:278 HP:3072
+[2024-12-07 11:03:27:027] >>>>>RegenMonsterByName ThreadError :[RightWall]-0[3-9520] 当前Thread:9568
+[2024-12-07 11:03:27:027] RightWall Name:RightWall Map:3 X:634 Y:271 HP:3072
+[2024-12-07 11:03:27:338] ---------------------线程耗时监控
+[2024-12-07 11:03:27:527] Frame-----------------------------------
+
+[2024-12-07 11:03:27:543] MainRunThread(0)-----------------------------------
+
+[2024-12-07 11:03:27:571] EnvirThread 0/0(7047-0)flag:50000004  lua: 1 CallLua:newreadcsv 19-----------------------------------
+
+[2024-12-07 11:03:27:589] DbThread(16-0)-----------------------------------
+
+[2024-12-07 11:03:27:615] BoxSellDbThread(16)-----------------------------------
+
+[2024-12-07 11:03:27:630] NewHttpPost(15-0-0)-----------------------------------
+
+
+[2024-12-07 12:02:13:503] Failure: .\Map\轩辕古城.map could not be loaded.
+[2024-12-07 12:02:13:503] Failure: .\Map\轩辕古城.map could not be loaded.
+[2024-12-07 12:02:13:633] Failure: .\Map\定军山.map could not be loaded.
+[2024-12-07 12:02:13:635] Failure: .\Map\幽灵古堡.map could not be loaded.
+[2024-12-07 12:02:13:639] Failure: .\Map\神月祭坛.map could not be loaded.
+[2024-12-07 12:02:13:640] Failure: .\Map\失乐园.map could not be loaded.
+[2024-12-07 12:02:13:653] Failure: .\Map\十二封印之地.map could not be loaded.
+[2024-12-07 12:02:13:653] Failure: .\Map\BOSS之家.map could not be loaded.
+[2024-12-07 12:02:13:653] Failure: .\Map\雪域.map could not be loaded.
+[2024-12-07 12:02:13:658] Failure: .\Map\天之龙域.map could not be loaded.
+[2024-12-07 12:02:13:658] Failure: .\Map\神龙一层.map could not be loaded.
+[2024-12-07 12:02:13:658] Failure: .\Map\失乐园.map could not be loaded.
+[2024-12-07 12:02:13:660] Failure: .\Map\BOSS之家.map could not be loaded.
+[2024-12-07 12:02:13:661] Failure: .\Map\修罗天宫.map could not be loaded.
+[2024-12-07 12:02:13:664] Failure: .\Map\仙城.map could not be loaded.
+[2024-12-07 12:02:13:665] Failure: .\Map\九幽殿.map could not be loaded.
+[2024-12-07 12:02:13:669] Failure: .\Map\雪域大陆.map could not be loaded.
+[2024-12-07 12:02:13:669] Failure: .\Map\炼狱2.map could not be loaded.
+[2024-12-07 12:02:13:671] Failure: .\Map\天之龙域.map could not be loaded.
+[2024-12-07 12:02:13:780] Failure: .\Map\D71650.map could not be loaded.
+[2024-12-07 12:02:13:780] Failure: .\Map\D71651.map could not be loaded.
+[2024-12-07 12:02:13:780] Failure: .\Map\D71652.map could not be loaded.
+[2024-12-07 12:02:13:780] Failure: .\Map\D71653.map could not be loaded.
+[2024-12-07 12:02:13:791] Failure: .\Map\M001.map could not be loaded.
+[2024-12-07 12:02:15:644] >>>>>RegenMonsterByName ThreadError :[MainDoor]-0[3-27624] 当前Thread:27608
+[2024-12-07 12:02:15:644] MainDoor Name:MainDoor Map:3 X:672 Y:330 HP:4144
+[2024-12-07 12:02:15:644] >>>>>RegenMonsterByName ThreadError :[LeftWall]-0[3-27624] 当前Thread:27608
+[2024-12-07 12:02:15:644] LeftWall Name:LeftWall Map:3 X:624 Y:278 HP:3072
+[2024-12-07 12:02:15:644] >>>>>RegenMonsterByName ThreadError :[CenterWall]-0[3-27624] 当前Thread:27608
+[2024-12-07 12:02:15:644] CenterWall Name:CenterWall Map:3 X:627 Y:278 HP:3072
+[2024-12-07 12:02:15:644] >>>>>RegenMonsterByName ThreadError :[RightWall]-0[3-27624] 当前Thread:27608
+[2024-12-07 12:02:15:644] RightWall Name:RightWall Map:3 X:634 Y:271 HP:3072
+[2024-12-07 12:02:15:978] ---------------------线程耗时监控
+[2024-12-07 12:02:16:164] Frame-----------------------------------
+
+[2024-12-07 12:02:16:177] MainRunThread(0)-----------------------------------
+
+[2024-12-07 12:02:16:188] EnvirThread 0/0(6985-0)flag:50000004  lua: 1 CallLua:newreadcsv 19-----------------------------------
+
+[2024-12-07 12:02:16:200] DbThread(15-0)-----------------------------------
+
+[2024-12-07 12:02:16:212] BoxSellDbThread(16)-----------------------------------
+
+[2024-12-07 12:02:16:226] NewHttpPost(16-0-0)-----------------------------------
+
+
+[2024-12-07 17:00:42:735] Failure: .\Map\轩辕古城.map could not be loaded.
+[2024-12-07 17:00:42:735] Failure: .\Map\轩辕古城.map could not be loaded.
+[2024-12-07 17:00:43:026] Failure: .\Map\定军山.map could not be loaded.
+[2024-12-07 17:00:43:034] Failure: .\Map\幽灵古堡.map could not be loaded.
+[2024-12-07 17:00:43:051] Failure: .\Map\神月祭坛.map could not be loaded.
+[2024-12-07 17:00:43:051] Failure: .\Map\失乐园.map could not be loaded.
+[2024-12-07 17:00:43:088] Failure: .\Map\十二封印之地.map could not be loaded.
+[2024-12-07 17:00:43:088] Failure: .\Map\BOSS之家.map could not be loaded.
+[2024-12-07 17:00:43:088] Failure: .\Map\雪域.map could not be loaded.
+[2024-12-07 17:00:43:102] Failure: .\Map\天之龙域.map could not be loaded.
+[2024-12-07 17:00:43:102] Failure: .\Map\神龙一层.map could not be loaded.
+[2024-12-07 17:00:43:102] Failure: .\Map\失乐园.map could not be loaded.
+[2024-12-07 17:00:43:108] Failure: .\Map\BOSS之家.map could not be loaded.
+[2024-12-07 17:00:43:109] Failure: .\Map\修罗天宫.map could not be loaded.
+[2024-12-07 17:00:43:111] Failure: .\Map\仙城.map could not be loaded.
+[2024-12-07 17:00:43:114] Failure: .\Map\九幽殿.map could not be loaded.
+[2024-12-07 17:00:43:123] Failure: .\Map\雪域大陆.map could not be loaded.
+[2024-12-07 17:00:43:123] Failure: .\Map\炼狱2.map could not be loaded.
+[2024-12-07 17:00:43:130] Failure: .\Map\天之龙域.map could not be loaded.
+[2024-12-07 17:00:43:411] Failure: .\Map\D71650.map could not be loaded.
+[2024-12-07 17:00:43:411] Failure: .\Map\D71651.map could not be loaded.
+[2024-12-07 17:00:43:411] Failure: .\Map\D71652.map could not be loaded.
+[2024-12-07 17:00:43:411] Failure: .\Map\D71653.map could not be loaded.
+[2024-12-07 17:00:43:454] Failure: .\Map\M001.map could not be loaded.
+[2024-12-07 17:00:43:543] Failure: .\Map\xiandai37.map could not be loaded.
+[2024-12-07 17:00:45:431] >>>>>RegenMonsterByName ThreadError :[MainDoor]-0[3-29288] 当前Thread:32728
+[2024-12-07 17:00:45:431] MainDoor Name:MainDoor Map:3 X:672 Y:330 HP:4144
+[2024-12-07 17:00:45:431] >>>>>RegenMonsterByName ThreadError :[LeftWall]-0[3-29288] 当前Thread:32728
+[2024-12-07 17:00:45:431] LeftWall Name:LeftWall Map:3 X:624 Y:278 HP:3072
+[2024-12-07 17:00:45:431] >>>>>RegenMonsterByName ThreadError :[CenterWall]-0[3-29288] 当前Thread:32728
+[2024-12-07 17:00:45:431] CenterWall Name:CenterWall Map:3 X:627 Y:278 HP:3072
+[2024-12-07 17:00:45:431] >>>>>RegenMonsterByName ThreadError :[RightWall]-0[3-29288] 当前Thread:32728
+[2024-12-07 17:00:45:431] RightWall Name:RightWall Map:3 X:634 Y:271 HP:3072
+[2024-12-07 17:00:45:723] ---------------------线程耗时监控
+[2024-12-07 17:00:45:931] Frame-----------------------------------
+
+[2024-12-07 17:00:45:945] MainRunThread(16)-----------------------------------
+
+[2024-12-07 17:00:45:955] EnvirThread 0/0(7640-0)flag:50000004  lua: 1 CallLua:newreadcsv 21-----------------------------------
+
+[2024-12-07 17:00:45:969] DbThread(0-0)-----------------------------------
+
+[2024-12-07 17:00:45:983] BoxSellDbThread(0)-----------------------------------
+
+[2024-12-07 17:00:45:998] NewHttpPost(15-0-0)-----------------------------------
+
+
+[2024-12-07 17:02:04:119] Failure: .\Map\轩辕古城.map could not be loaded.
+[2024-12-07 17:02:04:119] Failure: .\Map\轩辕古城.map could not be loaded.
+[2024-12-07 17:02:04:261] Failure: .\Map\定军山.map could not be loaded.
+[2024-12-07 17:02:04:262] Failure: .\Map\幽灵古堡.map could not be loaded.
+[2024-12-07 17:02:04:267] Failure: .\Map\神月祭坛.map could not be loaded.
+[2024-12-07 17:02:04:268] Failure: .\Map\失乐园.map could not be loaded.
+[2024-12-07 17:02:04:281] Failure: .\Map\十二封印之地.map could not be loaded.
+[2024-12-07 17:02:04:281] Failure: .\Map\BOSS之家.map could not be loaded.
+[2024-12-07 17:02:04:281] Failure: .\Map\雪域.map could not be loaded.
+[2024-12-07 17:02:04:288] Failure: .\Map\天之龙域.map could not be loaded.
+[2024-12-07 17:02:04:288] Failure: .\Map\神龙一层.map could not be loaded.
+[2024-12-07 17:02:04:288] Failure: .\Map\失乐园.map could not be loaded.
+[2024-12-07 17:02:04:291] Failure: .\Map\BOSS之家.map could not be loaded.
+[2024-12-07 17:02:04:291] Failure: .\Map\修罗天宫.map could not be loaded.
+[2024-12-07 17:02:04:293] Failure: .\Map\仙城.map could not be loaded.
+[2024-12-07 17:02:04:294] Failure: .\Map\九幽殿.map could not be loaded.
+[2024-12-07 17:02:04:297] Failure: .\Map\雪域大陆.map could not be loaded.
+[2024-12-07 17:02:04:297] Failure: .\Map\炼狱2.map could not be loaded.
+[2024-12-07 17:02:04:299] Failure: .\Map\天之龙域.map could not be loaded.
+[2024-12-07 17:02:04:424] Failure: .\Map\D71650.map could not be loaded.
+[2024-12-07 17:02:04:424] Failure: .\Map\D71651.map could not be loaded.
+[2024-12-07 17:02:04:424] Failure: .\Map\D71652.map could not be loaded.
+[2024-12-07 17:02:04:424] Failure: .\Map\D71653.map could not be loaded.
+[2024-12-07 17:02:04:437] Failure: .\Map\M001.map could not be loaded.
+[2024-12-07 17:02:06:347] >>>>>RegenMonsterByName ThreadError :[MainDoor]-0[3-33428] 当前Thread:20596
+[2024-12-07 17:02:06:347] MainDoor Name:MainDoor Map:3 X:672 Y:330 HP:4144
+[2024-12-07 17:02:06:347] >>>>>RegenMonsterByName ThreadError :[LeftWall]-0[3-33428] 当前Thread:20596
+[2024-12-07 17:02:06:347] LeftWall Name:LeftWall Map:3 X:624 Y:278 HP:3072
+[2024-12-07 17:02:06:347] >>>>>RegenMonsterByName ThreadError :[CenterWall]-0[3-33428] 当前Thread:20596
+[2024-12-07 17:02:06:347] CenterWall Name:CenterWall Map:3 X:627 Y:278 HP:3072
+[2024-12-07 17:02:06:347] >>>>>RegenMonsterByName ThreadError :[RightWall]-0[3-33428] 当前Thread:20596
+[2024-12-07 17:02:06:347] RightWall Name:RightWall Map:3 X:634 Y:271 HP:3072
+[2024-12-07 17:02:06:677] ---------------------线程耗时监控
+[2024-12-07 17:02:06:859] Frame-----------------------------------
+
+[2024-12-07 17:02:06:874] MainRunThread(0)-----------------------------------
+
+[2024-12-07 17:02:06:885] EnvirThread 0/0(7125-0)flag:50000004  lua: 1 CallLua:newreadcsv 21-----------------------------------
+
+[2024-12-07 17:02:06:898] DbThread(16-0)-----------------------------------
+
+[2024-12-07 17:02:06:913] BoxSellDbThread(0)-----------------------------------
+
+[2024-12-07 17:02:06:927] NewHttpPost(0-0-0)-----------------------------------
+
+
+[2024-12-07 17:17:38:757] Failure: .\Map\轩辕古城.map could not be loaded.
+[2024-12-07 17:17:38:757] Failure: .\Map\轩辕古城.map could not be loaded.
+[2024-12-07 17:17:38:910] Failure: .\Map\定军山.map could not be loaded.
+[2024-12-07 17:17:38:912] Failure: .\Map\幽灵古堡.map could not be loaded.
+[2024-12-07 17:17:38:918] Failure: .\Map\神月祭坛.map could not be loaded.
+[2024-12-07 17:17:38:919] Failure: .\Map\失乐园.map could not be loaded.
+[2024-12-07 17:17:38:933] Failure: .\Map\十二封印之地.map could not be loaded.
+[2024-12-07 17:17:38:933] Failure: .\Map\BOSS之家.map could not be loaded.
+[2024-12-07 17:17:38:933] Failure: .\Map\雪域.map could not be loaded.
+[2024-12-07 17:17:38:941] Failure: .\Map\天之龙域.map could not be loaded.
+[2024-12-07 17:17:38:941] Failure: .\Map\神龙一层.map could not be loaded.
+[2024-12-07 17:17:38:941] Failure: .\Map\失乐园.map could not be loaded.
+[2024-12-07 17:17:38:944] Failure: .\Map\BOSS之家.map could not be loaded.
+[2024-12-07 17:17:38:945] Failure: .\Map\修罗天宫.map could not be loaded.
+[2024-12-07 17:17:38:948] Failure: .\Map\仙城.map could not be loaded.
+[2024-12-07 17:17:38:950] Failure: .\Map\九幽殿.map could not be loaded.
+[2024-12-07 17:17:38:956] Failure: .\Map\雪域大陆.map could not be loaded.
+[2024-12-07 17:17:38:956] Failure: .\Map\炼狱2.map could not be loaded.
+[2024-12-07 17:17:38:958] Failure: .\Map\天之龙域.map could not be loaded.
+
+[2024-12-07 17:17:39:096] Failure: .\Map\D71650.map could not be loaded.
+[2024-12-07 17:17:39:096] Failure: .\Map\D71651.map could not be loaded.
+[2024-12-07 17:17:39:096] Failure: .\Map\D71652.map could not be loaded.
+[2024-12-07 17:17:39:096] Failure: .\Map\D71653.map could not be loaded.
+[2024-12-07 17:17:39:110] Failure: .\Map\M001.map could not be loaded.
+[2024-12-07 17:17:41:056] >>>>>RegenMonsterByName ThreadError :[MainDoor]-0[3-284] 当前Thread:33760
+[2024-12-07 17:17:41:056] MainDoor Name:MainDoor Map:3 X:672 Y:330 HP:4144
+[2024-12-07 17:17:41:056] >>>>>RegenMonsterByName ThreadError :[LeftWall]-0[3-284] 当前Thread:33760
+[2024-12-07 17:17:41:056] LeftWall Name:LeftWall Map:3 X:624 Y:278 HP:3072
+[2024-12-07 17:17:41:056] >>>>>RegenMonsterByName ThreadError :[CenterWall]-0[3-284] 当前Thread:33760
+[2024-12-07 17:17:41:056] CenterWall Name:CenterWall Map:3 X:627 Y:278 HP:3072
+[2024-12-07 17:17:41:056] >>>>>RegenMonsterByName ThreadError :[RightWall]-0[3-284] 当前Thread:33760
+[2024-12-07 17:17:41:056] RightWall Name:RightWall Map:3 X:634 Y:271 HP:3072
+[2024-12-07 17:17:41:346] ---------------------线程耗时监控
+[2024-12-07 17:17:41:541] Frame-----------------------------------
+
+[2024-12-07 17:17:41:556] MainRunThread(0)-----------------------------------
+
+[2024-12-07 17:17:41:567] EnvirThread 0/0(7109-0)flag:50000004  lua: 1 CallLua:newreadcsv 21-----------------------------------
+
+[2024-12-07 17:17:41:581] DbThread(0-0)-----------------------------------
+
+[2024-12-07 17:17:41:596] BoxSellDbThread(0)-----------------------------------
+
+[2024-12-07 17:17:41:613] NewHttpPost(0-0-0)-----------------------------------
+
+

@@ -4,36 +4,96 @@
 #IF
 CHECKLEVELEX > 0
 #ACT
+
+goto @QF_最大页数计算
+
 MOV N$BOSS奖励行号 0
 mov n$当前页数 1
 ; GOTO @BOSS显示界面
-newreadcsv ..\QuestDiary\csv表格\cfg_首杀奖励.csv
+; newreadcsv ..\QuestDiary\csv表格\cfg_首杀奖励.csv
 ; PRINTUSETIME 1
-mov n$循环序列 0
+; mov n$循环序列 0
+; mov S$首杀容器
+; mov S$首杀容器ID
+
+; while n$循环序列 < 8
+
+; goto @首杀数据加载
+
+; endWhile
+; PRINTUSETIME 2 1
+
+goto @新限时首杀
+
+
+[@QF_最大页数计算]
+#act
+FORMULATION <$Getcsv(cfg_首杀奖励,Row)>%8 N$取余 1
+
+#if
+large N$取余 0
+#act
+FORMULATION <$Getcsv(cfg_首杀奖励,Row)>/8+1 N$返回值_最大页数 1
+#elseact
+FORMULATION <$Getcsv(cfg_首杀奖励,Row)>/8 N$返回值_最大页数 1
+
+[@新限时首杀]
+#if
+#ACT
+; MOV N$循环结束列 <$FORMULATION[<$STR(N$当前页数)>*8]>
+FORMULATION <$STR(N$当前页数)>*8 N$循环结束列
+FORMULATION <$str(N$循环结束列)>-8 N$循环序列
+
 mov S$首杀容器
 mov S$首杀容器ID
 
-while n$循环序列 < <$Getcsv(cfg_首杀奖励,Row)>
+while N$循环序列 < <$str(N$循环结束列)>
 
 goto @首杀数据加载
 
 endWhile
-; PRINTUSETIME 2 1
-
-; [@新限时首杀]
-#if
 #say
-<Img|show=4|bg=1|loadDelay=1|move=0|esc=1|img=custom/shousha/tgj.png|reset=1>
+<Img|show=4|bg=1|loadDelay=0|move=0|esc=1|img=custom/shousha/tgj.png|reset=1>
 <Layout|x=722.0|y=-19.0|width=80|height=80|link=@exit>
 <Button|x=750.0|y=0.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
 <Text|x=303.0|y=15.0|color=255|size=18|text=全区首杀奖励>
 <Text|x=54.0|y=70.0|color=255|size=18|text=怪物名字>
 <Text|x=242.0|y=70.0|color=255|size=18|text=奖励>
 <Text|x=413.0|y=70.0|color=255|size=18|text=状态>
-<Text|x=599.0|y=70.0|size=18|color=255|text=击杀玩家>
+<Text|x=599.0|y=70.0|color=255|size=18|text=击杀玩家>
+<Img|x=20.0|y=445.0|height=42|img=custom/button/tgj1.png|esc=0>
+<Img|x=20.0|y=445.0|height=42|img=custom/button/tgj1.png|esc=0>
+<Img|x=20.0|y=445.0|height=42|img=custom/button/tgj1.png|esc=0>
+<Img|x=20.0|y=445.0|height=42|img=custom/button/tgj1.png|esc=0>
+<Img|x=20.0|y=445.0|height=42|img=custom/button/tgj1.png|esc=0>
+<Button|x=161.0|y=448.0|pimg=custom/button/ann2.png|nimg=custom/button/ann1.png|color=250|size=18|text=上一页|link=@首杀_上一页>
+<Button|x=463.0|y=448.0|pimg=custom/button/ann2.png|nimg=custom/button/ann1.png|color=250|size=18|text=下一页|link=@首杀_下一页>
+<RText|a=4|x=363.0|y=466.0|color=255|size=18|text=<第<$STR(N$当前页数)>页/FCOLOR=255><//FCOLOR=255><<$STR(N$返回值_最大页数)>/FCOLOR=254>>
 
-<ListView|children={<$str(S$首杀容器ID)>}|x=20.0|y=110.0|width=710|height=380>
+<ListView|children={<$str(S$首杀容器ID)>}|x=20.0|y=110.0|width=710|height=380|cantouch=0>
 <$STR(S$首杀容器)>
+
+
+
+
+[@首杀_上一页]
+#IF
+large n$当前页数 1
+#ACT
+dec n$当前页数 1
+goto @新限时首杀
+#elseact
+MESSAGEBOX 已经是第一页了
+
+
+[@首杀_下一页]
+#IF
+SMALL n$当前页数 <$STR(N$返回值_最大页数)>
+#ACT
+inc n$当前页数 1
+goto @新限时首杀
+#ELSEACT
+MESSAGEBOX 已经是最后一页了
 
 
 
@@ -48,11 +108,11 @@ mov S$击杀状态 <已击杀/FCOLOR=250>
 
 #if
 #act
-inc S$首杀容器 <Img|id=ss_<$str(n$循环序列)>|children={ss_<$str(n$循环序列)>_1,ss_<$str(n$循环序列)>_2,ss_<$str(n$循环序列)>_3,ss_<$str(n$循环序列)>_4,ss_<$str(n$循环序列)>_5}|x=0.0|y=0.0|img=custom/button/tgj1.png|esc=0>
-inc S$首杀容器 <Text|id=ss_<$str(n$循环序列)>_1|x=10.0|y=20.0|color=69|outline=1|size=16|text=<$cfg_首杀奖励(<$STR(n$循环序列)>_1)>>
-inc S$首杀容器 <Text|id=ss_<$str(n$循环序列)>_2|x=200.0|y=20.0|color=125|outline=1|size=16|text=<$cfg_首杀奖励(<$STR(n$循环序列)>_2)><$cfg_首杀奖励(<$STR(n$循环序列)>_3)>>
-inc S$首杀容器 <RText|id=ss_<$str(n$循环序列)>_3|x=390.0|y=20.0|color=255|outline=1|size=16|text=<$str(S$击杀状态)>>
-inc S$首杀容器 <Text|id=ss_<$str(n$循环序列)>_4|x=580.0|y=20.0|color=251|outline=1|size=16|text=<$GETSTRVALUE(A8,<$str(n$循环序列)>)>>
+inc S$首杀容器 <Img|id=ss_<$str(n$循环序列)>|height=42|children={ss_<$str(n$循环序列)>_1,ss_<$str(n$循环序列)>_2,ss_<$str(n$循环序列)>_3,ss_<$str(n$循环序列)>_4,ss_<$str(n$循环序列)>_5}|x=0.0|y=0.0|img=custom/button/tgj1.png|esc=0>
+inc S$首杀容器 <Text|id=ss_<$str(n$循环序列)>_1|x=10.0|y=10.0|color=69|outline=1|size=16|text=<$cfg_首杀奖励(<$STR(n$循环序列)>_1)>>
+inc S$首杀容器 <Text|id=ss_<$str(n$循环序列)>_2|x=200.0|y=10.0|color=125|outline=1|size=16|text=<$cfg_首杀奖励(<$STR(n$循环序列)>_2)><$cfg_首杀奖励(<$STR(n$循环序列)>_3)>>
+inc S$首杀容器 <RText|id=ss_<$str(n$循环序列)>_3|x=390.0|y=10.0|color=255|outline=1|size=16|text=<$str(S$击杀状态)>>
+inc S$首杀容器 <Text|id=ss_<$str(n$循环序列)>_4|x=580.0|y=10.0|color=251|outline=1|size=16|text=<$GETSTRVALUE(A8,<$str(n$循环序列)>)>>
 ; inc S$首杀容器 <Text|id=ss_<$str(n$循环序列)>_5|x=600|y=20.0|color=255|size=16|text=<$cfg_首杀奖励(<$STR(n$循环序列)>_1)>>
 inc S$首杀容器ID ss_<$str(n$循环序列)>,
 inc n$循环序列 1

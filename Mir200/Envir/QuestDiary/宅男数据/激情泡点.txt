@@ -10,7 +10,7 @@ MOV N$青龙倍数 <$STR(U167)>
 MUL N$青龙倍数 1
 MOV S$青龙倍数 当前青龙血量倍数：1.0<$STR(N$青龙倍数)>倍
 
-
+; newreadcsv ..\QuestDiary\csv表格\cfg_活动大厅.csv
 
 #IF
 LARGE N$青龙倍数 9
@@ -28,13 +28,22 @@ MUL N$玄武倍攻 1
 MOV S$玄武倍攻 当前玄武倍攻：1.<$STR(N$玄武倍攻)>倍
 
 #IF
+equal S$活动选择
+#ACT
+MOV S$活动选择 0
+
+#IF
 #ACT
 MOV N$朱雀怪物切割 <$STR(U165)>
 MUL N$朱雀怪物切割 50
 
-
-close
-OPENMERCHANTBIGDLG 1 555 1 4 0 0 1 400 0
+mov S$活动按钮0 8
+mov S$活动按钮1 8
+mov S$活动按钮2 8
+mov S$活动按钮3 8
+mov S$活动按钮4 8
+mov S$活动按钮<$STR(S$活动选择)> 9
+ 
 #SAY
 ; <-------------------------------------------------------------/AUTOCOLOR=250,253,254,241>\
 ; <激情派对/AUTOCOLOR=254>:<每90分钟开启一次，每次持续20分钟/AUTOCOLOR=161>           <进入派对/@激情派对>\ 
@@ -52,35 +61,50 @@ OPENMERCHANTBIGDLG 1 555 1 4 0 0 1 400 0
 ; <>    {青龙神兽|161#击杀青龙一次加1级最高LV15^-^161#每一级加1.01血量倍数^-^250#<$STR(S$青龙倍数)>/AUTOCOLOR=161}{Lv<$STR(U167)>|161#击杀青龙一次加1级最高LV15^-^161#每一级加1.01血量倍数^-^250#<$STR(S$青龙倍数)>/SCOLOR=250}
 ; <>    {白虎神兽|161#击杀白虎一次加1级最高LV15^-^161#每一级加1点属性^-^250#当前属性^-^249#防御<$STR(U168)>-<$STR(U168)>^-^249#魔御<$STR(U168)>-<$STR(U168)>^-^249#攻击<$STR(U168)>-<$STR(U168)>^-^249#魔法<$STR(U168)>-<$STR(U168)>^-^249#道术<$STR(U168)>-<$STR(U168)>/AUTOCOLOR=161}{Lv<$STR(U168)>|161#击杀白虎一次加1级最高LV15^-^161#每一级加1点属性^-^250#当前属性^-^249#防御<$STR(U168)>-<$STR(U168)>^-^249#魔御<$STR(U168)>-<$STR(U168)>^-^249#攻击<$STR(U168)>-<$STR(U168)>^-^249#魔法<$STR(U168)>-<$STR(U168)>^-^249#道术<$STR(U168)>-<$STR(U168)>/SCOLOR=249}
 
-<Img|width=620|height=300|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|reset=1>
-<Layout|x=597|y=3|width=80|height=80|link=@exit>
-<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
-<Text|a=0|x=32|y=60|tipsx=10|tipsy=80|color=250,253,254,241|size=16|text=------------------------------------------------------------->
-<Text|a=0|x=32|y=80|tipsx=10|tipsy=80|color=254|size=16|text=激情派对>
-<Text|a=0|x=120|y=80|tipsx=10|tipsy=80|color=161|size=16|text=每90分钟开启一次，每次持续20分钟>
-<Text|a=0|x=512.0|y=80.0|tipsx=10|tipsy=80|color=251|size=16|text=进入派对|link=@激情派对>
-<Text|a=0|x=32|y=100|tipsx=10|tipsy=80|color=250,253,254,241|size=16|text=------------------------------------------------------------->
-<Text|a=0|x=32|y=120|tipsx=10|tipsy=80|color=254|size=16|text=朱雀神兽>
-<Text|a=0|x=120|y=120|tipsx=10|tipsy=80|color=161|size=16|text=每天08、12、17、21开启一次击杀必爆王者系列>
-<Text|a=0|x=512.0|y=120.0|tipsx=10|tipsy=80|color=251|size=16|text=进入活动|link=@朱雀神殿>
-<Text|a=0|x=32|y=140|tipsx=10|tipsy=80|color=250,253,254,241|size=16|text=------------------------------------------------------------->
-<Text|a=0|x=32|y=160|tipsx=10|tipsy=80|color=254|size=16|text=玄武神兽>
-<Text|a=0|x=120|y=160|tipsx=10|tipsy=80|color=161|size=16|text=每天09、13、18、22开启一次击杀必爆王者系列>
-<Text|a=0|x=512.0|y=160.0|tipsx=10|tipsy=80|color=251|size=16|text=进入活动|link=@玄武神殿>
-<Text|a=0|x=32|y=180|tipsx=10|tipsy=80|color=250,253,254,241|size=16|text=------------------------------------------------------------->
-<Text|a=0|x=32|y=200|tipsx=10|tipsy=80|color=254|size=16|text=青龙神兽>
-<Text|a=0|x=120|y=200|tipsx=10|tipsy=80|color=161|size=16|text=每天10、14、19、23开启一次击杀必爆王者系列>
-<Text|a=0|x=512.0|y=200.0|tipsx=10|tipsy=80|color=251|size=16|text=进入活动|link=@青龙神殿>
-<Text|a=0|x=32|y=220|tipsx=10|tipsy=80|color=250,253,254,241|size=16|text=------------------------------------------------------------->
-<Text|a=0|x=32|y=240|tipsx=10|tipsy=80|color=254|size=16|text=白虎神兽>
-<Text|a=0|x=120|y=240|tipsx=10|tipsy=80|color=161|size=16|text=每天11、15、20、00开启一次击杀必爆王者系列>
-<Text|a=0|x=512.0|y=240.0|tipsx=10|tipsy=80|color=251|size=16|text=进入活动|link=@白虎神殿>
-<Text|a=0|x=32|y=260|tipsx=10|tipsy=80|color=250,253,254,241|size=16|text=------------------------------------------------------------->
-<Text|x=265.0|y=25.0|color=250|size=18|text=活动大厅>
+; <Img|width=620|height=300|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|reset=1>
+; <Layout|x=597|y=3|width=80|height=80|link=@exit>
+; <Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+; <Text|a=0|x=32|y=60|tipsx=10|tipsy=80|color=250,253,254,241|size=16|text=------------------------------------------------------------->
+; <Text|a=0|x=32|y=80|tipsx=10|tipsy=80|color=254|size=16|text=激情派对>
+; <Text|a=0|x=120|y=80|tipsx=10|tipsy=80|color=161|size=16|text=每90分钟开启一次，每次持续20分钟>
+; <Text|a=0|x=512.0|y=80.0|tipsx=10|tipsy=80|color=251|size=16|text=进入派对|link=@激情派对>
+; <Text|a=0|x=32|y=100|tipsx=10|tipsy=80|color=250,253,254,241|size=16|text=------------------------------------------------------------->
+; <Text|a=0|x=32|y=120|tipsx=10|tipsy=80|color=254|size=16|text=朱雀神兽>
+; <Text|a=0|x=120|y=120|tipsx=10|tipsy=80|color=161|size=16|text=每天08、12、17、21开启一次击杀必爆王者系列>
+; <Text|a=0|x=512.0|y=120.0|tipsx=10|tipsy=80|color=251|size=16|text=进入活动|link=@朱雀神殿>
+; <Text|a=0|x=32|y=140|tipsx=10|tipsy=80|color=250,253,254,241|size=16|text=------------------------------------------------------------->
+; <Text|a=0|x=32|y=160|tipsx=10|tipsy=80|color=254|size=16|text=玄武神兽>
+; <Text|a=0|x=120|y=160|tipsx=10|tipsy=80|color=161|size=16|text=每天09、13、18、22开启一次击杀必爆王者系列>
+; <Text|a=0|x=512.0|y=160.0|tipsx=10|tipsy=80|color=251|size=16|text=进入活动|link=@玄武神殿>
+; <Text|a=0|x=32|y=180|tipsx=10|tipsy=80|color=250,253,254,241|size=16|text=------------------------------------------------------------->
+; <Text|a=0|x=32|y=200|tipsx=10|tipsy=80|color=254|size=16|text=青龙神兽>
+; <Text|a=0|x=120|y=200|tipsx=10|tipsy=80|color=161|size=16|text=每天10、14、19、23开启一次击杀必爆王者系列>
+; <Text|a=0|x=512.0|y=200.0|tipsx=10|tipsy=80|color=251|size=16|text=进入活动|link=@青龙神殿>
+; <Text|a=0|x=32|y=220|tipsx=10|tipsy=80|color=250,253,254,241|size=16|text=------------------------------------------------------------->
+; <Text|a=0|x=32|y=240|tipsx=10|tipsy=80|color=254|size=16|text=白虎神兽>
+; <Text|a=0|x=120|y=240|tipsx=10|tipsy=80|color=161|size=16|text=每天11、15、20、00开启一次击杀必爆王者系列>
+; <Text|a=0|x=512.0|y=240.0|tipsx=10|tipsy=80|color=251|size=16|text=进入活动|link=@白虎神殿>
+; <Text|a=0|x=32|y=260|tipsx=10|tipsy=80|color=250,253,254,241|size=16|text=------------------------------------------------------------->
+; <Text|x=265.0|y=25.0|color=250|size=18|text=活动大厅>
 
-; <Img|show=4|bg=1|loadDelay=1|move=0|esc=1|img=custom/huodong/zjjz.png|reset=1>
-; <Layout|x=723.0|y=-20.0|width=80|height=80|link=@exit>
-; <Button|x=750.0|y=0.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Img|show=4|bg=1|loadDelay=1|move=0|esc=1|img=custom/huodong/zjjz.png|reset=1>
+<Layout|x=545|y=0|width=80|height=80|link=@exit>
+<Button|x=750.0|y=0.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|x=338.0|y=14.0|color=255|size=18|text=活动大厅>
+<Button|x=27.0|y=66|nimg=custom/button/tp<$STR(S$活动按钮0)>.png|color=255|size=18|text=激情派对|link=@顶部_活动大厅#活动选择=0>
+<Button|x=27.0|y=156|nimg=custom/button/tp<$STR(S$活动按钮1)>.png|color=255|size=18|text=朱雀神兽|link=@顶部_活动大厅#活动选择=1>
+<Button|x=27.0|y=111|nimg=custom/button/tp<$STR(S$活动按钮2)>.png|color=255|size=18|text=玄武神兽|link=@顶部_活动大厅#活动选择=2>
+<Button|x=27.0|y=201|nimg=custom/button/tp<$STR(S$活动按钮3)>.png|color=255|size=18|text=青龙神兽|link=@顶部_活动大厅#活动选择=3>
+<Button|x=27.0|y=246|nimg=custom/button/tp<$STR(S$活动按钮4)>.png|color=255|size=18|text=白虎神兽|link=@顶部_活动大厅#活动选择=4>
+<Text|x=288.0|y=109.0|color=251|size=18|text=活动介绍：>
+<RText|x=289.0|y=143.0|size=18|color=255|text=<活动名称：/FCOLOR=255><<$cfg_活动大厅(<$STR(S$活动选择)>_1)>/FCOLOR=254>>
+<RText|x=290.0|y=179.0|size=18|color=255|width=320|text=<开启时间：/FCOLOR=255><<$cfg_活动大厅(<$STR(S$活动选择)>_2)>/FCOLOR=254>>
+<RText|x=382.0|y=208.0|size=18|color=255|text=</FCOLOR=254>>
+<Text|x=215.0|y=337.0|color=255|size=18|text=活动奖励：>
+<RText|x=299.0|y=366.0|color=255|size=18|text=<RText/FCOLOR=255><RText/FCOLOR=254>>
+<Button|x=385.0|y=431.0|size=18|pimg=custom/button/ann2.png|nimg=custom/button/ann1.png|color=255|text=进入活动|link=@<$cfg_活动大厅(<$STR(S$活动选择)>_3)>>
+
+
 
 
 [@白虎神殿]

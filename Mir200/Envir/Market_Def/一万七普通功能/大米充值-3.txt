@@ -27,7 +27,7 @@ OPENMERCHANTBIGDLG <$str(N$通区_素材)> <$Str(N$平台_充值界面)> 1 4 0 0 0 0 0
 ;<>\
 ;<>     <兑换元宝：/SCOLOR=242>{1个游戏币/fcolor=151}＝{ 10000元宝＋1点充值/fcolor=250} <【/fcolor=10><立即兑换/@@InPutInteger2(请输入您要兑换的游戏币数量：1-10000之间的数值)><】/fcolor=10>\
 <>\
-<>     <兑换大米：/SCOLOR=242>{1个游戏币/fcolor=151}＝{ 10大米＋1点充值/fcolor=254}   <【/fcolor=10><立即兑换/@@InPutInteger3(请输入您要兑换的游戏币数量：1-10000之间的数值)><】/fcolor=10>\
+<>     <兑换灵符：/SCOLOR=242>{1个游戏币/fcolor=151}＝{ 10灵符＋1点充值/fcolor=254}   <【/fcolor=10><立即兑换/@@InPutInteger3(请输入您要兑换的游戏币数量：1-10000之间的数值)><】/fcolor=10>\
 <>\
 <>     <会员等级：/fcolor=243>{<$STR(S$会员等级)> /SCOLOR=229}  <累计充值：/fcolor=243>{<$STR(S$充值数额)>元/SCOLOR=210}  <$Str(S$会员赠送)>\
 <>\
@@ -94,21 +94,21 @@ Goto	@Main
 #if
 CheckContainstext	<$Servername>	内测
 #act
-GameGird	=	0
+GameGird = 0
 Messagebox	灵符清除成功!	
 Goto	@Main
 [@清金刚]
 #if
 CheckContainstext	<$Servername>	内测
 #act
-GameDiamond	=	0
+GameDiamond	= 0
 Messagebox	金刚石清除成功!	
 Goto	@Main
 [@清泡点]
 #if
 CheckContainstext	<$Servername>	内测
 #act
-GamePoint	=	0
+MONEY 灵符	=	0
 Messagebox	泡点清除成功!	
 Goto	@Main
 
@@ -190,7 +190,7 @@ Mul	N$货币比例A1	N2	10000
 GameGold	+	<$str(N$货币比例A1)>
 ;--------------------------------------------------调整货币A2
 Mul	N$货币比例A2	N2	1
-GameDiamond	+	<$str(N$货币比例A2)>
+GameDiamond	+ <$str(N$货币比例A2)>
 ;--------------------------------------------------
 MESSAGEBOX	兑换成功!
 Goto	@充值主界面
@@ -216,7 +216,7 @@ LARGE U24 <$STR(N3)>
 DEC	U24	<$STR(N3)>
 ;--------------------------------------------------调整货币B1
 Mul	N$货币比例B1	N3	10
-GamePoint	+	<$str(N$货币比例B1)>
+MONEY 灵符	+	<$str(N$货币比例B1)>
 ;--------------------------------------------------调整货币B2
 Mul	N$货币比例B2	N3	1
 GAMEGIRD	+	<$str(N$货币比例B2)>
@@ -372,7 +372,7 @@ Break
 
 #if
 #act
-ExtractString	:	<$Str(T11)>	S$测试区微信ID	S$测试区机器码
+GETVALIDSTRSUPER	:	<$Str(T11)>	S$测试区微信ID	S$测试区机器码
 
 #if
 CheckTextlist	..\QuestDiary\一万七网络通服功能\测试区手机奖励.txt	<$Str(S$测试区微信ID)>
@@ -386,5 +386,5 @@ Sendmsg	6	您在测试区绑定手机获赠的“100游戏币”已补发！
 #if
 CheckContainstext	<$SerVername>	测试
 #act
-ExtractString	:	<$Str(T11)>	S$测试区微信ID	S$测试区机器码
+GETVALIDSTRSUPER	:	<$Str(T11)>	S$测试区微信ID	S$测试区机器码
 Addtextlist	..\QuestDiary\一万七网络通服功能\测试区手机奖励.txt	<$Str(S$测试区微信ID)>

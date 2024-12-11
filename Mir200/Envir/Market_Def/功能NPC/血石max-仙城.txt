@@ -18,20 +18,20 @@ close
 <>                        <ItemShow:619:0:1:1>\ \ \
 <≮/FCOLOR=249><至尊·血玉/FCOLOR=222><≯/FCOLOR=249>  <佩带·每秒恢复 →/FCOLOR=254>    <180HP、MP/FCOLOR=249>    <货币合成|243#物品:血玉Lv5*2^250#费用:元宝*88万+点卷*3888^254#一次合成·终生使用/@Wyhc>　\　\
 
-<≮/FCOLOR=249><至尊·血玉/FCOLOR=222><≯/FCOLOR=249>  <佩带·每秒恢复 →/FCOLOR=254>    <180HP、MP/FCOLOR=249>    <直接合成|243#物品:血玉Lv5*2^250#费用:大米点*888^254#一次合成·终生使用/@Wyhc06x>　　\
+<≮/FCOLOR=249><至尊·血玉/FCOLOR=222><≯/FCOLOR=249>  <佩带·每秒恢复 →/FCOLOR=254>    <180HP、MP/FCOLOR=249>    <直接合成|243#物品:血玉Lv5*2^250#费用:灵符点*888^254#一次合成·终生使用/@Wyhc06x>　　\
 
 [@Wyhc06x]
 #IF
-CHECKGAMEPOINT > 887
+checkmoney 灵符 > 887
 CheckItem 血玉Lv.5 2
 #Act
-GAMEPOINT - 888
+MONEY 灵符 - 888
 TAKE 血玉Lv.5 2
 Give 至尊血玉 1
 Sendmsg 1 『<$Username>』在[血玉合成]处购合成了『至尊血玉』.！
 Break
 #ElseSay
-请检查材料..\　\需要：2个血玉Lv5 + 888大米点.
+请检查材料..\　\需要：2个血玉Lv5 + 888灵符点.
 
 
 

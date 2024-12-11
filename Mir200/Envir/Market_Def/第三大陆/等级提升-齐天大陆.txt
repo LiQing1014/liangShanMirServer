@@ -8,6 +8,14 @@ messagebox [提示]：你的等级不足65级，无法查看!
 break
 
 #IF
+CHECKLEVELEX > 74
+#ACT
+close
+messagebox [提示]：你的等级已经75级!
+break
+
+
+#IF
 #ACT
 MOV N$下级 <$LEVEL>
 INC N$下级 1
@@ -20,7 +28,7 @@ MOV S$免费条件  {天命宝盘*10/FCOLOR=251}+元宝*500W
 MOV S$免费条件1 天命宝盘
 MOV N$免费条件1 10
 MOV N$免费元宝2 5000000
-MOV S$收费条件 大米*888
+MOV S$收费条件 灵符*888
 MOV N$收费条件 888
 MOV N$材料颜色 251
 
@@ -32,7 +40,7 @@ MOV S$免费条件  {天命宝盘*10/FCOLOR=251}+元宝*500W
 MOV S$免费条件1 天命宝盘
 MOV N$免费条件1 10
 MOV N$免费元宝2 5000000
-MOV S$收费条件 大米*888
+MOV S$收费条件 灵符*888
 MOV N$收费条件 888
 MOV N$材料颜色 251
 
@@ -43,7 +51,7 @@ MOV S$免费条件  {天命宝盘*10/FCOLOR=251}+元宝*500W
 MOV S$免费条件1 天命宝盘
 MOV N$免费条件1 10
 MOV N$免费元宝2 5000000
-MOV S$收费条件 大米*888
+MOV S$收费条件 灵符*888
 MOV N$收费条件 888
 MOV N$材料颜色 251
 
@@ -54,7 +62,7 @@ MOV S$免费条件  {天命宝盘*10/FCOLOR=251}+元宝*500W
 MOV S$免费条件1 天命宝盘
 MOV N$免费条件1 10
 MOV N$免费元宝2 5000000
-MOV S$收费条件 大米*888
+MOV S$收费条件 灵符*888
 MOV N$收费条件 888
 MOV N$材料颜色 251
 
@@ -66,7 +74,7 @@ MOV S$免费条件  {天命宝盘*10/FCOLOR=251}+元宝*500W
 MOV S$免费条件1 天命宝盘
 MOV N$免费条件1 10
 MOV N$免费元宝2 5000000
-MOV S$收费条件 大米*888
+MOV S$收费条件 灵符*888
 MOV N$收费条件 888
 MOV N$材料颜色 251
 
@@ -78,7 +86,7 @@ MOV S$免费条件  {天命宝盘*10/FCOLOR=251}+元宝*500W
 MOV S$免费条件1 天命宝盘
 MOV N$免费条件1 10
 MOV N$免费元宝2 5000000
-MOV S$收费条件 大米*888
+MOV S$收费条件 灵符*888
 MOV N$收费条件 888
 MOV N$材料颜色 251
 
@@ -90,7 +98,7 @@ MOV S$免费条件  {天命宝盘*10/FCOLOR=251}+元宝*500W
 MOV S$免费条件1 天命宝盘
 MOV N$免费条件1 10
 MOV N$免费元宝2 5000000
-MOV S$收费条件 大米*888
+MOV S$收费条件 灵符*888
 MOV N$收费条件 888
 MOV N$材料颜色 251
 
@@ -101,7 +109,7 @@ MOV S$免费条件  {天命宝盘*10/FCOLOR=251}+元宝*500W
 MOV S$免费条件1 天命宝盘
 MOV N$免费条件1 10
 MOV N$免费元宝2 5000000
-MOV S$收费条件 大米*888
+MOV S$收费条件 灵符*888
 MOV N$收费条件 888
 MOV N$材料颜色 251
 
@@ -114,7 +122,7 @@ MOV S$免费条件  {天命宝盘*10/FCOLOR=251}+元宝*500W
 MOV S$免费条件1 天命宝盘
 MOV N$免费条件1 10
 MOV N$免费元宝2 5000000
-MOV S$收费条件 大米*888
+MOV S$收费条件 灵符*888
 MOV N$收费条件 888
 MOV N$材料颜色 251
 
@@ -126,7 +134,7 @@ MOV S$免费条件  {天命宝盘*10/FCOLOR=251}+元宝*500W
 MOV S$免费条件1 天命宝盘
 MOV N$免费条件1 10
 MOV N$免费元宝2 5000000
-MOV S$收费条件 大米*888
+MOV S$收费条件 灵符*888
 MOV N$收费条件 888
 MOV N$材料颜色 251
 
@@ -158,39 +166,55 @@ close
 ; <><问鼎极限要求:/FCOLOR=161><$STR(S$免费条件)>/FCOLOR=255>   \  \
 
 
-; \             <我要突破极限|250#提升条件：^-^<$str(N$材料颜色)>#1.<$str(S$免费条件1)>*<$str(n$免费条件1)>^-^161#2.元宝*<$str(N$免费元宝2)>/@材料突破>                      <大米突破②|250#提升要求：^-^254#<$str(s$收费条件)>/@大米突破>     \ 
+; \             <我要突破极限|250#提升条件：^-^<$str(N$材料颜色)>#1.<$str(S$免费条件1)>*<$str(n$免费条件1)>^-^161#2.元宝*<$str(N$免费元宝2)>/@材料突破>                      <灵符突破②|250#提升要求：^-^254#<$str(s$收费条件)>/@灵符突破>     \ 
 
 
 
-<Img|width=620|height=300|reset=1|scale9l=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|esc=1|scale9t=10>
-<Layout|x=597|y=3|width=80|height=80|link=@exit>
-<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
-<RText|a=0|x=32.0|y=28.0|tipsx=10|tipsy=80|color=161|size=16|text=很久很久以前：世界本是一块大陆，在大陆的中心有一颗世界之树>
-<RText|a=0|x=32.0|y=68.0|tipsx=10|tipsy=80|color=161|size=16|text=树上结有三样物品，它们分别是：<天命宝盘/FCOLOR=251>,<轮回竹叶/FCOLOR=250>,<命运莲花/FCOLOR=253>>
-<Text|a=0|x=32.0|y=108.0|tipsx=10|tipsy=80|color=250|size=16|text=当前等级：<$LEVEL>级>
-<RText|a=0|x=32.0|y=148.0|tipsx=10|tipsy=80|color=161|size=16|text=材料突破:<$STR(S$免费条件)>>
-<RText|a=0|x=32.0|y=188.0|tipsx=10|tipsy=80|color=161|size=16|text=大米突破:<$STR(S$收费条件)>>
-<Text|a=0|x=32.0|y=248.0|tipsx=10|tipsy=80|color=255|size=16|text=材料突破①|link=@材料突破>
-<Text|a=0|x=232.0|y=248.0|tipsx=10|tipsy=80|color=255|size=16|text=大米突破②|link=@大米突破>
+; <Img|width=620|height=300|reset=1|scale9l=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|esc=1|scale9t=10>
+; <Layout|x=597|y=3|width=80|height=80|link=@exit>
+; <Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+; <RText|a=0|x=32.0|y=28.0|tipsx=10|tipsy=80|color=161|size=16|text=很久很久以前：世界本是一块大陆，在大陆的中心有一颗世界之树>
+; <RText|a=0|x=32.0|y=68.0|tipsx=10|tipsy=80|color=161|size=16|text=树上结有三样物品，它们分别是：<天命宝盘/FCOLOR=251>,<轮回竹叶/FCOLOR=250>,<命运莲花/FCOLOR=253>>
+; <Text|a=0|x=32.0|y=108.0|tipsx=10|tipsy=80|color=250|size=16|text=当前等级：<$LEVEL>级>
+; <RText|a=0|x=32.0|y=148.0|tipsx=10|tipsy=80|color=161|size=16|text=材料突破:<$STR(S$免费条件)>>
+; <RText|a=0|x=32.0|y=188.0|tipsx=10|tipsy=80|color=161|size=16|text=灵符突破:<$STR(S$收费条件)>>
+; <Text|a=0|x=32.0|y=248.0|tipsx=10|tipsy=80|color=255|size=16|text=材料突破①|link=@材料突破>
+; <Text|a=0|x=232.0|y=248.0|tipsx=10|tipsy=80|color=255|size=16|text=灵符突破②|link=@灵符突破>
 
 
-;<大米突破②|250#提升要求：^-^254#<$str(s$收费条件)>/@大米突破>
-;<><大米突破:/FCOLOR=161>< <$STR(S$收费条件)>/FCOLOR=253>  \ \ 
-#IF
-CHECKLEVELEX > 74
-#ACT
-close
-#SAY
-; \ \
-; 　　　　　　<你的等级已圆满！/FCOLOR=254>  \ \ 
-; 　　　　　　<你的等级已圆满！/FCOLOR=254>  \ \ 
-; 　　　　　　<你的等级已圆满！/FCOLOR=254>  \ \ 
-<Img|width=620|height=300|img=public/bg_npc_04.jpg|bg=1|scale9r=10|scale9t=10|scale9b=10|reset=1|scale9l=10|move=0>
-<Layout|x=597|y=3|width=80|height=80|link=@exit>
-<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
-<Text|a=0|x=32|y=100|tips=|tipsx=10|tipsy=80|color=250|size=18|text=你的等级已圆满！>
-<Text|a=0|x=32|y=140|tips=|tipsx=10|tipsy=80|color=250|size=18|text=你的等级已圆满！>
-<Text|a=0|x=32|y=180|tips=|tipsx=10|tipsy=80|color=250|size=18|text=你的等级已圆满！>
+<Img|show=4|bg=1|loadDelay=1|move=0|esc=1|img=custom/hecheng/sgq1.png|reset=1>
+<Layout|x=719.0|y=-18.0|width=80|height=80|link=@exit>
+<Button|x=748.0|y=0.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|x=371.0|y=16.0|color=255|size=18|text=等级提升>
+<Text|a=0|x=381.0|y=60.0|width=350|tipsx=10|tipsy=80|color=161|size=18|text=很久很久以前：世界本是一块大陆，在大陆的中心有一颗世界之树>
+<RText|a=0|x=381.0|y=109.0|width=350|tipsx=10|tipsy=80|color=161|size=18|text=树上结有三样物品，它们分别是：<天命宝盘/FCOLOR=251>,<轮回竹叶/FCOLOR=250>,<命运莲花/FCOLOR=253>>
+<Text|a=0|x=411.0|y=171.0|tipsx=10|tipsy=80|color=250|size=18|text=当前等级：<$LEVEL>级>
+<RText|a=0|x=411.0|y=203.0|tipsx=10|tipsy=80|color=161|size=18|text=材料突破:<$STR(S$免费条件)>>
+<RText|a=0|x=411.0|y=233.0|tipsx=10|tipsy=80|color=161|size=18|text=灵符突破:<$STR(S$收费条件)>>
+<Button|x=423.0|y=305.0|color=251|size=18|pimg=custom/button/ann2.png|nimg=custom/button/ann1.png|text=材料突破|link=@材料突破>
+<Button|x=593.0|y=305.0|color=251|size=18|pimg=custom/button/ann2.png|nimg=custom/button/ann1.png|text=灵符突破|link=@灵符突破>
+
+
+
+
+
+;<灵符突破②|250#提升要求：^-^254#<$str(s$收费条件)>/@灵符突破>
+;<><灵符突破:/FCOLOR=161>< <$STR(S$收费条件)>/FCOLOR=253>  \ \ 
+; #IF
+; CHECKLEVELEX > 74
+; #ACT
+; close
+; #SAY
+; ; \ \
+; ; 　　　　　　<你的等级已圆满！/FCOLOR=254>  \ \ 
+; ; 　　　　　　<你的等级已圆满！/FCOLOR=254>  \ \ 
+; ; 　　　　　　<你的等级已圆满！/FCOLOR=254>  \ \ 
+; <Img|width=620|height=300|img=public/bg_npc_04.jpg|bg=1|scale9r=10|scale9t=10|scale9b=10|reset=1|scale9l=10|move=0>
+; <Layout|x=597|y=3|width=80|height=80|link=@exit>
+; <Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+; <Text|a=0|x=32|y=100|tips=|tipsx=10|tipsy=80|color=250|size=18|text=你的等级已圆满！>
+; <Text|a=0|x=32|y=140|tips=|tipsx=10|tipsy=80|color=250|size=18|text=你的等级已圆满！>
+; <Text|a=0|x=32|y=180|tips=|tipsx=10|tipsy=80|color=250|size=18|text=你的等级已圆满！>
 
 
 
@@ -229,7 +253,7 @@ break
 
 
 
-[@大米突破]
+[@灵符突破]
 #IF
 CHECKLEVELEX > 74
 #ACT
@@ -238,9 +262,9 @@ BREAK
 
 
 #IF
-CHECKGAMEPOINT < <$STR(N$收费条件)>
+checkmoney 灵符 < <$STR(N$收费条件)>
 #ACT
-MESSAGEBOX 对不起，您账户上的大米不够<$str(n$收费条件)>个
+MESSAGEBOX 对不起，您账户上的灵符不够<$str(n$收费条件)>个
 BREAK
 
 
@@ -248,7 +272,7 @@ BREAK
 #IF
 CHECKLEVELEX < 75
 #ACT
-GAMEPOINT - <$STR(N$收费条件)>
+MONEY 灵符 - <$STR(N$收费条件)>
 CHANGELEVEL + 1
 goto @main
 SENDMSG 7 [提示]：恭喜您，人物等级提升1级

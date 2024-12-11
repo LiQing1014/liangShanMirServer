@@ -1,104 +1,70 @@
 [@¿ªÊ¼»ØÊÕ]
 {
 
-#act
-TakeBagItem |Âé±Ô½äÖ¸|¸´»î½äÖ¸|»¤Éí½äÖ¸| 100 1000 0 0 10000 N10 0
-TakeBagItem |Õ½ÒâÂé±Ô|Ä§Òâ»¤Éí|µÀÒâ¸´»î| 100 3000 0 0 30000 N10 0
 
-
-#if
-; check [126] 1
-#act
-TakeBagItem |ÄùÃðÂé±Ô|°ËØÔ»¤Éí|Äù˜„¸´»î| 100 5000 0 0 50000 N10 0
-TakeBagItem |ÍõÕßÂé±Ô|ÍõÕß»¤Éí|ÍõÕß¸´»î| 100 10000 0 0 100000 N10 0
-
-
-#if
-; check [127] 1
-#act
-TakeBagItem |ÎÞË«Âé±Ô|ÎÞË«¸´»î|ÎÞË«»¤Éí| 100 100000 0 0 1000000 N10 0
-TakeBagItem |À¶ÔÂ¸´¹ÅÂé±Ô|À¶ÔÂ¸´¹Å¸´»î|À¶ÔÂ¸´¹Å»¤Éí| 100 1000000 0 0 10000000 N10 0
-
-TakeBagItem |½â¶¾Êõ|º®±ùÕÆ|ÃðÌì»ð|ÈºÌåÀ×µçÊõ|×çÖäÊõ|³¹µØ¶¤|Ë«ÁúÕ¶|Ê¨×Óºð|ÁúÓ°½£·¨|À×öª½£·¨|º®±ùÕÆ|ÃðÌì»ð|»ðÁúÁÒÑ×|Æø¹¦²¨|¾»»¯Êõ|ÎÞ¼«ÕæÆø|ÈºÌåÊ©¶¾Êõ|ì«·çÆÆ|ÕÙ»½ÔÂÁé|ÖðÈÕ½£·¨|ÊÉÑªÊõ|Á÷ÐÇ»ðÓê|¿ªÌìÕ¶|ÇÜÁúÊÖ|Ç¬À¤´óÅ²ÒÆ|µÀÁ¦¶Ü|·ÖÉíÊõ|»¤ÌåÉñ¶Ü|ÕÙ»½Ê¥ÊÞ|Î¨ÎÒ¶À×ð|ÕÙ»½»ðÁé|ÉñÁú¸½Ìå|ÕÙ»½¾ÞÄ§|×Ýºá½£Êõ|Ê®²½Ò»É±|±ùÁ­Êõ|±ùËªÈºÓê|ÁÑÉñ·û|ËÀÍöÖ®ÑÛ|| 100 10000 0 0 100000 N10 0
-
-
-mov S$·Ö¸î×Ö·û ½â¶¾Êõ|º®±ùÕÆ|ÃðÌì»ð|ÈºÌåÀ×µçÊõ|×çÖäÊõ|³¹µØ¶¤|Ë«ÁúÕ¶|Ê¨×Óºð|ÁúÓ°½£·¨|À×öª½£·¨|º®±ùÕÆ|ÃðÌì»ð|»ðÁúÁÒÑ×|Æø¹¦²¨|¾»»¯Êõ|ÎÞ¼«ÕæÆø|ÈºÌåÊ©¶¾Êõ|ì«·çÆÆ|ÕÙ»½ÔÂÁé|ÖðÈÕ½£·¨|ÊÉÑªÊõ|Á÷ÐÇ»ðÓê|¿ªÌìÕ¶|ÇÜÁúÊÖ|Ç¬À¤´óÅ²ÒÆ|µÀÁ¦¶Ü|·ÖÉíÊõ|»¤ÌåÉñ¶Ü|ÕÙ»½Ê¥ÊÞ|Î¨ÎÒ¶À×ð|ÕÙ»½»ðÁé|ÉñÁú¸½Ìå|ÕÙ»½¾ÞÄ§|×Ýºá½£Êõ|Ê®²½Ò»É±|±ùÁ­Êõ|±ùËªÈºÓê|ÁÑÉñ·û|ËÀÍöÖ®ÑÛ
-GETVALIDSTRSUPER <$STR(S$·Ö¸î×Ö·û)> | S$»ØÊÕ_ N$»ØÊÕÊýÁ¿
-
-sendmsg 0 <$STR(N$»ØÊÕÊýÁ¿)>
-inc N$»ØÊÕÊýÁ¿ 1
-mov n$Ñ­»· 1
-
-while n$Ñ­»· < <$STR(n$»ØÊÕÊýÁ¿)>
-getdbitemfieldvalue <$STR(S$»ØÊÕ_<$STR(n$Ñ­»·)>)> idx S$×°±¸ID
-AddTextListEx ..\QuestDiary\1111.txt <$STR(S$×°±¸ID)> 0
-inc n$Ñ­»· 1
-endwhile
-break
 
 #if
 check [102] 0
 #act
-mov S$»ØÊÕ1 <ImgEx:0:192:192:192:0:-2|087#µã»÷¿ªÆôÉÌµê×°±¸»ØÊÕ/@»ØÊÕ¿ª¹Ø1>
-mov S$»ØÊÕ1 <CheckBox|nimg=public/1900000550.png|checkboxid=1|pimg=public/1900000551.png|default=1|link=@»ØÊÕ¿ª¹Ø1>
+mov S$»ØÊÕ1 0
+; mov S$»ØÊÕ1 <CheckBox|nimg=public/1900000550.png|checkboxid=1|pimg=public/1900000551.png|default=1|link=@»ØÊÕ¿ª¹Ø1>
 
 #if
 check [102] 1
 #act
-mov S$»ØÊÕ1 <ImgEx:0:193:193:193:0:-2|087#µã»÷¿ªÆôÉÌµê×°±¸»ØÊÕ/@»ØÊÕ¿ª¹Ø1>
+mov S$»ØÊÕ1 1
 
 #if
 check [103] 0
 #act
-mov S$»ØÊÕ2 <ImgEx:0:192:192:192:0:-2|087#µã»÷¿ªÆôÎÖÂê×°±¸»ØÊÕ/@»ØÊÕ¿ª¹Ø2>
+mov S$»ØÊÕ2 0
 
 #if
 check [103] 1
 #act
-mov S$»ØÊÕ2 <ImgEx:0:193:193:193:0:-2|087#µã»÷¿ªÆôÎÖÂê×°±¸»ØÊÕ/@»ØÊÕ¿ª¹Ø2>
+mov S$»ØÊÕ2 1
 
 
 #if
 check [104] 0
 #act
-mov S$»ØÊÕ3 <ImgEx:0:192:192:192:0:-2|087#µã»÷¿ªÆô×æÂê×°±¸»ØÊÕ/@»ØÊÕ¿ª¹Ø3>
+mov S$»ØÊÕ3 0
 
 #if
 check [104] 1
 #act
-mov S$»ØÊÕ3 <ImgEx:0:193:193:193:0:-2|087#µã»÷¿ªÆô×æÂê×°±¸»ØÊÕ/@»ØÊÕ¿ª¹Ø3>
+mov S$»ØÊÕ3 1
 
 
 #if
 check [105] 0
 #act
-mov S$»ØÊÕ4 <ImgEx:0:192:192:192:0:-2|087#µã»÷¿ªÆô³àÔÂ×°±¸»ØÊÕ/@»ØÊÕ¿ª¹Ø4>
+mov S$»ØÊÕ4 0
 
 #if
 check [105] 1
 #act
-mov S$»ØÊÕ4 <ImgEx:0:193:193:193:0:-2|087#µã»÷¿ªÆô³àÔÂ×°±¸»ØÊÕ/@»ØÊÕ¿ª¹Ø4>
+mov S$»ØÊÕ4 1
 
 #if
 check [106] 0
 #act
-mov S$»ØÊÕ5 <ImgEx:0:192:192:192:0:-2|087#µã»÷¿ªÆô»Æ½ð×°±¸»ØÊÕ/@»ØÊÕ¿ª¹Ø5>
-
+mov S$»ØÊÕ5 0
 #if
 check [106] 1
 #act
-mov S$»ØÊÕ5 <ImgEx:0:193:193:193:0:-2|087#µã»÷¿ªÆô»Æ½ð×°±¸»ØÊÕ/@»ØÊÕ¿ª¹Ø5>
+mov S$»ØÊÕ5 1
 
 
 #if
 check [107] 0
 #act
-mov S$»ØÊÕ6 <ImgEx:0:192:192:192:0:-2|087#µã»÷¿ªÆôÎäÉñ×°±¸»ØÊÕ/@»ØÊÕ¿ª¹Ø6>
+mov S$»ØÊÕ6 0
 
 #if
 check [107] 1
 #act
-mov S$»ØÊÕ6 <ImgEx:0:193:193:193:0:-2|087#µã»÷¿ªÆôÎäÉñ×°±¸»ØÊÕ/@»ØÊÕ¿ª¹Ø6>
+mov S$»ØÊÕ6 1
 
 
 
@@ -107,46 +73,46 @@ mov S$»ØÊÕ6 <ImgEx:0:193:193:193:0:-2|087#µã»÷¿ªÆôÎäÉñ×°±¸»ØÊÕ/@»ØÊÕ¿ª¹Ø6>
 #if
 check [108] 0
 #act
-mov S$»ØÊÕ7 <ImgEx:0:192:192:192:0:-2|087#µã»÷¿ªÆôÐùÔ¯×°±¸»ØÊÕ/@»ØÊÕ¿ª¹Ø7>
+mov S$»ØÊÕ7 0
 
 #if
 check [108] 1
 #act
-mov S$»ØÊÕ7 <ImgEx:0:193:193:193:0:-2|087#µã»÷¿ªÆôÐùÔ¯×°±¸»ØÊÕ/@»ØÊÕ¿ª¹Ø7>
+mov S$»ØÊÕ7 1
 
 
 #if
 check [120] 0
 #act
-mov S$»ØÊÕ120 <ImgEx:0:192:192:192:0:-2|250#1¼¶ÉúÐ¤»ØÊÕ£º1000Ôª±¦+1Íò¾­Ñé^-^250#2¼¶ÉúÐ¤»ØÊÕ£º3000Ôª±¦+3Íò¾­Ñé/@»ØÊÕ¿ª¹Ø120>
+mov S$»ØÊÕ120 0
 
 #if
 check [120] 1
 #act
-mov S$»ØÊÕ120 <ImgEx:0:193:193:193:0:-2|250#1¼¶ÉúÐ¤»ØÊÕ£º1000Ôª±¦+1Íò¾­Ñé^-^250#2¼¶ÉúÐ¤»ØÊÕ£º3000Ôª±¦+3Íò¾­Ñé/@»ØÊÕ¿ª¹Ø120>
+mov S$»ØÊÕ120 1
 
 
 
 #if
 check [121] 0
 #act
-mov S$»ØÊÕ121 <ImgEx:0:192:192:192:0:-2|250#3¼¶ÉúÐ¤»ØÊÕ£º5000Ôª±¦+5Íò¾­Ñé^-^250#4¼¶ÉúÐ¤»ØÊÕ£º10000Ôª±¦+10Íò¾­Ñé/@»ØÊÕ¿ª¹Ø121>
+mov S$»ØÊÕ121 0
 
 #if
 check [121] 1
 #act
-mov S$»ØÊÕ121 <ImgEx:0:193:193:193:0:-2|250#3¼¶ÉúÐ¤»ØÊÕ£º5000Ôª±¦+5Íò¾­Ñé^-^250#4¼¶ÉúÐ¤»ØÊÕ£º10000Ôª±¦+10Íò¾­Ñé/@»ØÊÕ¿ª¹Ø121>
+mov S$»ØÊÕ121 1
 
 
 #if
 check [122] 0
 #act
-mov S$»ØÊÕ122 <ImgEx:0:192:192:192:0:-2|250#5¼¶ÉúÐ¤»ØÊÕ£º10WÔª±¦+100Íò¾­Ñé^-^250#6¼¶ÉúÐ¤»ØÊÕ£º100WÔª±¦+1000Íò¾­Ñé/@»ØÊÕ¿ª¹Ø122>
+mov S$»ØÊÕ122 0
 
 #if
 check [122] 1
 #act
-mov S$»ØÊÕ122 <ImgEx:0:193:193:193:0:-2|250#5¼¶ÉúÐ¤»ØÊÕ£º10WÔª±¦+100Íò¾­Ñé^-^250#6¼¶ÉúÐ¤»ØÊÕ£º100WÔª±¦+1000Íò¾­Ñé/@»ØÊÕ¿ª¹Ø122>
+mov S$»ØÊÕ122 1
 
 
 
@@ -155,35 +121,35 @@ mov S$»ØÊÕ122 <ImgEx:0:193:193:193:0:-2|250#5¼¶ÉúÐ¤»ØÊÕ£º10WÔª±¦+100Íò¾­Ñé^-^250
 #if
 check [125] 0
 #act
-mov S$»ØÊÕ125 <ImgEx:0:192:192:192:0:-2|250#1¼¶ÌØ½ä»ØÊÕ£º1000Ôª±¦+1Íò¾­Ñé^-^250#2¼¶ÌØ½ä»ØÊÕ£º3000Ôª±¦+3Íò¾­Ñé/@»ØÊÕ¿ª¹Ø125>
+mov S$»ØÊÕ125 0
 
 #if
 check [125] 1
 #act
-mov S$»ØÊÕ125 <ImgEx:0:193:193:193:0:-2|250#1¼¶ÌØ½ä»ØÊÕ£º1000Ôª±¦+1Íò¾­Ñé^-^250#2¼¶ÌØ½ä»ØÊÕ£º3000Ôª±¦+3Íò¾­Ñé/@»ØÊÕ¿ª¹Ø125>
+mov S$»ØÊÕ125 1
 
 
 
 #if
 check [126] 0
 #act
-mov S$»ØÊÕ126 <ImgEx:0:192:192:192:0:-2|250#3¼¶ÌØ½ä»ØÊÕ£º5000Ôª±¦+5Íò¾­Ñé^-^250#4¼¶ÌØ½ä»ØÊÕ£º10000Ôª±¦+10Íò¾­Ñé/@»ØÊÕ¿ª¹Ø126>
+mov S$»ØÊÕ126 0
 
 #if
 check [126] 1
 #act
-mov S$»ØÊÕ126 <ImgEx:0:193:193:193:0:-2|250#3¼¶ÌØ½äÐ¤»ØÊÕ£º5000Ôª±¦+5Íò¾­Ñé^-^250#4¼¶ÌØ½ä»ØÊÕ£º10000Ôª±¦+10Íò¾­Ñé/@»ØÊÕ¿ª¹Ø126>
+mov S$»ØÊÕ126 1
 
 
 #if
 check [127] 0
 #act
-mov S$»ØÊÕ127 <ImgEx:0:192:192:192:0:-2|250#5¼¶ÌØ½ä»ØÊÕ£º10WÔª±¦+100Íò¾­Ñé^-^250#6¼¶ÌØ½ä»ØÊÕ£º100WÔª±¦+1000Íò¾­Ñé/@»ØÊÕ¿ª¹Ø127>
+mov S$»ØÊÕ127 0
 
 #if
 check [127] 1
 #act
-mov S$»ØÊÕ127 <ImgEx:0:193:193:193:0:-2|250#5¼¶ÌØ½ä»ØÊÕ£º10WÔª±¦+100Íò¾­Ñé^-^250#6¼¶ÌØ½ä»ØÊÕ£º100WÔª±¦+1000Íò¾­Ñé/@»ØÊÕ¿ª¹Ø127>
+mov S$»ØÊÕ127 1
 
 
 
@@ -193,12 +159,12 @@ mov S$»ØÊÕ127 <ImgEx:0:193:193:193:0:-2|250#5¼¶ÌØ½ä»ØÊÕ£º10WÔª±¦+100Íò¾­Ñé^-^250
 #if
 check [123] 0
 #act
-mov S$»ØÊÕ123 <ImgEx:0:192:192:192:0:-2|251#ÐÂ¼¼ÄÜ»ØÊÕ£º1WÔª±¦+10Íò¾­Ñé/@»ØÊÕ¿ª¹Ø123>
+mov S$»ØÊÕ123 0
 
 #if
 check [123] 1
 #act
-mov S$»ØÊÕ123 <ImgEx:0:193:193:193:0:-2|251#ÐÂ¼¼ÄÜ»ØÊÕ£º1WÔª±¦+10Íò¾­Ñé/@»ØÊÕ¿ª¹Ø123>
+mov S$»ØÊÕ123 1
 
 
 
@@ -211,12 +177,12 @@ mov S$»ØÊÕ123 <ImgEx:0:193:193:193:0:-2|251#ÐÂ¼¼ÄÜ»ØÊÕ£º1WÔª±¦+10Íò¾­Ñé/@»ØÊÕ¿ª¹
 #if
 check [109] 0
 #act
-mov S$×Ô¶¯»ØÊÕ <ImgEx:0:192:192:192:0:-2|087#µã»÷¿ªÆô×Ô¶¯»ØÊÕ^-^249#±³°ü¿Õ¼äÐ¡ÓÚ36¸ñÊ±²Å»á×Ô¶¯»ØÊÕ/@×Ô¶¯¿ª¹Ø>
+mov S$×Ô¶¯»ØÊÕ 0
 
 #if
 check [109] 1
 #act
-mov S$×Ô¶¯»ØÊÕ <ImgEx:0:193:193:193:0:-2|087#µã»÷¿ªÆô×Ô¶¯»ØÊÕ^-^249#±³°ü¿Õ¼äÐ¡ÓÚ36¸ñÊ±²Å»á×Ô¶¯»ØÊÕ/@×Ô¶¯¿ª¹Ø>
+mov S$×Ô¶¯»ØÊÕ 1
 
 
 #if
@@ -235,13 +201,13 @@ mov S$Ò»¼ü»ØÊÕ <ImgEx:0:193:193:193:0:-2|087#µã»÷Ò»¼ü»ØÊÕ¹´Ñ¡×°±¸/@Ò»¼ü»ØÊÕ¿ª¹Ø>
 #IF
 check [151] 1
 #ACT
-MOV S$×Ô¶¯³Ô»õ±Ò <ImgEx:0:193:193:193:0:-2|250#ÒÑ¿ªÆô×Ô¶¯³Ô»õ±Ò¹¦ÄÜ/@¿ªÆô×Ô¶¯³Ô»õ±Ò>
+MOV S$×Ô¶¯³Ô»õ±Ò 1
 MOV S$×Ô¶¯³Ô»õ±ÒA 250#ÒÑ¿ªÆô×Ô¶¯³Ô»õ±Ò¹¦ÄÜ
 
 #IF
 check [151] 0
 #ACT
-MOV S$×Ô¶¯³Ô»õ±Ò <ImgEx:0:192:192:192:0:-2|249#ÒÑ¹Ø±Õ×Ô¶¯³Ô»õ±Ò¹¦ÄÜ/@¿ªÆô×Ô¶¯³Ô»õ±Ò>
+MOV S$×Ô¶¯³Ô»õ±Ò 0
 MOV S$×Ô¶¯³Ô»õ±ÒA 249#ÒÑ¹Ø±Õ×Ô¶¯³Ô»õ±Ò¹¦ÄÜ
 
 
@@ -253,27 +219,80 @@ OPENMERCHANTBIGDLG 1 560 1 4 0 0 1 400 0
 #say
 \ 
 ;<ImgEx:1:5:5:6:394:-32/@EXIT> \
-<¡¾×°±¸»ØÊÕ¡¿/FCOLOR=251> <(Çë½«ÖØÒªµÄ¼«Æ·ÏÈ´æ²Ö¿â£¬·ñÔò»ØÊÕ¸Å²»¸ºÔð)/SCOLOR=250>\ \
-<>    <$STR(S$»ØÊÕ1)>   <[ÉÌµêÏµÁÐ]/SCOLOR=255> {»ØÊÕ¼Û¸ñ£º10Ôª±¦    + 1000 ¾­Ñé/SCOLOR=128}\
-<>    <$STR(S$»ØÊÕ2)>   <[ÎÖÂêÏµÁÐ]/SCOLOR=161> {»ØÊÕ¼Û¸ñ£º20Ôª±¦    + 2000 ¾­Ñé/SCOLOR=128}\
-<>    <$STR(S$»ØÊÕ3)>   <[×æÂêÏµÁÐ]/SCOLOR=250> {»ØÊÕ¼Û¸ñ£º100Ôª±¦   + 1 Íò ¾­Ñé/SCOLOR=128}\
-<>    <$STR(S$»ØÊÕ4)>   <[³àÔÂÏµÁÐ]/SCOLOR=243> {»ØÊÕ¼Û¸ñ£º200Ôª±¦   + 5 Íò ¾­Ñé/SCOLOR=128}\
-<>    <$STR(S$»ØÊÕ5)>   <[»Æ½ðÏµÁÐ]/SCOLOR=251> {»ØÊÕ¼Û¸ñ£º300Ôª±¦  + 30Íò ¾­Ñé/SCOLOR=128}\  
-<>    <$STR(S$»ØÊÕ6)>   <[ÎäÉñÏµÁÐ]/SCOLOR=253> {»ØÊÕ¼Û¸ñ£º2000Ôª±¦ + 200Íò ¾­Ñé/SCOLOR=128}\  
-<>    <$STR(S$»ØÊÕ7)>   <[ÐùÔ¯ÏµÁÐ]/SCOLOR=249> {»ØÊÕ¼Û¸ñ£º5000Ôª±¦ + 500Íò ¾­Ñé/SCOLOR=128}\  
-<-------------------------------------------------------------/AUTOCOLOR=250>\
-<>    <$STR(S$»ØÊÕ120)>   <[³õ¼¶ÉúÐ¤]|250#1¼¶ÉúÐ¤»ØÊÕ£º1000Ôª±¦+1Íò¾­Ñé^-^250#2¼¶ÉúÐ¤»ØÊÕ£º3000Ôª±¦+3Íò¾­Ñé/SCOLOR=250>                    <$STR(S$»ØÊÕ125)>   <[³õ¼¶ÌØ½ä]|250#1¼¶ÌØ½ä»ØÊÕ£º1000Ôª±¦+1Íò¾­Ñé^-^250#2¼¶ÌØ½ä»ØÊÕ£º3000Ôª±¦+3Íò¾­Ñé/SCOLOR=250>\  
-<>    <$STR(S$»ØÊÕ121)>   <[¸ß¼¶ÉúÐ¤]|249#3¼¶ÉúÐ¤»ØÊÕ£º5000Ôª±¦+5Íò¾­Ñé^-^249#4¼¶ÉúÐ¤»ØÊÕ£º10000Ôª±¦+10Íò¾­Ñé/SCOLOR=249>                    <$STR(S$»ØÊÕ126)>   <[¸ß¼¶ÌØ½ä]|249#3¼¶ÌØ½ä»ØÊÕ£º5000Ôª±¦+5Íò¾­Ñé^-^249#4¼¶ÌØ½ä»ØÊÕ£º10000Ôª±¦+10Íò¾­Ñé/SCOLOR=249>\  
-<>    <$STR(S$»ØÊÕ122)>   <[ÖÕ¼«ÉúÐ¤]|254#5¼¶ÉúÐ¤»ØÊÕ£º10WÔª±¦+100Íò¾­Ñé^-^254#6¼¶ÉúÐ¤»ØÊÕ£º100WÔª±¦+1000Íò¾­Ñé/SCOLOR=254>                    <$STR(S$»ØÊÕ127)>   <[ÖÕ¼«ÌØ½ä]|254#5¼¶ÌØ½ä»ØÊÕ£º10WÔª±¦+100Íò¾­Ñé^-^254#6¼¶ÌØ½ä»ØÊÕ£º100WÔª±¦+1000Íò¾­Ñé/SCOLOR=254>\  
-<>                       \  
-<-------------------------------------------------------------/AUTOCOLOR=254>\
-<>    <$STR(S$×Ô¶¯»ØÊÕ)>  <×Ô¶¯»ØÊÕ|250#ÁìÈ¡Î¢ÐÅÀñ°ü¿ªÆô×Ô¶¯»ØÊÕ/SCOLOR=251>         <¡ÌÒ»¼ü»ØÊÕ/@µã»÷Ò»¼ü»ØÊÕ>         <$STR(S$×Ô¶¯³Ô»õ±Ò)> <×Ô¶¯³Ô»õ±Ò|<$STR(S$×Ô¶¯³Ô»õ±ÒA)>/@¿ªÆô×Ô¶¯³Ô»õ±Ò>\
-<-------------------------------------------------------------/AUTOCOLOR=254>\
-<¡¸/SCOLOR=103><×°±¸·Ö½â/@×°±¸·Ö½â><¡¹/SCOLOR=103> <ÎÂÜ°ÌáÊ¾£º/SCOLOR=249><¸ß¼¶ÎäÆ÷×°±¸¿É·Ö½â²ÄÁÏ/SCOLOR=250>  <$STR(S$»ØÊÕ123)><¼¼ÄÜ»ØÊÕ|251#ÐÂ¼¼ÄÜ»ØÊÕ£º1WÔª±¦ + 10Íò ¾­Ñé/SCOLOR=70>\ \
+; <¡¾×°±¸»ØÊÕ¡¿/FCOLOR=251> <(Çë½«ÖØÒªµÄ¼«Æ·ÏÈ´æ²Ö¿â£¬·ñÔò»ØÊÕ¸Å²»¸ºÔð)/SCOLOR=250>\ \
+; <>    <$STR(S$»ØÊÕ1)>   <[ÉÌµêÏµÁÐ]/SCOLOR=255> {»ØÊÕ¼Û¸ñ£º10Ôª±¦    + 1000 ¾­Ñé/SCOLOR=128}\
+; <>    <$STR(S$»ØÊÕ2)>   <[ÎÖÂêÏµÁÐ]/SCOLOR=161> {»ØÊÕ¼Û¸ñ£º20Ôª±¦    + 2000 ¾­Ñé/SCOLOR=128}\
+; <>    <$STR(S$»ØÊÕ3)>   <[×æÂêÏµÁÐ]/SCOLOR=250> {»ØÊÕ¼Û¸ñ£º100Ôª±¦   + 1 Íò ¾­Ñé/SCOLOR=128}\
+; <>    <$STR(S$»ØÊÕ4)>   <[³àÔÂÏµÁÐ]/SCOLOR=243> {»ØÊÕ¼Û¸ñ£º200Ôª±¦   + 5 Íò ¾­Ñé/SCOLOR=128}\
+; <>    <$STR(S$»ØÊÕ5)>   <[»Æ½ðÏµÁÐ]/SCOLOR=251> {»ØÊÕ¼Û¸ñ£º300Ôª±¦  + 30Íò ¾­Ñé/SCOLOR=128}\  
+; <>    <$STR(S$»ØÊÕ6)>   <[ÎäÉñÏµÁÐ]/SCOLOR=253> {»ØÊÕ¼Û¸ñ£º2000Ôª±¦ + 200Íò ¾­Ñé/SCOLOR=128}\  
+; <>    <$STR(S$»ØÊÕ7)>   <[ÐùÔ¯ÏµÁÐ]/SCOLOR=249> {»ØÊÕ¼Û¸ñ£º5000Ôª±¦ + 500Íò ¾­Ñé/SCOLOR=128}\  
+; <-------------------------------------------------------------/AUTOCOLOR=250>\
+; <>    <$STR(S$»ØÊÕ120)>   <[³õ¼¶ÉúÐ¤]|250#1¼¶ÉúÐ¤»ØÊÕ£º1000Ôª±¦+1Íò¾­Ñé^-^250#2¼¶ÉúÐ¤»ØÊÕ£º3000Ôª±¦+3Íò¾­Ñé/SCOLOR=250>                    <$STR(S$»ØÊÕ125)>   <[³õ¼¶ÌØ½ä]|250#1¼¶ÌØ½ä»ØÊÕ£º1000Ôª±¦+1Íò¾­Ñé^-^250#2¼¶ÌØ½ä»ØÊÕ£º3000Ôª±¦+3Íò¾­Ñé/SCOLOR=250>\  
+; <>    <$STR(S$»ØÊÕ121)>   <[¸ß¼¶ÉúÐ¤]|249#3¼¶ÉúÐ¤»ØÊÕ£º5000Ôª±¦+5Íò¾­Ñé^-^249#4¼¶ÉúÐ¤»ØÊÕ£º10000Ôª±¦+10Íò¾­Ñé/SCOLOR=249>                    <$STR(S$»ØÊÕ126)>   <[¸ß¼¶ÌØ½ä]|249#3¼¶ÌØ½ä»ØÊÕ£º5000Ôª±¦+5Íò¾­Ñé^-^249#4¼¶ÌØ½ä»ØÊÕ£º10000Ôª±¦+10Íò¾­Ñé/SCOLOR=249>\  
+; <>    <$STR(S$»ØÊÕ122)>   <[ÖÕ¼«ÉúÐ¤]|254#5¼¶ÉúÐ¤»ØÊÕ£º10WÔª±¦+100Íò¾­Ñé^-^254#6¼¶ÉúÐ¤»ØÊÕ£º100WÔª±¦+1000Íò¾­Ñé/SCOLOR=254>                    <$STR(S$»ØÊÕ127)>   <[ÖÕ¼«ÌØ½ä]|254#5¼¶ÌØ½ä»ØÊÕ£º10WÔª±¦+100Íò¾­Ñé^-^254#6¼¶ÌØ½ä»ØÊÕ£º100WÔª±¦+1000Íò¾­Ñé/SCOLOR=254>\  
+; <>                       \  
+; <-------------------------------------------------------------/AUTOCOLOR=254>\
+; <>    <$STR(S$×Ô¶¯»ØÊÕ)>  <×Ô¶¯»ØÊÕ|250#ÁìÈ¡Î¢ÐÅÀñ°ü¿ªÆô×Ô¶¯»ØÊÕ/SCOLOR=251>         <¡ÌÒ»¼ü»ØÊÕ/@µã»÷Ò»¼ü»ØÊÕ>         <$STR(S$×Ô¶¯³Ô»õ±Ò)> <×Ô¶¯³Ô»õ±Ò|<$STR(S$×Ô¶¯³Ô»õ±ÒA)>/@¿ªÆô×Ô¶¯³Ô»õ±Ò>\
+; <-------------------------------------------------------------/AUTOCOLOR=254>\
+; <¡¸/SCOLOR=103><×°±¸·Ö½â/@×°±¸·Ö½â><¡¹/SCOLOR=103> <ÎÂÜ°ÌáÊ¾£º/SCOLOR=249><¸ß¼¶ÎäÆ÷×°±¸¿É·Ö½â²ÄÁÏ/SCOLOR=250>  <$STR(S$»ØÊÕ123)><¼¼ÄÜ»ØÊÕ|251#ÐÂ¼¼ÄÜ»ØÊÕ£º1WÔª±¦ + 10Íò ¾­Ñé/SCOLOR=70>\ \
 
-\                     <¡¸/SCOLOR=22><×°±¸¼«Æ·¾õÐÑ|22#×°±¸¼«Æ·ÊôÐÔµÄ¾õÐÑ/@×°±¸¼«Æ·¾õÐÑ><¡¹/SCOLOR=22> \
+; \                     <¡¸/SCOLOR=22><×°±¸¼«Æ·¾õÐÑ|22#×°±¸¼«Æ·ÊôÐÔµÄ¾õÐÑ/@×°±¸¼«Æ·¾õÐÑ><¡¹/SCOLOR=22> \
 
 
+<Img|x=0.0|y=0.0|width=620|height=500|scale9l=10|bg=1|scale9r=10|scale9b=10|esc=1|move=0|scale9t=10|img=public/bg_npc_04.jpg|reset=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=24.0|y=13.0|tipsx=10|tipsy=80|color=251|size=18|text=¡¾×°±¸»ØÊÕ¡¿>
+<Text|a=0|x=156.0|y=13.0|tipsx=10|tipsy=80|color=250|size=18|text=(Çë½«ÖØÒªµÄ¼«Æ·ÏÈ´æ²Ö¿â£¬·ñÔò»ØÊÕ¸Å²»¸ºÔð)>
+<Text|a=0|x=99.0|y=45|tipsx=10|tipsy=80|color=255|size=18|text=[ÉÌµêÏµÁÐ]>
+<Text|a=0|x=99.0|y=70|tipsx=10|tipsy=80|color=161|size=18|text=[ÎÖÂêÏµÁÐ]>
+<Text|a=0|x=99.0|y=95|tipsx=10|tipsy=80|color=250|size=18|text=[×æÂêÏµÁÐ]>
+<Text|a=0|x=99.0|y=120|tipsx=10|tipsy=80|color=243|size=18|text=[³àÔÂÏµÁÐ]>
+<Text|a=0|x=99.0|y=145|tipsx=10|tipsy=80|color=251|size=18|text=[»Æ½ðÏµÁÐ]>
+<Text|a=0|x=99.0|y=170|tipsx=10|tipsy=80|color=253|size=18|text=[ÎäÉñÏµÁÐ]>
+<Text|a=0|x=99.0|y=195|tipsx=10|tipsy=80|color=249|size=18|text=[ÐùÔ¯ÏµÁÐ]>
+<CheckBox|x=44.0|y=43|pimg=public/1900000551.png|nimg=public/1900000550.png|checkboxid=1|default=<$STR(S$»ØÊÕ1)>|link=@»ØÊÕ¿ª¹Ø1#»ØÊÕ×é±ð=1>
+<CheckBox|x=44.0|y=68|pimg=public/1900000551.png|nimg=public/1900000550.png|checkboxid=1|default=<$STR(S$»ØÊÕ2)>|link=@»ØÊÕ¿ª¹Ø2#»ØÊÕ×é±ð=2>
+<CheckBox|x=44.0|y=93|pimg=public/1900000551.png|nimg=public/1900000550.png|checkboxid=1|default=<$STR(S$»ØÊÕ3)>|link=@»ØÊÕ¿ª¹Ø3#»ØÊÕ×é±ð=3>
+<CheckBox|x=44.0|y=118|pimg=public/1900000551.png|nimg=public/1900000550.png|checkboxid=1|default=<$STR(S$»ØÊÕ4)>|link=@»ØÊÕ¿ª¹Ø4#»ØÊÕ×é±ð=4>
+<CheckBox|x=44.0|y=143|pimg=public/1900000551.png|nimg=public/1900000550.png|checkboxid=1|default=<$STR(S$»ØÊÕ5)>|link=@»ØÊÕ¿ª¹Ø5#»ØÊÕ×é±ð=5>
+<CheckBox|x=44.0|y=168|pimg=public/1900000551.png|nimg=public/1900000550.png|checkboxid=1|default=<$STR(S$»ØÊÕ6)>|link=@»ØÊÕ¿ª¹Ø6#»ØÊÕ×é±ð=6>
+<CheckBox|x=44.0|y=193|pimg=public/1900000551.png|nimg=public/1900000550.png|checkboxid=1|default=<$STR(S$»ØÊÕ7)>|link=@»ØÊÕ¿ª¹Ø7#»ØÊÕ×é±ð=7>
+<Text|a=0|x=24.0|y=225.0|tipsx=10|tipsy=80|color=250|size=18|text=------------------------------------------------------------->
+<Text|a=0|x=99.0|y=248.0|tips={1¼¶ÉúÐ¤»ØÊÕ£º1000Ôª±¦+1Íò¾­Ñé/FCOLOR=250}^{2¼¶ÉúÐ¤»ØÊÕ£º3000Ôª±¦+3Íò¾­Ñé/FCOLOR=250}|tipsx=10|tipsy=80|color=250|size=18|text=[³õ¼¶ÉúÐ¤]>
+<Text|a=0|x=99.0|y=278.0|tips={3¼¶ÉúÐ¤»ØÊÕ£º5000Ôª±¦+5Íò¾­Ñé/FCOLOR=249}^{4¼¶ÉúÐ¤»ØÊÕ£º10000Ôª±¦+10Íò¾­Ñé/FCOLOR=249}|tipsx=10|tipsy=80|color=249|size=18|text=[¸ß¼¶ÉúÐ¤]>
+<Text|a=0|x=99.0|y=305.0|tips={5¼¶ÉúÐ¤»ØÊÕ£º10WÔª±¦+100Íò¾­Ñé/FCOLOR=254}^{6¼¶ÉúÐ¤»ØÊÕ£º100WÔª±¦+1000Íò¾­Ñé/FCOLOR=254}|tipsx=10|tipsy=80|color=254|size=18|text=[ÖÕ¼«ÉúÐ¤]>
+<CheckBox|x=44.0|y=247.0|pimg=public/1900000551.png|nimg=public/1900000550.png|checkboxid=1|default=<$str(S$»ØÊÕ120)>|link=@»ØÊÕ¿ª¹Ø120#»ØÊÕ×é±ð=8>
+<CheckBox|x=45.0|y=277.0|pimg=public/1900000551.png|nimg=public/1900000550.png|checkboxid=1|default=<$str(S$»ØÊÕ121)>|link=@»ØÊÕ¿ª¹Ø121#»ØÊÕ×é±ð=9>
+<CheckBox|x=45.0|y=305.0|pimg=public/1900000551.png|nimg=public/1900000550.png|checkboxid=1|default=<$str(S$»ØÊÕ122)>|link=@»ØÊÕ¿ª¹Ø122#»ØÊÕ×é±ð=10>
+<Text|a=0|x=418.0|y=248.0|tips={1¼¶ÌØ½ä»ØÊÕ£º1000Ôª±¦+1Íò¾­Ñé/FCOLOR=250}^{2¼¶ÌØ½ä»ØÊÕ£º3000Ôª±¦+3Íò¾­Ñé/FCOLOR=250}|tipsx=10|tipsy=80|color=250|size=18|text=[³õ¼¶ÌØ½ä]>
+<Text|a=0|x=418.0|y=278.0|tips={3¼¶ÌØ½ä»ØÊÕ£º5000Ôª±¦+5Íò¾­Ñé/FCOLOR=249}^{4¼¶ÌØ½ä»ØÊÕ£º10000Ôª±¦+10Íò¾­Ñé/FCOLOR=249}|tipsx=10|tipsy=80|color=249|size=18|text=[¸ß¼¶ÌØ½ä]>
+<Text|a=0|x=418.0|y=310.0|tips={5¼¶ÌØ½ä»ØÊÕ£º10WÔª±¦+100Íò¾­Ñé/FCOLOR=254}^{6¼¶ÌØ½ä»ØÊÕ£º100WÔª±¦+1000Íò¾­Ñé/FCOLOR=254}|tipsx=10|tipsy=80|color=254|size=18|text=[ÖÕ¼«ÌØ½ä]>
+<CheckBox|x=375.0|y=248.0|pimg=public/1900000551.png|nimg=public/1900000550.png|checkboxid=1|default=<$str(S$»ØÊÕ125)>|link=@»ØÊÕ¿ª¹Ø125#»ØÊÕ×é±ð=11>
+<CheckBox|x=375.0|y=278.0|pimg=public/1900000551.png|nimg=public/1900000550.png|checkboxid=1|default=<$str(S$»ØÊÕ126)>|link=@»ØÊÕ¿ª¹Ø126#»ØÊÕ×é±ð=12>
+<CheckBox|x=376.0|y=309.0|pimg=public/1900000551.png|nimg=public/1900000550.png|checkboxid=1|default=<$str(S$»ØÊÕ127)>|link=@»ØÊÕ¿ª¹Ø127#»ØÊÕ×é±ð=13>
+<Text|a=0|x=24.0|y=329.0|tipsx=10|tipsy=80|color=254|size=18|text=------------------------------------------------------------->
+<Text|a=0|x=98.0|y=350.0|tips={ÁìÈ¡Î¢ÐÅÀñ°ü¿ªÆô×Ô¶¯»ØÊÕ/FCOLOR=250}|tipsx=10|tipsy=80|color=251|size=18|text=×Ô¶¯»ØÊÕ>
+<Text|a=0|x=214.0|y=349.0|tipsx=10|tipsy=80|color=251|size=18|text=¡ÌÒ»¼ü»ØÊÕ|link=@µã»÷Ò»¼ü»ØÊÕ>
+<Text|a=0|x=640.0|y=313.0|tipsx=10|tipsy=80|color=255|size=18|text=/@¿ªÆô×Ô¶¯³Ô»õ±Ò>>
+<Text|a=0|x=24.0|y=369.0|tipsx=10|tipsy=80|color=254|size=18|text=------------------------------------------------------------->
+<Text|a=0|x=46.0|y=389.0|tipsx=10|tipsy=80|color=251|size=18|text=×°±¸·Ö½â|link=@×°±¸·Ö½â>
+<Text|a=0|x=156.0|y=389.0|tipsx=10|tipsy=80|color=249|size=18|text=ÎÂÜ°ÌáÊ¾£º>
+<Text|a=0|x=266.0|y=389.0|tipsx=10|tipsy=80|color=250|size=18|text=¸ß¼¶ÎäÆ÷×°±¸¿É·Ö½â²ÄÁÏ>
+<Text|a=0|x=531.0|y=389.0|tips={ÐÂ¼¼ÄÜ»ØÊÕ£º1WÔª±¦ + 10Íò ¾­Ñé/FCOLOR=251}|tipsx=10|tipsy=80|color=70|size=18|text=¼¼ÄÜ»ØÊÕ>
+<Text|a=0|x=46.0|y=450.0|tipsx=10|tipsy=80|color=251|size=18|text=×°±¸¼«Æ·¾õÐÑ|link=@×°±¸¼«Æ·¾õÐÑ>
+<Text|x=195.0|y=95|color=255|size=18|text=»ØÊÕ¼Û¸ñ£º100Ôª±¦ + 1Íò¾­Ñé>
+<Text|x=195.0|y=170|color=255|size=18|text=»ØÊÕ¼Û¸ñ£º2000Ôª±¦ + 200Íò¾­Ñé>
+<Text|x=195.0|y=45|color=255|size=18|text=»ØÊÕ¼Û¸ñ£º10Ôª±¦ + 1000¾­Ñé>
+<Text|x=195.0|y=70|color=255|size=18|text=»ØÊÕ¼Û¸ñ£º20Ôª±¦ + 2000¾­Ñé>
+<Text|x=195.0|y=120|color=255|size=18|text=»ØÊÕ¼Û¸ñ£º200Ôª±¦ + 5Íò¾­Ñé>
+<Text|x=195.0|y=145|color=255|size=18|text=»ØÊÕ¼Û¸ñ£º300Ôª±¦ + 30Íò¾­Ñé>
+<Text|x=195.0|y=195|color=255|size=18|text=»ØÊÕ¼Û¸ñ£º5000Ôª±¦ + 500Íò¾­Ñé>
+<CheckBox|x=45.0|y=348.0|pimg=public/1900000551.png|nimg=public/1900000550.png|checkboxid=1|default=<$STR(S$×Ô¶¯»ØÊÕ)>|link=@×Ô¶¯¿ª¹Ø>
+<CheckBox|x=494.0|y=389.0|pimg=public/1900000551.png|nimg=public/1900000550.png|checkboxid=1|default=<$STR(S$»ØÊÕ123)>|link=@»ØÊÕ¿ª¹Ø123#»ØÊÕ×é±ð=14>
+<CheckBox|x=376.0|y=348.0|nimg=public/1900000550.png|pimg=public/1900000551.png|checkboxid=1|default=<$STR(S$×Ô¶¯³Ô»õ±Ò)>|link=@¿ªÆô×Ô¶¯³Ô»õ±Ò>
+<Text|x=418.0|y=351.0|color=249|size=18|text=×Ô¶¯³Ô»õ±Ò>
 
 
 [@×°±¸¼«Æ·¾õÐÑ]
@@ -306,6 +325,12 @@ break
 
 
 [@µã»÷Ò»¼ü»ØÊÕ]
+
+#IF
+#ACT
+RECYCLING
+BREAK
+
 #if
 check [102] 1
 #act
@@ -350,8 +375,10 @@ goto @»ØÊÕ¼ì²â°Ñ
 check [102] 0
 #act
 set [102] 1
+ADDRECYCLINGTYPE <$STR(S$»ØÊÕ×é±ð)>
 goto @¿ªÊ¼»ØÊÕ
 #elseact
+DELRECYCLINGTYPE <$STR(S$»ØÊÕ×é±ð)>
 set [102] 0
 goto @¿ªÊ¼»ØÊÕ
 
@@ -360,8 +387,10 @@ goto @¿ªÊ¼»ØÊÕ
 check [103] 0
 #act
 set [103] 1
+ADDRECYCLINGTYPE <$STR(S$»ØÊÕ×é±ð)>
 goto @¿ªÊ¼»ØÊÕ
 #elseact
+DELRECYCLINGTYPE <$STR(S$»ØÊÕ×é±ð)>
 set [103] 0
 goto @¿ªÊ¼»ØÊÕ
 
@@ -370,8 +399,10 @@ goto @¿ªÊ¼»ØÊÕ
 check [104] 0
 #act
 set [104] 1
+ADDRECYCLINGTYPE <$STR(S$»ØÊÕ×é±ð)>
 goto @¿ªÊ¼»ØÊÕ
 #elseact
+DELRECYCLINGTYPE <$STR(S$»ØÊÕ×é±ð)>
 set [104] 0
 goto @¿ªÊ¼»ØÊÕ
 
@@ -382,8 +413,10 @@ goto @¿ªÊ¼»ØÊÕ
 check [105] 0
 #act
 set [105] 1
+ADDRECYCLINGTYPE <$STR(S$»ØÊÕ×é±ð)>
 goto @¿ªÊ¼»ØÊÕ
 #elseact
+DELRECYCLINGTYPE <$STR(S$»ØÊÕ×é±ð)>
 set [105] 0
 goto @¿ªÊ¼»ØÊÕ
 
@@ -400,8 +433,10 @@ goto @¿ªÊ¼»ØÊÕ
 check [106] 0
 #act
 set [106] 1
+ADDRECYCLINGTYPE <$STR(S$»ØÊÕ×é±ð)>
 goto @¿ªÊ¼»ØÊÕ
 #elseact
+DELRECYCLINGTYPE <$STR(S$»ØÊÕ×é±ð)>
 set [106] 0
 goto @¿ªÊ¼»ØÊÕ
 
@@ -412,8 +447,10 @@ goto @¿ªÊ¼»ØÊÕ
 check [107] 0
 #act
 set [107] 1
+ADDRECYCLINGTYPE <$STR(S$»ØÊÕ×é±ð)>
 goto @¿ªÊ¼»ØÊÕ
 #elseact
+DELRECYCLINGTYPE <$STR(S$»ØÊÕ×é±ð)>
 set [107] 0
 goto @¿ªÊ¼»ØÊÕ
 
@@ -424,8 +461,10 @@ goto @¿ªÊ¼»ØÊÕ
 check [108] 0
 #act
 set [108] 1
+ADDRECYCLINGTYPE <$STR(S$»ØÊÕ×é±ð)>
 goto @¿ªÊ¼»ØÊÕ
 #elseact
+DELRECYCLINGTYPE <$STR(S$»ØÊÕ×é±ð)>
 set [108] 0
 goto @¿ªÊ¼»ØÊÕ
 
@@ -438,8 +477,10 @@ goto @¿ªÊ¼»ØÊÕ
 check [120] 0
 #act
 set [120] 1
+ADDRECYCLINGTYPE <$STR(S$»ØÊÕ×é±ð)>
 goto @¿ªÊ¼»ØÊÕ
 #elseact
+DELRECYCLINGTYPE <$STR(S$»ØÊÕ×é±ð)>
 set [120] 0
 goto @¿ªÊ¼»ØÊÕ
 
@@ -449,8 +490,10 @@ goto @¿ªÊ¼»ØÊÕ
 check [121] 0
 #act
 set [121] 1
+ADDRECYCLINGTYPE <$STR(S$»ØÊÕ×é±ð)>
 goto @¿ªÊ¼»ØÊÕ
 #elseact
+DELRECYCLINGTYPE <$STR(S$»ØÊÕ×é±ð)>
 set [121] 0
 goto @¿ªÊ¼»ØÊÕ
 
@@ -460,8 +503,10 @@ goto @¿ªÊ¼»ØÊÕ
 check [122] 0
 #act
 set [122] 1
+ADDRECYCLINGTYPE <$STR(S$»ØÊÕ×é±ð)>
 goto @¿ªÊ¼»ØÊÕ
 #elseact
+DELRECYCLINGTYPE <$STR(S$»ØÊÕ×é±ð)>
 set [122] 0
 goto @¿ªÊ¼»ØÊÕ
 
@@ -471,8 +516,10 @@ goto @¿ªÊ¼»ØÊÕ
 check [123] 0
 #act
 set [123] 1
+ADDRECYCLINGTYPE <$STR(S$»ØÊÕ×é±ð)>
 goto @¿ªÊ¼»ØÊÕ
 #elseact
+DELRECYCLINGTYPE <$STR(S$»ØÊÕ×é±ð)>
 set [123] 0
 goto @¿ªÊ¼»ØÊÕ
 
@@ -482,8 +529,10 @@ goto @¿ªÊ¼»ØÊÕ
 check [125] 0
 #act
 set [125] 1
+ADDRECYCLINGTYPE <$STR(S$»ØÊÕ×é±ð)>
 goto @¿ªÊ¼»ØÊÕ
 #elseact
+DELRECYCLINGTYPE <$STR(S$»ØÊÕ×é±ð)>
 set [125] 0
 goto @¿ªÊ¼»ØÊÕ
 
@@ -493,8 +542,10 @@ goto @¿ªÊ¼»ØÊÕ
 check [126] 0
 #act
 set [126] 1
+ADDRECYCLINGTYPE <$STR(S$»ØÊÕ×é±ð)>
 goto @¿ªÊ¼»ØÊÕ
 #elseact
+DELRECYCLINGTYPE <$STR(S$»ØÊÕ×é±ð)>
 set [126] 0
 goto @¿ªÊ¼»ØÊÕ
 
@@ -505,8 +556,10 @@ goto @¿ªÊ¼»ØÊÕ
 check [127] 0
 #act
 set [127] 1
+ADDRECYCLINGTYPE <$STR(S$»ØÊÕ×é±ð)>
 goto @¿ªÊ¼»ØÊÕ
 #elseact
+DELRECYCLINGTYPE <$STR(S$»ØÊÕ×é±ð)>
 set [127] 0
 goto @¿ªÊ¼»ØÊÕ
 
@@ -542,8 +595,10 @@ break
 check [109] 0
 #act
 set [109] 1
+AUTORECYCLING 5 10
 goto @¿ªÊ¼»ØÊÕ
 #elseact
+AUTORECYCLING
 set [109] 0
 goto @¿ªÊ¼»ØÊÕ
 
@@ -551,22 +606,13 @@ goto @¿ªÊ¼»ØÊÕ
 [@»ØÊÕ¼ì²â°Ñ]
 #if
 #act
+break
 
 
 #if
 check [102] 1
 #act
 TakeBagItem ÐÞÂÞ|ÙÈÔÂ|½µÄ§|ÃüÔËÖ®ÈÐ|ËÀÉñÊÖÌ×|¼ÇÒäÏîÁ´|µÀÊ¿Í·¿ø|÷¼÷ÃÍ·¿ø|÷¼÷Ã½äÖ¸|·Å´ó¾µ|ºÚÌ´ÊÖïí|÷ÈÁ¦½äÖ¸|ÖñµÑ|µÀÊ¿ÊÖïí|µÀµÂ½äÖ¸|ÑÖÂÞÊÖÌ×|ÕäÖé½äÖ¸|Éºº÷½äÖ¸|½µÑý³ýÄ§½äÖ¸|½ðÊÖïí|·ï»ËÃ÷Öé|°×É«»¢³ÝÏîÁ´|µÆÁýÏîÁ´|Ä§Á¦ÊÖïí|¿ñ·ç½äÖ¸|ÏÄÆÕ¶ùÊÖïí|¿ñ·çÏîÁ´|±ÜÐ°ÊÖïí|Ì½²âÏîÁ´|¼ÇÒä½äÖ¸|¼ÇÒäÊÖïí|¼ÇÒäÍ·¿ø|ÎÚÄ¾½£|²¼ÒÂ(ÄÐ)|²¼ÒÂ(Å®)|À¶ôä´äÏîÁ´|ÉßÑÛ½äÖ¸|çúçêÏîÁ´| 100 10 0 0 1000 N10 0
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -702,23 +748,51 @@ BREAK
 #ACT
 OPENMERCHANTBIGDLG 1 8 0 0 0 0 0
 #say
-<¡¾×°±¸·Ö½â¡¿/FCOLOR=251> <Hot~/FCOLOR=249>  <ÄúºÃ¡¾<$USERNAME>¡¿£¬ÄúÐèÒª·Ö½âÊ²Ã´×°±¸?/FCOLOR=255>\
-<ImgEx:1:5:5:6:394:-32/@EXIT> \
+; <¡¾×°±¸·Ö½â¡¿/FCOLOR=251> <Hot~/FCOLOR=249>  <ÄúºÃ¡¾<$USERNAME>¡¿£¬ÄúÐèÒª·Ö½âÊ²Ã´×°±¸?/FCOLOR=255>\
+; <ImgEx:1:5:5:6:394:-32/@EXIT> \
 
 
-<Ç×°®µÄÍæ¼Ò£¬»¶Ó­À´µ½¸´¹Å´«Ææ£¡ÎÒÊÇÄúµÄ·Ö½â×¨Ô±£¡/SCOLOR=161>\
-¡¡ <·Ö½âµÄ²ÄÁÏ·Ç³£Õä¹ó£¬É¢ÈËÌìÌÃ£¬Ö»ÒªÄúÓÐÊ±¼äÒ»Ñù¿ÉÒÔ·çÃÒÌìÏÂ£¡/SCOLOR=161>\ 
-<--------------------------------------------------------------/AUTOCOLOR=91>\   \
-<Íõ  Õß  ÏµÁÐ/AUTOCOLOR=70>¡ú<(ÎäÆ÷ÒÂ·þ·Ö½â /SCOLOR=231><ÌìÃü±¦ÅÌ*3£¬Ê×ÊÎ*1)/SCOLOR=251> <¿ªÊ¼·Ö½â/@·Ö½âÍõÕß>\  \
+; <Ç×°®µÄÍæ¼Ò£¬»¶Ó­À´µ½¸´¹Å´«Ææ£¡ÎÒÊÇÄúµÄ·Ö½â×¨Ô±£¡/SCOLOR=161>\
+; ¡¡ <·Ö½âµÄ²ÄÁÏ·Ç³£Õä¹ó£¬É¢ÈËÌìÌÃ£¬Ö»ÒªÄúÓÐÊ±¼äÒ»Ñù¿ÉÒÔ·çÃÒÌìÏÂ£¡/SCOLOR=161>\ 
+; <--------------------------------------------------------------/AUTOCOLOR=91>\   \
+; <Íõ  Õß  ÏµÁÐ/AUTOCOLOR=70>¡ú<(ÎäÆ÷ÒÂ·þ·Ö½â /SCOLOR=231><ÌìÃü±¦ÅÌ*3£¬Ê×ÊÎ*1)/SCOLOR=251> <¿ªÊ¼·Ö½â/@·Ö½âÍõÕß>\  \
 
-<ÎÞ  Ë«  ÏµÁÐ/AUTOCOLOR=249>¡ú<(ÎäÆ÷ÒÂ·þ·Ö½â /SCOLOR=231><ÂÖ»ØÖñÒ¶*3£¬Ê×ÊÎ*1)/SCOLOR=250> <¿ªÊ¼·Ö½â/@·Ö½âÎÞË«>\  \
+; <ÎÞ  Ë«  ÏµÁÐ/AUTOCOLOR=249>¡ú<(ÎäÆ÷ÒÂ·þ·Ö½â /SCOLOR=231><ÂÖ»ØÖñÒ¶*3£¬Ê×ÊÎ*1)/SCOLOR=250> <¿ªÊ¼·Ö½â/@·Ö½âÎÞË«>\  \
 
-<À¶ÔÂ¸´¹ÅÏµÁÐ/AUTOCOLOR=254>¡ú<(ÎäÆ÷ÒÂ·þ·Ö½â /SCOLOR=231><ÃüÔËÁ«»¨*3£¬Ê×ÊÎ*1)/SCOLOR=253> <¿ªÊ¼·Ö½â/@·Ö½âÀ¶ÔÂ¸´¹Å>\  \
+; <À¶ÔÂ¸´¹ÅÏµÁÐ/AUTOCOLOR=254>¡ú<(ÎäÆ÷ÒÂ·þ·Ö½â /SCOLOR=231><ÃüÔËÁ«»¨*3£¬Ê×ÊÎ*1)/SCOLOR=253> <¿ªÊ¼·Ö½â/@·Ö½âÀ¶ÔÂ¸´¹Å>\  \
 
 
-<--------------------------------------------------------------/AUTOCOLOR=91>\ 
-<ÎÂÜ°ÌáÊ¾£º/SCOLOR=249>BOSSÓÐ¼¸ÂÊ±¬Ò»ÇÐ£¬×°±¸±£Öµ£¡  <·µ»ØÉÏÒ³/@¿ªÊ¼»ØÊÕ>  \
+; <--------------------------------------------------------------/AUTOCOLOR=91>\ 
+; <ÎÂÜ°ÌáÊ¾£º/SCOLOR=249>BOSSÓÐ¼¸ÂÊ±¬Ò»ÇÐ£¬×°±¸±£Öµ£¡  <·µ»ØÉÏÒ³/@¿ªÊ¼»ØÊÕ>  \
 
+<Img|width=620|height=300|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|reset=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=21.0|y=17.0|tipsx=10|tipsy=80|color=251|size=18|text=¡¾×°±¸·Ö½â¡¿>
+<Text|a=0|x=153.0|y=17.0|tipsx=10|tipsy=80|color=249|size=18|text=Hot~>
+<Text|a=0|x=197.0|y=17.0|tipsx=10|tipsy=80|color=255|size=18|text=£¬ÄúÐèÒª·Ö½âÊ²Ã´×°±¸?>
+<Text|a=0|x=21.0|y=57.0|tipsx=10|tipsy=80|color=161|size=18|text=Ç×°®µÄÍæ¼Ò£¬»¶Ó­À´µ½¸´¹Å´«Ææ£¡ÎÒÊÇÄúµÄ·Ö½â×¨Ô±£¡>
+<Text|a=0|x=21.0|y=77.0|tipsx=10|tipsy=80|color=161|size=18|text=·Ö½âµÄ²ÄÁÏ·Ç³£Õä¹ó£¬É¢ÈËÌìÌÃ£¬Ö»ÒªÄúÓÐÊ±¼äÒ»Ñù¿ÉÒÔ·çÃÒÌìÏÂ£¡>
+<Text|a=0|x=21.0|y=97.0|tipsx=10|tipsy=80|color=91|size=18|text=-------------------------------------------------------------->
+<Text|a=0|x=21.0|y=119.0|tipsx=10|tipsy=80|color=70|size=18|text=Íõ  Õß  ÏµÁÐ>
+<Text|a=0|x=153.0|y=119.0|tipsx=10|tipsy=80|color=255|size=18|text=¡ú>
+<Text|a=0|x=175.0|y=119.0|tipsx=10|tipsy=80|color=231|size=18|text=(ÎäÆ÷ÒÂ·þ·Ö½â)>
+<Text|a=0|x=318.0|y=119.0|tipsx=10|tipsy=80|color=251|size=18|text=(ÌìÃü±¦ÅÌ*3£¬Ê×ÊÎ*1)>
+<Text|a=0|x=527.0|y=119.0|tipsx=10|tipsy=80|color=251|size=18|text=¿ªÊ¼·Ö½â|link=@·Ö½âÍõÕß>
+<Text|a=0|x=21.0|y=149.0|tipsx=10|tipsy=80|color=249|size=18|text=ÎÞ  Ë«  ÏµÁÐ>
+<Text|a=0|x=153.0|y=149.0|tipsx=10|tipsy=80|color=255|size=18|text=¡ú>
+<Text|a=0|x=175.0|y=149.0|tipsx=10|tipsy=80|color=231|size=18|text=(ÎäÆ÷ÒÂ·þ·Ö½â)>
+<Text|a=0|x=318.0|y=149.0|tipsx=10|tipsy=80|color=250|size=18|text=(ÂÖ»ØÖñÒ¶*3£¬Ê×ÊÎ*1)>
+<Text|a=0|x=527.0|y=149.0|tipsx=10|tipsy=80|color=251|size=18|text=¿ªÊ¼·Ö½â|link=@·Ö½âÎÞË«>
+<Text|a=0|x=21.0|y=177.0|tipsx=10|tipsy=80|color=254|size=18|text=À¶ÔÂ¸´¹ÅÏµÁÐ>
+<Text|a=0|x=153.0|y=177.0|tipsx=10|tipsy=80|color=255|size=18|text=¡ú>
+<Text|a=0|x=175.0|y=177.0|tipsx=10|tipsy=80|color=231|size=18|text=(ÎäÆ÷ÒÂ·þ·Ö½â)>
+<Text|a=0|x=318.0|y=177.0|tipsx=10|tipsy=80|color=253|size=18|text=(ÃüÔËÁ«»¨*3£¬Ê×ÊÎ*1)>
+<Text|a=0|x=527.0|y=177.0|tipsx=10|tipsy=80|color=251|size=18|text=¿ªÊ¼·Ö½â|link=@·Ö½âÀ¶ÔÂ¸´¹Å>
+<Text|a=0|x=21.0|y=211.0|tipsx=10|tipsy=80|color=91|size=18|text=-------------------------------------------------------------->
+<Text|a=0|x=21.0|y=243.0|tipsx=10|tipsy=80|color=249|size=18|text=ÎÂÜ°ÌáÊ¾£º>
+<Text|a=0|x=131.0|y=243.0|tipsx=10|tipsy=80|color=255|size=18|text=BOSSÓÐ¼¸ÂÊ±¬Ò»ÇÐ£¬×°±¸±£Öµ£¡>
+<Text|a=0|x=439.0|y=243.0|tipsx=10|tipsy=80|color=251|size=18|text=·µ»ØÉÏÒ³|link=@¿ªÊ¼»ØÊÕ>
 
 
 
@@ -730,8 +804,12 @@ OPENMERCHANTBIGDLG 1 8 0 0 0 0 0
 MOV N1 0
 MOV N2 0
 MOV N$Èý¼¶·Ö½â²ÄÁÏ 0
-TakeBagItem À¶ÔÂ¸´¹Å¡¤ÉñÕ¶|À¶ÔÂ¸´¹Å¡¤Ä§ÕÈ|À¶ÔÂ¸´¹Å¡¤µÀÈÐ|À¶ÔÂ¸´¹Å¡¤Õ½¼×|À¶ÔÂ¸´¹Å¡¤Õ½ÒÂ|À¶ÔÂ¸´¹Å¡¤Ä§ÅÛ|À¶ÔÂ¸´¹Å¡¤Ä§ÒÂ|À¶ÔÂ¸´¹Å¡¤µÀÅÛ|À¶ÔÂ¸´¹Å¡¤µÀÒÂ|| 100 0 0 0 0 N1 0
-TakeBagItem À¶ÔÂ¸´¹Å¡¤Õ½¿ø|À¶ÔÂ¸´¹Å¡¤Õ½Á´|À¶ÔÂ¸´¹Å¡¤Õ½ïí|À¶ÔÂ¸´¹Å¡¤Õ½½ä|À¶ÔÂ¸´¹Å¡¤Õ½´ø|À¶ÔÂ¸´¹Å¡¤Õ½Ñ¥|À¶ÔÂ¸´¹Å¡¤Ä§¿ø|À¶ÔÂ¸´¹Å¡¤Ä§Á´|À¶ÔÂ¸´¹Å¡¤Ä§ïí|À¶ÔÂ¸´¹Å¡¤Ä§½ä|À¶ÔÂ¸´¹Å¡¤Ä§´ø|À¶ÔÂ¸´¹Å¡¤Ä§Ñ¥|À¶ÔÂ¸´¹Å¡¤µÀ¿ø|À¶ÔÂ¸´¹Å¡¤µÀÁ´|À¶ÔÂ¸´¹Å¡¤µÀïí|À¶ÔÂ¸´¹Å¡¤µÀ½ä|À¶ÔÂ¸´¹Å¡¤µÀ´ø|À¶ÔÂ¸´¹Å¡¤µÀÑ¥| 100 0 0 0 0 N2 0
+; TakeBagItem À¶ÔÂ¸´¹Å¡¤ÉñÕ¶|À¶ÔÂ¸´¹Å¡¤Ä§ÕÈ|À¶ÔÂ¸´¹Å¡¤µÀÈÐ|À¶ÔÂ¸´¹Å¡¤Õ½¼×|À¶ÔÂ¸´¹Å¡¤Õ½ÒÂ|À¶ÔÂ¸´¹Å¡¤Ä§ÅÛ|À¶ÔÂ¸´¹Å¡¤Ä§ÒÂ|À¶ÔÂ¸´¹Å¡¤µÀÅÛ|À¶ÔÂ¸´¹Å¡¤µÀÒÂ|| 100 0 0 0 0 N1 0
+; TakeBagItem À¶ÔÂ¸´¹Å¡¤Õ½¿ø|À¶ÔÂ¸´¹Å¡¤Õ½Á´|À¶ÔÂ¸´¹Å¡¤Õ½ïí|À¶ÔÂ¸´¹Å¡¤Õ½½ä|À¶ÔÂ¸´¹Å¡¤Õ½´ø|À¶ÔÂ¸´¹Å¡¤Õ½Ñ¥|À¶ÔÂ¸´¹Å¡¤Ä§¿ø|À¶ÔÂ¸´¹Å¡¤Ä§Á´|À¶ÔÂ¸´¹Å¡¤Ä§ïí|À¶ÔÂ¸´¹Å¡¤Ä§½ä|À¶ÔÂ¸´¹Å¡¤Ä§´ø|À¶ÔÂ¸´¹Å¡¤Ä§Ñ¥|À¶ÔÂ¸´¹Å¡¤µÀ¿ø|À¶ÔÂ¸´¹Å¡¤µÀÁ´|À¶ÔÂ¸´¹Å¡¤µÀïí|À¶ÔÂ¸´¹Å¡¤µÀ½ä|À¶ÔÂ¸´¹Å¡¤µÀ´ø|À¶ÔÂ¸´¹Å¡¤µÀÑ¥| 100 0 0 0 0 N2 0
+
+TakeBagItem À¶ÔÂ¸´¹Å¡¤ÉñÕ¶|À¶ÔÂ¸´¹Å¡¤Ä§ÕÈ|À¶ÔÂ¸´¹Å¡¤µÀÈÐ|À¶ÔÂ¸´¹Å¡¤Õ½¼×|À¶ÔÂ¸´¹Å¡¤Õ½ÒÂ|À¶ÔÂ¸´¹Å¡¤Ä§ÅÛ|À¶ÔÂ¸´¹Å¡¤Ä§ÒÂ|À¶ÔÂ¸´¹Å¡¤µÀÅÛ|À¶ÔÂ¸´¹Å¡¤µÀÒÂ| 100 N1 0
+TakeBagItem À¶ÔÂ¸´¹Å¡¤Õ½¿ø|À¶ÔÂ¸´¹Å¡¤Õ½Á´|À¶ÔÂ¸´¹Å¡¤Õ½ïí|À¶ÔÂ¸´¹Å¡¤Õ½½ä|À¶ÔÂ¸´¹Å¡¤Õ½´ø|À¶ÔÂ¸´¹Å¡¤Õ½Ñ¥|À¶ÔÂ¸´¹Å¡¤Ä§¿ø|À¶ÔÂ¸´¹Å¡¤Ä§Á´|À¶ÔÂ¸´¹Å¡¤Ä§ïí|À¶ÔÂ¸´¹Å¡¤Ä§½ä|À¶ÔÂ¸´¹Å¡¤Ä§´ø|À¶ÔÂ¸´¹Å¡¤Ä§Ñ¥|À¶ÔÂ¸´¹Å¡¤µÀ¿ø|À¶ÔÂ¸´¹Å¡¤µÀÁ´|À¶ÔÂ¸´¹Å¡¤µÀïí|À¶ÔÂ¸´¹Å¡¤µÀ½ä|À¶ÔÂ¸´¹Å¡¤µÀ´ø|À¶ÔÂ¸´¹Å¡¤µÀÑ¥| 100 N2 0
+
 MUL N1 3
 MUL N2 1
 INC N$Èý¼¶·Ö½â²ÄÁÏ <$STR(N1)>
@@ -764,8 +842,12 @@ BREAK
 MOV N1 0
 MOV N2 0
 MOV N$¶þ¼¶·Ö½â²ÄÁÏ 0
-TakeBagItem ÎÞË«¡¤Éñ½£|ÎÞË«¡¤Õ½¼×|ÎÞË«¡¤Õ½ÒÂ|ÎÞË«¡¤Ä§ÕÈ|ÎÞË«¡¤Ä§ÅÛ|ÎÞË«¡¤Ä§ÒÂ|ÎÞË«¡¤µÀÉÈ|ÎÞË«¡¤µÀÅÛ|ÎÞË«¡¤µÀÒÂ|| 100 0 0 0 0 N1 0
-TakeBagItem ÎÞË«¡¤Õ½¿ø|ÎÞË«¡¤Õ½Á´|ÎÞË«¡¤Õ½ïí|ÎÞË«¡¤Õ½½ä|ÎÞË«¡¤Õ½´ø|ÎÞË«¡¤Õ½Ñ¥|ÎÞË«¡¤Ä§¿ø|ÎÞË«¡¤Ä§Á´|ÎÞË«¡¤Ä§ïí|ÎÞË«¡¤Ä§½ä|ÎÞË«¡¤Ä§´ø|ÎÞË«¡¤Ä§Ñ¥|ÎÞË«¡¤µÀ¿ø|ÎÞË«¡¤µÀÁ´|ÎÞË«¡¤µÀïí|ÎÞË«¡¤µÀ½ä|ÎÞË«¡¤µÀ´ø|ÎÞË«¡¤µÀÑ¥| 100 0 0 0 0 N2 0
+; TakeBagItem ÎÞË«¡¤Éñ½£|ÎÞË«¡¤Õ½¼×|ÎÞË«¡¤Õ½ÒÂ|ÎÞË«¡¤Ä§ÕÈ|ÎÞË«¡¤Ä§ÅÛ|ÎÞË«¡¤Ä§ÒÂ|ÎÞË«¡¤µÀÉÈ|ÎÞË«¡¤µÀÅÛ|ÎÞË«¡¤µÀÒÂ|| 100 0 0 0 0 N1 0
+; TakeBagItem ÎÞË«¡¤Õ½¿ø|ÎÞË«¡¤Õ½Á´|ÎÞË«¡¤Õ½ïí|ÎÞË«¡¤Õ½½ä|ÎÞË«¡¤Õ½´ø|ÎÞË«¡¤Õ½Ñ¥|ÎÞË«¡¤Ä§¿ø|ÎÞË«¡¤Ä§Á´|ÎÞË«¡¤Ä§ïí|ÎÞË«¡¤Ä§½ä|ÎÞË«¡¤Ä§´ø|ÎÞË«¡¤Ä§Ñ¥|ÎÞË«¡¤µÀ¿ø|ÎÞË«¡¤µÀÁ´|ÎÞË«¡¤µÀïí|ÎÞË«¡¤µÀ½ä|ÎÞË«¡¤µÀ´ø|ÎÞË«¡¤µÀÑ¥| 100 0 0 0 0 N2 0
+
+TakeBagItem ÎÞË«¡¤Éñ½£|ÎÞË«¡¤Õ½¼×|ÎÞË«¡¤Õ½ÒÂ|ÎÞË«¡¤Ä§ÕÈ|ÎÞË«¡¤Ä§ÅÛ|ÎÞË«¡¤Ä§ÒÂ|ÎÞË«¡¤µÀÉÈ|ÎÞË«¡¤µÀÅÛ|ÎÞË«¡¤µÀÒÂ| 100 N1 0
+TakeBagItem ÎÞË«¡¤Õ½¿ø|ÎÞË«¡¤Õ½Á´|ÎÞË«¡¤Õ½ïí|ÎÞË«¡¤Õ½½ä|ÎÞË«¡¤Õ½´ø|ÎÞË«¡¤Õ½Ñ¥|ÎÞË«¡¤Ä§¿ø|ÎÞË«¡¤Ä§Á´|ÎÞË«¡¤Ä§ïí|ÎÞË«¡¤Ä§½ä|ÎÞË«¡¤Ä§´ø|ÎÞË«¡¤Ä§Ñ¥|ÎÞË«¡¤µÀ¿ø|ÎÞË«¡¤µÀÁ´|ÎÞË«¡¤µÀïí|ÎÞË«¡¤µÀ½ä|ÎÞË«¡¤µÀ´ø|ÎÞË«¡¤µÀÑ¥| 100 N2 0
+
 MUL N1 3
 MUL N2 1
 INC N$¶þ¼¶·Ö½â²ÄÁÏ <$STR(N1)>
@@ -799,11 +881,18 @@ BREAK
 
 #IF
 #ACT
+
+; sendmsg 0 111
+
 MOV N1 0
 MOV N2 0
 MOV N$Ò»¼¶·Ö½â²ÄÁÏ 0
-TakeBagItem ÍõÕß¡¤Éñ½£|ÍõÕß¡¤Ä§ÕÈ|ÍõÕß¡¤µÀÉÈ|ÍõÕß¡¤Õ½¼×|ÍõÕß¡¤Õ½ÒÂ|ÍõÕß¡¤Ä§ÅÛ|ÍõÕß¡¤Ä§ÒÂ|ÍõÕß¡¤µÀÅÛ|ÍõÕß¡¤µÀÒÂ|| 100 0 0 0 0 N1 0
-TakeBagItem ÍõÕß¡¤Õ½¿ø|ÍõÕß¡¤Õ½Á´|ÍõÕß¡¤Õ½ïí|ÍõÕß¡¤Õ½½ä|ÍõÕß¡¤Õ½´ø|ÍõÕß¡¤Õ½Ñ¥|ÍõÕß¡¤Ä§¿ø|ÍõÕß¡¤Ä§Á´|ÍõÕß¡¤Ä§ïí|ÍõÕß¡¤Ä§½ä|ÍõÕß¡¤Ä§´ø|ÍõÕß¡¤Ä§Ñ¥|ÍõÕß¡¤µÀ¿ø|ÍõÕß¡¤µÀÁ´|ÍõÕß¡¤µÀïí|ÍõÕß¡¤µÀ½ä|ÍõÕß¡¤µÀ´ø|ÍõÕß¡¤µÀÑ¥| 100 0 0 0 0 N2 0
+; TakeBagItem ÍõÕß¡¤Éñ½£|ÍõÕß¡¤Ä§ÕÈ|ÍõÕß¡¤µÀÉÈ|ÍõÕß¡¤Õ½¼×|ÍõÕß¡¤Õ½ÒÂ|ÍõÕß¡¤Ä§ÅÛ|ÍõÕß¡¤Ä§ÒÂ|ÍõÕß¡¤µÀÅÛ|ÍõÕß¡¤µÀÒÂ|| 100 0 0 0 0 N1 0
+; TakeBagItem ÍõÕß¡¤Õ½¿ø|ÍõÕß¡¤Õ½Á´|ÍõÕß¡¤Õ½ïí|ÍõÕß¡¤Õ½½ä|ÍõÕß¡¤Õ½´ø|ÍõÕß¡¤Õ½Ñ¥|ÍõÕß¡¤Ä§¿ø|ÍõÕß¡¤Ä§Á´|ÍõÕß¡¤Ä§ïí|ÍõÕß¡¤Ä§½ä|ÍõÕß¡¤Ä§´ø|ÍõÕß¡¤Ä§Ñ¥|ÍõÕß¡¤µÀ¿ø|ÍõÕß¡¤µÀÁ´|ÍõÕß¡¤µÀïí|ÍõÕß¡¤µÀ½ä|ÍõÕß¡¤µÀ´ø|ÍõÕß¡¤µÀÑ¥| 100 0 0 0 0 N2 0
+
+TakeBagItem ÍõÕß¡¤Éñ½£|ÍõÕß¡¤Ä§ÕÈ|ÍõÕß¡¤µÀÉÈ|ÍõÕß¡¤Õ½¼×|ÍõÕß¡¤Õ½ÒÂ|ÍõÕß¡¤Ä§ÅÛ|ÍõÕß¡¤Ä§ÒÂ|ÍõÕß¡¤µÀÅÛ|ÍõÕß¡¤µÀÒÂ| 100 N1 0
+TakeBagItem ÍõÕß¡¤Õ½¿ø|ÍõÕß¡¤Õ½Á´|ÍõÕß¡¤Õ½ïí|ÍõÕß¡¤Õ½½ä|ÍõÕß¡¤Õ½´ø|ÍõÕß¡¤Õ½Ñ¥|ÍõÕß¡¤Ä§¿ø|ÍõÕß¡¤Ä§Á´|ÍõÕß¡¤Ä§ïí|ÍõÕß¡¤Ä§½ä|ÍõÕß¡¤Ä§´ø|ÍõÕß¡¤Ä§Ñ¥|ÍõÕß¡¤µÀ¿ø|ÍõÕß¡¤µÀÁ´|ÍõÕß¡¤µÀïí|ÍõÕß¡¤µÀ½ä|ÍõÕß¡¤µÀ´ø|ÍõÕß¡¤µÀÑ¥| 100 N2 0
+
 MUL N1 3
 MUL N2 1
 INC N$Ò»¼¶·Ö½â²ÄÁÏ <$STR(N1)>
@@ -831,26 +920,59 @@ BREAK
 
 #IF
 #ACT
-TakeBagItem 5Ôª±¦ 60 5 0 0 0 N10 0
-TakeBagItem 10Ôª±¦ 60 10 0 0 0 N10 0
-TakeBagItem 20Ôª±¦ 60 20 0 0 0 N10 0
-TakeBagItem 50Ôª±¦ 60 50 0 0 0 N10 0
-TakeBagItem 100Ôª±¦ 60 100 0 0 0 N10 0
-TakeBagItem 500Ôª±¦ 60 500 0 0 0 N10 0
-TakeBagItem 1000Ôª±¦ 60 1000 0 0 0 N10 0
-TakeBagItem 5000Ôª±¦ 60 5000 0 0 0 N10 0
-TakeBagItem 10000Ôª±¦ 60 10000 0 0 0 N10 0
-TakeBagItem 50000Ôª±¦ 60 50000 0 0 0 N10 0
-TakeBagItem 100000Ôª±¦ 60 100000 0 0 0 N10 0
-TakeBagItem 200000Ôª±¦ 60 200000 0 0 0 N10 0
-TakeBagItem 500000Ôª±¦ 60 500000 0 0 0 N10 0
-TakeBagItem 100WÔª±¦ 60 1000000 0 0 0 N10 0
-TakeBagItem 200WÔª±¦ 60 2000000 0 0 0 N10 0
-TakeBagItem 500WÔª±¦ 60 5000000 0 0 0 N10 0
-TakeBagItem 1000WÔª±¦ 60 10000000 0 0 0 N10 0
+; TakeBagItem 5Ôª±¦ 60 5 0 0 0 N10 0
+; TakeBagItem 10Ôª±¦ 60 10 0 0 0 N10 0
+; TakeBagItem 20Ôª±¦ 60 20 0 0 0 N10 0
+; TakeBagItem 50Ôª±¦ 60 50 0 0 0 N10 0
+; TakeBagItem 100Ôª±¦ 60 100 0 0 0 N10 0
+; TakeBagItem 500Ôª±¦ 60 500 0 0 0 N10 0
+; TakeBagItem 1000Ôª±¦ 60 1000 0 0 0 N10 0
+; TakeBagItem 5000Ôª±¦ 60 5000 0 0 0 N10 0
+; TakeBagItem 10000Ôª±¦ 60 10000 0 0 0 N10 0
+; TakeBagItem 50000Ôª±¦ 60 50000 0 0 0 N10 0
+; TakeBagItem 100000Ôª±¦ 60 100000 0 0 0 N10 0
+; TakeBagItem 200000Ôª±¦ 60 200000 0 0 0 N10 0
+; TakeBagItem 500000Ôª±¦ 60 500000 0 0 0 N10 0
+; TakeBagItem 100WÔª±¦ 60 1000000 0 0 0 N10 0
+; TakeBagItem 200WÔª±¦ 60 2000000 0 0 0 N10 0
+; TakeBagItem 500WÔª±¦ 60 5000000 0 0 0 N10 0
+; TakeBagItem 1000WÔª±¦ 60 10000000 0 0 0 N10 0
 
 
-
+TakeBagItem 5Ôª±¦ 60 N10
+MONEY Ôª±¦ + <$formulation[<$STR(N10)>*5]>
+TakeBagItem 10Ôª±¦ 60 N10
+MONEY Ôª±¦ + <$formulation[<$STR(N10)>*10]>
+TakeBagItem 20Ôª±¦ 60 N10
+MONEY Ôª±¦ + <$formulation[<$STR(N10)>*20]>
+TakeBagItem 50Ôª±¦ 60 N10
+MONEY Ôª±¦ + <$formulation[<$STR(N10)>*50]>
+TakeBagItem 100Ôª±¦ 60 N10
+MONEY Ôª±¦ + <$formulation[<$STR(N10)>*100]>
+TakeBagItem 500Ôª±¦ 60 N10
+MONEY Ôª±¦ + <$formulation[<$STR(N10)>*500]>
+TakeBagItem 1000Ôª±¦ 60 N10
+MONEY Ôª±¦ + <$formulation[<$STR(N10)>*1000]>
+TakeBagItem 5000Ôª±¦ 60 N10
+MONEY Ôª±¦ + <$formulation[<$STR(N10)>*5000]>
+TakeBagItem 10000Ôª±¦ 60 N10
+MONEY Ôª±¦ + <$formulation[<$STR(N10)>*10000]>
+TakeBagItem 50000Ôª±¦ 60 N10
+MONEY Ôª±¦ + <$formulation[<$STR(N10)>*50000]>
+TakeBagItem 100000Ôª±¦ 60 N10
+MONEY Ôª±¦ + <$formulation[<$STR(N10)>*100000]>
+TakeBagItem 200000Ôª±¦ 60 N10
+MONEY Ôª±¦ + <$formulation[<$STR(N10)>*200000]>
+TakeBagItem 500000Ôª±¦ 60 N10
+MONEY Ôª±¦ + <$formulation[<$STR(N10)>*500000]>
+TakeBagItem 100WÔª±¦ 60 N10
+MONEY Ôª±¦ + <$formulation[<$STR(N10)>*1000000]>
+TakeBagItem 200WÔª±¦ 60 N10
+MONEY Ôª±¦ + <$formulation[<$STR(N10)>*2000000]>
+TakeBagItem 500WÔª±¦ 60 N10
+MONEY Ôª±¦ + <$formulation[<$STR(N10)>*5000000]>
+TakeBagItem 1000WÔª±¦ 60 N10
+MONEY Ôª±¦ + <$formulation[<$STR(N10)>*10000000]>
 
 #IF
 CHECKITEM 1µãÃþÓãÖµ 1

@@ -4,14 +4,20 @@
 #ACT
 
 
-getdbitemfieldvalue (初级)等级丹	Idx	N$等级丹Idx1
-getdbitemfieldvalue (中级)等级丹	Idx	N$等级丹Idx2
-getdbitemfieldvalue (高级)等级丹	Idx	N$等级丹Idx3
-MOV	S$等级丹展示1	 <ItemShow:<$Str(N$等级丹Idx1)>:0:0:-123:1>
-MOV	S$等级丹展示2	 <ItemShow:<$Str(N$等级丹Idx2)>:0:0:-203:1>
-MOV	S$等级丹展示3	 <ItemShow:<$Str(N$等级丹Idx3)>:0:0:-203:1>
+; getdbitemfieldvalue (初级)等级丹	Idx	N$等级丹Idx1
+; getdbitemfieldvalue (中级)等级丹	Idx	N$等级丹Idx2
+; getdbitemfieldvalue (高级)等级丹	Idx	N$等级丹Idx3
+; MOV	S$等级丹展示1	 <ItemShow:<$Str(N$等级丹Idx1)>:0:0:-123:1>
+; MOV	S$等级丹展示2	 <ItemShow:<$Str(N$等级丹Idx2)>:0:0:-203:1>
+; MOV	S$等级丹展示3	 <ItemShow:<$Str(N$等级丹Idx3)>:0:0:-203:1>
 
-close
+getdbitemfieldvalue 梦想神石 idx N$材料Idx1
+getdbitemfieldvalue 悟空宝石 idx N$材料Idx2
+getdbitemfieldvalue 天命宝盘 idx N$材料Idx3
+getdbitemfieldvalue 轮回竹叶 idx N$材料Idx4
+getdbitemfieldvalue 命运莲花 idx N$材料Idx5
+
+; close
 #say
 ; <>\ 
 ; <> <合成悟空宝石|251#合成条件^-^250#需要5个梦想神石=1个悟空宝石^-^161#包袱材料大于500合成100^-^161#包袱材料大于50合成10/@合成悟空宝石> <合成条件:/SCOLOR=250><需要5个梦想神石=1个悟空宝石/SCOLOR=254> \  \
@@ -21,32 +27,50 @@ close
 
 
 
-<Img|x=0.0|y=0.0|width=620|height=240|scale9t=10|scale9r=10|scale9l=10|scale9b=10|move=0|bg=1|img=public/bg_npc_01.png|reset=1>
-<Layout|x=597.0|y=2.0|width=80|height=80|link=@exit>
-<Button|x=619.0|y=1.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
-<Text|a=0|x=460.0|y=25.0|tipsx=10|tipsy=80|color=251|size=16|text=合成悟空宝石|link=@合成悟空宝石>
-<RText|a=0|x=150.0|y=25.0|tipsx=10|tipsy=80|color=250|size=16|text=合成条件:<需要5个梦想神石=1个悟空宝石/FCOLOR=254>>
-<Text|a=0|x=32.0|y=25.0|tipsx=10|tipsy=80|color=254|size=16|text=悟空宝石>
-<Text|a=0|x=460.0|y=65.0|tipsx=10|tipsy=80|color=251|size=16|text=合成天命宝盘|link=@合成天命宝盘>
-<RText|a=0|x=150.0|y=65.0|tipsx=10|tipsy=80|color=250|size=16|text=合成条件:<需要4个悟空宝石=1个天命宝盘/FCOLOR=254>>
-<Text|a=0|x=32.0|y=65.0|tipsx=10|tipsy=80|color=254|size=16|text=天命宝盘>
-<Text|a=0|x=460.0|y=105.0|tipsx=10|tipsy=80|color=251|size=16|text=合成轮回竹叶|link=@合成轮回竹叶>
-<RText|a=0|x=150.0|y=105.0|tipsx=10|tipsy=80|color=250|size=16|text=合成条件:<需要3个天命宝盘=1个轮回竹叶/FCOLOR=254>>
-<Text|a=0|x=32.0|y=105.0|tipsx=10|tipsy=80|color=254|size=16|text=轮回竹叶>
-<Text|a=0|x=460.0|y=145.0|tipsx=10|tipsy=80|color=251|size=16|text=合成命运莲花|link=@合成命运莲花>
-<RText|a=0|x=150.0|y=145.0|tipsx=10|tipsy=80|color=250|size=16|text=合成条件:<需要2个轮回竹叶=1个命运莲花/FCOLOR=254>>
-<Text|a=0|x=32.0|y=145.0|tipsx=10|tipsy=80|color=254|size=16|text=命运莲花>
+; <Img|x=0.0|y=0.0|width=620|height=240|scale9t=10|scale9r=10|scale9l=10|scale9b=10|move=0|bg=1|img=public/bg_npc_01.png|reset=1>
+; <Layout|x=597.0|y=2.0|width=80|height=80|link=@exit>
+; <Button|x=619.0|y=1.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+; <Text|a=0|x=460.0|y=25.0|tipsx=10|tipsy=80|color=251|size=16|text=合成悟空宝石|link=@合成悟空宝石>
+; <RText|a=0|x=150.0|y=25.0|tipsx=10|tipsy=80|color=250|size=16|text=合成条件:<需要5个梦想神石=1个悟空宝石/FCOLOR=254>>
+; <Text|a=0|x=32.0|y=25.0|tipsx=10|tipsy=80|color=254|size=16|text=悟空宝石>
+; <Text|a=0|x=460.0|y=65.0|tipsx=10|tipsy=80|color=251|size=16|text=合成天命宝盘|link=@合成天命宝盘>
+; <RText|a=0|x=150.0|y=65.0|tipsx=10|tipsy=80|color=250|size=16|text=合成条件:<需要4个悟空宝石=1个天命宝盘/FCOLOR=254>>
+; <Text|a=0|x=32.0|y=65.0|tipsx=10|tipsy=80|color=254|size=16|text=天命宝盘>
+; <Text|a=0|x=460.0|y=105.0|tipsx=10|tipsy=80|color=251|size=16|text=合成轮回竹叶|link=@合成轮回竹叶>
+; <RText|a=0|x=150.0|y=105.0|tipsx=10|tipsy=80|color=250|size=16|text=合成条件:<需要3个天命宝盘=1个轮回竹叶/FCOLOR=254>>
+; <Text|a=0|x=32.0|y=105.0|tipsx=10|tipsy=80|color=254|size=16|text=轮回竹叶>
+; <Text|a=0|x=460.0|y=145.0|tipsx=10|tipsy=80|color=251|size=16|text=合成命运莲花|link=@合成命运莲花>
+; <RText|a=0|x=150.0|y=145.0|tipsx=10|tipsy=80|color=250|size=16|text=合成条件:<需要2个轮回竹叶=1个命运莲花/FCOLOR=254>>
+; <Text|a=0|x=32.0|y=145.0|tipsx=10|tipsy=80|color=254|size=16|text=命运莲花>
 
 
 
-
-
-
-
-;<>         <购买悟空宝石|249#购买价格^-^250#10大米*1个/@@InPutInteger32(注意：10大米=1个悟空宝石，请输入购买数量，1-1000数值之间)>
+;<>         <购买悟空宝石|249#购买价格^-^250#10灵符*1个/@@InPutInteger32(注意：10灵符=1个悟空宝石，请输入购买数量，1-1000数值之间)>
 
 ;<>\
 ;\     
+
+
+
+<Img|show=4|bg=1|loadDelay=1|move=0|esc=1|img=custom/hecheng/db17.png|reset=1>
+<Layout|x=719.0|y=-20.0|width=80|height=80|link=@exit>
+<Button|x=748.0|y=0.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|x=340.0|y=17.0|color=255|size=18|text=材料合成>
+<Text|x=332.0|y=129.0|color=251|size=22|text=材料合成>
+<RText|x=79.0|y=262|color=255|size=18|text=<合成悟空宝石：/FCOLOR=255><5个梦想神石=1个悟空宝石/FCOLOR=251>>
+<RText|x=79.0|y=287|color=255|size=18|text=<合成天命宝盘：/FCOLOR=255><4个悟空宝石=1个天命宝盘/FCOLOR=251>>
+<RText|x=79.0|y=312|color=255|size=18|text=<合成轮回竹叶：/FCOLOR=255><3个天命宝盘=1个轮回竹叶/FCOLOR=251>>
+<RText|x=79.0|y=337|color=255|size=18|text=<合成命运莲花：/FCOLOR=255><2个轮回竹叶=1个命运莲花/FCOLOR=251>>
+<ItemShow|x=482.0|y=230.0|width=70|height=70|itemid=<$STR(N$材料Idx1)>|itemcount=1|showtips=1|bgtype=1>
+<ItemShow|x=640.0|y=230.0|width=70|height=70|itemid=<$STR(N$材料Idx2)>|itemcount=1|showtips=1|bgtype=1>
+<ItemShow|x=515.0|y=290.0|width=70|height=70|itemid=<$STR(N$材料Idx3)>|itemcount=1|showtips=1|bgtype=1>
+<ItemShow|x=562.0|y=230.0|width=70|height=70|itemid=<$STR(N$材料Idx4)>|itemcount=1|showtips=1|bgtype=1>
+<ItemShow|x=600.0|y=290.0|width=70|height=70|itemid=<$STR(N$材料Idx5)>|itemcount=1|showtips=1|bgtype=1>
+<Button|x=100|y=415.0|nimg=custom/button/ann1.png|pimg=custom/button/ann2.png|size=16|color=250|text=合成悟空宝石|link=@合成悟空宝石>
+<Button|x=248|y=415.0|nimg=custom/button/ann1.png|pimg=custom/button/ann2.png|size=16|color=250|text=合成天命宝盘|link=@合成天命宝盘>
+<Button|x=396|y=415.0|nimg=custom/button/ann1.png|pimg=custom/button/ann2.png|size=16|color=250|text=合成轮回竹叶|link=@合成轮回竹叶>
+<Button|x=544|y=415.0|nimg=custom/button/ann1.png|pimg=custom/button/ann2.png|size=16|color=250|text=合成命运莲花|link=@合成命运莲花>
+<Text|x=79.0|y=229.0|color=250|size=18|text=合成条件：>
 
 
 
@@ -220,21 +244,21 @@ MUL N66 1
 
 
 #IF
-CHECKGAMEPOINT < <$STR(N65)>
+checkmoney 灵符 < <$STR(N65)>
 #ACT
-messagebox \\对不起，您包袱里的大米不够<$STR(N65)>，无法购买！！
+messagebox \\对不起，您包袱里的灵符不够<$STR(N65)>，无法购买！！
 BREAK
 
 
 
 
 #or
-CHECKGAMEPOINT > <$STR(N65)>
-CHECKGAMEPOINT = <$STR(N65)>
+checkmoney 灵符 > <$STR(N65)>
+checkmoney 灵符 = <$STR(N65)>
 #ACT
-GAMEPOINT - <$STR(N65)>
+MONEY 灵符 - <$STR(N65)>
 GiveStateItem <$Str(S$给材料)> 1 1 0 0 1 1 0 <$STR(N66)>
-MessageBox \\恭喜您，用<$STR(N65)>大米购买获得：(<$STR(N66)>)个<$Str(S$给材料)>
+MessageBox \\恭喜您，用<$STR(N65)>灵符购买获得：(<$STR(N66)>)个<$Str(S$给材料)>
 goto @main
 break
 
@@ -281,21 +305,21 @@ MUL N66 1
 
 
 #IF
-CHECKGAMEPOINT < <$STR(N65)>
+checkmoney 灵符 < <$STR(N65)>
 #ACT
-messagebox \\对不起，您包袱里的大米不够<$STR(N65)>，无法购买！！
+messagebox \\对不起，您包袱里的灵符不够<$STR(N65)>，无法购买！！
 BREAK
 
 
 
 
 #or
-CHECKGAMEPOINT > <$STR(N65)>
-CHECKGAMEPOINT = <$STR(N65)>
+checkmoney 灵符 > <$STR(N65)>
+checkmoney 灵符 = <$STR(N65)>
 #ACT
-GAMEPOINT - <$STR(N65)>
+MONEY 灵符 - <$STR(N65)>
 GiveStateItem <$Str(S$给材料)> 1 1 0 0 1 1 0 <$STR(N66)>
-MessageBox \\恭喜您，用<$STR(N65)>大米购买获得：(<$STR(N66)>)个<$Str(S$给材料)>
+MessageBox \\恭喜您，用<$STR(N65)>灵符购买获得：(<$STR(N66)>)个<$Str(S$给材料)>
 goto @main
 break
 
@@ -336,21 +360,21 @@ MUL N66 1
 
 
 #IF
-CHECKGAMEPOINT < <$STR(N65)>
+checkmoney 灵符 < <$STR(N65)>
 #ACT
-messagebox \\对不起，您包袱里的大米不够<$STR(N65)>，无法购买！！
+messagebox \\对不起，您包袱里的灵符不够<$STR(N65)>，无法购买！！
 BREAK
 
 
 
 
 #or
-CHECKGAMEPOINT > <$STR(N65)>
-CHECKGAMEPOINT = <$STR(N65)>
+checkmoney 灵符 > <$STR(N65)>
+checkmoney 灵符 = <$STR(N65)>
 #ACT
-GAMEPOINT - <$STR(N65)>
+MONEY 灵符 - <$STR(N65)>
 GiveStateItem <$Str(S$给材料)> 1 1 0 0 1 1 0 <$STR(N66)>
-MessageBox \\恭喜您，用<$STR(N65)>大米购买获得：(<$STR(N66)>)个<$Str(S$给材料)>
+MessageBox \\恭喜您，用<$STR(N65)>灵符购买获得：(<$STR(N66)>)个<$Str(S$给材料)>
 goto @main
 break
 

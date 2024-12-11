@@ -56,8 +56,8 @@ BREAK
 #IF
 CHECK [1] 1
 #ACT
-StartElf 1
-STARTPICKUP
+; StartElf 1
+; STARTPICKUP
 SENDMSG 6 自动捡物功能开启成功。
 MESSAGEBOX 恭喜您，自动捡物功能开启成功！
 #ELSEACT

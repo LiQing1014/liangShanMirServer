@@ -5,14 +5,14 @@
 
 #if
 #ACT
-MOV S$材料A1 魔法神石
+MOV S$材料A1 炫光神石
 MOV S$材料A2 2亿经验卷
 
 
 
 
 close
-getdbitemfieldvalue 魔法神石	Idx	N$材料Idx1
+getdbitemfieldvalue 炫光神石	Idx	N$材料Idx1
 getdbitemfieldvalue 2亿经验卷	Idx	N$材料Idx2
 getdbitemfieldvalue 2亿经验卷	Idx	N$材料Idx3
 
@@ -30,11 +30,11 @@ MOV S$设置数量1 <$STR(N28)>
 SetStringBlank S$设置数量1 7 1
 #Say
 ; \  \   
-; \  <大米兑换元宝|249#兑换比例：^-^250#1大米=2000元宝/@@InPutInteger51(请您输入大米兑换的数量，注意：1大米=2000元宝，1-100000数值之间)>  {兑换比例：/FCOLOR=161} {1大米=2000元宝/FCOLOR=161}            \ \
+; \  <灵符兑换元宝|249#兑换比例：^-^250#1灵符=2000元宝/@@InPutInteger51(请您输入灵符兑换的数量，注意：1灵符=2000元宝，1-100000数值之间)>  {兑换比例：/FCOLOR=161} {1灵符=2000元宝/FCOLOR=161}            \ \
                                      
 ; \  \ \ \  \ 
-; \          <购买魔法神石|249#购买价格^250#1点大米*1个/@@InPutInteger28(注意：1点大米=1个魔法神石，请输入大米数量，1-20000数值之间)>
-; <>       <购买2亿经验卷|249#购买价格^250#40点大米*1个/@@InPutInteger31(注意：40点大米=1个2亿经验卷，请输入购买数量，1-100数值之间)>      \ 
+; \          <购买炫光神石|249#购买价格^250#1点灵符*1个/@@InPutInteger28(注意：1点灵符=1个炫光神石，请输入灵符数量，1-20000数值之间)>
+; <>       <购买2亿经验卷|249#购买价格^250#40点灵符*1个/@@InPutInteger31(注意：40点灵符=1个2亿经验卷，请输入购买数量，1-100数值之间)>      \ 
 
 ; \  \ \                    \
 ; \                                               \ \ 
@@ -42,23 +42,44 @@ SetStringBlank S$设置数量1 7 1
 ; \<$STR(S$材料展示1)><$STR(S$材料展示3)>       \ \ \    \ 
 ; \                    \ \ \ \ 
 
-<Img|width=620|height=300|reset=1|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|scale9l=10>
-<Layout|x=597|y=3|width=80|height=80|link=@exit>
-<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
-<Text|a=0|x=31.0|y=57.0|tipsx=10|tipsy=80|color=251|size=16|text=大米兑换元宝>
-<Text|a=0|x=159.0|y=57.0|tipsx=10|tipsy=80|color=161|size=16|text=兑换比例：1大米=2000元宝>
-; <Text|a=0|x=269.0|y=57.0|tipsx=10|tipsy=80|color=161|size=16|text=1大米=2000元宝>
-<Text|a=0|x=32.0|y=116.0|tipsx=10|tipsy=80|color=251|size=16|text=购买魔法神石>
-<Text|a=0|x=159.0|y=116.0|tipsx=10|tipsy=80|color=161|size=16|text=购买比例：1大米=1个魔法神石>
-<Text|a=0|x=31.0|y=173.0|tipsx=10|tipsy=80|color=251|size=16|text=购买2亿经验卷>
-<Text|a=0|x=159.0|y=173.0|tipsx=10|tipsy=80|color=161|size=16|text=购买比例：40大米=1个2亿经验卷>
-<Input|x=406.0|y=55.0|width=100|height=25|color=255|type=0|size=16|inputid=1>
-<Input|x=409.0|y=116.0|width=100|height=25|color=255|type=0|size=16|inputid=2>
-<Input|x=406.0|y=172.0|width=100|height=25|color=255|type=0|size=16|inputid=3>
-<Button|x=524.0|y=50.0|color=250|size=16|nimg=public/1900000611.png|submitInput=1|text=兑换|link=@兑换元宝>
-<Button|x=524.0|y=116.0|color=250|size=16|nimg=public/1900000611.png|submitInput=2|text=购买|link=@购买魔法神石>
-<Button|x=524.0|y=172.0|color=250|size=16|nimg=public/1900000611.png|submitInput=3|text=购买|link=@购买经验券>
+; <Img|width=620|height=300|reset=1|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|scale9l=10>
+; <Layout|x=597|y=3|width=80|height=80|link=@exit>
+; <Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+; <Text|a=0|x=31.0|y=57.0|tipsx=10|tipsy=80|color=251|size=16|text=灵符兑换元宝>
+; <Text|a=0|x=159.0|y=57.0|tipsx=10|tipsy=80|color=161|size=16|text=兑换比例：1灵符=2000元宝>
+; <Text|a=0|x=32.0|y=116.0|tipsx=10|tipsy=80|color=251|size=16|text=购买炫光神石>
+; <Text|a=0|x=159.0|y=116.0|tipsx=10|tipsy=80|color=161|size=16|text=购买比例：1灵符=1个炫光神石>
+; <Text|a=0|x=31.0|y=173.0|tipsx=10|tipsy=80|color=251|size=16|text=购买2亿经验卷>
+; <Text|a=0|x=159.0|y=173.0|tipsx=10|tipsy=80|color=161|size=16|text=购买比例：40灵符=1个2亿经验卷>
+; <Input|x=406.0|y=55.0|width=100|height=25|color=255|type=0|size=16|inputid=1>
+; <Input|x=409.0|y=116.0|width=100|height=25|color=255|type=0|size=16|inputid=2>
+; <Input|x=406.0|y=172.0|width=100|height=25|color=255|type=0|size=16|inputid=3>
+; <Button|x=524.0|y=50.0|color=250|size=16|nimg=public/1900000611.png|submitInput=1|text=兑换|link=@兑换元宝>
+; <Button|x=524.0|y=116.0|color=250|size=16|nimg=public/1900000611.png|submitInput=2|text=购买|link=@购买炫光神石>
+; <Button|x=524.0|y=172.0|color=250|size=16|nimg=public/1900000611.png|submitInput=3|text=购买|link=@购买经验券>
 
+<Img|x=0.0|y=0.0|width=750|height=506|scale9r=10|show=4|scale9l=10|bg=1|move=0|reset=1|scale9b=10|esc=1|img=custom/hecheng/bx1.png|scale9t=10>
+<Layout|x=720.0|y=-19.0|width=80|height=80|link=@exit>
+<Button|x=748.0|y=0.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=381.0|y=117.0|tipsx=10|tipsy=80|outline=1|size=16|color=251|text=灵符兑换元宝>
+<Text|a=0|x=499.0|y=117.0|tipsx=10|tipsy=80|outline=1|size=16|color=161|text=兑换比例：1灵符=2000元宝>
+<Text|a=0|x=382.0|y=176.0|tipsx=10|tipsy=80|outline=1|size=16|color=251|text=购买炫光神石>
+<Text|a=0|x=499.0|y=176.0|tipsx=10|tipsy=80|outline=1|size=16|color=161|text=购买比例：1灵符=1个炫光神石>
+<Text|a=0|x=381.0|y=233.0|tipsx=10|tipsy=80|outline=1|size=16|color=251|text=购买2亿经验卷>
+<Text|a=0|x=499.0|y=233.0|tipsx=10|tipsy=80|outline=1|size=16|color=161|text=购买比例：40灵符=1个2亿经验卷>
+<Img|x=114.0|y=380.0|width=130|img=public/1900000668.png|esc=0>
+<Img|x=308.0|y=380.0|width=130|img=public/1900000668.png|esc=0>
+<Img|x=507.0|y=380.0|width=130|img=public/1900000668.png|esc=0>
+<Img|x=114.0|y=380.0|width=130|img=public/1900000668.png|esc=0>
+<Img|x=308.0|y=380.0|width=130|img=public/1900000668.png|esc=0>
+<Img|x=507.0|y=380.0|width=130|img=public/1900000668.png|esc=0>
+<Input|x=116.0|y=383.0|width=126|height=25|color=255|type=0|inputid=1|place=输入灵符数量|placecolor=251|size=16>
+<Input|x=310.0|y=383.0|width=126|height=25|color=255|type=0|inputid=2|place=输入炫光神石数量|placecolor=251|size=16>
+<Input|x=509.0|y=383.0|width=126|height=25|color=255|type=0|inputid=3|place=输入经验券数量|placecolor=251|size=16>
+<Button|x=122.0|y=440.0|pimg=custom/button/ann2.png|submitInput=1|nimg=custom/button/ann1.png|size=16|color=250|text=兑换元宝|link=@兑换元宝>
+<Button|x=316.0|y=443.0|pimg=custom/button/ann2.png|submitInput=2|nimg=custom/button/ann1.png|size=16|color=250|text=购买炫光神石|link=@购买炫光神石>
+<Button|x=515.0|y=444.0|pimg=custom/button/ann2.png|submitInput=3|nimg=custom/button/ann1.png|size=16|color=250|text=购买经验券|link=@购买经验券>
+<Text|x=345.0|y=15.0|color=255|size=18|text=货币兑换>
 
 
 [@清理包裹]
@@ -80,18 +101,18 @@ sendmsg 9 <font color='#00FF00'>请输入10000以内的数量</font>
 break
 
 #if
-checkgamepoint ? <$NPCINPUT(1)>
+checkmoney 灵符 ? <$NPCINPUT(1)>
 #elseact
-sendmsg 9 <font color='#00FF00'>大米不足[<$NPCINPUT(1)>]</font>
+sendmsg 9 <font color='#00FF00'>灵符不足[<$NPCINPUT(1)>]</font>
 break
 
 #if
 #act
 formulation <$NPCINPUT(1)>*2000 n$给元宝数
 money 元宝 + <$STR(n$给元宝数)>
-gamepoint - <$NPCINPUT(1)>
+MONEY 灵符 - <$NPCINPUT(1)>
 
-[@购买魔法神石]
+[@购买炫光神石]
 #or
 equal <$NPCINPUT(2)>
 large <$NPCINPUT(2)> 20000
@@ -100,15 +121,15 @@ sendmsg 9 <font color='#00FF00'>请输入20000以内的数量</font>
 break
 
 #if
-checkgamepoint ? <$NPCINPUT(2)>
+checkmoney 灵符 ? <$NPCINPUT(2)>
 #elseact
-sendmsg 9 <font color='#00FF00'>大米不足[<$NPCINPUT(2)>]</font>
+sendmsg 9 <font color='#00FF00'>灵符不足[<$NPCINPUT(2)>]</font>
 break
 
 #if
 #act
-give 魔法神石 <$NPCINPUT(2)>
-gamepoint - <$NPCINPUT(2)>
+give 炫光神石 <$NPCINPUT(2)>
+MONEY 灵符 - <$NPCINPUT(2)>
 
 [@购买经验券]
 #or
@@ -119,18 +140,18 @@ sendmsg 9 <font color='#00FF00'>请输入100以内的数量</font>
 break
 
 #if
-checkgamepoint ? <$NPCINPUT(3)>
+checkmoney 灵符 ? <$NPCINPUT(3)>
 #elseact
-sendmsg 9 <font color='#00FF00'>大米不足[<$NPCINPUT(3)>]</font>
+sendmsg 9 <font color='#00FF00'>灵符不足[<$NPCINPUT(3)>]</font>
 break
 
 #if
 #act
 
-formulation <$NPCINPUT(3)>*40 n$扣除大米数
+formulation <$NPCINPUT(3)>*40 n$扣除灵符数
 
 give 2亿经验卷 <$NPCINPUT(3)>
-gamepoint - <$STR(n$扣除大米数)>
+MONEY 灵符 - <$STR(n$扣除灵符数)>
 
 
 [@InPutInteger31]
@@ -172,21 +193,21 @@ MUL N66 1
 
 
 #IF
-CHECKGAMEPOINT < <$STR(N65)>
+checkmoney 灵符 < <$STR(N65)>
 #ACT
-messagebox \\对不起，您包袱里的大米不够<$STR(N65)>，无法购买！！
+messagebox \\对不起，您包袱里的灵符不够<$STR(N65)>，无法购买！！
 BREAK
 
 
 
 
 #or
-CHECKGAMEPOINT > <$STR(N65)>
-CHECKGAMEPOINT = <$STR(N65)>
+checkmoney 灵符 > <$STR(N65)>
+checkmoney 灵符 = <$STR(N65)>
 #ACT
-GAMEPOINT - <$STR(N65)>
+MONEY 灵符 - <$STR(N65)>
 GiveStateItem <$Str(S$给材料)> 1 1 0 0 1 1 0 <$STR(N66)>
-MessageBox \\恭喜您，用<$STR(N65)>大米购买获得：(<$STR(N66)>)个<$Str(S$给材料)>
+MessageBox \\恭喜您，用<$STR(N65)>灵符购买获得：(<$STR(N66)>)个<$Str(S$给材料)>
 goto @货币兑换
 break
 
@@ -247,7 +268,7 @@ break
 
 #IF
 #ACT
-MOV S$给材料 魔法神石
+MOV S$给材料 炫光神石
 MOV N65 <$STR(N28)>
 MUL N65 1
 MOV N66 <$STR(N28)>
@@ -255,21 +276,21 @@ MUL N66 1
 
 
 #IF
-CHECKGAMEPOINT < <$STR(N65)>
+checkmoney 灵符 < <$STR(N65)>
 #ACT
-messagebox \\对不起，您包袱里的大米不够<$STR(N65)>，无法购买！！
+messagebox \\对不起，您包袱里的灵符不够<$STR(N65)>，无法购买！！
 BREAK
 
 
 
 
 #or
-CHECKGAMEPOINT > <$STR(N65)>
-CHECKGAMEPOINT = <$STR(N65)>
+checkmoney 灵符 > <$STR(N65)>
+checkmoney 灵符 = <$STR(N65)>
 #ACT
-GAMEPOINT - <$STR(N65)>
+MONEY 灵符 - <$STR(N65)>
 GiveStateItem <$Str(S$给材料)> 1 1 0 0 1 1 0 <$STR(N66)>
-MessageBox \\恭喜您，用<$STR(N65)>大米购买获得：(<$STR(N66)>)个<$Str(S$给材料)>
+MessageBox \\恭喜您，用<$STR(N65)>灵符购买获得：(<$STR(N66)>)个<$Str(S$给材料)>
 goto @货币兑换
 break
 
@@ -298,24 +319,24 @@ MUL N74 1
 
 
 #IF
-CHECKGAMEPOINT < <$STR(N74)>
+checkmoney 灵符 < <$STR(N74)>
 #ACT
-MESSAGEBOX \\\您的大米不足<$STR(N74)>个
+MESSAGEBOX \\\您的灵符不足<$STR(N74)>个
 break
 
 
 
 #or
-CHECKGAMEPOINT = N74
-CHECKGAMEPOINT > N74
+checkmoney 灵符 = N74
+checkmoney 灵符 > N74
 #ACT
-GAMEPOINT -  <$STR(N74)>
+MONEY 灵符 -  <$STR(N74)>
 GAMEDIAMOND + <$STR(N73)>
-MessageBox \\恭喜您，用<$STR(N74)>大米兑换获得：<$STR(N73)>个点卷
+MessageBox \\恭喜您，用<$STR(N74)>灵符兑换获得：<$STR(N73)>个点卷
 goto @货币兑换
 break
 #elseact
-MessageBox \\兑换失败：\\1.请检查您的账号上是否有<$STR(N73)>个大米\\
+MessageBox \\兑换失败：\\1.请检查您的账号上是否有<$STR(N73)>个灵符\\
 break
 
 
@@ -400,24 +421,24 @@ MUL N74 1
 
 
 #IF
-CHECKGAMEPOINT < <$STR(N74)>
+checkmoney 灵符 < <$STR(N74)>
 #ACT
-MESSAGEBOX \\\您的大米不足<$STR(N74)>个
+MESSAGEBOX \\\您的灵符不足<$STR(N74)>个
 break
 
 
 
 #or
-CHECKGAMEPOINT = N74
-CHECKGAMEPOINT > N74
+checkmoney 灵符 = N74
+checkmoney 灵符 > N74
 #ACT
-GAMEPOINT -  <$STR(N74)>
+MONEY 灵符 -  <$STR(N74)>
 GAMEGOLD + <$STR(N73)>
-MessageBox \\恭喜您，用<$STR(N74)>大米兑换获得：<$STR(N73)>个元宝
+MessageBox \\恭喜您，用<$STR(N74)>灵符兑换获得：<$STR(N73)>个元宝
 goto @货币兑换
 break
 #elseact
-MessageBox \\兑换失败：\\1.请检查您的账号上是否有<$STR(N74)>点大米\\
+MessageBox \\兑换失败：\\1.请检查您的账号上是否有<$STR(N74)>点灵符\\
 break
 
 

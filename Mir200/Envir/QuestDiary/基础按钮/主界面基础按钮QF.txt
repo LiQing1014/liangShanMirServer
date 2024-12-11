@@ -4,6 +4,14 @@
 [@图标伸缩]
 #CALL [\基础按钮\顶部按钮.txt] @顶部按钮
 
+[@图鉴系统]
+#ACT
+; SENDCUSTMSG 10002 0
+calllua zhuangbeitujian @main
+
+[@B_功能]
+#Call [\宅男数据\综合服务.txt] @综合服务4
+
 [@B_回收]
 ; #CALL [\按钮功能\装备回收.txt] @装备回收
 #CALL [\游戏登陆\装备回收.txt] @开始回收 
@@ -141,11 +149,11 @@ OPENHYPERLINK 28
 OPENHYPERLINK 31
 
 [@S_拍卖行]
-#IF
-CHECKMONEY 游戏真充 ? 58
-#elseact
-sendmsg 9 提示：防止小号肆意泛滥,需要充值满58元才能使用拍卖行功能哦！
-break
+; #IF
+; CHECKMONEY 游戏真充 ? 58
+; #elseact
+; sendmsg 9 提示：防止小号肆意泛滥,需要充值满58元才能使用拍卖行功能哦！
+; break
 
 #IF
 #ACT
@@ -275,6 +283,21 @@ DELBUTTON 108 4
 
 
 [@开始挂机]
+
+#IF
+ISONMAP 0150
+ISONMAP H201
+ISONMAP 3
+#ACT
+MESSAGEBOX 当前地图禁止挂机
+break
+
+#IF
+CHECK [170] 0
+#ACT
+Messagebox	 开启失败：\　\您尚未激活[微信礼包]！
+BREAK
+#IF
 #ACT
 StartAutoPlayGame
 
@@ -294,16 +317,16 @@ MOV S$BTN_SZ -92
 Equal <$CLIENTFLAG> 2
 #ACT
 MOV N$GJ_DQ 1
-MOV S$挂机 <Button|id=111|x=-128|y=-380|nimg=private/main/Skill/1900012708.png|link=@停止挂机>
-INC S$挂机 <Effect|x=-133|y=-386|effecttype=0|effectid=70029|scale=1|speed=1>
+MOV S$挂机 <Button|id=111|x=-128|y=-380|nimg=private/main/Skill/1900012709.png|link=@停止挂机>
+; INC S$挂机 <Effect|x=-133|y=-386|effecttype=0|effectid=70029|scale=1|speed=1>
 DELBUTTON 104 10
 ADDBUTTON 104 10 <$STR(S$挂机)>
 MOV S$挂机B <Button|x=110|y=<$STR(S$BTN_SZ)>|nimg=private/main/auto_tips/bg_kjxl_03.png|link=@挂机_打开设置>
 ADDBUTTON 108 2 <$STR(S$挂机B)>
 #ELSEACT
 MOV N$GJ_DQ 1
-MOV S$挂机 <Button|id=111|x=-70|y=-340|nimg=private/main/Skill/1900012708.png|link=@停止挂机>
-INC S$挂机 <Effect|x=-74|y=-347|effecttype=0|effectid=70029|scale=1|speed=1>
+MOV S$挂机 <Button|id=111|x=-70|y=-340|nimg=private/main/Skill/1900012709.png|link=@停止挂机>
+; INC S$挂机 <Effect|x=-74|y=-347|effecttype=0|effectid=70029|scale=1|speed=1>
 DELBUTTON 104 10
 ADDBUTTON 104 10 <$STR(S$挂机)>
 MOV S$挂机B <Button|x=70|y=-232|nimg=private/main/auto_tips/bg_kjxl_03.png|link=@挂机_打开设置>
@@ -315,13 +338,13 @@ ADDBUTTON 108 2 <$STR(S$挂机B)>
 Equal <$CLIENTFLAG> 2
 #ACT
 MOV N$GJ_DQ 0
-MOV S$挂机 <Button|id=111|x=-128|y=-380|nimg=private/main/Skill/1900012709.png|link=@开始挂机>
+MOV S$挂机 <Button|id=111|x=-128|y=-380|nimg=private/main/Skill/1900012708.png|link=@开始挂机>
 DELBUTTON 104 10
 DELBUTTON 108 2
 ADDBUTTON 104 10 <$STR(S$挂机)>
 #ELSEACT
 MOV N$GJ_DQ 0
-MOV S$挂机 <Button|id=111|x=-70|y=-340|nimg=private/main/Skill/1900012709.png|link=@开始挂机>
+MOV S$挂机 <Button|id=111|x=-70|y=-340|nimg=private/main/Skill/1900012708.png|link=@开始挂机>
 DELBUTTON 104 10
 DELBUTTON 108 2
 ADDBUTTON 104 10 <$STR(S$挂机)>
@@ -334,9 +357,7 @@ BREAK
 [@OpenBottomUI]
 #ACT
 #CALL [\基础按钮\攻击模式.txt] @攻击模式
-MOV S$龙尾 <Img|children={1a,1b}|x=190|y=-140|img=private/main/9.png>
-; INC S$龙尾 <Img|id=1a|x=8|y=48|img=private/main/8.png>
-INC S$龙尾 <Button|id=1b|x=-31|y=51|pimg=private/main/Button_3/1900012059.png|color=255|nimg=private/main/Button_3/1900012058.png|link=@T_商城>
+MOV S$龙尾 <Button|x=-195|y=-60|pimg=private/main/Button_3/1900012059.png|color=255|nimg=private/main/Button_3/1900012058.png|link=@T_商城>
 ADDBUTTON 108 6 <$STR(S$龙尾)>
 ADDBUTTON 108 5 <Button|x=165|y=-120|pimg=custom/rt/ui/b2.png|color=255|nimg=custom/rt/ui/b1.png|link=@B_排行榜>
 ADDBUTTON 108 10 <Button|x=200|y=-105|pimg=custom/rt/ui/pb1.png|color=255|nimg=custom/rt/ui/pb0.png|link=@QF_屏蔽信息>

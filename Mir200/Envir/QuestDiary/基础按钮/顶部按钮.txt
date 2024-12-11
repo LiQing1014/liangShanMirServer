@@ -8,35 +8,37 @@ EQUAL N$T_收缩 1
 #ACT
 MOV N$T_收缩 0
 DELBUTTON 102 2
-MOV S$TOP图标 <Img|x=-150|y=5|img=custom/top/2.png|flip=1|link=@图标伸缩>
+MOV S$TOP图标 <Button|id=10|x=-220|y=5|nimg=custom/top/3.png|link=@图标伸缩>
 ADDBUTTON 102 2 <$STR(S$TOP图标)>
 BREAK
 
 #elseACT
 MOV N$T_收缩 1
-MOV S$TOP图标 <Button|id=10|x=-180|y=5|nimg=custom/top/2.png|link=@图标伸缩>
+MOV S$TOP图标 <Button|id=10|x=-220|y=5|nimg=custom/top/2.png|link=@图标伸缩>
 
-INC S$TOP图标 <Button|x=-270|y=8|nimg=custom/top/15.png|link=@T_盒子礼包>
+INC S$TOP图标 <Button|x=-300|y=8|nimg=custom/top/10.png|link=@T_盒子礼包>
 
-INC S$TOP图标 <Button|id=17|x=-350|y=8|nimg=custom/top/14.png|link=@T_交易行>
+INC S$TOP图标 <Button|id=top_jyh|x=-380|y=8|nimg=custom/top/11.png|link=@T_交易行>
 
-INC S$TOP图标 <Button|id=13|x=-430|y=8|nimg=custom/top/hbdh.png|link=@货币兑换>
+INC S$TOP图标 <Button|id=top_hbdh|x=-460|y=8|nimg=custom/top/12.png|link=@游戏攻略>
 
-INC S$TOP图标 <Button|id=12|x=-510|y=8|nimg=custom/top/hddt.png|link=@顶部_活动大厅>
+INC S$TOP图标 <Button|id=top_hddt|x=-540|y=8|nimg=custom/top/13.png|link=@在线充值>
 
-INC S$TOP图标 <Button|id=top_zb|x=-590|y=8|nimg=custom/top/xsjl.png|link=@首杀奖励>
+INC S$TOP图标 <Button|id=top_ssjl|x=-620|y=8|nimg=custom/top/14.png|link=@图鉴系统>
 
-INC S$TOP图标 <Button|id=top_xq|x=-670|y=8|nimg=custom/top/kbzl.png|link=@狂暴之力>
+INC S$TOP图标 <Button|id=top_xms|x=-700|y=8|nimg=custom/top/15.png|link=@顶部_小秘书>
 
-; INC S$TOP图标 <Button|id=top_gq|x=-830|y=8|nimg=custom/top/25.png|link=@国庆活动>
+INC S$TOP图标 <Button|id=top_fldt|x=-780|y=8|nimg=custom/top/16.png|link=@首充礼包>
+
+; INC S$TOP图标 <Button|id=top_gq|x=-830|y=8|nimg=custom/top/kbzl.png|link=@图鉴系统>
 
 ; INC S$TOP图标 <Button|id=top_qynn|x=-750|y=8|nimg=custom/top/112.png|link=@合区豪礼main>
 
-; INC S$TOP图标 <Button|id=18|x=-270|y=90|nimg=custom/top/20.png|link=@T_充值>
+INC S$TOP图标 <Button|id=18|x=-300|y=90|nimg=custom/top/17.png|link=@首杀奖励>
 
-; INC S$TOP图标 <Button|id=top_kb|x=-350|y=90|nimg=custom/top/19.png|link=@T_狂暴>
+INC S$TOP图标 <Button|id=top_kb|x=-380|y=90|nimg=custom/top/21.png|link=@顶部_唯一特权>
 
-; INC S$TOP图标 <Button|id=15|x=-430|y=90|nimg=custom/top/18.png|link=@T_助力>
+INC S$TOP图标 <Button|id=15|x=-460|y=90|nimg=custom/top/33.png|link=@顶部_开区豪礼>
 
 ; INC S$TOP图标 <Button|id=14|x=-510|y=90|nimg=custom/top/17.png|link=@T_赞助>
 
@@ -44,19 +46,22 @@ INC S$TOP图标 <Button|id=top_xq|x=-670|y=8|nimg=custom/top/kbzl.png|link=@狂暴之
 
 ; INC S$TOP图标 <Button|id=996kf_red|x=-670|y=90|nimg=public/996kf_red.png|link=@T_客服>
 
-
+; INC S$TOP图标 <Button|id=top_hbdh|x=-430|y=8|nimg=custom/top/hbdh.png|link=@货币兑换>
+; INC S$TOP图标 <Button|id=top_hddt|x=-510|y=8|nimg=custom/top/hddt.png|link=@顶部_活动大厅>
+; INC S$TOP图标 <Button|id=top_ssjl|x=-590|y=8|nimg=custom/top/xsjl.png|link=@首杀奖励>
+; INC S$TOP图标 <Button|id=top_kbzl|x=-670|y=8|nimg=custom/top/kbzl.png|link=@狂暴之力>
 #or
 large <$HFCOUNT> 0
 equal <$SERVERIDX> 1881
 #act
-INC S$TOP图标 <Button|id=top_qynn|x=-750|y=8|nimg=custom/top/112.png|link=@合区豪礼main>
+INC S$TOP图标 <Button|id=top_qynn|x=-540|y=90|nimg=custom/top/23.png|link=@合区豪礼main>
 
 ;------------------------------------------------------主播
 #or
 not large <$SERVERIDX> 1881
 CheckContainsTextListEx ..\QuestDiary\主播管理.txt <$USERACCOUNT>
 #act
-INC S$TOP图标 <Button|x=-750|y=90|nimg=custom/top/23.png|color=255|link=@主播豪礼发放>
+; INC S$TOP图标 <Button|x=-750|y=90|nimg=custom/top/23.png|color=255|link=@主播豪礼发放>
 
 #if
 #act

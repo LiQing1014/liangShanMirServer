@@ -1,6 +1,10 @@
 [@main]
 #IF
 #ACT
+getdbitemfieldvalue 轩辕战带 idx S$展示物品1ID
+getdbitemfieldvalue 轩辕战靴 idx S$展示物品2ID
+getdbitemfieldvalue 轩辕魔盔 idx S$展示物品3ID
+getdbitemfieldvalue 轩辕魔链 idx S$展示物品4ID
 close
 #say
 ; <               ★    黄    ★    花    ★   观/AUTOCOLOR=253,249,251,252>    　   \
@@ -13,20 +17,40 @@ close
 ; \                  <进入黄花观地图|249#进入条件：^-^250#1.人物等级达到74级^-^250#2.人物转生29转/@进入黄花观>             \ 
 
 
-<Img|width=530|height=250|reset=1|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|scale9l=10>
-<Layout|x=501.0|y=3.0|width=80|height=80|link=@exit>
-<Button|x=530.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
-<Text|a=0|x=18.0|y=18.0|tipsx=10|tipsy=80|color=253,249,251,252|size=16|text=★    黄    ★    花    ★   观>
-<Text|a=0|x=18.0|y=47.0|tipsx=10|tipsy=80|color=161|size=16|text=山环楼阁，溪绕亭台。门前杂树密森森，宅外野花香艳艳。柳间栖白鹭>
-<Text|a=0|x=18.0|y=71.0|tipsx=10|tipsy=80|color=161|size=16|text=浑如烟里玉无瑕；桃内啭黄鹂，却似火中金有色。>
-<Text|a=0|x=18.0|y=91.0|tipsx=10|tipsy=80|color=255,249,250,254|size=16|text=------------------------------------------------------------->
-<Text|a=0|x=18.0|y=111.0|tipsx=10|tipsy=80|color=250|size=16|text=主要怪物:>
-<Text|a=0|x=117.0|y=111.0|tipsx=10|tipsy=80|color=161|size=16|text=蜘蛛精、盘丝大仙、百眼魔君系列怪物>
-<Text|a=0|x=18.0|y=131.0|tipsx=10|tipsy=80|color=251|size=16|text=地图爆率:>
-<Text|a=0|x=117.0|y=131.0|tipsx=10|tipsy=80|color=22|size=16|text=武神、轩辕系列>
-<Text|a=0|x=18.0|y=151.0|tipsx=10|tipsy=80|color=249|size=16|text=进入条件:>
-<RText|a=0|x=117.0|y=151.0|tipsx=10|tipsy=80|color=254|size=16|text=74级 + <29转/FCOLOR=253>>
-<Text|a=0|x=18.0|y=211.0|tipsx=10|tipsy=80|color=251|size=16|text=进入花果山地图|link=@进入黄花观>
+; <Img|width=530|height=250|reset=1|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|scale9l=10>
+; <Layout|x=501.0|y=3.0|width=80|height=80|link=@exit>
+; <Button|x=530.0|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+; <Text|a=0|x=18.0|y=18.0|tipsx=10|tipsy=80|color=253,249,251,252|size=16|text=★    黄    ★    花    ★   观>
+; <Text|a=0|x=18.0|y=47.0|tipsx=10|tipsy=80|color=161|size=16|text=山环楼阁，溪绕亭台。门前杂树密森森，宅外野花香艳艳。柳间栖白鹭>
+; <Text|a=0|x=18.0|y=71.0|tipsx=10|tipsy=80|color=161|size=16|text=浑如烟里玉无瑕；桃内啭黄鹂，却似火中金有色。>
+; <Text|a=0|x=18.0|y=91.0|tipsx=10|tipsy=80|color=255,249,250,254|size=16|text=------------------------------------------------------------->
+; <Text|a=0|x=18.0|y=111.0|tipsx=10|tipsy=80|color=250|size=16|text=主要怪物:>
+; <Text|a=0|x=117.0|y=111.0|tipsx=10|tipsy=80|color=161|size=16|text=蜘蛛精、盘丝大仙、百眼魔君系列怪物>
+; <Text|a=0|x=18.0|y=131.0|tipsx=10|tipsy=80|color=251|size=16|text=地图爆率:>
+; <Text|a=0|x=117.0|y=131.0|tipsx=10|tipsy=80|color=22|size=16|text=武神、轩辕系列>
+; <Text|a=0|x=18.0|y=151.0|tipsx=10|tipsy=80|color=249|size=16|text=进入条件:>
+; <RText|a=0|x=117.0|y=151.0|tipsx=10|tipsy=80|color=254|size=16|text=74级 + <29转/FCOLOR=253>>
+; <Text|a=0|x=18.0|y=211.0|tipsx=10|tipsy=80|color=251|size=16|text=进入花果山地图|link=@进入黄花观>
+
+<Img|x=0.0|y=0.0|show=4|scale9r=10|scale9l=10|reset=1|bg=1|scale9b=10|move=0|scale9t=10|img=custom/xiatu/bjt1.png|esc=1>
+<Layout|x=746.0|y=-19.0|width=80|height=80|link=@exit>
+<Button|x=774.0|y=0.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=405.0|y=99.0|width=366|tipsx=10|tipsy=80|color=161|size=16|outline=1|text=山环楼阁，溪绕亭台。门前杂树密森森，宅外野花香艳艳。柳间栖白鹭,浑如烟里玉无瑕；桃内啭黄鹂，却似火中金有色。....>
+<Text|a=0|x=405.0|y=172.0|tipsx=10|tipsy=80|color=7|outline=1|size=16|text=主 要  怪 物:>
+<Text|a=0|x=500.0|y=172.0|tipsx=10|tipsy=80|outline=1|size=16|color=43|text=蜘蛛精、盘丝大仙、百眼魔君系列怪物>
+<Text|a=0|x=405.0|y=198.0|tipsx=10|tipsy=80|color=7|outline=1|size=16|text=地 图  爆 率:>
+<Text|a=0|x=500.0|y=198.0|tipsx=10|tipsy=80|outline=1|size=16|color=250|text=武神、轩辕系列>
+<Text|a=0|x=405.0|y=309.0|tipsx=10|tipsy=80|outline=1|size=16|color=7|text=进 入  条 件:>
+<RText|a=0|x=500.0|y=309.0|tipsx=10|tipsy=80|outline=1|size=16|color=254|text=74级 + <29转/FCOLOR=253>>
+<Button|x=521.0|y=385.0|nimg=custom/button/ann1.png|outline=1|pimg=custom/button/ann2.png|size=18|color=251|text=进入地图|link=@进入黄花观>
+<Img|x=27.0|y=61.0|width=345|height=250|scale9l=10|scale9b=10|img=uiminimap/003149.png|scale9r=10|scale9t=10|esc=0>
+<ItemShow|x=86|y=368.0|width=70|height=70|itemid=<$str(S$展示物品1ID)>|itemcount=1|showtips=1|bgtype=1>
+<ItemShow|x=228|y=368.0|width=70|height=70|itemid=<$str(S$展示物品2ID)>|itemcount=1|showtips=1|bgtype=1>
+<ItemShow|x=157|y=368.0|width=70|height=70|itemid=<$str(S$展示物品3ID)>|itemcount=1|showtips=1|bgtype=1>
+<ItemShow|x=299|y=368.0|width=70|height=70|itemid=<$str(S$展示物品4ID)>|itemcount=1|showtips=1|bgtype=1>
+<Text|a=4|x=385.0|y=26.0|outline=1|color=250|size=18|text=黄花观地图>
+
+
 
 [@进入黄花观]
 

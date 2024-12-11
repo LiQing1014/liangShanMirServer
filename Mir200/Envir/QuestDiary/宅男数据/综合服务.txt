@@ -5,15 +5,31 @@
 #ACT
 OPENMERCHANTBIGDLG 34 22 1 0 0 20 1 350 0
 #SAY
-<ImgEx:1:5:5:6:360:-16/@EXIT>\  \
-　<万事通/SCOLOR=19> <尊敬的玩家,您好。/SCOLOR=151> <〖欢迎使用综合服务〗/SCOLOR=87>\
-<---------------------------------------------------------/AUTOCOLOR=90>\ \ \ 
+; <ImgEx:1:5:5:6:360:-16/@EXIT>\  \
+; 　<万事通/SCOLOR=19> <尊敬的玩家,您好。/SCOLOR=151> <〖欢迎使用综合服务〗/SCOLOR=87>\
+; <---------------------------------------------------------/AUTOCOLOR=90>\ \ \ 
 
 
-<>      <武器幸运/@武器幸运>         <我想转职√/@转职>          <我要变性√/@性别变更> \ \ 
-<>               <消息屏蔽/@消息屏蔽>    \  
+; <>      <武器幸运/@武器幸运>         <我想转职√/@转职>          <我要变性√/@性别变更> \ \ 
+; <>               <消息屏蔽/@消息屏蔽>    \  
 
-<---------------------------------------------------------/AUTOCOLOR=90>\
+; <---------------------------------------------------------/AUTOCOLOR=90>\
+
+
+<Img|x=0.0|y=0.0|width=500|height=250|esc=1|scale9r=10|scale9t=10|scale9l=10|bg=1|move=0|img=public/bg_npc_04.jpg|reset=1|scale9b=10>
+<Layout|x=470.0|y=3.0|width=80|height=80|link=@exit>
+<Button|x=494.0|y=1.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=22.0|y=22.0|tipsx=10|tipsy=80|color=19|size=18|text=万事通>
+<Text|a=0|x=88.0|y=22.0|tipsx=10|tipsy=80|color=151|size=18|text=尊敬的玩家,您好。>
+<Text|a=0|x=275.0|y=22.0|tipsx=10|tipsy=80|color=87|size=18|text=〖欢迎使用综合服务〗>
+<Text|a=0|x=22.0|y=42.0|tipsx=10|tipsy=80|color=90|size=18|text=--------------------------------------------------------->
+<Text|a=0|x=22.0|y=82.0|tipsx=10|tipsy=80|color=251|size=18|text=武器幸运|link=@武器幸运>
+<Text|a=0|x=110.0|y=82.0|tipsx=10|tipsy=80|color=251|size=18|text=我想转职√|link=@转职>
+<Text|a=0|x=220.0|y=82.0|tipsx=10|tipsy=80|color=251|size=18|text=我要变性√|link=@性别变更>
+<Text|a=0|x=22.0|y=122.0|tipsx=10|tipsy=80|color=251|size=18|text=消息屏蔽|link=@消息屏蔽>
+<Text|a=0|x=22.0|y=162.0|tipsx=10|tipsy=80|color=90|size=18|text=--------------------------------------------------------->
+
+
 
 
 [@消息屏蔽]
@@ -42,15 +58,47 @@ MESSAGEBOX \　\　\[关闭]过滤全服提示信息
 #ACT
 close
 #say
-<><武器幸运+8/SCOLOR=100>　 <需要：元宝10万  50%成功/SCOLOR=160>  <失败不掉幸运/SCOLOR=250>   \ 
-<><武器幸运+9/SCOLOR=132> 　<需要：元宝10万  40%成功/SCOLOR=160>  <失败不掉幸运/SCOLOR=250>   \ 
-<><武器幸运+10/SCOLOR=150>　<需要：元宝10万  30%成功/SCOLOR=160>  <失败几率掉幸运/SCOLOR=249>   \ 
-<><武器幸运+11/SCOLOR=250>  <需要：元宝10万  20%成功/SCOLOR=160>  <失败几率掉幸运/SCOLOR=249>   \ 
-<><武器幸运+12/SCOLOR=253>　<需要：元宝10万  10%成功/SCOLOR=160>  <失败几率掉幸运/SCOLOR=249>   \ 
-<><武器幸运+13/SCOLOR=254>　<需要：元宝10万   5%成功/SCOLOR=160>  <失败几率掉幸运/SCOLOR=249> <直升运13|249#花费2888大米直接提升幸运13^-^250#提示：幸运+13自带1.20倍攻击/@直升运13>\ 
-<><幸运+11点触发/SCOLOR=230><1.05倍//SCOLOR=250>   <幸运+12点/SCOLOR=230><1.10倍/SCOLOR=253>  <幸运+13点/SCOLOR=230><1.20倍/SCOLOR=254>\ 
-\<本服运10触发最高伤害，超级祝福油最高+7幸运，运11以上触发倍攻/SCOLOR=12> 
-\                 <提升武器幸运/@提升武器幸运>                 <幸运转移|250#武器幸运13才能转移^-^255#幸运13永久免费转移/@幸运转移>
+; <><武器幸运+8/SCOLOR=100>　 <需要：元宝10万  50%成功/SCOLOR=160>  <失败不掉幸运/SCOLOR=250>   \ 
+; <><武器幸运+9/SCOLOR=132> 　<需要：元宝10万  40%成功/SCOLOR=160>  <失败不掉幸运/SCOLOR=250>   \ 
+; <><武器幸运+10/SCOLOR=150>　<需要：元宝10万  30%成功/SCOLOR=160>  <失败几率掉幸运/SCOLOR=249>   \ 
+; <><武器幸运+11/SCOLOR=250>  <需要：元宝10万  20%成功/SCOLOR=160>  <失败几率掉幸运/SCOLOR=249>   \ 
+; <><武器幸运+12/SCOLOR=253>　<需要：元宝10万  10%成功/SCOLOR=160>  <失败几率掉幸运/SCOLOR=249>   \ 
+; <><武器幸运+13/SCOLOR=254>　<需要：元宝10万   5%成功/SCOLOR=160>  <失败几率掉幸运/SCOLOR=249> <直升运13|249#花费2888灵符直接提升幸运13^-^250#提示：幸运+13自带1.20倍攻击/@直升运13>\ 
+; <><幸运+11点触发/SCOLOR=230><1.05倍//SCOLOR=250>   <幸运+12点/SCOLOR=230><1.10倍/SCOLOR=253>  <幸运+13点/SCOLOR=230><1.20倍/SCOLOR=254>\ 
+; \<本服运10触发最高伤害，超级祝福油最高+7幸运，运11以上触发倍攻/SCOLOR=12> 
+; \                 <提升武器幸运/@提升武器幸运>                 <幸运转移|250#武器幸运13才能转移^-^255#幸运13永久免费转移/@幸运转移>
+
+<Img|width=620|height=300|scale9t=10|scale9l=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|reset=1|esc=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=20.0|y=27.0|tipsx=10|tipsy=80|color=100|size=18|text=武器幸运+8>
+<Text|a=0|x=130.0|y=27.0|tipsx=10|tipsy=80|color=160|size=18|text=需要：元宝10万  50%成功>
+<Text|a=0|x=383.0|y=27.0|tipsx=10|tipsy=80|color=250|size=18|text=失败不掉幸运>
+<Text|a=0|x=20.0|y=47.0|tipsx=10|tipsy=80|color=132|size=18|text=武器幸运+9>
+<Text|a=0|x=130.0|y=47.0|tipsx=10|tipsy=80|color=160|size=18|text=需要：元宝10万  40%成功>
+<Text|a=0|x=383.0|y=47.0|tipsx=10|tipsy=80|color=250|size=18|text=失败不掉幸运>
+<Text|a=0|x=20.0|y=67.0|tipsx=10|tipsy=80|color=150|size=18|text=武器幸运+10>
+<Text|a=0|x=141.0|y=67.0|tipsx=10|tipsy=80|color=160|size=18|text=需要：元宝10万  30%成功>
+<Text|a=0|x=383.0|y=67.0|tipsx=10|tipsy=80|color=249|size=18|text=失败几率掉幸运>
+<Text|a=0|x=20.0|y=87.0|tipsx=10|tipsy=80|color=250|size=18|text=武器幸运+11>
+<Text|a=0|x=141.0|y=87.0|tipsx=10|tipsy=80|color=160|size=18|text=需要：元宝10万  20%成功>
+<Text|a=0|x=383.0|y=87.0|tipsx=10|tipsy=80|color=249|size=18|text=失败几率掉幸运>
+<Text|a=0|x=20.0|y=107.0|tipsx=10|tipsy=80|color=253|size=18|text=武器幸运+12>
+<Text|a=0|x=141.0|y=107.0|tipsx=10|tipsy=80|color=160|size=18|text=需要：元宝10万  10%成功>
+<Text|a=0|x=383.0|y=107.0|tipsx=10|tipsy=80|color=249|size=18|text=失败几率掉幸运>
+<Text|a=0|x=20.0|y=127.0|tipsx=10|tipsy=80|color=254|size=18|text=武器幸运+13>
+<Text|a=0|x=141.0|y=127.0|tipsx=10|tipsy=80|color=160|size=18|text=需要：元宝10万   5%成功>
+<Text|a=0|x=383.0|y=127.0|tipsx=10|tipsy=80|color=249|size=18|text=失败几率掉幸运>
+<Text|a=0|x=526.0|y=127.0|tipsx=10|tipsy=80|color=251|size=18|text=直升运13|link=@直升运13>
+<Text|a=0|x=20.0|y=156.0|tipsx=10|tipsy=80|color=230|size=18|text=幸运+11点触发>
+<Text|a=0|x=148.0|y=156.0|tipsx=10|tipsy=80|color=250|size=18|text=1.05倍>
+<Text|a=0|x=240.0|y=156.0|tipsx=10|tipsy=80|color=230|size=18|text=幸运+12点>
+<Text|a=0|x=328.0|y=156.0|tipsx=10|tipsy=80|color=253|size=18|text=1.10倍>
+<Text|a=0|x=418.0|y=156.0|tipsx=10|tipsy=80|color=230|size=18|text=幸运+13点>
+<Text|a=0|x=504.0|y=156.0|tipsx=10|tipsy=80|color=254|size=18|text=1.20倍>
+<Text|a=0|x=20.0|y=187.0|tipsx=10|tipsy=80|color=12|size=18|text=本服运10触发最高伤害，超级祝福油最高+7幸运，运11以上触发倍攻>
+<Text|a=0|x=20.0|y=220.0|tipsx=10|tipsy=80|color=251|size=18|text=提升武器幸运|link=@提升武器幸运>
+<Text|a=0|x=160.0|y=220.0|tipsx=10|tipsy=80|color=251|size=18|text=幸运转移|link=@幸运转移>
 
 
 
@@ -138,8 +186,8 @@ break
 
 
 #or
-CheckItemAddValue 1 3 = 13 
-CheckItemAddValue 1 3 > 12 
+CheckItemAddValue 1 5 = 13 
+CheckItemAddValue 1 5 > 12 
 #act 
 messagebox 对不起，您的武器已经是幸运+13了
 break
@@ -147,7 +195,7 @@ break
 
 
 #IF
-CheckItemAddValue 1 3 < 7
+CheckItemAddValue 1 5 < 7
 #act 
 messagebox 对不起，您没有幸运+7的武器
 break
@@ -160,18 +208,18 @@ MessageBox 对不起，请先将您的武器带上才能加幸运！！！
 break
 
 #IF
-CHECKGAMEPOINT < 2888
+checkmoney 灵符 < 2888
 #ACT
-MessageBox 对不起，您没有2888大米，无法提升！！！
+MessageBox 对不起，您没有2888灵符，无法提升！！！
 break
 
 
 #IF
-CHECKGAMEPOINT > 2887
+checkmoney 灵符 > 2887
 #ACT
-GAMEPOINT - 2888
+MONEY 灵符 - 2888
 sendmsg 0  恭喜玩家【%s】在幸运之家把自己的武器提升到了幸运+13
-CHANGEITEMADDVALUE 1 3 = 13
+CHANGEITEMADDVALUE 1 5 = 13
 SENDMSG 5 武器被加幸运了... 
 messagebox 恭喜你，武器成功提升到幸运+13了！！！
 #CALL [\游戏登陆\属性加成.txt] @属性设置
@@ -197,15 +245,15 @@ break
 
 
 #IF
-CheckItemAddValue 1 3 < 7
+CheckItemAddValue 1 5 < 7
 #act 
 messagebox 对不起，您没有幸运+7的武器
 break
 
 
 #or
-CheckItemAddValue 1 3 = 13 
-CheckItemAddValue 1 3 > 12 
+CheckItemAddValue 1 5 = 13 
+CheckItemAddValue 1 5 > 12 
 #act 
 messagebox 对不起，您的武器已经是幸运+13了
 break
@@ -218,11 +266,11 @@ break
 
 #if
 RANDOM 15
-CheckItemAddValue 1 3 = 12
+CheckItemAddValue 1 5 = 12
 #ACT
 GAMEGOLD - 100000
 sendmsg 0  恭喜玩家【%s】在幸运之家把自己的武器提升到了幸运+13
-CHANGEITEMADDVALUE 1 3 + 1
+CHANGEITEMADDVALUE 1 5 + 1
 SENDMSG 5 武器被加幸运了... 
 messagebox 恭喜你，武器成功提升到幸运+13了！！！
 #CALL [\游戏登陆\属性加成.txt] @属性设置
@@ -230,11 +278,11 @@ break
 
 #if
 RANDOM 5
-CheckItemAddValue 1 3 = 11
+CheckItemAddValue 1 5 = 11
 #ACT
 GAMEGOLD - 100000
 sendmsg 0  恭喜玩家【%s】在幸运之家把自己的武器提升到了幸运+12
-CHANGEITEMADDVALUE 1 3 + 1
+CHANGEITEMADDVALUE 1 5 + 1
 SENDMSG 5 武器被加幸运了... 
 messagebox 恭喜你，武器成功提升到幸运+12了！！！
 #CALL [\游戏登陆\属性加成.txt] @属性设置
@@ -242,11 +290,11 @@ break
 
 #if
 RANDOM 4
-CheckItemAddValue 1 3 = 10
+CheckItemAddValue 1 5 = 10
 #ACT
 GAMEGOLD - 100000
 sendmsg 0  恭喜玩家【%s】在幸运之家把自己的武器提升到了幸运+11
-CHANGEITEMADDVALUE 1 3 + 1
+CHANGEITEMADDVALUE 1 5 + 1
 SENDMSG 5 武器被加幸运了... 
 messagebox 恭喜你，武器成功提升到幸运+11了！！！
 #CALL [\游戏登陆\属性加成.txt] @属性设置
@@ -255,11 +303,11 @@ break
 
 #if
 RANDOM 2
-CheckItemAddValue 1 3 = 9
+CheckItemAddValue 1 5 = 9
 #ACT
 GAMEGOLD - 100000
 sendmsg 0  恭喜玩家【%s】在幸运之家把自己的武器提升到了幸运+10
-CHANGEITEMADDVALUE 1 3 + 1
+CHANGEITEMADDVALUE 1 5 + 1
 SENDMSG 5 武器被加幸运了... 
 messagebox 恭喜你，武器成功提升到幸运+10了！！！
 #CALL [\游戏登陆\属性加成.txt] @属性设置
@@ -267,11 +315,11 @@ break
 
 #if
 RANDOM 2
-CheckItemAddValue 1 3 = 8
+CheckItemAddValue 1 5 = 8
 #ACT
 GAMEGOLD - 100000
 sendmsg 0  恭喜玩家【%s】在幸运之家把自己的武器提升到了幸运+9
-CHANGEITEMADDVALUE 1 3 + 1
+CHANGEITEMADDVALUE 1 5 + 1
 SENDMSG 5 武器被加幸运了... 
 messagebox 恭喜你，武器成功提升到幸运+9了！！！
 break
@@ -279,21 +327,21 @@ break
 
 #if
 RANDOM 2
-CheckItemAddValue 1 3 = 7
+CheckItemAddValue 1 5 = 7
 #ACT
 GAMEGOLD - 100000
 sendmsg 0  恭喜玩家【%s】在幸运之家把自己的武器提升到了幸运+8
-CHANGEITEMADDVALUE 1 3 + 1
+CHANGEITEMADDVALUE 1 5 + 1
 SENDMSG 5 武器被加幸运了... 
 messagebox 恭喜你，武器成功提升到幸运+8了！！！
 break
 
 #if
-CheckItemAddValue 1 3 > 9
+CheckItemAddValue 1 5 > 9
 RANDOM 2
 #ACT
 GAMEGOLD - 100000
-CHANGEITEMADDVALUE 1 3 - 1
+CHANGEITEMADDVALUE 1 5 - 1
 SENDMSG 5 你的武器被诅咒了!!!
 messagebox 对不起，你的武器被诅咒幸运-1
 #CALL [\游戏登陆\属性加成.txt] @属性设置
@@ -318,26 +366,64 @@ break
 #IF
 gender man
 #SAY
-<变性服务/SCOLOR=168>   \
-<阴阳师/SCOLOR=19> <尊敬的玩家,您好。/SCOLOR=151> <〖欢迎使用变性服务〗/SCOLOR=87>\
-<--------------------------------------------------------------/AUTOCOLOR=90>\
-<是不是做男人没什么意思呀，想不想尝尝做女人的味道呀！！/SCOLOR=156>\
-<好了，辛亏上天冥怜有我这个人来帮你，不用担心，手术一眨眼就/SCOLOR=155>\
-<好了，你丝毫感觉不到疼痛的,那我们现在就开始吧。。。/SCOLOR=145>\
-<变性手术需要收费5000元宝的哦……/SCOLOR=147>\
-<--------------------------------------------------------------/AUTOCOLOR=90>\
-<√变成女的/@nvde>                                       <关闭对话×/@exit>\ 
-<--------------------------------------------------------------/AUTOCOLOR=90>\
+; <变性服务/SCOLOR=168>   \
+; <阴阳师/SCOLOR=19> <尊敬的玩家,您好。/SCOLOR=151> <〖欢迎使用变性服务〗/SCOLOR=87>\
+; <--------------------------------------------------------------/AUTOCOLOR=90>\
+; ??????<是不是做男人没什么意思呀，想不想尝尝做女人的味道呀！！/SCOLOR=156>\
+; <好了，辛亏上天冥怜有我这个人来帮你，不用担心，手术一眨眼就/SCOLOR=155>\
+; <好了，你丝毫感觉不到疼痛的,那我们现在就开始吧。。。/SCOLOR=145>\
+; <变性手术需要收费5000元宝的哦……/SCOLOR=147>\
+; <--------------------------------------------------------------/AUTOCOLOR=90>\
+; <√变成女的/@nvde>                                       <关闭对话×/@exit>\ 
+; <--------------------------------------------------------------/AUTOCOLOR=90>\
+
+<Img|width=620|height=300|reset=1|scale9l=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|esc=1|scale9t=10>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=18.0|y=19.0|tipsx=10|tipsy=80|color=168|size=18|text=变性服务>
+<Text|a=0|x=18.0|y=45.0|tipsx=10|tipsy=80|color=19|size=18|text=阴阳师>
+<Text|a=0|x=84.0|y=45.0|tipsx=10|tipsy=80|color=151|size=18|text=尊敬的玩家,您好。>
+<Text|a=0|x=271.0|y=45.0|tipsx=10|tipsy=80|color=87|size=18|text=〖欢迎使用变性服务〗>
+<Text|a=0|x=18.0|y=59.0|tipsx=10|tipsy=80|color=90|size=18|text=-------------------------------------------------------------->
+<Text|a=0|x=18.0|y=79|tipsx=10|tipsy=80|color=156|size=18|text=是不是做男人没什么意思呀，想不想尝尝做女人的味道呀！！>
+<Text|a=0|x=18.0|y=109|tipsx=10|tipsy=80|color=155|size=18|text=好了，辛亏上天冥怜有我这个人来帮你，不用担心，手术一眨眼就>
+<Text|a=0|x=18.0|y=139|tipsx=10|tipsy=80|color=145|size=18|text=好了，你丝毫感觉不到疼痛的,那我们现在就开始吧。。。>
+<Text|a=0|x=18.0|y=169|tipsx=10|tipsy=80|color=147|size=18|text=变性手术需要收费5000元宝的哦……>
+<Text|a=0|x=18.0|y=188.0|tipsx=10|tipsy=80|color=90|size=18|text=-------------------------------------------------------------->
+<Text|a=0|x=18.0|y=208.0|tipsx=10|tipsy=80|color=251|size=18|text=√变成女的|link=@nvde>
+<Text|a=0|x=128.0|y=208.0|tipsx=10|tipsy=80|color=251|size=18|text=关闭对话×|link=@exit>
+<Text|a=0|x=18.0|y=228.0|tipsx=10|tipsy=80|color=90|size=18|text=-------------------------------------------------------------->
+
+
+
 #ELSESAY
-<变性服务/SCOLOR=168>   \
-<阴阳师/SCOLOR=19> <尊敬的玩家,您好。/SCOLOR=151> <〖欢迎使用变性服务〗/SCOLOR=87>\
-<--------------------------------------------------------------/AUTOCOLOR=90>\
-<是不是做女人没什么意思呀，想不想尝尝做男人的味道呀！！/SCOLOR=156>\
-<好了，辛亏上天冥怜有我这个人来帮你，不用担心，手术一眨眼就/SCOLOR=155>\
-<好了，你丝毫感觉不到疼痛的,那我们现在就开始吧。。。/SCOLOR=145>\
-<变性手术需要收费5000元宝的哦……/SCOLOR=147>\
-<--------------------------------------------------------------/AUTOCOLOR=90>\
-<√变成男的/@nande>                                       <关闭对话×/@exit>\ 
+; <变性服务/SCOLOR=168>   \
+; <阴阳师/SCOLOR=19> <尊敬的玩家,您好。/SCOLOR=151> <〖欢迎使用变性服务〗/SCOLOR=87>\
+; <--------------------------------------------------------------/AUTOCOLOR=90>\
+; ??????<是不是做女人没什么意思呀，想不想尝尝做男人的味道呀！！/SCOLOR=156>\
+; <好了，辛亏上天冥怜有我这个人来帮你，不用担心，手术一眨眼就/SCOLOR=155>\
+; <好了，你丝毫感觉不到疼痛的,那我们现在就开始吧。。。/SCOLOR=145>\
+; <变性手术需要收费5000元宝的哦……/SCOLOR=147>\
+; <--------------------------------------------------------------/AUTOCOLOR=90>\
+; <√变成男的/@nande>                                       <关闭对话×/@exit>\ 
+
+<Img|width=620|height=300|reset=1|scale9l=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|esc=1|scale9t=10>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=18.0|y=19.0|tipsx=10|tipsy=80|color=168|size=18|text=变性服务>
+<Text|a=0|x=18.0|y=45.0|tipsx=10|tipsy=80|color=19|size=18|text=阴阳师>
+<Text|a=0|x=84.0|y=45.0|tipsx=10|tipsy=80|color=151|size=18|text=尊敬的玩家,您好。>
+<Text|a=0|x=271.0|y=45.0|tipsx=10|tipsy=80|color=87|size=18|text=〖欢迎使用变性服务〗>
+<Text|a=0|x=18.0|y=59.0|tipsx=10|tipsy=80|color=90|size=18|text=-------------------------------------------------------------->
+<Text|a=0|x=18.0|y=79|tipsx=10|tipsy=80|color=156|size=18|text=是不是做女人没什么意思呀，想不想尝尝做男人的味道呀！！>
+<Text|a=0|x=18.0|y=109|tipsx=10|tipsy=80|color=155|size=18|text=好了，辛亏上天冥怜有我这个人来帮你，不用担心，手术一眨眼就>
+<Text|a=0|x=18.0|y=139|tipsx=10|tipsy=80|color=145|size=18|text=好了，你丝毫感觉不到疼痛的,那我们现在就开始吧。。。>
+<Text|a=0|x=18.0|y=169|tipsx=10|tipsy=80|color=147|size=18|text=变性手术需要收费5000元宝的哦……>
+<Text|a=0|x=18.0|y=188.0|tipsx=10|tipsy=80|color=90|size=18|text=-------------------------------------------------------------->
+<Text|a=0|x=18.0|y=208.0|tipsx=10|tipsy=80|color=251|size=18|text=√变成男的|link=@nande>
+<Text|a=0|x=128.0|y=208.0|tipsx=10|tipsy=80|color=251|size=18|text=关闭对话×|link=@exit>
+<Text|a=0|x=18.0|y=228.0|tipsx=10|tipsy=80|color=90|size=18|text=-------------------------------------------------------------->
+
 
 [@nvde]
 #IF
@@ -371,27 +457,69 @@ CHECK [2] 1
 #ACT
 close
 #SAY
-<万事通/SCOLOR=19> <尊敬的玩家,您好。/SCOLOR=151> <〖欢迎使用转职服务〗/SCOLOR=87>\
-<〖转职服务〗/SCOLOR=89>：{[<$USERNAME>]/AUTOCOLOR=253}<您好！需要转职吗？/SCOLOR=254>\
-<--------------------------------------------------------------/SCOLOR=89>\
-<1、转职后保留你现有的级别，各项技能会全部删除，包括新技能！/SCOLOR=156>\
-<提示：/SCOLOR=242><转职以后各项技能会全部删除，包括新技能!/SCOLOR=249>\
-<2、目前转职需要支付5000元宝，才可顺利转职/SCOLOR=145>\
-<快去体验那完全不一样的职业给你带来的快感吧！/SCOLOR=147>\
-<--------------------------------------------------------------/SCOLOR=89>\
-　　  <√我要开始转职/@我确定转职>　　　　    　　  <√转职护体重练/@转职技能>　\
+; <万事通/SCOLOR=19> <尊敬的玩家,您好。/SCOLOR=151> <〖欢迎使用转职服务〗/SCOLOR=87>\
+; <〖转职服务〗/SCOLOR=89>：{[<$USERNAME>]/AUTOCOLOR=253}<您好！需要转职吗？/SCOLOR=254>\
+; <--------------------------------------------------------------/SCOLOR=89>\
+; <1、转职后保留你现有的级别，各项技能会全部删除，包括新技能！/SCOLOR=156>\
+; <提示：/SCOLOR=242><转职以后各项技能会全部删除，包括新技能!/SCOLOR=249>\
+; <2、目前转职需要支付5000元宝，才可顺利转职/SCOLOR=145>\
+; <快去体验那完全不一样的职业给你带来的快感吧！/SCOLOR=147>\
+; <--------------------------------------------------------------/SCOLOR=89>\
+; 　　??  <√我要开始转职/@我确定转职>　　　　    　　  <√转职护体重练/@转职技能>　\
+
+<Img|width=620|height=300|reset=1|scale9l=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|esc=1|scale9t=10>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=20.0|y=21.0|tipsx=10|tipsy=80|color=19|size=18|text=万事通>
+<Text|a=0|x=86.0|y=21.0|tipsx=10|tipsy=80|color=151|size=18|text=尊敬的玩家,您好。>
+<Text|a=0|x=273.0|y=21.0|tipsx=10|tipsy=80|color=87|size=18|text=〖欢迎使用转职服务〗>
+<Text|a=0|x=20.0|y=45.0|tipsx=10|tipsy=80|color=89|size=18|text=〖转职服务〗>
+<Text|a=0|x=127.0|y=45.0|tipsx=10|tipsy=80|color=255|size=18|text=：>
+<Text|a=0|x=272.0|y=45.0|tipsx=10|tipsy=80|color=254|size=18|text=您好！需要转职吗？>
+<Text|a=0|x=20.0|y=61.0|tipsx=10|tipsy=80|color=89|size=18|text=-------------------------------------------------------------->
+<Text|a=0|x=20.0|y=83.0|tipsx=10|tipsy=80|color=156|size=18|text=1、转职后保留你现有的级别，各项技能会全部删除，包括新技能！>
+<Text|a=0|x=20.0|y=110.0|tipsx=10|tipsy=80|color=242|size=18|text=提示：>
+<Text|a=0|x=86.0|y=110.0|tipsx=10|tipsy=80|color=249|size=18|text=转职以后各项技能会全部删除，包括新技能!>
+<Text|a=0|x=20.0|y=137.0|tipsx=10|tipsy=80|color=145|size=18|text=2、目前转职需要支付5000元宝，才可顺利转职>
+<Text|a=0|x=20.0|y=163.0|tipsx=10|tipsy=80|color=147|size=18|text=快去体验那完全不一样的职业给你带来的快感吧！>
+<Text|a=0|x=20.0|y=180.0|tipsx=10|tipsy=80|color=89|size=18|text=-------------------------------------------------------------->
+<Text|a=0|x=42.0|y=210.0|tipsx=10|tipsy=80|color=251|size=18|text=√我要开始转职|link=@我确定转职>
+<Text|a=0|x=196.0|y=210.0|tipsx=10|tipsy=80|color=251|size=18|text=√转职护体重练|link=@转职技能>
+<Text|a=4|x=205.0|y=58.0|color=250|size=18|text=<$USERNAME>>
+
+
+
 #elseACT
 close
 #elsesay
-<万事通/SCOLOR=19> <尊敬的玩家,您好。/SCOLOR=151> <〖欢迎使用转职服务〗/SCOLOR=87>\
-<〖转职服务〗/SCOLOR=89>：{[<$USERNAME>]/AUTOCOLOR=253}<您好！需要转职吗？/SCOLOR=254>\
-<--------------------------------------------------------------/SCOLOR=89>\
-<1、转职后保留你现有的级别，各项技能会全部删除，包括新技能！/SCOLOR=156>\
-<提示：/SCOLOR=242><转职以后各项技能会全部删除，包括新技能!/SCOLOR=249>\
-<2、目前转职需要支付5000元宝，才可顺利转职/SCOLOR=145>\
-<快去体验那完全不一样的职业给你带来的快感吧！/SCOLOR=147>\
-<--------------------------------------------------------------/SCOLOR=89>\
-　　<√确定转职/@我确定转职>　　　　　　　      　    <关闭对话×/@EXIT>　\
+; <万事通/SCOLOR=19> <尊敬的玩家,您好。/SCOLOR=151> <〖欢迎使用转职服务〗/SCOLOR=87>\
+; <〖转职服务〗/SCOLOR=89>：{[<$USERNAME>]/AUTOCOLOR=253}<您好！需要转职吗？/SCOLOR=254>\
+; <--------------------------------------------------------------/SCOLOR=89>\
+; <1、转职后保留你现有的级别，各项技能会全部删除，包括新技能！/SCOLOR=156>\
+; <提示：/SCOLOR=242><转职以后各项技能会全部删除，包括新技能!/SCOLOR=249>\
+; <2、目前转职需要支付5000元宝，才可顺利转职/SCOLOR=145>\
+; <快去体验那完全不一样的职业给你带来的快感吧！/SCOLOR=147>\
+; <--------------------------------------------------------------/SCOLOR=89>\
+; 　　????<√确定转职/@我确定转职>　　　　　　　      　    <关闭对话×/@EXIT>　\
+<Img|width=620|height=300|reset=1|scale9l=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|esc=1|scale9t=10>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=20.0|y=21.0|tipsx=10|tipsy=80|color=19|size=18|text=万事通>
+<Text|a=0|x=86.0|y=21.0|tipsx=10|tipsy=80|color=151|size=18|text=尊敬的玩家,您好。>
+<Text|a=0|x=273.0|y=21.0|tipsx=10|tipsy=80|color=87|size=18|text=〖欢迎使用转职服务〗>
+<Text|a=0|x=20.0|y=45.0|tipsx=10|tipsy=80|color=89|size=18|text=〖转职服务〗>
+<Text|a=0|x=127.0|y=45.0|tipsx=10|tipsy=80|color=255|size=18|text=：>
+<Text|a=0|x=272.0|y=45.0|tipsx=10|tipsy=80|color=254|size=18|text=您好！需要转职吗？>
+<Text|a=0|x=20.0|y=61.0|tipsx=10|tipsy=80|color=89|size=18|text=-------------------------------------------------------------->
+<Text|a=0|x=20.0|y=83.0|tipsx=10|tipsy=80|color=156|size=18|text=1、转职后保留你现有的级别，各项技能会全部删除，包括新技能！>
+<Text|a=0|x=20.0|y=110.0|tipsx=10|tipsy=80|color=242|size=18|text=提示：>
+<Text|a=0|x=86.0|y=110.0|tipsx=10|tipsy=80|color=249|size=18|text=转职以后各项技能会全部删除，包括新技能!>
+<Text|a=0|x=20.0|y=137.0|tipsx=10|tipsy=80|color=145|size=18|text=2、目前转职需要支付5000元宝，才可顺利转职>
+<Text|a=0|x=20.0|y=163.0|tipsx=10|tipsy=80|color=147|size=18|text=快去体验那完全不一样的职业给你带来的快感吧！>
+<Text|a=0|x=20.0|y=180.0|tipsx=10|tipsy=80|color=89|size=18|text=-------------------------------------------------------------->
+<Text|a=0|x=42.0|y=210.0|tipsx=10|tipsy=80|color=251|size=18|text=√我要开始转职|link=@我确定转职>
+; <Text|a=0|x=196.0|y=210.0|tipsx=10|tipsy=80|color=251|size=18|text=√转职护体重练|link=@转职技能>
+<Text|a=4|x=205.0|y=58.0|color=250|size=18|text=<$USERNAME>>
 
 
 [@转职技能]
@@ -399,53 +527,124 @@ close
 #ACT
 close
 #SAY
-<万事通/SCOLOR=19> <尊敬的玩家,您好。/SCOLOR=151> <〖欢迎使用技能重练服务〗/SCOLOR=87>\
-<〖技能重练〗/SCOLOR=89>：{[<$USERNAME>]/AUTOCOLOR=253}<您好！需要重新修炼神技吗？/SCOLOR=254>\
-<--------------------------------------------------------------/SCOLOR=89>\
-<1、转职后保留你现有的级别，各项技能会全部删除，包括新技能！/SCOLOR=156>\
-<提示：/SCOLOR=242><转职以后各项技能会全部删除，包括新技能!/SCOLOR=249>\ \
-<2、已经学习过护体神盾的玩家，转职后可重新修炼护体神盾技能！/SCOLOR=253>\
-<--------------------------------------------------------------/SCOLOR=89>\
-　　<√开始修炼护体神盾/@修炼护体神盾>　　　　　　　      　    <关闭对话×/@EXIT>　\
+; <万事通/SCOLOR=19> <尊敬的玩家,您好。/SCOLOR=151> <〖欢迎使用技能重练服务〗/SCOLOR=87>\
+; <〖技能重练〗/SCOLOR=89>：{[<$USERNAME>]/AUTOCOLOR=253}<您好！需要重新修炼神技吗？/SCOLOR=254>\
+; <--------------------------------------------------------------/SCOLOR=89>\
+; <1、转职后保留你现有的级别，各项技能会全部删除，包括新技能！/SCOLOR=156>\
+; <提示：/SCOLOR=242><转职以后各项技能会全部删除，包括新技能!/SCOLOR=249>\ \
+; <2、已经学习过护体神盾的玩家，转职后可重新修炼护体神盾技能！/SCOLOR=253>\
+; <--------------------------------------------------------------/SCOLOR=89>\
+; <√开始修炼护体神盾/@修炼护体神盾>　　　　　　　      　    <关闭对话×/@EXIT>　\
 
-　
+
+<Img|width=620|height=300|scale9t=10|scale9l=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|reset=1|esc=1>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=23.0|y=22.0|tipsx=10|tipsy=80|color=19|size=18|text=万事通>
+<Text|a=0|x=89.0|y=22.0|tipsx=10|tipsy=80|color=151|size=18|text=尊敬的玩家,您好。>
+<Text|a=0|x=276.0|y=22.0|tipsx=10|tipsy=80|color=87|size=18|text=〖欢迎使用技能重练服务〗>
+<Text|a=0|x=23.0|y=47.0|tipsx=10|tipsy=80|color=89|size=18|text=〖技能重练〗>
+<Text|a=0|x=155.0|y=47.0|tipsx=10|tipsy=80|color=255|size=18|text=：>
+<Text|a=0|x=177.0|y=47.0|tipsx=10|tipsy=80|color=254|size=18|text=您好！需要重新修炼神技吗？>
+<Text|a=0|x=23.0|y=62.0|tipsx=10|tipsy=80|color=89|size=18|text=-------------------------------------------------------------->
+<Text|a=0|x=23.0|y=82.0|tipsx=10|tipsy=80|color=156|size=18|text=1、转职后保留你现有的级别，各项技能会全部删除，包括新技能！>
+<Text|a=0|x=23.0|y=120.0|tipsx=10|tipsy=80|color=242|size=18|text=提示：>
+<Text|a=0|x=82.0|y=120.0|tipsx=10|tipsy=80|color=249|size=18|text=转职以后各项技能会全部删除，包括新技能!>
+<Text|a=0|x=23.0|y=155.0|tipsx=10|tipsy=80|color=253|size=18|text=2、已经学习过护体神盾的玩家，转职后可重新修炼护体神盾技能！>
+<Text|a=0|x=23.0|y=175.0|tipsx=10|tipsy=80|color=89|size=18|text=-------------------------------------------------------------->
+<Text|a=0|x=23.0|y=200.0|tipsx=10|tipsy=80|color=251|size=18|text=√开始修炼护体神盾|link=@修炼护体神盾>
+<Text|a=0|x=221.0|y=200.0|tipsx=10|tipsy=80|color=251|size=18|text=关闭对话×|link=@EXIT>
+
+
+
 [@我确定转职]
 #if
 checkjob warrior
 #say
-<--------------------------------------------------------------/AUTOCOLOR=90>\
-<作为战士您是否已经厌倦了烈火和半月呢？为了让您自由的发挥，/SCOLOR=254>\
-<先看清楚下面的需知：/SCOLOR=242>\ 
-<一：转职需要5000元宝，等级大于50级/SCOLOR=156>\
-<二：基转职以后需要重新练习技能哦,我们会删除您以前所有修炼的技能！/SCOLOR=155>\
-<三：请认真考虑清楚之后在转职业哦！不然失去的东西是回不来的！/SCOLOR=145>\
-<注意：/SCOLOR=242><转职以后各项技能会全部删除，包括新技能!!/SCOLOR=253>\
-<--------------------------------------------------------------/AUTOCOLOR=90>\
-<√转职成法师/@法师>   <√转职成道士/@道士>                        <关闭对话×/@EXIT>\
+; <--------------------------------------------------------------/AUTOCOLOR=90>\
+; <作为战士您是否已经厌倦了烈火和半月呢？为了让您自由的发挥，/SCOLOR=254>\
+; <先看清楚下面的需知：/SCOLOR=242>\ 
+; <一：转职需要5000元宝，等级大于50级/SCOLOR=156>\
+; <二：基转职以后需要重新练习技能哦,我们会删除您以前所有修炼的技能！/SCOLOR=155>\
+; <三：请认真考虑清楚之后在转职业哦！不然失去的东西是回不来的！/SCOLOR=145>\
+; <注意：/SCOLOR=242><转职以后各项技能会全部删除，包括新技能!!/SCOLOR=253>\
+; <--------------------------------------------------------------/AUTOCOLOR=90>\
+; <√转职成法师/@法师>   <√转职成道士/@道士>                        <关闭对话×/@EXIT>\
+
+<Img|x=0.0|y=0.0|width=620|height=300|scale9l=10|bg=1|scale9r=10|scale9b=10|reset=1|move=0|esc=1|img=public/bg_npc_04.jpg|scale9t=10>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=18.0|y=20.0|tipsx=10|tipsy=80|color=90|size=18|text=-------------------------------------------------------------->
+<Text|a=0|x=18.0|y=40|tipsx=10|tipsy=80|color=254|size=18|text=作为战士您是否已经厌倦了烈火和半月呢？为了让您自由的发挥，>
+<Text|a=0|x=18.0|y=64|tipsx=10|tipsy=80|color=242|size=18|text=先看清楚下面的需知：>
+<Text|a=0|x=18.0|y=88|tipsx=10|tipsy=80|color=156|size=18|text=一：转职需要5000元宝，等级大于50级>
+<Text|a=0|x=18.0|y=112|tipsx=10|tipsy=80|color=155|size=18|text=二：基转职以后需要重新练习技能哦,我们会删除您以前所有修炼的技能！>
+<Text|a=0|x=18.0|y=136|tipsx=10|tipsy=80|color=145|size=18|text=三：请认真考虑清楚之后在转职业哦！不然失去的东西是回不来的！>
+<Text|a=0|x=18.0|y=165.0|tipsx=10|tipsy=80|color=242|size=18|text=注意：>
+<Text|a=0|x=84.0|y=165.0|tipsx=10|tipsy=80|color=253|size=18|text=转职以后各项技能会全部删除，包括新技能!!>
+<Text|a=0|x=18.0|y=185.0|tipsx=10|tipsy=80|color=90|size=18|text=-------------------------------------------------------------->
+<Text|a=0|x=18.0|y=213.0|tipsx=10|tipsy=80|color=251|size=18|text=√转职成法师|link=@法师>
+<Text|a=0|x=150.0|y=213.0|tipsx=10|tipsy=80|color=251|size=18|text=√转职成道士|link=@道士>
+<Text|a=0|x=282.0|y=213.0|tipsx=10|tipsy=80|color=251|size=18|text=关闭对话×|link=@EXIT>
+
+
+
 #if
 checkjob wizard
 #say
-<--------------------------------------------------------------/AUTOCOLOR=90>\
-<作为法师您是否不再喜欢闪电和冰咆哮了呢？为了让您自由的发挥，/SCOLOR=254>\
-<先看清楚下面的需知：/SCOLOR=242>\ 
-<一：转职需要5000元宝，等级大于50级/SCOLOR=156>\
-<二：基转职以后需要重新练习技能哦,我们会删除您以前所有修炼的技能！/SCOLOR=155>\
-<三：请认真考虑清楚之后在转职业哦！不然失去的东西是回不来的！/SCOLOR=145>\
-<注意：/SCOLOR=242><转职以后各项技能会全部删除，包括新技能!/SCOLOR=253>\
-<--------------------------------------------------------------/AUTOCOLOR=90>\
-<√转职成战士/@战士>   <√转职成道士/@道士1>                        <关闭对话×/@EXIT>\
+; <--------------------------------------------------------------/AUTOCOLOR=90>\
+; <作为法师您是否不再喜欢闪电和冰咆哮了呢？为了让您自由的发挥，/SCOLOR=254>\
+; <先看清楚下面的需知：/SCOLOR=242>\ 
+; <一：转职需要5000元宝，等级大于50级/SCOLOR=156>\
+; <二：基转职以后需要重新练习技能哦,我们会删除您以前所有修炼的技能！/SCOLOR=155>\
+; <三：请认真考虑清楚之后在转职业哦！不然失去的东西是回不来的！/SCOLOR=145>\
+; <注意：/SCOLOR=242><转职以后各项技能会全部删除，包括新技能!/SCOLOR=253>\
+; <--------------------------------------------------------------/AUTOCOLOR=90>\
+; <√转职成战士/@战士>   <√转职成道士/@道士1>                        <关闭对话×/@EXIT>\
+
+<Img|x=0.0|y=0.0|width=620|height=300|scale9l=10|bg=1|scale9r=10|scale9b=10|reset=1|move=0|esc=1|img=public/bg_npc_04.jpg|scale9t=10>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=18.0|y=20.0|tipsx=10|tipsy=80|color=90|size=18|text=-------------------------------------------------------------->
+<Text|a=0|x=18.0|y=40|tipsx=10|tipsy=80|color=254|size=18|text=作为法师您是否不再喜欢闪电和冰咆哮了呢？为了让您自由的发挥，>
+<Text|a=0|x=18.0|y=64|tipsx=10|tipsy=80|color=242|size=18|text=先看清楚下面的需知：>
+<Text|a=0|x=18.0|y=88|tipsx=10|tipsy=80|color=156|size=18|text=一：转职需要5000元宝，等级大于50级>
+<Text|a=0|x=18.0|y=112|tipsx=10|tipsy=80|color=155|size=18|text=二：基转职以后需要重新练习技能哦,我们会删除您以前所有修炼的技能！>
+<Text|a=0|x=18.0|y=136|tipsx=10|tipsy=80|color=145|size=18|text=三：请认真考虑清楚之后在转职业哦！不然失去的东西是回不来的！>
+<Text|a=0|x=18.0|y=165.0|tipsx=10|tipsy=80|color=242|size=18|text=注意：>
+<Text|a=0|x=84.0|y=165.0|tipsx=10|tipsy=80|color=253|size=18|text=转职以后各项技能会全部删除，包括新技能!!>
+<Text|a=0|x=18.0|y=185.0|tipsx=10|tipsy=80|color=90|size=18|text=-------------------------------------------------------------->
+<Text|a=0|x=18.0|y=213.0|tipsx=10|tipsy=80|color=251|size=18|text=√转职成战士|link=@战士>
+<Text|a=0|x=150.0|y=213.0|tipsx=10|tipsy=80|color=251|size=18|text=√转职成道士|link=@道士>
+<Text|a=0|x=282.0|y=213.0|tipsx=10|tipsy=80|color=251|size=18|text=关闭对话×|link=@EXIT>
 #if
 checkjob taoist
 #say
-<--------------------------------------------------------------/AUTOCOLOR=90>\
-<作为道士您是否不在只想做为别人的配角只放宝宝和打防了呢？/SCOLOR=254>\
-<先看清楚下面的需知：/SCOLOR=242>\ 
-<一：转职需要5000元宝，等级大于50级/SCOLOR=156>\
-<二：基转职以后需要重新练习技能哦,我们会删除您以前所有修炼的技能！/SCOLOR=155>\
-<三：请认真考虑清楚之后在转职业哦！不然失去的东西是回不来的！/SCOLOR=145>\
-<注意：/SCOLOR=242><转职以后各项技能会全部删除，包括新技能!!/SCOLOR=253> \
-<--------------------------------------------------------------/AUTOCOLOR=90>\
-<√转职成战士/@战士1>   <√转职成法师/@法师1>                        <关闭对话×/@EXIT>\
+; <--------------------------------------------------------------/AUTOCOLOR=90>\
+; <作为道士您是否不在只想做为别人的配角只放宝宝和打防了呢？/SCOLOR=254>\
+; <先看清楚下面的需知：/SCOLOR=242>\ 
+; <一：转职需要5000元宝，等级大于50级/SCOLOR=156>\
+; <二：基转职以后需要重新练习技能哦,我们会删除您以前所有修炼的技能！/SCOLOR=155>\
+; <三：请认真考虑清楚之后在转职业哦！不然失去的东西是回不来的！/SCOLOR=145>\
+; <注意：/SCOLOR=242><转职以后各项技能会全部删除，包括新技能!!/SCOLOR=253> \
+; <--------------------------------------------------------------/AUTOCOLOR=90>\
+; <√转职成战士/@战士1>   <√转职成法师/@法师1>                        <关闭对话×/@EXIT>\
+
+<Img|x=0.0|y=0.0|width=620|height=300|scale9l=10|bg=1|scale9r=10|scale9b=10|reset=1|move=0|esc=1|img=public/bg_npc_04.jpg|scale9t=10>
+<Layout|x=597|y=3|width=80|height=80|link=@exit>
+<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=18.0|y=20.0|tipsx=10|tipsy=80|color=90|size=18|text=-------------------------------------------------------------->
+<Text|a=0|x=18.0|y=40|tipsx=10|tipsy=80|color=254|size=18|text=作为道士您是否不在只想做为别人的配角只放宝宝和打防了呢？>
+<Text|a=0|x=18.0|y=64|tipsx=10|tipsy=80|color=242|size=18|text=先看清楚下面的需知：>
+<Text|a=0|x=18.0|y=88|tipsx=10|tipsy=80|color=156|size=18|text=一：转职需要5000元宝，等级大于50级>
+<Text|a=0|x=18.0|y=112|tipsx=10|tipsy=80|color=155|size=18|text=二：基转职以后需要重新练习技能哦,我们会删除您以前所有修炼的技能！>
+<Text|a=0|x=18.0|y=136|tipsx=10|tipsy=80|color=145|size=18|text=三：请认真考虑清楚之后在转职业哦！不然失去的东西是回不来的！>
+<Text|a=0|x=18.0|y=165.0|tipsx=10|tipsy=80|color=242|size=18|text=注意：>
+<Text|a=0|x=84.0|y=165.0|tipsx=10|tipsy=80|color=253|size=18|text=转职以后各项技能会全部删除，包括新技能!!>
+<Text|a=0|x=18.0|y=185.0|tipsx=10|tipsy=80|color=90|size=18|text=-------------------------------------------------------------->
+<Text|a=0|x=18.0|y=213.0|tipsx=10|tipsy=80|color=251|size=18|text=√转职成战士|link=@战士>
+<Text|a=0|x=150.0|y=213.0|tipsx=10|tipsy=80|color=251|size=18|text=√转职成法师|link=@法师1>
+<Text|a=0|x=282.0|y=213.0|tipsx=10|tipsy=80|color=251|size=18|text=关闭对话×|link=@EXIT>
 
 [@修炼护体神盾]
 #IF

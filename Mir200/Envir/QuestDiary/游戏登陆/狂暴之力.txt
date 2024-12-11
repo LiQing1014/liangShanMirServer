@@ -2,8 +2,13 @@
 {
 #IF
 #ACT
+; SENDCUSTMSG 1000 999
 close
 #say
+
+; #IF
+; #ACT
+; break   
 
 ; <><Hot~/SCOLOR=253> <◇◆/SCOLOR=22>  <1.76蓝月复古绿色公益三职业传奇欢迎您/SCOLOR=222>  <◆◇/SCOLOR=22>\
 ; <><-------------------------------------------------------------/SCOLOR=13>\
@@ -12,49 +17,76 @@ close
 ; <><◆>·<狂暴属性/AUTOCOLOR=250>:<功魔道+10/AUTOCOLOR=249> + <血量+100/AUTOCOLOR=249> + <暴击 + 2%/AUTOCOLOR=254> + <爆率 + 200%/AUTOCOLOR=251>\
 ; <><◆>·<被玩家杀死称号消失/AUTOCOLOR=161>   <注意：> <人物低于50级或攻城不掉狂暴/AUTOCOLOR=250> \
 ; <><-------------------------------------------------------------/SCOLOR=13>\
-; <><◆>·<杀死狂暴之力可获得/AUTOCOLOR=250><5><大米！/AUTOCOLOR=250> <新人保护低于50级新人不掉狂暴/SCOLOR=161> \
-; <><◆>·<激活狂暴之力要消耗/AUTOCOLOR=146><10><大米！/AUTOCOLOR=146>   <10大米开启狂暴|^-^249#新人保护：^-^250#低于50级的新人不会掉狂暴^-^251#开启费用10大米^-^253#额外增加200点怪物切割/@开启狂暴>\ \
+; <><◆>·<杀死狂暴之力可获得/AUTOCOLOR=250><5><灵符！/AUTOCOLOR=250> <新人保护低于50级新人不掉狂暴/SCOLOR=161> \
+; <><◆>·<激活狂暴之力要消耗/AUTOCOLOR=146><10><灵符！/AUTOCOLOR=146>   <10灵符开启狂暴|^-^249#新人保护：^-^250#低于50级的新人不会掉狂暴^-^251#开启费用10灵符^-^253#额外增加200点怪物切割/@开启狂暴>\ \
 ; \
 
-<Img|width=620|height=300|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|reset=1>
-<Layout|x=597|y=3|width=80|height=80|link=@exit>
-<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
-<Text|a=0|x=32|y=60|tipsx=10|tipsy=80|color=253|size=18|text=Hot~>
-<Text|a=0|x=76|y=60|tipsx=10|tipsy=80|color=22|size=18|text=◇◆>
-<Text|a=0|x=120|y=60|tipsx=10|tipsy=80|color=222|size=18|text=1.76蓝月复古绿色公益三职业传奇欢迎您>
-<Text|a=0|x=516|y=60|tipsx=10|tipsy=80|color=22|size=18|text=◆◇>
-<Text|a=0|x=32|y=80|tipsx=10|tipsy=80|color=13|size=18|text=------------------------------------------------------------->
-<Text|a=0|x=32|y=100|tipsx=10|tipsy=80|color=255|size=18|text=·>
-<Text|a=0|x=54|y=100|tipsx=10|tipsy=80|color=161|size=18|text=来自地狱的勇士，你是否听说过>
-<Text|a=0|x=362|y=100|tipsx=10|tipsy=80|color=255|size=18|text=【>
-<Text|a=0|x=384|y=100|tipsx=10|tipsy=80|color=253|size=18|text=狂暴之力>
-<Text|a=0|x=472|y=100|tipsx=10|tipsy=80|color=255|size=18|text=】>
-<Text|a=0|x=494|y=100|tipsx=10|tipsy=80|color=255|size=18|text=+>
-<Text|a=0|x=505|y=100|tipsx=10|tipsy=80|color=253|size=18|text=100点切割>
-<Text|a=0|x=32|y=120|tipsx=10|tipsy=80|color=255|size=18|text=·>
-<Text|a=0|x=54|y=120|tipsx=10|tipsy=80|color=161|size=18|text=神秘的力量来自于，玛法大陆，拥有它可以斩妖除魔，所向无敌>
-<Text|a=0|x=32|y=140|tipsx=10|tipsy=80|color=255|size=18|text=·>
-<Text|a=0|x=54|y=140|tipsx=10|tipsy=80|color=250|size=18|text=狂暴属性：>
-<Text|a=0|x=142|y=140|tipsx=10|tipsy=80|color=249|size=18|text=功魔道  +  10  +>
-<Text|a=0|x=269.0|y=140.0|tipsx=10|tipsy=80|color=249|size=18|text=血量+100>
-<Text|a=0|x=352.0|y=140.0|tipsx=10|tipsy=80|color=255|size=18|text=+>
-<Text|a=0|x=368.0|y=140.0|tipsx=10|tipsy=80|color=254|size=18|text=暴击 + 2%>
-<Text|a=0|x=459.0|y=140.0|tipsx=10|tipsy=80|color=255|size=18|text=+>
-<Text|a=0|x=478.0|y=140.0|tipsx=10|tipsy=80|color=251|size=18|text=爆率 + 200%>
-<Text|a=0|x=32|y=160|tipsx=10|tipsy=80|color=255|size=18|text=·>
-<Text|a=0|x=54|y=160|tipsx=10|tipsy=80|color=161|size=18|text=被玩家杀死称号消失>
-<Text|a=0|x=252|y=160|tipsx=10|tipsy=80|color=250|size=18|text=人物低于50级或攻城不掉狂暴>
-<Text|a=0|x=32|y=180|tipsx=10|tipsy=80|color=13|size=18|text=------------------------------------------------------------->
-<Text|a=0|x=32|y=200|tipsx=10|tipsy=80|color=255|size=18|text=·>
-<Text|a=0|x=54|y=200|tipsx=10|tipsy=80|color=250|size=18|text=杀死狂暴之力可获得5>
-<Text|a=0|x=252|y=200|tipsx=10|tipsy=80|color=250|size=18|text=大米！>
-<Text|a=0|x=318|y=200|tipsx=10|tipsy=80|color=161|size=18|text=新人保护低于50级新人不掉狂暴>
-<Text|a=0|x=32.0|y=227.0|tipsx=10|tipsy=80|color=255|size=18|text=·>
-<Text|a=0|x=54.0|y=230.0|tipsx=10|tipsy=80|color=146|size=18|text=激活狂暴之力要消耗10>
-<Text|a=0|x=252.0|y=230.0|tipsx=10|tipsy=80|color=146|size=18|text=大米！>
-<Text|a=0|x=318.0|y=230.0|tips={新人保护：/FCOLOR=249}^{低于50级的新人不会掉狂暴/FCOLOR=250}^{开启费用10大米/FCOLOR=251}^{额外增加200点怪物切割/FCOLOR=253}|tipsx=10|tipsy=110|size=18|color=251|text=10大米开启狂暴|link=@开启狂暴>
+; <Img|width=620|height=300|scale9l=10|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|reset=1>
+; <Layout|x=597|y=3|width=80|height=80|link=@exit>
+; <Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+; <Text|a=0|x=32|y=60|tipsx=10|tipsy=80|color=253|size=18|text=Hot~>
+; <Text|a=0|x=76|y=60|tipsx=10|tipsy=80|color=22|size=18|text=◇◆>
+; <Text|a=0|x=120|y=60|tipsx=10|tipsy=80|color=222|size=18|text=1.76蓝月复古绿色公益三职业传奇欢迎您>
+; <Text|a=0|x=516|y=60|tipsx=10|tipsy=80|color=22|size=18|text=◆◇>
+; <Text|a=0|x=32|y=80|tipsx=10|tipsy=80|color=13|size=18|text=------------------------------------------------------------->
+; <Text|a=0|x=32|y=100|tipsx=10|tipsy=80|color=255|size=18|text=·>
+; <Text|a=0|x=54|y=100|tipsx=10|tipsy=80|color=161|size=18|text=来自地狱的勇士，你是否听说过>
+; <Text|a=0|x=362|y=100|tipsx=10|tipsy=80|color=255|size=18|text=【>
+; <Text|a=0|x=384|y=100|tipsx=10|tipsy=80|color=253|size=18|text=狂暴之力>
+; <Text|a=0|x=472|y=100|tipsx=10|tipsy=80|color=255|size=18|text=】>
+; <Text|a=0|x=494|y=100|tipsx=10|tipsy=80|color=255|size=18|text=+>
+; <Text|a=0|x=505|y=100|tipsx=10|tipsy=80|color=253|size=18|text=100点切割>
+; <Text|a=0|x=32|y=120|tipsx=10|tipsy=80|color=255|size=18|text=·>
+; <Text|a=0|x=54|y=120|tipsx=10|tipsy=80|color=161|size=18|text=神秘的力量来自于，玛法大陆，拥有它可以斩妖除魔，所向无敌>
+; <Text|a=0|x=32|y=140|tipsx=10|tipsy=80|color=255|size=18|text=·>
+; <Text|a=0|x=54|y=140|tipsx=10|tipsy=80|color=250|size=18|text=狂暴属性：>
+; <Text|a=0|x=142|y=140|tipsx=10|tipsy=80|color=249|size=18|text=功魔道  +  10  +>
+; <Text|a=0|x=269.0|y=140.0|tipsx=10|tipsy=80|color=249|size=18|text=血量+100>
+; <Text|a=0|x=352.0|y=140.0|tipsx=10|tipsy=80|color=255|size=18|text=+>
+; <Text|a=0|x=368.0|y=140.0|tipsx=10|tipsy=80|color=254|size=18|text=暴击 + 2%>
+; <Text|a=0|x=459.0|y=140.0|tipsx=10|tipsy=80|color=255|size=18|text=+>
+; <Text|a=0|x=478.0|y=140.0|tipsx=10|tipsy=80|color=251|size=18|text=爆率 + 200%>
+; <Text|a=0|x=32|y=160|tipsx=10|tipsy=80|color=255|size=18|text=·>
+; <Text|a=0|x=54|y=160|tipsx=10|tipsy=80|color=161|size=18|text=被玩家杀死称号消失>
+; <Text|a=0|x=252|y=160|tipsx=10|tipsy=80|color=250|size=18|text=人物低于50级或攻城不掉狂暴>
+; <Text|a=0|x=32|y=180|tipsx=10|tipsy=80|color=13|size=18|text=------------------------------------------------------------->
+; <Text|a=0|x=32|y=200|tipsx=10|tipsy=80|color=255|size=18|text=·>
+; <Text|a=0|x=54|y=200|tipsx=10|tipsy=80|color=250|size=18|text=杀死狂暴之力可获得5>
+; <Text|a=0|x=252|y=200|tipsx=10|tipsy=80|color=250|size=18|text=灵符！>
+; <Text|a=0|x=318|y=200|tipsx=10|tipsy=80|color=161|size=18|text=新人保护低于50级新人不掉狂暴>
+; <Text|a=0|x=32.0|y=227.0|tipsx=10|tipsy=80|color=255|size=18|text=·>
+; <Text|a=0|x=54.0|y=230.0|tipsx=10|tipsy=80|color=146|size=18|text=激活狂暴之力要消耗10>
+; <Text|a=0|x=252.0|y=230.0|tipsx=10|tipsy=80|color=146|size=18|text=灵符！>
+; <Text|a=0|x=318.0|y=230.0|tips={新人保护：/FCOLOR=249}^{低于50级的新人不会掉狂暴/FCOLOR=250}^{开启费用10灵符/FCOLOR=251}^{额外增加200点怪物切割/FCOLOR=253}|tipsx=10|tipsy=110|size=18|color=251|text=10灵符开启狂暴|link=@开启狂暴>
 
-
+<Img|show=4|bg=1|scale9r=10|scale9l=10|scale9t=10|scale9b=10|img=custom/kuangbao/bag.png|move=0|esc=1|reset=1>
+<Frames|x=18.0|y=-78.0|speed=10|count=15|loop=-1|prefix=custom/kuangbao/dx/dx_|suffix=.png>
+<Layout|x=878.0|y=79.0|width=80|height=80|link=@exit>
+<Button|x=888.0|y=91.0|nimg=custom/button/close.png|color=255|size=18|link=@exit>
+<Text|a=0|x=554.0|y=151.0|tipsx=10|tipsy=80|outline=1|size=18|color=161|text=来自地狱的勇士，你是否听说过>
+<Text|a=0|x=805.0|y=151.0|tipsx=10|tipsy=80|outline=1|size=18|color=255|text=【>
+<Text|a=0|x=827.0|y=151.0|tipsx=10|tipsy=80|outline=1|size=18|color=253|text=狂暴之力>
+<Text|a=0|x=900.0|y=151.0|tipsx=10|tipsy=80|outline=1|size=18|color=255|text=】>
+<Text|a=0|x=554.0|y=181.0|tipsx=10|tipsy=80|outline=1|size=18|color=255|text=+>
+<Text|a=0|x=569.0|y=181.0|tipsx=10|tipsy=80|outline=1|size=18|color=253|text=100点切割>
+<Text|a=0|x=667.0|y=181.0|tipsx=10|tipsy=80|outline=1|size=18|color=161|text=拥有它可以斩妖除魔，所向无敌>
+<Text|a=0|x=553.0|y=212.0|tipsx=10|tipsy=80|outline=1|size=18|color=250|text=狂暴属性：>
+<Text|a=0|x=643.0|y=212.0|tipsx=10|tipsy=80|outline=1|size=18|color=249|text=功魔道  +  10  +>
+<Text|a=0|x=770.0|y=212.0|tipsx=10|tipsy=80|outline=1|size=18|color=249|text=血量+100>
+<Text|a=0|x=554.0|y=244.0|tipsx=10|tipsy=80|outline=1|size=18|color=255|text=+>
+<Text|a=0|x=571.0|y=244.0|tipsx=10|tipsy=80|outline=1|size=18|color=254|text=暴击 + 2%>
+<Text|a=0|x=662.0|y=244.0|tipsx=10|tipsy=80|outline=1|size=18|color=255|text=+>
+<Text|a=0|x=681.0|y=244.0|tipsx=10|tipsy=80|outline=1|size=18|color=251|text=爆率 + 200%>
+<Text|a=0|x=554.0|y=275.0|tipsx=10|tipsy=80|outline=1|size=18|color=161|text=被玩家杀死称号消失>
+<Text|a=0|x=735.0|y=275.0|tipsx=10|tipsy=80|outline=1|size=18|color=250|text=人物低于50级或攻城不掉狂暴>
+<Text|a=0|x=554.0|y=311.0|tipsx=10|tipsy=80|outline=1|size=18|color=250|text=杀死狂暴之力可获得5>
+<Text|a=0|x=754.0|y=311.0|tipsx=10|tipsy=80|outline=1|size=18|color=250|text=灵符！>
+<Text|a=0|x=554.0|y=345.0|tipsx=10|tipsy=80|outline=1|size=18|color=161|text=新人保护低于50级新人不掉狂暴>
+<Text|a=0|x=554.0|y=384.0|tipsx=10|tipsy=80|outline=1|size=18|color=146|text=激活狂暴之力要消耗10>
+<Text|a=0|x=754.0|y=384.0|tipsx=10|tipsy=80|outline=1|size=18|color=146|text=灵符！>
+<Text|a=0|x=804.0|y=451.0|tips={新人保护：/FCOLOR=249}^{低于50级的新人不会掉狂暴/FCOLOR=250}^{开启费用10灵符/FCOLOR=251}^{额外增加200点怪物切割/FCOLOR=253}|tipsx=10|tipsy=110|outline=1|size=18|color=251|text=提示>
+<Button|x=622.0|y=441.0|nimg=custom/kuangbao/02.png|color=255|size=18|link=@开启狂暴>
+<Img|x=16.0|y=-66.0|img=custom/kuangbao/01.png|esc=0>
 
 
 
@@ -68,16 +100,16 @@ CONFERTITLE 狂暴之力
 break
 
 #if
-checkgamepoint > 9
+checkmoney 灵符 > 9
 check [168] 0
 #act
 SET [168] 1
-gamepoint - 10
+MONEY 灵符 - 10
 CONFERTITLE 狂暴之力
 SetIcon 4 1 11000 3 -45 14 0 100
-SendCenterMsg 254 0 ●●●[国际要闻]：枭雄【<$USERNAME>】使用10大米激活狂暴之力，此人极度危险,杀死奖励5大米,勇士们速度行动起来吧 1 7
+SendCenterMsg 254 0 ●●●[国际要闻]：枭雄【<$USERNAME>】使用10灵符激活狂暴之力，此人极度危险,杀死奖励5灵符,勇士们速度行动起来吧 1 7
 #ELSEACT
-MESSAGEBOX 两个失败的条件：\\第一，你已经开启了狂暴之力\\第二，你没有5大米
+MESSAGEBOX 两个失败的条件：\\第一，你已经开启了狂暴之力\\第二，你没有5灵符
 
 
 }

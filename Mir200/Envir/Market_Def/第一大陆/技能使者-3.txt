@@ -56,11 +56,11 @@ break
 
 #IF
 CHECK [2] 0
-CHECKGAMEPOINT > 187
+checkmoney 灵符 > 187
 checkitem 秘籍残页 30
 #ACT
 SET [2] 1
-GAMEPOINT - 188
+MONEY 灵符 - 188
 Take 秘籍残页 30
 ADDSKILL 护体神盾 3
 SENDMSG 0 151 58 技能大师ぐ：恭喜玩家「%s」成功修炼<护><体><神><盾>！

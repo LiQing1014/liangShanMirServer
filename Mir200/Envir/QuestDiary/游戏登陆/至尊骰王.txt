@@ -22,7 +22,7 @@ OPENMERCHANTBIGDLG 1 560 1 4 0 0 1 400 0
 #SAY
 ; \ \    
 ; <><随机摇骰子:/SCOLOR=161><5000元宝一次，3个骰子随机出点数，出现骰王几率非常低/SCOLOR=250>\ \  
-; <><土豪摇骰子:/SCOLOR=161><58大米一次，3个骰子同步随机数，必出现一个随机骰王/SCOLOR=253>\ \  
+; <><土豪摇骰子:/SCOLOR=161><58灵符一次，3个骰子同步随机数，必出现一个随机骰王/SCOLOR=253>\ \  
 
 ; \  <$STR(S$①①①骰王)>           <①①①骰王拥有者:|<$STR(S$①①①属性)>/SCOLOR=250>   {<$STR(A41)>.|<$STR(S$①①①属性)>/AUTOCOLOR=7,8,9,158,161}\ \ 
 ; \
@@ -40,28 +40,50 @@ OPENMERCHANTBIGDLG 1 560 1 4 0 0 1 400 0
 ;  \   \   \    
 ; <>        <骰王地图|250#以下玩家才可进入^-^161#①①①骰王拥有者:<$STR(A41)>^-^161#②②②骰王拥有者:<$STR(A42)>^-^161#③③③骰王拥有者:<$STR(A43)>^-^161#④④④骰王拥有者:<$STR(A44)>^-^161#⑤⑤⑤骰王拥有者:<$STR(A45)>^-^254#⑥⑥⑥骰王拥有者:<$STR(A51)>/@骰王地图>
 ; <>         <普通扔骰子|250#5000元宝一次^-^249#注意：已有骰王扔普通骰会失去骰王资格，切记/@普通扔骰子去> <合区清理>
-; <>         <老板扔骰子|253#58大米一次/@老板摇号> <合区清理>\ \ \ \
+; <>         <老板扔骰子|253#58灵符一次/@老板摇号> <合区清理>\ \ \ \
 
 
 
-<Img|width=620|height=300|show=4|reset=1|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|scale9l=10>
-<Layout|x=597|y=3|width=80|height=80|link=@exit>
-<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
-<Text|a=0|x=18.0|y=14.0|tipsx=10|tipsy=80|color=161|size=18|text=随机摇骰子:>
-<Text|a=0|x=139.0|y=14.0|tipsx=10|tipsy=80|color=250|size=18|text=5000元宝一次，3个骰子随机出点数，出现骰王几率非常低>
-<Text|a=0|x=18.0|y=54.0|tipsx=10|tipsy=80|color=161|size=18|text=土豪摇骰子:>
-<Text|a=0|x=139.0|y=54.0|tipsx=10|tipsy=80|color=253|size=18|text=58大米一次，3个骰子同步随机数，必出现一个随机骰王>
-<Text|a=0|x=18.0|y=87.0|tipsx=10|tipsy=80|color=255|size=18|text=①①①骰王：<$STR(A41)>>
-<Text|a=0|x=18.0|y=111.0|tipsx=10|tipsy=80|color=255|size=18|text=②②②骰王：<$STR(A42)>>
-<Text|a=0|x=18.0|y=133.0|tipsx=10|tipsy=80|color=255|size=18|text=③③③骰王：<$STR(A43)>>
-<Text|a=0|x=18.0|y=156.0|tipsx=10|tipsy=80|color=255|size=18|text=④④④骰王：<$STR(A44)>>
-<Text|a=0|x=18.0|y=179.0|tipsx=10|tipsy=80|color=255|size=18|text=⑤⑤⑤骰王：<$STR(A45)>>
-<Text|a=0|x=18.0|y=202.0|tipsx=10|tipsy=80|color=255|size=18|text=⑥⑥⑥骰王：<$STR(A51)>>
-<Text|a=0|x=181.0|y=247.0|tipsx=10|tipsy=80|color=251|size=18|text=普通扔骰子|link=@普通扔骰子去>
-<Text|x=39.0|y=249.0|color=251|size=18|text=骰王地图|link=@骰王地图>
-<Text|x=411.0|y=246.0|color=251|size=18|text=老板扔骰子|link=@老板摇号>
-<Text|x=278.0|y=248.0|color=249|size=18|text=合区清理>
-<Text|x=509.0|y=248.0|color=249|size=18|text=合区清理>
+; <Img|width=620|height=300|show=4|reset=1|scale9t=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_01.png|scale9l=10>
+; <Layout|x=597|y=3|width=80|height=80|link=@exit>
+; <Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+; <Text|a=0|x=18.0|y=14.0|tipsx=10|tipsy=80|color=161|size=18|text=随机摇骰子:>
+; <Text|a=0|x=139.0|y=14.0|tipsx=10|tipsy=80|color=250|size=18|text=5000元宝一次，3个骰子随机出点数，出现骰王几率非常低>
+; <Text|a=0|x=18.0|y=54.0|tipsx=10|tipsy=80|color=161|size=18|text=土豪摇骰子:>
+; <Text|a=0|x=139.0|y=54.0|tipsx=10|tipsy=80|color=253|size=18|text=58灵符一次，3个骰子同步随机数，必出现一个随机骰王>
+; <Text|a=0|x=18.0|y=87.0|tipsx=10|tipsy=80|color=255|size=18|text=①①①骰王：<$STR(A41)>>
+; <Text|a=0|x=18.0|y=111.0|tipsx=10|tipsy=80|color=255|size=18|text=②②②骰王：<$STR(A42)>>
+; <Text|a=0|x=18.0|y=133.0|tipsx=10|tipsy=80|color=255|size=18|text=③③③骰王：<$STR(A43)>>
+; <Text|a=0|x=18.0|y=156.0|tipsx=10|tipsy=80|color=255|size=18|text=④④④骰王：<$STR(A44)>>
+; <Text|a=0|x=18.0|y=179.0|tipsx=10|tipsy=80|color=255|size=18|text=⑤⑤⑤骰王：<$STR(A45)>>
+; <Text|a=0|x=18.0|y=202.0|tipsx=10|tipsy=80|color=255|size=18|text=⑥⑥⑥骰王：<$STR(A51)>>
+; <Text|a=0|x=181.0|y=247.0|tipsx=10|tipsy=80|color=251|size=18|text=普通扔骰子|link=@普通扔骰子去>
+; <Text|x=39.0|y=249.0|color=251|size=18|text=骰王地图|link=@骰王地图>
+; <Text|x=411.0|y=246.0|color=251|size=18|text=老板扔骰子|link=@老板摇号>
+; <Text|x=278.0|y=248.0|color=249|size=18|text=合区清理>
+; <Text|x=509.0|y=248.0|color=249|size=18|text=合区清理>
+
+<Img|show=4|bg=1|scale9r=10|scale9t=10|scale9l=10|scale9b=10|img=custom/hecheng/sgq7.png|move=0|reset=1|esc=1>
+<Layout|x=728.0|y=1.0|width=80|height=80|link=@exit>
+<Button|x=750.0|y=0.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=254.0|y=56.0|tipsx=10|tipsy=80|color=161|size=18|outline=1|text=随机摇骰子:>
+<Text|a=0|x=357.0|y=56.0|width=380|tipsx=10|tipsy=80|color=250|size=18|outline=1|text=5000元宝一次，3个骰子随机出点数，出现骰王几率非常低>
+<Text|a=0|x=254.0|y=117.0|tipsx=10|tipsy=80|color=161|size=18|outline=1|text=土豪摇骰子:>
+<Text|a=0|x=357.0|y=117.0|width=380|tipsx=10|tipsy=80|color=253|size=18|outline=1|text=58灵符一次，3个骰子同步随机数，必出现一个随机骰王>
+<Text|a=0|x=450.0|y=215|tipsx=10|tipsy=80|color=250|size=18|outline=1|text=①①①骰王：<$STR(A41)>>
+<Text|a=0|x=450.0|y=240|tipsx=10|tipsy=80|color=251|size=18|outline=1|text=②②②骰王：<$STR(A42)>>
+<Text|a=0|x=450.0|y=265|tipsx=10|tipsy=80|color=252|size=18|outline=1|text=③③③骰王：<$STR(A43)>>
+<Text|a=0|x=450.0|y=290|tipsx=10|tipsy=80|color=253|size=18|outline=1|text=④④④骰王：<$STR(A44)>>
+<Text|a=0|x=450.0|y=315|tipsx=10|tipsy=80|color=254|size=18|outline=1|text=⑤⑤⑤骰王：<$STR(A45)>>
+<Text|a=0|x=450.0|y=340|tipsx=10|tipsy=80|color=255|size=18|outline=1|text=⑥⑥⑥骰王：<$STR(A51)>>
+
+<Text|x=513.0|y=412.0|color=249|size=18|outline=1|text=合区清理>
+<Text|x=640.0|y=412.0|color=249|size=18|outline=1|text=合区清理>
+<Text|x=342.0|y=15.0|color=255|size=18|outline=1|text=至尊骰王>
+<Text|x=543.0|y=177.0|color=255|size=18|outline=1|text=骰王排行>
+<Button|x=366.0|y=441.0|pimg=custom/button/ann2.png|nimg=custom/button/ann1.png|color=251|size=18|outline=1|text=骰王地图|link=@骰王地图>
+<Button|x=493.0|y=441.0|pimg=custom/button/ann2.png|nimg=custom/button/ann1.png|color=251|size=18|outline=1|text=普通扔骰子|link=@普通扔骰子去>
+<Button|x=617.0|y=441.0|pimg=custom/button/ann2.png|nimg=custom/button/ann1.png|color=251|size=18|outline=1|text=老板扔骰子|link=@老板摇号>
 
 
 
@@ -129,9 +151,9 @@ break
 [@老板摇号]
 
 #IF
-CheckGAMEPOINT < 58
+checkmoney 灵符 < 58
 #ACT
-MESSAGEBOX 您背包里没有“58大米”,我无法为您扔骰子！
+MESSAGEBOX 您背包里没有“58灵符”,我无法为您扔骰子！
 CLEARDELAYGOTO
 BREAK
 
@@ -140,9 +162,9 @@ BREAK
 
 
 #IF
-CheckGAMEPOINT > 57
+checkmoney 灵符 > 57
 #ACT
-GAMEPOINT - 58
+MONEY 灵符 - 58
 MOVR N$19点 1 7
 MOV N$20点 <$STR(N$19点)>
 MOV N$21点 <$STR(N$19点)>
@@ -153,7 +175,7 @@ MOV D2 <$STR(N$22点)>
 playdice 3 @检测点数
 break
 #ElseAct
-MessageBox [系统:]\　\　　　　每次需要：58大米\　\　　　　您的大米不足!!!
+MessageBox [系统:]\　\　　　　每次需要：58灵符\　\　　　　您的灵符不足!!!
 break
 
 

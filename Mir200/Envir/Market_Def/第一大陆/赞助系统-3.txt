@@ -2,7 +2,7 @@
 #IF
 #ACT
 ;DEPRIVETITLE ¹ó×åVIP21
-MOV S$ÆÕÉý³ÆºÅ²ÄÁÏ Ä§·¨ÉñÊ¯
+MOV S$ÆÕÉý³ÆºÅ²ÄÁÏ ìÅ¹âÉñÊ¯
 MOV N$ÆÕÉý³ÆºÅ²ÄÁÏ 10
 MOV N$ÆÕÉý³ÆºÅÔª±¦ 10000
 MOV N$ÆÕÉý³ÆºÅ³äÖµ 10
@@ -10,15 +10,15 @@ MOV S$µ±Ç°³ÆºÅA {ÎÞ¹ó×åVIP/FCOLOR=230}
 MOV S$µ±Ç°³ÆºÅ 
 MOV S$ÏÂ¼¶³ÆºÅ ¹ó×åVIP1
 MOV S$ÏÂ¼¶³ÆºÅA {¹ó×åVIP1/FCOLOR=161}
-MOV S$µ±Ç°ÊôÐÔ  {µ±Ç°ÎÞ¹ó×åVIP:/FCOLOR=161}[{¹¥Ä§µÀ+0-0/FCOLOR=230}]
-MOV S$µ±Ç°ÊôÐÔ1 {µ±Ç°ÎÞ¹ó×åVIP:/FCOLOR=161}[{·À¡¡Óù+0-0/FCOLOR=230}]
-MOV S$µ±Ç°ÊôÐÔ2 {µ±Ç°ÎÞ¹ó×åVIP:/FCOLOR=161}[{ÌåÁ¦ÔªËØ+0%/FCOLOR=230}]
-MOV S$µ±Ç°ÊôÐÔ3 {µ±Ç°ÎÞ¹ó×åVIP:/FCOLOR=161}[{¹ÖÎï±¬ÂÊ+0%/FCOLOR=230}]
+MOV S$µ±Ç°ÊôÐÔ  <¹¥Ä§µÀ+0-0/FCOLOR=230>
+MOV S$µ±Ç°ÊôÐÔ1 <·À¡¡Óù+0-0/FCOLOR=230>
+MOV S$µ±Ç°ÊôÐÔ2 <ÌåÁ¦ÔªËØ+0%/FCOLOR=230>
+MOV S$µ±Ç°ÊôÐÔ3 <¹ÖÎï±¬ÂÊ+0%/FCOLOR=230>
 MOV S$µ±Ç°ÊôÐÔ4 
-MOV S$ÏÂ¼¶ÊôÐÔ  {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹¥Ä§µÀ+1-1/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ1 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{·À¡¡Óù+1-1/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ2 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{ÌåÁ¦ÔªËØ+1%/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ3 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹ÖÎï±¬ÂÊ+50%/FCOLOR=231}]
+MOV S$ÏÂ¼¶ÊôÐÔ  <¹¥Ä§µÀ+1-1/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ1 <·À¡¡Óù+1-1/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ2 <ÌåÁ¦ÔªËØ+1%/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ3 <¹ÖÎï±¬ÂÊ+50%/FCOLOR=231>
 MOV S$ÏÂ¼¶ÊôÐÔ4 
 MOV S$ÆÕÉý°´Å¥  <text:É¢ÈËÆÕÉý|^-^250#ÆÕÉýÌõ¼þ£º^-^146#1£º<$STR(S$ÆÕÉý³ÆºÅ²ÄÁÏ)>*<$STR(N$ÆÕÉý³ÆºÅ²ÄÁÏ)>^-^251#2£ºÔª±¦*<$STR(N$ÆÕÉý³ÆºÅÔª±¦)>:130:-25/@ÆÕÉý¹ó×åVIP>
 MOV S$ÆÕÉý°´Å¥1 <text:ÍÁºÀÆÕÉý|^-^249#ÆÕÉýÌõ¼þ£º^-^254#³äÖµ´ïµ½<$STR(N$ÆÕÉý³ÆºÅ³äÖµ)>µã^-^250#Ãâ·ÑÆÕÉý^-^253#µ±Ç°³äÖµ£º<$GAMEGIRD>µã:130:-25/@ÍÁºÀÆÕÉý¹ó×åVIP>
@@ -27,7 +27,7 @@ MOV S$ÆÕÉý°´Å¥1 <text:ÍÁºÀÆÕÉý|^-^249#ÆÕÉýÌõ¼þ£º^-^254#³äÖµ´ïµ½<$STR(N$ÆÕÉý³ÆºÅ³
 CHECKTITLE ¹ó×åVIP1
 #ACT
 MOV U130 1
-MOV S$ÆÕÉý³ÆºÅ²ÄÁÏ Ä§·¨ÉñÊ¯
+MOV S$ÆÕÉý³ÆºÅ²ÄÁÏ ìÅ¹âÉñÊ¯
 MOV N$ÆÕÉý³ÆºÅ²ÄÁÏ 20
 MOV N$ÆÕÉý³ÆºÅÔª±¦ 20000
 MOV N$ÆÕÉý³ÆºÅ³äÖµ 20
@@ -35,15 +35,15 @@ MOV S$µ±Ç°³ÆºÅA {¹ó×åVIP1/FCOLOR=161}
 MOV S$µ±Ç°³ÆºÅ ¹ó×åVIP1
 MOV S$ÏÂ¼¶³ÆºÅ ¹ó×åVIP2
 MOV S$ÏÂ¼¶³ÆºÅA {¹ó×åVIP2/FCOLOR=230}
-MOV S$µ±Ç°ÊôÐÔ  {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹¥Ä§µÀ+1-1/FCOLOR=250}]
-MOV S$µ±Ç°ÊôÐÔ1 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{·À¡¡Óù+1-1/FCOLOR=250}]
-MOV S$µ±Ç°ÊôÐÔ2 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{ÌåÁ¦ÔªËØ+1%/FCOLOR=254}]
-MOV S$µ±Ç°ÊôÐÔ3 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹ÖÎï±¬ÂÊ+50%/FCOLOR=253}]
-MOV S$µ±Ç°ÊôÐÔ4 
-MOV S$ÏÂ¼¶ÊôÐÔ  {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹¥Ä§µÀ+2-2/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ1 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{·À¡¡Óù+2-2/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ2 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{ÌåÁ¦ÔªËØ+2%/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ3 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹ÖÎï±¬ÂÊ+100%/FCOLOR=231}]
+MOV S$µ±Ç°ÊôÐÔ  <¹¥Ä§µÀ+1-1/FCOLOR=250>
+MOV S$µ±Ç°ÊôÐÔ1 <·À¡¡Óù+1-1/FCOLOR=250>
+MOV S$µ±Ç°ÊôÐÔ2 <ÌåÁ¦ÔªËØ+1%/FCOLOR=254>
+MOV S$µ±Ç°ÊôÐÔ3 <¹ÖÎï±¬ÂÊ+50%/FCOLOR=253>
+MOV S$µ±Ç°ÊôÐÔ4
+MOV S$ÏÂ¼¶ÊôÐÔ  <¹¥Ä§µÀ+2-2/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ1 <·À¡¡Óù+2-2/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ2 <ÌåÁ¦ÔªËØ+2%/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ3 <¹ÖÎï±¬ÂÊ+100%/FCOLOR=231>
 MOV S$ÏÂ¼¶ÊôÐÔ4 
 MOV S$ÆÕÉý°´Å¥  <text:É¢ÈËÆÕÉý|^-^250#ÆÕÉýÌõ¼þ£º^-^146#1£º<$STR(S$ÆÕÉý³ÆºÅ²ÄÁÏ)>*<$STR(N$ÆÕÉý³ÆºÅ²ÄÁÏ)>^-^251#2£ºÔª±¦*<$STR(N$ÆÕÉý³ÆºÅÔª±¦)>:130:-25/@ÆÕÉý¹ó×åVIP>
 MOV S$ÆÕÉý°´Å¥1 <text:ÍÁºÀÆÕÉý|^-^249#ÆÕÉýÌõ¼þ£º^-^254#³äÖµ´ïµ½<$STR(N$ÆÕÉý³ÆºÅ³äÖµ)>µã^-^250#Ãâ·ÑÆÕÉý^-^253#µ±Ç°³äÖµ£º<$GAMEGIRD>µã:130:-25/@ÍÁºÀÆÕÉý¹ó×åVIP>
@@ -53,7 +53,7 @@ MOV S$ÆÕÉý°´Å¥1 <text:ÍÁºÀÆÕÉý|^-^249#ÆÕÉýÌõ¼þ£º^-^254#³äÖµ´ïµ½<$STR(N$ÆÕÉý³ÆºÅ³
 CHECKTITLE ¹ó×åVIP2
 #ACT
 MOV U130 2
-MOV S$ÆÕÉý³ÆºÅ²ÄÁÏ Ä§·¨ÉñÊ¯
+MOV S$ÆÕÉý³ÆºÅ²ÄÁÏ ìÅ¹âÉñÊ¯
 MOV N$ÆÕÉý³ÆºÅ²ÄÁÏ 30
 MOV N$ÆÕÉý³ÆºÅÔª±¦ 30000
 MOV N$ÆÕÉý³ÆºÅ³äÖµ 30
@@ -61,15 +61,15 @@ MOV S$µ±Ç°³ÆºÅA {¹ó×åVIP2/FCOLOR=161}
 MOV S$µ±Ç°³ÆºÅ ¹ó×åVIP2
 MOV S$ÏÂ¼¶³ÆºÅ ¹ó×åVIP3
 MOV S$ÏÂ¼¶³ÆºÅA {¹ó×åVIP3/FCOLOR=230}
-MOV S$µ±Ç°ÊôÐÔ  {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹¥Ä§µÀ+2-2/FCOLOR=250}]
-MOV S$µ±Ç°ÊôÐÔ1 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{·À¡¡Óù+2-2/FCOLOR=250}]
-MOV S$µ±Ç°ÊôÐÔ2 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{ÌåÁ¦ÔªËØ+2%/FCOLOR=254}]
-MOV S$µ±Ç°ÊôÐÔ3 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹ÖÎï±¬ÂÊ+100%/FCOLOR=253}]
-MOV S$µ±Ç°ÊôÐÔ4 
-MOV S$ÏÂ¼¶ÊôÐÔ  {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹¥Ä§µÀ+3-3/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ1 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{·À¡¡Óù+3-3/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ2 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{ÌåÁ¦ÔªËØ+3%/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ3 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹ÖÎï±¬ÂÊ+150%/FCOLOR=231}]
+MOV S$µ±Ç°ÊôÐÔ  <¹¥Ä§µÀ+2-2/FCOLOR=250>
+MOV S$µ±Ç°ÊôÐÔ1 <·À¡¡Óù+2-2/FCOLOR=250>
+MOV S$µ±Ç°ÊôÐÔ2 <ÌåÁ¦ÔªËØ+2%/FCOLOR=254>
+MOV S$µ±Ç°ÊôÐÔ3 <¹ÖÎï±¬ÂÊ+100%/FCOLOR=253>
+MOV S$µ±Ç°ÊôÐÔ4
+MOV S$ÏÂ¼¶ÊôÐÔ  <¹¥Ä§µÀ+3-3/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ1 <·À¡¡Óù+3-3/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ2 <ÌåÁ¦ÔªËØ+3%/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ3 <¹ÖÎï±¬ÂÊ+150%/FCOLOR=231>
 MOV S$ÏÂ¼¶ÊôÐÔ4 
 MOV S$ÆÕÉý°´Å¥  <text:É¢ÈËÆÕÉý|^-^250#ÆÕÉýÌõ¼þ£º^-^146#1£º<$STR(S$ÆÕÉý³ÆºÅ²ÄÁÏ)>*<$STR(N$ÆÕÉý³ÆºÅ²ÄÁÏ)>^-^251#2£ºÔª±¦*<$STR(N$ÆÕÉý³ÆºÅÔª±¦)>:130:-25/@ÆÕÉý¹ó×åVIP>
 MOV S$ÆÕÉý°´Å¥1 <text:ÍÁºÀÆÕÉý|^-^249#ÆÕÉýÌõ¼þ£º^-^254#³äÖµ´ïµ½<$STR(N$ÆÕÉý³ÆºÅ³äÖµ)>µã^-^250#Ãâ·ÑÆÕÉý^-^253#µ±Ç°³äÖµ£º<$GAMEGIRD>µã:130:-25/@ÍÁºÀÆÕÉý¹ó×åVIP>
@@ -79,7 +79,7 @@ MOV S$ÆÕÉý°´Å¥1 <text:ÍÁºÀÆÕÉý|^-^249#ÆÕÉýÌõ¼þ£º^-^254#³äÖµ´ïµ½<$STR(N$ÆÕÉý³ÆºÅ³
 CHECKTITLE ¹ó×åVIP3
 #ACT
 MOV U130 3
-MOV S$ÆÕÉý³ÆºÅ²ÄÁÏ Ä§·¨ÉñÊ¯
+MOV S$ÆÕÉý³ÆºÅ²ÄÁÏ ìÅ¹âÉñÊ¯
 MOV N$ÆÕÉý³ÆºÅ²ÄÁÏ 50
 MOV N$ÆÕÉý³ÆºÅÔª±¦ 50000
 MOV N$ÆÕÉý³ÆºÅ³äÖµ 50
@@ -87,15 +87,15 @@ MOV S$µ±Ç°³ÆºÅA {¹ó×åVIP3/FCOLOR=161}
 MOV S$µ±Ç°³ÆºÅ ¹ó×åVIP3
 MOV S$ÏÂ¼¶³ÆºÅ ¹ó×åVIP4
 MOV S$ÏÂ¼¶³ÆºÅA {¹ó×åVIP4/FCOLOR=230}
-MOV S$µ±Ç°ÊôÐÔ  {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹¥Ä§µÀ+3-3/FCOLOR=250}]
-MOV S$µ±Ç°ÊôÐÔ1 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{·À¡¡Óù+3-3/FCOLOR=250}]
-MOV S$µ±Ç°ÊôÐÔ2 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{ÌåÁ¦ÔªËØ+3%/FCOLOR=254}]
-MOV S$µ±Ç°ÊôÐÔ3 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹ÖÎï±¬ÂÊ+150%/FCOLOR=253}]
-MOV S$µ±Ç°ÊôÐÔ4 
-MOV S$ÏÂ¼¶ÊôÐÔ  {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹¥Ä§µÀ+4-4/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ1 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{·À¡¡Óù+4-4/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ2 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{ÌåÁ¦ÔªËØ+4%/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ3 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹ÖÎï±¬ÂÊ+200%/FCOLOR=231}]
+MOV S$µ±Ç°ÊôÐÔ  <¹¥Ä§µÀ+3-3/FCOLOR=250>
+MOV S$µ±Ç°ÊôÐÔ1 <·À¡¡Óù+3-3/FCOLOR=250>
+MOV S$µ±Ç°ÊôÐÔ2 <ÌåÁ¦ÔªËØ+3%/FCOLOR=254>
+MOV S$µ±Ç°ÊôÐÔ3 <¹ÖÎï±¬ÂÊ+150%/FCOLOR=253>
+MOV S$µ±Ç°ÊôÐÔ4
+MOV S$ÏÂ¼¶ÊôÐÔ  <¹¥Ä§µÀ+4-4/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ1 <·À¡¡Óù+4-4/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ2 <ÌåÁ¦ÔªËØ+4%/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ3 <¹ÖÎï±¬ÂÊ+200%/FCOLOR=231>
 MOV S$ÏÂ¼¶ÊôÐÔ4 
 MOV S$ÆÕÉý°´Å¥  <text:É¢ÈËÆÕÉý|^-^250#ÆÕÉýÌõ¼þ£º^-^146#1£º<$STR(S$ÆÕÉý³ÆºÅ²ÄÁÏ)>*<$STR(N$ÆÕÉý³ÆºÅ²ÄÁÏ)>^-^251#2£ºÔª±¦*<$STR(N$ÆÕÉý³ÆºÅÔª±¦)>:130:-25/@ÆÕÉý¹ó×åVIP>
 MOV S$ÆÕÉý°´Å¥1 <text:ÍÁºÀÆÕÉý|^-^249#ÆÕÉýÌõ¼þ£º^-^254#³äÖµ´ïµ½<$STR(N$ÆÕÉý³ÆºÅ³äÖµ)>µã^-^250#Ãâ·ÑÆÕÉý^-^253#µ±Ç°³äÖµ£º<$GAMEGIRD>µã:130:-25/@ÍÁºÀÆÕÉý¹ó×åVIP>
@@ -106,7 +106,7 @@ MOV S$ÆÕÉý°´Å¥1 <text:ÍÁºÀÆÕÉý|^-^249#ÆÕÉýÌõ¼þ£º^-^254#³äÖµ´ïµ½<$STR(N$ÆÕÉý³ÆºÅ³
 CHECKTITLE ¹ó×åVIP4
 #ACT
 MOV U130 4
-MOV S$ÆÕÉý³ÆºÅ²ÄÁÏ Ä§·¨ÉñÊ¯
+MOV S$ÆÕÉý³ÆºÅ²ÄÁÏ ìÅ¹âÉñÊ¯
 MOV N$ÆÕÉý³ÆºÅ²ÄÁÏ 70
 MOV N$ÆÕÉý³ÆºÅÔª±¦ 70000
 MOV N$ÆÕÉý³ÆºÅ³äÖµ 100
@@ -114,15 +114,15 @@ MOV S$µ±Ç°³ÆºÅA {¹ó×åVIP4/FCOLOR=250}
 MOV S$µ±Ç°³ÆºÅ ¹ó×åVIP4
 MOV S$ÏÂ¼¶³ÆºÅ ¹ó×åVIP5
 MOV S$ÏÂ¼¶³ÆºÅA {¹ó×åVIP5/FCOLOR=230}
-MOV S$µ±Ç°ÊôÐÔ  {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹¥Ä§µÀ+4-4/FCOLOR=250}]
-MOV S$µ±Ç°ÊôÐÔ1 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{·À¡¡Óù+4-4/FCOLOR=250}]
-MOV S$µ±Ç°ÊôÐÔ2 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{ÌåÁ¦ÔªËØ+4%/FCOLOR=254}]
-MOV S$µ±Ç°ÊôÐÔ3 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹ÖÎï±¬ÂÊ+200%/FCOLOR=253}]
-MOV S$µ±Ç°ÊôÐÔ4 
-MOV S$ÏÂ¼¶ÊôÐÔ  {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹¥Ä§µÀ+5-5/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ1 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{·À¡¡Óù+5-5/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ2 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{ÌåÁ¦ÔªËØ+5%/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ3 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹ÖÎï±¬ÂÊ+250%/FCOLOR=231}]
+MOV S$µ±Ç°ÊôÐÔ  <¹¥Ä§µÀ+4-4/FCOLOR=250>
+MOV S$µ±Ç°ÊôÐÔ1 <·À¡¡Óù+4-4/FCOLOR=250>
+MOV S$µ±Ç°ÊôÐÔ2 <ÌåÁ¦ÔªËØ+4%/FCOLOR=254>
+MOV S$µ±Ç°ÊôÐÔ3 <¹ÖÎï±¬ÂÊ+200%/FCOLOR=253>
+MOV S$µ±Ç°ÊôÐÔ4
+MOV S$ÏÂ¼¶ÊôÐÔ  <¹¥Ä§µÀ+5-5/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ1 <·À¡¡Óù+5-5/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ2 <ÌåÁ¦ÔªËØ+5%/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ3 <¹ÖÎï±¬ÂÊ+250%/FCOLOR=231>
 MOV S$ÏÂ¼¶ÊôÐÔ4 
 MOV S$ÆÕÉý°´Å¥  <text:É¢ÈËÆÕÉý|^-^250#ÆÕÉýÌõ¼þ£º^-^146#1£º<$STR(S$ÆÕÉý³ÆºÅ²ÄÁÏ)>*<$STR(N$ÆÕÉý³ÆºÅ²ÄÁÏ)>^-^251#2£ºÔª±¦*<$STR(N$ÆÕÉý³ÆºÅÔª±¦)>:130:-25/@ÆÕÉý¹ó×åVIP>
 MOV S$ÆÕÉý°´Å¥1 <text:ÍÁºÀÆÕÉý|^-^249#ÆÕÉýÌõ¼þ£º^-^254#³äÖµ´ïµ½<$STR(N$ÆÕÉý³ÆºÅ³äÖµ)>µã^-^250#Ãâ·ÑÆÕÉý^-^253#µ±Ç°³äÖµ£º<$GAMEGIRD>µã:130:-25/@ÍÁºÀÆÕÉý¹ó×åVIP>
@@ -136,7 +136,7 @@ MOV S$ÆÕÉý°´Å¥1 <text:ÍÁºÀÆÕÉý|^-^249#ÆÕÉýÌõ¼þ£º^-^254#³äÖµ´ïµ½<$STR(N$ÆÕÉý³ÆºÅ³
 CHECKTITLE ¹ó×åVIP5
 #ACT
 MOV U130 5
-MOV S$ÆÕÉý³ÆºÅ²ÄÁÏ Ä§·¨ÉñÊ¯
+MOV S$ÆÕÉý³ÆºÅ²ÄÁÏ ìÅ¹âÉñÊ¯
 MOV N$ÆÕÉý³ÆºÅ²ÄÁÏ 90
 MOV N$ÆÕÉý³ÆºÅÔª±¦ 90000
 MOV N$ÆÕÉý³ÆºÅ³äÖµ 150
@@ -144,15 +144,15 @@ MOV S$µ±Ç°³ÆºÅA {¹ó×åVIP5/FCOLOR=250}
 MOV S$µ±Ç°³ÆºÅ ¹ó×åVIP5
 MOV S$ÏÂ¼¶³ÆºÅ ¹ó×åVIP6
 MOV S$ÏÂ¼¶³ÆºÅA {¹ó×åVIP5/FCOLOR=230}
-MOV S$µ±Ç°ÊôÐÔ  {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹¥Ä§µÀ+5-5/FCOLOR=250}]
-MOV S$µ±Ç°ÊôÐÔ1 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{·À¡¡Óù+5-5/FCOLOR=250}]
-MOV S$µ±Ç°ÊôÐÔ2 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{ÌåÁ¦ÔªËØ+5%/FCOLOR=254}]
-MOV S$µ±Ç°ÊôÐÔ3 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹ÖÎï±¬ÂÊ+250%/FCOLOR=253}]
-MOV S$µ±Ç°ÊôÐÔ4 
-MOV S$ÏÂ¼¶ÊôÐÔ  {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹¥Ä§µÀ+6-6/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ1 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{·À¡¡Óù+6-6/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ2 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{ÌåÁ¦ÔªËØ+6%/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ3 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹ÖÎï±¬ÂÊ+300%/FCOLOR=231}]
+MOV S$µ±Ç°ÊôÐÔ  <¹¥Ä§µÀ+5-5/FCOLOR=250>
+MOV S$µ±Ç°ÊôÐÔ1 <·À¡¡Óù+5-5/FCOLOR=250>
+MOV S$µ±Ç°ÊôÐÔ2 <ÌåÁ¦ÔªËØ+5%/FCOLOR=254>
+MOV S$µ±Ç°ÊôÐÔ3 <¹ÖÎï±¬ÂÊ+250%/FCOLOR=253>
+MOV S$µ±Ç°ÊôÐÔ4
+MOV S$ÏÂ¼¶ÊôÐÔ  <¹¥Ä§µÀ+6-6/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ1 <·À¡¡Óù+6-6/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ2 <ÌåÁ¦ÔªËØ+6%/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ3 <¹ÖÎï±¬ÂÊ+300%/FCOLOR=231>
 MOV S$ÏÂ¼¶ÊôÐÔ4 
 MOV S$ÆÕÉý°´Å¥  <text:É¢ÈËÆÕÉý|^-^250#ÆÕÉýÌõ¼þ£º^-^146#1£º<$STR(S$ÆÕÉý³ÆºÅ²ÄÁÏ)>*<$STR(N$ÆÕÉý³ÆºÅ²ÄÁÏ)>^-^251#2£ºÔª±¦*<$STR(N$ÆÕÉý³ÆºÅÔª±¦)>:130:-25/@ÆÕÉý¹ó×åVIP>
 MOV S$ÆÕÉý°´Å¥1 <text:ÍÁºÀÆÕÉý|^-^249#ÆÕÉýÌõ¼þ£º^-^254#³äÖµ´ïµ½<$STR(N$ÆÕÉý³ÆºÅ³äÖµ)>µã^-^250#Ãâ·ÑÆÕÉý^-^253#µ±Ç°³äÖµ£º<$GAMEGIRD>µã:130:-25/@ÍÁºÀÆÕÉý¹ó×åVIP>
@@ -164,7 +164,7 @@ MOV S$ÆÕÉý°´Å¥1 <text:ÍÁºÀÆÕÉý|^-^249#ÆÕÉýÌõ¼þ£º^-^254#³äÖµ´ïµ½<$STR(N$ÆÕÉý³ÆºÅ³
 CHECKTITLE ¹ó×åVIP6
 #ACT
 MOV U130 6
-MOV S$ÆÕÉý³ÆºÅ²ÄÁÏ Ä§·¨ÉñÊ¯
+MOV S$ÆÕÉý³ÆºÅ²ÄÁÏ ìÅ¹âÉñÊ¯
 MOV N$ÆÕÉý³ÆºÅ²ÄÁÏ 120
 MOV N$ÆÕÉý³ÆºÅÔª±¦ 120000
 MOV N$ÆÕÉý³ÆºÅ³äÖµ 200
@@ -172,15 +172,15 @@ MOV S$µ±Ç°³ÆºÅA {¹ó×åVIP6/FCOLOR=250}
 MOV S$µ±Ç°³ÆºÅ ¹ó×åVIP6
 MOV S$ÏÂ¼¶³ÆºÅ ¹ó×åVIP7
 MOV S$ÏÂ¼¶³ÆºÅA {¹ó×åVIP7/FCOLOR=230}
-MOV S$µ±Ç°ÊôÐÔ  {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹¥Ä§µÀ+6-6/FCOLOR=250}]
-MOV S$µ±Ç°ÊôÐÔ1 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{·À¡¡Óù+6-6/FCOLOR=250}]
-MOV S$µ±Ç°ÊôÐÔ2 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{ÌåÁ¦ÔªËØ+6%/FCOLOR=254}]
-MOV S$µ±Ç°ÊôÐÔ3 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹ÖÎï±¬ÂÊ+300%/FCOLOR=253}]
+MOV S$µ±Ç°ÊôÐÔ  <¹¥Ä§µÀ+6-6/FCOLOR=250>
+MOV S$µ±Ç°ÊôÐÔ1 <·À¡¡Óù+6-6/FCOLOR=250>
+MOV S$µ±Ç°ÊôÐÔ2 <ÌåÁ¦ÔªËØ+6%/FCOLOR=254>
+MOV S$µ±Ç°ÊôÐÔ3 <¹ÖÎï±¬ÂÊ+300%/FCOLOR=253>
 MOV S$µ±Ç°ÊôÐÔ4 
-MOV S$ÏÂ¼¶ÊôÐÔ  {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹¥Ä§µÀ+7-7/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ1 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{·À¡¡Óù+7-7/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ2 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{ÌåÁ¦ÔªËØ+7%/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ3 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹ÖÎï±¬ÂÊ+350%/FCOLOR=231}]
+MOV S$ÏÂ¼¶ÊôÐÔ  <¹¥Ä§µÀ+7-7/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ1 <·À¡¡Óù+7-7/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ2 <ÌåÁ¦ÔªËØ+7%/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ3 <¹ÖÎï±¬ÂÊ+350%/FCOLOR=231>
 MOV S$ÏÂ¼¶ÊôÐÔ4 
 MOV S$ÆÕÉý°´Å¥  <text:É¢ÈËÆÕÉý|^-^250#ÆÕÉýÌõ¼þ£º^-^146#1£º<$STR(S$ÆÕÉý³ÆºÅ²ÄÁÏ)>*<$STR(N$ÆÕÉý³ÆºÅ²ÄÁÏ)>^-^251#2£ºÔª±¦*<$STR(N$ÆÕÉý³ÆºÅÔª±¦)>:130:-25/@ÆÕÉý¹ó×åVIP>
 MOV S$ÆÕÉý°´Å¥1 <text:ÍÁºÀÆÕÉý|^-^249#ÆÕÉýÌõ¼þ£º^-^254#³äÖµ´ïµ½<$STR(N$ÆÕÉý³ÆºÅ³äÖµ)>µã^-^250#Ãâ·ÑÆÕÉý^-^253#µ±Ç°³äÖµ£º<$GAMEGIRD>µã:130:-25/@ÍÁºÀÆÕÉý¹ó×åVIP>
@@ -192,7 +192,7 @@ CHECKTITLE ¹ó×åVIP7
 #ACT
 SET [415] 1
 MOV U130 7
-MOV S$ÆÕÉý³ÆºÅ²ÄÁÏ Ä§·¨ÉñÊ¯
+MOV S$ÆÕÉý³ÆºÅ²ÄÁÏ ìÅ¹âÉñÊ¯
 MOV N$ÆÕÉý³ÆºÅ²ÄÁÏ 150
 MOV N$ÆÕÉý³ÆºÅÔª±¦ 150000
 MOV N$ÆÕÉý³ÆºÅ³äÖµ 300
@@ -200,15 +200,15 @@ MOV S$µ±Ç°³ÆºÅA {¹ó×åVIP7/FCOLOR=251}
 MOV S$µ±Ç°³ÆºÅ ¹ó×åVIP7
 MOV S$ÏÂ¼¶³ÆºÅ ¹ó×åVIP8
 MOV S$ÏÂ¼¶³ÆºÅA {¹ó×åVIP8/FCOLOR=230}
-MOV S$µ±Ç°ÊôÐÔ  {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹¥Ä§µÀ+7-7/FCOLOR=250}]
-MOV S$µ±Ç°ÊôÐÔ1 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{·À¡¡Óù+7-7/FCOLOR=250}]
-MOV S$µ±Ç°ÊôÐÔ2 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{ÌåÁ¦ÔªËØ+7%/FCOLOR=254}]
-MOV S$µ±Ç°ÊôÐÔ3 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹ÖÎï±¬ÂÊ+350%/FCOLOR=253}]
-MOV S$µ±Ç°ÊôÐÔ4 
-MOV S$ÏÂ¼¶ÊôÐÔ  {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹¥Ä§µÀ+8-8/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ1 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{·À¡¡Óù+8-8/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ2 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{ÌåÁ¦ÔªËØ+8%/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ3 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹ÖÎï±¬ÂÊ+400%/FCOLOR=231}]
+MOV S$µ±Ç°ÊôÐÔ  <¹¥Ä§µÀ+7-7/FCOLOR=250>
+MOV S$µ±Ç°ÊôÐÔ1 <·À¡¡Óù+7-7/FCOLOR=250>
+MOV S$µ±Ç°ÊôÐÔ2 <ÌåÁ¦ÔªËØ+7%/FCOLOR=254>
+MOV S$µ±Ç°ÊôÐÔ3 <¹ÖÎï±¬ÂÊ+350%/FCOLOR=253>
+MOV S$µ±Ç°ÊôÐÔ4
+MOV S$ÏÂ¼¶ÊôÐÔ  <¹¥Ä§µÀ+8-8/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ1 <·À¡¡Óù+8-8/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ2 <ÌåÁ¦ÔªËØ+8%/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ3 <¹ÖÎï±¬ÂÊ+400%/FCOLOR=231>
 MOV S$ÏÂ¼¶ÊôÐÔ4 
 MOV S$ÆÕÉý°´Å¥  <text:É¢ÈËÆÕÉý|^-^250#ÆÕÉýÌõ¼þ£º^-^146#1£º<$STR(S$ÆÕÉý³ÆºÅ²ÄÁÏ)>*<$STR(N$ÆÕÉý³ÆºÅ²ÄÁÏ)>^-^251#2£ºÔª±¦*<$STR(N$ÆÕÉý³ÆºÅÔª±¦)>:130:-25/@ÆÕÉý¹ó×åVIP>
 MOV S$ÆÕÉý°´Å¥1 <text:ÍÁºÀÆÕÉý|^-^249#ÆÕÉýÌõ¼þ£º^-^254#³äÖµ´ïµ½<$STR(N$ÆÕÉý³ÆºÅ³äÖµ)>µã^-^250#Ãâ·ÑÆÕÉý^-^253#µ±Ç°³äÖµ£º<$GAMEGIRD>µã:130:-25/@ÍÁºÀÆÕÉý¹ó×åVIP>
@@ -220,7 +220,7 @@ MOV S$ÆÕÉý°´Å¥1 <text:ÍÁºÀÆÕÉý|^-^249#ÆÕÉýÌõ¼þ£º^-^254#³äÖµ´ïµ½<$STR(N$ÆÕÉý³ÆºÅ³
 CHECKTITLE ¹ó×åVIP8
 #ACT
 MOV U130 8
-MOV S$ÆÕÉý³ÆºÅ²ÄÁÏ Ä§·¨ÉñÊ¯
+MOV S$ÆÕÉý³ÆºÅ²ÄÁÏ ìÅ¹âÉñÊ¯
 MOV N$ÆÕÉý³ÆºÅ²ÄÁÏ 180
 MOV N$ÆÕÉý³ÆºÅÔª±¦ 180000
 MOV N$ÆÕÉý³ÆºÅ³äÖµ 400
@@ -228,15 +228,15 @@ MOV S$µ±Ç°³ÆºÅA {¹ó×åVIP8/FCOLOR=251}
 MOV S$µ±Ç°³ÆºÅ ¹ó×åVIP8
 MOV S$ÏÂ¼¶³ÆºÅ ¹ó×åVIP9
 MOV S$ÏÂ¼¶³ÆºÅA {¹ó×åVIP9/FCOLOR=230}
-MOV S$µ±Ç°ÊôÐÔ  {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹¥Ä§µÀ+8-8/FCOLOR=250}]
-MOV S$µ±Ç°ÊôÐÔ1 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{·À¡¡Óù+8-8/FCOLOR=250}]
-MOV S$µ±Ç°ÊôÐÔ2 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{ÌåÁ¦ÔªËØ+8%/FCOLOR=254}]
-MOV S$µ±Ç°ÊôÐÔ3 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹ÖÎï±¬ÂÊ+400%/FCOLOR=253}]
-MOV S$µ±Ç°ÊôÐÔ4 
-MOV S$ÏÂ¼¶ÊôÐÔ  {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹¥Ä§µÀ+9-9/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ1 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{·À¡¡Óù+9-9/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ2 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{ÌåÁ¦ÔªËØ+9%/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ3 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹ÖÎï±¬ÂÊ+450%/FCOLOR=231}]
+MOV S$µ±Ç°ÊôÐÔ  <¹¥Ä§µÀ+8-8/FCOLOR=250>
+MOV S$µ±Ç°ÊôÐÔ1 <·À¡¡Óù+8-8/FCOLOR=250>
+MOV S$µ±Ç°ÊôÐÔ2 <ÌåÁ¦ÔªËØ+8%/FCOLOR=254>
+MOV S$µ±Ç°ÊôÐÔ3 <¹ÖÎï±¬ÂÊ+400%/FCOLOR=253>
+MOV S$µ±Ç°ÊôÐÔ4
+MOV S$ÏÂ¼¶ÊôÐÔ  <¹¥Ä§µÀ+9-9/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ1 <·À¡¡Óù+9-9/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ2 <ÌåÁ¦ÔªËØ+9%/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ3 <¹ÖÎï±¬ÂÊ+450%/FCOLOR=231>
 MOV S$ÏÂ¼¶ÊôÐÔ4 
 MOV S$ÆÕÉý°´Å¥  <text:É¢ÈËÆÕÉý|^-^250#ÆÕÉýÌõ¼þ£º^-^146#1£º<$STR(S$ÆÕÉý³ÆºÅ²ÄÁÏ)>*<$STR(N$ÆÕÉý³ÆºÅ²ÄÁÏ)>^-^251#2£ºÔª±¦*<$STR(N$ÆÕÉý³ÆºÅÔª±¦)>:130:-25/@ÆÕÉý¹ó×åVIP>
 MOV S$ÆÕÉý°´Å¥1 <text:ÍÁºÀÆÕÉý|^-^249#ÆÕÉýÌõ¼þ£º^-^254#³äÖµ´ïµ½<$STR(N$ÆÕÉý³ÆºÅ³äÖµ)>µã^-^250#Ãâ·ÑÆÕÉý^-^253#µ±Ç°³äÖµ£º<$GAMEGIRD>µã:130:-25/@ÍÁºÀÆÕÉý¹ó×åVIP>
@@ -246,7 +246,7 @@ MOV S$ÆÕÉý°´Å¥1 <text:ÍÁºÀÆÕÉý|^-^249#ÆÕÉýÌõ¼þ£º^-^254#³äÖµ´ïµ½<$STR(N$ÆÕÉý³ÆºÅ³
 CHECKTITLE ¹ó×åVIP9
 #ACT
 MOV U130 9
-MOV S$ÆÕÉý³ÆºÅ²ÄÁÏ Ä§·¨ÉñÊ¯
+MOV S$ÆÕÉý³ÆºÅ²ÄÁÏ ìÅ¹âÉñÊ¯
 MOV N$ÆÕÉý³ÆºÅ²ÄÁÏ 200
 MOV N$ÆÕÉý³ÆºÅÔª±¦ 200000
 MOV N$ÆÕÉý³ÆºÅ³äÖµ 500
@@ -254,15 +254,15 @@ MOV S$µ±Ç°³ÆºÅA {¹ó×åVIP9/FCOLOR=251}
 MOV S$µ±Ç°³ÆºÅ ¹ó×åVIP9
 MOV S$ÏÂ¼¶³ÆºÅ ¹ó×åVIP10
 MOV S$ÏÂ¼¶³ÆºÅA {¹ó×åVIP10/FCOLOR=230}
-MOV S$µ±Ç°ÊôÐÔ  {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹¥Ä§µÀ+9-9/FCOLOR=250}]
-MOV S$µ±Ç°ÊôÐÔ1 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{·À¡¡Óù+9-9/FCOLOR=250}]
-MOV S$µ±Ç°ÊôÐÔ2 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{ÌåÁ¦ÔªËØ+9%/FCOLOR=254}]
-MOV S$µ±Ç°ÊôÐÔ3 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹ÖÎï±¬ÂÊ+450%/FCOLOR=253}]
-MOV S$µ±Ç°ÊôÐÔ4 
-MOV S$ÏÂ¼¶ÊôÐÔ  {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹¥Ä§µÀ+10-10/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ1 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{·À¡¡Óù+10-10/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ2 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{ÌåÁ¦ÔªËØ+10%/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ3 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹ÖÎï±¬ÂÊ+500%/FCOLOR=231}]
+MOV S$µ±Ç°ÊôÐÔ  <¹¥Ä§µÀ+9-9/FCOLOR=250>
+MOV S$µ±Ç°ÊôÐÔ1 <·À¡¡Óù+9-9/FCOLOR=250>
+MOV S$µ±Ç°ÊôÐÔ2 <ÌåÁ¦ÔªËØ+9%/FCOLOR=254>
+MOV S$µ±Ç°ÊôÐÔ3 <¹ÖÎï±¬ÂÊ+450%/FCOLOR=253>
+MOV S$µ±Ç°ÊôÐÔ4
+MOV S$ÏÂ¼¶ÊôÐÔ  <¹¥Ä§µÀ+10-10/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ1 <·À¡¡Óù+10-10/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ2 <ÌåÁ¦ÔªËØ+10%/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ3 <¹ÖÎï±¬ÂÊ+500%/FCOLOR=231>
 MOV S$ÏÂ¼¶ÊôÐÔ4 
 MOV S$ÆÕÉý°´Å¥  <text:É¢ÈËÆÕÉý|^-^250#ÆÕÉýÌõ¼þ£º^-^146#1£º<$STR(S$ÆÕÉý³ÆºÅ²ÄÁÏ)>*<$STR(N$ÆÕÉý³ÆºÅ²ÄÁÏ)>^-^251#2£ºÔª±¦*<$STR(N$ÆÕÉý³ÆºÅÔª±¦)>:130:-25/@ÆÕÉý¹ó×åVIP>
 MOV S$ÆÕÉý°´Å¥1 <text:ÍÁºÀÆÕÉý|^-^249#ÆÕÉýÌõ¼þ£º^-^254#³äÖµ´ïµ½<$STR(N$ÆÕÉý³ÆºÅ³äÖµ)>µã^-^250#Ãâ·ÑÆÕÉý^-^253#µ±Ç°³äÖµ£º<$GAMEGIRD>µã:130:-25/@ÍÁºÀÆÕÉý¹ó×åVIP>
@@ -273,7 +273,7 @@ MOV S$ÆÕÉý°´Å¥1 <text:ÍÁºÀÆÕÉý|^-^249#ÆÕÉýÌõ¼þ£º^-^254#³äÖµ´ïµ½<$STR(N$ÆÕÉý³ÆºÅ³
 CHECKTITLE ¹ó×åVIP10
 #ACT
 MOV U130 10
-MOV S$ÆÕÉý³ÆºÅ²ÄÁÏ Ä§·¨ÉñÊ¯
+MOV S$ÆÕÉý³ÆºÅ²ÄÁÏ ìÅ¹âÉñÊ¯
 MOV N$ÆÕÉý³ÆºÅ²ÄÁÏ 250
 MOV N$ÆÕÉý³ÆºÅÔª±¦ 250000
 MOV N$ÆÕÉý³ÆºÅ³äÖµ 700
@@ -281,18 +281,18 @@ MOV S$µ±Ç°³ÆºÅA {¹ó×åVIP10/FCOLOR=70}
 MOV S$µ±Ç°³ÆºÅ ¹ó×åVIP10
 MOV S$ÏÂ¼¶³ÆºÅ ¹ó×åVIP11
 MOV S$ÏÂ¼¶³ÆºÅA {¹ó×åVIP11/FCOLOR=230}
-MOV S$µ±Ç°ÊôÐÔ  {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹¥Ä§µÀ+10-10/FCOLOR=250}]
-MOV S$µ±Ç°ÊôÐÔ1 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{·À¡¡Óù+10-10/FCOLOR=250}]
-MOV S$µ±Ç°ÊôÐÔ2 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{ÌåÁ¦ÔªËØ+10%/FCOLOR=254}]
-MOV S$µ±Ç°ÊôÐÔ3 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹¥ÉËÔªËØ+1%/FCOLOR=231}]
-MOV S$µ±Ç°ÊôÐÔ4 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹ÖÎï±¬ÂÊ+500%/FCOLOR=253}]
+MOV S$µ±Ç°ÊôÐÔ  <¹¥Ä§µÀ+10-10/FCOLOR=250>
+MOV S$µ±Ç°ÊôÐÔ1 <·À¡¡Óù+10-10/FCOLOR=250>
+MOV S$µ±Ç°ÊôÐÔ2 <ÌåÁ¦ÔªËØ+10%/FCOLOR=254>
+MOV S$µ±Ç°ÊôÐÔ3 <¹¥ÉËÔªËØ+1%/FCOLOR=231>
+MOV S$µ±Ç°ÊôÐÔ4 <¹ÖÎï±¬ÂÊ+500%/FCOLOR=253>
 
 
-MOV S$ÏÂ¼¶ÊôÐÔ  {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹¥Ä§µÀ+11-11/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ1 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{·À¡¡Óù+11-11/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ2 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{ÌåÁ¦ÔªËØ+11%/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ3 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹¥ÉËÔªËØ+2%/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ4 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹ÖÎï±¬ÂÊ+550%/FCOLOR=231}]
+MOV S$ÏÂ¼¶ÊôÐÔ  <¹¥Ä§µÀ+11-11/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ1 <·À¡¡Óù+11-11/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ2 <ÌåÁ¦ÔªËØ+11%/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ3 <¹¥ÉËÔªËØ+2%/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ4 <¹ÖÎï±¬ÂÊ+550%/FCOLOR=231>
 MOV S$ÆÕÉý°´Å¥  <text:É¢ÈËÆÕÉý|^-^250#ÆÕÉýÌõ¼þ£º^-^146#1£º<$STR(S$ÆÕÉý³ÆºÅ²ÄÁÏ)>*<$STR(N$ÆÕÉý³ÆºÅ²ÄÁÏ)>^-^251#2£ºÔª±¦*<$STR(N$ÆÕÉý³ÆºÅÔª±¦)>:130:-25/@ÆÕÉý¹ó×åVIP>
 MOV S$ÆÕÉý°´Å¥1 <text:ÍÁºÀÆÕÉý|^-^249#ÆÕÉýÌõ¼þ£º^-^254#³äÖµ´ïµ½<$STR(N$ÆÕÉý³ÆºÅ³äÖµ)>µã^-^250#Ãâ·ÑÆÕÉý^-^253#µ±Ç°³äÖµ£º<$GAMEGIRD>µã:130:-25/@ÍÁºÀÆÕÉý¹ó×åVIP>
 
@@ -301,7 +301,7 @@ MOV S$ÆÕÉý°´Å¥1 <text:ÍÁºÀÆÕÉý|^-^249#ÆÕÉýÌõ¼þ£º^-^254#³äÖµ´ïµ½<$STR(N$ÆÕÉý³ÆºÅ³
 CHECKTITLE ¹ó×åVIP11
 #ACT
 MOV U130 11
-MOV S$ÆÕÉý³ÆºÅ²ÄÁÏ Ä§·¨ÉñÊ¯
+MOV S$ÆÕÉý³ÆºÅ²ÄÁÏ ìÅ¹âÉñÊ¯
 MOV N$ÆÕÉý³ÆºÅ²ÄÁÏ 300
 MOV N$ÆÕÉý³ÆºÅÔª±¦ 300000
 MOV N$ÆÕÉý³ÆºÅ³äÖµ 900
@@ -309,17 +309,17 @@ MOV S$µ±Ç°³ÆºÅA {¹ó×åVIP11/FCOLOR=70}
 MOV S$µ±Ç°³ÆºÅ ¹ó×åVIP11
 MOV S$ÏÂ¼¶³ÆºÅ ¹ó×åVIP12
 MOV S$ÏÂ¼¶³ÆºÅA {¹ó×åVIP12/FCOLOR=230}
-MOV S$µ±Ç°ÊôÐÔ  {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹¥Ä§µÀ+11-11/FCOLOR=250}]
-MOV S$µ±Ç°ÊôÐÔ1 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{·À¡¡Óù+11-11/FCOLOR=250}]
-MOV S$µ±Ç°ÊôÐÔ2 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{ÌåÁ¦ÔªËØ+11%/FCOLOR=254}]
-MOV S$µ±Ç°ÊôÐÔ3 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹¥ÉËÔªËØ+2%/FCOLOR=254}]
-MOV S$µ±Ç°ÊôÐÔ4 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹ÖÎï±¬ÂÊ+550%/FCOLOR=253}]
+MOV S$µ±Ç°ÊôÐÔ  <¹¥Ä§µÀ+11-11/FCOLOR=250>
+MOV S$µ±Ç°ÊôÐÔ1 <·À¡¡Óù+11-11/FCOLOR=250>
+MOV S$µ±Ç°ÊôÐÔ2 <ÌåÁ¦ÔªËØ+11%/FCOLOR=254>
+MOV S$µ±Ç°ÊôÐÔ3 <¹¥ÉËÔªËØ+2%/FCOLOR=254>
+MOV S$µ±Ç°ÊôÐÔ4 <¹ÖÎï±¬ÂÊ+550%/FCOLOR=253>
 
-MOV S$ÏÂ¼¶ÊôÐÔ  {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹¥Ä§µÀ+12-12/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ1 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{·À¡¡Óù+12-12/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ2 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{ÌåÁ¦ÔªËØ+12%/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ3 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹¥ÉËÔªËØ+3%/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ4 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹ÖÎï±¬ÂÊ+650%/FCOLOR=231}]
+MOV S$ÏÂ¼¶ÊôÐÔ  <¹¥Ä§µÀ+12-12/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ1 <·À¡¡Óù+12-12/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ2 <ÌåÁ¦ÔªËØ+12%/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ3 <¹¥ÉËÔªËØ+3%/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ4 <¹ÖÎï±¬ÂÊ+650%/FCOLOR=231>
 MOV S$ÆÕÉý°´Å¥  <text:É¢ÈËÆÕÉý|^-^250#ÆÕÉýÌõ¼þ£º^-^146#1£º<$STR(S$ÆÕÉý³ÆºÅ²ÄÁÏ)>*<$STR(N$ÆÕÉý³ÆºÅ²ÄÁÏ)>^-^251#2£ºÔª±¦*<$STR(N$ÆÕÉý³ÆºÅÔª±¦)>:130:-25/@ÆÕÉý¹ó×åVIP>
 MOV S$ÆÕÉý°´Å¥1 <text:ÍÁºÀÆÕÉý|^-^249#ÆÕÉýÌõ¼þ£º^-^254#³äÖµ´ïµ½<$STR(N$ÆÕÉý³ÆºÅ³äÖµ)>µã^-^250#Ãâ·ÑÆÕÉý^-^253#µ±Ç°³äÖµ£º<$GAMEGIRD>µã:130:-25/@ÍÁºÀÆÕÉý¹ó×åVIP>
 
@@ -331,7 +331,7 @@ MOV S$ÆÕÉý°´Å¥1 <text:ÍÁºÀÆÕÉý|^-^249#ÆÕÉýÌõ¼þ£º^-^254#³äÖµ´ïµ½<$STR(N$ÆÕÉý³ÆºÅ³
 CHECKTITLE ¹ó×åVIP12
 #ACT
 MOV U130 12
-MOV S$ÆÕÉý³ÆºÅ²ÄÁÏ Ä§·¨ÉñÊ¯
+MOV S$ÆÕÉý³ÆºÅ²ÄÁÏ ìÅ¹âÉñÊ¯
 MOV N$ÆÕÉý³ÆºÅ²ÄÁÏ 350
 MOV N$ÆÕÉý³ÆºÅÔª±¦ 350000
 MOV N$ÆÕÉý³ÆºÅ³äÖµ 1200
@@ -339,17 +339,17 @@ MOV S$µ±Ç°³ÆºÅA {¹ó×åVIP12/FCOLOR=70}
 MOV S$µ±Ç°³ÆºÅ ¹ó×åVIP12
 MOV S$ÏÂ¼¶³ÆºÅ ¹ó×åVIP13
 MOV S$ÏÂ¼¶³ÆºÅA {¹ó×åVIP13/FCOLOR=230}
-MOV S$µ±Ç°ÊôÐÔ  {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹¥Ä§µÀ+12-12/FCOLOR=250}]
-MOV S$µ±Ç°ÊôÐÔ1 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{·À¡¡Óù+12-12/FCOLOR=250}]
-MOV S$µ±Ç°ÊôÐÔ2 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{ÌåÁ¦ÔªËØ+12%/FCOLOR=254}]
-MOV S$µ±Ç°ÊôÐÔ3 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹¥ÉËÔªËØ+3%/FCOLOR=254}]
-MOV S$µ±Ç°ÊôÐÔ4 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹ÖÎï±¬ÂÊ+600%/FCOLOR=253}]
+MOV S$µ±Ç°ÊôÐÔ  <¹¥Ä§µÀ+12-12/FCOLOR=250>
+MOV S$µ±Ç°ÊôÐÔ1 <·À¡¡Óù+12-12/FCOLOR=250>
+MOV S$µ±Ç°ÊôÐÔ2 <ÌåÁ¦ÔªËØ+12%/FCOLOR=254>
+MOV S$µ±Ç°ÊôÐÔ3 <¹¥ÉËÔªËØ+3%/FCOLOR=254>
+MOV S$µ±Ç°ÊôÐÔ4 <¹ÖÎï±¬ÂÊ+600%/FCOLOR=253>
 
-MOV S$ÏÂ¼¶ÊôÐÔ  {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹¥Ä§µÀ+13-13/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ1 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{·À¡¡Óù+13-13/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ2 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{ÌåÁ¦ÔªËØ+13%/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ3 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹¥ÉËÔªËØ+4%/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ4 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹ÖÎï±¬ÂÊ+650%/FCOLOR=231}]
+MOV S$ÏÂ¼¶ÊôÐÔ  <¹¥Ä§µÀ+13-13/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ1 <·À¡¡Óù+13-13/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ2 <ÌåÁ¦ÔªËØ+13%/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ3 <¹¥ÉËÔªËØ+4%/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ4 <¹ÖÎï±¬ÂÊ+650%/FCOLOR=231>
 MOV S$ÆÕÉý°´Å¥  <text:É¢ÈËÆÕÉý|^-^250#ÆÕÉýÌõ¼þ£º^-^146#1£º<$STR(S$ÆÕÉý³ÆºÅ²ÄÁÏ)>*<$STR(N$ÆÕÉý³ÆºÅ²ÄÁÏ)>^-^251#2£ºÔª±¦*<$STR(N$ÆÕÉý³ÆºÅÔª±¦)>:130:-25/@ÆÕÉý¹ó×åVIP>
 MOV S$ÆÕÉý°´Å¥1 <text:ÍÁºÀÆÕÉý|^-^249#ÆÕÉýÌõ¼þ£º^-^254#³äÖµ´ïµ½<$STR(N$ÆÕÉý³ÆºÅ³äÖµ)>µã^-^250#Ãâ·ÑÆÕÉý^-^253#µ±Ç°³äÖµ£º<$GAMEGIRD>µã:130:-25/@ÍÁºÀÆÕÉý¹ó×åVIP>
 
@@ -358,7 +358,7 @@ MOV S$ÆÕÉý°´Å¥1 <text:ÍÁºÀÆÕÉý|^-^249#ÆÕÉýÌõ¼þ£º^-^254#³äÖµ´ïµ½<$STR(N$ÆÕÉý³ÆºÅ³
 CHECKTITLE ¹ó×åVIP13
 #ACT
 MOV U130 13
-MOV S$ÆÕÉý³ÆºÅ²ÄÁÏ Ä§·¨ÉñÊ¯
+MOV S$ÆÕÉý³ÆºÅ²ÄÁÏ ìÅ¹âÉñÊ¯
 MOV N$ÆÕÉý³ÆºÅ²ÄÁÏ 400
 MOV N$ÆÕÉý³ÆºÅÔª±¦ 400000
 MOV N$ÆÕÉý³ÆºÅ³äÖµ 1500
@@ -366,17 +366,17 @@ MOV S$µ±Ç°³ÆºÅA {¹ó×åVIP13/FCOLOR=253}
 MOV S$µ±Ç°³ÆºÅ ¹ó×åVIP13
 MOV S$ÏÂ¼¶³ÆºÅ ¹ó×åVIP14
 MOV S$ÏÂ¼¶³ÆºÅA {¹ó×åVIP14/FCOLOR=230}
-MOV S$µ±Ç°ÊôÐÔ  {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹¥Ä§µÀ+13-13/FCOLOR=250}]
-MOV S$µ±Ç°ÊôÐÔ1 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{·À¡¡Óù+13-13/FCOLOR=250}]
-MOV S$µ±Ç°ÊôÐÔ2 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{ÌåÁ¦ÔªËØ+13%/FCOLOR=254}]
-MOV S$µ±Ç°ÊôÐÔ3 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹¥ÉËÔªËØ+4%/FCOLOR=254}]
-MOV S$µ±Ç°ÊôÐÔ4 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹ÖÎï±¬ÂÊ+650%/FCOLOR=253}]
+MOV S$µ±Ç°ÊôÐÔ  <¹¥Ä§µÀ+13-13/FCOLOR=250>
+MOV S$µ±Ç°ÊôÐÔ1 <·À¡¡Óù+13-13/FCOLOR=250>
+MOV S$µ±Ç°ÊôÐÔ2 <ÌåÁ¦ÔªËØ+13%/FCOLOR=254>
+MOV S$µ±Ç°ÊôÐÔ3 <¹¥ÉËÔªËØ+4%/FCOLOR=254>
+MOV S$µ±Ç°ÊôÐÔ4 <¹ÖÎï±¬ÂÊ+650%/FCOLOR=253>
 
-MOV S$ÏÂ¼¶ÊôÐÔ  {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹¥Ä§µÀ+14-14/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ1 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{·À¡¡Óù+14-14/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ2 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{ÌåÁ¦ÔªËØ+14%/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ3 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹¥ÉËÔªËØ+5%/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ4 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹ÖÎï±¬ÂÊ+700%/FCOLOR=231}]
+MOV S$ÏÂ¼¶ÊôÐÔ  <¹¥Ä§µÀ+14-14/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ1 <·À¡¡Óù+14-14/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ2 <ÌåÁ¦ÔªËØ+14%/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ3 <¹¥ÉËÔªËØ+5%/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ4 <¹ÖÎï±¬ÂÊ+700%/FCOLOR=231>
 MOV S$ÆÕÉý°´Å¥  <text:É¢ÈËÆÕÉý|^-^250#ÆÕÉýÌõ¼þ£º^-^146#1£º<$STR(S$ÆÕÉý³ÆºÅ²ÄÁÏ)>*<$STR(N$ÆÕÉý³ÆºÅ²ÄÁÏ)>^-^251#2£ºÔª±¦*<$STR(N$ÆÕÉý³ÆºÅÔª±¦)>:130:-25/@ÆÕÉý¹ó×åVIP>
 MOV S$ÆÕÉý°´Å¥1 <text:ÍÁºÀÆÕÉý|^-^249#ÆÕÉýÌõ¼þ£º^-^254#³äÖµ´ïµ½<$STR(N$ÆÕÉý³ÆºÅ³äÖµ)>µã^-^250#Ãâ·ÑÆÕÉý^-^253#µ±Ç°³äÖµ£º<$GAMEGIRD>µã:130:-25/@ÍÁºÀÆÕÉý¹ó×åVIP>
 
@@ -385,7 +385,7 @@ MOV S$ÆÕÉý°´Å¥1 <text:ÍÁºÀÆÕÉý|^-^249#ÆÕÉýÌõ¼þ£º^-^254#³äÖµ´ïµ½<$STR(N$ÆÕÉý³ÆºÅ³
 CHECKTITLE ¹ó×åVIP14
 #ACT
 MOV U130 14
-MOV S$ÆÕÉý³ÆºÅ²ÄÁÏ Ä§·¨ÉñÊ¯
+MOV S$ÆÕÉý³ÆºÅ²ÄÁÏ ìÅ¹âÉñÊ¯
 MOV N$ÆÕÉý³ÆºÅ²ÄÁÏ 450
 MOV N$ÆÕÉý³ÆºÅÔª±¦ 450000
 MOV N$ÆÕÉý³ÆºÅ³äÖµ 2000
@@ -393,17 +393,17 @@ MOV S$µ±Ç°³ÆºÅA {¹ó×åVIP14/FCOLOR=253}
 MOV S$µ±Ç°³ÆºÅ ¹ó×åVIP14
 MOV S$ÏÂ¼¶³ÆºÅ ¹ó×åVIP15
 MOV S$ÏÂ¼¶³ÆºÅA {¹ó×åVIP15/FCOLOR=230}
-MOV S$µ±Ç°ÊôÐÔ  {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹¥Ä§µÀ+14-14/FCOLOR=250}]
-MOV S$µ±Ç°ÊôÐÔ1 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{·À¡¡Óù+14-14/FCOLOR=250}]
-MOV S$µ±Ç°ÊôÐÔ2 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{ÌåÁ¦ÔªËØ+14%/FCOLOR=254}]
-MOV S$µ±Ç°ÊôÐÔ3 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹¥ÉËÔªËØ+5%/FCOLOR=254}]
-MOV S$µ±Ç°ÊôÐÔ4 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹ÖÎï±¬ÂÊ+700%/FCOLOR=253}]
+MOV S$µ±Ç°ÊôÐÔ  <¹¥Ä§µÀ+14-14/FCOLOR=250>
+MOV S$µ±Ç°ÊôÐÔ1 <·À¡¡Óù+14-14/FCOLOR=250>
+MOV S$µ±Ç°ÊôÐÔ2 <ÌåÁ¦ÔªËØ+14%/FCOLOR=254>
+MOV S$µ±Ç°ÊôÐÔ3 <¹¥ÉËÔªËØ+5%/FCOLOR=254>
+MOV S$µ±Ç°ÊôÐÔ4 <¹ÖÎï±¬ÂÊ+700%/FCOLOR=253>
 
-MOV S$ÏÂ¼¶ÊôÐÔ  {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹¥Ä§µÀ+15-15/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ1 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{·À¡¡Óù+15-15/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ2 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{ÌåÁ¦ÔªËØ+15%/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ3 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹¥ÉËÔªËØ+6%/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ4 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹ÖÎï±¬ÂÊ+750%/FCOLOR=231}]
+MOV S$ÏÂ¼¶ÊôÐÔ  <¹¥Ä§µÀ+15-15/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ1 <·À¡¡Óù+15-15/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ2 <ÌåÁ¦ÔªËØ+15%/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ3 <¹¥ÉËÔªËØ+6%/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ4 <¹ÖÎï±¬ÂÊ+750%/FCOLOR=231>
 MOV S$ÆÕÉý°´Å¥  <text:É¢ÈËÆÕÉý|^-^250#ÆÕÉýÌõ¼þ£º^-^146#1£º<$STR(S$ÆÕÉý³ÆºÅ²ÄÁÏ)>*<$STR(N$ÆÕÉý³ÆºÅ²ÄÁÏ)>^-^251#2£ºÔª±¦*<$STR(N$ÆÕÉý³ÆºÅÔª±¦)>:130:-25/@ÆÕÉý¹ó×åVIP>
 MOV S$ÆÕÉý°´Å¥1 <text:ÍÁºÀÆÕÉý|^-^249#ÆÕÉýÌõ¼þ£º^-^254#³äÖµ´ïµ½<$STR(N$ÆÕÉý³ÆºÅ³äÖµ)>µã^-^250#Ãâ·ÑÆÕÉý^-^253#µ±Ç°³äÖµ£º<$GAMEGIRD>µã:130:-25/@ÍÁºÀÆÕÉý¹ó×åVIP>
 
@@ -412,7 +412,7 @@ MOV S$ÆÕÉý°´Å¥1 <text:ÍÁºÀÆÕÉý|^-^249#ÆÕÉýÌõ¼þ£º^-^254#³äÖµ´ïµ½<$STR(N$ÆÕÉý³ÆºÅ³
 CHECKTITLE ¹ó×åVIP15
 #ACT
 MOV U130 15
-MOV S$ÆÕÉý³ÆºÅ²ÄÁÏ Ä§·¨ÉñÊ¯
+MOV S$ÆÕÉý³ÆºÅ²ÄÁÏ ìÅ¹âÉñÊ¯
 MOV N$ÆÕÉý³ÆºÅ²ÄÁÏ 500
 MOV N$ÆÕÉý³ÆºÅÔª±¦ 500000
 MOV N$ÆÕÉý³ÆºÅ³äÖµ 2500
@@ -420,17 +420,17 @@ MOV S$µ±Ç°³ÆºÅA {¹ó×åVIP15/FCOLOR=253}
 MOV S$µ±Ç°³ÆºÅ ¹ó×åVIP15
 MOV S$ÏÂ¼¶³ÆºÅ ¹ó×åVIP16
 MOV S$ÏÂ¼¶³ÆºÅA {¹ó×åVIP16/FCOLOR=230}
-MOV S$µ±Ç°ÊôÐÔ  {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹¥Ä§µÀ+15-15/FCOLOR=250}]
-MOV S$µ±Ç°ÊôÐÔ1 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{·À¡¡Óù+15-15/FCOLOR=250}]
-MOV S$µ±Ç°ÊôÐÔ2 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{ÌåÁ¦ÔªËØ+15%/FCOLOR=254}]
-MOV S$µ±Ç°ÊôÐÔ3 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹¥ÉËÔªËØ+6%/FCOLOR=254}]
-MOV S$µ±Ç°ÊôÐÔ4 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹ÖÎï±¬ÂÊ+750%/FCOLOR=253}]
+MOV S$µ±Ç°ÊôÐÔ  <¹¥Ä§µÀ+15-15/FCOLOR=250>
+MOV S$µ±Ç°ÊôÐÔ1 <·À¡¡Óù+15-15/FCOLOR=250>
+MOV S$µ±Ç°ÊôÐÔ2 <ÌåÁ¦ÔªËØ+15%/FCOLOR=254>
+MOV S$µ±Ç°ÊôÐÔ3 <¹¥ÉËÔªËØ+6%/FCOLOR=254>
+MOV S$µ±Ç°ÊôÐÔ4 <¹ÖÎï±¬ÂÊ+750%/FCOLOR=253>
 
-MOV S$ÏÂ¼¶ÊôÐÔ  {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹¥Ä§µÀ+16-16/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ1 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{·À¡¡Óù+16-16/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ2 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{ÌåÁ¦ÔªËØ+16%/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ3 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹¥ÉËÔªËØ+7%/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ4 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹ÖÎï±¬ÂÊ+800%/FCOLOR=231}]
+MOV S$ÏÂ¼¶ÊôÐÔ  <¹¥Ä§µÀ+16-16/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ1 <·À¡¡Óù+16-16/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ2 <ÌåÁ¦ÔªËØ+16%/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ3 <¹¥ÉËÔªËØ+7%/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ4 <¹ÖÎï±¬ÂÊ+800%/FCOLOR=231>
 MOV S$ÆÕÉý°´Å¥  <text:É¢ÈËÆÕÉý|^-^250#ÆÕÉýÌõ¼þ£º^-^146#1£º<$STR(S$ÆÕÉý³ÆºÅ²ÄÁÏ)>*<$STR(N$ÆÕÉý³ÆºÅ²ÄÁÏ)>^-^251#2£ºÔª±¦*<$STR(N$ÆÕÉý³ÆºÅÔª±¦)>:130:-25/@ÆÕÉý¹ó×åVIP>
 MOV S$ÆÕÉý°´Å¥1 <text:ÍÁºÀÆÕÉý|^-^249#ÆÕÉýÌõ¼þ£º^-^254#³äÖµ´ïµ½<$STR(N$ÆÕÉý³ÆºÅ³äÖµ)>µã^-^250#Ãâ·ÑÆÕÉý^-^253#µ±Ç°³äÖµ£º<$GAMEGIRD>µã:130:-25/@ÍÁºÀÆÕÉý¹ó×åVIP>
 
@@ -449,17 +449,17 @@ MOV S$µ±Ç°³ÆºÅA {¹ó×åVIP16/FCOLOR=249}
 MOV S$µ±Ç°³ÆºÅ ¹ó×åVIP16
 MOV S$ÏÂ¼¶³ÆºÅ ¹ó×åVIP17
 MOV S$ÏÂ¼¶³ÆºÅA {¹ó×åVIP17/FCOLOR=230}
-MOV S$µ±Ç°ÊôÐÔ  {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹¥Ä§µÀ+16-16/FCOLOR=250}]
-MOV S$µ±Ç°ÊôÐÔ1 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{·À¡¡Óù+16-16/FCOLOR=250}]
-MOV S$µ±Ç°ÊôÐÔ2 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{ÌåÁ¦ÔªËØ+16%/FCOLOR=254}]
-MOV S$µ±Ç°ÊôÐÔ3 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹¥ÉËÔªËØ+7%/FCOLOR=254}]
-MOV S$µ±Ç°ÊôÐÔ4 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹ÖÎï±¬ÂÊ+800%/FCOLOR=253}]
+MOV S$µ±Ç°ÊôÐÔ  <¹¥Ä§µÀ+16-16/FCOLOR=250>
+MOV S$µ±Ç°ÊôÐÔ1 <·À¡¡Óù+16-16/FCOLOR=250>
+MOV S$µ±Ç°ÊôÐÔ2 <ÌåÁ¦ÔªËØ+16%/FCOLOR=254>
+MOV S$µ±Ç°ÊôÐÔ3 <¹¥ÉËÔªËØ+7%/FCOLOR=254>
+MOV S$µ±Ç°ÊôÐÔ4 <¹ÖÎï±¬ÂÊ+800%/FCOLOR=253>
 
-MOV S$ÏÂ¼¶ÊôÐÔ  {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹¥Ä§µÀ+17-17/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ1 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{·À¡¡Óù+17-17/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ2 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{ÌåÁ¦ÔªËØ+17%/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ3 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹¥ÉËÔªËØ+8%/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ4 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹ÖÎï±¬ÂÊ+850%/FCOLOR=231}]
+MOV S$ÏÂ¼¶ÊôÐÔ  <¹¥Ä§µÀ+17-17/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ1 <·À¡¡Óù+17-17/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ2 <ÌåÁ¦ÔªËØ+17%/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ3 <¹¥ÉËÔªËØ+8%/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ4 <¹ÖÎï±¬ÂÊ+850%/FCOLOR=231>
 MOV S$ÆÕÉý°´Å¥  <text:É¢ÈËÆÕÉý|^-^250#ÆÕÉýÌõ¼þ£º^-^146#1£º<$STR(S$ÆÕÉý³ÆºÅ²ÄÁÏ)>*<$STR(N$ÆÕÉý³ÆºÅ²ÄÁÏ)>^-^251#2£ºÔª±¦*<$STR(N$ÆÕÉý³ÆºÅÔª±¦)>:130:-25/@ÆÕÉý¹ó×åVIP>
 MOV S$ÆÕÉý°´Å¥1 <text:ÍÁºÀÆÕÉý|^-^249#ÆÕÉýÌõ¼þ£º^-^254#³äÖµ´ïµ½<$STR(N$ÆÕÉý³ÆºÅ³äÖµ)>µã^-^250#Ãâ·ÑÆÕÉý^-^253#µ±Ç°³äÖµ£º<$GAMEGIRD>µã:130:-25/@ÍÁºÀÆÕÉý¹ó×åVIP>
 
@@ -477,17 +477,17 @@ MOV S$µ±Ç°³ÆºÅA {¹ó×åVIP17/FCOLOR=249}
 MOV S$µ±Ç°³ÆºÅ ¹ó×åVIP17
 MOV S$ÏÂ¼¶³ÆºÅ ¹ó×åVIP18
 MOV S$ÏÂ¼¶³ÆºÅA {¹ó×åVIP18/FCOLOR=230}
-MOV S$µ±Ç°ÊôÐÔ  {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹¥Ä§µÀ+17-17/FCOLOR=250}]
-MOV S$µ±Ç°ÊôÐÔ1 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{·À¡¡Óù+17-17/FCOLOR=250}]
-MOV S$µ±Ç°ÊôÐÔ2 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{ÌåÁ¦ÔªËØ+17%/FCOLOR=254}]
-MOV S$µ±Ç°ÊôÐÔ3 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹¥ÉËÔªËØ+8%/FCOLOR=254}]
-MOV S$µ±Ç°ÊôÐÔ4 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹ÖÎï±¬ÂÊ+850%/FCOLOR=253}]
+MOV S$µ±Ç°ÊôÐÔ  <¹¥Ä§µÀ+17-17/FCOLOR=250>
+MOV S$µ±Ç°ÊôÐÔ1 <·À¡¡Óù+17-17/FCOLOR=250>
+MOV S$µ±Ç°ÊôÐÔ2 <ÌåÁ¦ÔªËØ+17%/FCOLOR=254>
+MOV S$µ±Ç°ÊôÐÔ3 <¹¥ÉËÔªËØ+8%/FCOLOR=254>
+MOV S$µ±Ç°ÊôÐÔ4 <¹ÖÎï±¬ÂÊ+850%/FCOLOR=253>
 
-MOV S$ÏÂ¼¶ÊôÐÔ  {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹¥Ä§µÀ+18-18/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ1 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{·À¡¡Óù+18-18/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ2 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{ÌåÁ¦ÔªËØ+18%/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ3 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹¥ÉËÔªËØ+9%/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ4 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹ÖÎï±¬ÂÊ+900%/FCOLOR=231}]
+MOV S$ÏÂ¼¶ÊôÐÔ  <¹¥Ä§µÀ+18-18/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ1 <·À¡¡Óù+18-18/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ2 <ÌåÁ¦ÔªËØ+18%/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ3 <¹¥ÉËÔªËØ+9%/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ4 <¹ÖÎï±¬ÂÊ+900%/FCOLOR=231>
 MOV S$ÆÕÉý°´Å¥  <text:É¢ÈËÆÕÉý|^-^250#ÆÕÉýÌõ¼þ£º^-^146#1£º<$STR(S$ÆÕÉý³ÆºÅ²ÄÁÏ)>*<$STR(N$ÆÕÉý³ÆºÅ²ÄÁÏ)>^-^251#2£ºÔª±¦*<$STR(N$ÆÕÉý³ÆºÅÔª±¦)>:130:-25/@ÆÕÉý¹ó×åVIP>
 MOV S$ÆÕÉý°´Å¥1 <text:ÍÁºÀÆÕÉý|^-^249#ÆÕÉýÌõ¼þ£º^-^254#³äÖµ´ïµ½<$STR(N$ÆÕÉý³ÆºÅ³äÖµ)>µã^-^250#Ãâ·ÑÆÕÉý^-^253#µ±Ç°³äÖµ£º<$GAMEGIRD>µã:130:-25/@ÍÁºÀÆÕÉý¹ó×åVIP>
 
@@ -505,17 +505,17 @@ MOV S$µ±Ç°³ÆºÅA {¹ó×åVIP18/FCOLOR=249}
 MOV S$µ±Ç°³ÆºÅ ¹ó×åVIP18
 MOV S$ÏÂ¼¶³ÆºÅ ¹ó×åVIP19
 MOV S$ÏÂ¼¶³ÆºÅA {¹ó×åVIP19/FCOLOR=230}
-MOV S$µ±Ç°ÊôÐÔ  {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹¥Ä§µÀ+18-18/FCOLOR=250}]
-MOV S$µ±Ç°ÊôÐÔ1 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{·À¡¡Óù+18-18/FCOLOR=250}]
-MOV S$µ±Ç°ÊôÐÔ2 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{ÌåÁ¦ÔªËØ+18%/FCOLOR=254}]
-MOV S$µ±Ç°ÊôÐÔ3 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹¥ÉËÔªËØ+9%/FCOLOR=254}]
-MOV S$µ±Ç°ÊôÐÔ4 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹ÖÎï±¬ÂÊ+900%/FCOLOR=253}]
+MOV S$µ±Ç°ÊôÐÔ  <¹¥Ä§µÀ+18-18/FCOLOR=250>
+MOV S$µ±Ç°ÊôÐÔ1 <·À¡¡Óù+18-18/FCOLOR=250>
+MOV S$µ±Ç°ÊôÐÔ2 <ÌåÁ¦ÔªËØ+18%/FCOLOR=254>
+MOV S$µ±Ç°ÊôÐÔ3 <¹¥ÉËÔªËØ+9%/FCOLOR=254>
+MOV S$µ±Ç°ÊôÐÔ4 <¹ÖÎï±¬ÂÊ+900%/FCOLOR=253>
 
-MOV S$ÏÂ¼¶ÊôÐÔ  {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹¥Ä§µÀ+19-19/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ1 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{·À¡¡Óù+19-19/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ2 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{ÌåÁ¦ÔªËØ+19%/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ3 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹¥ÉËÔªËØ+10%/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ4 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹ÖÎï±¬ÂÊ+950%/FCOLOR=231}]
+MOV S$ÏÂ¼¶ÊôÐÔ  <¹¥Ä§µÀ+19-19/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ1 <·À¡¡Óù+19-19/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ2 <ÌåÁ¦ÔªËØ+19%/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ3 <¹¥ÉËÔªËØ+10%/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ4 <¹ÖÎï±¬ÂÊ+950%/FCOLOR=231>
 MOV S$ÆÕÉý°´Å¥  <text:É¢ÈËÆÕÉý|^-^250#ÆÕÉýÌõ¼þ£º^-^146#1£º<$STR(S$ÆÕÉý³ÆºÅ²ÄÁÏ)>*<$STR(N$ÆÕÉý³ÆºÅ²ÄÁÏ)>^-^251#2£ºÔª±¦*<$STR(N$ÆÕÉý³ÆºÅÔª±¦)>:130:-25/@ÆÕÉý¹ó×åVIP>
 MOV S$ÆÕÉý°´Å¥1 <text:ÍÁºÀÆÕÉý|^-^249#ÆÕÉýÌõ¼þ£º^-^254#³äÖµ´ïµ½<$STR(N$ÆÕÉý³ÆºÅ³äÖµ)>µã^-^250#Ãâ·ÑÆÕÉý^-^253#µ±Ç°³äÖµ£º<$GAMEGIRD>µã:130:-25/@ÍÁºÀÆÕÉý¹ó×åVIP>
 
@@ -532,17 +532,17 @@ MOV S$µ±Ç°³ÆºÅA {¹ó×åVIP19/FCOLOR=254}
 MOV S$µ±Ç°³ÆºÅ ¹ó×åVIP19
 MOV S$ÏÂ¼¶³ÆºÅ ¹ó×åVIP20
 MOV S$ÏÂ¼¶³ÆºÅA {¹ó×åVIP20/FCOLOR=230}
-MOV S$µ±Ç°ÊôÐÔ  {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹¥Ä§µÀ+19-19/FCOLOR=250}]
-MOV S$µ±Ç°ÊôÐÔ1 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{·À¡¡Óù+19-19/FCOLOR=250}]
-MOV S$µ±Ç°ÊôÐÔ2 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{ÌåÁ¦ÔªËØ+19%/FCOLOR=254}]
-MOV S$µ±Ç°ÊôÐÔ3 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹¥ÉËÔªËØ+10%/FCOLOR=254}]
-MOV S$µ±Ç°ÊôÐÔ4 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹ÖÎï±¬ÂÊ+950%/FCOLOR=253}]
+MOV S$µ±Ç°ÊôÐÔ  <¹¥Ä§µÀ+19-19/FCOLOR=250>
+MOV S$µ±Ç°ÊôÐÔ1 <·À¡¡Óù+19-19/FCOLOR=250>
+MOV S$µ±Ç°ÊôÐÔ2 <ÌåÁ¦ÔªËØ+19%/FCOLOR=254>
+MOV S$µ±Ç°ÊôÐÔ3 <¹¥ÉËÔªËØ+10%/FCOLOR=254>
+MOV S$µ±Ç°ÊôÐÔ4 <¹ÖÎï±¬ÂÊ+950%/FCOLOR=253>
 
-MOV S$ÏÂ¼¶ÊôÐÔ  {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹¥Ä§µÀ+20-20/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ1 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{·À¡¡Óù+20-20/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ2 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{ÌåÁ¦ÔªËØ+20%/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ3 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹¥ÉËÔªËØ+11%/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ4 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹ÖÎï±¬ÂÊ+1000%/FCOLOR=231}]
+MOV S$ÏÂ¼¶ÊôÐÔ  <¹¥Ä§µÀ+20-20/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ1 <·À¡¡Óù+20-20/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ2 <ÌåÁ¦ÔªËØ+20%/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ3 <¹¥ÉËÔªËØ+11%/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ4 <¹ÖÎï±¬ÂÊ+1000%/FCOLOR=231>
 MOV S$ÆÕÉý°´Å¥  <text:É¢ÈËÆÕÉý|^-^250#ÆÕÉýÌõ¼þ£º^-^146#1£º<$STR(S$ÆÕÉý³ÆºÅ²ÄÁÏ)>*<$STR(N$ÆÕÉý³ÆºÅ²ÄÁÏ)>^-^251#2£ºÔª±¦*<$STR(N$ÆÕÉý³ÆºÅÔª±¦)>:130:-25/@ÆÕÉý¹ó×åVIP>
 MOV S$ÆÕÉý°´Å¥1 <text:ÍÁºÀÆÕÉý|^-^249#ÆÕÉýÌõ¼þ£º^-^254#³äÖµ´ïµ½<$STR(N$ÆÕÉý³ÆºÅ³äÖµ)>µã^-^250#Ãâ·ÑÆÕÉý^-^253#µ±Ç°³äÖµ£º<$GAMEGIRD>µã:130:-25/@ÍÁºÀÆÕÉý¹ó×åVIP>
 
@@ -558,17 +558,17 @@ MOV S$µ±Ç°³ÆºÅA {¹ó×åVIP20/FCOLOR=254}
 MOV S$µ±Ç°³ÆºÅ ¹ó×åVIP20
 MOV S$ÏÂ¼¶³ÆºÅ ¹ó×åVIP21
 MOV S$ÏÂ¼¶³ÆºÅA {¹ó×åVIP21/FCOLOR=230}
-MOV S$µ±Ç°ÊôÐÔ  {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹¥Ä§µÀ+20-20/FCOLOR=250}]
-MOV S$µ±Ç°ÊôÐÔ1 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{·À¡¡Óù+20-20/FCOLOR=250}]
-MOV S$µ±Ç°ÊôÐÔ2 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{ÌåÁ¦ÔªËØ+20%/FCOLOR=254}]
-MOV S$µ±Ç°ÊôÐÔ3 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹¥ÉËÔªËØ+11%/FCOLOR=254}]
-MOV S$µ±Ç°ÊôÐÔ4 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹ÖÎï±¬ÂÊ+1000%/FCOLOR=253}]
+MOV S$µ±Ç°ÊôÐÔ  <¹¥Ä§µÀ+20-20/FCOLOR=250>
+MOV S$µ±Ç°ÊôÐÔ1 <·À¡¡Óù+20-20/FCOLOR=250>
+MOV S$µ±Ç°ÊôÐÔ2 <ÌåÁ¦ÔªËØ+20%/FCOLOR=254>
+MOV S$µ±Ç°ÊôÐÔ3 <¹¥ÉËÔªËØ+11%/FCOLOR=254>
+MOV S$µ±Ç°ÊôÐÔ4 <¹ÖÎï±¬ÂÊ+1000%/FCOLOR=253>
 
-MOV S$ÏÂ¼¶ÊôÐÔ  {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹¥Ä§µÀ+21-21/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ1 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{·À¡¡Óù+21-21/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ2 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{ÌåÁ¦ÔªËØ+21%/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ3 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹¥ÉËÔªËØ+12%/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ4 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹ÖÎï±¬ÂÊ+1100%/FCOLOR=231}]
+MOV S$ÏÂ¼¶ÊôÐÔ  <¹¥Ä§µÀ+21-21/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ1 <·À¡¡Óù+21-21/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ2 <ÌåÁ¦ÔªËØ+21%/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ3 <¹¥ÉËÔªËØ+12%/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ4 <¹ÖÎï±¬ÂÊ+1100%/FCOLOR=231>
 MOV S$ÆÕÉý°´Å¥  <text:É¢ÈËÆÕÉý|^-^250#ÆÕÉýÌõ¼þ£º^-^146#1£º<$STR(S$ÆÕÉý³ÆºÅ²ÄÁÏ)>*<$STR(N$ÆÕÉý³ÆºÅ²ÄÁÏ)>^-^251#2£ºÔª±¦*<$STR(N$ÆÕÉý³ÆºÅÔª±¦)>:130:-25/@ÆÕÉý¹ó×åVIP>
 MOV S$ÆÕÉý°´Å¥1 <text:ÍÁºÀÆÕÉý|^-^249#ÆÕÉýÌõ¼þ£º^-^254#³äÖµ´ïµ½<$STR(N$ÆÕÉý³ÆºÅ³äÖµ)>µã^-^250#Ãâ·ÑÆÕÉý^-^253#µ±Ç°³äÖµ£º<$GAMEGIRD>µã:130:-25/@ÍÁºÀÆÕÉý¹ó×åVIP>
 
@@ -594,17 +594,17 @@ MOV S$µ±Ç°³ÆºÅA {¹ó×åVIP21/FCOLOR=254}
 MOV S$µ±Ç°³ÆºÅ ¹ó×åVIP21
 MOV S$ÏÂ¼¶³ÆºÅ µ±Ç°ÒÑ¾­Âú
 MOV S$ÏÂ¼¶³ÆºÅA {µ±Ç°ÒÑ¾­Âú/FCOLOR=230}
-MOV S$µ±Ç°ÊôÐÔ  {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹¥Ä§µÀ+21-21/FCOLOR=250}]
-MOV S$µ±Ç°ÊôÐÔ1 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{·À¡¡Óù+21-21/FCOLOR=250}]
-MOV S$µ±Ç°ÊôÐÔ2 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{ÌåÁ¦ÔªËØ+21%/FCOLOR=254}]
-MOV S$µ±Ç°ÊôÐÔ3 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹¥ÉËÔªËØ+12%/FCOLOR=254}]
-MOV S$µ±Ç°ÊôÐÔ4 {<$STR(S$µ±Ç°³ÆºÅ)>:/FCOLOR=161}[{¹ÖÎï±¬ÂÊ+1100%/FCOLOR=253}]
+MOV S$µ±Ç°ÊôÐÔ  <¹¥Ä§µÀ+21-21/FCOLOR=250>
+MOV S$µ±Ç°ÊôÐÔ1 <·À¡¡Óù+21-21/FCOLOR=250>
+MOV S$µ±Ç°ÊôÐÔ2 <ÌåÁ¦ÔªËØ+21%/FCOLOR=254>
+MOV S$µ±Ç°ÊôÐÔ3 <¹¥ÉËÔªËØ+12%/FCOLOR=254>
+MOV S$µ±Ç°ÊôÐÔ4 <¹ÖÎï±¬ÂÊ+1100%/FCOLOR=253>
 
-MOV S$ÏÂ¼¶ÊôÐÔ  {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹¥Ä§µÀ+21-21/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ1 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{·À¡¡Óù+21-21/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ2 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{ÌåÁ¦ÔªËØ+21%/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ3 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹¥ÉËÔªËØ+12%/FCOLOR=231}]
-MOV S$ÏÂ¼¶ÊôÐÔ4 {<$STR(S$ÏÂ¼¶³ÆºÅ)>:/FCOLOR=161}[{¹ÖÎï±¬ÂÊ+1100%/FCOLOR=231}]
+MOV S$ÏÂ¼¶ÊôÐÔ  <¹¥Ä§µÀ+21-21/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ1 <·À¡¡Óù+21-21/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ2 <ÌåÁ¦ÔªËØ+21%/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ3 <¹¥ÉËÔªËØ+12%/FCOLOR=231>
+MOV S$ÏÂ¼¶ÊôÐÔ4 <¹ÖÎï±¬ÂÊ+1100%/FCOLOR=231>
 MOV S$ÆÕÉý°´Å¥  <text:µ±Ç°ÒÑ¾­Âú:130:-25/@ÆÕÉý¹ó×åVIP>
 MOV S$ÆÕÉý°´Å¥1 
 
@@ -612,11 +612,11 @@ MOV S$ÆÕÉý°´Å¥1
 
 #IF
 #ACT
-ESPFillText S$µ±Ç°ÊôÐÔ 55
-ESPFillText S$µ±Ç°ÊôÐÔ1 55
-ESPFillText S$µ±Ç°ÊôÐÔ2 55
-ESPFillText S$µ±Ç°ÊôÐÔ3 55
-ESPFillText S$µ±Ç°ÊôÐÔ4 55
+; ESPFillText S$µ±Ç°ÊôÐÔ 55
+; ESPFillText S$µ±Ç°ÊôÐÔ1 55
+; ESPFillText S$µ±Ç°ÊôÐÔ2 55
+; ESPFillText S$µ±Ç°ÊôÐÔ3 55
+; ESPFillText S$µ±Ç°ÊôÐÔ4 55
 close
 OPENMERCHANTBIGDLG 1 555 1 4 0 0 1 400 0
 #SAY
@@ -635,23 +635,47 @@ OPENMERCHANTBIGDLG 1 555 1 4 0 0 1 400 0
 ; \               \
 
 
-<Img|width=620|height=300|esc=1|scale9l=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|scale9t=10|reset=1>
-<Layout|x=597|y=3|width=80|height=80|link=@exit>
-<Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
-<Text|a=0|x=32.0|y=18.0|tipsx=10|tipsy=80|color=250,251,252,253,254|size=18|text=[ÔÞÖú¹ó×åVIP]£ºÍÁºÀÃâ·ÑÁìÈ¡,É¢ÈËÍ¨¹ýÔª±¦²ÄÁÏ¿ÉÒÔÃâ·Ñ»ñµÃ>
-<RText|a=0|x=32.0|y=58.0|tipsx=10|tipsy=80|color=255|size=18|text=[<$STR(S$µ±Ç°³ÆºÅA)>]>
-<RText|a=0|x=263.0|y=58.0|tipsx=10|tipsy=80|color=255|size=18|text=[<$STR(S$ÏÂ¼¶³ÆºÅA)>]>
-<RText|a=0|x=32.0|y=78.0|tipsx=10|tipsy=80|color=250,254,255,161|size=18|text=------------------------------------------------------------>
-<RText|a=0|x=32.0|y=98.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(S$µ±Ç°ÊôÐÔ)>       <$STR(S$ÏÂ¼¶ÊôÐÔ)>>
-<RText|a=0|x=32.0|y=118.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(S$µ±Ç°ÊôÐÔ1)>       <$STR(S$ÏÂ¼¶ÊôÐÔ1)>>
-<RText|a=0|x=32.0|y=138.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(S$µ±Ç°ÊôÐÔ2)>       <$STR(S$ÏÂ¼¶ÊôÐÔ2)>>
-<RText|a=0|x=32.0|y=158.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(S$µ±Ç°ÊôÐÔ3)>       <$STR(S$ÏÂ¼¶ÊôÐÔ3)>>
-<RText|a=0|x=32.0|y=178.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(S$µ±Ç°ÊôÐÔ4)>       <$STR(S$ÏÂ¼¶ÊôÐÔ4)>>
-<Text|a=0|x=32.0|y=198.0|tipsx=10|tipsy=80|color=250,254,255,161|size=18|text=------------------------------------------------------------>
-<RText|a=0|x=31.0|y=225.0|tipsx=10|tipsy=80|color=255|size=18|text=É¢ÈË½úÉý1£º<<$str(S$ÆÕÉý³ÆºÅ²ÄÁÏ)>*<$str(N$ÆÕÉý³ÆºÅ²ÄÁÏ)>/FCOLOR=251>>
-<RText|a=0|x=31.0|y=255.0|tipsx=10|tipsy=80|color=255|size=18|text=É¢ÈË½úÉý1£º<Ôª±¦*<$str(N$ÆÕÉý³ÆºÅÔª±¦)>/FCOLOR=251>>
-<Text|x=287.0|y=244.0|color=255|size=18|text=É¢ÈËÆÕÉý|link=@ÆÕÉý¹ó×åVIP>
-<Text|x=415.0|y=244.0|color=255|size=18|text=ÍÁºÀÆÕÉý|link=@ÍÁºÀÆÕÉý¹ó×åVIP>
+; <Img|width=620|height=300|esc=1|scale9l=10|scale9r=10|bg=1|move=0|scale9b=10|img=public/bg_npc_04.jpg|scale9t=10|reset=1>
+; <Layout|x=597|y=3|width=80|height=80|link=@exit>
+; <Button|x=619|y=2.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+; <Text|a=0|x=32.0|y=18.0|tipsx=10|tipsy=80|color=250,251,252,253,254|size=18|text=[ÔÞÖú¹ó×åVIP]£ºÍÁºÀÃâ·ÑÁìÈ¡,É¢ÈËÍ¨¹ýÔª±¦²ÄÁÏ¿ÉÒÔÃâ·Ñ»ñµÃ>
+; <RText|a=0|x=32.0|y=58.0|tipsx=10|tipsy=80|color=255|size=18|text=[<$STR(S$µ±Ç°³ÆºÅA)>]>
+; <RText|a=0|x=263.0|y=58.0|tipsx=10|tipsy=80|color=255|size=18|text=[<$STR(S$ÏÂ¼¶³ÆºÅA)>]>
+; <RText|a=0|x=32.0|y=78.0|tipsx=10|tipsy=80|color=250,254,255,161|size=18|text=------------------------------------------------------------>
+; <RText|a=0|x=32.0|y=98.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(S$µ±Ç°ÊôÐÔ)>       <$STR(S$ÏÂ¼¶ÊôÐÔ)>>
+; <RText|a=0|x=32.0|y=118.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(S$µ±Ç°ÊôÐÔ1)>       <$STR(S$ÏÂ¼¶ÊôÐÔ1)>>
+; <RText|a=0|x=32.0|y=138.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(S$µ±Ç°ÊôÐÔ2)>       <$STR(S$ÏÂ¼¶ÊôÐÔ2)>>
+; <RText|a=0|x=32.0|y=158.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(S$µ±Ç°ÊôÐÔ3)>       <$STR(S$ÏÂ¼¶ÊôÐÔ3)>>
+; <RText|a=0|x=32.0|y=178.0|tipsx=10|tipsy=80|color=255|size=18|text=<$STR(S$µ±Ç°ÊôÐÔ4)>       <$STR(S$ÏÂ¼¶ÊôÐÔ4)>>
+; <Text|a=0|x=32.0|y=198.0|tipsx=10|tipsy=80|color=250,254,255,161|size=18|text=------------------------------------------------------------>
+; <RText|a=0|x=31.0|y=225.0|tipsx=10|tipsy=80|color=255|size=18|text=É¢ÈË½úÉý1£º<<$str(S$ÆÕÉý³ÆºÅ²ÄÁÏ)>*<$str(N$ÆÕÉý³ÆºÅ²ÄÁÏ)>/FCOLOR=251>>
+; <RText|a=0|x=31.0|y=255.0|tipsx=10|tipsy=80|color=255|size=18|text=É¢ÈË½úÉý1£º<Ôª±¦*<$str(N$ÆÕÉý³ÆºÅÔª±¦)>/FCOLOR=251>>
+; <Text|x=287.0|y=244.0|color=255|size=18|text=É¢ÈËÆÕÉý|link=@ÆÕÉý¹ó×åVIP>
+; <Text|x=415.0|y=244.0|color=255|size=18|text=ÍÁºÀÆÕÉý|link=@ÍÁºÀÆÕÉý¹ó×åVIP>
+
+
+<Img|show=4|bg=1|scale9r=10|scale9l=10|reset=1|scale9b=10|img=custom/hecheng/zs1.png|move=0|esc=1|scale9t=10>
+<Layout|x=720.0|y=-18.0|width=80|height=80|link=@exit>
+<Button|x=750.0|y=0.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=131.0|y=16.0|tipsx=10|tipsy=80|color=250,251,252,253,254|size=18|text=[ÔÞÖú¹ó×åVIP]£ºÍÁºÀÃâ·ÑÁìÈ¡,É¢ÈËÍ¨¹ýÔª±¦²ÄÁÏ¿ÉÒÔÃâ·Ñ»ñµÃ>
+<RText|a=0|x=91.0|y=86.0|tipsx=10|tipsy=80|color=251|size=18|outline=1|text=µ±Ç°£º<$STR(S$µ±Ç°³ÆºÅA)>>
+<RText|a=0|x=430.0|y=86.0|tipsx=10|tipsy=80|color=250|size=18|outline=1|text=ÏÂ½×£º<$STR(S$ÏÂ¼¶³ÆºÅA)>>
+<RText|a=0|x=123.0|y=190|tipsx=10|tipsy=80|color=251|size=18|outline=1|text=<$STR(S$µ±Ç°ÊôÐÔ)>>
+<RText|a=0|x=123.0|y=214|tipsx=10|tipsy=80|color=251|size=18|outline=1|text=<$STR(S$µ±Ç°ÊôÐÔ1)>>
+<RText|a=0|x=123.0|y=238|tipsx=10|tipsy=80|color=251|size=18|outline=1|text=<$STR(S$µ±Ç°ÊôÐÔ2)>>
+<RText|a=0|x=123.0|y=262|tipsx=10|tipsy=80|color=251|size=18|outline=1|text=<$STR(S$µ±Ç°ÊôÐÔ3)>>
+<RText|a=0|x=123.0|y=286|tipsx=10|tipsy=80|color=251|size=18|outline=1|text=<$STR(S$µ±Ç°ÊôÐÔ4)>>
+<RText|a=0|x=459.0|y=190|tipsx=10|tipsy=80|color=250|size=18|outline=1|text=<$STR(S$ÏÂ¼¶ÊôÐÔ)>>
+<RText|a=0|x=459.0|y=214|tipsx=10|tipsy=80|color=250|size=18|outline=1|text=<$STR(S$ÏÂ¼¶ÊôÐÔ1)>>
+<RText|a=0|x=459.0|y=238|tipsx=10|tipsy=80|color=250|size=18|outline=1|text=<$STR(S$ÏÂ¼¶ÊôÐÔ2)>>
+<RText|a=0|x=459.0|y=262|tipsx=10|tipsy=80|color=250|size=18|outline=1|text=<$STR(S$ÏÂ¼¶ÊôÐÔ3)>>
+<RText|a=0|x=459.0|y=286|tipsx=10|tipsy=80|color=250|size=18|outline=1|text=<$STR(S$ÏÂ¼¶ÊôÐÔ4)>>
+<RText|a=0|x=38.0|y=379.0|tipsx=10|tipsy=80|color=255|size=18|outline=1|text=É¢ÈË½úÉý1£º<<$str(S$ÆÕÉý³ÆºÅ²ÄÁÏ)>*<$str(N$ÆÕÉý³ÆºÅ²ÄÁÏ)>/FCOLOR=251>>
+<RText|a=0|x=38.0|y=410.0|tipsx=10|tipsy=80|color=255|size=18|outline=1|text=É¢ÈË½úÉý2£º<Ôª±¦*<$str(N$ÆÕÉý³ÆºÅÔª±¦)>/FCOLOR=251>>
+<Button|x=116.0|y=451.0|pimg=custom/button/ann2.png|nimg=custom/button/ann1.png|color=255|size=18|text=É¢ÈËÆÕÉý|link=@ÆÕÉý¹ó×åVIP>
+<Button|x=457.0|y=451.0|pimg=custom/button/ann2.png|nimg=custom/button/ann1.png|color=255|size=18|text=ÍÁºÀÆÕÉý|link=@ÍÁºÀÆÕÉý¹ó×åVIP>
+<RText|x=465.0|y=410.0|color=255|size=18|text=³äÖµµã£º<<$STR(N$ÆÕÉý³ÆºÅ³äÖµ)>/FCOLOR=249>>
+
 
 ; MOV S$ÆÕÉý³ÆºÅ²ÄÁÏ ÃÎÏëÉñÊ¯
 ; MOV N$ÆÕÉý³ÆºÅ²ÄÁÏ 100

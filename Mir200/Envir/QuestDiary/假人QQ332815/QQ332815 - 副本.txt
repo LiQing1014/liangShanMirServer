@@ -16,9 +16,9 @@ BREAK
 ;检测是否是假人
 ISDUMMY
 #ACT
-GetRandomText ..\QuestDiary\假人QQ332815\5.txt S10
-SETDUMMYCONFIGFILENAME ..\QuestDiary\假人QQ332815\<$STR(S10)>.txt
-LOADDUMMYCONFIG
+; GetRandomText ..\QuestDiary\假人QQ332815\5.txt S10
+; SETDUMMYCONFIGFILENAME ..\QuestDiary\假人QQ332815\<$STR(S10)>.txt
+; LOADDUMMYCONFIG
 
 #IF
 isdummy

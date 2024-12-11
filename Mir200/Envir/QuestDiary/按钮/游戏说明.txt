@@ -18,18 +18,18 @@ close
 <>\
 <>                 <【千里传音(全服喊话)】/FCOLOR=254> \ \
 <--------------------------------------------------------------/AUTOCOLOR=91>\
-<> 「<[全服喊话]/@@InPutString88>」　<→/FCOLOR=70>　<功能介绍：/FCOLOR=253>：<喊话每次需要38大米点/FCOLOR=250>\
+<> 「<[全服喊话]/@@InPutString88>」　<→/FCOLOR=70>　<功能介绍：/FCOLOR=253>：<喊话每次需要38灵符点/FCOLOR=250>\
 <--------------------------------------------------------------/AUTOCOLOR=91>\
 <提示：/FCOLOR=249>喊话禁止辱骂、文明用语！消息于滚动形式播放屏幕中间
 
 [@InPutString88]
 #IF
-CHECKGAMEPOINT > 37
+checkmoney 灵符 > 37
 #act
-GAMEPOINT - 38
+MONEY 灵符 - 38
 SENDMOVEMSG 0 253 255 240 1 玩家【<$Username>】喊话：{<$STR(S88)>/FCOLOR=254} 1
 #ELSEACT
-MESSAGEBOX 大米点不足！
+MESSAGEBOX 灵符点不足！
 BREAK
 
 [@InPutString89]

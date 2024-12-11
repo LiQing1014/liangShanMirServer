@@ -38,10 +38,10 @@ ADDBUTTON <$str(N$通区_素材)> 14 26 27 26 <$str(N$挂机按钮X)>	<$str(N$挂捡按钮Y)
 CheckContainstext	<$Str(T12)>	捡物开
 #ACT
 ADDBUTTON <$str(N$通区_素材)> 15 22 23 22 <$str(N$捡物按钮X)>	<$str(N$挂捡按钮Y)> 0 -1 \251/自动拾取：开启\250/点击关闭\-\254/领微信礼包后激活此功能
-StartElf 1
-STARTPICKUP
+; StartElf 1
+; STARTPICKUP
 #elseact
 ADDBUTTON <$str(N$通区_素材)> 15 20 21 20 <$str(N$捡物按钮X)>	<$str(N$挂捡按钮Y)> 0 -1 \249/自动拾取：关闭\250/点击开启\-\254/领微信礼包后激活此功能
-StartElf 0
-STARTPICKUP
+; StartElf 0
+; STARTPICKUP
 }
